@@ -1,0 +1,7 @@
+<map id="jaco::JacoComm::homeArm" name="jaco::JacoComm::homeArm">
+<area shape="rect" id="node2" href="$classjaco_1_1_jaco_comm.html#a872b8033cda5a9fe4ccdca2e89aa03d1" title="jaco::JacoComm::isStopped" alt="" coords="236,5,421,32"/>
+<area shape="rect" id="node3" href="$classjaco_1_1_jaco_comm.html#a0e7d5984a2c6ed956da7e07e6c97ba5f" title="Determines whether the arm has returned to its &quot;Home&quot; state. " alt="" coords="239,56,418,83"/>
+<area shape="rect" id="node5" href="$classjaco_1_1_jaco_comm.html#a54862830cd6414ae3ae48e46e54bf798" title="jaco::JacoComm::stopAPI" alt="" coords="242,107,415,133"/>
+<area shape="rect" id="node6" href="$classjaco_1_1_jaco_comm.html#a6b2a1fabc4e6c30da42c9a5e26757398" title="jaco::JacoComm::startAPI" alt="" coords="241,157,416,184"/>
+<area shape="rect" id="node4" href="$classjaco_1_1_jaco_comm.html#a29384597e710d4cbb4e1f2ae6b7d7e50" title="API call to obtain the current &quot;quick status&quot;. " alt="" coords="469,49,648,90"/>
+</map>

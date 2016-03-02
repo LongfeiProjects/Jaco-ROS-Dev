@@ -1,0 +1,88 @@
+\hypertarget{namespacemico__force__control}{}\section{mico\+\_\+force\+\_\+control Namespace Reference}
+\label{namespacemico__force__control}\index{mico\+\_\+force\+\_\+control@{mico\+\_\+force\+\_\+control}}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{namespacemico__force__control_ae3d8428c9fe2a197c78735d5e2bf7d13}{robot} = rospy.\+get\+\_\+param(\char`\"{}robot\char`\"{}, \char`\"{}mico\char`\"{})
+\item 
+\hyperlink{namespacemico__force__control_a7bd9a03e89cd1a75c5b5fd43fe20043d}{inertia\+\_\+lin} = rospy.\+get\+\_\+param(\char`\"{}inertia\+\_\+lin\char`\"{}, 10.\+0)
+\item 
+\hyperlink{namespacemico__force__control_a15342e572c568a704fb5af7c5865eae3}{inertia\+\_\+ang} = rospy.\+get\+\_\+param(\char`\"{}inertia\+\_\+ang\char`\"{}, 3.\+0)
+\item 
+\hyperlink{namespacemico__force__control_a1355006730f1faaee4334f0c43f59746}{damping\+\_\+lin} = rospy.\+get\+\_\+param(\char`\"{}damping\+\_\+lin\char`\"{}, 80.\+0)
+\item 
+\hyperlink{namespacemico__force__control_a92927656a13dc0f41e49ba262d47d74a}{damping\+\_\+ang} = rospy.\+get\+\_\+param(\char`\"{}damping\+\_\+ang\char`\"{}, 10.\+0)
+\item 
+\hyperlink{namespacemico__force__control_a0ceb8e5eca328f479981a597d6ca88b2}{force\+\_\+min\+\_\+lin} = rospy.\+get\+\_\+param(\char`\"{}force\+\_\+min\+\_\+lin\char`\"{}, 0.\+1)
+\item 
+\hyperlink{namespacemico__force__control_a6db552753f1e9477b67bafd6038452c1}{force\+\_\+min\+\_\+ang} = rospy.\+get\+\_\+param(\char`\"{}force\+\_\+min\+\_\+ang\char`\"{}, 0.\+1)
+\item 
+\hyperlink{namespacemico__force__control_aa4fb6bd6977bbc2751bcc1d82e91372b}{force\+\_\+max\+\_\+lin} = rospy.\+get\+\_\+param(\char`\"{}force\+\_\+max\+\_\+lin\char`\"{}, 40.\+0)
+\item 
+\hyperlink{namespacemico__force__control_a4f12ede33ebf4ea40b54445f58818f18}{force\+\_\+max\+\_\+ang} = rospy.\+get\+\_\+param(\char`\"{}force\+\_\+max\+\_\+ang\char`\"{}, 40.\+0)
+\item 
+\hyperlink{namespacemico__force__control_ad419a15a7ffa6346e96486103e629a03}{srv\+\_\+start} = rospy.\+Service\+Proxy(\hyperlink{namespacemico__force__control_ae3d8428c9fe2a197c78735d5e2bf7d13}{robot} + \char`\"{}\+\_\+arm\+\_\+driver/in/start\+\_\+force\+\_\+control\char`\"{}, Start)
+\item 
+\hyperlink{namespacemico__force__control_a2cebf1d67600a8e0e30509e127b2ca15}{srv\+\_\+stop} = rospy.\+Service\+Proxy(\hyperlink{namespacemico__force__control_ae3d8428c9fe2a197c78735d5e2bf7d13}{robot} + \char`\"{}\+\_\+arm\+\_\+driver/in/stop\+\_\+force\+\_\+control\char`\"{}, Stop)
+\item 
+\hyperlink{namespacemico__force__control_aec902d9fa26ad89858657a5c69604244}{srv\+\_\+set} = rospy.\+Service\+Proxy(\hyperlink{namespacemico__force__control_ae3d8428c9fe2a197c78735d5e2bf7d13}{robot} + \char`\"{}\+\_\+arm\+\_\+driver/in/set\+\_\+force\+\_\+control\+\_\+params\char`\"{}, Set\+Force\+Control\+Params)
+\item 
+\hyperlink{namespacemico__force__control_adaac210d765d56a858099e0da5985634}{set\+\_\+req} = Set\+Force\+Control\+Params\+Request()
+\item 
+\hyperlink{namespacemico__force__control_aa9fdd2ef1b77ee897f0d602302379821}{x}
+\item 
+\hyperlink{namespacemico__force__control_a8a0f8c92894b08350a0d164ffac7d643}{y}
+\item 
+\hyperlink{namespacemico__force__control_a5537f83e86fedd5a78e2bbaab62d326f}{z}
+\end{DoxyCompactItemize}
+
+
+\subsection{Variable Documentation}
+\index{mico\+\_\+force\+\_\+control@{mico\+\_\+force\+\_\+control}!damping\+\_\+ang@{damping\+\_\+ang}}
+\index{damping\+\_\+ang@{damping\+\_\+ang}!mico\+\_\+force\+\_\+control@{mico\+\_\+force\+\_\+control}}
+\subsubsection[{\texorpdfstring{damping\+\_\+ang}{damping_ang}}]{\setlength{\rightskip}{0pt plus 5cm}mico\+\_\+force\+\_\+control.\+damping\+\_\+ang = rospy.\+get\+\_\+param(\char`\"{}damping\+\_\+ang\char`\"{}, 10.\+0)}\hypertarget{namespacemico__force__control_a92927656a13dc0f41e49ba262d47d74a}{}\label{namespacemico__force__control_a92927656a13dc0f41e49ba262d47d74a}
+\index{mico\+\_\+force\+\_\+control@{mico\+\_\+force\+\_\+control}!damping\+\_\+lin@{damping\+\_\+lin}}
+\index{damping\+\_\+lin@{damping\+\_\+lin}!mico\+\_\+force\+\_\+control@{mico\+\_\+force\+\_\+control}}
+\subsubsection[{\texorpdfstring{damping\+\_\+lin}{damping_lin}}]{\setlength{\rightskip}{0pt plus 5cm}mico\+\_\+force\+\_\+control.\+damping\+\_\+lin = rospy.\+get\+\_\+param(\char`\"{}damping\+\_\+lin\char`\"{}, 80.\+0)}\hypertarget{namespacemico__force__control_a1355006730f1faaee4334f0c43f59746}{}\label{namespacemico__force__control_a1355006730f1faaee4334f0c43f59746}
+\index{mico\+\_\+force\+\_\+control@{mico\+\_\+force\+\_\+control}!force\+\_\+max\+\_\+ang@{force\+\_\+max\+\_\+ang}}
+\index{force\+\_\+max\+\_\+ang@{force\+\_\+max\+\_\+ang}!mico\+\_\+force\+\_\+control@{mico\+\_\+force\+\_\+control}}
+\subsubsection[{\texorpdfstring{force\+\_\+max\+\_\+ang}{force_max_ang}}]{\setlength{\rightskip}{0pt plus 5cm}mico\+\_\+force\+\_\+control.\+force\+\_\+max\+\_\+ang = rospy.\+get\+\_\+param(\char`\"{}force\+\_\+max\+\_\+ang\char`\"{}, 40.\+0)}\hypertarget{namespacemico__force__control_a4f12ede33ebf4ea40b54445f58818f18}{}\label{namespacemico__force__control_a4f12ede33ebf4ea40b54445f58818f18}
+\index{mico\+\_\+force\+\_\+control@{mico\+\_\+force\+\_\+control}!force\+\_\+max\+\_\+lin@{force\+\_\+max\+\_\+lin}}
+\index{force\+\_\+max\+\_\+lin@{force\+\_\+max\+\_\+lin}!mico\+\_\+force\+\_\+control@{mico\+\_\+force\+\_\+control}}
+\subsubsection[{\texorpdfstring{force\+\_\+max\+\_\+lin}{force_max_lin}}]{\setlength{\rightskip}{0pt plus 5cm}mico\+\_\+force\+\_\+control.\+force\+\_\+max\+\_\+lin = rospy.\+get\+\_\+param(\char`\"{}force\+\_\+max\+\_\+lin\char`\"{}, 40.\+0)}\hypertarget{namespacemico__force__control_aa4fb6bd6977bbc2751bcc1d82e91372b}{}\label{namespacemico__force__control_aa4fb6bd6977bbc2751bcc1d82e91372b}
+\index{mico\+\_\+force\+\_\+control@{mico\+\_\+force\+\_\+control}!force\+\_\+min\+\_\+ang@{force\+\_\+min\+\_\+ang}}
+\index{force\+\_\+min\+\_\+ang@{force\+\_\+min\+\_\+ang}!mico\+\_\+force\+\_\+control@{mico\+\_\+force\+\_\+control}}
+\subsubsection[{\texorpdfstring{force\+\_\+min\+\_\+ang}{force_min_ang}}]{\setlength{\rightskip}{0pt plus 5cm}mico\+\_\+force\+\_\+control.\+force\+\_\+min\+\_\+ang = rospy.\+get\+\_\+param(\char`\"{}force\+\_\+min\+\_\+ang\char`\"{}, 0.\+1)}\hypertarget{namespacemico__force__control_a6db552753f1e9477b67bafd6038452c1}{}\label{namespacemico__force__control_a6db552753f1e9477b67bafd6038452c1}
+\index{mico\+\_\+force\+\_\+control@{mico\+\_\+force\+\_\+control}!force\+\_\+min\+\_\+lin@{force\+\_\+min\+\_\+lin}}
+\index{force\+\_\+min\+\_\+lin@{force\+\_\+min\+\_\+lin}!mico\+\_\+force\+\_\+control@{mico\+\_\+force\+\_\+control}}
+\subsubsection[{\texorpdfstring{force\+\_\+min\+\_\+lin}{force_min_lin}}]{\setlength{\rightskip}{0pt plus 5cm}mico\+\_\+force\+\_\+control.\+force\+\_\+min\+\_\+lin = rospy.\+get\+\_\+param(\char`\"{}force\+\_\+min\+\_\+lin\char`\"{}, 0.\+1)}\hypertarget{namespacemico__force__control_a0ceb8e5eca328f479981a597d6ca88b2}{}\label{namespacemico__force__control_a0ceb8e5eca328f479981a597d6ca88b2}
+\index{mico\+\_\+force\+\_\+control@{mico\+\_\+force\+\_\+control}!inertia\+\_\+ang@{inertia\+\_\+ang}}
+\index{inertia\+\_\+ang@{inertia\+\_\+ang}!mico\+\_\+force\+\_\+control@{mico\+\_\+force\+\_\+control}}
+\subsubsection[{\texorpdfstring{inertia\+\_\+ang}{inertia_ang}}]{\setlength{\rightskip}{0pt plus 5cm}mico\+\_\+force\+\_\+control.\+inertia\+\_\+ang = rospy.\+get\+\_\+param(\char`\"{}inertia\+\_\+ang\char`\"{}, 3.\+0)}\hypertarget{namespacemico__force__control_a15342e572c568a704fb5af7c5865eae3}{}\label{namespacemico__force__control_a15342e572c568a704fb5af7c5865eae3}
+\index{mico\+\_\+force\+\_\+control@{mico\+\_\+force\+\_\+control}!inertia\+\_\+lin@{inertia\+\_\+lin}}
+\index{inertia\+\_\+lin@{inertia\+\_\+lin}!mico\+\_\+force\+\_\+control@{mico\+\_\+force\+\_\+control}}
+\subsubsection[{\texorpdfstring{inertia\+\_\+lin}{inertia_lin}}]{\setlength{\rightskip}{0pt plus 5cm}mico\+\_\+force\+\_\+control.\+inertia\+\_\+lin = rospy.\+get\+\_\+param(\char`\"{}inertia\+\_\+lin\char`\"{}, 10.\+0)}\hypertarget{namespacemico__force__control_a7bd9a03e89cd1a75c5b5fd43fe20043d}{}\label{namespacemico__force__control_a7bd9a03e89cd1a75c5b5fd43fe20043d}
+\index{mico\+\_\+force\+\_\+control@{mico\+\_\+force\+\_\+control}!robot@{robot}}
+\index{robot@{robot}!mico\+\_\+force\+\_\+control@{mico\+\_\+force\+\_\+control}}
+\subsubsection[{\texorpdfstring{robot}{robot}}]{\setlength{\rightskip}{0pt plus 5cm}mico\+\_\+force\+\_\+control.\+robot = rospy.\+get\+\_\+param(\char`\"{}robot\char`\"{}, \char`\"{}mico\char`\"{})}\hypertarget{namespacemico__force__control_ae3d8428c9fe2a197c78735d5e2bf7d13}{}\label{namespacemico__force__control_ae3d8428c9fe2a197c78735d5e2bf7d13}
+\index{mico\+\_\+force\+\_\+control@{mico\+\_\+force\+\_\+control}!set\+\_\+req@{set\+\_\+req}}
+\index{set\+\_\+req@{set\+\_\+req}!mico\+\_\+force\+\_\+control@{mico\+\_\+force\+\_\+control}}
+\subsubsection[{\texorpdfstring{set\+\_\+req}{set_req}}]{\setlength{\rightskip}{0pt plus 5cm}mico\+\_\+force\+\_\+control.\+set\+\_\+req = Set\+Force\+Control\+Params\+Request()}\hypertarget{namespacemico__force__control_adaac210d765d56a858099e0da5985634}{}\label{namespacemico__force__control_adaac210d765d56a858099e0da5985634}
+\index{mico\+\_\+force\+\_\+control@{mico\+\_\+force\+\_\+control}!srv\+\_\+set@{srv\+\_\+set}}
+\index{srv\+\_\+set@{srv\+\_\+set}!mico\+\_\+force\+\_\+control@{mico\+\_\+force\+\_\+control}}
+\subsubsection[{\texorpdfstring{srv\+\_\+set}{srv_set}}]{\setlength{\rightskip}{0pt plus 5cm}mico\+\_\+force\+\_\+control.\+srv\+\_\+set = rospy.\+Service\+Proxy({\bf robot} + \char`\"{}\+\_\+arm\+\_\+driver/in/set\+\_\+force\+\_\+control\+\_\+params\char`\"{}, Set\+Force\+Control\+Params)}\hypertarget{namespacemico__force__control_aec902d9fa26ad89858657a5c69604244}{}\label{namespacemico__force__control_aec902d9fa26ad89858657a5c69604244}
+\index{mico\+\_\+force\+\_\+control@{mico\+\_\+force\+\_\+control}!srv\+\_\+start@{srv\+\_\+start}}
+\index{srv\+\_\+start@{srv\+\_\+start}!mico\+\_\+force\+\_\+control@{mico\+\_\+force\+\_\+control}}
+\subsubsection[{\texorpdfstring{srv\+\_\+start}{srv_start}}]{\setlength{\rightskip}{0pt plus 5cm}mico\+\_\+force\+\_\+control.\+srv\+\_\+start = rospy.\+Service\+Proxy({\bf robot} + \char`\"{}\+\_\+arm\+\_\+driver/in/start\+\_\+force\+\_\+control\char`\"{}, Start)}\hypertarget{namespacemico__force__control_ad419a15a7ffa6346e96486103e629a03}{}\label{namespacemico__force__control_ad419a15a7ffa6346e96486103e629a03}
+\index{mico\+\_\+force\+\_\+control@{mico\+\_\+force\+\_\+control}!srv\+\_\+stop@{srv\+\_\+stop}}
+\index{srv\+\_\+stop@{srv\+\_\+stop}!mico\+\_\+force\+\_\+control@{mico\+\_\+force\+\_\+control}}
+\subsubsection[{\texorpdfstring{srv\+\_\+stop}{srv_stop}}]{\setlength{\rightskip}{0pt plus 5cm}mico\+\_\+force\+\_\+control.\+srv\+\_\+stop = rospy.\+Service\+Proxy({\bf robot} + \char`\"{}\+\_\+arm\+\_\+driver/in/stop\+\_\+force\+\_\+control\char`\"{}, Stop)}\hypertarget{namespacemico__force__control_a2cebf1d67600a8e0e30509e127b2ca15}{}\label{namespacemico__force__control_a2cebf1d67600a8e0e30509e127b2ca15}
+\index{mico\+\_\+force\+\_\+control@{mico\+\_\+force\+\_\+control}!x@{x}}
+\index{x@{x}!mico\+\_\+force\+\_\+control@{mico\+\_\+force\+\_\+control}}
+\subsubsection[{\texorpdfstring{x}{x}}]{\setlength{\rightskip}{0pt plus 5cm}mico\+\_\+force\+\_\+control.\+x}\hypertarget{namespacemico__force__control_aa9fdd2ef1b77ee897f0d602302379821}{}\label{namespacemico__force__control_aa9fdd2ef1b77ee897f0d602302379821}
+\index{mico\+\_\+force\+\_\+control@{mico\+\_\+force\+\_\+control}!y@{y}}
+\index{y@{y}!mico\+\_\+force\+\_\+control@{mico\+\_\+force\+\_\+control}}
+\subsubsection[{\texorpdfstring{y}{y}}]{\setlength{\rightskip}{0pt plus 5cm}mico\+\_\+force\+\_\+control.\+y}\hypertarget{namespacemico__force__control_a8a0f8c92894b08350a0d164ffac7d643}{}\label{namespacemico__force__control_a8a0f8c92894b08350a0d164ffac7d643}
+\index{mico\+\_\+force\+\_\+control@{mico\+\_\+force\+\_\+control}!z@{z}}
+\index{z@{z}!mico\+\_\+force\+\_\+control@{mico\+\_\+force\+\_\+control}}
+\subsubsection[{\texorpdfstring{z}{z}}]{\setlength{\rightskip}{0pt plus 5cm}mico\+\_\+force\+\_\+control.\+z}\hypertarget{namespacemico__force__control_a5537f83e86fedd5a78e2bbaab62d326f}{}\label{namespacemico__force__control_a5537f83e86fedd5a78e2bbaab62d326f}

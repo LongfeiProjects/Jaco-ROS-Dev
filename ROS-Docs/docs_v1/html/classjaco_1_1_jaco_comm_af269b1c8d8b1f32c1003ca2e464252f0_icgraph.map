@@ -1,0 +1,4 @@
+<map id="jaco::JacoComm::setJointVelocities" name="jaco::JacoComm::setJointVelocities">
+<area shape="rect" id="node2" href="$classjaco_1_1_jaco_arm.html#a0897025ed2834e5802e504b64d67a88b" title="jaco::JacoArm::jointVelocity\lTimer" alt="" coords="225,5,409,47"/>
+<area shape="rect" id="node3" href="$classjaco_1_1_jaco_arm.html#ab29d25cb3b4bafdc523cbe271c801681" title="jaco::JacoArm::JacoArm" alt="" coords="457,13,621,39"/>
+</map>

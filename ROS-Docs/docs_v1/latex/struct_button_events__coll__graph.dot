@@ -1,0 +1,6 @@
+digraph "ButtonEvents"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="{ButtonEvents\n|+ OneClick\l+ TwoClick\l+ HoldOneSec\l+ HoldTwoSec\l+ HoldThreeSec\l+ HoldFourSec\l+ HoldDown\l|}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+}

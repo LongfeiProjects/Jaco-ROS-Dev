@@ -1,0 +1,9 @@
+<map id="GeneralInformations" name="GeneralInformations">
+<area shape="rect" id="node2" href="$struct_zone_limitation.html" title="This represents a group of limitations that can be applied to a trajectory point. ..." alt="" coords="5,233,176,428"/>
+<area shape="rect" id="node3" href="$struct_system_status.html" title="This structure holds system status flags. " alt="" coords="201,219,391,443"/>
+<area shape="rect" id="node4" href="$struct_joystick_command.html" title="This is a virtual representation of a 6&#45;axis joystick. " alt="" coords="415,248,590,413"/>
+<area shape="rect" id="node5" href="$struct_user_position.html" title="This data structure represents an abstract position built by a user. Depending on the control type th..." alt="" coords="628,277,724,384"/>
+<area shape="rect" id="node6" href="$struct_angular_info.html" title="This data structure holds values in an angular(joint by joint) control context. As an example struct ..." alt="" coords="509,5,603,156"/>
+<area shape="rect" id="node7" href="$struct_cartesian_info.html" title="This data structure holds values in an cartesian control context. " alt="" coords="627,5,725,156"/>
+<area shape="rect" id="node8" href="$struct_fingers_position.html" title="This data structure holds the values of the robot&#39;s fingers. " alt="" coords="765,27,877,134"/>
+</map>

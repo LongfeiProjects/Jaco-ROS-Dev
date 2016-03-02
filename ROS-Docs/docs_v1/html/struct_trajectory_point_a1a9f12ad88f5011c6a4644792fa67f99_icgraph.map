@@ -1,0 +1,14 @@
+<map id="TrajectoryPoint::InitStruct" name="TrajectoryPoint::InitStruct">
+<area shape="rect" id="node2" href="$classjaco_1_1_jaco_comm.html#ad53fa0c190d41da8430de2e9bf997f05" title="Sends a joint angle command to the Jaco arm. " alt="" coords="237,5,409,47"/>
+<area shape="rect" id="node4" href="$classjaco_1_1_jaco_comm.html#a7a7375d2609c81f0a03974b06ca07be0" title="Sends a cartesian coordinate trajectory to the Jaco arm. " alt="" coords="223,71,423,112"/>
+<area shape="rect" id="node6" href="$classjaco_1_1_jaco_comm.html#a5cdc217373b923f7de2ed468150281fa" title="Sets the finger positions. " alt="" coords="232,136,413,177"/>
+<area shape="rect" id="node8" href="$classjaco_1_1_jaco_comm.html#af269b1c8d8b1f32c1003ca2e464252f0" title="Set the angular velocity of the joints. " alt="" coords="237,201,409,243"/>
+<area shape="rect" id="node11" href="$classjaco_1_1_jaco_comm.html#a468352480a437cc2144c8d4d289815a5" title="Set the cartesian velocity of the tool tip. " alt="" coords="223,267,423,308"/>
+<area shape="rect" id="node3" href="$classjaco_1_1_jaco_angles_action_server.html#a3a3da8fd412f2311534246d2287a5b90" title="jaco::JacoAnglesActionServer\l::actionCallback" alt="" coords="472,5,667,47"/>
+<area shape="rect" id="node5" href="$classjaco_1_1_jaco_pose_action_server.html#a82396bb5f219f54518a80493bfd38f26" title="jaco::JacoPoseActionServer\l::actionCallback" alt="" coords="477,71,661,112"/>
+<area shape="rect" id="node7" href="$classjaco_1_1_jaco_fingers_action_server.html#a642f494b27d513457e9f29de7a4b31b6" title="jaco::JacoFingersActionServer\l::actionCallback" alt="" coords="471,136,668,177"/>
+<area shape="rect" id="node9" href="$classjaco_1_1_jaco_arm.html#a0897025ed2834e5802e504b64d67a88b" title="jaco::JacoArm::jointVelocity\lTimer" alt="" coords="477,201,661,243"/>
+<area shape="rect" id="node10" href="$classjaco_1_1_jaco_arm.html#ab29d25cb3b4bafdc523cbe271c801681" title="jaco::JacoArm::JacoArm" alt="" coords="716,242,880,269"/>
+<area shape="rect" id="node12" href="$classjaco_1_1_jaco_arm.html#a0effe31602b4af803cff1566a358fdfb" title="jaco::JacoArm::cartesian\lVelocityTimer" alt="" coords="486,267,653,308"/>
+<area shape="rect" id="node13" href="$classjaco_1_1_jaco_comm.html#acdf234ee7f30cf5ead4f41beb3481521" title="jaco::JacoComm::JacoComm" alt="" coords="473,333,665,359"/>
+</map>

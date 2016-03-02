@@ -1,0 +1,104 @@
+\hypertarget{test__jaco__arm__controller_8cpp}{}\section{C\+:/\+Users/soli/\+Downloads/\+New folder/kinova-\/ros-\/master/jaco\+\_\+driver/src/testers/test\+\_\+jaco\+\_\+arm\+\_\+controller.cpp File Reference}
+\label{test__jaco__arm__controller_8cpp}\index{C\+:/\+Users/soli/\+Downloads/\+New folder/kinova-\/ros-\/master/jaco\+\_\+driver/src/testers/test\+\_\+jaco\+\_\+arm\+\_\+controller.\+cpp@{C\+:/\+Users/soli/\+Downloads/\+New folder/kinova-\/ros-\/master/jaco\+\_\+driver/src/testers/test\+\_\+jaco\+\_\+arm\+\_\+controller.\+cpp}}
+{\ttfamily \#include $<$geometry\+\_\+msgs/\+Pose\+Stamped.\+h$>$}\\*
+{\ttfamily \#include $<$geometry\+\_\+msgs/\+Twist\+Stamped.\+h$>$}\\*
+{\ttfamily \#include $<$tf/tf.\+h$>$}\\*
+{\ttfamily \#include $<$ros/ros.\+h$>$}\\*
+{\ttfamily \#include $<$jaco\+\_\+driver/\+Jaco\+Position\+Config.\+h$>$}\\*
+{\ttfamily \#include $<$dynamic\+\_\+reconfigure/server.\+h$>$}\\*
+Include dependency graph for test\+\_\+jaco\+\_\+arm\+\_\+controller.\+cpp\+:
+% FIG 0
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{test__jaco__arm__controller_8cpp_a9b22877867bb7fee9e5a33831d4f5151}{callback} (jaco\+\_\+driver\+::\+Jaco\+Position\+Config \&config, uint32\+\_\+t level)
+\item 
+void \hyperlink{test__jaco__arm__controller_8cpp_a555d06d88fe912826cb143b1eb9b595f}{Timer\+Callback} (const ros\+::\+Timer\+Event \&)
+\item 
+int \hyperlink{test__jaco__arm__controller_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{main} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+ros\+::\+Publisher $\ast$ \hyperlink{test__jaco__arm__controller_8cpp_ad5e5d8e14bfcad1c0cc878616783a7e2}{pub}
+\item 
+float \hyperlink{test__jaco__arm__controller_8cpp_a1b673edb7bae9a685deb9beeaf306434}{x\+\_\+pose} =0
+\item 
+float \hyperlink{test__jaco__arm__controller_8cpp_a691b31f8e26c353862266520fbb806e7}{y\+\_\+pose} =0
+\item 
+float \hyperlink{test__jaco__arm__controller_8cpp_a1d00778dfc07f0b53fdcdc73754e7ffc}{z\+\_\+pose} =0
+\item 
+float \hyperlink{test__jaco__arm__controller_8cpp_a7018d450f1b8ac16e05c9f60ff2c5e5c}{rx\+\_\+pose} =0
+\item 
+float \hyperlink{test__jaco__arm__controller_8cpp_abf857bc7e68483191c2e2c3e91ac5f4c}{ry\+\_\+pose} =0
+\item 
+float \hyperlink{test__jaco__arm__controller_8cpp_aba5846c38922e0154087cc48943e9e97}{rz\+\_\+pose} =0
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{test\+\_\+jaco\+\_\+arm\+\_\+controller.\+cpp@{test\+\_\+jaco\+\_\+arm\+\_\+controller.\+cpp}!callback@{callback}}
+\index{callback@{callback}!test\+\_\+jaco\+\_\+arm\+\_\+controller.\+cpp@{test\+\_\+jaco\+\_\+arm\+\_\+controller.\+cpp}}
+\subsubsection[{\texorpdfstring{callback(jaco\+\_\+driver\+::\+Jaco\+Position\+Config \&config, uint32\+\_\+t level)}{callback(jaco_driver::JacoPositionConfig &config, uint32_t level)}}]{\setlength{\rightskip}{0pt plus 5cm}void callback (
+\begin{DoxyParamCaption}
+\item[{jaco\+\_\+driver\+::\+Jaco\+Position\+Config \&}]{config, }
+\item[{uint32\+\_\+t}]{level}
+\end{DoxyParamCaption}
+)}\hypertarget{test__jaco__arm__controller_8cpp_a9b22877867bb7fee9e5a33831d4f5151}{}\label{test__jaco__arm__controller_8cpp_a9b22877867bb7fee9e5a33831d4f5151}
+
+
+Here is the caller graph for this function\+:
+% FIG 1
+
+
+\index{test\+\_\+jaco\+\_\+arm\+\_\+controller.\+cpp@{test\+\_\+jaco\+\_\+arm\+\_\+controller.\+cpp}!main@{main}}
+\index{main@{main}!test\+\_\+jaco\+\_\+arm\+\_\+controller.\+cpp@{test\+\_\+jaco\+\_\+arm\+\_\+controller.\+cpp}}
+\subsubsection[{\texorpdfstring{main(int argc, char $\ast$$\ast$argv)}{main(int argc, char **argv)}}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char $\ast$$\ast$}]{argv}
+\end{DoxyParamCaption}
+)}\hypertarget{test__jaco__arm__controller_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{}\label{test__jaco__arm__controller_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}
+String containing the topic name for cartesian commands 
+
+Here is the call graph for this function\+:
+% FIG 2
+
+
+\index{test\+\_\+jaco\+\_\+arm\+\_\+controller.\+cpp@{test\+\_\+jaco\+\_\+arm\+\_\+controller.\+cpp}!Timer\+Callback@{Timer\+Callback}}
+\index{Timer\+Callback@{Timer\+Callback}!test\+\_\+jaco\+\_\+arm\+\_\+controller.\+cpp@{test\+\_\+jaco\+\_\+arm\+\_\+controller.\+cpp}}
+\subsubsection[{\texorpdfstring{Timer\+Callback(const ros\+::\+Timer\+Event \&)}{TimerCallback(const ros::TimerEvent &)}}]{\setlength{\rightskip}{0pt plus 5cm}void Cartesian\+Vel\+Test\+::\+Timer\+Callback (
+\begin{DoxyParamCaption}
+\item[{const ros\+::\+Timer\+Event \&}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{test__jaco__arm__controller_8cpp_a555d06d88fe912826cb143b1eb9b595f}{}\label{test__jaco__arm__controller_8cpp_a555d06d88fe912826cb143b1eb9b595f}
+
+
+Here is the caller graph for this function\+:
+% FIG 3
+
+
+
+
+\subsection{Variable Documentation}
+\index{test\+\_\+jaco\+\_\+arm\+\_\+controller.\+cpp@{test\+\_\+jaco\+\_\+arm\+\_\+controller.\+cpp}!pub@{pub}}
+\index{pub@{pub}!test\+\_\+jaco\+\_\+arm\+\_\+controller.\+cpp@{test\+\_\+jaco\+\_\+arm\+\_\+controller.\+cpp}}
+\subsubsection[{\texorpdfstring{pub}{pub}}]{\setlength{\rightskip}{0pt plus 5cm}ros\+::\+Publisher$\ast$ pub}\hypertarget{test__jaco__arm__controller_8cpp_ad5e5d8e14bfcad1c0cc878616783a7e2}{}\label{test__jaco__arm__controller_8cpp_ad5e5d8e14bfcad1c0cc878616783a7e2}
+\index{test\+\_\+jaco\+\_\+arm\+\_\+controller.\+cpp@{test\+\_\+jaco\+\_\+arm\+\_\+controller.\+cpp}!rx\+\_\+pose@{rx\+\_\+pose}}
+\index{rx\+\_\+pose@{rx\+\_\+pose}!test\+\_\+jaco\+\_\+arm\+\_\+controller.\+cpp@{test\+\_\+jaco\+\_\+arm\+\_\+controller.\+cpp}}
+\subsubsection[{\texorpdfstring{rx\+\_\+pose}{rx_pose}}]{\setlength{\rightskip}{0pt plus 5cm}float rx\+\_\+pose =0}\hypertarget{test__jaco__arm__controller_8cpp_a7018d450f1b8ac16e05c9f60ff2c5e5c}{}\label{test__jaco__arm__controller_8cpp_a7018d450f1b8ac16e05c9f60ff2c5e5c}
+\index{test\+\_\+jaco\+\_\+arm\+\_\+controller.\+cpp@{test\+\_\+jaco\+\_\+arm\+\_\+controller.\+cpp}!ry\+\_\+pose@{ry\+\_\+pose}}
+\index{ry\+\_\+pose@{ry\+\_\+pose}!test\+\_\+jaco\+\_\+arm\+\_\+controller.\+cpp@{test\+\_\+jaco\+\_\+arm\+\_\+controller.\+cpp}}
+\subsubsection[{\texorpdfstring{ry\+\_\+pose}{ry_pose}}]{\setlength{\rightskip}{0pt plus 5cm}float ry\+\_\+pose =0}\hypertarget{test__jaco__arm__controller_8cpp_abf857bc7e68483191c2e2c3e91ac5f4c}{}\label{test__jaco__arm__controller_8cpp_abf857bc7e68483191c2e2c3e91ac5f4c}
+\index{test\+\_\+jaco\+\_\+arm\+\_\+controller.\+cpp@{test\+\_\+jaco\+\_\+arm\+\_\+controller.\+cpp}!rz\+\_\+pose@{rz\+\_\+pose}}
+\index{rz\+\_\+pose@{rz\+\_\+pose}!test\+\_\+jaco\+\_\+arm\+\_\+controller.\+cpp@{test\+\_\+jaco\+\_\+arm\+\_\+controller.\+cpp}}
+\subsubsection[{\texorpdfstring{rz\+\_\+pose}{rz_pose}}]{\setlength{\rightskip}{0pt plus 5cm}float rz\+\_\+pose =0}\hypertarget{test__jaco__arm__controller_8cpp_aba5846c38922e0154087cc48943e9e97}{}\label{test__jaco__arm__controller_8cpp_aba5846c38922e0154087cc48943e9e97}
+\index{test\+\_\+jaco\+\_\+arm\+\_\+controller.\+cpp@{test\+\_\+jaco\+\_\+arm\+\_\+controller.\+cpp}!x\+\_\+pose@{x\+\_\+pose}}
+\index{x\+\_\+pose@{x\+\_\+pose}!test\+\_\+jaco\+\_\+arm\+\_\+controller.\+cpp@{test\+\_\+jaco\+\_\+arm\+\_\+controller.\+cpp}}
+\subsubsection[{\texorpdfstring{x\+\_\+pose}{x_pose}}]{\setlength{\rightskip}{0pt plus 5cm}float x\+\_\+pose =0}\hypertarget{test__jaco__arm__controller_8cpp_a1b673edb7bae9a685deb9beeaf306434}{}\label{test__jaco__arm__controller_8cpp_a1b673edb7bae9a685deb9beeaf306434}
+\index{test\+\_\+jaco\+\_\+arm\+\_\+controller.\+cpp@{test\+\_\+jaco\+\_\+arm\+\_\+controller.\+cpp}!y\+\_\+pose@{y\+\_\+pose}}
+\index{y\+\_\+pose@{y\+\_\+pose}!test\+\_\+jaco\+\_\+arm\+\_\+controller.\+cpp@{test\+\_\+jaco\+\_\+arm\+\_\+controller.\+cpp}}
+\subsubsection[{\texorpdfstring{y\+\_\+pose}{y_pose}}]{\setlength{\rightskip}{0pt plus 5cm}float y\+\_\+pose =0}\hypertarget{test__jaco__arm__controller_8cpp_a691b31f8e26c353862266520fbb806e7}{}\label{test__jaco__arm__controller_8cpp_a691b31f8e26c353862266520fbb806e7}
+\index{test\+\_\+jaco\+\_\+arm\+\_\+controller.\+cpp@{test\+\_\+jaco\+\_\+arm\+\_\+controller.\+cpp}!z\+\_\+pose@{z\+\_\+pose}}
+\index{z\+\_\+pose@{z\+\_\+pose}!test\+\_\+jaco\+\_\+arm\+\_\+controller.\+cpp@{test\+\_\+jaco\+\_\+arm\+\_\+controller.\+cpp}}
+\subsubsection[{\texorpdfstring{z\+\_\+pose}{z_pose}}]{\setlength{\rightskip}{0pt plus 5cm}float z\+\_\+pose =0}\hypertarget{test__jaco__arm__controller_8cpp_a1d00778dfc07f0b53fdcdc73754e7ffc}{}\label{test__jaco__arm__controller_8cpp_a1d00778dfc07f0b53fdcdc73754e7ffc}

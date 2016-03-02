@@ -1,0 +1,5 @@
+<map id="jaco::JacoComm::getJointVelocities" name="jaco::JacoComm::getJointVelocities">
+<area shape="rect" id="node2" href="$classjaco_1_1_jaco_arm.html#a238a888aa46e98fcae569bf942d61e32" title="Publishes the current joint angles. " alt="" coords="225,5,407,47"/>
+<area shape="rect" id="node3" href="$classjaco_1_1_jaco_arm.html#a3a04586ffe92b995c58c9fa94a030bf8" title="jaco::JacoArm::statusTimer" alt="" coords="455,13,636,39"/>
+<area shape="rect" id="node4" href="$classjaco_1_1_jaco_arm.html#ab29d25cb3b4bafdc523cbe271c801681" title="jaco::JacoArm::JacoArm" alt="" coords="684,13,848,39"/>
+</map>

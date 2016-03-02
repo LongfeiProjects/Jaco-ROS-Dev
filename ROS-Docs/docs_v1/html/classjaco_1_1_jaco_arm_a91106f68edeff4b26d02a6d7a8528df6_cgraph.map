@@ -1,0 +1,4 @@
+<map id="jaco::JacoArm::publishToolPosition" name="jaco::JacoArm::publishToolPosition">
+<area shape="rect" id="node2" href="$classjaco_1_1_jaco_comm.html#a855bbefed2093d0d0cc7763eb7306a0b" title="API call to obtain the current cartesian position of the arm. " alt="" coords="232,5,432,47"/>
+<area shape="rect" id="node3" href="$classjaco_1_1_jaco_pose.html#a9f2e68a94240e365afefd84d92f5a132" title="jaco::JacoPose::construct\lPoseMsg" alt="" coords="245,71,419,112"/>
+</map>

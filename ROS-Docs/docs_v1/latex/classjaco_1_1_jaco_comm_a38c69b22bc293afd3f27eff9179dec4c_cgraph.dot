@@ -1,0 +1,17 @@
+digraph "jaco::JacoComm::homeArm"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="jaco::JacoComm::homeArm",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="jaco::JacoComm::isStopped",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classjaco_1_1_jaco_comm.html#a872b8033cda5a9fe4ccdca2e89aa03d1"];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="jaco::JacoComm::isHomed",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classjaco_1_1_jaco_comm.html#a0e7d5984a2c6ed956da7e07e6c97ba5f",tooltip="Determines whether the arm has returned to its \"Home\" state. "];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="jaco::JacoComm::getQuick\lStatus",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classjaco_1_1_jaco_comm.html#a29384597e710d4cbb4e1f2ae6b7d7e50",tooltip="API call to obtain the current \"quick status\". "];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="jaco::JacoComm::stopAPI",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classjaco_1_1_jaco_comm.html#a54862830cd6414ae3ae48e46e54bf798"];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="jaco::JacoComm::startAPI",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classjaco_1_1_jaco_comm.html#a6b2a1fabc4e6c30da42c9a5e26757398"];
+}

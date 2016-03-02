@@ -1,0 +1,617 @@
+\hypertarget{classjaco_1_1_jaco_comm}{}\section{jaco\+:\+:Jaco\+Comm Class Reference}
+\label{classjaco_1_1_jaco_comm}\index{jaco\+::\+Jaco\+Comm@{jaco\+::\+Jaco\+Comm}}
+
+
+{\ttfamily \#include $<$jaco\+\_\+comm.\+h$>$}
+
+
+
+Collaboration diagram for jaco\+:\+:Jaco\+Comm\+:
+% FIG 0
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classjaco_1_1_jaco_comm_acdf234ee7f30cf5ead4f41beb3481521}{Jaco\+Comm} (const ros\+::\+Node\+Handle \&node\+\_\+handle, boost\+::recursive\+\_\+mutex \&api\+\_\+mutex, const bool is\+\_\+movement\+\_\+on\+\_\+start)
+\item 
+\hyperlink{classjaco_1_1_jaco_comm_a94db89ce398a131d5dd6985a7725f495}{$\sim$\+Jaco\+Comm} ()
+\item 
+bool \hyperlink{classjaco_1_1_jaco_comm_a0e7d5984a2c6ed956da7e07e6c97ba5f}{is\+Homed} (void)
+\begin{DoxyCompactList}\small\item\em Determines whether the arm has returned to its \char`\"{}\+Home\char`\"{} state. \end{DoxyCompactList}\item 
+void \hyperlink{classjaco_1_1_jaco_comm_a38c69b22bc293afd3f27eff9179dec4c}{home\+Arm} (void)
+\begin{DoxyCompactList}\small\item\em Send the arm to the \char`\"{}home\char`\"{} position. \end{DoxyCompactList}\item 
+void \hyperlink{classjaco_1_1_jaco_comm_a787f049f83d8f5fa5a7c86ee6a1d0a11}{init\+Fingers} (void)
+\begin{DoxyCompactList}\small\item\em Initialize finger actuators. \end{DoxyCompactList}\item 
+void \hyperlink{classjaco_1_1_jaco_comm_ad53fa0c190d41da8430de2e9bf997f05}{set\+Joint\+Angles} (const \hyperlink{classjaco_1_1_jaco_angles}{Jaco\+Angles} \&angles, int timeout=0, bool push=true)
+\begin{DoxyCompactList}\small\item\em Sends a joint angle command to the Jaco arm. \end{DoxyCompactList}\item 
+void \hyperlink{classjaco_1_1_jaco_comm_a7a7375d2609c81f0a03974b06ca07be0}{set\+Cartesian\+Position} (const \hyperlink{classjaco_1_1_jaco_pose}{Jaco\+Pose} \&position, int timeout=0, bool push=true)
+\begin{DoxyCompactList}\small\item\em Sends a cartesian coordinate trajectory to the Jaco arm. \end{DoxyCompactList}\item 
+void \hyperlink{classjaco_1_1_jaco_comm_a5cdc217373b923f7de2ed468150281fa}{set\+Finger\+Positions} (const \hyperlink{classjaco_1_1_finger_angles}{Finger\+Angles} \&fingers, int timeout=0, bool push=true)
+\begin{DoxyCompactList}\small\item\em Sets the finger positions. \end{DoxyCompactList}\item 
+void \hyperlink{classjaco_1_1_jaco_comm_af269b1c8d8b1f32c1003ca2e464252f0}{set\+Joint\+Velocities} (const \hyperlink{struct_angular_info}{Angular\+Info} \&joint\+\_\+vel)
+\begin{DoxyCompactList}\small\item\em Set the angular velocity of the joints. \end{DoxyCompactList}\item 
+void \hyperlink{classjaco_1_1_jaco_comm_a468352480a437cc2144c8d4d289815a5}{set\+Cartesian\+Velocities} (const \hyperlink{struct_cartesian_info}{Cartesian\+Info} \&velocities)
+\begin{DoxyCompactList}\small\item\em Set the cartesian velocity of the tool tip. \end{DoxyCompactList}\item 
+void \hyperlink{classjaco_1_1_jaco_comm_ae7901b1dff2e84eb89256f46a7c65b62}{set\+Config} (const \hyperlink{struct_client_configurations}{Client\+Configurations} \&config)
+\begin{DoxyCompactList}\small\item\em Obtains the current arm configuration. \end{DoxyCompactList}\item 
+void \hyperlink{classjaco_1_1_jaco_comm_a5fcb23bf6925a82f2ab5e42460ea3834}{get\+Joint\+Angles} (\hyperlink{classjaco_1_1_jaco_angles}{Jaco\+Angles} \&angles)
+\begin{DoxyCompactList}\small\item\em A\+PI call to obtain the current angular position of all the joints. \end{DoxyCompactList}\item 
+void \hyperlink{classjaco_1_1_jaco_comm_aa81b5cdf89bd2c7259be3638fdb4f75a}{get\+Joint\+Velocities} (\hyperlink{classjaco_1_1_jaco_angles}{Jaco\+Angles} \&vels)
+\begin{DoxyCompactList}\small\item\em A\+PI call to obtain the current angular velocities of all the joints. \end{DoxyCompactList}\item 
+void \hyperlink{classjaco_1_1_jaco_comm_af2ba4b35149e292fa5279768d47216cb}{get\+Joint\+Torques} (\hyperlink{classjaco_1_1_jaco_angles}{Jaco\+Angles} \&tqs)
+\begin{DoxyCompactList}\small\item\em A\+PI call to obtain the current torque of all the joints. \end{DoxyCompactList}\item 
+void \hyperlink{classjaco_1_1_jaco_comm_a855bbefed2093d0d0cc7763eb7306a0b}{get\+Cartesian\+Position} (\hyperlink{classjaco_1_1_jaco_pose}{Jaco\+Pose} \&position)
+\begin{DoxyCompactList}\small\item\em A\+PI call to obtain the current cartesian position of the arm. \end{DoxyCompactList}\item 
+void \hyperlink{classjaco_1_1_jaco_comm_af181d7ddd7baeff6e46720648e7e1f31}{get\+Cartesian\+Force} (\hyperlink{classjaco_1_1_jaco_pose}{Jaco\+Pose} \&position)
+\begin{DoxyCompactList}\small\item\em A\+PI call to obtain the current cartesian force of the arm. \end{DoxyCompactList}\item 
+void \hyperlink{classjaco_1_1_jaco_comm_a7644bf1154b59bf4d8b97c200284e3fb}{get\+Finger\+Positions} (\hyperlink{classjaco_1_1_finger_angles}{Finger\+Angles} \&fingers)
+\begin{DoxyCompactList}\small\item\em A\+PI call to obtain the current finger positions. \end{DoxyCompactList}\item 
+void \hyperlink{classjaco_1_1_jaco_comm_afbb443b8e3fe71ef58b0013fdb3d5674}{set\+Cartesian\+Inertia\+Damping} (const \hyperlink{struct_cartesian_info}{Cartesian\+Info} \&inertia, const \hyperlink{struct_cartesian_info}{Cartesian\+Info} \&damping)
+\begin{DoxyCompactList}\small\item\em Set the cartesian inertia and damping parameters for force control. \end{DoxyCompactList}\item 
+void \hyperlink{classjaco_1_1_jaco_comm_a39faaf774115561ea1857349db182145}{set\+Cartesian\+Force\+Min\+Max} (const \hyperlink{struct_cartesian_info}{Cartesian\+Info} \&min, const \hyperlink{struct_cartesian_info}{Cartesian\+Info} \&\hyperlink{_jaco_position_config_8dox_a55c9de72d9f3630abdf51bfe39c191dd}{max})
+\begin{DoxyCompactList}\small\item\em Set the cartesian min and max force parameters for force control. \end{DoxyCompactList}\item 
+void \hyperlink{classjaco_1_1_jaco_comm_a00e5493dfbdcaab6c1a9bd388d3b839d}{start\+Force\+Control} ()
+\begin{DoxyCompactList}\small\item\em Start cartesian force control. \end{DoxyCompactList}\item 
+void \hyperlink{classjaco_1_1_jaco_comm_a339cf31d88fdef6409340c82a35ecb53}{stop\+Force\+Control} ()
+\begin{DoxyCompactList}\small\item\em Stop cartesian force control. \end{DoxyCompactList}\item 
+void \hyperlink{classjaco_1_1_jaco_comm_a29384597e710d4cbb4e1f2ae6b7d7e50}{get\+Quick\+Status} (\hyperlink{struct_quick_status}{Quick\+Status} \&quick\+\_\+status)
+\begin{DoxyCompactList}\small\item\em A\+PI call to obtain the current \char`\"{}quick status\char`\"{}. \end{DoxyCompactList}\item 
+void \hyperlink{classjaco_1_1_jaco_comm_a47a3557e9b5576bc83df936caa043270}{get\+Config} (\hyperlink{struct_client_configurations}{Client\+Configurations} \&config)
+\begin{DoxyCompactList}\small\item\em A\+PI call to obtain the current client configuration. \end{DoxyCompactList}\item 
+void \hyperlink{classjaco_1_1_jaco_comm_a0524faa99cdc1361d50c3c6a53d5cfe0}{print\+Angles} (const \hyperlink{classjaco_1_1_jaco_angles}{Jaco\+Angles} \&angles)
+\begin{DoxyCompactList}\small\item\em Dumps the current joint angles onto the screen. \end{DoxyCompactList}\item 
+void \hyperlink{classjaco_1_1_jaco_comm_ac1abf65387fa9adba237802bc97f15b1}{print\+Position} (const \hyperlink{classjaco_1_1_jaco_pose}{Jaco\+Pose} \&position)
+\begin{DoxyCompactList}\small\item\em Dumps the current cartesian positions onto the screen. \end{DoxyCompactList}\item 
+void \hyperlink{classjaco_1_1_jaco_comm_ab34f7cbb2978e76644927b9031e06b4f}{print\+Fingers} (const \hyperlink{struct_fingers_position}{Fingers\+Position} \&fingers)
+\begin{DoxyCompactList}\small\item\em Dumps the current finger positions onto the screen. \end{DoxyCompactList}\item 
+void \hyperlink{classjaco_1_1_jaco_comm_a54661eeda2fc5324843a230bdcfe8b67}{print\+Config} (const \hyperlink{struct_client_configurations}{Client\+Configurations} \&config)
+\begin{DoxyCompactList}\small\item\em Dumps the client configuration onto the screen. \end{DoxyCompactList}\item 
+void \hyperlink{classjaco_1_1_jaco_comm_a54862830cd6414ae3ae48e46e54bf798}{stop\+A\+PI} ()
+\item 
+void \hyperlink{classjaco_1_1_jaco_comm_a6b2a1fabc4e6c30da42c9a5e26757398}{start\+A\+PI} ()
+\item 
+bool \hyperlink{classjaco_1_1_jaco_comm_a872b8033cda5a9fe4ccdca2e89aa03d1}{is\+Stopped} ()
+\item 
+int \hyperlink{classjaco_1_1_jaco_comm_a42e11ee165ee8f2b1af7e7060f488ce1}{num\+Fingers} ()
+\item 
+int \hyperlink{classjaco_1_1_jaco_comm_af20323ed50f73b59bac3e18ebd8559fa}{robot\+Type} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{jaco\+::\+Jaco\+Comm@{jaco\+::\+Jaco\+Comm}!Jaco\+Comm@{Jaco\+Comm}}
+\index{Jaco\+Comm@{Jaco\+Comm}!jaco\+::\+Jaco\+Comm@{jaco\+::\+Jaco\+Comm}}
+\subsubsection[{\texorpdfstring{Jaco\+Comm(const ros\+::\+Node\+Handle \&node\+\_\+handle, boost\+::recursive\+\_\+mutex \&api\+\_\+mutex, const bool is\+\_\+movement\+\_\+on\+\_\+start)}{JacoComm(const ros::NodeHandle &node_handle, boost::recursive_mutex &api_mutex, const bool is_movement_on_start)}}]{\setlength{\rightskip}{0pt plus 5cm}jaco\+::\+Jaco\+Comm\+::\+Jaco\+Comm (
+\begin{DoxyParamCaption}
+\item[{const ros\+::\+Node\+Handle \&}]{node\+\_\+handle, }
+\item[{boost\+::recursive\+\_\+mutex \&}]{api\+\_\+mutex, }
+\item[{const bool}]{is\+\_\+movement\+\_\+on\+\_\+start}
+\end{DoxyParamCaption}
+)}\hypertarget{classjaco_1_1_jaco_comm_acdf234ee7f30cf5ead4f41beb3481521}{}\label{classjaco_1_1_jaco_comm_acdf234ee7f30cf5ead4f41beb3481521}
+
+
+Here is the call graph for this function\+:
+% FIG 1
+
+
+\index{jaco\+::\+Jaco\+Comm@{jaco\+::\+Jaco\+Comm}!````~Jaco\+Comm@{$\sim$\+Jaco\+Comm}}
+\index{````~Jaco\+Comm@{$\sim$\+Jaco\+Comm}!jaco\+::\+Jaco\+Comm@{jaco\+::\+Jaco\+Comm}}
+\subsubsection[{\texorpdfstring{$\sim$\+Jaco\+Comm()}{~JacoComm()}}]{\setlength{\rightskip}{0pt plus 5cm}jaco\+::\+Jaco\+Comm\+::$\sim$\+Jaco\+Comm (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classjaco_1_1_jaco_comm_a94db89ce398a131d5dd6985a7725f495}{}\label{classjaco_1_1_jaco_comm_a94db89ce398a131d5dd6985a7725f495}
+
+
+\subsection{Member Function Documentation}
+\index{jaco\+::\+Jaco\+Comm@{jaco\+::\+Jaco\+Comm}!get\+Cartesian\+Force@{get\+Cartesian\+Force}}
+\index{get\+Cartesian\+Force@{get\+Cartesian\+Force}!jaco\+::\+Jaco\+Comm@{jaco\+::\+Jaco\+Comm}}
+\subsubsection[{\texorpdfstring{get\+Cartesian\+Force(\+Jaco\+Pose \&position)}{getCartesianForce(JacoPose &position)}}]{\setlength{\rightskip}{0pt plus 5cm}void jaco\+::\+Jaco\+Comm\+::get\+Cartesian\+Force (
+\begin{DoxyParamCaption}
+\item[{{\bf Jaco\+Pose} \&}]{position}
+\end{DoxyParamCaption}
+)}\hypertarget{classjaco_1_1_jaco_comm_af181d7ddd7baeff6e46720648e7e1f31}{}\label{classjaco_1_1_jaco_comm_af181d7ddd7baeff6e46720648e7e1f31}
+
+
+A\+PI call to obtain the current cartesian force of the arm. 
+
+
+
+Here is the caller graph for this function\+:
+% FIG 2
+
+
+\index{jaco\+::\+Jaco\+Comm@{jaco\+::\+Jaco\+Comm}!get\+Cartesian\+Position@{get\+Cartesian\+Position}}
+\index{get\+Cartesian\+Position@{get\+Cartesian\+Position}!jaco\+::\+Jaco\+Comm@{jaco\+::\+Jaco\+Comm}}
+\subsubsection[{\texorpdfstring{get\+Cartesian\+Position(\+Jaco\+Pose \&position)}{getCartesianPosition(JacoPose &position)}}]{\setlength{\rightskip}{0pt plus 5cm}void jaco\+::\+Jaco\+Comm\+::get\+Cartesian\+Position (
+\begin{DoxyParamCaption}
+\item[{{\bf Jaco\+Pose} \&}]{position}
+\end{DoxyParamCaption}
+)}\hypertarget{classjaco_1_1_jaco_comm_a855bbefed2093d0d0cc7763eb7306a0b}{}\label{classjaco_1_1_jaco_comm_a855bbefed2093d0d0cc7763eb7306a0b}
+
+
+A\+PI call to obtain the current cartesian position of the arm. 
+
+
+
+Here is the caller graph for this function\+:
+% FIG 3
+
+
+\index{jaco\+::\+Jaco\+Comm@{jaco\+::\+Jaco\+Comm}!get\+Config@{get\+Config}}
+\index{get\+Config@{get\+Config}!jaco\+::\+Jaco\+Comm@{jaco\+::\+Jaco\+Comm}}
+\subsubsection[{\texorpdfstring{get\+Config(\+Client\+Configurations \&config)}{getConfig(ClientConfigurations &config)}}]{\setlength{\rightskip}{0pt plus 5cm}void jaco\+::\+Jaco\+Comm\+::get\+Config (
+\begin{DoxyParamCaption}
+\item[{{\bf Client\+Configurations} \&}]{config}
+\end{DoxyParamCaption}
+)}\hypertarget{classjaco_1_1_jaco_comm_a47a3557e9b5576bc83df936caa043270}{}\label{classjaco_1_1_jaco_comm_a47a3557e9b5576bc83df936caa043270}
+
+
+A\+PI call to obtain the current client configuration. 
+
+
+
+Here is the caller graph for this function\+:
+% FIG 4
+
+
+\index{jaco\+::\+Jaco\+Comm@{jaco\+::\+Jaco\+Comm}!get\+Finger\+Positions@{get\+Finger\+Positions}}
+\index{get\+Finger\+Positions@{get\+Finger\+Positions}!jaco\+::\+Jaco\+Comm@{jaco\+::\+Jaco\+Comm}}
+\subsubsection[{\texorpdfstring{get\+Finger\+Positions(\+Finger\+Angles \&fingers)}{getFingerPositions(FingerAngles &fingers)}}]{\setlength{\rightskip}{0pt plus 5cm}void jaco\+::\+Jaco\+Comm\+::get\+Finger\+Positions (
+\begin{DoxyParamCaption}
+\item[{{\bf Finger\+Angles} \&}]{fingers}
+\end{DoxyParamCaption}
+)}\hypertarget{classjaco_1_1_jaco_comm_a7644bf1154b59bf4d8b97c200284e3fb}{}\label{classjaco_1_1_jaco_comm_a7644bf1154b59bf4d8b97c200284e3fb}
+
+
+A\+PI call to obtain the current finger positions. 
+
+
+
+Here is the caller graph for this function\+:
+% FIG 5
+
+
+\index{jaco\+::\+Jaco\+Comm@{jaco\+::\+Jaco\+Comm}!get\+Joint\+Angles@{get\+Joint\+Angles}}
+\index{get\+Joint\+Angles@{get\+Joint\+Angles}!jaco\+::\+Jaco\+Comm@{jaco\+::\+Jaco\+Comm}}
+\subsubsection[{\texorpdfstring{get\+Joint\+Angles(\+Jaco\+Angles \&angles)}{getJointAngles(JacoAngles &angles)}}]{\setlength{\rightskip}{0pt plus 5cm}void jaco\+::\+Jaco\+Comm\+::get\+Joint\+Angles (
+\begin{DoxyParamCaption}
+\item[{{\bf Jaco\+Angles} \&}]{angles}
+\end{DoxyParamCaption}
+)}\hypertarget{classjaco_1_1_jaco_comm_a5fcb23bf6925a82f2ab5e42460ea3834}{}\label{classjaco_1_1_jaco_comm_a5fcb23bf6925a82f2ab5e42460ea3834}
+
+
+A\+PI call to obtain the current angular position of all the joints. 
+
+
+
+Here is the caller graph for this function\+:
+% FIG 6
+
+
+\index{jaco\+::\+Jaco\+Comm@{jaco\+::\+Jaco\+Comm}!get\+Joint\+Torques@{get\+Joint\+Torques}}
+\index{get\+Joint\+Torques@{get\+Joint\+Torques}!jaco\+::\+Jaco\+Comm@{jaco\+::\+Jaco\+Comm}}
+\subsubsection[{\texorpdfstring{get\+Joint\+Torques(\+Jaco\+Angles \&tqs)}{getJointTorques(JacoAngles &tqs)}}]{\setlength{\rightskip}{0pt plus 5cm}void jaco\+::\+Jaco\+Comm\+::get\+Joint\+Torques (
+\begin{DoxyParamCaption}
+\item[{{\bf Jaco\+Angles} \&}]{tqs}
+\end{DoxyParamCaption}
+)}\hypertarget{classjaco_1_1_jaco_comm_af2ba4b35149e292fa5279768d47216cb}{}\label{classjaco_1_1_jaco_comm_af2ba4b35149e292fa5279768d47216cb}
+
+
+A\+PI call to obtain the current torque of all the joints. 
+
+\index{jaco\+::\+Jaco\+Comm@{jaco\+::\+Jaco\+Comm}!get\+Joint\+Velocities@{get\+Joint\+Velocities}}
+\index{get\+Joint\+Velocities@{get\+Joint\+Velocities}!jaco\+::\+Jaco\+Comm@{jaco\+::\+Jaco\+Comm}}
+\subsubsection[{\texorpdfstring{get\+Joint\+Velocities(\+Jaco\+Angles \&vels)}{getJointVelocities(JacoAngles &vels)}}]{\setlength{\rightskip}{0pt plus 5cm}void jaco\+::\+Jaco\+Comm\+::get\+Joint\+Velocities (
+\begin{DoxyParamCaption}
+\item[{{\bf Jaco\+Angles} \&}]{vels}
+\end{DoxyParamCaption}
+)}\hypertarget{classjaco_1_1_jaco_comm_aa81b5cdf89bd2c7259be3638fdb4f75a}{}\label{classjaco_1_1_jaco_comm_aa81b5cdf89bd2c7259be3638fdb4f75a}
+
+
+A\+PI call to obtain the current angular velocities of all the joints. 
+
+
+
+Here is the caller graph for this function\+:
+% FIG 7
+
+
+\index{jaco\+::\+Jaco\+Comm@{jaco\+::\+Jaco\+Comm}!get\+Quick\+Status@{get\+Quick\+Status}}
+\index{get\+Quick\+Status@{get\+Quick\+Status}!jaco\+::\+Jaco\+Comm@{jaco\+::\+Jaco\+Comm}}
+\subsubsection[{\texorpdfstring{get\+Quick\+Status(\+Quick\+Status \&quick\+\_\+status)}{getQuickStatus(QuickStatus &quick_status)}}]{\setlength{\rightskip}{0pt plus 5cm}void jaco\+::\+Jaco\+Comm\+::get\+Quick\+Status (
+\begin{DoxyParamCaption}
+\item[{{\bf Quick\+Status} \&}]{quick\+\_\+status}
+\end{DoxyParamCaption}
+)}\hypertarget{classjaco_1_1_jaco_comm_a29384597e710d4cbb4e1f2ae6b7d7e50}{}\label{classjaco_1_1_jaco_comm_a29384597e710d4cbb4e1f2ae6b7d7e50}
+
+
+A\+PI call to obtain the current \char`\"{}quick status\char`\"{}. 
+
+
+
+Here is the caller graph for this function\+:
+% FIG 8
+
+
+\index{jaco\+::\+Jaco\+Comm@{jaco\+::\+Jaco\+Comm}!home\+Arm@{home\+Arm}}
+\index{home\+Arm@{home\+Arm}!jaco\+::\+Jaco\+Comm@{jaco\+::\+Jaco\+Comm}}
+\subsubsection[{\texorpdfstring{home\+Arm(void)}{homeArm(void)}}]{\setlength{\rightskip}{0pt plus 5cm}void jaco\+::\+Jaco\+Comm\+::home\+Arm (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{classjaco_1_1_jaco_comm_a38c69b22bc293afd3f27eff9179dec4c}{}\label{classjaco_1_1_jaco_comm_a38c69b22bc293afd3f27eff9179dec4c}
+
+
+Send the arm to the \char`\"{}home\char`\"{} position. 
+
+The code replicates the function of the \char`\"{}home\char`\"{} button on the user controller by \char`\"{}pressing\char`\"{} the home button long enough for the arm to return to the home position.
+
+Fingers are homed by manually opening them fully, then returning them to a half-\/open position. 
+
+Here is the call graph for this function\+:
+% FIG 9
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 10
+
+
+\index{jaco\+::\+Jaco\+Comm@{jaco\+::\+Jaco\+Comm}!init\+Fingers@{init\+Fingers}}
+\index{init\+Fingers@{init\+Fingers}!jaco\+::\+Jaco\+Comm@{jaco\+::\+Jaco\+Comm}}
+\subsubsection[{\texorpdfstring{init\+Fingers(void)}{initFingers(void)}}]{\setlength{\rightskip}{0pt plus 5cm}void jaco\+::\+Jaco\+Comm\+::init\+Fingers (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{classjaco_1_1_jaco_comm_a787f049f83d8f5fa5a7c86ee6a1d0a11}{}\label{classjaco_1_1_jaco_comm_a787f049f83d8f5fa5a7c86ee6a1d0a11}
+
+
+Initialize finger actuators. 
+
+Move fingers to the full-\/open position to initialize them for use. Note, The this routine requires firmware version 5.\+05.\+x (or higher?). 
+
+Here is the caller graph for this function\+:
+% FIG 11
+
+
+\index{jaco\+::\+Jaco\+Comm@{jaco\+::\+Jaco\+Comm}!is\+Homed@{is\+Homed}}
+\index{is\+Homed@{is\+Homed}!jaco\+::\+Jaco\+Comm@{jaco\+::\+Jaco\+Comm}}
+\subsubsection[{\texorpdfstring{is\+Homed(void)}{isHomed(void)}}]{\setlength{\rightskip}{0pt plus 5cm}bool jaco\+::\+Jaco\+Comm\+::is\+Homed (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{classjaco_1_1_jaco_comm_a0e7d5984a2c6ed956da7e07e6c97ba5f}{}\label{classjaco_1_1_jaco_comm_a0e7d5984a2c6ed956da7e07e6c97ba5f}
+
+
+Determines whether the arm has returned to its \char`\"{}\+Home\char`\"{} state. 
+
+Checks the current joint angles, then compares them to the known \char`\"{}\+Home\char`\"{} joint angles. 
+
+Here is the call graph for this function\+:
+% FIG 12
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 13
+
+
+\index{jaco\+::\+Jaco\+Comm@{jaco\+::\+Jaco\+Comm}!is\+Stopped@{is\+Stopped}}
+\index{is\+Stopped@{is\+Stopped}!jaco\+::\+Jaco\+Comm@{jaco\+::\+Jaco\+Comm}}
+\subsubsection[{\texorpdfstring{is\+Stopped()}{isStopped()}}]{\setlength{\rightskip}{0pt plus 5cm}bool jaco\+::\+Jaco\+Comm\+::is\+Stopped (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classjaco_1_1_jaco_comm_a872b8033cda5a9fe4ccdca2e89aa03d1}{}\label{classjaco_1_1_jaco_comm_a872b8033cda5a9fe4ccdca2e89aa03d1}
+
+
+Here is the caller graph for this function\+:
+% FIG 14
+
+
+\index{jaco\+::\+Jaco\+Comm@{jaco\+::\+Jaco\+Comm}!num\+Fingers@{num\+Fingers}}
+\index{num\+Fingers@{num\+Fingers}!jaco\+::\+Jaco\+Comm@{jaco\+::\+Jaco\+Comm}}
+\subsubsection[{\texorpdfstring{num\+Fingers()}{numFingers()}}]{\setlength{\rightskip}{0pt plus 5cm}int jaco\+::\+Jaco\+Comm\+::num\+Fingers (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classjaco_1_1_jaco_comm_a42e11ee165ee8f2b1af7e7060f488ce1}{}\label{classjaco_1_1_jaco_comm_a42e11ee165ee8f2b1af7e7060f488ce1}
+
+
+Here is the caller graph for this function\+:
+% FIG 15
+
+
+\index{jaco\+::\+Jaco\+Comm@{jaco\+::\+Jaco\+Comm}!print\+Angles@{print\+Angles}}
+\index{print\+Angles@{print\+Angles}!jaco\+::\+Jaco\+Comm@{jaco\+::\+Jaco\+Comm}}
+\subsubsection[{\texorpdfstring{print\+Angles(const Jaco\+Angles \&angles)}{printAngles(const JacoAngles &angles)}}]{\setlength{\rightskip}{0pt plus 5cm}void jaco\+::\+Jaco\+Comm\+::print\+Angles (
+\begin{DoxyParamCaption}
+\item[{const {\bf Jaco\+Angles} \&}]{angles}
+\end{DoxyParamCaption}
+)}\hypertarget{classjaco_1_1_jaco_comm_a0524faa99cdc1361d50c3c6a53d5cfe0}{}\label{classjaco_1_1_jaco_comm_a0524faa99cdc1361d50c3c6a53d5cfe0}
+
+
+Dumps the current joint angles onto the screen. 
+
+\index{jaco\+::\+Jaco\+Comm@{jaco\+::\+Jaco\+Comm}!print\+Config@{print\+Config}}
+\index{print\+Config@{print\+Config}!jaco\+::\+Jaco\+Comm@{jaco\+::\+Jaco\+Comm}}
+\subsubsection[{\texorpdfstring{print\+Config(const Client\+Configurations \&config)}{printConfig(const ClientConfigurations &config)}}]{\setlength{\rightskip}{0pt plus 5cm}void jaco\+::\+Jaco\+Comm\+::print\+Config (
+\begin{DoxyParamCaption}
+\item[{const {\bf Client\+Configurations} \&}]{config}
+\end{DoxyParamCaption}
+)}\hypertarget{classjaco_1_1_jaco_comm_a54661eeda2fc5324843a230bdcfe8b67}{}\label{classjaco_1_1_jaco_comm_a54661eeda2fc5324843a230bdcfe8b67}
+
+
+Dumps the client configuration onto the screen. 
+
+\index{jaco\+::\+Jaco\+Comm@{jaco\+::\+Jaco\+Comm}!print\+Fingers@{print\+Fingers}}
+\index{print\+Fingers@{print\+Fingers}!jaco\+::\+Jaco\+Comm@{jaco\+::\+Jaco\+Comm}}
+\subsubsection[{\texorpdfstring{print\+Fingers(const Fingers\+Position \&fingers)}{printFingers(const FingersPosition &fingers)}}]{\setlength{\rightskip}{0pt plus 5cm}void jaco\+::\+Jaco\+Comm\+::print\+Fingers (
+\begin{DoxyParamCaption}
+\item[{const {\bf Fingers\+Position} \&}]{fingers}
+\end{DoxyParamCaption}
+)}\hypertarget{classjaco_1_1_jaco_comm_ab34f7cbb2978e76644927b9031e06b4f}{}\label{classjaco_1_1_jaco_comm_ab34f7cbb2978e76644927b9031e06b4f}
+
+
+Dumps the current finger positions onto the screen. 
+
+\index{jaco\+::\+Jaco\+Comm@{jaco\+::\+Jaco\+Comm}!print\+Position@{print\+Position}}
+\index{print\+Position@{print\+Position}!jaco\+::\+Jaco\+Comm@{jaco\+::\+Jaco\+Comm}}
+\subsubsection[{\texorpdfstring{print\+Position(const Jaco\+Pose \&position)}{printPosition(const JacoPose &position)}}]{\setlength{\rightskip}{0pt plus 5cm}void jaco\+::\+Jaco\+Comm\+::print\+Position (
+\begin{DoxyParamCaption}
+\item[{const {\bf Jaco\+Pose} \&}]{position}
+\end{DoxyParamCaption}
+)}\hypertarget{classjaco_1_1_jaco_comm_ac1abf65387fa9adba237802bc97f15b1}{}\label{classjaco_1_1_jaco_comm_ac1abf65387fa9adba237802bc97f15b1}
+
+
+Dumps the current cartesian positions onto the screen. 
+
+\index{jaco\+::\+Jaco\+Comm@{jaco\+::\+Jaco\+Comm}!robot\+Type@{robot\+Type}}
+\index{robot\+Type@{robot\+Type}!jaco\+::\+Jaco\+Comm@{jaco\+::\+Jaco\+Comm}}
+\subsubsection[{\texorpdfstring{robot\+Type()}{robotType()}}]{\setlength{\rightskip}{0pt plus 5cm}int jaco\+::\+Jaco\+Comm\+::robot\+Type (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classjaco_1_1_jaco_comm_af20323ed50f73b59bac3e18ebd8559fa}{}\label{classjaco_1_1_jaco_comm_af20323ed50f73b59bac3e18ebd8559fa}
+
+
+Here is the caller graph for this function\+:
+% FIG 16
+
+
+\index{jaco\+::\+Jaco\+Comm@{jaco\+::\+Jaco\+Comm}!set\+Cartesian\+Force\+Min\+Max@{set\+Cartesian\+Force\+Min\+Max}}
+\index{set\+Cartesian\+Force\+Min\+Max@{set\+Cartesian\+Force\+Min\+Max}!jaco\+::\+Jaco\+Comm@{jaco\+::\+Jaco\+Comm}}
+\subsubsection[{\texorpdfstring{set\+Cartesian\+Force\+Min\+Max(const Cartesian\+Info \&min, const Cartesian\+Info \&max)}{setCartesianForceMinMax(const CartesianInfo &min, const CartesianInfo &max)}}]{\setlength{\rightskip}{0pt plus 5cm}void jaco\+::\+Jaco\+Comm\+::set\+Cartesian\+Force\+Min\+Max (
+\begin{DoxyParamCaption}
+\item[{const {\bf Cartesian\+Info} \&}]{min, }
+\item[{const {\bf Cartesian\+Info} \&}]{max}
+\end{DoxyParamCaption}
+)}\hypertarget{classjaco_1_1_jaco_comm_a39faaf774115561ea1857349db182145}{}\label{classjaco_1_1_jaco_comm_a39faaf774115561ea1857349db182145}
+
+
+Set the cartesian min and max force parameters for force control. 
+
+
+
+Here is the caller graph for this function\+:
+% FIG 17
+
+
+\index{jaco\+::\+Jaco\+Comm@{jaco\+::\+Jaco\+Comm}!set\+Cartesian\+Inertia\+Damping@{set\+Cartesian\+Inertia\+Damping}}
+\index{set\+Cartesian\+Inertia\+Damping@{set\+Cartesian\+Inertia\+Damping}!jaco\+::\+Jaco\+Comm@{jaco\+::\+Jaco\+Comm}}
+\subsubsection[{\texorpdfstring{set\+Cartesian\+Inertia\+Damping(const Cartesian\+Info \&inertia, const Cartesian\+Info \&damping)}{setCartesianInertiaDamping(const CartesianInfo &inertia, const CartesianInfo &damping)}}]{\setlength{\rightskip}{0pt plus 5cm}void jaco\+::\+Jaco\+Comm\+::set\+Cartesian\+Inertia\+Damping (
+\begin{DoxyParamCaption}
+\item[{const {\bf Cartesian\+Info} \&}]{inertia, }
+\item[{const {\bf Cartesian\+Info} \&}]{damping}
+\end{DoxyParamCaption}
+)}\hypertarget{classjaco_1_1_jaco_comm_afbb443b8e3fe71ef58b0013fdb3d5674}{}\label{classjaco_1_1_jaco_comm_afbb443b8e3fe71ef58b0013fdb3d5674}
+
+
+Set the cartesian inertia and damping parameters for force control. 
+
+
+
+Here is the caller graph for this function\+:
+% FIG 18
+
+
+\index{jaco\+::\+Jaco\+Comm@{jaco\+::\+Jaco\+Comm}!set\+Cartesian\+Position@{set\+Cartesian\+Position}}
+\index{set\+Cartesian\+Position@{set\+Cartesian\+Position}!jaco\+::\+Jaco\+Comm@{jaco\+::\+Jaco\+Comm}}
+\subsubsection[{\texorpdfstring{set\+Cartesian\+Position(const Jaco\+Pose \&position, int timeout=0, bool push=true)}{setCartesianPosition(const JacoPose &position, int timeout=0, bool push=true)}}]{\setlength{\rightskip}{0pt plus 5cm}void jaco\+::\+Jaco\+Comm\+::set\+Cartesian\+Position (
+\begin{DoxyParamCaption}
+\item[{const {\bf Jaco\+Pose} \&}]{position, }
+\item[{int}]{timeout = {\ttfamily 0}, }
+\item[{bool}]{push = {\ttfamily true}}
+\end{DoxyParamCaption}
+)}\hypertarget{classjaco_1_1_jaco_comm_a7a7375d2609c81f0a03974b06ca07be0}{}\label{classjaco_1_1_jaco_comm_a7a7375d2609c81f0a03974b06ca07be0}
+
+
+Sends a cartesian coordinate trajectory to the Jaco arm. 
+
+Waits until the arm has stopped moving before releasing control of the A\+PI. 
+
+Here is the call graph for this function\+:
+% FIG 19
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 20
+
+
+\index{jaco\+::\+Jaco\+Comm@{jaco\+::\+Jaco\+Comm}!set\+Cartesian\+Velocities@{set\+Cartesian\+Velocities}}
+\index{set\+Cartesian\+Velocities@{set\+Cartesian\+Velocities}!jaco\+::\+Jaco\+Comm@{jaco\+::\+Jaco\+Comm}}
+\subsubsection[{\texorpdfstring{set\+Cartesian\+Velocities(const Cartesian\+Info \&velocities)}{setCartesianVelocities(const CartesianInfo &velocities)}}]{\setlength{\rightskip}{0pt plus 5cm}void jaco\+::\+Jaco\+Comm\+::set\+Cartesian\+Velocities (
+\begin{DoxyParamCaption}
+\item[{const {\bf Cartesian\+Info} \&}]{velocities}
+\end{DoxyParamCaption}
+)}\hypertarget{classjaco_1_1_jaco_comm_a468352480a437cc2144c8d4d289815a5}{}\label{classjaco_1_1_jaco_comm_a468352480a437cc2144c8d4d289815a5}
+
+
+Set the cartesian velocity of the tool tip. 
+
+
+
+Here is the call graph for this function\+:
+% FIG 21
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 22
+
+
+\index{jaco\+::\+Jaco\+Comm@{jaco\+::\+Jaco\+Comm}!set\+Config@{set\+Config}}
+\index{set\+Config@{set\+Config}!jaco\+::\+Jaco\+Comm@{jaco\+::\+Jaco\+Comm}}
+\subsubsection[{\texorpdfstring{set\+Config(const Client\+Configurations \&config)}{setConfig(const ClientConfigurations &config)}}]{\setlength{\rightskip}{0pt plus 5cm}void jaco\+::\+Jaco\+Comm\+::set\+Config (
+\begin{DoxyParamCaption}
+\item[{const {\bf Client\+Configurations} \&}]{config}
+\end{DoxyParamCaption}
+)}\hypertarget{classjaco_1_1_jaco_comm_ae7901b1dff2e84eb89256f46a7c65b62}{}\label{classjaco_1_1_jaco_comm_ae7901b1dff2e84eb89256f46a7c65b62}
+
+
+Obtains the current arm configuration. 
+
+This is the configuration which are stored on the arm itself. Many of these configurations may be set using the Windows interface. \index{jaco\+::\+Jaco\+Comm@{jaco\+::\+Jaco\+Comm}!set\+Finger\+Positions@{set\+Finger\+Positions}}
+\index{set\+Finger\+Positions@{set\+Finger\+Positions}!jaco\+::\+Jaco\+Comm@{jaco\+::\+Jaco\+Comm}}
+\subsubsection[{\texorpdfstring{set\+Finger\+Positions(const Finger\+Angles \&fingers, int timeout=0, bool push=true)}{setFingerPositions(const FingerAngles &fingers, int timeout=0, bool push=true)}}]{\setlength{\rightskip}{0pt plus 5cm}void jaco\+::\+Jaco\+Comm\+::set\+Finger\+Positions (
+\begin{DoxyParamCaption}
+\item[{const {\bf Finger\+Angles} \&}]{fingers, }
+\item[{int}]{timeout = {\ttfamily 0}, }
+\item[{bool}]{push = {\ttfamily true}}
+\end{DoxyParamCaption}
+)}\hypertarget{classjaco_1_1_jaco_comm_a5cdc217373b923f7de2ed468150281fa}{}\label{classjaco_1_1_jaco_comm_a5cdc217373b923f7de2ed468150281fa}
+
+
+Sets the finger positions. 
+
+
+
+Here is the call graph for this function\+:
+% FIG 23
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 24
+
+
+\index{jaco\+::\+Jaco\+Comm@{jaco\+::\+Jaco\+Comm}!set\+Joint\+Angles@{set\+Joint\+Angles}}
+\index{set\+Joint\+Angles@{set\+Joint\+Angles}!jaco\+::\+Jaco\+Comm@{jaco\+::\+Jaco\+Comm}}
+\subsubsection[{\texorpdfstring{set\+Joint\+Angles(const Jaco\+Angles \&angles, int timeout=0, bool push=true)}{setJointAngles(const JacoAngles &angles, int timeout=0, bool push=true)}}]{\setlength{\rightskip}{0pt plus 5cm}void jaco\+::\+Jaco\+Comm\+::set\+Joint\+Angles (
+\begin{DoxyParamCaption}
+\item[{const {\bf Jaco\+Angles} \&}]{angles, }
+\item[{int}]{timeout = {\ttfamily 0}, }
+\item[{bool}]{push = {\ttfamily true}}
+\end{DoxyParamCaption}
+)}\hypertarget{classjaco_1_1_jaco_comm_ad53fa0c190d41da8430de2e9bf997f05}{}\label{classjaco_1_1_jaco_comm_ad53fa0c190d41da8430de2e9bf997f05}
+
+
+Sends a joint angle command to the Jaco arm. 
+
+Waits until the arm has stopped moving before releasing control of the A\+PI. 
+
+Here is the call graph for this function\+:
+% FIG 25
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 26
+
+
+\index{jaco\+::\+Jaco\+Comm@{jaco\+::\+Jaco\+Comm}!set\+Joint\+Velocities@{set\+Joint\+Velocities}}
+\index{set\+Joint\+Velocities@{set\+Joint\+Velocities}!jaco\+::\+Jaco\+Comm@{jaco\+::\+Jaco\+Comm}}
+\subsubsection[{\texorpdfstring{set\+Joint\+Velocities(const Angular\+Info \&joint\+\_\+vel)}{setJointVelocities(const AngularInfo &joint_vel)}}]{\setlength{\rightskip}{0pt plus 5cm}void jaco\+::\+Jaco\+Comm\+::set\+Joint\+Velocities (
+\begin{DoxyParamCaption}
+\item[{const {\bf Angular\+Info} \&}]{joint\+\_\+vel}
+\end{DoxyParamCaption}
+)}\hypertarget{classjaco_1_1_jaco_comm_af269b1c8d8b1f32c1003ca2e464252f0}{}\label{classjaco_1_1_jaco_comm_af269b1c8d8b1f32c1003ca2e464252f0}
+
+
+Set the angular velocity of the joints. 
+
+
+
+Here is the call graph for this function\+:
+% FIG 27
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 28
+
+
+\index{jaco\+::\+Jaco\+Comm@{jaco\+::\+Jaco\+Comm}!start\+A\+PI@{start\+A\+PI}}
+\index{start\+A\+PI@{start\+A\+PI}!jaco\+::\+Jaco\+Comm@{jaco\+::\+Jaco\+Comm}}
+\subsubsection[{\texorpdfstring{start\+A\+P\+I()}{startAPI()}}]{\setlength{\rightskip}{0pt plus 5cm}void jaco\+::\+Jaco\+Comm\+::start\+A\+PI (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classjaco_1_1_jaco_comm_a6b2a1fabc4e6c30da42c9a5e26757398}{}\label{classjaco_1_1_jaco_comm_a6b2a1fabc4e6c30da42c9a5e26757398}
+
+
+Here is the caller graph for this function\+:
+% FIG 29
+
+
+\index{jaco\+::\+Jaco\+Comm@{jaco\+::\+Jaco\+Comm}!start\+Force\+Control@{start\+Force\+Control}}
+\index{start\+Force\+Control@{start\+Force\+Control}!jaco\+::\+Jaco\+Comm@{jaco\+::\+Jaco\+Comm}}
+\subsubsection[{\texorpdfstring{start\+Force\+Control()}{startForceControl()}}]{\setlength{\rightskip}{0pt plus 5cm}void jaco\+::\+Jaco\+Comm\+::start\+Force\+Control (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classjaco_1_1_jaco_comm_a00e5493dfbdcaab6c1a9bd388d3b839d}{}\label{classjaco_1_1_jaco_comm_a00e5493dfbdcaab6c1a9bd388d3b839d}
+
+
+Start cartesian force control. 
+
+
+
+Here is the caller graph for this function\+:
+% FIG 30
+
+
+\index{jaco\+::\+Jaco\+Comm@{jaco\+::\+Jaco\+Comm}!stop\+A\+PI@{stop\+A\+PI}}
+\index{stop\+A\+PI@{stop\+A\+PI}!jaco\+::\+Jaco\+Comm@{jaco\+::\+Jaco\+Comm}}
+\subsubsection[{\texorpdfstring{stop\+A\+P\+I()}{stopAPI()}}]{\setlength{\rightskip}{0pt plus 5cm}void jaco\+::\+Jaco\+Comm\+::stop\+A\+PI (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classjaco_1_1_jaco_comm_a54862830cd6414ae3ae48e46e54bf798}{}\label{classjaco_1_1_jaco_comm_a54862830cd6414ae3ae48e46e54bf798}
+
+
+Here is the caller graph for this function\+:
+% FIG 31
+
+
+\index{jaco\+::\+Jaco\+Comm@{jaco\+::\+Jaco\+Comm}!stop\+Force\+Control@{stop\+Force\+Control}}
+\index{stop\+Force\+Control@{stop\+Force\+Control}!jaco\+::\+Jaco\+Comm@{jaco\+::\+Jaco\+Comm}}
+\subsubsection[{\texorpdfstring{stop\+Force\+Control()}{stopForceControl()}}]{\setlength{\rightskip}{0pt plus 5cm}void jaco\+::\+Jaco\+Comm\+::stop\+Force\+Control (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classjaco_1_1_jaco_comm_a339cf31d88fdef6409340c82a35ecb53}{}\label{classjaco_1_1_jaco_comm_a339cf31d88fdef6409340c82a35ecb53}
+
+
+Stop cartesian force control. 
+
+
+
+Here is the caller graph for this function\+:
+% FIG 32
+
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/soli/\+Downloads/\+New folder/kinova-\/ros-\/master/jaco\+\_\+driver/include/jaco\+\_\+driver/\hyperlink{jaco__comm_8h}{jaco\+\_\+comm.\+h}\item 
+C\+:/\+Users/soli/\+Downloads/\+New folder/kinova-\/ros-\/master/jaco\+\_\+driver/src/\hyperlink{jaco__comm_8cpp}{jaco\+\_\+comm.\+cpp}\end{DoxyCompactItemize}

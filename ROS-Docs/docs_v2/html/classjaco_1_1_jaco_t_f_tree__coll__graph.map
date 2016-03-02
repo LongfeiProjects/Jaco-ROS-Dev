@@ -1,0 +1,4 @@
+<map id="jaco::JacoTFTree" name="jaco::JacoTFTree">
+<area shape="rect" id="node2" href="$classjaco_1_1_jaco_kinematics.html" title="{jaco::JacoKinematics\n|&#45; broadcaster_\l&#45; tf_prefix_\l&#45; base_to_api_\l&#45; base_to_j1_\l&#45; j1_to_j2_\l&#45; j2_to_j3_\l&#45; j3_offset_\l&#45; j3_to_j4_\l&#45; j4_to_j5_\l&#45; j5_to_j6_\l&#45; j6_to_end_\l&#45; j5_bend_degrees_\l&#45; j6_bend_degrees_\l|+ JacoKinematics()\l+ updateForward()\l+ degToRad()\l}" alt="" coords="5,5,152,288"/>
+<area shape="rect" id="node3" href="$structjaco__msgs_1_1_joint_angles__.html" title="{jaco_msgs::JointAngles\l_\&lt; std::allocator\&lt; void \&gt; \&gt;\n|+ joint1\l+ joint2\l+ joint3\l+ joint4\l+ joint5\l+ joint6\l|+ JointAngles_()\l+ JointAngles_()\l}" alt="" coords="177,57,351,237"/>
+</map>

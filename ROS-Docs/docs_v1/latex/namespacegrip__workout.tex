@@ -1,0 +1,43 @@
+\hypertarget{namespacegrip__workout}{}\section{grip\+\_\+workout Namespace Reference}
+\label{namespacegrip__workout}\index{grip\+\_\+workout@{grip\+\_\+workout}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{namespacegrip__workout_a5c14bb069a6ceb0f3854520cc298a2c1}{gripper\+\_\+client} (finger\+\_\+positions)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{namespacegrip__workout_a3deafc04ebe19165cfdc795ba4f53692}{positions} = \hyperlink{namespacegoal__generators_a2b395bfee98a60349c6a7193e8d3059f}{goal\+\_\+generators.\+random\+\_\+jaco\+\_\+finger\+\_\+positions}(int(sys.\+argv\mbox{[}3\mbox{]}))
+\item 
+list \hyperlink{namespacegrip__workout_a2e28cab9dcd884944ac12b695ad4a773}{raw\+\_\+positions} = \mbox{[}float(n) for n in sys.\+argv\mbox{[}2\+:\mbox{]}\mbox{]}
+\item 
+\hyperlink{namespacegrip__workout_ac8e857bea751845a9f8c3f34d4fa3399}{result} = \hyperlink{namespacegrip__workout_a5c14bb069a6ceb0f3854520cc298a2c1}{gripper\+\_\+client}(position)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyVerb}A helper program to test gripper goals for the JACO and MICO arms.\end{DoxyVerb}
+ 
+
+\subsection{Function Documentation}
+\index{grip\+\_\+workout@{grip\+\_\+workout}!gripper\+\_\+client@{gripper\+\_\+client}}
+\index{gripper\+\_\+client@{gripper\+\_\+client}!grip\+\_\+workout@{grip\+\_\+workout}}
+\subsubsection[{\texorpdfstring{gripper\+\_\+client(finger\+\_\+positions)}{gripper_client(finger_positions)}}]{\setlength{\rightskip}{0pt plus 5cm}def grip\+\_\+workout.\+gripper\+\_\+client (
+\begin{DoxyParamCaption}
+\item[{}]{finger\+\_\+positions}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacegrip__workout_a5c14bb069a6ceb0f3854520cc298a2c1}{}\label{namespacegrip__workout_a5c14bb069a6ceb0f3854520cc298a2c1}
+\begin{DoxyVerb}Send a gripper goal to the action server.\end{DoxyVerb}
+ 
+
+\subsection{Variable Documentation}
+\index{grip\+\_\+workout@{grip\+\_\+workout}!positions@{positions}}
+\index{positions@{positions}!grip\+\_\+workout@{grip\+\_\+workout}}
+\subsubsection[{\texorpdfstring{positions}{positions}}]{\setlength{\rightskip}{0pt plus 5cm}list grip\+\_\+workout.\+positions = {\bf goal\+\_\+generators.\+random\+\_\+jaco\+\_\+finger\+\_\+positions}(int(sys.\+argv\mbox{[}3\mbox{]}))}\hypertarget{namespacegrip__workout_a3deafc04ebe19165cfdc795ba4f53692}{}\label{namespacegrip__workout_a3deafc04ebe19165cfdc795ba4f53692}
+\index{grip\+\_\+workout@{grip\+\_\+workout}!raw\+\_\+positions@{raw\+\_\+positions}}
+\index{raw\+\_\+positions@{raw\+\_\+positions}!grip\+\_\+workout@{grip\+\_\+workout}}
+\subsubsection[{\texorpdfstring{raw\+\_\+positions}{raw_positions}}]{\setlength{\rightskip}{0pt plus 5cm}list grip\+\_\+workout.\+raw\+\_\+positions = \mbox{[}float(n) for n in sys.\+argv\mbox{[}2\+:\mbox{]}\mbox{]}}\hypertarget{namespacegrip__workout_a2e28cab9dcd884944ac12b695ad4a773}{}\label{namespacegrip__workout_a2e28cab9dcd884944ac12b695ad4a773}
+\index{grip\+\_\+workout@{grip\+\_\+workout}!result@{result}}
+\index{result@{result}!grip\+\_\+workout@{grip\+\_\+workout}}
+\subsubsection[{\texorpdfstring{result}{result}}]{\setlength{\rightskip}{0pt plus 5cm}grip\+\_\+workout.\+result = {\bf gripper\+\_\+client}(position)}\hypertarget{namespacegrip__workout_ac8e857bea751845a9f8c3f34d4fa3399}{}\label{namespacegrip__workout_ac8e857bea751845a9f8c3f34d4fa3399}

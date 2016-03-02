@@ -1,0 +1,7 @@
+<map id="TrajectoryPoint::InitStruct" name="TrajectoryPoint::InitStruct">
+<area shape="rect" id="node2" href="$struct_user_position.html#ad682f9be07fa2307028f86624ded2958" title="UserPosition::InitStruct" alt="" coords="223,56,379,83"/>
+<area shape="rect" id="node6" href="$struct_limitation.html#a098f4ee5d0eb6baf844ff3164f1a20f6" title="Limitation::InitStruct" alt="" coords="231,107,370,133"/>
+<area shape="rect" id="node3" href="$struct_cartesian_info.html#a6d47623939d86124525ab4c8f7a2b8e9" title="CartesianInfo::InitStruct" alt="" coords="434,5,591,32"/>
+<area shape="rect" id="node4" href="$struct_angular_info.html#a092156b3e0e6cb657ed4bb2f6b15a9f0" title="AngularInfo::InitStruct" alt="" coords="439,56,586,83"/>
+<area shape="rect" id="node5" href="$struct_fingers_position.html#a2d958923675995d54d56e59f8549495d" title="FingersPosition::InitStruct" alt="" coords="427,107,599,133"/>
+</map>

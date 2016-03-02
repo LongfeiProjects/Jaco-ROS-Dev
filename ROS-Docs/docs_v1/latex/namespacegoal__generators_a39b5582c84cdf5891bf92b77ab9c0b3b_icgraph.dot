@@ -1,0 +1,9 @@
+digraph "goal_generators.joint_angles_from_file"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="goal_generators.joint\l_angles_from_file",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="goal_generators.random\l_mico_finger_positions",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespacegoal__generators.html#a092d3fe84232b5b0ead199e6d5a822eb"];
+}

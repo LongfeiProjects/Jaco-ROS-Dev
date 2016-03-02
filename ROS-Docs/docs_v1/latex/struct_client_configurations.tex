@@ -1,0 +1,241 @@
+\hypertarget{struct_client_configurations}{}\section{Client\+Configurations Struct Reference}
+\label{struct_client_configurations}\index{Client\+Configurations@{Client\+Configurations}}
+
+
+This structure holds informations relative to the client. It is mostly used for rehab clients. As an example, if you need to modify the max velocity or the retract position, it will be done here. The easiest way to modify the client configuration is to get the current one by calling the function Get\+Client\+Configurations, modify all the parameters you need and send the structure back to the robot by calling the function \hyperlink{_kinova_8_a_p_i_8_usb_command_layer_ubuntu_8h_aaaf906c81f0dbdc53101d61c7838eae8}{Set\+Client\+Configurations()}. Note that some of the parameters are read only. That means that even if you modify them and send the structure to the robot, they will not be modified.  
+
+
+
+
+{\ttfamily \#include $<$Kinova\+Types.\+h$>$}
+
+
+
+Collaboration diagram for Client\+Configurations\+:
+% FIG 0
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+char \hyperlink{struct_client_configurations_a2adccda7d27c7731ab0fe1160005e6ac}{Client\+ID} \mbox{[}\hyperlink{_kinova_types_8h_ac829415013d8120cedee928452ae0f55}{S\+T\+R\+I\+N\+G\+\_\+\+L\+E\+N\+G\+TH}\mbox{]}
+\begin{DoxyCompactList}\small\item\em This is the ID of the client. The string must ends with a End\+Of\+String character(\textbackslash{}0). \end{DoxyCompactList}\item 
+char \hyperlink{struct_client_configurations_a6ec42489c6a1e74a654809f5f39ca6f8}{Client\+Name} \mbox{[}\hyperlink{_kinova_types_8h_ac829415013d8120cedee928452ae0f55}{S\+T\+R\+I\+N\+G\+\_\+\+L\+E\+N\+G\+TH}\mbox{]}
+\begin{DoxyCompactList}\small\item\em This is the name of the client. The string must ends with a End\+Of\+String character(\textbackslash{}0). \end{DoxyCompactList}\item 
+char \hyperlink{struct_client_configurations_a55c82eb4163582b31c6d720766057767}{Organization} \mbox{[}\hyperlink{_kinova_types_8h_ac829415013d8120cedee928452ae0f55}{S\+T\+R\+I\+N\+G\+\_\+\+L\+E\+N\+G\+TH}\mbox{]}
+\begin{DoxyCompactList}\small\item\em This is the name of the organization. The string must ends with a End\+Of\+String character(\textbackslash{}0). \end{DoxyCompactList}\item 
+char \hyperlink{struct_client_configurations_adb0902769a42d7eaf9cce979d0779723}{Serial} \mbox{[}\hyperlink{_kinova_types_8h_ac829415013d8120cedee928452ae0f55}{S\+T\+R\+I\+N\+G\+\_\+\+L\+E\+N\+G\+TH}\mbox{]}
+\begin{DoxyCompactList}\small\item\em This is where you can store the serial number of the robot. The string must ends with a End\+Of\+String character(\textbackslash{}0). \end{DoxyCompactList}\item 
+char \hyperlink{struct_client_configurations_a5bb86440679384635d0d0f41ca431249}{Model} \mbox{[}\hyperlink{_kinova_types_8h_ac829415013d8120cedee928452ae0f55}{S\+T\+R\+I\+N\+G\+\_\+\+L\+E\+N\+G\+TH}\mbox{]}
+\begin{DoxyCompactList}\small\item\em This is where you can store the model number of the robot. The string must ends with a End\+Of\+String character(\textbackslash{}0). \end{DoxyCompactList}\item 
+\hyperlink{_kinova_types_8h_a3b88714e308595eb42f64c56259a1ccf}{Arm\+Laterality} \hyperlink{struct_client_configurations_ac5eae96db1727c1330a987f49acadb0f}{Laterality}
+\begin{DoxyCompactList}\small\item\em That tells you if the robot is left handed or right handed. If you modify this parameter, the change will take effect on the next R\+E\+B\+O\+OT. \end{DoxyCompactList}\item 
+float \hyperlink{struct_client_configurations_a85ae51f1716500dd154f0ce279b78a47}{Max\+Translation\+Velocity}
+\begin{DoxyCompactList}\small\item\em This is the max translation(\+X, Y and Z) velocity of the robot\textquotesingle{}s end effector. \end{DoxyCompactList}\item 
+float \hyperlink{struct_client_configurations_a238936e76488a26a5f816413cd25977e}{Max\+Orientation\+Velocity}
+\begin{DoxyCompactList}\small\item\em This is the max orientation(\+Theta\+X, Theta\+Y and Theta\+Z) velocity of the robot\textquotesingle{}s end effector. \end{DoxyCompactList}\item 
+float \hyperlink{struct_client_configurations_a787ef22ca55cd38c04f171b885eccffc}{Max\+Translation\+Acceleration}
+\begin{DoxyCompactList}\small\item\em This is the max translation acceleration of the robot\textquotesingle{}s end effector. \end{DoxyCompactList}\item 
+float \hyperlink{struct_client_configurations_a6dd1f0fa61310ae5c7c090b4f203b8a0}{Max\+Orientation\+Acceleration}
+\begin{DoxyCompactList}\small\item\em This is the max orientation acceleration of the robot\textquotesingle{}s end effector. \end{DoxyCompactList}\item 
+float \hyperlink{struct_client_configurations_a9c68b6f56291d1be104928f7db071579}{Max\+Force}
+\begin{DoxyCompactList}\small\item\em Not used for now. \end{DoxyCompactList}\item 
+float \hyperlink{struct_client_configurations_a64e61dc032b95f127cd798a9759818d8}{Sensibility}
+\begin{DoxyCompactList}\small\item\em This is the sensibility of the controller. The value is a \% of the command received by the controller. Higher is the value and higher is the sensibility. Higher is the sensibility, quicker the end effector will reach the desired velocity for the same joystick command. \end{DoxyCompactList}\item 
+float \hyperlink{struct_client_configurations_a05043c8fe2f31f3c216a97edc2411664}{Drinking\+Height}
+\begin{DoxyCompactList}\small\item\em This value is used only when the drinking mode is active. This add a an offset to the translation Y value. It is the height of a glass when you drink. \end{DoxyCompactList}\item 
+int \hyperlink{struct_client_configurations_aa41bf35ba1a1dd92f54a30814d42f795}{Complex\+Retract\+Active}
+\begin{DoxyCompactList}\small\item\em That flag tells you if the advance retract feature is active. (0 = not active, 1 = active) The advance retract mode let you decide the trajectory between the R\+E\+A\+D\+Y(home) position and the retracted position. \end{DoxyCompactList}\item 
+float \hyperlink{struct_client_configurations_ad7d6245d4683b6e31d0438466ea6bb80}{Retracted\+Position\+Angle}
+\begin{DoxyCompactList}\small\item\em This value is the angle between the second carbon link(between actuator 2 and 3) and the X-\/Y plane. \end{DoxyCompactList}\item 
+int \hyperlink{struct_client_configurations_a4058c290c5bac0504e511f0f50e5914b}{Retracted\+Position\+Count}
+\begin{DoxyCompactList}\small\item\em This tells you how many positions there is in the advance retract trajectory. \end{DoxyCompactList}\item 
+\hyperlink{struct_user_position}{User\+Position} \hyperlink{struct_client_configurations_aaebc19d45af665f9db9322d74021ec22}{Retract\+Positions} \mbox{[}\hyperlink{_kinova_types_8h_a663862aeb115e7f11080df128498e924}{N\+B\+\_\+\+A\+D\+V\+A\+N\+C\+E\+\_\+\+R\+E\+T\+R\+A\+C\+T\+\_\+\+P\+O\+S\+I\+T\+I\+ON}\mbox{]}
+\item 
+float \hyperlink{struct_client_configurations_a494c5a866ae44191aafdc66ab69033c3}{Drinking\+Distance}
+\begin{DoxyCompactList}\small\item\em This value is used only when the drinking mode is active. This add a an offset to the translation X axis based on the end effector frame. It is the diameter of a glass when you drink. \end{DoxyCompactList}\item 
+int \hyperlink{struct_client_configurations_a55cb748c864cd65d8136da316b46df61}{Fingers2and3\+Inverted}
+\begin{DoxyCompactList}\small\item\em This is a flag to invert finger 2 and 3. It is mostly used in rehab for left handed robot.(0 = normal, 1 = inverted) \end{DoxyCompactList}\item 
+float \hyperlink{struct_client_configurations_a1029013b8d5d2d9ea902ab628c98a7e0}{Drinking\+Lenght}
+\begin{DoxyCompactList}\small\item\em This value is used only when the drinking mode is active. This add a an offset to the translation Z axis based on the end effector frame. It is the distance between the end effector and the glass when you drink. \end{DoxyCompactList}\item 
+int \hyperlink{struct_client_configurations_ab0dca6d6259625fafd1c725533337460}{Delete\+Pre\+Programmed\+Positions\+At\+Retract}
+\begin{DoxyCompactList}\small\item\em It is a flag that indicates if the G\+O\+T\+O(pre programmed) position are deleted when the robot goes in R\+E\+A\+DY position. \end{DoxyCompactList}\item 
+int \hyperlink{struct_client_configurations_a16b087061d560a4f185e779352d6e2e3}{Enable\+Flash\+Error\+Log}
+\begin{DoxyCompactList}\small\item\em Not used for now. \end{DoxyCompactList}\item 
+int \hyperlink{struct_client_configurations_ae0c7b4d0a3f91271e8138985807be8c6}{Enable\+Flash\+Position\+Log}
+\begin{DoxyCompactList}\small\item\em Not used for now. \end{DoxyCompactList}\item 
+int \hyperlink{struct_client_configurations_a2d47352837bfafcb6f4e6bddcf3e0278}{Expansion} \mbox{[}198\mbox{]}
+\begin{DoxyCompactList}\small\item\em Not used for now. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This structure holds informations relative to the client. It is mostly used for rehab clients. As an example, if you need to modify the max velocity or the retract position, it will be done here. The easiest way to modify the client configuration is to get the current one by calling the function Get\+Client\+Configurations, modify all the parameters you need and send the structure back to the robot by calling the function \hyperlink{_kinova_8_a_p_i_8_usb_command_layer_ubuntu_8h_aaaf906c81f0dbdc53101d61c7838eae8}{Set\+Client\+Configurations()}. Note that some of the parameters are read only. That means that even if you modify them and send the structure to the robot, they will not be modified. 
+
+\subsection{Member Data Documentation}
+\index{Client\+Configurations@{Client\+Configurations}!Client\+ID@{Client\+ID}}
+\index{Client\+ID@{Client\+ID}!Client\+Configurations@{Client\+Configurations}}
+\subsubsection[{\texorpdfstring{Client\+ID}{ClientID}}]{\setlength{\rightskip}{0pt plus 5cm}char Client\+Configurations\+::\+Client\+ID\mbox{[}{\bf S\+T\+R\+I\+N\+G\+\_\+\+L\+E\+N\+G\+TH}\mbox{]}}\hypertarget{struct_client_configurations_a2adccda7d27c7731ab0fe1160005e6ac}{}\label{struct_client_configurations_a2adccda7d27c7731ab0fe1160005e6ac}
+
+
+This is the ID of the client. The string must ends with a End\+Of\+String character(\textbackslash{}0). 
+
+\index{Client\+Configurations@{Client\+Configurations}!Client\+Name@{Client\+Name}}
+\index{Client\+Name@{Client\+Name}!Client\+Configurations@{Client\+Configurations}}
+\subsubsection[{\texorpdfstring{Client\+Name}{ClientName}}]{\setlength{\rightskip}{0pt plus 5cm}char Client\+Configurations\+::\+Client\+Name\mbox{[}{\bf S\+T\+R\+I\+N\+G\+\_\+\+L\+E\+N\+G\+TH}\mbox{]}}\hypertarget{struct_client_configurations_a6ec42489c6a1e74a654809f5f39ca6f8}{}\label{struct_client_configurations_a6ec42489c6a1e74a654809f5f39ca6f8}
+
+
+This is the name of the client. The string must ends with a End\+Of\+String character(\textbackslash{}0). 
+
+\index{Client\+Configurations@{Client\+Configurations}!Complex\+Retract\+Active@{Complex\+Retract\+Active}}
+\index{Complex\+Retract\+Active@{Complex\+Retract\+Active}!Client\+Configurations@{Client\+Configurations}}
+\subsubsection[{\texorpdfstring{Complex\+Retract\+Active}{ComplexRetractActive}}]{\setlength{\rightskip}{0pt plus 5cm}int Client\+Configurations\+::\+Complex\+Retract\+Active}\hypertarget{struct_client_configurations_aa41bf35ba1a1dd92f54a30814d42f795}{}\label{struct_client_configurations_aa41bf35ba1a1dd92f54a30814d42f795}
+
+
+That flag tells you if the advance retract feature is active. (0 = not active, 1 = active) The advance retract mode let you decide the trajectory between the R\+E\+A\+D\+Y(home) position and the retracted position. 
+
+\index{Client\+Configurations@{Client\+Configurations}!Delete\+Pre\+Programmed\+Positions\+At\+Retract@{Delete\+Pre\+Programmed\+Positions\+At\+Retract}}
+\index{Delete\+Pre\+Programmed\+Positions\+At\+Retract@{Delete\+Pre\+Programmed\+Positions\+At\+Retract}!Client\+Configurations@{Client\+Configurations}}
+\subsubsection[{\texorpdfstring{Delete\+Pre\+Programmed\+Positions\+At\+Retract}{DeletePreProgrammedPositionsAtRetract}}]{\setlength{\rightskip}{0pt plus 5cm}int Client\+Configurations\+::\+Delete\+Pre\+Programmed\+Positions\+At\+Retract}\hypertarget{struct_client_configurations_ab0dca6d6259625fafd1c725533337460}{}\label{struct_client_configurations_ab0dca6d6259625fafd1c725533337460}
+
+
+It is a flag that indicates if the G\+O\+T\+O(pre programmed) position are deleted when the robot goes in R\+E\+A\+DY position. 
+
+\index{Client\+Configurations@{Client\+Configurations}!Drinking\+Distance@{Drinking\+Distance}}
+\index{Drinking\+Distance@{Drinking\+Distance}!Client\+Configurations@{Client\+Configurations}}
+\subsubsection[{\texorpdfstring{Drinking\+Distance}{DrinkingDistance}}]{\setlength{\rightskip}{0pt plus 5cm}float Client\+Configurations\+::\+Drinking\+Distance}\hypertarget{struct_client_configurations_a494c5a866ae44191aafdc66ab69033c3}{}\label{struct_client_configurations_a494c5a866ae44191aafdc66ab69033c3}
+
+
+This value is used only when the drinking mode is active. This add a an offset to the translation X axis based on the end effector frame. It is the diameter of a glass when you drink. 
+
+\index{Client\+Configurations@{Client\+Configurations}!Drinking\+Height@{Drinking\+Height}}
+\index{Drinking\+Height@{Drinking\+Height}!Client\+Configurations@{Client\+Configurations}}
+\subsubsection[{\texorpdfstring{Drinking\+Height}{DrinkingHeight}}]{\setlength{\rightskip}{0pt plus 5cm}float Client\+Configurations\+::\+Drinking\+Height}\hypertarget{struct_client_configurations_a05043c8fe2f31f3c216a97edc2411664}{}\label{struct_client_configurations_a05043c8fe2f31f3c216a97edc2411664}
+
+
+This value is used only when the drinking mode is active. This add a an offset to the translation Y value. It is the height of a glass when you drink. 
+
+\index{Client\+Configurations@{Client\+Configurations}!Drinking\+Lenght@{Drinking\+Lenght}}
+\index{Drinking\+Lenght@{Drinking\+Lenght}!Client\+Configurations@{Client\+Configurations}}
+\subsubsection[{\texorpdfstring{Drinking\+Lenght}{DrinkingLenght}}]{\setlength{\rightskip}{0pt plus 5cm}float Client\+Configurations\+::\+Drinking\+Lenght}\hypertarget{struct_client_configurations_a1029013b8d5d2d9ea902ab628c98a7e0}{}\label{struct_client_configurations_a1029013b8d5d2d9ea902ab628c98a7e0}
+
+
+This value is used only when the drinking mode is active. This add a an offset to the translation Z axis based on the end effector frame. It is the distance between the end effector and the glass when you drink. 
+
+\index{Client\+Configurations@{Client\+Configurations}!Enable\+Flash\+Error\+Log@{Enable\+Flash\+Error\+Log}}
+\index{Enable\+Flash\+Error\+Log@{Enable\+Flash\+Error\+Log}!Client\+Configurations@{Client\+Configurations}}
+\subsubsection[{\texorpdfstring{Enable\+Flash\+Error\+Log}{EnableFlashErrorLog}}]{\setlength{\rightskip}{0pt plus 5cm}int Client\+Configurations\+::\+Enable\+Flash\+Error\+Log}\hypertarget{struct_client_configurations_a16b087061d560a4f185e779352d6e2e3}{}\label{struct_client_configurations_a16b087061d560a4f185e779352d6e2e3}
+
+
+Not used for now. 
+
+\index{Client\+Configurations@{Client\+Configurations}!Enable\+Flash\+Position\+Log@{Enable\+Flash\+Position\+Log}}
+\index{Enable\+Flash\+Position\+Log@{Enable\+Flash\+Position\+Log}!Client\+Configurations@{Client\+Configurations}}
+\subsubsection[{\texorpdfstring{Enable\+Flash\+Position\+Log}{EnableFlashPositionLog}}]{\setlength{\rightskip}{0pt plus 5cm}int Client\+Configurations\+::\+Enable\+Flash\+Position\+Log}\hypertarget{struct_client_configurations_ae0c7b4d0a3f91271e8138985807be8c6}{}\label{struct_client_configurations_ae0c7b4d0a3f91271e8138985807be8c6}
+
+
+Not used for now. 
+
+\index{Client\+Configurations@{Client\+Configurations}!Expansion@{Expansion}}
+\index{Expansion@{Expansion}!Client\+Configurations@{Client\+Configurations}}
+\subsubsection[{\texorpdfstring{Expansion}{Expansion}}]{\setlength{\rightskip}{0pt plus 5cm}int Client\+Configurations\+::\+Expansion\mbox{[}198\mbox{]}}\hypertarget{struct_client_configurations_a2d47352837bfafcb6f4e6bddcf3e0278}{}\label{struct_client_configurations_a2d47352837bfafcb6f4e6bddcf3e0278}
+
+
+Not used for now. 
+
+\index{Client\+Configurations@{Client\+Configurations}!Fingers2and3\+Inverted@{Fingers2and3\+Inverted}}
+\index{Fingers2and3\+Inverted@{Fingers2and3\+Inverted}!Client\+Configurations@{Client\+Configurations}}
+\subsubsection[{\texorpdfstring{Fingers2and3\+Inverted}{Fingers2and3Inverted}}]{\setlength{\rightskip}{0pt plus 5cm}int Client\+Configurations\+::\+Fingers2and3\+Inverted}\hypertarget{struct_client_configurations_a55cb748c864cd65d8136da316b46df61}{}\label{struct_client_configurations_a55cb748c864cd65d8136da316b46df61}
+
+
+This is a flag to invert finger 2 and 3. It is mostly used in rehab for left handed robot.(0 = normal, 1 = inverted) 
+
+\index{Client\+Configurations@{Client\+Configurations}!Laterality@{Laterality}}
+\index{Laterality@{Laterality}!Client\+Configurations@{Client\+Configurations}}
+\subsubsection[{\texorpdfstring{Laterality}{Laterality}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Arm\+Laterality} Client\+Configurations\+::\+Laterality}\hypertarget{struct_client_configurations_ac5eae96db1727c1330a987f49acadb0f}{}\label{struct_client_configurations_ac5eae96db1727c1330a987f49acadb0f}
+
+
+That tells you if the robot is left handed or right handed. If you modify this parameter, the change will take effect on the next R\+E\+B\+O\+OT. 
+
+\index{Client\+Configurations@{Client\+Configurations}!Max\+Force@{Max\+Force}}
+\index{Max\+Force@{Max\+Force}!Client\+Configurations@{Client\+Configurations}}
+\subsubsection[{\texorpdfstring{Max\+Force}{MaxForce}}]{\setlength{\rightskip}{0pt plus 5cm}float Client\+Configurations\+::\+Max\+Force}\hypertarget{struct_client_configurations_a9c68b6f56291d1be104928f7db071579}{}\label{struct_client_configurations_a9c68b6f56291d1be104928f7db071579}
+
+
+Not used for now. 
+
+\index{Client\+Configurations@{Client\+Configurations}!Max\+Orientation\+Acceleration@{Max\+Orientation\+Acceleration}}
+\index{Max\+Orientation\+Acceleration@{Max\+Orientation\+Acceleration}!Client\+Configurations@{Client\+Configurations}}
+\subsubsection[{\texorpdfstring{Max\+Orientation\+Acceleration}{MaxOrientationAcceleration}}]{\setlength{\rightskip}{0pt plus 5cm}float Client\+Configurations\+::\+Max\+Orientation\+Acceleration}\hypertarget{struct_client_configurations_a6dd1f0fa61310ae5c7c090b4f203b8a0}{}\label{struct_client_configurations_a6dd1f0fa61310ae5c7c090b4f203b8a0}
+
+
+This is the max orientation acceleration of the robot\textquotesingle{}s end effector. 
+
+\index{Client\+Configurations@{Client\+Configurations}!Max\+Orientation\+Velocity@{Max\+Orientation\+Velocity}}
+\index{Max\+Orientation\+Velocity@{Max\+Orientation\+Velocity}!Client\+Configurations@{Client\+Configurations}}
+\subsubsection[{\texorpdfstring{Max\+Orientation\+Velocity}{MaxOrientationVelocity}}]{\setlength{\rightskip}{0pt plus 5cm}float Client\+Configurations\+::\+Max\+Orientation\+Velocity}\hypertarget{struct_client_configurations_a238936e76488a26a5f816413cd25977e}{}\label{struct_client_configurations_a238936e76488a26a5f816413cd25977e}
+
+
+This is the max orientation(\+Theta\+X, Theta\+Y and Theta\+Z) velocity of the robot\textquotesingle{}s end effector. 
+
+\index{Client\+Configurations@{Client\+Configurations}!Max\+Translation\+Acceleration@{Max\+Translation\+Acceleration}}
+\index{Max\+Translation\+Acceleration@{Max\+Translation\+Acceleration}!Client\+Configurations@{Client\+Configurations}}
+\subsubsection[{\texorpdfstring{Max\+Translation\+Acceleration}{MaxTranslationAcceleration}}]{\setlength{\rightskip}{0pt plus 5cm}float Client\+Configurations\+::\+Max\+Translation\+Acceleration}\hypertarget{struct_client_configurations_a787ef22ca55cd38c04f171b885eccffc}{}\label{struct_client_configurations_a787ef22ca55cd38c04f171b885eccffc}
+
+
+This is the max translation acceleration of the robot\textquotesingle{}s end effector. 
+
+\index{Client\+Configurations@{Client\+Configurations}!Max\+Translation\+Velocity@{Max\+Translation\+Velocity}}
+\index{Max\+Translation\+Velocity@{Max\+Translation\+Velocity}!Client\+Configurations@{Client\+Configurations}}
+\subsubsection[{\texorpdfstring{Max\+Translation\+Velocity}{MaxTranslationVelocity}}]{\setlength{\rightskip}{0pt plus 5cm}float Client\+Configurations\+::\+Max\+Translation\+Velocity}\hypertarget{struct_client_configurations_a85ae51f1716500dd154f0ce279b78a47}{}\label{struct_client_configurations_a85ae51f1716500dd154f0ce279b78a47}
+
+
+This is the max translation(\+X, Y and Z) velocity of the robot\textquotesingle{}s end effector. 
+
+\index{Client\+Configurations@{Client\+Configurations}!Model@{Model}}
+\index{Model@{Model}!Client\+Configurations@{Client\+Configurations}}
+\subsubsection[{\texorpdfstring{Model}{Model}}]{\setlength{\rightskip}{0pt plus 5cm}char Client\+Configurations\+::\+Model\mbox{[}{\bf S\+T\+R\+I\+N\+G\+\_\+\+L\+E\+N\+G\+TH}\mbox{]}}\hypertarget{struct_client_configurations_a5bb86440679384635d0d0f41ca431249}{}\label{struct_client_configurations_a5bb86440679384635d0d0f41ca431249}
+
+
+This is where you can store the model number of the robot. The string must ends with a End\+Of\+String character(\textbackslash{}0). 
+
+\index{Client\+Configurations@{Client\+Configurations}!Organization@{Organization}}
+\index{Organization@{Organization}!Client\+Configurations@{Client\+Configurations}}
+\subsubsection[{\texorpdfstring{Organization}{Organization}}]{\setlength{\rightskip}{0pt plus 5cm}char Client\+Configurations\+::\+Organization\mbox{[}{\bf S\+T\+R\+I\+N\+G\+\_\+\+L\+E\+N\+G\+TH}\mbox{]}}\hypertarget{struct_client_configurations_a55c82eb4163582b31c6d720766057767}{}\label{struct_client_configurations_a55c82eb4163582b31c6d720766057767}
+
+
+This is the name of the organization. The string must ends with a End\+Of\+String character(\textbackslash{}0). 
+
+\index{Client\+Configurations@{Client\+Configurations}!Retracted\+Position\+Angle@{Retracted\+Position\+Angle}}
+\index{Retracted\+Position\+Angle@{Retracted\+Position\+Angle}!Client\+Configurations@{Client\+Configurations}}
+\subsubsection[{\texorpdfstring{Retracted\+Position\+Angle}{RetractedPositionAngle}}]{\setlength{\rightskip}{0pt plus 5cm}float Client\+Configurations\+::\+Retracted\+Position\+Angle}\hypertarget{struct_client_configurations_ad7d6245d4683b6e31d0438466ea6bb80}{}\label{struct_client_configurations_ad7d6245d4683b6e31d0438466ea6bb80}
+
+
+This value is the angle between the second carbon link(between actuator 2 and 3) and the X-\/Y plane. 
+
+\index{Client\+Configurations@{Client\+Configurations}!Retracted\+Position\+Count@{Retracted\+Position\+Count}}
+\index{Retracted\+Position\+Count@{Retracted\+Position\+Count}!Client\+Configurations@{Client\+Configurations}}
+\subsubsection[{\texorpdfstring{Retracted\+Position\+Count}{RetractedPositionCount}}]{\setlength{\rightskip}{0pt plus 5cm}int Client\+Configurations\+::\+Retracted\+Position\+Count}\hypertarget{struct_client_configurations_a4058c290c5bac0504e511f0f50e5914b}{}\label{struct_client_configurations_a4058c290c5bac0504e511f0f50e5914b}
+
+
+This tells you how many positions there is in the advance retract trajectory. 
+
+\index{Client\+Configurations@{Client\+Configurations}!Retract\+Positions@{Retract\+Positions}}
+\index{Retract\+Positions@{Retract\+Positions}!Client\+Configurations@{Client\+Configurations}}
+\subsubsection[{\texorpdfstring{Retract\+Positions}{RetractPositions}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf User\+Position} Client\+Configurations\+::\+Retract\+Positions\mbox{[}{\bf N\+B\+\_\+\+A\+D\+V\+A\+N\+C\+E\+\_\+\+R\+E\+T\+R\+A\+C\+T\+\_\+\+P\+O\+S\+I\+T\+I\+ON}\mbox{]}}\hypertarget{struct_client_configurations_aaebc19d45af665f9db9322d74021ec22}{}\label{struct_client_configurations_aaebc19d45af665f9db9322d74021ec22}
+\index{Client\+Configurations@{Client\+Configurations}!Sensibility@{Sensibility}}
+\index{Sensibility@{Sensibility}!Client\+Configurations@{Client\+Configurations}}
+\subsubsection[{\texorpdfstring{Sensibility}{Sensibility}}]{\setlength{\rightskip}{0pt plus 5cm}float Client\+Configurations\+::\+Sensibility}\hypertarget{struct_client_configurations_a64e61dc032b95f127cd798a9759818d8}{}\label{struct_client_configurations_a64e61dc032b95f127cd798a9759818d8}
+
+
+This is the sensibility of the controller. The value is a \% of the command received by the controller. Higher is the value and higher is the sensibility. Higher is the sensibility, quicker the end effector will reach the desired velocity for the same joystick command. 
+
+\index{Client\+Configurations@{Client\+Configurations}!Serial@{Serial}}
+\index{Serial@{Serial}!Client\+Configurations@{Client\+Configurations}}
+\subsubsection[{\texorpdfstring{Serial}{Serial}}]{\setlength{\rightskip}{0pt plus 5cm}char Client\+Configurations\+::\+Serial\mbox{[}{\bf S\+T\+R\+I\+N\+G\+\_\+\+L\+E\+N\+G\+TH}\mbox{]}}\hypertarget{struct_client_configurations_adb0902769a42d7eaf9cce979d0779723}{}\label{struct_client_configurations_adb0902769a42d7eaf9cce979d0779723}
+
+
+This is where you can store the serial number of the robot. The string must ends with a End\+Of\+String character(\textbackslash{}0). 
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/soli/\+Downloads/\+New folder/kinova-\/ros-\/master/jaco\+\_\+driver/include/kinova/\hyperlink{_kinova_types_8h}{Kinova\+Types.\+h}\end{DoxyCompactItemize}

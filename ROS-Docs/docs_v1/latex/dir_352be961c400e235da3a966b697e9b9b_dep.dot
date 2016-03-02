@@ -1,0 +1,11 @@
+digraph "C:/Users/soli/Downloads/New folder/kinova-ros-master" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_352be961c400e235da3a966b697e9b9b {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_352be961c400e235da3a966b697e9b9b.html"];
+    dir_352be961c400e235da3a966b697e9b9b [shape=plaintext label="kinova-ros-master"];
+    dir_2dfaab90f1dd413f0325f0481c391ccb [shape=box label="jaco_demo" color="red" fillcolor="white" style="filled" URL="dir_2dfaab90f1dd413f0325f0481c391ccb.html"];
+    dir_fbccc09f875c6252ae67e35f0c6017cb [shape=box label="jaco_driver" color="red" fillcolor="white" style="filled" URL="dir_fbccc09f875c6252ae67e35f0c6017cb.html"];
+  }
+}

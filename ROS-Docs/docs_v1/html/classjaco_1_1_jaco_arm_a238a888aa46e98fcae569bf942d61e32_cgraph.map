@@ -1,0 +1,8 @@
+<map id="jaco::JacoArm::publishJointAngles" name="jaco::JacoArm::publishJointAngles">
+<area shape="rect" id="node2" href="$classjaco_1_1_jaco_comm.html#a7644bf1154b59bf4d8b97c200284e3fb" title="API call to obtain the current finger positions. " alt="" coords="245,5,427,47"/>
+<area shape="rect" id="node3" href="$classjaco_1_1_jaco_comm.html#a5fcb23bf6925a82f2ab5e42460ea3834" title="API call to obtain the current angular position of all the joints. " alt="" coords="250,71,422,112"/>
+<area shape="rect" id="node4" href="$classjaco_1_1_jaco_angles.html#a29e69c52bf777084006965f9edcdcd9d" title="jaco::JacoAngles::construct\lAnglesMsg" alt="" coords="245,136,427,177"/>
+<area shape="rect" id="node5" href="$classjaco_1_1_jaco_comm.html#af20323ed50f73b59bac3e18ebd8559fa" title="jaco::JacoComm::robotType" alt="" coords="244,202,428,229"/>
+<area shape="rect" id="node6" href="$classjaco_1_1_jaco_comm.html#aa81b5cdf89bd2c7259be3638fdb4f75a" title="API call to obtain the current angular velocities of all the joints. " alt="" coords="250,253,422,295"/>
+<area shape="rect" id="node7" href="$namespaceanonymous__namespace_02jaco__arm_8cpp_03.html#a048a0e37d623243283fd93360d041e2b" title="anonymous_namespace\l\{jaco_arm::cpp\}::convertKinDeg" alt="" coords="235,319,437,360"/>
+</map>

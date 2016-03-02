@@ -1,0 +1,14 @@
+digraph "ZoneList"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="{ZoneList\n|+ NbZones\l+ Expansion1\l|}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2 -> Node1 [color="grey25",fontsize="10",style="solid",label=" +Zones" ,arrowhead="odiamond"];
+  Node2 [label="{Zone\n|+ ID\l+ Expansion1\l+ Expansion2\l|}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$struct_zone.html",tooltip="that represents a protection zone. "];
+  Node3 -> Node2 [color="grey25",fontsize="10",style="solid",label=" +zoneLimitation" ,arrowhead="odiamond"];
+  Node3 [label="{ZoneLimitation\n|+ speedParameter1\l+ speedParameter2\l+ speedParameter3\l+ forceParameter1\l+ forceParameter2\l+ forceParameter3\l+ accelerationParameter1\l+ accelerationParameter2\l+ accelerationParameter3\l|}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$struct_zone_limitation.html",tooltip="This represents a group of limitations that can be applied to a trajectory point. ..."];
+  Node4 -> Node2 [color="grey25",fontsize="10",style="solid",label=" +zoneShape" ,arrowhead="odiamond"];
+  Node4 [label="{ZoneShape\n|+ shapeType\l+ Expansion1\l|}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$struct_zone_shape.html",tooltip="Represents the 3D shape of a protection zone. "];
+  Node5 -> Node4 [color="grey25",fontsize="10",style="solid",label=" +Points" ,arrowhead="odiamond"];
+  Node5 [label="{CartesianInfo\n|+ X\l+ Y\l+ Z\l+ ThetaX\l+ ThetaY\l+ ThetaZ\l|+ InitStruct()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$struct_cartesian_info.html",tooltip="This data structure holds values in an cartesian control context. "];
+}

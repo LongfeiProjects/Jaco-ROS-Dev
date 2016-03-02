@@ -1,0 +1,4 @@
+<map id="jaco_msgs::Start" name="jaco_msgs::Start">
+<area shape="rect" id="node2" href="$structjaco__msgs_1_1_start_response__.html" title="{jaco_msgs::StartResponse\l_\&lt; ContainerAllocator \&gt;\n|+ start_result\l|+ StartResponse_()\l+ StartResponse_()\l}" alt="" coords="5,5,184,112"/>
+<area shape="rect" id="node3" href="$structjaco__msgs_1_1_start_request__.html" title="{jaco_msgs::StartRequest\l_\&lt; ContainerAllocator \&gt;\n||+ StartRequest_()\l+ StartRequest_()\l}" alt="" coords="209,5,378,112"/>
+</map>

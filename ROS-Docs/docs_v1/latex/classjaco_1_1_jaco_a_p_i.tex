@@ -1,0 +1,228 @@
+\hypertarget{classjaco_1_1_jaco_a_p_i}{}\section{jaco\+:\+:Jaco\+A\+PI Class Reference}
+\label{classjaco_1_1_jaco_a_p_i}\index{jaco\+::\+Jaco\+A\+PI@{jaco\+::\+Jaco\+A\+PI}}
+
+
+{\ttfamily \#include $<$jaco\+\_\+api.\+h$>$}
+
+
+
+Collaboration diagram for jaco\+:\+:Jaco\+A\+PI\+:
+% FIG 0
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classjaco_1_1_jaco_a_p_i_ac9bb26a48274e51c96d460f74372ccd0}{Jaco\+A\+PI} (void)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int($\ast$ \hyperlink{classjaco_1_1_jaco_a_p_i_a06eae62c9dd3e144cc4275048c3129e6}{init\+A\+PI} )(void)
+\item 
+int($\ast$ \hyperlink{classjaco_1_1_jaco_a_p_i_a941453ebf5242c5adad823c0636f930f}{close\+A\+PI} )(void)
+\item 
+int($\ast$ \hyperlink{classjaco_1_1_jaco_a_p_i_a90f1033a1174ea7f97d48186b7ca867a}{get\+A\+P\+I\+Version} )(std\+::vector$<$ int $>$ \&)
+\item 
+int($\ast$ \hyperlink{classjaco_1_1_jaco_a_p_i_a6f80ab16b2518ecb0ddefcd7183027c1}{get\+Devices} )(std\+::vector$<$ \hyperlink{struct_kinova_device}{Kinova\+Device} $>$ \&, int \&)
+\item 
+int($\ast$ \hyperlink{classjaco_1_1_jaco_a_p_i_a4e0c8fc007f20e985545b59abf571ea0}{set\+Active\+Device} )(\hyperlink{struct_kinova_device}{Kinova\+Device})
+\item 
+int($\ast$ \hyperlink{classjaco_1_1_jaco_a_p_i_ae1e29dcccd26e66e34271beff3a52f8c}{get\+General\+Informations} )(\hyperlink{struct_general_informations}{General\+Informations} \&)
+\item 
+int($\ast$ \hyperlink{classjaco_1_1_jaco_a_p_i_ae4297fe364b296252a1c91efb9024b03}{get\+Quick\+Status} )(\hyperlink{struct_quick_status}{Quick\+Status} \&)
+\item 
+int($\ast$ \hyperlink{classjaco_1_1_jaco_a_p_i_ab2e6426177bd24cd1a381f0f1a9d277a}{get\+Code\+Version} )(std\+::vector$<$ int $>$ \&)
+\item 
+int($\ast$ \hyperlink{classjaco_1_1_jaco_a_p_i_a75d269278bf284a368f42ce1f8a3eb2e}{start\+Control\+A\+PI} )()
+\item 
+int($\ast$ \hyperlink{classjaco_1_1_jaco_a_p_i_a41fefb13b76fc591cde461d1a9b91bb2}{stop\+Control\+A\+PI} )()
+\item 
+int($\ast$ \hyperlink{classjaco_1_1_jaco_a_p_i_a2e57f45393bda81a7c7c91373a6c6359}{init\+Fingers} )()
+\item 
+int($\ast$ \hyperlink{classjaco_1_1_jaco_a_p_i_a3f3b46efd241e60665a70505fe1853af}{move\+Home} )()
+\item 
+int($\ast$ \hyperlink{classjaco_1_1_jaco_a_p_i_a6c3640d554617754a9ed2e875b1a2cd0}{get\+Cartesian\+Position} )(\hyperlink{struct_cartesian_position}{Cartesian\+Position} \&)
+\item 
+int($\ast$ \hyperlink{classjaco_1_1_jaco_a_p_i_a8d2e9b00c5953e3fc024f86e128f01df}{get\+Angular\+Position} )(\hyperlink{struct_angular_position}{Angular\+Position} \&)
+\item 
+int($\ast$ \hyperlink{classjaco_1_1_jaco_a_p_i_af50f11de8f7c2b661f53d76f576eb3ae}{get\+Angular\+Velocity} )(\hyperlink{struct_angular_position}{Angular\+Position} \&)
+\item 
+int($\ast$ \hyperlink{classjaco_1_1_jaco_a_p_i_af82e531abda1dd3e87ab33f1f5474ca5}{get\+Cartesian\+Force} )(\hyperlink{struct_cartesian_position}{Cartesian\+Position} \&)
+\item 
+int($\ast$ \hyperlink{classjaco_1_1_jaco_a_p_i_aa592360dc8cc3d2a2343621d8ec8dac5}{set\+Cartesian\+Force\+Min\+Max} )(\hyperlink{struct_cartesian_info}{Cartesian\+Info}, \hyperlink{struct_cartesian_info}{Cartesian\+Info})
+\item 
+int($\ast$ \hyperlink{classjaco_1_1_jaco_a_p_i_a24709f5e768c7aab4a9b1de1308d65ea}{set\+Cartesian\+Inertia\+Damping} )(\hyperlink{struct_cartesian_info}{Cartesian\+Info}, \hyperlink{struct_cartesian_info}{Cartesian\+Info})
+\item 
+int($\ast$ \hyperlink{classjaco_1_1_jaco_a_p_i_a548f1d6251582bb4fe9cb5cb69f08b2d}{start\+Force\+Control} )()
+\item 
+int($\ast$ \hyperlink{classjaco_1_1_jaco_a_p_i_ac3881ef354400b32a4d71796dba66d67}{stop\+Force\+Control} )()
+\item 
+int($\ast$ \hyperlink{classjaco_1_1_jaco_a_p_i_aea22577840f066fb2d5da409e50f9760}{get\+Angular\+Force} )(\hyperlink{struct_angular_position}{Angular\+Position} \&)
+\item 
+int($\ast$ \hyperlink{classjaco_1_1_jaco_a_p_i_ac24c226ba8ee3b72618a84eaab9d722a}{get\+Angular\+Current} )(\hyperlink{struct_angular_position}{Angular\+Position} \&)
+\item 
+int($\ast$ \hyperlink{classjaco_1_1_jaco_a_p_i_aff9218e13471d4d021f8144738c73ff1}{get\+Control\+Type} )(int \&)
+\item 
+int($\ast$ \hyperlink{classjaco_1_1_jaco_a_p_i_af2f83a5e6bef4f10dc4c7d714a593e4c}{get\+Actual\+Trajectory\+Info} )(\hyperlink{struct_trajectory_point}{Trajectory\+Point} \&)
+\item 
+int($\ast$ \hyperlink{classjaco_1_1_jaco_a_p_i_a9638cf9678156df980370819dabd685e}{get\+Global\+Trajectory\+Info} )(\hyperlink{struct_trajectory_f_i_f_o}{Trajectory\+F\+I\+FO} \&)
+\item 
+int($\ast$ \hyperlink{classjaco_1_1_jaco_a_p_i_a390a9f4759fe2bd34a43634a17598638}{get\+Sensors\+Info} )(\hyperlink{struct_sensors_info}{Sensors\+Info} \&)
+\item 
+int($\ast$ \hyperlink{classjaco_1_1_jaco_a_p_i_a4ce9340d50866cf102722ad6c370bdfd}{set\+Angular\+Control} )()
+\item 
+int($\ast$ \hyperlink{classjaco_1_1_jaco_a_p_i_a24b6c14f08d97bea2a5562c8c2f10877}{set\+Cartesian\+Control} )()
+\item 
+int($\ast$ \hyperlink{classjaco_1_1_jaco_a_p_i_a64825b0563a56de02532a558ef902586}{restore\+Factory\+Default} )()
+\item 
+int($\ast$ \hyperlink{classjaco_1_1_jaco_a_p_i_a57328804ef00fd40492ba065be3fe3f1}{send\+Joystick\+Command} )(\hyperlink{struct_joystick_command}{Joystick\+Command})
+\item 
+int($\ast$ \hyperlink{classjaco_1_1_jaco_a_p_i_a30abd0123d85582b684fbd86437d403c}{send\+Advance\+Trajectory} )(\hyperlink{struct_trajectory_point}{Trajectory\+Point})
+\item 
+int($\ast$ \hyperlink{classjaco_1_1_jaco_a_p_i_acbaea3e47825b270d85d783c9f29d472}{send\+Basic\+Trajectory} )(\hyperlink{struct_trajectory_point}{Trajectory\+Point})
+\item 
+int($\ast$ \hyperlink{classjaco_1_1_jaco_a_p_i_a215a64d2dee8b2555d317da41e25ae16}{get\+Client\+Configurations} )(\hyperlink{struct_client_configurations}{Client\+Configurations} \&)
+\item 
+int($\ast$ \hyperlink{classjaco_1_1_jaco_a_p_i_ad6b85298e2502e6888ce6b7a1e494e49}{set\+Client\+Configurations} )(\hyperlink{struct_client_configurations}{Client\+Configurations})
+\item 
+int($\ast$ \hyperlink{classjaco_1_1_jaco_a_p_i_a97db09d91923328b1780bb50a0e2548d}{erase\+All\+Trajectories} )()
+\item 
+int($\ast$ \hyperlink{classjaco_1_1_jaco_a_p_i_ac38d62b7adb611552bee71aa49f967b9}{get\+Position\+Current\+Actuators} )(std\+::vector$<$ float $>$ \&)
+\item 
+int($\ast$ \hyperlink{classjaco_1_1_jaco_a_p_i_a3fff8abf62a8b45c1905bad4c5592126}{set\+Actuator\+P\+ID} )(unsigned int, float, float, float)
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{jaco\+::\+Jaco\+A\+PI@{jaco\+::\+Jaco\+A\+PI}!Jaco\+A\+PI@{Jaco\+A\+PI}}
+\index{Jaco\+A\+PI@{Jaco\+A\+PI}!jaco\+::\+Jaco\+A\+PI@{jaco\+::\+Jaco\+A\+PI}}
+\subsubsection[{\texorpdfstring{Jaco\+A\+P\+I(void)}{JacoAPI(void)}}]{\setlength{\rightskip}{0pt plus 5cm}jaco\+::\+Jaco\+A\+P\+I\+::\+Jaco\+A\+PI (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{classjaco_1_1_jaco_a_p_i_ac9bb26a48274e51c96d460f74372ccd0}{}\label{classjaco_1_1_jaco_a_p_i_ac9bb26a48274e51c96d460f74372ccd0}
+
+
+Here is the call graph for this function\+:
+% FIG 1
+
+
+
+
+\subsection{Member Data Documentation}
+\index{jaco\+::\+Jaco\+A\+PI@{jaco\+::\+Jaco\+A\+PI}!close\+A\+PI@{close\+A\+PI}}
+\index{close\+A\+PI@{close\+A\+PI}!jaco\+::\+Jaco\+A\+PI@{jaco\+::\+Jaco\+A\+PI}}
+\subsubsection[{\texorpdfstring{close\+A\+PI}{closeAPI}}]{\setlength{\rightskip}{0pt plus 5cm}int($\ast$ jaco\+::\+Jaco\+A\+P\+I\+::close\+A\+PI) (void)}\hypertarget{classjaco_1_1_jaco_a_p_i_a941453ebf5242c5adad823c0636f930f}{}\label{classjaco_1_1_jaco_a_p_i_a941453ebf5242c5adad823c0636f930f}
+\index{jaco\+::\+Jaco\+A\+PI@{jaco\+::\+Jaco\+A\+PI}!erase\+All\+Trajectories@{erase\+All\+Trajectories}}
+\index{erase\+All\+Trajectories@{erase\+All\+Trajectories}!jaco\+::\+Jaco\+A\+PI@{jaco\+::\+Jaco\+A\+PI}}
+\subsubsection[{\texorpdfstring{erase\+All\+Trajectories}{eraseAllTrajectories}}]{\setlength{\rightskip}{0pt plus 5cm}int($\ast$ jaco\+::\+Jaco\+A\+P\+I\+::erase\+All\+Trajectories) ()}\hypertarget{classjaco_1_1_jaco_a_p_i_a97db09d91923328b1780bb50a0e2548d}{}\label{classjaco_1_1_jaco_a_p_i_a97db09d91923328b1780bb50a0e2548d}
+\index{jaco\+::\+Jaco\+A\+PI@{jaco\+::\+Jaco\+A\+PI}!get\+Actual\+Trajectory\+Info@{get\+Actual\+Trajectory\+Info}}
+\index{get\+Actual\+Trajectory\+Info@{get\+Actual\+Trajectory\+Info}!jaco\+::\+Jaco\+A\+PI@{jaco\+::\+Jaco\+A\+PI}}
+\subsubsection[{\texorpdfstring{get\+Actual\+Trajectory\+Info}{getActualTrajectoryInfo}}]{\setlength{\rightskip}{0pt plus 5cm}int($\ast$ jaco\+::\+Jaco\+A\+P\+I\+::get\+Actual\+Trajectory\+Info) ({\bf Trajectory\+Point} \&)}\hypertarget{classjaco_1_1_jaco_a_p_i_af2f83a5e6bef4f10dc4c7d714a593e4c}{}\label{classjaco_1_1_jaco_a_p_i_af2f83a5e6bef4f10dc4c7d714a593e4c}
+\index{jaco\+::\+Jaco\+A\+PI@{jaco\+::\+Jaco\+A\+PI}!get\+Angular\+Current@{get\+Angular\+Current}}
+\index{get\+Angular\+Current@{get\+Angular\+Current}!jaco\+::\+Jaco\+A\+PI@{jaco\+::\+Jaco\+A\+PI}}
+\subsubsection[{\texorpdfstring{get\+Angular\+Current}{getAngularCurrent}}]{\setlength{\rightskip}{0pt plus 5cm}int($\ast$ jaco\+::\+Jaco\+A\+P\+I\+::get\+Angular\+Current) ({\bf Angular\+Position} \&)}\hypertarget{classjaco_1_1_jaco_a_p_i_ac24c226ba8ee3b72618a84eaab9d722a}{}\label{classjaco_1_1_jaco_a_p_i_ac24c226ba8ee3b72618a84eaab9d722a}
+\index{jaco\+::\+Jaco\+A\+PI@{jaco\+::\+Jaco\+A\+PI}!get\+Angular\+Force@{get\+Angular\+Force}}
+\index{get\+Angular\+Force@{get\+Angular\+Force}!jaco\+::\+Jaco\+A\+PI@{jaco\+::\+Jaco\+A\+PI}}
+\subsubsection[{\texorpdfstring{get\+Angular\+Force}{getAngularForce}}]{\setlength{\rightskip}{0pt plus 5cm}int($\ast$ jaco\+::\+Jaco\+A\+P\+I\+::get\+Angular\+Force) ({\bf Angular\+Position} \&)}\hypertarget{classjaco_1_1_jaco_a_p_i_aea22577840f066fb2d5da409e50f9760}{}\label{classjaco_1_1_jaco_a_p_i_aea22577840f066fb2d5da409e50f9760}
+\index{jaco\+::\+Jaco\+A\+PI@{jaco\+::\+Jaco\+A\+PI}!get\+Angular\+Position@{get\+Angular\+Position}}
+\index{get\+Angular\+Position@{get\+Angular\+Position}!jaco\+::\+Jaco\+A\+PI@{jaco\+::\+Jaco\+A\+PI}}
+\subsubsection[{\texorpdfstring{get\+Angular\+Position}{getAngularPosition}}]{\setlength{\rightskip}{0pt plus 5cm}int($\ast$ jaco\+::\+Jaco\+A\+P\+I\+::get\+Angular\+Position) ({\bf Angular\+Position} \&)}\hypertarget{classjaco_1_1_jaco_a_p_i_a8d2e9b00c5953e3fc024f86e128f01df}{}\label{classjaco_1_1_jaco_a_p_i_a8d2e9b00c5953e3fc024f86e128f01df}
+\index{jaco\+::\+Jaco\+A\+PI@{jaco\+::\+Jaco\+A\+PI}!get\+Angular\+Velocity@{get\+Angular\+Velocity}}
+\index{get\+Angular\+Velocity@{get\+Angular\+Velocity}!jaco\+::\+Jaco\+A\+PI@{jaco\+::\+Jaco\+A\+PI}}
+\subsubsection[{\texorpdfstring{get\+Angular\+Velocity}{getAngularVelocity}}]{\setlength{\rightskip}{0pt plus 5cm}int($\ast$ jaco\+::\+Jaco\+A\+P\+I\+::get\+Angular\+Velocity) ({\bf Angular\+Position} \&)}\hypertarget{classjaco_1_1_jaco_a_p_i_af50f11de8f7c2b661f53d76f576eb3ae}{}\label{classjaco_1_1_jaco_a_p_i_af50f11de8f7c2b661f53d76f576eb3ae}
+\index{jaco\+::\+Jaco\+A\+PI@{jaco\+::\+Jaco\+A\+PI}!get\+A\+P\+I\+Version@{get\+A\+P\+I\+Version}}
+\index{get\+A\+P\+I\+Version@{get\+A\+P\+I\+Version}!jaco\+::\+Jaco\+A\+PI@{jaco\+::\+Jaco\+A\+PI}}
+\subsubsection[{\texorpdfstring{get\+A\+P\+I\+Version}{getAPIVersion}}]{\setlength{\rightskip}{0pt plus 5cm}int($\ast$ jaco\+::\+Jaco\+A\+P\+I\+::get\+A\+P\+I\+Version) (std\+::vector$<$ int $>$ \&)}\hypertarget{classjaco_1_1_jaco_a_p_i_a90f1033a1174ea7f97d48186b7ca867a}{}\label{classjaco_1_1_jaco_a_p_i_a90f1033a1174ea7f97d48186b7ca867a}
+\index{jaco\+::\+Jaco\+A\+PI@{jaco\+::\+Jaco\+A\+PI}!get\+Cartesian\+Force@{get\+Cartesian\+Force}}
+\index{get\+Cartesian\+Force@{get\+Cartesian\+Force}!jaco\+::\+Jaco\+A\+PI@{jaco\+::\+Jaco\+A\+PI}}
+\subsubsection[{\texorpdfstring{get\+Cartesian\+Force}{getCartesianForce}}]{\setlength{\rightskip}{0pt plus 5cm}int($\ast$ jaco\+::\+Jaco\+A\+P\+I\+::get\+Cartesian\+Force) ({\bf Cartesian\+Position} \&)}\hypertarget{classjaco_1_1_jaco_a_p_i_af82e531abda1dd3e87ab33f1f5474ca5}{}\label{classjaco_1_1_jaco_a_p_i_af82e531abda1dd3e87ab33f1f5474ca5}
+\index{jaco\+::\+Jaco\+A\+PI@{jaco\+::\+Jaco\+A\+PI}!get\+Cartesian\+Position@{get\+Cartesian\+Position}}
+\index{get\+Cartesian\+Position@{get\+Cartesian\+Position}!jaco\+::\+Jaco\+A\+PI@{jaco\+::\+Jaco\+A\+PI}}
+\subsubsection[{\texorpdfstring{get\+Cartesian\+Position}{getCartesianPosition}}]{\setlength{\rightskip}{0pt plus 5cm}int($\ast$ jaco\+::\+Jaco\+A\+P\+I\+::get\+Cartesian\+Position) ({\bf Cartesian\+Position} \&)}\hypertarget{classjaco_1_1_jaco_a_p_i_a6c3640d554617754a9ed2e875b1a2cd0}{}\label{classjaco_1_1_jaco_a_p_i_a6c3640d554617754a9ed2e875b1a2cd0}
+\index{jaco\+::\+Jaco\+A\+PI@{jaco\+::\+Jaco\+A\+PI}!get\+Client\+Configurations@{get\+Client\+Configurations}}
+\index{get\+Client\+Configurations@{get\+Client\+Configurations}!jaco\+::\+Jaco\+A\+PI@{jaco\+::\+Jaco\+A\+PI}}
+\subsubsection[{\texorpdfstring{get\+Client\+Configurations}{getClientConfigurations}}]{\setlength{\rightskip}{0pt plus 5cm}int($\ast$ jaco\+::\+Jaco\+A\+P\+I\+::get\+Client\+Configurations) ({\bf Client\+Configurations} \&)}\hypertarget{classjaco_1_1_jaco_a_p_i_a215a64d2dee8b2555d317da41e25ae16}{}\label{classjaco_1_1_jaco_a_p_i_a215a64d2dee8b2555d317da41e25ae16}
+\index{jaco\+::\+Jaco\+A\+PI@{jaco\+::\+Jaco\+A\+PI}!get\+Code\+Version@{get\+Code\+Version}}
+\index{get\+Code\+Version@{get\+Code\+Version}!jaco\+::\+Jaco\+A\+PI@{jaco\+::\+Jaco\+A\+PI}}
+\subsubsection[{\texorpdfstring{get\+Code\+Version}{getCodeVersion}}]{\setlength{\rightskip}{0pt plus 5cm}int($\ast$ jaco\+::\+Jaco\+A\+P\+I\+::get\+Code\+Version) (std\+::vector$<$ int $>$ \&)}\hypertarget{classjaco_1_1_jaco_a_p_i_ab2e6426177bd24cd1a381f0f1a9d277a}{}\label{classjaco_1_1_jaco_a_p_i_ab2e6426177bd24cd1a381f0f1a9d277a}
+\index{jaco\+::\+Jaco\+A\+PI@{jaco\+::\+Jaco\+A\+PI}!get\+Control\+Type@{get\+Control\+Type}}
+\index{get\+Control\+Type@{get\+Control\+Type}!jaco\+::\+Jaco\+A\+PI@{jaco\+::\+Jaco\+A\+PI}}
+\subsubsection[{\texorpdfstring{get\+Control\+Type}{getControlType}}]{\setlength{\rightskip}{0pt plus 5cm}int($\ast$ jaco\+::\+Jaco\+A\+P\+I\+::get\+Control\+Type) (int \&)}\hypertarget{classjaco_1_1_jaco_a_p_i_aff9218e13471d4d021f8144738c73ff1}{}\label{classjaco_1_1_jaco_a_p_i_aff9218e13471d4d021f8144738c73ff1}
+\index{jaco\+::\+Jaco\+A\+PI@{jaco\+::\+Jaco\+A\+PI}!get\+Devices@{get\+Devices}}
+\index{get\+Devices@{get\+Devices}!jaco\+::\+Jaco\+A\+PI@{jaco\+::\+Jaco\+A\+PI}}
+\subsubsection[{\texorpdfstring{get\+Devices}{getDevices}}]{\setlength{\rightskip}{0pt plus 5cm}int($\ast$ jaco\+::\+Jaco\+A\+P\+I\+::get\+Devices) (std\+::vector$<$ {\bf Kinova\+Device} $>$ \&, int \&)}\hypertarget{classjaco_1_1_jaco_a_p_i_a6f80ab16b2518ecb0ddefcd7183027c1}{}\label{classjaco_1_1_jaco_a_p_i_a6f80ab16b2518ecb0ddefcd7183027c1}
+\index{jaco\+::\+Jaco\+A\+PI@{jaco\+::\+Jaco\+A\+PI}!get\+General\+Informations@{get\+General\+Informations}}
+\index{get\+General\+Informations@{get\+General\+Informations}!jaco\+::\+Jaco\+A\+PI@{jaco\+::\+Jaco\+A\+PI}}
+\subsubsection[{\texorpdfstring{get\+General\+Informations}{getGeneralInformations}}]{\setlength{\rightskip}{0pt plus 5cm}int($\ast$ jaco\+::\+Jaco\+A\+P\+I\+::get\+General\+Informations) ({\bf General\+Informations} \&)}\hypertarget{classjaco_1_1_jaco_a_p_i_ae1e29dcccd26e66e34271beff3a52f8c}{}\label{classjaco_1_1_jaco_a_p_i_ae1e29dcccd26e66e34271beff3a52f8c}
+\index{jaco\+::\+Jaco\+A\+PI@{jaco\+::\+Jaco\+A\+PI}!get\+Global\+Trajectory\+Info@{get\+Global\+Trajectory\+Info}}
+\index{get\+Global\+Trajectory\+Info@{get\+Global\+Trajectory\+Info}!jaco\+::\+Jaco\+A\+PI@{jaco\+::\+Jaco\+A\+PI}}
+\subsubsection[{\texorpdfstring{get\+Global\+Trajectory\+Info}{getGlobalTrajectoryInfo}}]{\setlength{\rightskip}{0pt plus 5cm}int($\ast$ jaco\+::\+Jaco\+A\+P\+I\+::get\+Global\+Trajectory\+Info) ({\bf Trajectory\+F\+I\+FO} \&)}\hypertarget{classjaco_1_1_jaco_a_p_i_a9638cf9678156df980370819dabd685e}{}\label{classjaco_1_1_jaco_a_p_i_a9638cf9678156df980370819dabd685e}
+\index{jaco\+::\+Jaco\+A\+PI@{jaco\+::\+Jaco\+A\+PI}!get\+Position\+Current\+Actuators@{get\+Position\+Current\+Actuators}}
+\index{get\+Position\+Current\+Actuators@{get\+Position\+Current\+Actuators}!jaco\+::\+Jaco\+A\+PI@{jaco\+::\+Jaco\+A\+PI}}
+\subsubsection[{\texorpdfstring{get\+Position\+Current\+Actuators}{getPositionCurrentActuators}}]{\setlength{\rightskip}{0pt plus 5cm}int($\ast$ jaco\+::\+Jaco\+A\+P\+I\+::get\+Position\+Current\+Actuators) (std\+::vector$<$ float $>$ \&)}\hypertarget{classjaco_1_1_jaco_a_p_i_ac38d62b7adb611552bee71aa49f967b9}{}\label{classjaco_1_1_jaco_a_p_i_ac38d62b7adb611552bee71aa49f967b9}
+\index{jaco\+::\+Jaco\+A\+PI@{jaco\+::\+Jaco\+A\+PI}!get\+Quick\+Status@{get\+Quick\+Status}}
+\index{get\+Quick\+Status@{get\+Quick\+Status}!jaco\+::\+Jaco\+A\+PI@{jaco\+::\+Jaco\+A\+PI}}
+\subsubsection[{\texorpdfstring{get\+Quick\+Status}{getQuickStatus}}]{\setlength{\rightskip}{0pt plus 5cm}int($\ast$ jaco\+::\+Jaco\+A\+P\+I\+::get\+Quick\+Status) ({\bf Quick\+Status} \&)}\hypertarget{classjaco_1_1_jaco_a_p_i_ae4297fe364b296252a1c91efb9024b03}{}\label{classjaco_1_1_jaco_a_p_i_ae4297fe364b296252a1c91efb9024b03}
+\index{jaco\+::\+Jaco\+A\+PI@{jaco\+::\+Jaco\+A\+PI}!get\+Sensors\+Info@{get\+Sensors\+Info}}
+\index{get\+Sensors\+Info@{get\+Sensors\+Info}!jaco\+::\+Jaco\+A\+PI@{jaco\+::\+Jaco\+A\+PI}}
+\subsubsection[{\texorpdfstring{get\+Sensors\+Info}{getSensorsInfo}}]{\setlength{\rightskip}{0pt plus 5cm}int($\ast$ jaco\+::\+Jaco\+A\+P\+I\+::get\+Sensors\+Info) ({\bf Sensors\+Info} \&)}\hypertarget{classjaco_1_1_jaco_a_p_i_a390a9f4759fe2bd34a43634a17598638}{}\label{classjaco_1_1_jaco_a_p_i_a390a9f4759fe2bd34a43634a17598638}
+\index{jaco\+::\+Jaco\+A\+PI@{jaco\+::\+Jaco\+A\+PI}!init\+A\+PI@{init\+A\+PI}}
+\index{init\+A\+PI@{init\+A\+PI}!jaco\+::\+Jaco\+A\+PI@{jaco\+::\+Jaco\+A\+PI}}
+\subsubsection[{\texorpdfstring{init\+A\+PI}{initAPI}}]{\setlength{\rightskip}{0pt plus 5cm}int($\ast$ jaco\+::\+Jaco\+A\+P\+I\+::init\+A\+PI) (void)}\hypertarget{classjaco_1_1_jaco_a_p_i_a06eae62c9dd3e144cc4275048c3129e6}{}\label{classjaco_1_1_jaco_a_p_i_a06eae62c9dd3e144cc4275048c3129e6}
+\index{jaco\+::\+Jaco\+A\+PI@{jaco\+::\+Jaco\+A\+PI}!init\+Fingers@{init\+Fingers}}
+\index{init\+Fingers@{init\+Fingers}!jaco\+::\+Jaco\+A\+PI@{jaco\+::\+Jaco\+A\+PI}}
+\subsubsection[{\texorpdfstring{init\+Fingers}{initFingers}}]{\setlength{\rightskip}{0pt plus 5cm}int($\ast$ jaco\+::\+Jaco\+A\+P\+I\+::init\+Fingers) ()}\hypertarget{classjaco_1_1_jaco_a_p_i_a2e57f45393bda81a7c7c91373a6c6359}{}\label{classjaco_1_1_jaco_a_p_i_a2e57f45393bda81a7c7c91373a6c6359}
+\index{jaco\+::\+Jaco\+A\+PI@{jaco\+::\+Jaco\+A\+PI}!move\+Home@{move\+Home}}
+\index{move\+Home@{move\+Home}!jaco\+::\+Jaco\+A\+PI@{jaco\+::\+Jaco\+A\+PI}}
+\subsubsection[{\texorpdfstring{move\+Home}{moveHome}}]{\setlength{\rightskip}{0pt plus 5cm}int($\ast$ jaco\+::\+Jaco\+A\+P\+I\+::move\+Home) ()}\hypertarget{classjaco_1_1_jaco_a_p_i_a3f3b46efd241e60665a70505fe1853af}{}\label{classjaco_1_1_jaco_a_p_i_a3f3b46efd241e60665a70505fe1853af}
+\index{jaco\+::\+Jaco\+A\+PI@{jaco\+::\+Jaco\+A\+PI}!restore\+Factory\+Default@{restore\+Factory\+Default}}
+\index{restore\+Factory\+Default@{restore\+Factory\+Default}!jaco\+::\+Jaco\+A\+PI@{jaco\+::\+Jaco\+A\+PI}}
+\subsubsection[{\texorpdfstring{restore\+Factory\+Default}{restoreFactoryDefault}}]{\setlength{\rightskip}{0pt plus 5cm}int($\ast$ jaco\+::\+Jaco\+A\+P\+I\+::restore\+Factory\+Default) ()}\hypertarget{classjaco_1_1_jaco_a_p_i_a64825b0563a56de02532a558ef902586}{}\label{classjaco_1_1_jaco_a_p_i_a64825b0563a56de02532a558ef902586}
+\index{jaco\+::\+Jaco\+A\+PI@{jaco\+::\+Jaco\+A\+PI}!send\+Advance\+Trajectory@{send\+Advance\+Trajectory}}
+\index{send\+Advance\+Trajectory@{send\+Advance\+Trajectory}!jaco\+::\+Jaco\+A\+PI@{jaco\+::\+Jaco\+A\+PI}}
+\subsubsection[{\texorpdfstring{send\+Advance\+Trajectory}{sendAdvanceTrajectory}}]{\setlength{\rightskip}{0pt plus 5cm}int($\ast$ jaco\+::\+Jaco\+A\+P\+I\+::send\+Advance\+Trajectory) ({\bf Trajectory\+Point})}\hypertarget{classjaco_1_1_jaco_a_p_i_a30abd0123d85582b684fbd86437d403c}{}\label{classjaco_1_1_jaco_a_p_i_a30abd0123d85582b684fbd86437d403c}
+\index{jaco\+::\+Jaco\+A\+PI@{jaco\+::\+Jaco\+A\+PI}!send\+Basic\+Trajectory@{send\+Basic\+Trajectory}}
+\index{send\+Basic\+Trajectory@{send\+Basic\+Trajectory}!jaco\+::\+Jaco\+A\+PI@{jaco\+::\+Jaco\+A\+PI}}
+\subsubsection[{\texorpdfstring{send\+Basic\+Trajectory}{sendBasicTrajectory}}]{\setlength{\rightskip}{0pt plus 5cm}int($\ast$ jaco\+::\+Jaco\+A\+P\+I\+::send\+Basic\+Trajectory) ({\bf Trajectory\+Point})}\hypertarget{classjaco_1_1_jaco_a_p_i_acbaea3e47825b270d85d783c9f29d472}{}\label{classjaco_1_1_jaco_a_p_i_acbaea3e47825b270d85d783c9f29d472}
+\index{jaco\+::\+Jaco\+A\+PI@{jaco\+::\+Jaco\+A\+PI}!send\+Joystick\+Command@{send\+Joystick\+Command}}
+\index{send\+Joystick\+Command@{send\+Joystick\+Command}!jaco\+::\+Jaco\+A\+PI@{jaco\+::\+Jaco\+A\+PI}}
+\subsubsection[{\texorpdfstring{send\+Joystick\+Command}{sendJoystickCommand}}]{\setlength{\rightskip}{0pt plus 5cm}int($\ast$ jaco\+::\+Jaco\+A\+P\+I\+::send\+Joystick\+Command) ({\bf Joystick\+Command})}\hypertarget{classjaco_1_1_jaco_a_p_i_a57328804ef00fd40492ba065be3fe3f1}{}\label{classjaco_1_1_jaco_a_p_i_a57328804ef00fd40492ba065be3fe3f1}
+\index{jaco\+::\+Jaco\+A\+PI@{jaco\+::\+Jaco\+A\+PI}!set\+Active\+Device@{set\+Active\+Device}}
+\index{set\+Active\+Device@{set\+Active\+Device}!jaco\+::\+Jaco\+A\+PI@{jaco\+::\+Jaco\+A\+PI}}
+\subsubsection[{\texorpdfstring{set\+Active\+Device}{setActiveDevice}}]{\setlength{\rightskip}{0pt plus 5cm}int($\ast$ jaco\+::\+Jaco\+A\+P\+I\+::set\+Active\+Device) ({\bf Kinova\+Device})}\hypertarget{classjaco_1_1_jaco_a_p_i_a4e0c8fc007f20e985545b59abf571ea0}{}\label{classjaco_1_1_jaco_a_p_i_a4e0c8fc007f20e985545b59abf571ea0}
+\index{jaco\+::\+Jaco\+A\+PI@{jaco\+::\+Jaco\+A\+PI}!set\+Actuator\+P\+ID@{set\+Actuator\+P\+ID}}
+\index{set\+Actuator\+P\+ID@{set\+Actuator\+P\+ID}!jaco\+::\+Jaco\+A\+PI@{jaco\+::\+Jaco\+A\+PI}}
+\subsubsection[{\texorpdfstring{set\+Actuator\+P\+ID}{setActuatorPID}}]{\setlength{\rightskip}{0pt plus 5cm}int($\ast$ jaco\+::\+Jaco\+A\+P\+I\+::set\+Actuator\+P\+ID) (unsigned int, float, float, float)}\hypertarget{classjaco_1_1_jaco_a_p_i_a3fff8abf62a8b45c1905bad4c5592126}{}\label{classjaco_1_1_jaco_a_p_i_a3fff8abf62a8b45c1905bad4c5592126}
+\index{jaco\+::\+Jaco\+A\+PI@{jaco\+::\+Jaco\+A\+PI}!set\+Angular\+Control@{set\+Angular\+Control}}
+\index{set\+Angular\+Control@{set\+Angular\+Control}!jaco\+::\+Jaco\+A\+PI@{jaco\+::\+Jaco\+A\+PI}}
+\subsubsection[{\texorpdfstring{set\+Angular\+Control}{setAngularControl}}]{\setlength{\rightskip}{0pt plus 5cm}int($\ast$ jaco\+::\+Jaco\+A\+P\+I\+::set\+Angular\+Control) ()}\hypertarget{classjaco_1_1_jaco_a_p_i_a4ce9340d50866cf102722ad6c370bdfd}{}\label{classjaco_1_1_jaco_a_p_i_a4ce9340d50866cf102722ad6c370bdfd}
+\index{jaco\+::\+Jaco\+A\+PI@{jaco\+::\+Jaco\+A\+PI}!set\+Cartesian\+Control@{set\+Cartesian\+Control}}
+\index{set\+Cartesian\+Control@{set\+Cartesian\+Control}!jaco\+::\+Jaco\+A\+PI@{jaco\+::\+Jaco\+A\+PI}}
+\subsubsection[{\texorpdfstring{set\+Cartesian\+Control}{setCartesianControl}}]{\setlength{\rightskip}{0pt plus 5cm}int($\ast$ jaco\+::\+Jaco\+A\+P\+I\+::set\+Cartesian\+Control) ()}\hypertarget{classjaco_1_1_jaco_a_p_i_a24b6c14f08d97bea2a5562c8c2f10877}{}\label{classjaco_1_1_jaco_a_p_i_a24b6c14f08d97bea2a5562c8c2f10877}
+\index{jaco\+::\+Jaco\+A\+PI@{jaco\+::\+Jaco\+A\+PI}!set\+Cartesian\+Force\+Min\+Max@{set\+Cartesian\+Force\+Min\+Max}}
+\index{set\+Cartesian\+Force\+Min\+Max@{set\+Cartesian\+Force\+Min\+Max}!jaco\+::\+Jaco\+A\+PI@{jaco\+::\+Jaco\+A\+PI}}
+\subsubsection[{\texorpdfstring{set\+Cartesian\+Force\+Min\+Max}{setCartesianForceMinMax}}]{\setlength{\rightskip}{0pt plus 5cm}int($\ast$ jaco\+::\+Jaco\+A\+P\+I\+::set\+Cartesian\+Force\+Min\+Max) ({\bf Cartesian\+Info}, {\bf Cartesian\+Info})}\hypertarget{classjaco_1_1_jaco_a_p_i_aa592360dc8cc3d2a2343621d8ec8dac5}{}\label{classjaco_1_1_jaco_a_p_i_aa592360dc8cc3d2a2343621d8ec8dac5}
+\index{jaco\+::\+Jaco\+A\+PI@{jaco\+::\+Jaco\+A\+PI}!set\+Cartesian\+Inertia\+Damping@{set\+Cartesian\+Inertia\+Damping}}
+\index{set\+Cartesian\+Inertia\+Damping@{set\+Cartesian\+Inertia\+Damping}!jaco\+::\+Jaco\+A\+PI@{jaco\+::\+Jaco\+A\+PI}}
+\subsubsection[{\texorpdfstring{set\+Cartesian\+Inertia\+Damping}{setCartesianInertiaDamping}}]{\setlength{\rightskip}{0pt plus 5cm}int($\ast$ jaco\+::\+Jaco\+A\+P\+I\+::set\+Cartesian\+Inertia\+Damping) ({\bf Cartesian\+Info}, {\bf Cartesian\+Info})}\hypertarget{classjaco_1_1_jaco_a_p_i_a24709f5e768c7aab4a9b1de1308d65ea}{}\label{classjaco_1_1_jaco_a_p_i_a24709f5e768c7aab4a9b1de1308d65ea}
+\index{jaco\+::\+Jaco\+A\+PI@{jaco\+::\+Jaco\+A\+PI}!set\+Client\+Configurations@{set\+Client\+Configurations}}
+\index{set\+Client\+Configurations@{set\+Client\+Configurations}!jaco\+::\+Jaco\+A\+PI@{jaco\+::\+Jaco\+A\+PI}}
+\subsubsection[{\texorpdfstring{set\+Client\+Configurations}{setClientConfigurations}}]{\setlength{\rightskip}{0pt plus 5cm}int($\ast$ jaco\+::\+Jaco\+A\+P\+I\+::set\+Client\+Configurations) ({\bf Client\+Configurations})}\hypertarget{classjaco_1_1_jaco_a_p_i_ad6b85298e2502e6888ce6b7a1e494e49}{}\label{classjaco_1_1_jaco_a_p_i_ad6b85298e2502e6888ce6b7a1e494e49}
+\index{jaco\+::\+Jaco\+A\+PI@{jaco\+::\+Jaco\+A\+PI}!start\+Control\+A\+PI@{start\+Control\+A\+PI}}
+\index{start\+Control\+A\+PI@{start\+Control\+A\+PI}!jaco\+::\+Jaco\+A\+PI@{jaco\+::\+Jaco\+A\+PI}}
+\subsubsection[{\texorpdfstring{start\+Control\+A\+PI}{startControlAPI}}]{\setlength{\rightskip}{0pt plus 5cm}int($\ast$ jaco\+::\+Jaco\+A\+P\+I\+::start\+Control\+A\+PI) ()}\hypertarget{classjaco_1_1_jaco_a_p_i_a75d269278bf284a368f42ce1f8a3eb2e}{}\label{classjaco_1_1_jaco_a_p_i_a75d269278bf284a368f42ce1f8a3eb2e}
+\index{jaco\+::\+Jaco\+A\+PI@{jaco\+::\+Jaco\+A\+PI}!start\+Force\+Control@{start\+Force\+Control}}
+\index{start\+Force\+Control@{start\+Force\+Control}!jaco\+::\+Jaco\+A\+PI@{jaco\+::\+Jaco\+A\+PI}}
+\subsubsection[{\texorpdfstring{start\+Force\+Control}{startForceControl}}]{\setlength{\rightskip}{0pt plus 5cm}int($\ast$ jaco\+::\+Jaco\+A\+P\+I\+::start\+Force\+Control) ()}\hypertarget{classjaco_1_1_jaco_a_p_i_a548f1d6251582bb4fe9cb5cb69f08b2d}{}\label{classjaco_1_1_jaco_a_p_i_a548f1d6251582bb4fe9cb5cb69f08b2d}
+\index{jaco\+::\+Jaco\+A\+PI@{jaco\+::\+Jaco\+A\+PI}!stop\+Control\+A\+PI@{stop\+Control\+A\+PI}}
+\index{stop\+Control\+A\+PI@{stop\+Control\+A\+PI}!jaco\+::\+Jaco\+A\+PI@{jaco\+::\+Jaco\+A\+PI}}
+\subsubsection[{\texorpdfstring{stop\+Control\+A\+PI}{stopControlAPI}}]{\setlength{\rightskip}{0pt plus 5cm}int($\ast$ jaco\+::\+Jaco\+A\+P\+I\+::stop\+Control\+A\+PI) ()}\hypertarget{classjaco_1_1_jaco_a_p_i_a41fefb13b76fc591cde461d1a9b91bb2}{}\label{classjaco_1_1_jaco_a_p_i_a41fefb13b76fc591cde461d1a9b91bb2}
+\index{jaco\+::\+Jaco\+A\+PI@{jaco\+::\+Jaco\+A\+PI}!stop\+Force\+Control@{stop\+Force\+Control}}
+\index{stop\+Force\+Control@{stop\+Force\+Control}!jaco\+::\+Jaco\+A\+PI@{jaco\+::\+Jaco\+A\+PI}}
+\subsubsection[{\texorpdfstring{stop\+Force\+Control}{stopForceControl}}]{\setlength{\rightskip}{0pt plus 5cm}int($\ast$ jaco\+::\+Jaco\+A\+P\+I\+::stop\+Force\+Control) ()}\hypertarget{classjaco_1_1_jaco_a_p_i_ac3881ef354400b32a4d71796dba66d67}{}\label{classjaco_1_1_jaco_a_p_i_ac3881ef354400b32a4d71796dba66d67}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/soli/\+Downloads/\+New folder/kinova-\/ros-\/master/jaco\+\_\+driver/include/jaco\+\_\+driver/\hyperlink{jaco__api_8h}{jaco\+\_\+api.\+h}\item 
+C\+:/\+Users/soli/\+Downloads/\+New folder/kinova-\/ros-\/master/jaco\+\_\+driver/src/\hyperlink{jaco__api_8cpp}{jaco\+\_\+api.\+cpp}\end{DoxyCompactItemize}

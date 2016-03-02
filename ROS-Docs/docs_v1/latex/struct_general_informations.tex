@@ -1,0 +1,475 @@
+\hypertarget{struct_general_informations}{}\section{General\+Informations Struct Reference}
+\label{struct_general_informations}\index{General\+Informations@{General\+Informations}}
+
+
+This is structure hold almost all information of the robotical arm.  
+
+
+
+
+{\ttfamily \#include $<$Kinova\+Types.\+h$>$}
+
+
+
+Collaboration diagram for General\+Informations\+:
+% FIG 0
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+double \hyperlink{struct_general_informations_ab2950271f954d901892257e5364e0d64}{Time\+Absolute}
+\begin{DoxyCompactList}\small\item\em not used for now \end{DoxyCompactList}\item 
+double \hyperlink{struct_general_informations_ab88ee4b89e5244ada283aa21dd33bd39}{Time\+From\+Startup}
+\begin{DoxyCompactList}\small\item\em Time in second since the last boot. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{struct_general_informations_a112f455e7548254c639cbbc134eeaecc}{Index\+Startup}
+\begin{DoxyCompactList}\small\item\em Not used for now. \end{DoxyCompactList}\item 
+int \hyperlink{struct_general_informations_a4df94507a8b8f6bfdc84eedaf2d47f8f}{Expansion\+Long1}
+\begin{DoxyCompactList}\small\item\em not used for now. \end{DoxyCompactList}\item 
+float \hyperlink{struct_general_informations_a9175b100c45576a34acd3524e00d7d0c}{Time\+Stamp\+Savings}
+\begin{DoxyCompactList}\small\item\em Not used for now. \end{DoxyCompactList}\item 
+float \hyperlink{struct_general_informations_a8641ff908d6f15eb4c3984515e369dde}{Expansion\+Float}
+\begin{DoxyCompactList}\small\item\em Not used for now. \end{DoxyCompactList}\item 
+float \hyperlink{struct_general_informations_a447fdb3bf03c52d0e173302fcdf27f07}{Supply\+Voltage}
+\begin{DoxyCompactList}\small\item\em Main supply voltage.(24 V) Unit is V. \end{DoxyCompactList}\item 
+float \hyperlink{struct_general_informations_a6bce22c0c87b7c9696968182a8463a3e}{Total\+Current}
+\begin{DoxyCompactList}\small\item\em Current consumed on the main supply. Unit is A. \end{DoxyCompactList}\item 
+float \hyperlink{struct_general_informations_aacfd4f60945e48471c09376abfbd3c46}{Power}
+\begin{DoxyCompactList}\small\item\em Power consumed on the main supply. Unit is W. \end{DoxyCompactList}\item 
+float \hyperlink{struct_general_informations_ad7ad2bf957aa53d28a43897efe201b56}{Average\+Power}
+\begin{DoxyCompactList}\small\item\em Average power consumed on the main supply. Unit is W. \end{DoxyCompactList}\item 
+float \hyperlink{struct_general_informations_a3efc018f27ed117ab22e0058503b5105}{AccelerationX}
+\begin{DoxyCompactList}\small\item\em Acceleration X sensor\textquotesingle{}s value. Unit is G. \end{DoxyCompactList}\item 
+float \hyperlink{struct_general_informations_a2119e215e49f8bafe8cb5b9ddf8c58b5}{AccelerationY}
+\begin{DoxyCompactList}\small\item\em Acceleration Y sensor\textquotesingle{}s value. Unit is G. \end{DoxyCompactList}\item 
+float \hyperlink{struct_general_informations_a2a22c6b9b88f19a650137a1e6df8d571}{AccelerationZ}
+\begin{DoxyCompactList}\small\item\em Acceleration Z sensor\textquotesingle{}s value. Unit is G. \end{DoxyCompactList}\item 
+float \hyperlink{struct_general_informations_add8723743dfc70752472ada7ba50779c}{Sensor\+Expansion1}
+\begin{DoxyCompactList}\small\item\em Not used for now. \end{DoxyCompactList}\item 
+float \hyperlink{struct_general_informations_af24f37b896bc32e2adeeffa8826036cd}{Sensor\+Expansion2}
+\begin{DoxyCompactList}\small\item\em Not used for now. \end{DoxyCompactList}\item 
+float \hyperlink{struct_general_informations_ac3d8b0c6a9857e27d3420e693c993565}{Sensor\+Expansion3}
+\begin{DoxyCompactList}\small\item\em Not used for now. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{struct_general_informations_ac71288477c2e447e7dd298ca707bcec3}{Code\+Version}
+\begin{DoxyCompactList}\small\item\em Firmware\textquotesingle{}s code version. (Version.\+Major.\+Minor) \end{DoxyCompactList}\item 
+unsigned int \hyperlink{struct_general_informations_a56f6f5dc8067f0ea4deb4b0c5cc3f971}{Code\+Revision}
+\begin{DoxyCompactList}\small\item\em Firmware\textquotesingle{}s code revision. \end{DoxyCompactList}\item 
+unsigned short \hyperlink{struct_general_informations_ada03b782731dc711fc78f2ab00fe3fcd}{Status}
+\begin{DoxyCompactList}\small\item\em Not used for now. \end{DoxyCompactList}\item 
+unsigned short \hyperlink{struct_general_informations_a3cd5d14a57c053719db5c02cc471005b}{Controller}
+\begin{DoxyCompactList}\small\item\em The active controller. Example \+: 3-\/axis joystick, A\+PI, universal interface, ... \end{DoxyCompactList}\item 
+unsigned short \hyperlink{struct_general_informations_aaac67e7cb72de84d904bf96285ce97ef}{Control\+Mode}
+\begin{DoxyCompactList}\small\item\em Not used for now. \end{DoxyCompactList}\item 
+unsigned short \hyperlink{struct_general_informations_a2fb3e86852c3ee8fedd27e745d71d7c7}{Hand\+Mode}
+\begin{DoxyCompactList}\small\item\em Not used for now. \end{DoxyCompactList}\item 
+unsigned short \hyperlink{struct_general_informations_ac8f106acda69fb0d0dc7088216854fb0}{Connected\+Actuator\+Count}
+\begin{DoxyCompactList}\small\item\em Connected actuator count. \end{DoxyCompactList}\item 
+unsigned short \hyperlink{struct_general_informations_aaca0e478d0550e1c1763fcf8efe0c561}{Position\+Type}
+\begin{DoxyCompactList}\small\item\em Type of the actual position. \end{DoxyCompactList}\item 
+unsigned short \hyperlink{struct_general_informations_a81b7dea1c9cbcbc985eca648a8c5075c}{Errors\+Spi\+Expansion1}
+\begin{DoxyCompactList}\small\item\em Not in used now. \end{DoxyCompactList}\item 
+unsigned short \hyperlink{struct_general_informations_afcd202e8b7851289121ce9b5fd2b2dca}{Errors\+Spi\+Expansion2}
+\begin{DoxyCompactList}\small\item\em Not in used now. \end{DoxyCompactList}\item 
+unsigned short \hyperlink{struct_general_informations_a810315cbb3a170f9a1124e52cc22d59c}{Errors\+Main\+S\+P\+I\+Count}
+\begin{DoxyCompactList}\small\item\em Communication error from the main S\+PI. \end{DoxyCompactList}\item 
+unsigned short \hyperlink{struct_general_informations_a53e3e2b371092bf2f0fbc922d7dff8f3}{Errors\+External\+S\+P\+I\+Count}
+\begin{DoxyCompactList}\small\item\em Communication error from the external S\+PI. \end{DoxyCompactList}\item 
+unsigned short \hyperlink{struct_general_informations_aa2ae45e90dae092075b4662268757868}{Errors\+Main\+C\+A\+N\+Count}
+\begin{DoxyCompactList}\small\item\em Communication error from the main internal communication bus. \end{DoxyCompactList}\item 
+unsigned short \hyperlink{struct_general_informations_ac7ac1443cdd9f470fda64cd077ce06fb}{Errors\+External\+C\+A\+N\+Count}
+\begin{DoxyCompactList}\small\item\em Communication error from the main external communication bus. \end{DoxyCompactList}\item 
+\hyperlink{struct_system_status}{System\+Status} \hyperlink{struct_general_informations_ac1ff05432bd5c95b73b50b9d38830105}{Actual\+System\+Status}
+\begin{DoxyCompactList}\small\item\em System status. \end{DoxyCompactList}\item 
+\hyperlink{struct_user_position}{User\+Position} \hyperlink{struct_general_informations_a1bdb970acfdca928cf01a6850dc3ff3a}{Position}
+\begin{DoxyCompactList}\small\item\em The actual angular and cartesian position information. \end{DoxyCompactList}\item 
+\hyperlink{struct_user_position}{User\+Position} \hyperlink{struct_general_informations_aff852c9c84a0b313f311e1e222508cf7}{Command}
+\begin{DoxyCompactList}\small\item\em The actual angular and cartesian command information. \end{DoxyCompactList}\item 
+\hyperlink{struct_user_position}{User\+Position} \hyperlink{struct_general_informations_adecf04bc979eae4013a1dc4c5d2e43db}{Current}
+\begin{DoxyCompactList}\small\item\em The actual angular and cartesian current information. \end{DoxyCompactList}\item 
+\hyperlink{struct_user_position}{User\+Position} \hyperlink{struct_general_informations_a9f590b4fb00dc71b195348fbd18cc428}{Force}
+\begin{DoxyCompactList}\small\item\em The actual angular and cartesian force information. \end{DoxyCompactList}\item 
+\hyperlink{struct_zone_limitation}{Zone\+Limitation} \hyperlink{struct_general_informations_a025752cc70001b073d606f277c410d93}{Actual\+Limitations}
+\begin{DoxyCompactList}\small\item\em Actua limitation applied on the robotical arm. \end{DoxyCompactList}\item 
+float \hyperlink{struct_general_informations_a361a511d14fdf377e15ce86d6ef3e3c7}{Control\+Increment} \mbox{[}6\mbox{]}
+\begin{DoxyCompactList}\small\item\em Actual control increment from the actuators. \end{DoxyCompactList}\item 
+float \hyperlink{struct_general_informations_a538144c6ae5efec5dbeac1db517480ed}{Finger\+Control\+Increment} \mbox{[}3\mbox{]}
+\begin{DoxyCompactList}\small\item\em Actual control increment from the fingers. \end{DoxyCompactList}\item 
+\hyperlink{struct_joystick_command}{Joystick\+Command} \hyperlink{struct_general_informations_ac410a6988b0b124a005e0669c9f2172a}{Actual\+Joystick\+Command}
+\begin{DoxyCompactList}\small\item\em Actual joystick command received by the robotical arm. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{struct_general_informations_a0e7edf0a7d68bc5186b054bf3764699a}{Peripherals\+Connected} \mbox{[}4\mbox{]}
+\begin{DoxyCompactList}\small\item\em An array of all the connected peripheral. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{struct_general_informations_a6edf5533337f8d17956550364467679b}{Peripherals\+Device\+ID} \mbox{[}4\mbox{]}
+\begin{DoxyCompactList}\small\item\em An array of all the connected peripheral\textquotesingle{}s ID. \end{DoxyCompactList}\item 
+float \hyperlink{struct_general_informations_ad763ff96b47d372343c3f446e9b47463}{Actuators\+Temperatures} \mbox{[}6\mbox{]}
+\begin{DoxyCompactList}\small\item\em An array of all the connected peripheral. \end{DoxyCompactList}\item 
+float \hyperlink{struct_general_informations_a45e5897f59b7d00c5159a0a2e8d151d8}{Fingers\+Temperatures} \mbox{[}3\mbox{]}
+\begin{DoxyCompactList}\small\item\em An array that contains the fingers\textquotesingle{}s temperature. \end{DoxyCompactList}\item 
+float \hyperlink{struct_general_informations_a9acf6d8134ee89b7de200ca863d46d94}{Future\+Temperatures} \mbox{[}3\mbox{]}
+\begin{DoxyCompactList}\small\item\em Not used for now. \end{DoxyCompactList}\item 
+int \hyperlink{struct_general_informations_a7281486ac36892c876e30962656660ee}{Actuators\+Comm\+Errors} \mbox{[}6\mbox{]}
+\begin{DoxyCompactList}\small\item\em An array that contains communication errors of all actuators. \end{DoxyCompactList}\item 
+int \hyperlink{struct_general_informations_a2a65ca5c2039e398982814e0a2c0e862}{Fingers\+Comm\+Errors} \mbox{[}3\mbox{]}
+\begin{DoxyCompactList}\small\item\em An array that contains communication errors of all fingers. \end{DoxyCompactList}\item 
+int \hyperlink{struct_general_informations_abc8962194d7c8b514be5c28d99b6b4a3}{Expansion\+Long2}
+\begin{DoxyCompactList}\small\item\em Not used for now. \end{DoxyCompactList}\item 
+double \hyperlink{struct_general_informations_a8f91e2c0ca1565c5f3478923b9885389}{Control\+Time\+Absolute}
+\begin{DoxyCompactList}\small\item\em Not used for now. \end{DoxyCompactList}\item 
+double \hyperlink{struct_general_informations_aa38f3afead9da07799c45bca401037eb}{Control\+Time\+From\+Startup}
+\begin{DoxyCompactList}\small\item\em Control time since the last boot. The control time all the time the the robotical arm receive commands from any controller. \end{DoxyCompactList}\item 
+unsigned char \hyperlink{struct_general_informations_a79fda6f821bd29109818f22bfc4167b5}{Expansions\+Bytes} \mbox{[}192\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This is structure hold almost all information of the robotical arm. 
+
+\subsection{Member Data Documentation}
+\index{General\+Informations@{General\+Informations}!AccelerationX@{AccelerationX}}
+\index{AccelerationX@{AccelerationX}!General\+Informations@{General\+Informations}}
+\subsubsection[{\texorpdfstring{AccelerationX}{AccelerationX}}]{\setlength{\rightskip}{0pt plus 5cm}float General\+Informations\+::\+AccelerationX}\hypertarget{struct_general_informations_a3efc018f27ed117ab22e0058503b5105}{}\label{struct_general_informations_a3efc018f27ed117ab22e0058503b5105}
+
+
+Acceleration X sensor\textquotesingle{}s value. Unit is G. 
+
+\index{General\+Informations@{General\+Informations}!AccelerationY@{AccelerationY}}
+\index{AccelerationY@{AccelerationY}!General\+Informations@{General\+Informations}}
+\subsubsection[{\texorpdfstring{AccelerationY}{AccelerationY}}]{\setlength{\rightskip}{0pt plus 5cm}float General\+Informations\+::\+AccelerationY}\hypertarget{struct_general_informations_a2119e215e49f8bafe8cb5b9ddf8c58b5}{}\label{struct_general_informations_a2119e215e49f8bafe8cb5b9ddf8c58b5}
+
+
+Acceleration Y sensor\textquotesingle{}s value. Unit is G. 
+
+\index{General\+Informations@{General\+Informations}!AccelerationZ@{AccelerationZ}}
+\index{AccelerationZ@{AccelerationZ}!General\+Informations@{General\+Informations}}
+\subsubsection[{\texorpdfstring{AccelerationZ}{AccelerationZ}}]{\setlength{\rightskip}{0pt plus 5cm}float General\+Informations\+::\+AccelerationZ}\hypertarget{struct_general_informations_a2a22c6b9b88f19a650137a1e6df8d571}{}\label{struct_general_informations_a2a22c6b9b88f19a650137a1e6df8d571}
+
+
+Acceleration Z sensor\textquotesingle{}s value. Unit is G. 
+
+\index{General\+Informations@{General\+Informations}!Actual\+Joystick\+Command@{Actual\+Joystick\+Command}}
+\index{Actual\+Joystick\+Command@{Actual\+Joystick\+Command}!General\+Informations@{General\+Informations}}
+\subsubsection[{\texorpdfstring{Actual\+Joystick\+Command}{ActualJoystickCommand}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Joystick\+Command} General\+Informations\+::\+Actual\+Joystick\+Command}\hypertarget{struct_general_informations_ac410a6988b0b124a005e0669c9f2172a}{}\label{struct_general_informations_ac410a6988b0b124a005e0669c9f2172a}
+
+
+Actual joystick command received by the robotical arm. 
+
+\index{General\+Informations@{General\+Informations}!Actual\+Limitations@{Actual\+Limitations}}
+\index{Actual\+Limitations@{Actual\+Limitations}!General\+Informations@{General\+Informations}}
+\subsubsection[{\texorpdfstring{Actual\+Limitations}{ActualLimitations}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Zone\+Limitation} General\+Informations\+::\+Actual\+Limitations}\hypertarget{struct_general_informations_a025752cc70001b073d606f277c410d93}{}\label{struct_general_informations_a025752cc70001b073d606f277c410d93}
+
+
+Actua limitation applied on the robotical arm. 
+
+\index{General\+Informations@{General\+Informations}!Actual\+System\+Status@{Actual\+System\+Status}}
+\index{Actual\+System\+Status@{Actual\+System\+Status}!General\+Informations@{General\+Informations}}
+\subsubsection[{\texorpdfstring{Actual\+System\+Status}{ActualSystemStatus}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf System\+Status} General\+Informations\+::\+Actual\+System\+Status}\hypertarget{struct_general_informations_ac1ff05432bd5c95b73b50b9d38830105}{}\label{struct_general_informations_ac1ff05432bd5c95b73b50b9d38830105}
+
+
+System status. 
+
+\index{General\+Informations@{General\+Informations}!Actuators\+Comm\+Errors@{Actuators\+Comm\+Errors}}
+\index{Actuators\+Comm\+Errors@{Actuators\+Comm\+Errors}!General\+Informations@{General\+Informations}}
+\subsubsection[{\texorpdfstring{Actuators\+Comm\+Errors}{ActuatorsCommErrors}}]{\setlength{\rightskip}{0pt plus 5cm}int General\+Informations\+::\+Actuators\+Comm\+Errors\mbox{[}6\mbox{]}}\hypertarget{struct_general_informations_a7281486ac36892c876e30962656660ee}{}\label{struct_general_informations_a7281486ac36892c876e30962656660ee}
+
+
+An array that contains communication errors of all actuators. 
+
+\index{General\+Informations@{General\+Informations}!Actuators\+Temperatures@{Actuators\+Temperatures}}
+\index{Actuators\+Temperatures@{Actuators\+Temperatures}!General\+Informations@{General\+Informations}}
+\subsubsection[{\texorpdfstring{Actuators\+Temperatures}{ActuatorsTemperatures}}]{\setlength{\rightskip}{0pt plus 5cm}float General\+Informations\+::\+Actuators\+Temperatures\mbox{[}6\mbox{]}}\hypertarget{struct_general_informations_ad763ff96b47d372343c3f446e9b47463}{}\label{struct_general_informations_ad763ff96b47d372343c3f446e9b47463}
+
+
+An array of all the connected peripheral. 
+
+\index{General\+Informations@{General\+Informations}!Average\+Power@{Average\+Power}}
+\index{Average\+Power@{Average\+Power}!General\+Informations@{General\+Informations}}
+\subsubsection[{\texorpdfstring{Average\+Power}{AveragePower}}]{\setlength{\rightskip}{0pt plus 5cm}float General\+Informations\+::\+Average\+Power}\hypertarget{struct_general_informations_ad7ad2bf957aa53d28a43897efe201b56}{}\label{struct_general_informations_ad7ad2bf957aa53d28a43897efe201b56}
+
+
+Average power consumed on the main supply. Unit is W. 
+
+\index{General\+Informations@{General\+Informations}!Code\+Revision@{Code\+Revision}}
+\index{Code\+Revision@{Code\+Revision}!General\+Informations@{General\+Informations}}
+\subsubsection[{\texorpdfstring{Code\+Revision}{CodeRevision}}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int General\+Informations\+::\+Code\+Revision}\hypertarget{struct_general_informations_a56f6f5dc8067f0ea4deb4b0c5cc3f971}{}\label{struct_general_informations_a56f6f5dc8067f0ea4deb4b0c5cc3f971}
+
+
+Firmware\textquotesingle{}s code revision. 
+
+\index{General\+Informations@{General\+Informations}!Code\+Version@{Code\+Version}}
+\index{Code\+Version@{Code\+Version}!General\+Informations@{General\+Informations}}
+\subsubsection[{\texorpdfstring{Code\+Version}{CodeVersion}}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int General\+Informations\+::\+Code\+Version}\hypertarget{struct_general_informations_ac71288477c2e447e7dd298ca707bcec3}{}\label{struct_general_informations_ac71288477c2e447e7dd298ca707bcec3}
+
+
+Firmware\textquotesingle{}s code version. (Version.\+Major.\+Minor) 
+
+\index{General\+Informations@{General\+Informations}!Command@{Command}}
+\index{Command@{Command}!General\+Informations@{General\+Informations}}
+\subsubsection[{\texorpdfstring{Command}{Command}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf User\+Position} General\+Informations\+::\+Command}\hypertarget{struct_general_informations_aff852c9c84a0b313f311e1e222508cf7}{}\label{struct_general_informations_aff852c9c84a0b313f311e1e222508cf7}
+
+
+The actual angular and cartesian command information. 
+
+\index{General\+Informations@{General\+Informations}!Connected\+Actuator\+Count@{Connected\+Actuator\+Count}}
+\index{Connected\+Actuator\+Count@{Connected\+Actuator\+Count}!General\+Informations@{General\+Informations}}
+\subsubsection[{\texorpdfstring{Connected\+Actuator\+Count}{ConnectedActuatorCount}}]{\setlength{\rightskip}{0pt plus 5cm}unsigned short General\+Informations\+::\+Connected\+Actuator\+Count}\hypertarget{struct_general_informations_ac8f106acda69fb0d0dc7088216854fb0}{}\label{struct_general_informations_ac8f106acda69fb0d0dc7088216854fb0}
+
+
+Connected actuator count. 
+
+\index{General\+Informations@{General\+Informations}!Control\+Increment@{Control\+Increment}}
+\index{Control\+Increment@{Control\+Increment}!General\+Informations@{General\+Informations}}
+\subsubsection[{\texorpdfstring{Control\+Increment}{ControlIncrement}}]{\setlength{\rightskip}{0pt plus 5cm}float General\+Informations\+::\+Control\+Increment\mbox{[}6\mbox{]}}\hypertarget{struct_general_informations_a361a511d14fdf377e15ce86d6ef3e3c7}{}\label{struct_general_informations_a361a511d14fdf377e15ce86d6ef3e3c7}
+
+
+Actual control increment from the actuators. 
+
+\index{General\+Informations@{General\+Informations}!Controller@{Controller}}
+\index{Controller@{Controller}!General\+Informations@{General\+Informations}}
+\subsubsection[{\texorpdfstring{Controller}{Controller}}]{\setlength{\rightskip}{0pt plus 5cm}unsigned short General\+Informations\+::\+Controller}\hypertarget{struct_general_informations_a3cd5d14a57c053719db5c02cc471005b}{}\label{struct_general_informations_a3cd5d14a57c053719db5c02cc471005b}
+
+
+The active controller. Example \+: 3-\/axis joystick, A\+PI, universal interface, ... 
+
+\index{General\+Informations@{General\+Informations}!Control\+Mode@{Control\+Mode}}
+\index{Control\+Mode@{Control\+Mode}!General\+Informations@{General\+Informations}}
+\subsubsection[{\texorpdfstring{Control\+Mode}{ControlMode}}]{\setlength{\rightskip}{0pt plus 5cm}unsigned short General\+Informations\+::\+Control\+Mode}\hypertarget{struct_general_informations_aaac67e7cb72de84d904bf96285ce97ef}{}\label{struct_general_informations_aaac67e7cb72de84d904bf96285ce97ef}
+
+
+Not used for now. 
+
+\index{General\+Informations@{General\+Informations}!Control\+Time\+Absolute@{Control\+Time\+Absolute}}
+\index{Control\+Time\+Absolute@{Control\+Time\+Absolute}!General\+Informations@{General\+Informations}}
+\subsubsection[{\texorpdfstring{Control\+Time\+Absolute}{ControlTimeAbsolute}}]{\setlength{\rightskip}{0pt plus 5cm}double General\+Informations\+::\+Control\+Time\+Absolute}\hypertarget{struct_general_informations_a8f91e2c0ca1565c5f3478923b9885389}{}\label{struct_general_informations_a8f91e2c0ca1565c5f3478923b9885389}
+
+
+Not used for now. 
+
+\index{General\+Informations@{General\+Informations}!Control\+Time\+From\+Startup@{Control\+Time\+From\+Startup}}
+\index{Control\+Time\+From\+Startup@{Control\+Time\+From\+Startup}!General\+Informations@{General\+Informations}}
+\subsubsection[{\texorpdfstring{Control\+Time\+From\+Startup}{ControlTimeFromStartup}}]{\setlength{\rightskip}{0pt plus 5cm}double General\+Informations\+::\+Control\+Time\+From\+Startup}\hypertarget{struct_general_informations_aa38f3afead9da07799c45bca401037eb}{}\label{struct_general_informations_aa38f3afead9da07799c45bca401037eb}
+
+
+Control time since the last boot. The control time all the time the the robotical arm receive commands from any controller. 
+
+\index{General\+Informations@{General\+Informations}!Current@{Current}}
+\index{Current@{Current}!General\+Informations@{General\+Informations}}
+\subsubsection[{\texorpdfstring{Current}{Current}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf User\+Position} General\+Informations\+::\+Current}\hypertarget{struct_general_informations_adecf04bc979eae4013a1dc4c5d2e43db}{}\label{struct_general_informations_adecf04bc979eae4013a1dc4c5d2e43db}
+
+
+The actual angular and cartesian current information. 
+
+\index{General\+Informations@{General\+Informations}!Errors\+External\+C\+A\+N\+Count@{Errors\+External\+C\+A\+N\+Count}}
+\index{Errors\+External\+C\+A\+N\+Count@{Errors\+External\+C\+A\+N\+Count}!General\+Informations@{General\+Informations}}
+\subsubsection[{\texorpdfstring{Errors\+External\+C\+A\+N\+Count}{ErrorsExternalCANCount}}]{\setlength{\rightskip}{0pt plus 5cm}unsigned short General\+Informations\+::\+Errors\+External\+C\+A\+N\+Count}\hypertarget{struct_general_informations_ac7ac1443cdd9f470fda64cd077ce06fb}{}\label{struct_general_informations_ac7ac1443cdd9f470fda64cd077ce06fb}
+
+
+Communication error from the main external communication bus. 
+
+\index{General\+Informations@{General\+Informations}!Errors\+External\+S\+P\+I\+Count@{Errors\+External\+S\+P\+I\+Count}}
+\index{Errors\+External\+S\+P\+I\+Count@{Errors\+External\+S\+P\+I\+Count}!General\+Informations@{General\+Informations}}
+\subsubsection[{\texorpdfstring{Errors\+External\+S\+P\+I\+Count}{ErrorsExternalSPICount}}]{\setlength{\rightskip}{0pt plus 5cm}unsigned short General\+Informations\+::\+Errors\+External\+S\+P\+I\+Count}\hypertarget{struct_general_informations_a53e3e2b371092bf2f0fbc922d7dff8f3}{}\label{struct_general_informations_a53e3e2b371092bf2f0fbc922d7dff8f3}
+
+
+Communication error from the external S\+PI. 
+
+\index{General\+Informations@{General\+Informations}!Errors\+Main\+C\+A\+N\+Count@{Errors\+Main\+C\+A\+N\+Count}}
+\index{Errors\+Main\+C\+A\+N\+Count@{Errors\+Main\+C\+A\+N\+Count}!General\+Informations@{General\+Informations}}
+\subsubsection[{\texorpdfstring{Errors\+Main\+C\+A\+N\+Count}{ErrorsMainCANCount}}]{\setlength{\rightskip}{0pt plus 5cm}unsigned short General\+Informations\+::\+Errors\+Main\+C\+A\+N\+Count}\hypertarget{struct_general_informations_aa2ae45e90dae092075b4662268757868}{}\label{struct_general_informations_aa2ae45e90dae092075b4662268757868}
+
+
+Communication error from the main internal communication bus. 
+
+\index{General\+Informations@{General\+Informations}!Errors\+Main\+S\+P\+I\+Count@{Errors\+Main\+S\+P\+I\+Count}}
+\index{Errors\+Main\+S\+P\+I\+Count@{Errors\+Main\+S\+P\+I\+Count}!General\+Informations@{General\+Informations}}
+\subsubsection[{\texorpdfstring{Errors\+Main\+S\+P\+I\+Count}{ErrorsMainSPICount}}]{\setlength{\rightskip}{0pt plus 5cm}unsigned short General\+Informations\+::\+Errors\+Main\+S\+P\+I\+Count}\hypertarget{struct_general_informations_a810315cbb3a170f9a1124e52cc22d59c}{}\label{struct_general_informations_a810315cbb3a170f9a1124e52cc22d59c}
+
+
+Communication error from the main S\+PI. 
+
+\index{General\+Informations@{General\+Informations}!Errors\+Spi\+Expansion1@{Errors\+Spi\+Expansion1}}
+\index{Errors\+Spi\+Expansion1@{Errors\+Spi\+Expansion1}!General\+Informations@{General\+Informations}}
+\subsubsection[{\texorpdfstring{Errors\+Spi\+Expansion1}{ErrorsSpiExpansion1}}]{\setlength{\rightskip}{0pt plus 5cm}unsigned short General\+Informations\+::\+Errors\+Spi\+Expansion1}\hypertarget{struct_general_informations_a81b7dea1c9cbcbc985eca648a8c5075c}{}\label{struct_general_informations_a81b7dea1c9cbcbc985eca648a8c5075c}
+
+
+Not in used now. 
+
+\index{General\+Informations@{General\+Informations}!Errors\+Spi\+Expansion2@{Errors\+Spi\+Expansion2}}
+\index{Errors\+Spi\+Expansion2@{Errors\+Spi\+Expansion2}!General\+Informations@{General\+Informations}}
+\subsubsection[{\texorpdfstring{Errors\+Spi\+Expansion2}{ErrorsSpiExpansion2}}]{\setlength{\rightskip}{0pt plus 5cm}unsigned short General\+Informations\+::\+Errors\+Spi\+Expansion2}\hypertarget{struct_general_informations_afcd202e8b7851289121ce9b5fd2b2dca}{}\label{struct_general_informations_afcd202e8b7851289121ce9b5fd2b2dca}
+
+
+Not in used now. 
+
+\index{General\+Informations@{General\+Informations}!Expansion\+Float@{Expansion\+Float}}
+\index{Expansion\+Float@{Expansion\+Float}!General\+Informations@{General\+Informations}}
+\subsubsection[{\texorpdfstring{Expansion\+Float}{ExpansionFloat}}]{\setlength{\rightskip}{0pt plus 5cm}float General\+Informations\+::\+Expansion\+Float}\hypertarget{struct_general_informations_a8641ff908d6f15eb4c3984515e369dde}{}\label{struct_general_informations_a8641ff908d6f15eb4c3984515e369dde}
+
+
+Not used for now. 
+
+\index{General\+Informations@{General\+Informations}!Expansion\+Long1@{Expansion\+Long1}}
+\index{Expansion\+Long1@{Expansion\+Long1}!General\+Informations@{General\+Informations}}
+\subsubsection[{\texorpdfstring{Expansion\+Long1}{ExpansionLong1}}]{\setlength{\rightskip}{0pt plus 5cm}int General\+Informations\+::\+Expansion\+Long1}\hypertarget{struct_general_informations_a4df94507a8b8f6bfdc84eedaf2d47f8f}{}\label{struct_general_informations_a4df94507a8b8f6bfdc84eedaf2d47f8f}
+
+
+not used for now. 
+
+\index{General\+Informations@{General\+Informations}!Expansion\+Long2@{Expansion\+Long2}}
+\index{Expansion\+Long2@{Expansion\+Long2}!General\+Informations@{General\+Informations}}
+\subsubsection[{\texorpdfstring{Expansion\+Long2}{ExpansionLong2}}]{\setlength{\rightskip}{0pt plus 5cm}int General\+Informations\+::\+Expansion\+Long2}\hypertarget{struct_general_informations_abc8962194d7c8b514be5c28d99b6b4a3}{}\label{struct_general_informations_abc8962194d7c8b514be5c28d99b6b4a3}
+
+
+Not used for now. 
+
+\index{General\+Informations@{General\+Informations}!Expansions\+Bytes@{Expansions\+Bytes}}
+\index{Expansions\+Bytes@{Expansions\+Bytes}!General\+Informations@{General\+Informations}}
+\subsubsection[{\texorpdfstring{Expansions\+Bytes}{ExpansionsBytes}}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char General\+Informations\+::\+Expansions\+Bytes\mbox{[}192\mbox{]}}\hypertarget{struct_general_informations_a79fda6f821bd29109818f22bfc4167b5}{}\label{struct_general_informations_a79fda6f821bd29109818f22bfc4167b5}
+Not used for now \index{General\+Informations@{General\+Informations}!Finger\+Control\+Increment@{Finger\+Control\+Increment}}
+\index{Finger\+Control\+Increment@{Finger\+Control\+Increment}!General\+Informations@{General\+Informations}}
+\subsubsection[{\texorpdfstring{Finger\+Control\+Increment}{FingerControlIncrement}}]{\setlength{\rightskip}{0pt plus 5cm}float General\+Informations\+::\+Finger\+Control\+Increment\mbox{[}3\mbox{]}}\hypertarget{struct_general_informations_a538144c6ae5efec5dbeac1db517480ed}{}\label{struct_general_informations_a538144c6ae5efec5dbeac1db517480ed}
+
+
+Actual control increment from the fingers. 
+
+\index{General\+Informations@{General\+Informations}!Fingers\+Comm\+Errors@{Fingers\+Comm\+Errors}}
+\index{Fingers\+Comm\+Errors@{Fingers\+Comm\+Errors}!General\+Informations@{General\+Informations}}
+\subsubsection[{\texorpdfstring{Fingers\+Comm\+Errors}{FingersCommErrors}}]{\setlength{\rightskip}{0pt plus 5cm}int General\+Informations\+::\+Fingers\+Comm\+Errors\mbox{[}3\mbox{]}}\hypertarget{struct_general_informations_a2a65ca5c2039e398982814e0a2c0e862}{}\label{struct_general_informations_a2a65ca5c2039e398982814e0a2c0e862}
+
+
+An array that contains communication errors of all fingers. 
+
+\index{General\+Informations@{General\+Informations}!Fingers\+Temperatures@{Fingers\+Temperatures}}
+\index{Fingers\+Temperatures@{Fingers\+Temperatures}!General\+Informations@{General\+Informations}}
+\subsubsection[{\texorpdfstring{Fingers\+Temperatures}{FingersTemperatures}}]{\setlength{\rightskip}{0pt plus 5cm}float General\+Informations\+::\+Fingers\+Temperatures\mbox{[}3\mbox{]}}\hypertarget{struct_general_informations_a45e5897f59b7d00c5159a0a2e8d151d8}{}\label{struct_general_informations_a45e5897f59b7d00c5159a0a2e8d151d8}
+
+
+An array that contains the fingers\textquotesingle{}s temperature. 
+
+\index{General\+Informations@{General\+Informations}!Force@{Force}}
+\index{Force@{Force}!General\+Informations@{General\+Informations}}
+\subsubsection[{\texorpdfstring{Force}{Force}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf User\+Position} General\+Informations\+::\+Force}\hypertarget{struct_general_informations_a9f590b4fb00dc71b195348fbd18cc428}{}\label{struct_general_informations_a9f590b4fb00dc71b195348fbd18cc428}
+
+
+The actual angular and cartesian force information. 
+
+\index{General\+Informations@{General\+Informations}!Future\+Temperatures@{Future\+Temperatures}}
+\index{Future\+Temperatures@{Future\+Temperatures}!General\+Informations@{General\+Informations}}
+\subsubsection[{\texorpdfstring{Future\+Temperatures}{FutureTemperatures}}]{\setlength{\rightskip}{0pt plus 5cm}float General\+Informations\+::\+Future\+Temperatures\mbox{[}3\mbox{]}}\hypertarget{struct_general_informations_a9acf6d8134ee89b7de200ca863d46d94}{}\label{struct_general_informations_a9acf6d8134ee89b7de200ca863d46d94}
+
+
+Not used for now. 
+
+\index{General\+Informations@{General\+Informations}!Hand\+Mode@{Hand\+Mode}}
+\index{Hand\+Mode@{Hand\+Mode}!General\+Informations@{General\+Informations}}
+\subsubsection[{\texorpdfstring{Hand\+Mode}{HandMode}}]{\setlength{\rightskip}{0pt plus 5cm}unsigned short General\+Informations\+::\+Hand\+Mode}\hypertarget{struct_general_informations_a2fb3e86852c3ee8fedd27e745d71d7c7}{}\label{struct_general_informations_a2fb3e86852c3ee8fedd27e745d71d7c7}
+
+
+Not used for now. 
+
+\index{General\+Informations@{General\+Informations}!Index\+Startup@{Index\+Startup}}
+\index{Index\+Startup@{Index\+Startup}!General\+Informations@{General\+Informations}}
+\subsubsection[{\texorpdfstring{Index\+Startup}{IndexStartup}}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int General\+Informations\+::\+Index\+Startup}\hypertarget{struct_general_informations_a112f455e7548254c639cbbc134eeaecc}{}\label{struct_general_informations_a112f455e7548254c639cbbc134eeaecc}
+
+
+Not used for now. 
+
+\index{General\+Informations@{General\+Informations}!Peripherals\+Connected@{Peripherals\+Connected}}
+\index{Peripherals\+Connected@{Peripherals\+Connected}!General\+Informations@{General\+Informations}}
+\subsubsection[{\texorpdfstring{Peripherals\+Connected}{PeripheralsConnected}}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int General\+Informations\+::\+Peripherals\+Connected\mbox{[}4\mbox{]}}\hypertarget{struct_general_informations_a0e7edf0a7d68bc5186b054bf3764699a}{}\label{struct_general_informations_a0e7edf0a7d68bc5186b054bf3764699a}
+
+
+An array of all the connected peripheral. 
+
+\index{General\+Informations@{General\+Informations}!Peripherals\+Device\+ID@{Peripherals\+Device\+ID}}
+\index{Peripherals\+Device\+ID@{Peripherals\+Device\+ID}!General\+Informations@{General\+Informations}}
+\subsubsection[{\texorpdfstring{Peripherals\+Device\+ID}{PeripheralsDeviceID}}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int General\+Informations\+::\+Peripherals\+Device\+ID\mbox{[}4\mbox{]}}\hypertarget{struct_general_informations_a6edf5533337f8d17956550364467679b}{}\label{struct_general_informations_a6edf5533337f8d17956550364467679b}
+
+
+An array of all the connected peripheral\textquotesingle{}s ID. 
+
+\index{General\+Informations@{General\+Informations}!Position@{Position}}
+\index{Position@{Position}!General\+Informations@{General\+Informations}}
+\subsubsection[{\texorpdfstring{Position}{Position}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf User\+Position} General\+Informations\+::\+Position}\hypertarget{struct_general_informations_a1bdb970acfdca928cf01a6850dc3ff3a}{}\label{struct_general_informations_a1bdb970acfdca928cf01a6850dc3ff3a}
+
+
+The actual angular and cartesian position information. 
+
+\index{General\+Informations@{General\+Informations}!Position\+Type@{Position\+Type}}
+\index{Position\+Type@{Position\+Type}!General\+Informations@{General\+Informations}}
+\subsubsection[{\texorpdfstring{Position\+Type}{PositionType}}]{\setlength{\rightskip}{0pt plus 5cm}unsigned short General\+Informations\+::\+Position\+Type}\hypertarget{struct_general_informations_aaca0e478d0550e1c1763fcf8efe0c561}{}\label{struct_general_informations_aaca0e478d0550e1c1763fcf8efe0c561}
+
+
+Type of the actual position. 
+
+\index{General\+Informations@{General\+Informations}!Power@{Power}}
+\index{Power@{Power}!General\+Informations@{General\+Informations}}
+\subsubsection[{\texorpdfstring{Power}{Power}}]{\setlength{\rightskip}{0pt plus 5cm}float General\+Informations\+::\+Power}\hypertarget{struct_general_informations_aacfd4f60945e48471c09376abfbd3c46}{}\label{struct_general_informations_aacfd4f60945e48471c09376abfbd3c46}
+
+
+Power consumed on the main supply. Unit is W. 
+
+\index{General\+Informations@{General\+Informations}!Sensor\+Expansion1@{Sensor\+Expansion1}}
+\index{Sensor\+Expansion1@{Sensor\+Expansion1}!General\+Informations@{General\+Informations}}
+\subsubsection[{\texorpdfstring{Sensor\+Expansion1}{SensorExpansion1}}]{\setlength{\rightskip}{0pt plus 5cm}float General\+Informations\+::\+Sensor\+Expansion1}\hypertarget{struct_general_informations_add8723743dfc70752472ada7ba50779c}{}\label{struct_general_informations_add8723743dfc70752472ada7ba50779c}
+
+
+Not used for now. 
+
+\index{General\+Informations@{General\+Informations}!Sensor\+Expansion2@{Sensor\+Expansion2}}
+\index{Sensor\+Expansion2@{Sensor\+Expansion2}!General\+Informations@{General\+Informations}}
+\subsubsection[{\texorpdfstring{Sensor\+Expansion2}{SensorExpansion2}}]{\setlength{\rightskip}{0pt plus 5cm}float General\+Informations\+::\+Sensor\+Expansion2}\hypertarget{struct_general_informations_af24f37b896bc32e2adeeffa8826036cd}{}\label{struct_general_informations_af24f37b896bc32e2adeeffa8826036cd}
+
+
+Not used for now. 
+
+\index{General\+Informations@{General\+Informations}!Sensor\+Expansion3@{Sensor\+Expansion3}}
+\index{Sensor\+Expansion3@{Sensor\+Expansion3}!General\+Informations@{General\+Informations}}
+\subsubsection[{\texorpdfstring{Sensor\+Expansion3}{SensorExpansion3}}]{\setlength{\rightskip}{0pt plus 5cm}float General\+Informations\+::\+Sensor\+Expansion3}\hypertarget{struct_general_informations_ac3d8b0c6a9857e27d3420e693c993565}{}\label{struct_general_informations_ac3d8b0c6a9857e27d3420e693c993565}
+
+
+Not used for now. 
+
+\index{General\+Informations@{General\+Informations}!Status@{Status}}
+\index{Status@{Status}!General\+Informations@{General\+Informations}}
+\subsubsection[{\texorpdfstring{Status}{Status}}]{\setlength{\rightskip}{0pt plus 5cm}unsigned short General\+Informations\+::\+Status}\hypertarget{struct_general_informations_ada03b782731dc711fc78f2ab00fe3fcd}{}\label{struct_general_informations_ada03b782731dc711fc78f2ab00fe3fcd}
+
+
+Not used for now. 
+
+\index{General\+Informations@{General\+Informations}!Supply\+Voltage@{Supply\+Voltage}}
+\index{Supply\+Voltage@{Supply\+Voltage}!General\+Informations@{General\+Informations}}
+\subsubsection[{\texorpdfstring{Supply\+Voltage}{SupplyVoltage}}]{\setlength{\rightskip}{0pt plus 5cm}float General\+Informations\+::\+Supply\+Voltage}\hypertarget{struct_general_informations_a447fdb3bf03c52d0e173302fcdf27f07}{}\label{struct_general_informations_a447fdb3bf03c52d0e173302fcdf27f07}
+
+
+Main supply voltage.(24 V) Unit is V. 
+
+\index{General\+Informations@{General\+Informations}!Time\+Absolute@{Time\+Absolute}}
+\index{Time\+Absolute@{Time\+Absolute}!General\+Informations@{General\+Informations}}
+\subsubsection[{\texorpdfstring{Time\+Absolute}{TimeAbsolute}}]{\setlength{\rightskip}{0pt plus 5cm}double General\+Informations\+::\+Time\+Absolute}\hypertarget{struct_general_informations_ab2950271f954d901892257e5364e0d64}{}\label{struct_general_informations_ab2950271f954d901892257e5364e0d64}
+
+
+not used for now 
+
+\index{General\+Informations@{General\+Informations}!Time\+From\+Startup@{Time\+From\+Startup}}
+\index{Time\+From\+Startup@{Time\+From\+Startup}!General\+Informations@{General\+Informations}}
+\subsubsection[{\texorpdfstring{Time\+From\+Startup}{TimeFromStartup}}]{\setlength{\rightskip}{0pt plus 5cm}double General\+Informations\+::\+Time\+From\+Startup}\hypertarget{struct_general_informations_ab88ee4b89e5244ada283aa21dd33bd39}{}\label{struct_general_informations_ab88ee4b89e5244ada283aa21dd33bd39}
+
+
+Time in second since the last boot. 
+
+\index{General\+Informations@{General\+Informations}!Time\+Stamp\+Savings@{Time\+Stamp\+Savings}}
+\index{Time\+Stamp\+Savings@{Time\+Stamp\+Savings}!General\+Informations@{General\+Informations}}
+\subsubsection[{\texorpdfstring{Time\+Stamp\+Savings}{TimeStampSavings}}]{\setlength{\rightskip}{0pt plus 5cm}float General\+Informations\+::\+Time\+Stamp\+Savings}\hypertarget{struct_general_informations_a9175b100c45576a34acd3524e00d7d0c}{}\label{struct_general_informations_a9175b100c45576a34acd3524e00d7d0c}
+
+
+Not used for now. 
+
+\index{General\+Informations@{General\+Informations}!Total\+Current@{Total\+Current}}
+\index{Total\+Current@{Total\+Current}!General\+Informations@{General\+Informations}}
+\subsubsection[{\texorpdfstring{Total\+Current}{TotalCurrent}}]{\setlength{\rightskip}{0pt plus 5cm}float General\+Informations\+::\+Total\+Current}\hypertarget{struct_general_informations_a6bce22c0c87b7c9696968182a8463a3e}{}\label{struct_general_informations_a6bce22c0c87b7c9696968182a8463a3e}
+
+
+Current consumed on the main supply. Unit is A. 
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/soli/\+Downloads/\+New folder/kinova-\/ros-\/master/jaco\+\_\+driver/include/kinova/\hyperlink{_kinova_types_8h}{Kinova\+Types.\+h}\end{DoxyCompactItemize}

@@ -1,0 +1,7 @@
+<map id="jaco::JacoComm::getQuickStatus" name="jaco::JacoComm::getQuickStatus">
+<area shape="rect" id="node2" href="$classjaco_1_1_jaco_comm.html#acdf234ee7f30cf5ead4f41beb3481521" title="jaco::JacoComm::JacoComm" alt="" coords="232,5,424,32"/>
+<area shape="rect" id="node3" href="$classjaco_1_1_jaco_comm.html#a0e7d5984a2c6ed956da7e07e6c97ba5f" title="Determines whether the arm has returned to its &quot;Home&quot; state. " alt="" coords="239,56,417,83"/>
+<area shape="rect" id="node4" href="$classjaco_1_1_jaco_comm.html#a38c69b22bc293afd3f27eff9179dec4c" title="Send the arm to the &quot;home&quot; position. " alt="" coords="472,56,655,83"/>
+<area shape="rect" id="node5" href="$classjaco_1_1_jaco_arm.html#a0296802ee4994977c35532077dd28a44" title="jaco::JacoArm::homeArmService\lCallback" alt="" coords="703,49,913,90"/>
+<area shape="rect" id="node6" href="$classjaco_1_1_jaco_arm.html#ab29d25cb3b4bafdc523cbe271c801681" title="jaco::JacoArm::JacoArm" alt="" coords="961,56,1125,83"/>
+</map>

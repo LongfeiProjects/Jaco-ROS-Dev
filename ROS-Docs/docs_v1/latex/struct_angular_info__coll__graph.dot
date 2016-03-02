@@ -1,0 +1,6 @@
+digraph "AngularInfo"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="{AngularInfo\n|+ Actuator1\l+ Actuator2\l+ Actuator3\l+ Actuator4\l+ Actuator5\l+ Actuator6\l|+ InitStruct()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+}

@@ -1,0 +1,8 @@
+<map id="jaco::JacoComm::getCartesianPosition" name="jaco::JacoComm::getCartesianPosition">
+<area shape="rect" id="node2" href="$classjaco_1_1_jaco_arm.html#a91106f68edeff4b26d02a6d7a8528df6" title="Publishes the current cartesian coordinates. " alt="" coords="256,5,435,47"/>
+<area shape="rect" id="node5" href="$classjaco_1_1_jaco_comm.html#a5cdc217373b923f7de2ed468150281fa" title="Sets the finger positions. " alt="" coords="255,71,436,112"/>
+<area shape="rect" id="node7" href="$classjaco_1_1_jaco_pose_action_server.html#a82396bb5f219f54518a80493bfd38f26" title="jaco::JacoPoseActionServer\l::actionCallback" alt="" coords="253,136,437,177"/>
+<area shape="rect" id="node3" href="$classjaco_1_1_jaco_arm.html#a3a04586ffe92b995c58c9fa94a030bf8" title="jaco::JacoArm::statusTimer" alt="" coords="493,13,675,39"/>
+<area shape="rect" id="node4" href="$classjaco_1_1_jaco_arm.html#ab29d25cb3b4bafdc523cbe271c801681" title="jaco::JacoArm::JacoArm" alt="" coords="731,13,895,39"/>
+<area shape="rect" id="node6" href="$classjaco_1_1_jaco_fingers_action_server.html#a642f494b27d513457e9f29de7a4b31b6" title="jaco::JacoFingersActionServer\l::actionCallback" alt="" coords="485,71,683,112"/>
+</map>

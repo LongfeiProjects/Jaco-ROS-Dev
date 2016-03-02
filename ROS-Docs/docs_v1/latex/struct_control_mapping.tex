@@ -1,0 +1,90 @@
+\hypertarget{struct_control_mapping}{}\section{Control\+Mapping Struct Reference}
+\label{struct_control_mapping}\index{Control\+Mapping@{Control\+Mapping}}
+
+
+This represents a group of functionalities mapped to some events triggered by a specific controller.  
+
+
+
+
+{\ttfamily \#include $<$Kinova\+Types.\+h$>$}
+
+
+
+Collaboration diagram for Control\+Mapping\+:
+% FIG 0
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{struct_control_mapping_ab82579c661e09b8a7d4e5bae10823b47}{Num\+Of\+ModesA}
+\begin{DoxyCompactList}\small\item\em List A\textquotesingle{}s element count. If this value exceeds M\+O\+D\+E\+\_\+\+M\+A\+P\+\_\+\+C\+O\+U\+NT, we got a problem. \end{DoxyCompactList}\item 
+int \hyperlink{struct_control_mapping_a07198eba22a0b4557eaec7ce5973a1c5}{Num\+Of\+ModesB}
+\begin{DoxyCompactList}\small\item\em List B\textquotesingle{}s element count. If this value exceeds M\+O\+D\+E\+\_\+\+M\+A\+P\+\_\+\+C\+O\+U\+NT, we got a problem. \end{DoxyCompactList}\item 
+int \hyperlink{struct_control_mapping_a12722cd1ab9c15c8fee5b6722d9f9f69}{Actual\+ModeA}
+\begin{DoxyCompactList}\small\item\em This is the actual index of the active mode map in the list A. If the list A is currently unused, this value will be -\/1. \end{DoxyCompactList}\item 
+int \hyperlink{struct_control_mapping_a9c3fea40ada452fa35d9d12d003eb867}{Actual\+ModeB}
+\item 
+\hyperlink{_kinova_types_8h_a0cbbbff9819ea9faabb8810022aefec3}{Control\+Mapping\+Mode} \hyperlink{struct_control_mapping_a293caba4b861368460f71e13fff5b523}{Mode}
+\begin{DoxyCompactList}\small\item\em That indicates what kind of controller is in use. \end{DoxyCompactList}\item 
+\hyperlink{struct_controls_mode_map}{Controls\+Mode\+Map} \hyperlink{struct_control_mapping_acb57ae41b95f7beef041aa311c040a98}{Mode\+ControlsA} \mbox{[}\hyperlink{_kinova_types_8h_ae65b2d54c897b15b974b833eec59a7a2}{M\+O\+D\+E\+\_\+\+M\+A\+P\+\_\+\+C\+O\+U\+NT}\mbox{]}
+\begin{DoxyCompactList}\small\item\em This is the mode map list A. By default, on the 3-\/axis kinova joystick, it corresponds to the modes accessible with the left button on the top of the stick. \end{DoxyCompactList}\item 
+\hyperlink{struct_controls_mode_map}{Controls\+Mode\+Map} \hyperlink{struct_control_mapping_a068cd90e7e56554639f2a24d96f6e925}{Mode\+ControlsB} \mbox{[}\hyperlink{_kinova_types_8h_ae65b2d54c897b15b974b833eec59a7a2}{M\+O\+D\+E\+\_\+\+M\+A\+P\+\_\+\+C\+O\+U\+NT}\mbox{]}
+\begin{DoxyCompactList}\small\item\em This is the mode map list B. By default, on the 3-\/axis kinova joystick, it corresponds to the modes accessible with the right button on the top of the stick. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This represents a group of functionalities mapped to some events triggered by a specific controller. 
+
+As an example, the kinova 3-\/axis joystick has its own control mapping. This A\+PI also has its own control mapping. Note that since list A and list B cannot be used at the same time in the same control mapping, it implies that either one of the variable can have a $>$= 0 value. 
+
+\subsection{Member Data Documentation}
+\index{Control\+Mapping@{Control\+Mapping}!Actual\+ModeA@{Actual\+ModeA}}
+\index{Actual\+ModeA@{Actual\+ModeA}!Control\+Mapping@{Control\+Mapping}}
+\subsubsection[{\texorpdfstring{Actual\+ModeA}{ActualModeA}}]{\setlength{\rightskip}{0pt plus 5cm}int Control\+Mapping\+::\+Actual\+ModeA}\hypertarget{struct_control_mapping_a12722cd1ab9c15c8fee5b6722d9f9f69}{}\label{struct_control_mapping_a12722cd1ab9c15c8fee5b6722d9f9f69}
+
+
+This is the actual index of the active mode map in the list A. If the list A is currently unused, this value will be -\/1. 
+
+\index{Control\+Mapping@{Control\+Mapping}!Actual\+ModeB@{Actual\+ModeB}}
+\index{Actual\+ModeB@{Actual\+ModeB}!Control\+Mapping@{Control\+Mapping}}
+\subsubsection[{\texorpdfstring{Actual\+ModeB}{ActualModeB}}]{\setlength{\rightskip}{0pt plus 5cm}int Control\+Mapping\+::\+Actual\+ModeB}\hypertarget{struct_control_mapping_a9c3fea40ada452fa35d9d12d003eb867}{}\label{struct_control_mapping_a9c3fea40ada452fa35d9d12d003eb867}
+is the actual index of the active mode map in the list B. If the list B is currently unused, this value will be -\/1. \index{Control\+Mapping@{Control\+Mapping}!Mode@{Mode}}
+\index{Mode@{Mode}!Control\+Mapping@{Control\+Mapping}}
+\subsubsection[{\texorpdfstring{Mode}{Mode}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Control\+Mapping\+Mode} Control\+Mapping\+::\+Mode}\hypertarget{struct_control_mapping_a293caba4b861368460f71e13fff5b523}{}\label{struct_control_mapping_a293caba4b861368460f71e13fff5b523}
+
+
+That indicates what kind of controller is in use. 
+
+\index{Control\+Mapping@{Control\+Mapping}!Mode\+ControlsA@{Mode\+ControlsA}}
+\index{Mode\+ControlsA@{Mode\+ControlsA}!Control\+Mapping@{Control\+Mapping}}
+\subsubsection[{\texorpdfstring{Mode\+ControlsA}{ModeControlsA}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Controls\+Mode\+Map} Control\+Mapping\+::\+Mode\+ControlsA\mbox{[}{\bf M\+O\+D\+E\+\_\+\+M\+A\+P\+\_\+\+C\+O\+U\+NT}\mbox{]}}\hypertarget{struct_control_mapping_acb57ae41b95f7beef041aa311c040a98}{}\label{struct_control_mapping_acb57ae41b95f7beef041aa311c040a98}
+
+
+This is the mode map list A. By default, on the 3-\/axis kinova joystick, it corresponds to the modes accessible with the left button on the top of the stick. 
+
+\index{Control\+Mapping@{Control\+Mapping}!Mode\+ControlsB@{Mode\+ControlsB}}
+\index{Mode\+ControlsB@{Mode\+ControlsB}!Control\+Mapping@{Control\+Mapping}}
+\subsubsection[{\texorpdfstring{Mode\+ControlsB}{ModeControlsB}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Controls\+Mode\+Map} Control\+Mapping\+::\+Mode\+ControlsB\mbox{[}{\bf M\+O\+D\+E\+\_\+\+M\+A\+P\+\_\+\+C\+O\+U\+NT}\mbox{]}}\hypertarget{struct_control_mapping_a068cd90e7e56554639f2a24d96f6e925}{}\label{struct_control_mapping_a068cd90e7e56554639f2a24d96f6e925}
+
+
+This is the mode map list B. By default, on the 3-\/axis kinova joystick, it corresponds to the modes accessible with the right button on the top of the stick. 
+
+\index{Control\+Mapping@{Control\+Mapping}!Num\+Of\+ModesA@{Num\+Of\+ModesA}}
+\index{Num\+Of\+ModesA@{Num\+Of\+ModesA}!Control\+Mapping@{Control\+Mapping}}
+\subsubsection[{\texorpdfstring{Num\+Of\+ModesA}{NumOfModesA}}]{\setlength{\rightskip}{0pt plus 5cm}int Control\+Mapping\+::\+Num\+Of\+ModesA}\hypertarget{struct_control_mapping_ab82579c661e09b8a7d4e5bae10823b47}{}\label{struct_control_mapping_ab82579c661e09b8a7d4e5bae10823b47}
+
+
+List A\textquotesingle{}s element count. If this value exceeds M\+O\+D\+E\+\_\+\+M\+A\+P\+\_\+\+C\+O\+U\+NT, we got a problem. 
+
+\index{Control\+Mapping@{Control\+Mapping}!Num\+Of\+ModesB@{Num\+Of\+ModesB}}
+\index{Num\+Of\+ModesB@{Num\+Of\+ModesB}!Control\+Mapping@{Control\+Mapping}}
+\subsubsection[{\texorpdfstring{Num\+Of\+ModesB}{NumOfModesB}}]{\setlength{\rightskip}{0pt plus 5cm}int Control\+Mapping\+::\+Num\+Of\+ModesB}\hypertarget{struct_control_mapping_a07198eba22a0b4557eaec7ce5973a1c5}{}\label{struct_control_mapping_a07198eba22a0b4557eaec7ce5973a1c5}
+
+
+List B\textquotesingle{}s element count. If this value exceeds M\+O\+D\+E\+\_\+\+M\+A\+P\+\_\+\+C\+O\+U\+NT, we got a problem. 
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/soli/\+Downloads/\+New folder/kinova-\/ros-\/master/jaco\+\_\+driver/include/kinova/\hyperlink{_kinova_types_8h}{Kinova\+Types.\+h}\end{DoxyCompactItemize}

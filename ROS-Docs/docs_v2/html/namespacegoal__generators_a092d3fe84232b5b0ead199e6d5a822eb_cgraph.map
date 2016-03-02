@@ -1,0 +1,6 @@
+<map id="goal_generators.random_mico_finger_positions" name="goal_generators.random_mico_finger_positions">
+<area shape="rect" id="node2" href="$namespacegoal__generators.html#acc20fd60c84b4f30491d22bf16139668" title="goal_generators.random\l_pose_generator" alt="" coords="215,5,376,47"/>
+<area shape="rect" id="node3" href="$namespacegoal__generators.html#a565aa27b68e73f1f3b2d1a9da1332051" title="goal_generators.poses\l_from_file" alt="" coords="219,71,372,112"/>
+<area shape="rect" id="node4" href="$namespacegoal__generators.html#a6ab109de507bd107dedc7801ca7c5381" title="goal_generators.random\l_joint_angles_generator" alt="" coords="215,136,376,177"/>
+<area shape="rect" id="node5" href="$namespacegoal__generators.html#a39b5582c84cdf5891bf92b77ab9c0b3b" title="goal_generators.joint\l_angles_from_file" alt="" coords="224,201,367,243"/>
+</map>

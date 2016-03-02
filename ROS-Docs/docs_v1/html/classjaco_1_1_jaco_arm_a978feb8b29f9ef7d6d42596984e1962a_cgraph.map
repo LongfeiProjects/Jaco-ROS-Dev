@@ -1,0 +1,4 @@
+<map id="jaco::JacoArm::publishFingerPosition" name="jaco::JacoArm::publishFingerPosition">
+<area shape="rect" id="node2" href="$classjaco_1_1_jaco_comm.html#a7644bf1154b59bf4d8b97c200284e3fb" title="API call to obtain the current finger positions. " alt="" coords="244,5,425,47"/>
+<area shape="rect" id="node3" href="$classjaco_1_1_finger_angles.html#afe84a9beae8b4a0617ace657d7608a49" title="jaco::FingerAngles\l::constructFingersMsg" alt="" coords="259,71,411,112"/>
+</map>

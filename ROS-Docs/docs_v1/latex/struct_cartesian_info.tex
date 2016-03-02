@@ -1,0 +1,108 @@
+\hypertarget{struct_cartesian_info}{}\section{Cartesian\+Info Struct Reference}
+\label{struct_cartesian_info}\index{Cartesian\+Info@{Cartesian\+Info}}
+
+
+This data structure holds values in an cartesian control context.  
+
+
+
+
+{\ttfamily \#include \char`\"{}Definition\char`\"{}}
+
+
+
+Inheritance diagram for Cartesian\+Info\+:
+% FIG 0
+
+
+Collaboration diagram for Cartesian\+Info\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{struct_cartesian_info_a6d47623939d86124525ab4c8f7a2b8e9}{Init\+Struct} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float \hyperlink{struct_cartesian_info_a212cc2dcae1697132fc31fa2f5d17269}{X}
+\begin{DoxyCompactList}\small\item\em This is the value related to the translation along the X axis. Unit depends on the context it\textquotesingle{}s been used. \end{DoxyCompactList}\item 
+float \hyperlink{struct_cartesian_info_a12c2611c89445419b336e58815d87c7c}{Y}
+\begin{DoxyCompactList}\small\item\em This is the value related to the translation along the Y axis. Unit depends on the context it\textquotesingle{}s been used. \end{DoxyCompactList}\item 
+float \hyperlink{struct_cartesian_info_a14e196e4cb38c0ae7f4658b9b070b7fe}{Z}
+\begin{DoxyCompactList}\small\item\em This is the value related to the translation along the Z axis. Unit depends on the context it\textquotesingle{}s been used. \end{DoxyCompactList}\item 
+float \hyperlink{struct_cartesian_info_a39135e53155aa4025c40eeefbfd3b17c}{ThetaX}
+\begin{DoxyCompactList}\small\item\em This is the value related to the orientation around the X axis. Unit depends on the context it\textquotesingle{}s been used. \end{DoxyCompactList}\item 
+float \hyperlink{struct_cartesian_info_a4aef5897f4cdcf7ecc9df6804f844d46}{ThetaY}
+\begin{DoxyCompactList}\small\item\em This is the value related to the orientation around the Y axis. Unit depends on the context it\textquotesingle{}s been used. \end{DoxyCompactList}\item 
+float \hyperlink{struct_cartesian_info_a2890c501f3b7b9479e12ad51f04f0a7f}{ThetaZ}
+\begin{DoxyCompactList}\small\item\em This is the value related to the orientation around the Z axis. Unit depends on the context it\textquotesingle{}s been used. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This data structure holds values in an cartesian control context. 
+
+\subsection{Member Function Documentation}
+\index{Cartesian\+Info@{Cartesian\+Info}!Init\+Struct@{Init\+Struct}}
+\index{Init\+Struct@{Init\+Struct}!Cartesian\+Info@{Cartesian\+Info}}
+\subsubsection[{\texorpdfstring{Init\+Struct()}{InitStruct()}}]{\setlength{\rightskip}{0pt plus 5cm}void Cartesian\+Info\+::\+Init\+Struct (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{struct_cartesian_info_a6d47623939d86124525ab4c8f7a2b8e9}{}\label{struct_cartesian_info_a6d47623939d86124525ab4c8f7a2b8e9}
+This method will initialises all the values to 0 
+
+Here is the caller graph for this function\+:
+% FIG 2
+
+
+
+
+\subsection{Member Data Documentation}
+\index{Cartesian\+Info@{Cartesian\+Info}!ThetaX@{ThetaX}}
+\index{ThetaX@{ThetaX}!Cartesian\+Info@{Cartesian\+Info}}
+\subsubsection[{\texorpdfstring{ThetaX}{ThetaX}}]{\setlength{\rightskip}{0pt plus 5cm}float Cartesian\+Info\+::\+ThetaX}\hypertarget{struct_cartesian_info_a39135e53155aa4025c40eeefbfd3b17c}{}\label{struct_cartesian_info_a39135e53155aa4025c40eeefbfd3b17c}
+
+
+This is the value related to the orientation around the X axis. Unit depends on the context it\textquotesingle{}s been used. 
+
+This is the value related to the orientation around the X axis. Depending on the context it\textquotesingle{}s been used, the unit of the value will change. As an example if the current control mode is cartesian position the unit will be R\+AD but if the control mode is cartesian velocity then the unit will be R\+AD per second. \index{Cartesian\+Info@{Cartesian\+Info}!ThetaY@{ThetaY}}
+\index{ThetaY@{ThetaY}!Cartesian\+Info@{Cartesian\+Info}}
+\subsubsection[{\texorpdfstring{ThetaY}{ThetaY}}]{\setlength{\rightskip}{0pt plus 5cm}float Cartesian\+Info\+::\+ThetaY}\hypertarget{struct_cartesian_info_a4aef5897f4cdcf7ecc9df6804f844d46}{}\label{struct_cartesian_info_a4aef5897f4cdcf7ecc9df6804f844d46}
+
+
+This is the value related to the orientation around the Y axis. Unit depends on the context it\textquotesingle{}s been used. 
+
+As an example if the current control mode is cartesian position the unit will be R\+AD but if the control mode is cartesian velocity then the unit will be R\+AD per second. \index{Cartesian\+Info@{Cartesian\+Info}!ThetaZ@{ThetaZ}}
+\index{ThetaZ@{ThetaZ}!Cartesian\+Info@{Cartesian\+Info}}
+\subsubsection[{\texorpdfstring{ThetaZ}{ThetaZ}}]{\setlength{\rightskip}{0pt plus 5cm}float Cartesian\+Info\+::\+ThetaZ}\hypertarget{struct_cartesian_info_a2890c501f3b7b9479e12ad51f04f0a7f}{}\label{struct_cartesian_info_a2890c501f3b7b9479e12ad51f04f0a7f}
+
+
+This is the value related to the orientation around the Z axis. Unit depends on the context it\textquotesingle{}s been used. 
+
+As an example if the current control mode is cartesian position the unit will be R\+AD but if the control mode is cartesian velocity then the unit will be R\+AD per second. \index{Cartesian\+Info@{Cartesian\+Info}!X@{X}}
+\index{X@{X}!Cartesian\+Info@{Cartesian\+Info}}
+\subsubsection[{\texorpdfstring{X}{X}}]{\setlength{\rightskip}{0pt plus 5cm}float Cartesian\+Info\+::X}\hypertarget{struct_cartesian_info_a212cc2dcae1697132fc31fa2f5d17269}{}\label{struct_cartesian_info_a212cc2dcae1697132fc31fa2f5d17269}
+
+
+This is the value related to the translation along the X axis. Unit depends on the context it\textquotesingle{}s been used. 
+
+As an example if the current control mode is cartesian position the unit will be meters but if the control mode is cartesian velocity then the unit will be meters per second. \index{Cartesian\+Info@{Cartesian\+Info}!Y@{Y}}
+\index{Y@{Y}!Cartesian\+Info@{Cartesian\+Info}}
+\subsubsection[{\texorpdfstring{Y}{Y}}]{\setlength{\rightskip}{0pt plus 5cm}float Cartesian\+Info\+::Y}\hypertarget{struct_cartesian_info_a12c2611c89445419b336e58815d87c7c}{}\label{struct_cartesian_info_a12c2611c89445419b336e58815d87c7c}
+
+
+This is the value related to the translation along the Y axis. Unit depends on the context it\textquotesingle{}s been used. 
+
+As an example if the current control mode is cartesian position the unit will be meters but if the control mode is cartesian velocity then the unit will be meters per second. \index{Cartesian\+Info@{Cartesian\+Info}!Z@{Z}}
+\index{Z@{Z}!Cartesian\+Info@{Cartesian\+Info}}
+\subsubsection[{\texorpdfstring{Z}{Z}}]{\setlength{\rightskip}{0pt plus 5cm}float Cartesian\+Info\+::Z}\hypertarget{struct_cartesian_info_a14e196e4cb38c0ae7f4658b9b070b7fe}{}\label{struct_cartesian_info_a14e196e4cb38c0ae7f4658b9b070b7fe}
+
+
+This is the value related to the translation along the Z axis. Unit depends on the context it\textquotesingle{}s been used. 
+
+As an example if the current control mode is cartesian position the unit will be meters but if the control mode is cartesian velocity then the unit will be meters per second. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/soli/\+Downloads/\+New folder/kinova-\/ros-\/master/jaco\+\_\+driver/include/kinova/\hyperlink{_kinova_types_8h}{Kinova\+Types.\+h}\end{DoxyCompactItemize}

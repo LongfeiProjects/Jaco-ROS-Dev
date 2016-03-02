@@ -1,0 +1,9 @@
+<map id="jaco::JacoArm::homeArmServiceCallback" name="jaco::JacoArm::homeArmServiceCallback">
+<area shape="rect" id="node2" href="$classjaco_1_1_jaco_comm.html#a38c69b22bc293afd3f27eff9179dec4c" title="Send the arm to the &quot;home&quot; position. " alt="" coords="266,81,449,108"/>
+<area shape="rect" id="node8" href="$classjaco_1_1_jaco_comm.html#a787f049f83d8f5fa5a7c86ee6a1d0a11" title="Initialize finger actuators. " alt="" coords="264,132,451,159"/>
+<area shape="rect" id="node3" href="$classjaco_1_1_jaco_comm.html#a872b8033cda5a9fe4ccdca2e89aa03d1" title="jaco::JacoComm::isStopped" alt="" coords="499,5,684,32"/>
+<area shape="rect" id="node4" href="$classjaco_1_1_jaco_comm.html#a0e7d5984a2c6ed956da7e07e6c97ba5f" title="Determines whether the arm has returned to its &quot;Home&quot; state. " alt="" coords="502,56,681,83"/>
+<area shape="rect" id="node6" href="$classjaco_1_1_jaco_comm.html#a54862830cd6414ae3ae48e46e54bf798" title="jaco::JacoComm::stopAPI" alt="" coords="505,107,678,133"/>
+<area shape="rect" id="node7" href="$classjaco_1_1_jaco_comm.html#a6b2a1fabc4e6c30da42c9a5e26757398" title="jaco::JacoComm::startAPI" alt="" coords="504,157,679,184"/>
+<area shape="rect" id="node5" href="$classjaco_1_1_jaco_comm.html#a29384597e710d4cbb4e1f2ae6b7d7e50" title="API call to obtain the current &quot;quick status&quot;. " alt="" coords="732,49,911,90"/>
+</map>

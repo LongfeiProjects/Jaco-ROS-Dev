@@ -1,0 +1,9 @@
+<map id="jaco::JacoComm::setCartesianVelocities" name="jaco::JacoComm::setCartesianVelocities">
+<area shape="rect" id="node2" href="$classjaco_1_1_jaco_comm.html#a872b8033cda5a9fe4ccdca2e89aa03d1" title="jaco::JacoComm::isStopped" alt="" coords="253,31,439,57"/>
+<area shape="rect" id="node3" href="$struct_trajectory_point.html#a1a9f12ad88f5011c6a4644792fa67f99" title="TrajectoryPoint::InitStruct" alt="" coords="261,81,431,108"/>
+<area shape="rect" id="node4" href="$struct_user_position.html#ad682f9be07fa2307028f86624ded2958" title="UserPosition::InitStruct" alt="" coords="487,56,643,83"/>
+<area shape="rect" id="node8" href="$struct_limitation.html#a098f4ee5d0eb6baf844ff3164f1a20f6" title="Limitation::InitStruct" alt="" coords="495,107,634,133"/>
+<area shape="rect" id="node5" href="$struct_cartesian_info.html#a6d47623939d86124525ab4c8f7a2b8e9" title="CartesianInfo::InitStruct" alt="" coords="698,5,855,32"/>
+<area shape="rect" id="node6" href="$struct_angular_info.html#a092156b3e0e6cb657ed4bb2f6b15a9f0" title="AngularInfo::InitStruct" alt="" coords="703,56,850,83"/>
+<area shape="rect" id="node7" href="$struct_fingers_position.html#a2d958923675995d54d56e59f8549495d" title="FingersPosition::InitStruct" alt="" coords="691,107,863,133"/>
+</map>

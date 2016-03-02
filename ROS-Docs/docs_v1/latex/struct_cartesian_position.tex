@@ -1,0 +1,70 @@
+\hypertarget{struct_cartesian_position}{}\section{Cartesian\+Position Struct Reference}
+\label{struct_cartesian_position}\index{Cartesian\+Position@{Cartesian\+Position}}
+
+
+This data structure holds the values of a cartesian position.  
+
+
+
+
+{\ttfamily \#include \char`\"{}Definition\char`\"{}}
+
+
+
+Collaboration diagram for Cartesian\+Position\+:
+% FIG 0
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{struct_cartesian_position_a555e4355ff9b88f0088b3ffcfc56af96}{Init\+Struct} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{struct_cartesian_info}{Cartesian\+Info} \hyperlink{struct_cartesian_position_aa1e120e383c650f4c4bf88ba8c780ab1}{Coordinates}
+\begin{DoxyCompactList}\small\item\em This contains values regarding the cartesian information.(end effector). \end{DoxyCompactList}\item 
+\hyperlink{struct_fingers_position}{Fingers\+Position} \hyperlink{struct_cartesian_position_ad0d8710c54bb2f63dfc98d809eaeb3a4}{Fingers}
+\begin{DoxyCompactList}\small\item\em This contains value regarding the fingers. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This data structure holds the values of a cartesian position. 
+
+Coordinates holds the cartesian parts of the position and Fingers holds contains the value of the fingers. As an example, if an instance of the \hyperlink{struct_cartesian_position}{Cartesian\+Position} is used in a cartesian velocity control context, the values in the struct will be velocity. 
+
+\subsection{Member Function Documentation}
+\index{Cartesian\+Position@{Cartesian\+Position}!Init\+Struct@{Init\+Struct}}
+\index{Init\+Struct@{Init\+Struct}!Cartesian\+Position@{Cartesian\+Position}}
+\subsubsection[{\texorpdfstring{Init\+Struct()}{InitStruct()}}]{\setlength{\rightskip}{0pt plus 5cm}void Cartesian\+Position\+::\+Init\+Struct (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{struct_cartesian_position_a555e4355ff9b88f0088b3ffcfc56af96}{}\label{struct_cartesian_position_a555e4355ff9b88f0088b3ffcfc56af96}
+This method will initialises all the values to 0 
+
+Here is the call graph for this function\+:
+% FIG 1
+
+
+
+
+\subsection{Member Data Documentation}
+\index{Cartesian\+Position@{Cartesian\+Position}!Coordinates@{Coordinates}}
+\index{Coordinates@{Coordinates}!Cartesian\+Position@{Cartesian\+Position}}
+\subsubsection[{\texorpdfstring{Coordinates}{Coordinates}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Cartesian\+Info} Cartesian\+Position\+::\+Coordinates}\hypertarget{struct_cartesian_position_aa1e120e383c650f4c4bf88ba8c780ab1}{}\label{struct_cartesian_position_aa1e120e383c650f4c4bf88ba8c780ab1}
+
+
+This contains values regarding the cartesian information.(end effector). 
+
+\index{Cartesian\+Position@{Cartesian\+Position}!Fingers@{Fingers}}
+\index{Fingers@{Fingers}!Cartesian\+Position@{Cartesian\+Position}}
+\subsubsection[{\texorpdfstring{Fingers}{Fingers}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Fingers\+Position} Cartesian\+Position\+::\+Fingers}\hypertarget{struct_cartesian_position_ad0d8710c54bb2f63dfc98d809eaeb3a4}{}\label{struct_cartesian_position_ad0d8710c54bb2f63dfc98d809eaeb3a4}
+
+
+This contains value regarding the fingers. 
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/soli/\+Downloads/\+New folder/kinova-\/ros-\/master/jaco\+\_\+driver/include/kinova/\hyperlink{_kinova_types_8h}{Kinova\+Types.\+h}\end{DoxyCompactItemize}

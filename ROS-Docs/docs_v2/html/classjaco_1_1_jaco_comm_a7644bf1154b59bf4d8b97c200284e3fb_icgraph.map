@@ -1,0 +1,7 @@
+<map id="jaco::JacoComm::getFingerPositions" name="jaco::JacoComm::getFingerPositions">
+<area shape="rect" id="node2" href="$classjaco_1_1_jaco_arm.html#a238a888aa46e98fcae569bf942d61e32" title="Publishes the current joint angles. " alt="" coords="243,5,424,47"/>
+<area shape="rect" id="node5" href="$classjaco_1_1_jaco_arm.html#a978feb8b29f9ef7d6d42596984e1962a" title="Publishes the current finger positions. " alt="" coords="238,71,429,112"/>
+<area shape="rect" id="node6" href="$classjaco_1_1_jaco_fingers_action_server.html#a642f494b27d513457e9f29de7a4b31b6" title="jaco::JacoFingersActionServer\l::actionCallback" alt="" coords="235,136,432,177"/>
+<area shape="rect" id="node3" href="$classjaco_1_1_jaco_arm.html#a3a04586ffe92b995c58c9fa94a030bf8" title="jaco::JacoArm::statusTimer" alt="" coords="480,46,661,73"/>
+<area shape="rect" id="node4" href="$classjaco_1_1_jaco_arm.html#ab29d25cb3b4bafdc523cbe271c801681" title="jaco::JacoArm::JacoArm" alt="" coords="709,46,873,73"/>
+</map>

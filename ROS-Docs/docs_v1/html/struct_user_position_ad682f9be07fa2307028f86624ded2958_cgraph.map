@@ -1,0 +1,5 @@
+<map id="UserPosition::InitStruct" name="UserPosition::InitStruct">
+<area shape="rect" id="node2" href="$struct_cartesian_info.html#a6d47623939d86124525ab4c8f7a2b8e9" title="CartesianInfo::InitStruct" alt="" coords="217,5,374,32"/>
+<area shape="rect" id="node3" href="$struct_angular_info.html#a092156b3e0e6cb657ed4bb2f6b15a9f0" title="AngularInfo::InitStruct" alt="" coords="222,56,369,83"/>
+<area shape="rect" id="node4" href="$struct_fingers_position.html#a2d958923675995d54d56e59f8549495d" title="FingersPosition::InitStruct" alt="" coords="209,107,381,133"/>
+</map>

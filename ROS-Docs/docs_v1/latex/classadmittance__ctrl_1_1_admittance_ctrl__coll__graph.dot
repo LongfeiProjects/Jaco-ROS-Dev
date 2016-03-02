@@ -1,0 +1,6 @@
+digraph "admittance_ctrl.AdmittanceCtrl"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="{admittance_ctrl.AdmittanceCtrl\n|+ cur_wrench\l+ dz_x_min\l+ dz_x_max\l+ dz_y_min\l+ dz_y_max\l+ dz_z_min\l+ dz_z_max\l+ k_f\l+ vel_max\l+ sub_wrench\l+ pub_cmd_vel\l+ timer\l|+ __init__()\l+ wrench_cb()\l+ timer_cb()\l+ saturate_vel()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+}

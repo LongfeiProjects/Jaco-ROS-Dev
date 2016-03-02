@@ -1,0 +1,6 @@
+digraph "AngularAcceleration"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="{AngularAcceleration\n|+ Actuator1_X\l+ Actuator1_Y\l+ Actuator1_Z\l+ Actuator2_X\l+ Actuator2_Y\l+ Actuator2_Z\l+ Actuator3_X\l+ Actuator3_Y\l+ Actuator3_Z\l+ Actuator4_X\land 8 more...\l|+ InitStruct()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+}

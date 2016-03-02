@@ -1,0 +1,6 @@
+digraph "jaco::JacoArm"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="{jaco::JacoArm\n||+ JacoArm()\l+ ~JacoArm()\l+ jointVelocityCallback()\l+ cartesianVelocityCallback()\l+ stopServiceCallback()\l+ startServiceCallback()\l+ homeArmServiceCallback()\l+ setForceControlParamsCallback()\l+ startForceControlCallback()\l+ stopForceControlCallback()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+}

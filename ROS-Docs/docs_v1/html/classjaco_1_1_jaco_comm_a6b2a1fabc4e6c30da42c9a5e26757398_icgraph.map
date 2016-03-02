@@ -1,0 +1,10 @@
+<map id="jaco::JacoComm::startAPI" name="jaco::JacoComm::startAPI">
+<area shape="rect" id="node2" href="$classjaco_1_1_jaco_angles_action_server.html#a3a3da8fd412f2311534246d2287a5b90" title="jaco::JacoAnglesActionServer\l::actionCallback" alt="" coords="229,5,424,47"/>
+<area shape="rect" id="node3" href="$classjaco_1_1_jaco_arm.html#a0b59f245a5ca363c52dcbc211f20fa64" title="Handler for &quot;start&quot; service. " alt="" coords="488,73,669,115"/>
+<area shape="rect" id="node5" href="$classjaco_1_1_jaco_comm.html#acdf234ee7f30cf5ead4f41beb3481521" title="jaco::JacoComm::JacoComm" alt="" coords="231,122,423,149"/>
+<area shape="rect" id="node6" href="$classjaco_1_1_jaco_comm.html#a38c69b22bc293afd3f27eff9179dec4c" title="Send the arm to the &quot;home&quot; position. " alt="" coords="235,173,418,199"/>
+<area shape="rect" id="node8" href="$classjaco_1_1_jaco_fingers_action_server.html#a642f494b27d513457e9f29de7a4b31b6" title="jaco::JacoFingersActionServer\l::actionCallback" alt="" coords="228,224,425,265"/>
+<area shape="rect" id="node9" href="$classjaco_1_1_jaco_pose_action_server.html#a82396bb5f219f54518a80493bfd38f26" title="jaco::JacoPoseActionServer\l::actionCallback" alt="" coords="235,289,419,331"/>
+<area shape="rect" id="node4" href="$classjaco_1_1_jaco_arm.html#ab29d25cb3b4bafdc523cbe271c801681" title="jaco::JacoArm::JacoArm" alt="" coords="732,118,896,145"/>
+<area shape="rect" id="node7" href="$classjaco_1_1_jaco_arm.html#a0296802ee4994977c35532077dd28a44" title="jaco::JacoArm::homeArmService\lCallback" alt="" coords="473,148,684,189"/>
+</map>

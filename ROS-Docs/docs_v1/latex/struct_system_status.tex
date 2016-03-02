@@ -1,0 +1,128 @@
+\hypertarget{struct_system_status}{}\section{System\+Status Struct Reference}
+\label{struct_system_status}\index{System\+Status@{System\+Status}}
+
+
+This structure holds system status flags.  
+
+
+
+
+{\ttfamily \#include $<$Kinova\+Types.\+h$>$}
+
+
+
+Collaboration diagram for System\+Status\+:
+% FIG 0
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+unsigned int \hyperlink{struct_system_status_afff6d14c02523d89ba0fdc22c8a8825f}{Joystick\+Active}
+\begin{DoxyCompactList}\small\item\em That tells if the joystick is active. (0 = active -\/ 1 = not active) \end{DoxyCompactList}\item 
+unsigned int \hyperlink{struct_system_status_abae94c0687a083017956476f140ad34d}{Retract\+Status}
+\begin{DoxyCompactList}\small\item\em That tells if the joystick is active. (0 = active -\/ 1 = not active) \end{DoxyCompactList}\item 
+unsigned int \hyperlink{struct_system_status_a2b07e0f791db9e94312adc4f8df5f2a0}{Drinking\+Mode}
+\begin{DoxyCompactList}\small\item\em That tells if the drinking mode is active. (0 = active -\/ 1 = not active) \end{DoxyCompactList}\item 
+unsigned int \hyperlink{struct_system_status_a9c587e996336850e8b89b66194fa575d}{Arm\+Laterality}
+\begin{DoxyCompactList}\small\item\em That tells if the robotical arm is right handed or left handed. (0 = R\+I\+G\+H\+T\+H\+A\+N\+D\+ED -\/ 1 = L\+E\+F\+T\+H\+A\+N\+D\+ED) \end{DoxyCompactList}\item 
+unsigned int \hyperlink{struct_system_status_a426a7b594f1aa2672e01c37c93515b1c}{Translation\+Active}
+\begin{DoxyCompactList}\small\item\em A flag that indicates if the translation mode is currently active.(Based on the actual mapping). \end{DoxyCompactList}\item 
+unsigned int \hyperlink{struct_system_status_a4f743187089a28cd66438e804c3dc8cb}{Rotation\+Active}
+\begin{DoxyCompactList}\small\item\em A flag that indicates if the orientation mode is currently active.(Based on the actual mapping). \end{DoxyCompactList}\item 
+unsigned int \hyperlink{struct_system_status_ac7a9d66164763c99d7164419724cc71b}{Fingers\+Active}
+\begin{DoxyCompactList}\small\item\em A flag that indicates if the translation mode is currently active.(Based on the actual mapping). \end{DoxyCompactList}\item 
+unsigned int \hyperlink{struct_system_status_a87405334f1d98467521181af5b58485c}{Warning\+Overcharge\+Force}
+\begin{DoxyCompactList}\small\item\em A warning flag that indicates a general overcharge on the robotical arm. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{struct_system_status_a055bea9394191a3e0fcaf740b78d651c}{Warning\+Overcharge\+Fingers}
+\begin{DoxyCompactList}\small\item\em A warning flag that indicates an overcharge on the fingers of the robotical arm. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{struct_system_status_a690324ff7d7b755fdaf01efda3adf044}{Warning\+Low\+Voltage}
+\begin{DoxyCompactList}\small\item\em A warning flag that indicates a low voltage on the robotical arm. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{struct_system_status_a6c7ed26ae5b10f514f9f10adb5cb2839}{Major\+Error\+Occured}
+\begin{DoxyCompactList}\small\item\em A flag that indicates that a major error has occured. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This structure holds system status flags. 
+
+\subsection{Member Data Documentation}
+\index{System\+Status@{System\+Status}!Arm\+Laterality@{Arm\+Laterality}}
+\index{Arm\+Laterality@{Arm\+Laterality}!System\+Status@{System\+Status}}
+\subsubsection[{\texorpdfstring{Arm\+Laterality}{ArmLaterality}}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int System\+Status\+::\+Arm\+Laterality}\hypertarget{struct_system_status_a9c587e996336850e8b89b66194fa575d}{}\label{struct_system_status_a9c587e996336850e8b89b66194fa575d}
+
+
+That tells if the robotical arm is right handed or left handed. (0 = R\+I\+G\+H\+T\+H\+A\+N\+D\+ED -\/ 1 = L\+E\+F\+T\+H\+A\+N\+D\+ED) 
+
+\index{System\+Status@{System\+Status}!Drinking\+Mode@{Drinking\+Mode}}
+\index{Drinking\+Mode@{Drinking\+Mode}!System\+Status@{System\+Status}}
+\subsubsection[{\texorpdfstring{Drinking\+Mode}{DrinkingMode}}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int System\+Status\+::\+Drinking\+Mode}\hypertarget{struct_system_status_a2b07e0f791db9e94312adc4f8df5f2a0}{}\label{struct_system_status_a2b07e0f791db9e94312adc4f8df5f2a0}
+
+
+That tells if the drinking mode is active. (0 = active -\/ 1 = not active) 
+
+\index{System\+Status@{System\+Status}!Fingers\+Active@{Fingers\+Active}}
+\index{Fingers\+Active@{Fingers\+Active}!System\+Status@{System\+Status}}
+\subsubsection[{\texorpdfstring{Fingers\+Active}{FingersActive}}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int System\+Status\+::\+Fingers\+Active}\hypertarget{struct_system_status_ac7a9d66164763c99d7164419724cc71b}{}\label{struct_system_status_ac7a9d66164763c99d7164419724cc71b}
+
+
+A flag that indicates if the translation mode is currently active.(Based on the actual mapping). 
+
+\index{System\+Status@{System\+Status}!Joystick\+Active@{Joystick\+Active}}
+\index{Joystick\+Active@{Joystick\+Active}!System\+Status@{System\+Status}}
+\subsubsection[{\texorpdfstring{Joystick\+Active}{JoystickActive}}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int System\+Status\+::\+Joystick\+Active}\hypertarget{struct_system_status_afff6d14c02523d89ba0fdc22c8a8825f}{}\label{struct_system_status_afff6d14c02523d89ba0fdc22c8a8825f}
+
+
+That tells if the joystick is active. (0 = active -\/ 1 = not active) 
+
+\index{System\+Status@{System\+Status}!Major\+Error\+Occured@{Major\+Error\+Occured}}
+\index{Major\+Error\+Occured@{Major\+Error\+Occured}!System\+Status@{System\+Status}}
+\subsubsection[{\texorpdfstring{Major\+Error\+Occured}{MajorErrorOccured}}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int System\+Status\+::\+Major\+Error\+Occured}\hypertarget{struct_system_status_a6c7ed26ae5b10f514f9f10adb5cb2839}{}\label{struct_system_status_a6c7ed26ae5b10f514f9f10adb5cb2839}
+
+
+A flag that indicates that a major error has occured. 
+
+\index{System\+Status@{System\+Status}!Retract\+Status@{Retract\+Status}}
+\index{Retract\+Status@{Retract\+Status}!System\+Status@{System\+Status}}
+\subsubsection[{\texorpdfstring{Retract\+Status}{RetractStatus}}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int System\+Status\+::\+Retract\+Status}\hypertarget{struct_system_status_abae94c0687a083017956476f140ad34d}{}\label{struct_system_status_abae94c0687a083017956476f140ad34d}
+
+
+That tells if the joystick is active. (0 = active -\/ 1 = not active) 
+
+\index{System\+Status@{System\+Status}!Rotation\+Active@{Rotation\+Active}}
+\index{Rotation\+Active@{Rotation\+Active}!System\+Status@{System\+Status}}
+\subsubsection[{\texorpdfstring{Rotation\+Active}{RotationActive}}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int System\+Status\+::\+Rotation\+Active}\hypertarget{struct_system_status_a4f743187089a28cd66438e804c3dc8cb}{}\label{struct_system_status_a4f743187089a28cd66438e804c3dc8cb}
+
+
+A flag that indicates if the orientation mode is currently active.(Based on the actual mapping). 
+
+\index{System\+Status@{System\+Status}!Translation\+Active@{Translation\+Active}}
+\index{Translation\+Active@{Translation\+Active}!System\+Status@{System\+Status}}
+\subsubsection[{\texorpdfstring{Translation\+Active}{TranslationActive}}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int System\+Status\+::\+Translation\+Active}\hypertarget{struct_system_status_a426a7b594f1aa2672e01c37c93515b1c}{}\label{struct_system_status_a426a7b594f1aa2672e01c37c93515b1c}
+
+
+A flag that indicates if the translation mode is currently active.(Based on the actual mapping). 
+
+\index{System\+Status@{System\+Status}!Warning\+Low\+Voltage@{Warning\+Low\+Voltage}}
+\index{Warning\+Low\+Voltage@{Warning\+Low\+Voltage}!System\+Status@{System\+Status}}
+\subsubsection[{\texorpdfstring{Warning\+Low\+Voltage}{WarningLowVoltage}}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int System\+Status\+::\+Warning\+Low\+Voltage}\hypertarget{struct_system_status_a690324ff7d7b755fdaf01efda3adf044}{}\label{struct_system_status_a690324ff7d7b755fdaf01efda3adf044}
+
+
+A warning flag that indicates a low voltage on the robotical arm. 
+
+\index{System\+Status@{System\+Status}!Warning\+Overcharge\+Fingers@{Warning\+Overcharge\+Fingers}}
+\index{Warning\+Overcharge\+Fingers@{Warning\+Overcharge\+Fingers}!System\+Status@{System\+Status}}
+\subsubsection[{\texorpdfstring{Warning\+Overcharge\+Fingers}{WarningOverchargeFingers}}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int System\+Status\+::\+Warning\+Overcharge\+Fingers}\hypertarget{struct_system_status_a055bea9394191a3e0fcaf740b78d651c}{}\label{struct_system_status_a055bea9394191a3e0fcaf740b78d651c}
+
+
+A warning flag that indicates an overcharge on the fingers of the robotical arm. 
+
+\index{System\+Status@{System\+Status}!Warning\+Overcharge\+Force@{Warning\+Overcharge\+Force}}
+\index{Warning\+Overcharge\+Force@{Warning\+Overcharge\+Force}!System\+Status@{System\+Status}}
+\subsubsection[{\texorpdfstring{Warning\+Overcharge\+Force}{WarningOverchargeForce}}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int System\+Status\+::\+Warning\+Overcharge\+Force}\hypertarget{struct_system_status_a87405334f1d98467521181af5b58485c}{}\label{struct_system_status_a87405334f1d98467521181af5b58485c}
+
+
+A warning flag that indicates a general overcharge on the robotical arm. 
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/soli/\+Downloads/\+New folder/kinova-\/ros-\/master/jaco\+\_\+driver/include/kinova/\hyperlink{_kinova_types_8h}{Kinova\+Types.\+h}\end{DoxyCompactItemize}

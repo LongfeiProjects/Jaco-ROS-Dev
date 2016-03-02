@@ -1,0 +1,232 @@
+\hypertarget{classjaco_1_1_jaco_arm}{}\section{jaco\+:\+:Jaco\+Arm Class Reference}
+\label{classjaco_1_1_jaco_arm}\index{jaco\+::\+Jaco\+Arm@{jaco\+::\+Jaco\+Arm}}
+
+
+{\ttfamily \#include $<$jaco\+\_\+arm.\+h$>$}
+
+
+
+Collaboration diagram for jaco\+:\+:Jaco\+Arm\+:
+% FIG 0
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classjaco_1_1_jaco_arm_ab29d25cb3b4bafdc523cbe271c801681}{Jaco\+Arm} (\hyperlink{classjaco_1_1_jaco_comm}{Jaco\+Comm} \&arm, const ros\+::\+Node\+Handle \&node\+\_\+handle)
+\item 
+\hyperlink{classjaco_1_1_jaco_arm_a77535c062ca1d8e11b11e691bb1ee0da}{$\sim$\+Jaco\+Arm} ()
+\item 
+void \hyperlink{classjaco_1_1_jaco_arm_a2c2cfc44e480845bbf7e78c6bfe454b6}{joint\+Velocity\+Callback} (const jaco\+\_\+msgs\+::\+Joint\+Velocity\+Const\+Ptr \&joint\+\_\+vel)
+\item 
+void \hyperlink{classjaco_1_1_jaco_arm_a091f2eaffef84362f69e3b49482982db}{cartesian\+Velocity\+Callback} (const geometry\+\_\+msgs\+::\+Twist\+Stamped\+Const\+Ptr \&cartesian\+\_\+vel)
+\item 
+bool \hyperlink{classjaco_1_1_jaco_arm_a14ddcea579804fbbd3fb11643bc91e78}{stop\+Service\+Callback} (jaco\+\_\+msgs\+::\+Stop\+::\+Request \&req, jaco\+\_\+msgs\+::\+Stop\+::\+Response \&res)
+\begin{DoxyCompactList}\small\item\em Handler for \char`\"{}stop\char`\"{} service. \end{DoxyCompactList}\item 
+bool \hyperlink{classjaco_1_1_jaco_arm_a0b59f245a5ca363c52dcbc211f20fa64}{start\+Service\+Callback} (jaco\+\_\+msgs\+::\+Start\+::\+Request \&req, jaco\+\_\+msgs\+::\+Start\+::\+Response \&res)
+\begin{DoxyCompactList}\small\item\em Handler for \char`\"{}start\char`\"{} service. \end{DoxyCompactList}\item 
+bool \hyperlink{classjaco_1_1_jaco_arm_a0296802ee4994977c35532077dd28a44}{home\+Arm\+Service\+Callback} (jaco\+\_\+msgs\+::\+Home\+Arm\+::\+Request \&req, jaco\+\_\+msgs\+::\+Home\+Arm\+::\+Response \&res)
+\item 
+bool \hyperlink{classjaco_1_1_jaco_arm_a7a5b8120d770ed6ab0bd4593213de712}{set\+Force\+Control\+Params\+Callback} (jaco\+\_\+msgs\+::\+Set\+Force\+Control\+Params\+::\+Request \&req, jaco\+\_\+msgs\+::\+Set\+Force\+Control\+Params\+::\+Response \&res)
+\item 
+bool \hyperlink{classjaco_1_1_jaco_arm_a6c96a5dcf017d0b054048e7765cd3f38}{start\+Force\+Control\+Callback} (jaco\+\_\+msgs\+::\+Start\+::\+Request \&req, jaco\+\_\+msgs\+::\+Start\+::\+Response \&res)
+\item 
+bool \hyperlink{classjaco_1_1_jaco_arm_a0ddc9f2458a2c5e17e095b03b72699dc}{stop\+Force\+Control\+Callback} (jaco\+\_\+msgs\+::\+Stop\+::\+Request \&req, jaco\+\_\+msgs\+::\+Stop\+::\+Response \&res)
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{jaco\+::\+Jaco\+Arm@{jaco\+::\+Jaco\+Arm}!Jaco\+Arm@{Jaco\+Arm}}
+\index{Jaco\+Arm@{Jaco\+Arm}!jaco\+::\+Jaco\+Arm@{jaco\+::\+Jaco\+Arm}}
+\subsubsection[{\texorpdfstring{Jaco\+Arm(\+Jaco\+Comm \&arm, const ros\+::\+Node\+Handle \&node\+\_\+handle)}{JacoArm(JacoComm &arm, const ros::NodeHandle &node_handle)}}]{\setlength{\rightskip}{0pt plus 5cm}jaco\+::\+Jaco\+Arm\+::\+Jaco\+Arm (
+\begin{DoxyParamCaption}
+\item[{{\bf Jaco\+Comm} \&}]{arm, }
+\item[{const ros\+::\+Node\+Handle \&}]{node\+\_\+handle}
+\end{DoxyParamCaption}
+)}\hypertarget{classjaco_1_1_jaco_arm_ab29d25cb3b4bafdc523cbe271c801681}{}\label{classjaco_1_1_jaco_arm_ab29d25cb3b4bafdc523cbe271c801681}
+
+
+Here is the call graph for this function\+:
+% FIG 1
+
+
+\index{jaco\+::\+Jaco\+Arm@{jaco\+::\+Jaco\+Arm}!````~Jaco\+Arm@{$\sim$\+Jaco\+Arm}}
+\index{````~Jaco\+Arm@{$\sim$\+Jaco\+Arm}!jaco\+::\+Jaco\+Arm@{jaco\+::\+Jaco\+Arm}}
+\subsubsection[{\texorpdfstring{$\sim$\+Jaco\+Arm()}{~JacoArm()}}]{\setlength{\rightskip}{0pt plus 5cm}jaco\+::\+Jaco\+Arm\+::$\sim$\+Jaco\+Arm (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classjaco_1_1_jaco_arm_a77535c062ca1d8e11b11e691bb1ee0da}{}\label{classjaco_1_1_jaco_arm_a77535c062ca1d8e11b11e691bb1ee0da}
+
+
+\subsection{Member Function Documentation}
+\index{jaco\+::\+Jaco\+Arm@{jaco\+::\+Jaco\+Arm}!cartesian\+Velocity\+Callback@{cartesian\+Velocity\+Callback}}
+\index{cartesian\+Velocity\+Callback@{cartesian\+Velocity\+Callback}!jaco\+::\+Jaco\+Arm@{jaco\+::\+Jaco\+Arm}}
+\subsubsection[{\texorpdfstring{cartesian\+Velocity\+Callback(const geometry\+\_\+msgs\+::\+Twist\+Stamped\+Const\+Ptr \&cartesian\+\_\+vel)}{cartesianVelocityCallback(const geometry_msgs::TwistStampedConstPtr &cartesian_vel)}}]{\setlength{\rightskip}{0pt plus 5cm}void jaco\+::\+Jaco\+Arm\+::cartesian\+Velocity\+Callback (
+\begin{DoxyParamCaption}
+\item[{const geometry\+\_\+msgs\+::\+Twist\+Stamped\+Const\+Ptr \&}]{cartesian\+\_\+vel}
+\end{DoxyParamCaption}
+)}\hypertarget{classjaco_1_1_jaco_arm_a091f2eaffef84362f69e3b49482982db}{}\label{classjaco_1_1_jaco_arm_a091f2eaffef84362f69e3b49482982db}
+
+
+Here is the call graph for this function\+:
+% FIG 2
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 3
+
+
+\index{jaco\+::\+Jaco\+Arm@{jaco\+::\+Jaco\+Arm}!home\+Arm\+Service\+Callback@{home\+Arm\+Service\+Callback}}
+\index{home\+Arm\+Service\+Callback@{home\+Arm\+Service\+Callback}!jaco\+::\+Jaco\+Arm@{jaco\+::\+Jaco\+Arm}}
+\subsubsection[{\texorpdfstring{home\+Arm\+Service\+Callback(jaco\+\_\+msgs\+::\+Home\+Arm\+::\+Request \&req, jaco\+\_\+msgs\+::\+Home\+Arm\+::\+Response \&res)}{homeArmServiceCallback(jaco_msgs::HomeArm::Request &req, jaco_msgs::HomeArm::Response &res)}}]{\setlength{\rightskip}{0pt plus 5cm}bool jaco\+::\+Jaco\+Arm\+::home\+Arm\+Service\+Callback (
+\begin{DoxyParamCaption}
+\item[{jaco\+\_\+msgs\+::\+Home\+Arm\+::\+Request \&}]{req, }
+\item[{jaco\+\_\+msgs\+::\+Home\+Arm\+::\+Response \&}]{res}
+\end{DoxyParamCaption}
+)}\hypertarget{classjaco_1_1_jaco_arm_a0296802ee4994977c35532077dd28a44}{}\label{classjaco_1_1_jaco_arm_a0296802ee4994977c35532077dd28a44}
+
+
+Here is the call graph for this function\+:
+% FIG 4
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 5
+
+
+\index{jaco\+::\+Jaco\+Arm@{jaco\+::\+Jaco\+Arm}!joint\+Velocity\+Callback@{joint\+Velocity\+Callback}}
+\index{joint\+Velocity\+Callback@{joint\+Velocity\+Callback}!jaco\+::\+Jaco\+Arm@{jaco\+::\+Jaco\+Arm}}
+\subsubsection[{\texorpdfstring{joint\+Velocity\+Callback(const jaco\+\_\+msgs\+::\+Joint\+Velocity\+Const\+Ptr \&joint\+\_\+vel)}{jointVelocityCallback(const jaco_msgs::JointVelocityConstPtr &joint_vel)}}]{\setlength{\rightskip}{0pt plus 5cm}void jaco\+::\+Jaco\+Arm\+::joint\+Velocity\+Callback (
+\begin{DoxyParamCaption}
+\item[{const jaco\+\_\+msgs\+::\+Joint\+Velocity\+Const\+Ptr \&}]{joint\+\_\+vel}
+\end{DoxyParamCaption}
+)}\hypertarget{classjaco_1_1_jaco_arm_a2c2cfc44e480845bbf7e78c6bfe454b6}{}\label{classjaco_1_1_jaco_arm_a2c2cfc44e480845bbf7e78c6bfe454b6}
+
+
+Here is the call graph for this function\+:
+% FIG 6
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 7
+
+
+\index{jaco\+::\+Jaco\+Arm@{jaco\+::\+Jaco\+Arm}!set\+Force\+Control\+Params\+Callback@{set\+Force\+Control\+Params\+Callback}}
+\index{set\+Force\+Control\+Params\+Callback@{set\+Force\+Control\+Params\+Callback}!jaco\+::\+Jaco\+Arm@{jaco\+::\+Jaco\+Arm}}
+\subsubsection[{\texorpdfstring{set\+Force\+Control\+Params\+Callback(jaco\+\_\+msgs\+::\+Set\+Force\+Control\+Params\+::\+Request \&req, jaco\+\_\+msgs\+::\+Set\+Force\+Control\+Params\+::\+Response \&res)}{setForceControlParamsCallback(jaco_msgs::SetForceControlParams::Request &req, jaco_msgs::SetForceControlParams::Response &res)}}]{\setlength{\rightskip}{0pt plus 5cm}bool jaco\+::\+Jaco\+Arm\+::set\+Force\+Control\+Params\+Callback (
+\begin{DoxyParamCaption}
+\item[{jaco\+\_\+msgs\+::\+Set\+Force\+Control\+Params\+::\+Request \&}]{req, }
+\item[{jaco\+\_\+msgs\+::\+Set\+Force\+Control\+Params\+::\+Response \&}]{res}
+\end{DoxyParamCaption}
+)}\hypertarget{classjaco_1_1_jaco_arm_a7a5b8120d770ed6ab0bd4593213de712}{}\label{classjaco_1_1_jaco_arm_a7a5b8120d770ed6ab0bd4593213de712}
+
+
+Here is the call graph for this function\+:
+% FIG 8
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 9
+
+
+\index{jaco\+::\+Jaco\+Arm@{jaco\+::\+Jaco\+Arm}!start\+Force\+Control\+Callback@{start\+Force\+Control\+Callback}}
+\index{start\+Force\+Control\+Callback@{start\+Force\+Control\+Callback}!jaco\+::\+Jaco\+Arm@{jaco\+::\+Jaco\+Arm}}
+\subsubsection[{\texorpdfstring{start\+Force\+Control\+Callback(jaco\+\_\+msgs\+::\+Start\+::\+Request \&req, jaco\+\_\+msgs\+::\+Start\+::\+Response \&res)}{startForceControlCallback(jaco_msgs::Start::Request &req, jaco_msgs::Start::Response &res)}}]{\setlength{\rightskip}{0pt plus 5cm}bool jaco\+::\+Jaco\+Arm\+::start\+Force\+Control\+Callback (
+\begin{DoxyParamCaption}
+\item[{jaco\+\_\+msgs\+::\+Start\+::\+Request \&}]{req, }
+\item[{jaco\+\_\+msgs\+::\+Start\+::\+Response \&}]{res}
+\end{DoxyParamCaption}
+)}\hypertarget{classjaco_1_1_jaco_arm_a6c96a5dcf017d0b054048e7765cd3f38}{}\label{classjaco_1_1_jaco_arm_a6c96a5dcf017d0b054048e7765cd3f38}
+
+
+Here is the call graph for this function\+:
+% FIG 10
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 11
+
+
+\index{jaco\+::\+Jaco\+Arm@{jaco\+::\+Jaco\+Arm}!start\+Service\+Callback@{start\+Service\+Callback}}
+\index{start\+Service\+Callback@{start\+Service\+Callback}!jaco\+::\+Jaco\+Arm@{jaco\+::\+Jaco\+Arm}}
+\subsubsection[{\texorpdfstring{start\+Service\+Callback(jaco\+\_\+msgs\+::\+Start\+::\+Request \&req, jaco\+\_\+msgs\+::\+Start\+::\+Response \&res)}{startServiceCallback(jaco_msgs::Start::Request &req, jaco_msgs::Start::Response &res)}}]{\setlength{\rightskip}{0pt plus 5cm}bool jaco\+::\+Jaco\+Arm\+::start\+Service\+Callback (
+\begin{DoxyParamCaption}
+\item[{jaco\+\_\+msgs\+::\+Start\+::\+Request \&}]{req, }
+\item[{jaco\+\_\+msgs\+::\+Start\+::\+Response \&}]{res}
+\end{DoxyParamCaption}
+)}\hypertarget{classjaco_1_1_jaco_arm_a0b59f245a5ca363c52dcbc211f20fa64}{}\label{classjaco_1_1_jaco_arm_a0b59f245a5ca363c52dcbc211f20fa64}
+
+
+Handler for \char`\"{}start\char`\"{} service. 
+
+Re-\/enables control of the arm after a stop. 
+
+Here is the call graph for this function\+:
+% FIG 12
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 13
+
+
+\index{jaco\+::\+Jaco\+Arm@{jaco\+::\+Jaco\+Arm}!stop\+Force\+Control\+Callback@{stop\+Force\+Control\+Callback}}
+\index{stop\+Force\+Control\+Callback@{stop\+Force\+Control\+Callback}!jaco\+::\+Jaco\+Arm@{jaco\+::\+Jaco\+Arm}}
+\subsubsection[{\texorpdfstring{stop\+Force\+Control\+Callback(jaco\+\_\+msgs\+::\+Stop\+::\+Request \&req, jaco\+\_\+msgs\+::\+Stop\+::\+Response \&res)}{stopForceControlCallback(jaco_msgs::Stop::Request &req, jaco_msgs::Stop::Response &res)}}]{\setlength{\rightskip}{0pt plus 5cm}bool jaco\+::\+Jaco\+Arm\+::stop\+Force\+Control\+Callback (
+\begin{DoxyParamCaption}
+\item[{jaco\+\_\+msgs\+::\+Stop\+::\+Request \&}]{req, }
+\item[{jaco\+\_\+msgs\+::\+Stop\+::\+Response \&}]{res}
+\end{DoxyParamCaption}
+)}\hypertarget{classjaco_1_1_jaco_arm_a0ddc9f2458a2c5e17e095b03b72699dc}{}\label{classjaco_1_1_jaco_arm_a0ddc9f2458a2c5e17e095b03b72699dc}
+
+
+Here is the call graph for this function\+:
+% FIG 14
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 15
+
+
+\index{jaco\+::\+Jaco\+Arm@{jaco\+::\+Jaco\+Arm}!stop\+Service\+Callback@{stop\+Service\+Callback}}
+\index{stop\+Service\+Callback@{stop\+Service\+Callback}!jaco\+::\+Jaco\+Arm@{jaco\+::\+Jaco\+Arm}}
+\subsubsection[{\texorpdfstring{stop\+Service\+Callback(jaco\+\_\+msgs\+::\+Stop\+::\+Request \&req, jaco\+\_\+msgs\+::\+Stop\+::\+Response \&res)}{stopServiceCallback(jaco_msgs::Stop::Request &req, jaco_msgs::Stop::Response &res)}}]{\setlength{\rightskip}{0pt plus 5cm}bool jaco\+::\+Jaco\+Arm\+::stop\+Service\+Callback (
+\begin{DoxyParamCaption}
+\item[{jaco\+\_\+msgs\+::\+Stop\+::\+Request \&}]{req, }
+\item[{jaco\+\_\+msgs\+::\+Stop\+::\+Response \&}]{res}
+\end{DoxyParamCaption}
+)}\hypertarget{classjaco_1_1_jaco_arm_a14ddcea579804fbbd3fb11643bc91e78}{}\label{classjaco_1_1_jaco_arm_a14ddcea579804fbbd3fb11643bc91e78}
+
+
+Handler for \char`\"{}stop\char`\"{} service. 
+
+Instantly stops the arm and prevents further movement until start service is invoked. 
+
+Here is the call graph for this function\+:
+% FIG 16
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 17
+
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/soli/\+Downloads/\+New folder/kinova-\/ros-\/master/jaco\+\_\+driver/include/jaco\+\_\+driver/\hyperlink{jaco__arm_8h}{jaco\+\_\+arm.\+h}\item 
+C\+:/\+Users/soli/\+Downloads/\+New folder/kinova-\/ros-\/master/jaco\+\_\+driver/src/\hyperlink{jaco__arm_8cpp}{jaco\+\_\+arm.\+cpp}\end{DoxyCompactItemize}

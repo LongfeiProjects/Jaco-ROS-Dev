@@ -1,0 +1,158 @@
+\hypertarget{_kinova_8_a_p_i_8_comm_layer_ubuntu_8h}{}\section{C\+:/\+Users/soli/\+Downloads/\+New folder/kinova-\/ros-\/master/jaco\+\_\+driver/include/kinova/\+Kinova.A\+P\+I.\+Comm\+Layer\+Ubuntu.\+h File Reference}
+\label{_kinova_8_a_p_i_8_comm_layer_ubuntu_8h}\index{C\+:/\+Users/soli/\+Downloads/\+New folder/kinova-\/ros-\/master/jaco\+\_\+driver/include/kinova/\+Kinova.\+A\+P\+I.\+Comm\+Layer\+Ubuntu.\+h@{C\+:/\+Users/soli/\+Downloads/\+New folder/kinova-\/ros-\/master/jaco\+\_\+driver/include/kinova/\+Kinova.\+A\+P\+I.\+Comm\+Layer\+Ubuntu.\+h}}
+{\ttfamily \#include $<$vector$>$}\\*
+Include dependency graph for Kinova.\+A\+P\+I.\+Comm\+Layer\+Ubuntu.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_packet}{Packet}
+\item 
+struct \hyperlink{struct_packet_list}{Packet\+List}
+\item 
+struct \hyperlink{struct_kinova_device}{Kinova\+Device}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{_kinova_8_a_p_i_8_comm_layer_ubuntu_8h_ad200cf58a0e33b783c540d745ca27add}{K\+I\+N\+O\+V\+A\+D\+L\+L\+C\+O\+M\+M\+L\+A\+Y\+E\+R\+\_\+\+A\+PI}~\+\_\+\+\_\+declspec(dllimport)
+\item 
+\#define \hyperlink{_kinova_8_a_p_i_8_comm_layer_ubuntu_8h_a510f2320a2a31d2d225adc0da7bef595}{N\+O\+\_\+\+E\+R\+R\+O\+R\+\_\+\+K\+I\+N\+O\+VA}~1
+\item 
+\#define \hyperlink{_kinova_8_a_p_i_8_comm_layer_ubuntu_8h_af3dbe9ae36e3aa0ba20d139a987cb354}{E\+R\+R\+O\+R\+\_\+\+L\+O\+A\+D\+\_\+\+U\+S\+B\+\_\+\+L\+I\+B\+R\+A\+RY}~1001
+\item 
+\#define \hyperlink{_kinova_8_a_p_i_8_comm_layer_ubuntu_8h_ae16383b6f1c8166cf8ae3c4ea51f1f0b}{E\+R\+R\+O\+R\+\_\+\+O\+P\+E\+N\+\_\+\+M\+E\+T\+H\+OD}~1002
+\item 
+\#define \hyperlink{_kinova_8_a_p_i_8_comm_layer_ubuntu_8h_ada338ad6d3a9bc98d7ab9a91e13af88c}{E\+R\+R\+O\+R\+\_\+\+W\+R\+I\+T\+E\+\_\+\+M\+E\+T\+H\+OD}~1003
+\item 
+\#define \hyperlink{_kinova_8_a_p_i_8_comm_layer_ubuntu_8h_aef66c12ea6482b4c496c08a288cc7faa}{E\+R\+R\+O\+R\+\_\+\+R\+E\+A\+D\+\_\+\+M\+E\+T\+H\+OD}~1004
+\item 
+\#define \hyperlink{_kinova_8_a_p_i_8_comm_layer_ubuntu_8h_a0cc1d32fe6982ee696be9d1a001340fe}{E\+R\+R\+O\+R\+\_\+\+R\+E\+A\+D\+\_\+\+I\+N\+T\+\_\+\+M\+E\+T\+H\+OD}~1005
+\item 
+\#define \hyperlink{_kinova_8_a_p_i_8_comm_layer_ubuntu_8h_a135c6a9b1729ec2cc26109fa1011dd60}{E\+R\+R\+O\+R\+\_\+\+F\+R\+E\+E\+\_\+\+L\+I\+B\+R\+A\+RY}~1006
+\item 
+\#define \hyperlink{_kinova_8_a_p_i_8_comm_layer_ubuntu_8h_afd94861330305625c61219ed28b02a36}{E\+R\+R\+O\+R\+\_\+\+J\+A\+C\+O\+\_\+\+C\+O\+N\+N\+E\+C\+T\+I\+ON}~1007
+\item 
+\#define \hyperlink{_kinova_8_a_p_i_8_comm_layer_ubuntu_8h_a8bef7198cac5a66787097490eb9289a6}{E\+R\+R\+O\+R\+\_\+\+C\+L\+A\+I\+M\+\_\+\+I\+N\+T\+E\+R\+F\+A\+CE}~1008
+\item 
+\#define \hyperlink{_kinova_8_a_p_i_8_comm_layer_ubuntu_8h_ad8ff335f164c59e9ea2f9f500fb81c50}{E\+R\+R\+O\+R\+\_\+\+U\+N\+K\+N\+O\+W\+N\+\_\+\+D\+E\+V\+I\+CE}~1009
+\item 
+\#define \hyperlink{_kinova_8_a_p_i_8_comm_layer_ubuntu_8h_a605e0ff46555922872461535eca0d0b9}{E\+R\+R\+O\+R\+\_\+\+N\+O\+T\+\_\+\+I\+N\+I\+T\+I\+A\+L\+I\+Z\+ED}~1010
+\item 
+\#define \hyperlink{_kinova_8_a_p_i_8_comm_layer_ubuntu_8h_ad42ee2931c53f250d85555f35bb8ee81}{E\+R\+R\+O\+R\+\_\+\+L\+I\+B\+U\+S\+B\+\_\+\+N\+O\+\_\+\+D\+E\+V\+I\+CE}~1011
+\item 
+\#define \hyperlink{_kinova_8_a_p_i_8_comm_layer_ubuntu_8h_ac990045d67e6561d7cddb33a9484e48c}{E\+R\+R\+O\+R\+\_\+\+L\+I\+B\+U\+S\+B\+\_\+\+B\+U\+SY}~1012
+\item 
+\#define \hyperlink{_kinova_8_a_p_i_8_comm_layer_ubuntu_8h_af88b346701ceadbdd6fc3d8ca1f4befe}{E\+R\+R\+O\+R\+\_\+\+L\+I\+B\+U\+S\+B\+\_\+\+N\+O\+T\+\_\+\+S\+U\+P\+P\+O\+R\+T\+ED}~1013
+\item 
+\#define \hyperlink{_kinova_8_a_p_i_8_comm_layer_ubuntu_8h_a46ec259f48cc0f825cec63da32c2d640}{E\+R\+R\+O\+R\+\_\+\+S\+E\+N\+D\+P\+A\+C\+K\+E\+T\+\_\+\+U\+N\+K\+N\+O\+WN}~1014
+\item 
+\#define \hyperlink{_kinova_8_a_p_i_8_comm_layer_ubuntu_8h_ad6dae5cdf107e5b57dc4e13427c608b7}{E\+R\+R\+O\+R\+\_\+\+N\+O\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+O\+U\+ND}~1015
+\item 
+\#define \hyperlink{_kinova_8_a_p_i_8_comm_layer_ubuntu_8h_aebdc7d8ca8e25ed8efc90bb88ef7ef5b}{P\+A\+C\+K\+E\+T\+\_\+\+S\+I\+ZE}~64
+\item 
+\#define \hyperlink{_kinova_8_a_p_i_8_comm_layer_ubuntu_8h_a515f46a87f301d94d9f3b06a6bb2540a}{P\+A\+C\+K\+E\+T\+\_\+\+D\+A\+T\+A\+\_\+\+S\+I\+ZE}~56
+\item 
+\#define \hyperlink{_kinova_8_a_p_i_8_comm_layer_ubuntu_8h_a69bfb6e73bae0625ac56f441ccf542d1}{P\+A\+C\+K\+E\+T\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+S\+I\+ZE}~8
+\item 
+\#define \hyperlink{_kinova_8_a_p_i_8_comm_layer_ubuntu_8h_a2e19fae8619e7a3b28aecdcf5d7cd51d}{S\+E\+R\+I\+A\+L\+\_\+\+L\+E\+N\+G\+TH}~20
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_kinova_8_a_p_i_8_comm_layer_ubuntu_8h_a1d3678de7e45bc92e4c8ee7ece40c833}{\+\_\+\+\_\+attribute\+\_\+\+\_\+} ((visibility(\char`\"{}default\char`\"{}))) int Init\+Communication(void)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{struct_packet}{Packet} \& \hyperlink{_kinova_8_a_p_i_8_comm_layer_ubuntu_8h_a0929bb1a4a68ea14e4871a32a70d7fa6}{packet\+In}
+\item 
+\hyperlink{struct_packet}{Packet} int \& \hyperlink{_kinova_8_a_p_i_8_comm_layer_ubuntu_8h_a900dac90961bada00f57c207562a6a9a}{result}
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{Kinova.\+A\+P\+I.\+Comm\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Comm\+Layer\+Ubuntu.\+h}!E\+R\+R\+O\+R\+\_\+\+C\+L\+A\+I\+M\+\_\+\+I\+N\+T\+E\+R\+F\+A\+CE@{E\+R\+R\+O\+R\+\_\+\+C\+L\+A\+I\+M\+\_\+\+I\+N\+T\+E\+R\+F\+A\+CE}}
+\index{E\+R\+R\+O\+R\+\_\+\+C\+L\+A\+I\+M\+\_\+\+I\+N\+T\+E\+R\+F\+A\+CE@{E\+R\+R\+O\+R\+\_\+\+C\+L\+A\+I\+M\+\_\+\+I\+N\+T\+E\+R\+F\+A\+CE}!Kinova.\+A\+P\+I.\+Comm\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Comm\+Layer\+Ubuntu.\+h}}
+\subsubsection[{\texorpdfstring{E\+R\+R\+O\+R\+\_\+\+C\+L\+A\+I\+M\+\_\+\+I\+N\+T\+E\+R\+F\+A\+CE}{ERROR_CLAIM_INTERFACE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\+R\+R\+O\+R\+\_\+\+C\+L\+A\+I\+M\+\_\+\+I\+N\+T\+E\+R\+F\+A\+CE~1008}\hypertarget{_kinova_8_a_p_i_8_comm_layer_ubuntu_8h_a8bef7198cac5a66787097490eb9289a6}{}\label{_kinova_8_a_p_i_8_comm_layer_ubuntu_8h_a8bef7198cac5a66787097490eb9289a6}
+\index{Kinova.\+A\+P\+I.\+Comm\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Comm\+Layer\+Ubuntu.\+h}!E\+R\+R\+O\+R\+\_\+\+F\+R\+E\+E\+\_\+\+L\+I\+B\+R\+A\+RY@{E\+R\+R\+O\+R\+\_\+\+F\+R\+E\+E\+\_\+\+L\+I\+B\+R\+A\+RY}}
+\index{E\+R\+R\+O\+R\+\_\+\+F\+R\+E\+E\+\_\+\+L\+I\+B\+R\+A\+RY@{E\+R\+R\+O\+R\+\_\+\+F\+R\+E\+E\+\_\+\+L\+I\+B\+R\+A\+RY}!Kinova.\+A\+P\+I.\+Comm\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Comm\+Layer\+Ubuntu.\+h}}
+\subsubsection[{\texorpdfstring{E\+R\+R\+O\+R\+\_\+\+F\+R\+E\+E\+\_\+\+L\+I\+B\+R\+A\+RY}{ERROR_FREE_LIBRARY}}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\+R\+R\+O\+R\+\_\+\+F\+R\+E\+E\+\_\+\+L\+I\+B\+R\+A\+RY~1006}\hypertarget{_kinova_8_a_p_i_8_comm_layer_ubuntu_8h_a135c6a9b1729ec2cc26109fa1011dd60}{}\label{_kinova_8_a_p_i_8_comm_layer_ubuntu_8h_a135c6a9b1729ec2cc26109fa1011dd60}
+\index{Kinova.\+A\+P\+I.\+Comm\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Comm\+Layer\+Ubuntu.\+h}!E\+R\+R\+O\+R\+\_\+\+J\+A\+C\+O\+\_\+\+C\+O\+N\+N\+E\+C\+T\+I\+ON@{E\+R\+R\+O\+R\+\_\+\+J\+A\+C\+O\+\_\+\+C\+O\+N\+N\+E\+C\+T\+I\+ON}}
+\index{E\+R\+R\+O\+R\+\_\+\+J\+A\+C\+O\+\_\+\+C\+O\+N\+N\+E\+C\+T\+I\+ON@{E\+R\+R\+O\+R\+\_\+\+J\+A\+C\+O\+\_\+\+C\+O\+N\+N\+E\+C\+T\+I\+ON}!Kinova.\+A\+P\+I.\+Comm\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Comm\+Layer\+Ubuntu.\+h}}
+\subsubsection[{\texorpdfstring{E\+R\+R\+O\+R\+\_\+\+J\+A\+C\+O\+\_\+\+C\+O\+N\+N\+E\+C\+T\+I\+ON}{ERROR_JACO_CONNECTION}}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\+R\+R\+O\+R\+\_\+\+J\+A\+C\+O\+\_\+\+C\+O\+N\+N\+E\+C\+T\+I\+ON~1007}\hypertarget{_kinova_8_a_p_i_8_comm_layer_ubuntu_8h_afd94861330305625c61219ed28b02a36}{}\label{_kinova_8_a_p_i_8_comm_layer_ubuntu_8h_afd94861330305625c61219ed28b02a36}
+\index{Kinova.\+A\+P\+I.\+Comm\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Comm\+Layer\+Ubuntu.\+h}!E\+R\+R\+O\+R\+\_\+\+L\+I\+B\+U\+S\+B\+\_\+\+B\+U\+SY@{E\+R\+R\+O\+R\+\_\+\+L\+I\+B\+U\+S\+B\+\_\+\+B\+U\+SY}}
+\index{E\+R\+R\+O\+R\+\_\+\+L\+I\+B\+U\+S\+B\+\_\+\+B\+U\+SY@{E\+R\+R\+O\+R\+\_\+\+L\+I\+B\+U\+S\+B\+\_\+\+B\+U\+SY}!Kinova.\+A\+P\+I.\+Comm\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Comm\+Layer\+Ubuntu.\+h}}
+\subsubsection[{\texorpdfstring{E\+R\+R\+O\+R\+\_\+\+L\+I\+B\+U\+S\+B\+\_\+\+B\+U\+SY}{ERROR_LIBUSB_BUSY}}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\+R\+R\+O\+R\+\_\+\+L\+I\+B\+U\+S\+B\+\_\+\+B\+U\+SY~1012}\hypertarget{_kinova_8_a_p_i_8_comm_layer_ubuntu_8h_ac990045d67e6561d7cddb33a9484e48c}{}\label{_kinova_8_a_p_i_8_comm_layer_ubuntu_8h_ac990045d67e6561d7cddb33a9484e48c}
+\index{Kinova.\+A\+P\+I.\+Comm\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Comm\+Layer\+Ubuntu.\+h}!E\+R\+R\+O\+R\+\_\+\+L\+I\+B\+U\+S\+B\+\_\+\+N\+O\+\_\+\+D\+E\+V\+I\+CE@{E\+R\+R\+O\+R\+\_\+\+L\+I\+B\+U\+S\+B\+\_\+\+N\+O\+\_\+\+D\+E\+V\+I\+CE}}
+\index{E\+R\+R\+O\+R\+\_\+\+L\+I\+B\+U\+S\+B\+\_\+\+N\+O\+\_\+\+D\+E\+V\+I\+CE@{E\+R\+R\+O\+R\+\_\+\+L\+I\+B\+U\+S\+B\+\_\+\+N\+O\+\_\+\+D\+E\+V\+I\+CE}!Kinova.\+A\+P\+I.\+Comm\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Comm\+Layer\+Ubuntu.\+h}}
+\subsubsection[{\texorpdfstring{E\+R\+R\+O\+R\+\_\+\+L\+I\+B\+U\+S\+B\+\_\+\+N\+O\+\_\+\+D\+E\+V\+I\+CE}{ERROR_LIBUSB_NO_DEVICE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\+R\+R\+O\+R\+\_\+\+L\+I\+B\+U\+S\+B\+\_\+\+N\+O\+\_\+\+D\+E\+V\+I\+CE~1011}\hypertarget{_kinova_8_a_p_i_8_comm_layer_ubuntu_8h_ad42ee2931c53f250d85555f35bb8ee81}{}\label{_kinova_8_a_p_i_8_comm_layer_ubuntu_8h_ad42ee2931c53f250d85555f35bb8ee81}
+\index{Kinova.\+A\+P\+I.\+Comm\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Comm\+Layer\+Ubuntu.\+h}!E\+R\+R\+O\+R\+\_\+\+L\+I\+B\+U\+S\+B\+\_\+\+N\+O\+T\+\_\+\+S\+U\+P\+P\+O\+R\+T\+ED@{E\+R\+R\+O\+R\+\_\+\+L\+I\+B\+U\+S\+B\+\_\+\+N\+O\+T\+\_\+\+S\+U\+P\+P\+O\+R\+T\+ED}}
+\index{E\+R\+R\+O\+R\+\_\+\+L\+I\+B\+U\+S\+B\+\_\+\+N\+O\+T\+\_\+\+S\+U\+P\+P\+O\+R\+T\+ED@{E\+R\+R\+O\+R\+\_\+\+L\+I\+B\+U\+S\+B\+\_\+\+N\+O\+T\+\_\+\+S\+U\+P\+P\+O\+R\+T\+ED}!Kinova.\+A\+P\+I.\+Comm\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Comm\+Layer\+Ubuntu.\+h}}
+\subsubsection[{\texorpdfstring{E\+R\+R\+O\+R\+\_\+\+L\+I\+B\+U\+S\+B\+\_\+\+N\+O\+T\+\_\+\+S\+U\+P\+P\+O\+R\+T\+ED}{ERROR_LIBUSB_NOT_SUPPORTED}}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\+R\+R\+O\+R\+\_\+\+L\+I\+B\+U\+S\+B\+\_\+\+N\+O\+T\+\_\+\+S\+U\+P\+P\+O\+R\+T\+ED~1013}\hypertarget{_kinova_8_a_p_i_8_comm_layer_ubuntu_8h_af88b346701ceadbdd6fc3d8ca1f4befe}{}\label{_kinova_8_a_p_i_8_comm_layer_ubuntu_8h_af88b346701ceadbdd6fc3d8ca1f4befe}
+\index{Kinova.\+A\+P\+I.\+Comm\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Comm\+Layer\+Ubuntu.\+h}!E\+R\+R\+O\+R\+\_\+\+L\+O\+A\+D\+\_\+\+U\+S\+B\+\_\+\+L\+I\+B\+R\+A\+RY@{E\+R\+R\+O\+R\+\_\+\+L\+O\+A\+D\+\_\+\+U\+S\+B\+\_\+\+L\+I\+B\+R\+A\+RY}}
+\index{E\+R\+R\+O\+R\+\_\+\+L\+O\+A\+D\+\_\+\+U\+S\+B\+\_\+\+L\+I\+B\+R\+A\+RY@{E\+R\+R\+O\+R\+\_\+\+L\+O\+A\+D\+\_\+\+U\+S\+B\+\_\+\+L\+I\+B\+R\+A\+RY}!Kinova.\+A\+P\+I.\+Comm\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Comm\+Layer\+Ubuntu.\+h}}
+\subsubsection[{\texorpdfstring{E\+R\+R\+O\+R\+\_\+\+L\+O\+A\+D\+\_\+\+U\+S\+B\+\_\+\+L\+I\+B\+R\+A\+RY}{ERROR_LOAD_USB_LIBRARY}}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\+R\+R\+O\+R\+\_\+\+L\+O\+A\+D\+\_\+\+U\+S\+B\+\_\+\+L\+I\+B\+R\+A\+RY~1001}\hypertarget{_kinova_8_a_p_i_8_comm_layer_ubuntu_8h_af3dbe9ae36e3aa0ba20d139a987cb354}{}\label{_kinova_8_a_p_i_8_comm_layer_ubuntu_8h_af3dbe9ae36e3aa0ba20d139a987cb354}
+\index{Kinova.\+A\+P\+I.\+Comm\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Comm\+Layer\+Ubuntu.\+h}!E\+R\+R\+O\+R\+\_\+\+N\+O\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+O\+U\+ND@{E\+R\+R\+O\+R\+\_\+\+N\+O\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+O\+U\+ND}}
+\index{E\+R\+R\+O\+R\+\_\+\+N\+O\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+O\+U\+ND@{E\+R\+R\+O\+R\+\_\+\+N\+O\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+O\+U\+ND}!Kinova.\+A\+P\+I.\+Comm\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Comm\+Layer\+Ubuntu.\+h}}
+\subsubsection[{\texorpdfstring{E\+R\+R\+O\+R\+\_\+\+N\+O\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+O\+U\+ND}{ERROR_NO_DEVICE_FOUND}}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\+R\+R\+O\+R\+\_\+\+N\+O\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+O\+U\+ND~1015}\hypertarget{_kinova_8_a_p_i_8_comm_layer_ubuntu_8h_ad6dae5cdf107e5b57dc4e13427c608b7}{}\label{_kinova_8_a_p_i_8_comm_layer_ubuntu_8h_ad6dae5cdf107e5b57dc4e13427c608b7}
+\index{Kinova.\+A\+P\+I.\+Comm\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Comm\+Layer\+Ubuntu.\+h}!E\+R\+R\+O\+R\+\_\+\+N\+O\+T\+\_\+\+I\+N\+I\+T\+I\+A\+L\+I\+Z\+ED@{E\+R\+R\+O\+R\+\_\+\+N\+O\+T\+\_\+\+I\+N\+I\+T\+I\+A\+L\+I\+Z\+ED}}
+\index{E\+R\+R\+O\+R\+\_\+\+N\+O\+T\+\_\+\+I\+N\+I\+T\+I\+A\+L\+I\+Z\+ED@{E\+R\+R\+O\+R\+\_\+\+N\+O\+T\+\_\+\+I\+N\+I\+T\+I\+A\+L\+I\+Z\+ED}!Kinova.\+A\+P\+I.\+Comm\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Comm\+Layer\+Ubuntu.\+h}}
+\subsubsection[{\texorpdfstring{E\+R\+R\+O\+R\+\_\+\+N\+O\+T\+\_\+\+I\+N\+I\+T\+I\+A\+L\+I\+Z\+ED}{ERROR_NOT_INITIALIZED}}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\+R\+R\+O\+R\+\_\+\+N\+O\+T\+\_\+\+I\+N\+I\+T\+I\+A\+L\+I\+Z\+ED~1010}\hypertarget{_kinova_8_a_p_i_8_comm_layer_ubuntu_8h_a605e0ff46555922872461535eca0d0b9}{}\label{_kinova_8_a_p_i_8_comm_layer_ubuntu_8h_a605e0ff46555922872461535eca0d0b9}
+\index{Kinova.\+A\+P\+I.\+Comm\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Comm\+Layer\+Ubuntu.\+h}!E\+R\+R\+O\+R\+\_\+\+O\+P\+E\+N\+\_\+\+M\+E\+T\+H\+OD@{E\+R\+R\+O\+R\+\_\+\+O\+P\+E\+N\+\_\+\+M\+E\+T\+H\+OD}}
+\index{E\+R\+R\+O\+R\+\_\+\+O\+P\+E\+N\+\_\+\+M\+E\+T\+H\+OD@{E\+R\+R\+O\+R\+\_\+\+O\+P\+E\+N\+\_\+\+M\+E\+T\+H\+OD}!Kinova.\+A\+P\+I.\+Comm\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Comm\+Layer\+Ubuntu.\+h}}
+\subsubsection[{\texorpdfstring{E\+R\+R\+O\+R\+\_\+\+O\+P\+E\+N\+\_\+\+M\+E\+T\+H\+OD}{ERROR_OPEN_METHOD}}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\+R\+R\+O\+R\+\_\+\+O\+P\+E\+N\+\_\+\+M\+E\+T\+H\+OD~1002}\hypertarget{_kinova_8_a_p_i_8_comm_layer_ubuntu_8h_ae16383b6f1c8166cf8ae3c4ea51f1f0b}{}\label{_kinova_8_a_p_i_8_comm_layer_ubuntu_8h_ae16383b6f1c8166cf8ae3c4ea51f1f0b}
+\index{Kinova.\+A\+P\+I.\+Comm\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Comm\+Layer\+Ubuntu.\+h}!E\+R\+R\+O\+R\+\_\+\+R\+E\+A\+D\+\_\+\+I\+N\+T\+\_\+\+M\+E\+T\+H\+OD@{E\+R\+R\+O\+R\+\_\+\+R\+E\+A\+D\+\_\+\+I\+N\+T\+\_\+\+M\+E\+T\+H\+OD}}
+\index{E\+R\+R\+O\+R\+\_\+\+R\+E\+A\+D\+\_\+\+I\+N\+T\+\_\+\+M\+E\+T\+H\+OD@{E\+R\+R\+O\+R\+\_\+\+R\+E\+A\+D\+\_\+\+I\+N\+T\+\_\+\+M\+E\+T\+H\+OD}!Kinova.\+A\+P\+I.\+Comm\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Comm\+Layer\+Ubuntu.\+h}}
+\subsubsection[{\texorpdfstring{E\+R\+R\+O\+R\+\_\+\+R\+E\+A\+D\+\_\+\+I\+N\+T\+\_\+\+M\+E\+T\+H\+OD}{ERROR_READ_INT_METHOD}}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\+R\+R\+O\+R\+\_\+\+R\+E\+A\+D\+\_\+\+I\+N\+T\+\_\+\+M\+E\+T\+H\+OD~1005}\hypertarget{_kinova_8_a_p_i_8_comm_layer_ubuntu_8h_a0cc1d32fe6982ee696be9d1a001340fe}{}\label{_kinova_8_a_p_i_8_comm_layer_ubuntu_8h_a0cc1d32fe6982ee696be9d1a001340fe}
+\index{Kinova.\+A\+P\+I.\+Comm\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Comm\+Layer\+Ubuntu.\+h}!E\+R\+R\+O\+R\+\_\+\+R\+E\+A\+D\+\_\+\+M\+E\+T\+H\+OD@{E\+R\+R\+O\+R\+\_\+\+R\+E\+A\+D\+\_\+\+M\+E\+T\+H\+OD}}
+\index{E\+R\+R\+O\+R\+\_\+\+R\+E\+A\+D\+\_\+\+M\+E\+T\+H\+OD@{E\+R\+R\+O\+R\+\_\+\+R\+E\+A\+D\+\_\+\+M\+E\+T\+H\+OD}!Kinova.\+A\+P\+I.\+Comm\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Comm\+Layer\+Ubuntu.\+h}}
+\subsubsection[{\texorpdfstring{E\+R\+R\+O\+R\+\_\+\+R\+E\+A\+D\+\_\+\+M\+E\+T\+H\+OD}{ERROR_READ_METHOD}}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\+R\+R\+O\+R\+\_\+\+R\+E\+A\+D\+\_\+\+M\+E\+T\+H\+OD~1004}\hypertarget{_kinova_8_a_p_i_8_comm_layer_ubuntu_8h_aef66c12ea6482b4c496c08a288cc7faa}{}\label{_kinova_8_a_p_i_8_comm_layer_ubuntu_8h_aef66c12ea6482b4c496c08a288cc7faa}
+\index{Kinova.\+A\+P\+I.\+Comm\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Comm\+Layer\+Ubuntu.\+h}!E\+R\+R\+O\+R\+\_\+\+S\+E\+N\+D\+P\+A\+C\+K\+E\+T\+\_\+\+U\+N\+K\+N\+O\+WN@{E\+R\+R\+O\+R\+\_\+\+S\+E\+N\+D\+P\+A\+C\+K\+E\+T\+\_\+\+U\+N\+K\+N\+O\+WN}}
+\index{E\+R\+R\+O\+R\+\_\+\+S\+E\+N\+D\+P\+A\+C\+K\+E\+T\+\_\+\+U\+N\+K\+N\+O\+WN@{E\+R\+R\+O\+R\+\_\+\+S\+E\+N\+D\+P\+A\+C\+K\+E\+T\+\_\+\+U\+N\+K\+N\+O\+WN}!Kinova.\+A\+P\+I.\+Comm\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Comm\+Layer\+Ubuntu.\+h}}
+\subsubsection[{\texorpdfstring{E\+R\+R\+O\+R\+\_\+\+S\+E\+N\+D\+P\+A\+C\+K\+E\+T\+\_\+\+U\+N\+K\+N\+O\+WN}{ERROR_SENDPACKET_UNKNOWN}}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\+R\+R\+O\+R\+\_\+\+S\+E\+N\+D\+P\+A\+C\+K\+E\+T\+\_\+\+U\+N\+K\+N\+O\+WN~1014}\hypertarget{_kinova_8_a_p_i_8_comm_layer_ubuntu_8h_a46ec259f48cc0f825cec63da32c2d640}{}\label{_kinova_8_a_p_i_8_comm_layer_ubuntu_8h_a46ec259f48cc0f825cec63da32c2d640}
+\index{Kinova.\+A\+P\+I.\+Comm\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Comm\+Layer\+Ubuntu.\+h}!E\+R\+R\+O\+R\+\_\+\+U\+N\+K\+N\+O\+W\+N\+\_\+\+D\+E\+V\+I\+CE@{E\+R\+R\+O\+R\+\_\+\+U\+N\+K\+N\+O\+W\+N\+\_\+\+D\+E\+V\+I\+CE}}
+\index{E\+R\+R\+O\+R\+\_\+\+U\+N\+K\+N\+O\+W\+N\+\_\+\+D\+E\+V\+I\+CE@{E\+R\+R\+O\+R\+\_\+\+U\+N\+K\+N\+O\+W\+N\+\_\+\+D\+E\+V\+I\+CE}!Kinova.\+A\+P\+I.\+Comm\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Comm\+Layer\+Ubuntu.\+h}}
+\subsubsection[{\texorpdfstring{E\+R\+R\+O\+R\+\_\+\+U\+N\+K\+N\+O\+W\+N\+\_\+\+D\+E\+V\+I\+CE}{ERROR_UNKNOWN_DEVICE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\+R\+R\+O\+R\+\_\+\+U\+N\+K\+N\+O\+W\+N\+\_\+\+D\+E\+V\+I\+CE~1009}\hypertarget{_kinova_8_a_p_i_8_comm_layer_ubuntu_8h_ad8ff335f164c59e9ea2f9f500fb81c50}{}\label{_kinova_8_a_p_i_8_comm_layer_ubuntu_8h_ad8ff335f164c59e9ea2f9f500fb81c50}
+\index{Kinova.\+A\+P\+I.\+Comm\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Comm\+Layer\+Ubuntu.\+h}!E\+R\+R\+O\+R\+\_\+\+W\+R\+I\+T\+E\+\_\+\+M\+E\+T\+H\+OD@{E\+R\+R\+O\+R\+\_\+\+W\+R\+I\+T\+E\+\_\+\+M\+E\+T\+H\+OD}}
+\index{E\+R\+R\+O\+R\+\_\+\+W\+R\+I\+T\+E\+\_\+\+M\+E\+T\+H\+OD@{E\+R\+R\+O\+R\+\_\+\+W\+R\+I\+T\+E\+\_\+\+M\+E\+T\+H\+OD}!Kinova.\+A\+P\+I.\+Comm\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Comm\+Layer\+Ubuntu.\+h}}
+\subsubsection[{\texorpdfstring{E\+R\+R\+O\+R\+\_\+\+W\+R\+I\+T\+E\+\_\+\+M\+E\+T\+H\+OD}{ERROR_WRITE_METHOD}}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\+R\+R\+O\+R\+\_\+\+W\+R\+I\+T\+E\+\_\+\+M\+E\+T\+H\+OD~1003}\hypertarget{_kinova_8_a_p_i_8_comm_layer_ubuntu_8h_ada338ad6d3a9bc98d7ab9a91e13af88c}{}\label{_kinova_8_a_p_i_8_comm_layer_ubuntu_8h_ada338ad6d3a9bc98d7ab9a91e13af88c}
+\index{Kinova.\+A\+P\+I.\+Comm\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Comm\+Layer\+Ubuntu.\+h}!K\+I\+N\+O\+V\+A\+D\+L\+L\+C\+O\+M\+M\+L\+A\+Y\+E\+R\+\_\+\+A\+PI@{K\+I\+N\+O\+V\+A\+D\+L\+L\+C\+O\+M\+M\+L\+A\+Y\+E\+R\+\_\+\+A\+PI}}
+\index{K\+I\+N\+O\+V\+A\+D\+L\+L\+C\+O\+M\+M\+L\+A\+Y\+E\+R\+\_\+\+A\+PI@{K\+I\+N\+O\+V\+A\+D\+L\+L\+C\+O\+M\+M\+L\+A\+Y\+E\+R\+\_\+\+A\+PI}!Kinova.\+A\+P\+I.\+Comm\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Comm\+Layer\+Ubuntu.\+h}}
+\subsubsection[{\texorpdfstring{K\+I\+N\+O\+V\+A\+D\+L\+L\+C\+O\+M\+M\+L\+A\+Y\+E\+R\+\_\+\+A\+PI}{KINOVADLLCOMMLAYER_API}}]{\setlength{\rightskip}{0pt plus 5cm}\#define K\+I\+N\+O\+V\+A\+D\+L\+L\+C\+O\+M\+M\+L\+A\+Y\+E\+R\+\_\+\+A\+PI~\+\_\+\+\_\+declspec(dllimport)}\hypertarget{_kinova_8_a_p_i_8_comm_layer_ubuntu_8h_ad200cf58a0e33b783c540d745ca27add}{}\label{_kinova_8_a_p_i_8_comm_layer_ubuntu_8h_ad200cf58a0e33b783c540d745ca27add}
+\index{Kinova.\+A\+P\+I.\+Comm\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Comm\+Layer\+Ubuntu.\+h}!N\+O\+\_\+\+E\+R\+R\+O\+R\+\_\+\+K\+I\+N\+O\+VA@{N\+O\+\_\+\+E\+R\+R\+O\+R\+\_\+\+K\+I\+N\+O\+VA}}
+\index{N\+O\+\_\+\+E\+R\+R\+O\+R\+\_\+\+K\+I\+N\+O\+VA@{N\+O\+\_\+\+E\+R\+R\+O\+R\+\_\+\+K\+I\+N\+O\+VA}!Kinova.\+A\+P\+I.\+Comm\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Comm\+Layer\+Ubuntu.\+h}}
+\subsubsection[{\texorpdfstring{N\+O\+\_\+\+E\+R\+R\+O\+R\+\_\+\+K\+I\+N\+O\+VA}{NO_ERROR_KINOVA}}]{\setlength{\rightskip}{0pt plus 5cm}\#define N\+O\+\_\+\+E\+R\+R\+O\+R\+\_\+\+K\+I\+N\+O\+VA~1}\hypertarget{_kinova_8_a_p_i_8_comm_layer_ubuntu_8h_a510f2320a2a31d2d225adc0da7bef595}{}\label{_kinova_8_a_p_i_8_comm_layer_ubuntu_8h_a510f2320a2a31d2d225adc0da7bef595}
+\index{Kinova.\+A\+P\+I.\+Comm\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Comm\+Layer\+Ubuntu.\+h}!P\+A\+C\+K\+E\+T\+\_\+\+D\+A\+T\+A\+\_\+\+S\+I\+ZE@{P\+A\+C\+K\+E\+T\+\_\+\+D\+A\+T\+A\+\_\+\+S\+I\+ZE}}
+\index{P\+A\+C\+K\+E\+T\+\_\+\+D\+A\+T\+A\+\_\+\+S\+I\+ZE@{P\+A\+C\+K\+E\+T\+\_\+\+D\+A\+T\+A\+\_\+\+S\+I\+ZE}!Kinova.\+A\+P\+I.\+Comm\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Comm\+Layer\+Ubuntu.\+h}}
+\subsubsection[{\texorpdfstring{P\+A\+C\+K\+E\+T\+\_\+\+D\+A\+T\+A\+\_\+\+S\+I\+ZE}{PACKET_DATA_SIZE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+A\+C\+K\+E\+T\+\_\+\+D\+A\+T\+A\+\_\+\+S\+I\+ZE~56}\hypertarget{_kinova_8_a_p_i_8_comm_layer_ubuntu_8h_a515f46a87f301d94d9f3b06a6bb2540a}{}\label{_kinova_8_a_p_i_8_comm_layer_ubuntu_8h_a515f46a87f301d94d9f3b06a6bb2540a}
+\index{Kinova.\+A\+P\+I.\+Comm\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Comm\+Layer\+Ubuntu.\+h}!P\+A\+C\+K\+E\+T\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+S\+I\+ZE@{P\+A\+C\+K\+E\+T\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+S\+I\+ZE}}
+\index{P\+A\+C\+K\+E\+T\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+S\+I\+ZE@{P\+A\+C\+K\+E\+T\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+S\+I\+ZE}!Kinova.\+A\+P\+I.\+Comm\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Comm\+Layer\+Ubuntu.\+h}}
+\subsubsection[{\texorpdfstring{P\+A\+C\+K\+E\+T\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+S\+I\+ZE}{PACKET_HEADER_SIZE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+A\+C\+K\+E\+T\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+S\+I\+ZE~8}\hypertarget{_kinova_8_a_p_i_8_comm_layer_ubuntu_8h_a69bfb6e73bae0625ac56f441ccf542d1}{}\label{_kinova_8_a_p_i_8_comm_layer_ubuntu_8h_a69bfb6e73bae0625ac56f441ccf542d1}
+\index{Kinova.\+A\+P\+I.\+Comm\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Comm\+Layer\+Ubuntu.\+h}!P\+A\+C\+K\+E\+T\+\_\+\+S\+I\+ZE@{P\+A\+C\+K\+E\+T\+\_\+\+S\+I\+ZE}}
+\index{P\+A\+C\+K\+E\+T\+\_\+\+S\+I\+ZE@{P\+A\+C\+K\+E\+T\+\_\+\+S\+I\+ZE}!Kinova.\+A\+P\+I.\+Comm\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Comm\+Layer\+Ubuntu.\+h}}
+\subsubsection[{\texorpdfstring{P\+A\+C\+K\+E\+T\+\_\+\+S\+I\+ZE}{PACKET_SIZE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+A\+C\+K\+E\+T\+\_\+\+S\+I\+ZE~64}\hypertarget{_kinova_8_a_p_i_8_comm_layer_ubuntu_8h_aebdc7d8ca8e25ed8efc90bb88ef7ef5b}{}\label{_kinova_8_a_p_i_8_comm_layer_ubuntu_8h_aebdc7d8ca8e25ed8efc90bb88ef7ef5b}
+\index{Kinova.\+A\+P\+I.\+Comm\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Comm\+Layer\+Ubuntu.\+h}!S\+E\+R\+I\+A\+L\+\_\+\+L\+E\+N\+G\+TH@{S\+E\+R\+I\+A\+L\+\_\+\+L\+E\+N\+G\+TH}}
+\index{S\+E\+R\+I\+A\+L\+\_\+\+L\+E\+N\+G\+TH@{S\+E\+R\+I\+A\+L\+\_\+\+L\+E\+N\+G\+TH}!Kinova.\+A\+P\+I.\+Comm\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Comm\+Layer\+Ubuntu.\+h}}
+\subsubsection[{\texorpdfstring{S\+E\+R\+I\+A\+L\+\_\+\+L\+E\+N\+G\+TH}{SERIAL_LENGTH}}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+E\+R\+I\+A\+L\+\_\+\+L\+E\+N\+G\+TH~20}\hypertarget{_kinova_8_a_p_i_8_comm_layer_ubuntu_8h_a2e19fae8619e7a3b28aecdcf5d7cd51d}{}\label{_kinova_8_a_p_i_8_comm_layer_ubuntu_8h_a2e19fae8619e7a3b28aecdcf5d7cd51d}
+
+
+\subsection{Function Documentation}
+\index{Kinova.\+A\+P\+I.\+Comm\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Comm\+Layer\+Ubuntu.\+h}!\+\_\+\+\_\+attribute\+\_\+\+\_\+@{\+\_\+\+\_\+attribute\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+attribute\+\_\+\+\_\+@{\+\_\+\+\_\+attribute\+\_\+\+\_\+}!Kinova.\+A\+P\+I.\+Comm\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Comm\+Layer\+Ubuntu.\+h}}
+\subsubsection[{\texorpdfstring{\+\_\+\+\_\+attribute\+\_\+\+\_\+((visibility(""default""))) int Init\+Communication(void)}{__attribute__((visibility("default"))) int InitCommunication(void)}}]{\setlength{\rightskip}{0pt plus 5cm}\+\_\+\+\_\+attribute\+\_\+\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{(visibility(\char`\"{}default\char`\"{}))}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{_kinova_8_a_p_i_8_comm_layer_ubuntu_8h_a1d3678de7e45bc92e4c8ee7ece40c833}{}\label{_kinova_8_a_p_i_8_comm_layer_ubuntu_8h_a1d3678de7e45bc92e4c8ee7ece40c833}
+
+
+\subsection{Variable Documentation}
+\index{Kinova.\+A\+P\+I.\+Comm\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Comm\+Layer\+Ubuntu.\+h}!packet\+In@{packet\+In}}
+\index{packet\+In@{packet\+In}!Kinova.\+A\+P\+I.\+Comm\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Comm\+Layer\+Ubuntu.\+h}}
+\subsubsection[{\texorpdfstring{packet\+In}{packetIn}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Packet}\& packet\+In}\hypertarget{_kinova_8_a_p_i_8_comm_layer_ubuntu_8h_a0929bb1a4a68ea14e4871a32a70d7fa6}{}\label{_kinova_8_a_p_i_8_comm_layer_ubuntu_8h_a0929bb1a4a68ea14e4871a32a70d7fa6}
+\index{Kinova.\+A\+P\+I.\+Comm\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Comm\+Layer\+Ubuntu.\+h}!result@{result}}
+\index{result@{result}!Kinova.\+A\+P\+I.\+Comm\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Comm\+Layer\+Ubuntu.\+h}}
+\subsubsection[{\texorpdfstring{result}{result}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Packet} int\& result}\hypertarget{_kinova_8_a_p_i_8_comm_layer_ubuntu_8h_a900dac90961bada00f57c207562a6a9a}{}\label{_kinova_8_a_p_i_8_comm_layer_ubuntu_8h_a900dac90961bada00f57c207562a6a9a}

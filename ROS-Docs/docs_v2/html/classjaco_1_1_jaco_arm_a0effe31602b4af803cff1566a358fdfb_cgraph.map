@@ -1,0 +1,10 @@
+<map id="jaco::JacoArm::cartesianVelocityTimer" name="jaco::JacoArm::cartesianVelocityTimer">
+<area shape="rect" id="node2" href="$classjaco_1_1_jaco_comm.html#a468352480a437cc2144c8d4d289815a5" title="Set the cartesian velocity of the tool tip. " alt="" coords="220,49,420,90"/>
+<area shape="rect" id="node3" href="$classjaco_1_1_jaco_comm.html#a872b8033cda5a9fe4ccdca2e89aa03d1" title="jaco::JacoComm::isStopped" alt="" coords="468,31,653,57"/>
+<area shape="rect" id="node4" href="$struct_trajectory_point.html#a1a9f12ad88f5011c6a4644792fa67f99" title="TrajectoryPoint::InitStruct" alt="" coords="476,81,645,108"/>
+<area shape="rect" id="node5" href="$struct_user_position.html#ad682f9be07fa2307028f86624ded2958" title="UserPosition::InitStruct" alt="" coords="701,56,857,83"/>
+<area shape="rect" id="node9" href="$struct_limitation.html#a098f4ee5d0eb6baf844ff3164f1a20f6" title="Limitation::InitStruct" alt="" coords="710,107,849,133"/>
+<area shape="rect" id="node6" href="$struct_cartesian_info.html#a6d47623939d86124525ab4c8f7a2b8e9" title="CartesianInfo::InitStruct" alt="" coords="913,5,1070,32"/>
+<area shape="rect" id="node7" href="$struct_angular_info.html#a092156b3e0e6cb657ed4bb2f6b15a9f0" title="AngularInfo::InitStruct" alt="" coords="918,56,1065,83"/>
+<area shape="rect" id="node8" href="$struct_fingers_position.html#a2d958923675995d54d56e59f8549495d" title="FingersPosition::InitStruct" alt="" coords="905,107,1077,133"/>
+</map>

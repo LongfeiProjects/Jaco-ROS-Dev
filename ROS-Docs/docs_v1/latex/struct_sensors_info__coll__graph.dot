@@ -1,0 +1,6 @@
+digraph "SensorsInfo"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="{SensorsInfo\n|+ Voltage\l+ Current\l+ AccelerationX\l+ AccelerationY\l+ AccelerationZ\l+ ActuatorTemp1\l+ ActuatorTemp2\l+ ActuatorTemp3\l+ ActuatorTemp4\l+ ActuatorTemp5\l+ ActuatorTemp6\l+ FingerTemp1\l+ FingerTemp2\l+ FingerTemp3\l|+ InitStruct()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+}
