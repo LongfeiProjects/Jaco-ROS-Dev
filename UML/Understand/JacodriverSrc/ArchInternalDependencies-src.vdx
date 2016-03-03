@@ -1,0 +1,2110 @@
+<VisioDocument>
+  <StyleSheets/>
+  <Masters/>
+  <Pages>
+    <Page ID="0">
+      <PageSheet>
+        <PageProps>
+          <PageWidth>22.4167</PageWidth>
+          <PageHeight>4.68056</PageHeight>
+        </PageProps>
+      </PageSheet>
+      <Shapes>
+        <Shape ID="1">
+          <XForm>
+            <PinX>11.2153</PinX>
+            <PinY>2.33333</PinY>
+            <Width>22.3194</Width>
+            <Height>4.58333</Height>
+            <LocPinX F="Width*0.5"/>
+            <LocPinY F="Height*0.5"/>
+          </XForm>
+          <Fill>
+            <FillForegnd F="RGB(255,255,255)"/>
+          </Fill>
+          <Line>
+            <LineWeight>0.0138889</LineWeight>
+            <LineColor F="RGB(255,255,255)"/>
+            <LinePattern>1</LinePattern>
+          </Line>
+          <Geom IX="0">
+            <MoveTo IX="1">
+              <X F="Width*0">0</X>
+              <Y F="Height*0">0</Y>
+            </MoveTo>
+            <LineTo IX="2">
+              <X F="Width*0">0</X>
+              <Y F="Height*1">4.58333</Y>
+            </LineTo>
+            <LineTo IX="3">
+              <X F="Width*1">22.3194</X>
+              <Y F="Height*1">4.58333</Y>
+            </LineTo>
+            <LineTo IX="4">
+              <X F="Width*1">22.3194</X>
+              <Y F="Height*0">0</Y>
+            </LineTo>
+            <LineTo IX="5">
+              <X F="Width*0">0</X>
+              <Y F="Height*0">0</Y>
+            </LineTo>
+          </Geom>
+        </Shape>
+        <Shape ID="2">
+          <XForm>
+            <PinX>14.4167</PinX>
+            <PinY>2.60417</PinY>
+            <Width>4.5</Width>
+            <Height>0.375</Height>
+            <LocPinX F="Width*0.5"/>
+            <LocPinY F="Height*0.5"/>
+          </XForm>
+          <TextXForm>
+            <TxtPinX F="Width*0.0246914">0.111111</TxtPinX>
+            <TxtPinY F="Height*0.851852">0.319444</TxtPinY>
+            <TxtWidth>4.27778</TxtWidth>
+            <TxtHeight>0.263889</TxtHeight>
+            <TxtLocPinX F="0*TxtWidth"/>
+            <TxtLocPinY F="1*TxtHeight"/>
+            <TxtAngle F="-Angle"/>
+          </TextXForm>
+          <Fill>
+            <FillForegnd F="RGB(255,255,255)"/>
+          </Fill>
+          <Line>
+            <LineWeight>0.0138889</LineWeight>
+            <LineColor F="RGB(190,190,190)"/>
+            <LinePattern>1</LinePattern>
+          </Line>
+          <Char IX="0">
+            <Font F="FONTTOID(&quot;Arial&quot;)">0</Font>
+            <Color F="RGB(0,0,0)"/>
+            <Style>0</Style>
+            <Size>0.166667</Size>
+          </Char>
+          <Geom IX="0">
+            <MoveTo IX="1">
+              <X F="Width*1">4.5</X>
+              <Y F="Height*1">0.375</Y>
+            </MoveTo>
+            <LineTo IX="2">
+              <X F="Width*0.00925926">0.0416667</X>
+              <Y F="Height*1">0.375</Y>
+            </LineTo>
+            <LineTo IX="3">
+              <X F="Width*0">0</X>
+              <Y F="Height*0.888889">0.333333</Y>
+            </LineTo>
+            <LineTo IX="4">
+              <X F="Width*0">0</X>
+              <Y F="Height*0">0</Y>
+            </LineTo>
+            <LineTo IX="5">
+              <X F="Width*0.990741">4.45833</X>
+              <Y F="Height*0">0</Y>
+            </LineTo>
+            <LineTo IX="6">
+              <X F="Width*1">4.5</X>
+              <Y F="Height*0.111111">0.0416667</Y>
+            </LineTo>
+            <LineTo IX="7">
+              <X F="Width*1">4.5</X>
+              <Y F="Height*1">0.375</Y>
+            </LineTo>
+            <MoveTo IX="8">
+              <X F="Width*0.990741">4.45833</X>
+              <Y F="Height*0.888889">0.333333</Y>
+            </MoveTo>
+            <LineTo IX="9">
+              <X F="Width*0">0</X>
+              <Y F="Height*0.888889">0.333333</Y>
+            </LineTo>
+            <MoveTo IX="10">
+              <X F="Width*0.990741">4.45833</X>
+              <Y F="Height*0.888889">0.333333</Y>
+            </MoveTo>
+            <LineTo IX="11">
+              <X F="Width*0.990741">4.45833</X>
+              <Y F="Height*0">0</Y>
+            </LineTo>
+            <MoveTo IX="12">
+              <X F="Width*0.990741">4.45833</X>
+              <Y F="Height*0.888889">0.333333</Y>
+            </MoveTo>
+            <LineTo IX="13">
+              <X F="Width*1">4.5</X>
+              <Y F="Height*1">0.375</Y>
+            </LineTo>
+          </Geom>
+          <Text>src/jaco-ros/jaco_driver/src/jaco_comm.cpp</Text>
+          <Connection IX="0">
+            <X F="Width*0.654321">2.94444</X>
+            <Y F="Height*0">0</Y>
+          </Connection>
+          <Connection IX="1">
+            <X F="Width*0.777778">3.5</X>
+            <Y F="Height*0.962963">0.361111</Y>
+          </Connection>
+          <Connection IX="2">
+            <X F="Width*0.361111">1.625</X>
+            <Y F="Height*0">0</Y>
+          </Connection>
+          <Connection IX="3">
+            <X F="Width*0.339506">1.52778</X>
+            <Y F="Height*0.962963">0.361111</Y>
+          </Connection>
+          <Connection IX="4">
+            <X F="Width*0">0</X>
+            <Y F="Height*0.962963">0.361111</Y>
+          </Connection>
+          <Connection IX="5">
+            <X F="Width*0">0</X>
+            <Y F="Height*0.222222">0.0833333</Y>
+          </Connection>
+        </Shape>
+        <Shape ID="3">
+          <XForm>
+            <PinX>20.1389</PinX>
+            <PinY>1.0625</PinY>
+            <Width>4.19444</Width>
+            <Height>0.375</Height>
+            <LocPinX F="Width*0.5"/>
+            <LocPinY F="Height*0.5"/>
+          </XForm>
+          <TextXForm>
+            <TxtPinX F="Width*0.0264901">0.111111</TxtPinX>
+            <TxtPinY F="Height*0.851852">0.319444</TxtPinY>
+            <TxtWidth>3.97222</TxtWidth>
+            <TxtHeight>0.263889</TxtHeight>
+            <TxtLocPinX F="0*TxtWidth"/>
+            <TxtLocPinY F="1*TxtHeight"/>
+            <TxtAngle F="-Angle"/>
+          </TextXForm>
+          <Fill>
+            <FillForegnd F="RGB(255,255,255)"/>
+          </Fill>
+          <Line>
+            <LineWeight>0.0138889</LineWeight>
+            <LineColor F="RGB(190,190,190)"/>
+            <LinePattern>1</LinePattern>
+          </Line>
+          <Char IX="0">
+            <Font F="FONTTOID(&quot;Arial&quot;)">0</Font>
+            <Color F="RGB(0,0,0)"/>
+            <Style>0</Style>
+            <Size>0.166667</Size>
+          </Char>
+          <Geom IX="0">
+            <MoveTo IX="1">
+              <X F="Width*1">4.19444</X>
+              <Y F="Height*1">0.375</Y>
+            </MoveTo>
+            <LineTo IX="2">
+              <X F="Width*0.00993377">0.0416667</X>
+              <Y F="Height*1">0.375</Y>
+            </LineTo>
+            <LineTo IX="3">
+              <X F="Width*0">0</X>
+              <Y F="Height*0.888889">0.333333</Y>
+            </LineTo>
+            <LineTo IX="4">
+              <X F="Width*0">0</X>
+              <Y F="Height*0">0</Y>
+            </LineTo>
+            <LineTo IX="5">
+              <X F="Width*0.990066">4.15278</X>
+              <Y F="Height*0">0</Y>
+            </LineTo>
+            <LineTo IX="6">
+              <X F="Width*1">4.19444</X>
+              <Y F="Height*0.111111">0.0416667</Y>
+            </LineTo>
+            <LineTo IX="7">
+              <X F="Width*1">4.19444</X>
+              <Y F="Height*1">0.375</Y>
+            </LineTo>
+            <MoveTo IX="8">
+              <X F="Width*0.990066">4.15278</X>
+              <Y F="Height*0.888889">0.333333</Y>
+            </MoveTo>
+            <LineTo IX="9">
+              <X F="Width*0">0</X>
+              <Y F="Height*0.888889">0.333333</Y>
+            </LineTo>
+            <MoveTo IX="10">
+              <X F="Width*0.990066">4.15278</X>
+              <Y F="Height*0.888889">0.333333</Y>
+            </MoveTo>
+            <LineTo IX="11">
+              <X F="Width*0.990066">4.15278</X>
+              <Y F="Height*0">0</Y>
+            </LineTo>
+            <MoveTo IX="12">
+              <X F="Width*0.990066">4.15278</X>
+              <Y F="Height*0.888889">0.333333</Y>
+            </MoveTo>
+            <LineTo IX="13">
+              <X F="Width*1">4.19444</X>
+              <Y F="Height*1">0.375</Y>
+            </LineTo>
+          </Geom>
+          <Text>src/jaco-ros/jaco_driver/src/jaco_api.cpp</Text>
+          <Connection IX="0">
+            <X F="Width*0.334437">1.40278</X>
+            <Y F="Height*0.962963">0.361111</Y>
+          </Connection>
+          <Connection IX="1">
+            <X F="Width*0">0</X>
+            <Y F="Height*0.259259">0.0972222</Y>
+          </Connection>
+        </Shape>
+        <Shape ID="4">
+          <XForm>
+            <PinX F="(BeginX+EndX)/2"/>
+            <PinY F="(BeginY+EndY)/2"/>
+            <Width F="SQRT((EndX-BeginX)^2+(EndY-BeginY)^2)"/>
+            <Height>0.00575534</Height>
+            <LocPinX F="Width*0.5"/>
+            <LocPinY F="Height*1"/>
+            <Angle F="ATAN2(EndY-BeginY,EndX-BeginX)"/>
+          </XForm>
+          <TextXForm>
+            <TxtPinX F="Width*0.475198">153.665</TxtPinX>
+            <TxtPinY F="Height*44.5">0.250357</TxtPinY>
+            <TxtWidth>0.125</TxtWidth>
+            <TxtHeight>0.263889</TxtHeight>
+            <TxtLocPinX F="0*TxtWidth"/>
+            <TxtLocPinY F="1*TxtHeight"/>
+            <TxtAngle F="-Angle"/>
+          </TextXForm>
+          <Line>
+            <LineWeight>0.0138889</LineWeight>
+            <LineColor F="RGB(0,0,205)"/>
+            <LinePattern>1</LinePattern>
+            <BeginArrow>0</BeginArrow>
+            <EndArrow>4</EndArrow>
+          </Line>
+          <Char IX="0">
+            <Font F="FONTTOID(&quot;Arial&quot;)">0</Font>
+            <Color F="RGB(0,0,0)"/>
+            <Style>0</Style>
+            <Size>0.166667</Size>
+          </Char>
+          <Geom IX="0">
+            <MoveTo IX="1">
+              <X F="Width*0"/>
+              <Y F="Height*1"/>
+            </MoveTo>
+            <SplineStart IX="2">
+              <X F="Width*0.246813"/>
+              <Y F="Height*0.947761"/>
+              <A>0</A>
+              <B>0</B>
+              <C>1</C>
+              <D>3</D>
+            </SplineStart>
+            <SplineKnot IX="3">
+              <X F="Width*0.724708"/>
+              <Y F="Height*0"/>
+              <A>0</A>
+            </SplineKnot>
+            <SplineKnot IX="4">
+              <X F="Width*1"/>
+              <Y F="Height*1"/>
+              <A>0</A>
+            </SplineKnot>
+            <NoFill>1</NoFill>
+          </Geom>
+          <Text>1</Text>
+          <XForm1D>
+            <BeginX F="PAR(PNT(Sheet.2!Connections.X1,SHEET.2!Connections.Y1))"/>
+            <BeginY F="PAR(PNT(Sheet.2!Connections.X1,SHEET.2!Connections.Y1))"/>
+            <EndX F="PAR(PNT(Sheet.3!Connections.X1,SHEET.3!Connections.Y1))"/>
+            <EndY F="PAR(PNT(Sheet.3!Connections.X1,SHEET.3!Connections.Y1))"/>
+          </XForm1D>
+        </Shape>
+        <Shape ID="5">
+          <XForm>
+            <PinX>20.1458</PinX>
+            <PinY>3.45139</PinY>
+            <Width>4.43056</Width>
+            <Height>0.375</Height>
+            <LocPinX F="Width*0.5"/>
+            <LocPinY F="Height*0.5"/>
+          </XForm>
+          <TextXForm>
+            <TxtPinX F="Width*0.0250784">0.111111</TxtPinX>
+            <TxtPinY F="Height*0.851852">0.319444</TxtPinY>
+            <TxtWidth>4.20833</TxtWidth>
+            <TxtHeight>0.263889</TxtHeight>
+            <TxtLocPinX F="0*TxtWidth"/>
+            <TxtLocPinY F="1*TxtHeight"/>
+            <TxtAngle F="-Angle"/>
+          </TextXForm>
+          <Fill>
+            <FillForegnd F="RGB(255,255,255)"/>
+          </Fill>
+          <Line>
+            <LineWeight>0.0138889</LineWeight>
+            <LineColor F="RGB(190,190,190)"/>
+            <LinePattern>1</LinePattern>
+          </Line>
+          <Char IX="0">
+            <Font F="FONTTOID(&quot;Arial&quot;)">0</Font>
+            <Color F="RGB(0,0,0)"/>
+            <Style>0</Style>
+            <Size>0.166667</Size>
+          </Char>
+          <Geom IX="0">
+            <MoveTo IX="1">
+              <X F="Width*1">4.43056</X>
+              <Y F="Height*1">0.375</Y>
+            </MoveTo>
+            <LineTo IX="2">
+              <X F="Width*0.00940439">0.0416667</X>
+              <Y F="Height*1">0.375</Y>
+            </LineTo>
+            <LineTo IX="3">
+              <X F="Width*0">0</X>
+              <Y F="Height*0.888889">0.333333</Y>
+            </LineTo>
+            <LineTo IX="4">
+              <X F="Width*0">0</X>
+              <Y F="Height*0">0</Y>
+            </LineTo>
+            <LineTo IX="5">
+              <X F="Width*0.990596">4.38889</X>
+              <Y F="Height*0">0</Y>
+            </LineTo>
+            <LineTo IX="6">
+              <X F="Width*1">4.43056</X>
+              <Y F="Height*0.111111">0.0416667</Y>
+            </LineTo>
+            <LineTo IX="7">
+              <X F="Width*1">4.43056</X>
+              <Y F="Height*1">0.375</Y>
+            </LineTo>
+            <MoveTo IX="8">
+              <X F="Width*0.990596">4.38889</X>
+              <Y F="Height*0.888889">0.333333</Y>
+            </MoveTo>
+            <LineTo IX="9">
+              <X F="Width*0">0</X>
+              <Y F="Height*0.888889">0.333333</Y>
+            </LineTo>
+            <MoveTo IX="10">
+              <X F="Width*0.990596">4.38889</X>
+              <Y F="Height*0.888889">0.333333</Y>
+            </MoveTo>
+            <LineTo IX="11">
+              <X F="Width*0.990596">4.38889</X>
+              <Y F="Height*0">0</Y>
+            </LineTo>
+            <MoveTo IX="12">
+              <X F="Width*0.990596">4.38889</X>
+              <Y F="Height*0.888889">0.333333</Y>
+            </MoveTo>
+            <LineTo IX="13">
+              <X F="Width*1">4.43056</X>
+              <Y F="Height*1">0.375</Y>
+            </LineTo>
+          </Geom>
+          <Text>src/jaco-ros/jaco_driver/src/jaco_types.cpp</Text>
+          <Connection IX="0">
+            <X F="Width*0.216301">0.958333</X>
+            <Y F="Height*0">0</Y>
+          </Connection>
+          <Connection IX="1">
+            <X F="Width*0.420063">1.86111</X>
+            <Y F="Height*0">0</Y>
+          </Connection>
+          <Connection IX="2">
+            <X F="Width*0.332288">1.47222</X>
+            <Y F="Height*0.962963">0.361111</Y>
+          </Connection>
+          <Connection IX="3">
+            <X F="Width*-0.0031348">-0.0138889</X>
+            <Y F="Height*0.62963">0.236111</Y>
+          </Connection>
+        </Shape>
+        <Shape ID="6">
+          <XForm>
+            <PinX F="(BeginX+EndX)/2"/>
+            <PinY F="(BeginY+EndY)/2"/>
+            <Width F="SQRT((EndX-BeginX)^2+(EndY-BeginY)^2)"/>
+            <Height>0.00372935</Height>
+            <LocPinX F="Width*0.5"/>
+            <LocPinY F="Height*0.396825"/>
+            <Angle F="ATAN2(EndY-BeginY,EndX-BeginX)"/>
+          </XForm>
+          <TextXForm>
+            <TxtPinX F="Width*0.478683">112.311</TxtPinX>
+            <TxtPinY F="Height*76.6508">0.284378</TxtPinY>
+            <TxtWidth>0.25</TxtWidth>
+            <TxtHeight>0.263889</TxtHeight>
+            <TxtLocPinX F="0*TxtWidth"/>
+            <TxtLocPinY F="1*TxtHeight"/>
+            <TxtAngle F="-Angle"/>
+          </TextXForm>
+          <Line>
+            <LineWeight>0.0138889</LineWeight>
+            <LineColor F="RGB(0,0,205)"/>
+            <LinePattern>1</LinePattern>
+            <BeginArrow>0</BeginArrow>
+            <EndArrow>4</EndArrow>
+          </Line>
+          <Char IX="0">
+            <Font F="FONTTOID(&quot;Arial&quot;)">0</Font>
+            <Color F="RGB(0,0,0)"/>
+            <Style>0</Style>
+            <Size>0.166667</Size>
+          </Char>
+          <Geom IX="0">
+            <MoveTo IX="1">
+              <X F="Width*0"/>
+              <Y F="Height*0.396825"/>
+            </MoveTo>
+            <SplineStart IX="2">
+              <X F="Width*0.288725"/>
+              <Y F="Height*0"/>
+              <A>0</A>
+              <B>0</B>
+              <C>1</C>
+              <D>3</D>
+            </SplineStart>
+            <SplineKnot IX="3">
+              <X F="Width*0.681139"/>
+              <Y F="Height*1"/>
+              <A>0</A>
+            </SplineKnot>
+            <SplineKnot IX="4">
+              <X F="Width*1"/>
+              <Y F="Height*0.396825"/>
+              <A>0</A>
+            </SplineKnot>
+            <NoFill>1</NoFill>
+          </Geom>
+          <Text>37</Text>
+          <XForm1D>
+            <BeginX F="PAR(PNT(Sheet.2!Connections.X2,SHEET.2!Connections.Y2))"/>
+            <BeginY F="PAR(PNT(Sheet.2!Connections.X2,SHEET.2!Connections.Y2))"/>
+            <EndX F="PAR(PNT(Sheet.5!Connections.X1,SHEET.5!Connections.Y1))"/>
+            <EndY F="PAR(PNT(Sheet.5!Connections.X1,SHEET.5!Connections.Y1))"/>
+          </XForm1D>
+        </Shape>
+        <Shape ID="7">
+          <XForm>
+            <PinX>8.19444</PinX>
+            <PinY>1.6875</PinY>
+            <Width>5.27778</Width>
+            <Height>0.375</Height>
+            <LocPinX F="Width*0.5"/>
+            <LocPinY F="Height*0.5"/>
+          </XForm>
+          <TextXForm>
+            <TxtPinX F="Width*0.0210526">0.111111</TxtPinX>
+            <TxtPinY F="Height*0.851852">0.319444</TxtPinY>
+            <TxtWidth>5.05556</TxtWidth>
+            <TxtHeight>0.263889</TxtHeight>
+            <TxtLocPinX F="0*TxtWidth"/>
+            <TxtLocPinY F="1*TxtHeight"/>
+            <TxtAngle F="-Angle"/>
+          </TextXForm>
+          <Fill>
+            <FillForegnd F="RGB(255,255,255)"/>
+          </Fill>
+          <Line>
+            <LineWeight>0.0138889</LineWeight>
+            <LineColor F="RGB(190,190,190)"/>
+            <LinePattern>1</LinePattern>
+          </Line>
+          <Char IX="0">
+            <Font F="FONTTOID(&quot;Arial&quot;)">0</Font>
+            <Color F="RGB(0,0,0)"/>
+            <Style>0</Style>
+            <Size>0.166667</Size>
+          </Char>
+          <Geom IX="0">
+            <MoveTo IX="1">
+              <X F="Width*1">5.27778</X>
+              <Y F="Height*1">0.375</Y>
+            </MoveTo>
+            <LineTo IX="2">
+              <X F="Width*0.00789474">0.0416667</X>
+              <Y F="Height*1">0.375</Y>
+            </LineTo>
+            <LineTo IX="3">
+              <X F="Width*0">0</X>
+              <Y F="Height*0.888889">0.333333</Y>
+            </LineTo>
+            <LineTo IX="4">
+              <X F="Width*0">0</X>
+              <Y F="Height*0">0</Y>
+            </LineTo>
+            <LineTo IX="5">
+              <X F="Width*0.992105">5.23611</X>
+              <Y F="Height*0">0</Y>
+            </LineTo>
+            <LineTo IX="6">
+              <X F="Width*1">5.27778</X>
+              <Y F="Height*0.111111">0.0416667</Y>
+            </LineTo>
+            <LineTo IX="7">
+              <X F="Width*1">5.27778</X>
+              <Y F="Height*1">0.375</Y>
+            </LineTo>
+            <MoveTo IX="8">
+              <X F="Width*0.992105">5.23611</X>
+              <Y F="Height*0.888889">0.333333</Y>
+            </MoveTo>
+            <LineTo IX="9">
+              <X F="Width*0">0</X>
+              <Y F="Height*0.888889">0.333333</Y>
+            </LineTo>
+            <MoveTo IX="10">
+              <X F="Width*0.992105">5.23611</X>
+              <Y F="Height*0.888889">0.333333</Y>
+            </MoveTo>
+            <LineTo IX="11">
+              <X F="Width*0.992105">5.23611</X>
+              <Y F="Height*0">0</Y>
+            </LineTo>
+            <MoveTo IX="12">
+              <X F="Width*0.992105">5.23611</X>
+              <Y F="Height*0.888889">0.333333</Y>
+            </MoveTo>
+            <LineTo IX="13">
+              <X F="Width*1">5.27778</X>
+              <Y F="Height*1">0.375</Y>
+            </LineTo>
+          </Geom>
+          <Text>src/jaco-ros/jaco_driver/src/jaco_fingers_action.cpp</Text>
+          <Connection IX="0">
+            <X F="Width*1">5.27778</X>
+            <Y F="Height*0.814815">0.305556</Y>
+          </Connection>
+          <Connection IX="1">
+            <X F="Width*1">5.27778</X>
+            <Y F="Height*0.111111">0.0416667</Y>
+          </Connection>
+          <Connection IX="2">
+            <X F="Width*0">0</X>
+            <Y F="Height*0.962963">0.361111</Y>
+          </Connection>
+        </Shape>
+        <Shape ID="8">
+          <XForm>
+            <PinX F="(BeginX+EndX)/2"/>
+            <PinY F="(BeginY+EndY)/2"/>
+            <Width F="SQRT((EndX-BeginX)^2+(EndY-BeginY)^2)"/>
+            <Height>0.0942541</Height>
+            <LocPinX F="Width*0.5"/>
+            <LocPinY F="Height*1"/>
+            <Angle F="ATAN2(EndY-BeginY,EndX-BeginX)"/>
+          </XForm>
+          <TextXForm>
+            <TxtPinX F="Width*0.214227">46.5937</TxtPinX>
+            <TxtPinY F="Height*3.64431">0.249237</TxtPinY>
+            <TxtWidth>0.25</TxtWidth>
+            <TxtHeight>0.263889</TxtHeight>
+            <TxtLocPinX F="0*TxtWidth"/>
+            <TxtLocPinY F="1*TxtHeight"/>
+            <TxtAngle F="-Angle"/>
+          </TextXForm>
+          <Line>
+            <LineWeight>0.0138889</LineWeight>
+            <LineColor F="RGB(0,0,205)"/>
+            <LinePattern>1</LinePattern>
+            <BeginArrow>0</BeginArrow>
+            <EndArrow>4</EndArrow>
+          </Line>
+          <Char IX="0">
+            <Font F="FONTTOID(&quot;Arial&quot;)">0</Font>
+            <Color F="RGB(0,0,0)"/>
+            <Style>0</Style>
+            <Size>0.166667</Size>
+          </Char>
+          <Geom IX="0">
+            <MoveTo IX="1">
+              <X F="Width*0"/>
+              <Y F="Height*1"/>
+            </MoveTo>
+            <SplineStart IX="2">
+              <X F="Width*0.0919142"/>
+              <Y F="Height*0.692412"/>
+              <A>0</A>
+              <B>0</B>
+              <C>2</C>
+              <D>3</D>
+            </SplineStart>
+            <SplineKnot IX="3">
+              <X F="Width*0.189261"/>
+              <Y F="Height*0.499322"/>
+              <A>0</A>
+            </SplineKnot>
+            <SplineKnot IX="4">
+              <X F="Width*0.277603"/>
+              <Y F="Height*0.365854"/>
+              <A>0</A>
+            </SplineKnot>
+            <SplineKnot IX="5">
+              <X F="Width*0.514681"/>
+              <Y F="Height*0"/>
+              <A>1</A>
+            </SplineKnot>
+            <SplineKnot IX="6">
+              <X F="Width*0.785287"/>
+              <Y F="Height*0.465447"/>
+              <A>1</A>
+            </SplineKnot>
+            <SplineKnot IX="7">
+              <X F="Width*1"/>
+              <Y F="Height*1"/>
+              <A>1</A>
+            </SplineKnot>
+            <NoFill>1</NoFill>
+          </Geom>
+          <Text>10</Text>
+          <XForm1D>
+            <BeginX F="PAR(PNT(Sheet.7!Connections.X1,SHEET.7!Connections.Y1))"/>
+            <BeginY F="PAR(PNT(Sheet.7!Connections.X1,SHEET.7!Connections.Y1))"/>
+            <EndX F="PAR(PNT(Sheet.2!Connections.X3,SHEET.2!Connections.Y3))"/>
+            <EndY F="PAR(PNT(Sheet.2!Connections.X3,SHEET.2!Connections.Y3))"/>
+          </XForm1D>
+        </Shape>
+        <Shape ID="9">
+          <XForm>
+            <PinX F="(BeginX+EndX)/2"/>
+            <PinY F="(BeginY+EndY)/2"/>
+            <Width F="SQRT((EndX-BeginX)^2+(EndY-BeginY)^2)"/>
+            <Height>0.684875</Height>
+            <LocPinX F="Width*0.5"/>
+            <LocPinY F="Height*1"/>
+            <Angle F="ATAN2(EndY-BeginY,EndX-BeginX)"/>
+          </XForm>
+          <TextXForm>
+            <TxtPinX F="Width*0.394997">259.438</TxtPinX>
+            <TxtPinY F="Height*1.08302">0.0568614</TxtPinY>
+            <TxtWidth>0.125</TxtWidth>
+            <TxtHeight>0.263889</TxtHeight>
+            <TxtLocPinX F="0*TxtWidth"/>
+            <TxtLocPinY F="1*TxtHeight"/>
+            <TxtAngle F="-Angle"/>
+          </TextXForm>
+          <Line>
+            <LineWeight>0.0138889</LineWeight>
+            <LineColor F="RGB(0,0,205)"/>
+            <LinePattern>1</LinePattern>
+            <BeginArrow>0</BeginArrow>
+            <EndArrow>4</EndArrow>
+          </Line>
+          <Char IX="0">
+            <Font F="FONTTOID(&quot;Arial&quot;)">0</Font>
+            <Color F="RGB(0,0,0)"/>
+            <Style>0</Style>
+            <Size>0.166667</Size>
+          </Char>
+          <Geom IX="0">
+            <MoveTo IX="1">
+              <X F="Width*0"/>
+              <Y F="Height*1"/>
+            </MoveTo>
+            <SplineStart IX="2">
+              <X F="Width*0.180336"/>
+              <Y F="Height*0.496912"/>
+              <A>0</A>
+              <B>0</B>
+              <C>2</C>
+              <D>3</D>
+            </SplineStart>
+            <SplineKnot IX="3">
+              <X F="Width*0.422776"/>
+              <Y F="Height*0"/>
+              <A>0</A>
+            </SplineKnot>
+            <SplineKnot IX="4">
+              <X F="Width*0.637727"/>
+              <Y F="Height*0.0690997"/>
+              <A>0</A>
+            </SplineKnot>
+            <SplineKnot IX="5">
+              <X F="Width*0.768491"/>
+              <Y F="Height*0.105965"/>
+              <A>1</A>
+            </SplineKnot>
+            <SplineKnot IX="6">
+              <X F="Width*0.917483"/>
+              <Y F="Height*0.65373"/>
+              <A>1</A>
+            </SplineKnot>
+            <SplineKnot IX="7">
+              <X F="Width*1"/>
+              <Y F="Height*1"/>
+              <A>1</A>
+            </SplineKnot>
+            <NoFill>1</NoFill>
+          </Geom>
+          <Text>9</Text>
+          <XForm1D>
+            <BeginX F="PAR(PNT(Sheet.7!Connections.X2,SHEET.7!Connections.Y2))"/>
+            <BeginY F="PAR(PNT(Sheet.7!Connections.X2,SHEET.7!Connections.Y2))"/>
+            <EndX F="PAR(PNT(Sheet.5!Connections.X2,SHEET.5!Connections.Y2))"/>
+            <EndY F="PAR(PNT(Sheet.5!Connections.X2,SHEET.5!Connections.Y2))"/>
+          </XForm1D>
+        </Shape>
+        <Shape ID="10">
+          <XForm>
+            <PinX>8.20139</PinX>
+            <PinY>3.71528</PinY>
+            <Width>5.26389</Width>
+            <Height>0.375</Height>
+            <LocPinX F="Width*0.5"/>
+            <LocPinY F="Height*0.5"/>
+          </XForm>
+          <TextXForm>
+            <TxtPinX F="Width*0.0211082">0.111111</TxtPinX>
+            <TxtPinY F="Height*0.851852">0.319444</TxtPinY>
+            <TxtWidth>5.04167</TxtWidth>
+            <TxtHeight>0.263889</TxtHeight>
+            <TxtLocPinX F="0*TxtWidth"/>
+            <TxtLocPinY F="1*TxtHeight"/>
+            <TxtAngle F="-Angle"/>
+          </TextXForm>
+          <Fill>
+            <FillForegnd F="RGB(255,255,255)"/>
+          </Fill>
+          <Line>
+            <LineWeight>0.0138889</LineWeight>
+            <LineColor F="RGB(190,190,190)"/>
+            <LinePattern>1</LinePattern>
+          </Line>
+          <Char IX="0">
+            <Font F="FONTTOID(&quot;Arial&quot;)">0</Font>
+            <Color F="RGB(0,0,0)"/>
+            <Style>0</Style>
+            <Size>0.166667</Size>
+          </Char>
+          <Geom IX="0">
+            <MoveTo IX="1">
+              <X F="Width*1">5.26389</X>
+              <Y F="Height*1">0.375</Y>
+            </MoveTo>
+            <LineTo IX="2">
+              <X F="Width*0.00791557">0.0416667</X>
+              <Y F="Height*1">0.375</Y>
+            </LineTo>
+            <LineTo IX="3">
+              <X F="Width*0">0</X>
+              <Y F="Height*0.888889">0.333333</Y>
+            </LineTo>
+            <LineTo IX="4">
+              <X F="Width*0">0</X>
+              <Y F="Height*0">0</Y>
+            </LineTo>
+            <LineTo IX="5">
+              <X F="Width*0.992084">5.22222</X>
+              <Y F="Height*0">0</Y>
+            </LineTo>
+            <LineTo IX="6">
+              <X F="Width*1">5.26389</X>
+              <Y F="Height*0.111111">0.0416667</Y>
+            </LineTo>
+            <LineTo IX="7">
+              <X F="Width*1">5.26389</X>
+              <Y F="Height*1">0.375</Y>
+            </LineTo>
+            <MoveTo IX="8">
+              <X F="Width*0.992084">5.22222</X>
+              <Y F="Height*0.888889">0.333333</Y>
+            </MoveTo>
+            <LineTo IX="9">
+              <X F="Width*0">0</X>
+              <Y F="Height*0.888889">0.333333</Y>
+            </LineTo>
+            <MoveTo IX="10">
+              <X F="Width*0.992084">5.22222</X>
+              <Y F="Height*0.888889">0.333333</Y>
+            </MoveTo>
+            <LineTo IX="11">
+              <X F="Width*0.992084">5.22222</X>
+              <Y F="Height*0">0</Y>
+            </LineTo>
+            <MoveTo IX="12">
+              <X F="Width*0.992084">5.22222</X>
+              <Y F="Height*0.888889">0.333333</Y>
+            </MoveTo>
+            <LineTo IX="13">
+              <X F="Width*1">5.26389</X>
+              <Y F="Height*1">0.375</Y>
+            </LineTo>
+          </Geom>
+          <Text>src/jaco-ros/jaco_driver/src/jaco_angles_action.cpp</Text>
+          <Connection IX="0">
+            <X F="Width*0.841689">4.43056</X>
+            <Y F="Height*0">0</Y>
+          </Connection>
+          <Connection IX="1">
+            <X F="Width*0.680739">3.58333</X>
+            <Y F="Height*0.962963">0.361111</Y>
+          </Connection>
+          <Connection IX="2">
+            <X F="Width*0.060686">0.319444</X>
+            <Y F="Height*0">0</Y>
+          </Connection>
+        </Shape>
+        <Shape ID="11">
+          <XForm>
+            <PinX F="(BeginX+EndX)/2"/>
+            <PinY F="(BeginY+EndY)/2"/>
+            <Width F="SQRT((EndX-BeginX)^2+(EndY-BeginY)^2)"/>
+            <Height>0.0680562</Height>
+            <LocPinX F="Width*0.5"/>
+            <LocPinY F="Height*0"/>
+            <Angle F="ATAN2(EndY-BeginY,EndX-BeginX)"/>
+          </XForm>
+          <TextXForm>
+            <TxtPinX F="Width*0.384868">104.463</TxtPinX>
+            <TxtPinY F="Height*4.74436">0.322883</TxtPinY>
+            <TxtWidth>0.125</TxtWidth>
+            <TxtHeight>0.263889</TxtHeight>
+            <TxtLocPinX F="0*TxtWidth"/>
+            <TxtLocPinY F="1*TxtHeight"/>
+            <TxtAngle F="-Angle"/>
+          </TextXForm>
+          <Line>
+            <LineWeight>0.0138889</LineWeight>
+            <LineColor F="RGB(0,0,205)"/>
+            <LinePattern>1</LinePattern>
+            <BeginArrow>0</BeginArrow>
+            <EndArrow>4</EndArrow>
+          </Line>
+          <Char IX="0">
+            <Font F="FONTTOID(&quot;Arial&quot;)">0</Font>
+            <Color F="RGB(0,0,0)"/>
+            <Style>0</Style>
+            <Size>0.166667</Size>
+          </Char>
+          <Geom IX="0">
+            <MoveTo IX="1">
+              <X F="Width*0"/>
+              <Y F="Height*0"/>
+            </MoveTo>
+            <SplineStart IX="2">
+              <X F="Width*0.0816321"/>
+              <Y F="Height*0.293233"/>
+              <A>0</A>
+              <B>0</B>
+              <C>2</C>
+              <D>3</D>
+            </SplineStart>
+            <SplineKnot IX="3">
+              <X F="Width*0.166875"/>
+              <Y F="Height*0.627068"/>
+              <A>0</A>
+            </SplineKnot>
+            <SplineKnot IX="4">
+              <X F="Width*0.245629"/>
+              <Y F="Height*0.679699"/>
+              <A>0</A>
+            </SplineKnot>
+            <SplineKnot IX="5">
+              <X F="Width*0.496335"/>
+              <Y F="Height*1"/>
+              <A>1</A>
+            </SplineKnot>
+            <SplineKnot IX="6">
+              <X F="Width*0.787545"/>
+              <Y F="Height*0.526316"/>
+              <A>1</A>
+            </SplineKnot>
+            <SplineKnot IX="7">
+              <X F="Width*1"/>
+              <Y F="Height*0"/>
+              <A>1</A>
+            </SplineKnot>
+            <NoFill>1</NoFill>
+          </Geom>
+          <Text>9</Text>
+          <XForm1D>
+            <BeginX F="PAR(PNT(Sheet.10!Connections.X1,SHEET.10!Connections.Y1))"/>
+            <BeginY F="PAR(PNT(Sheet.10!Connections.X1,SHEET.10!Connections.Y1))"/>
+            <EndX F="PAR(PNT(Sheet.2!Connections.X4,SHEET.2!Connections.Y4))"/>
+            <EndY F="PAR(PNT(Sheet.2!Connections.X4,SHEET.2!Connections.Y4))"/>
+          </XForm1D>
+        </Shape>
+        <Shape ID="12">
+          <XForm>
+            <PinX F="(BeginX+EndX)/2"/>
+            <PinY F="(BeginY+EndY)/2"/>
+            <Width F="SQRT((EndX-BeginX)^2+(EndY-BeginY)^2)"/>
+            <Height>0.927595</Height>
+            <LocPinX F="Width*0.5"/>
+            <LocPinY F="Height*0"/>
+            <Angle F="ATAN2(EndY-BeginY,EndX-BeginX)"/>
+          </XForm>
+          <TextXForm>
+            <TxtPinX F="Width*0.505946">373.512</TxtPinX>
+            <TxtPinY F="Height*0.937816">0.869913</TxtPinY>
+            <TxtWidth>0.125</TxtWidth>
+            <TxtHeight>0.263889</TxtHeight>
+            <TxtLocPinX F="0*TxtWidth"/>
+            <TxtLocPinY F="1*TxtHeight"/>
+            <TxtAngle F="-Angle"/>
+          </TextXForm>
+          <Line>
+            <LineWeight>0.0138889</LineWeight>
+            <LineColor F="RGB(0,0,205)"/>
+            <LinePattern>1</LinePattern>
+            <BeginArrow>0</BeginArrow>
+            <EndArrow>4</EndArrow>
+          </Line>
+          <Char IX="0">
+            <Font F="FONTTOID(&quot;Arial&quot;)">0</Font>
+            <Color F="RGB(0,0,0)"/>
+            <Style>0</Style>
+            <Size>0.166667</Size>
+          </Char>
+          <Geom IX="0">
+            <MoveTo IX="1">
+              <X F="Width*0"/>
+              <Y F="Height*0"/>
+            </MoveTo>
+            <SplineStart IX="2">
+              <X F="Width*0.163081"/>
+              <Y F="Height*0.375925"/>
+              <A>0</A>
+              <B>0</B>
+              <C>2</C>
+              <D>3</D>
+            </SplineStart>
+            <SplineKnot IX="3">
+              <X F="Width*0.513931"/>
+              <Y F="Height*1"/>
+              <A>0</A>
+            </SplineKnot>
+            <SplineKnot IX="4">
+              <X F="Width*0.805211"/>
+              <Y F="Height*0.43884"/>
+              <A>0</A>
+            </SplineKnot>
+            <SplineKnot IX="5">
+              <X F="Width*0.869168"/>
+              <Y F="Height*0.322239"/>
+              <A>1</A>
+            </SplineKnot>
+            <SplineKnot IX="6">
+              <X F="Width*0.940035"/>
+              <Y F="Height*0.147693"/>
+              <A>1</A>
+            </SplineKnot>
+            <SplineKnot IX="7">
+              <X F="Width*1"/>
+              <Y F="Height*0"/>
+              <A>1</A>
+            </SplineKnot>
+            <NoFill>1</NoFill>
+          </Geom>
+          <Text>9</Text>
+          <XForm1D>
+            <BeginX F="PAR(PNT(Sheet.10!Connections.X2,SHEET.10!Connections.Y2))"/>
+            <BeginY F="PAR(PNT(Sheet.10!Connections.X2,SHEET.10!Connections.Y2))"/>
+            <EndX F="PAR(PNT(Sheet.5!Connections.X3,SHEET.5!Connections.Y3))"/>
+            <EndY F="PAR(PNT(Sheet.5!Connections.X3,SHEET.5!Connections.Y3))"/>
+          </XForm1D>
+        </Shape>
+        <Shape ID="13">
+          <XForm>
+            <PinX>8.20139</PinX>
+            <PinY>3.09028</PinY>
+            <Width>5.09722</Width>
+            <Height>0.375</Height>
+            <LocPinX F="Width*0.5"/>
+            <LocPinY F="Height*0.5"/>
+          </XForm>
+          <TextXForm>
+            <TxtPinX F="Width*0.0217984">0.111111</TxtPinX>
+            <TxtPinY F="Height*0.851852">0.319444</TxtPinY>
+            <TxtWidth>4.875</TxtWidth>
+            <TxtHeight>0.263889</TxtHeight>
+            <TxtLocPinX F="0*TxtWidth"/>
+            <TxtLocPinY F="1*TxtHeight"/>
+            <TxtAngle F="-Angle"/>
+          </TextXForm>
+          <Fill>
+            <FillForegnd F="RGB(255,255,255)"/>
+          </Fill>
+          <Line>
+            <LineWeight>0.0138889</LineWeight>
+            <LineColor F="RGB(190,190,190)"/>
+            <LinePattern>1</LinePattern>
+          </Line>
+          <Char IX="0">
+            <Font F="FONTTOID(&quot;Arial&quot;)">0</Font>
+            <Color F="RGB(0,0,0)"/>
+            <Style>0</Style>
+            <Size>0.166667</Size>
+          </Char>
+          <Geom IX="0">
+            <MoveTo IX="1">
+              <X F="Width*1">5.09722</X>
+              <Y F="Height*1">0.375</Y>
+            </MoveTo>
+            <LineTo IX="2">
+              <X F="Width*0.00817439">0.0416667</X>
+              <Y F="Height*1">0.375</Y>
+            </LineTo>
+            <LineTo IX="3">
+              <X F="Width*0">0</X>
+              <Y F="Height*0.888889">0.333333</Y>
+            </LineTo>
+            <LineTo IX="4">
+              <X F="Width*0">0</X>
+              <Y F="Height*0">0</Y>
+            </LineTo>
+            <LineTo IX="5">
+              <X F="Width*0.991826">5.05556</X>
+              <Y F="Height*0">0</Y>
+            </LineTo>
+            <LineTo IX="6">
+              <X F="Width*1">5.09722</X>
+              <Y F="Height*0.111111">0.0416667</Y>
+            </LineTo>
+            <LineTo IX="7">
+              <X F="Width*1">5.09722</X>
+              <Y F="Height*1">0.375</Y>
+            </LineTo>
+            <MoveTo IX="8">
+              <X F="Width*0.991826">5.05556</X>
+              <Y F="Height*0.888889">0.333333</Y>
+            </MoveTo>
+            <LineTo IX="9">
+              <X F="Width*0">0</X>
+              <Y F="Height*0.888889">0.333333</Y>
+            </LineTo>
+            <MoveTo IX="10">
+              <X F="Width*0.991826">5.05556</X>
+              <Y F="Height*0.888889">0.333333</Y>
+            </MoveTo>
+            <LineTo IX="11">
+              <X F="Width*0.991826">5.05556</X>
+              <Y F="Height*0">0</Y>
+            </LineTo>
+            <MoveTo IX="12">
+              <X F="Width*0.991826">5.05556</X>
+              <Y F="Height*0.888889">0.333333</Y>
+            </MoveTo>
+            <LineTo IX="13">
+              <X F="Width*1">5.09722</X>
+              <Y F="Height*1">0.375</Y>
+            </LineTo>
+          </Geom>
+          <Text>src/jaco-ros/jaco_driver/src/jaco_pose_action.cpp</Text>
+          <Connection IX="0">
+            <X F="Width*0.961853">4.90278</X>
+            <Y F="Height*0">0</Y>
+          </Connection>
+          <Connection IX="1">
+            <X F="Width*0.926431">4.72222</X>
+            <Y F="Height*0.962963">0.361111</Y>
+          </Connection>
+          <Connection IX="2">
+            <X F="Width*0.160763">0.819444</X>
+            <Y F="Height*0">0</Y>
+          </Connection>
+        </Shape>
+        <Shape ID="14">
+          <XForm>
+            <PinX F="(BeginX+EndX)/2"/>
+            <PinY F="(BeginY+EndY)/2"/>
+            <Width F="SQRT((EndX-BeginX)^2+(EndY-BeginY)^2)"/>
+            <Height>0.00358119</Height>
+            <LocPinX F="Width*0.5"/>
+            <LocPinY F="Height*1"/>
+            <Angle F="ATAN2(EndY-BeginY,EndX-BeginX)"/>
+          </XForm>
+          <TextXForm>
+            <TxtPinX F="Width*0.564822">65.7163</TxtPinX>
+            <TxtPinY F="Height*75.2333">0.265844</TxtPinY>
+            <TxtWidth>0.125</TxtWidth>
+            <TxtHeight>0.263889</TxtHeight>
+            <TxtLocPinX F="0*TxtWidth"/>
+            <TxtLocPinY F="1*TxtHeight"/>
+            <TxtAngle F="-Angle"/>
+          </TextXForm>
+          <Line>
+            <LineWeight>0.0138889</LineWeight>
+            <LineColor F="RGB(0,0,205)"/>
+            <LinePattern>1</LinePattern>
+            <BeginArrow>0</BeginArrow>
+            <EndArrow>4</EndArrow>
+          </Line>
+          <Char IX="0">
+            <Font F="FONTTOID(&quot;Arial&quot;)">0</Font>
+            <Color F="RGB(0,0,0)"/>
+            <Style>0</Style>
+            <Size>0.166667</Size>
+          </Char>
+          <Geom IX="0">
+            <MoveTo IX="1">
+              <X F="Width*0"/>
+              <Y F="Height*1"/>
+            </MoveTo>
+            <SplineStart IX="2">
+              <X F="Width*0.310482"/>
+              <Y F="Height*0.2"/>
+              <A>0</A>
+              <B>0</B>
+              <C>1</C>
+              <D>3</D>
+            </SplineStart>
+            <SplineKnot IX="3">
+              <X F="Width*0.638103"/>
+              <Y F="Height*0"/>
+              <A>0</A>
+            </SplineKnot>
+            <SplineKnot IX="4">
+              <X F="Width*1"/>
+              <Y F="Height*1"/>
+              <A>0</A>
+            </SplineKnot>
+            <NoFill>1</NoFill>
+          </Geom>
+          <Text>9</Text>
+          <XForm1D>
+            <BeginX F="PAR(PNT(Sheet.13!Connections.X1,SHEET.13!Connections.Y1))"/>
+            <BeginY F="PAR(PNT(Sheet.13!Connections.X1,SHEET.13!Connections.Y1))"/>
+            <EndX F="PAR(PNT(Sheet.2!Connections.X5,SHEET.2!Connections.Y5))"/>
+            <EndY F="PAR(PNT(Sheet.2!Connections.X5,SHEET.2!Connections.Y5))"/>
+          </XForm1D>
+        </Shape>
+        <Shape ID="15">
+          <XForm>
+            <PinX F="(BeginX+EndX)/2"/>
+            <PinY F="(BeginY+EndY)/2"/>
+            <Width F="SQRT((EndX-BeginX)^2+(EndY-BeginY)^2)"/>
+            <Height>0.338743</Height>
+            <LocPinX F="Width*0.5"/>
+            <LocPinY F="Height*0"/>
+            <Angle F="ATAN2(EndY-BeginY,EndX-BeginX)"/>
+          </XForm>
+          <TextXForm>
+            <TxtPinX F="Width*0.530562">288.236</TxtPinX>
+            <TxtPinY F="Height*1.43494">0.486078</TxtPinY>
+            <TxtWidth>0.125</TxtWidth>
+            <TxtHeight>0.263889</TxtHeight>
+            <TxtLocPinX F="0*TxtWidth"/>
+            <TxtLocPinY F="1*TxtHeight"/>
+            <TxtAngle F="-Angle"/>
+          </TextXForm>
+          <Line>
+            <LineWeight>0.0138889</LineWeight>
+            <LineColor F="RGB(0,0,205)"/>
+            <LinePattern>1</LinePattern>
+            <BeginArrow>0</BeginArrow>
+            <EndArrow>4</EndArrow>
+          </Line>
+          <Char IX="0">
+            <Font F="FONTTOID(&quot;Arial&quot;)">0</Font>
+            <Color F="RGB(0,0,0)"/>
+            <Style>0</Style>
+            <Size>0.166667</Size>
+          </Char>
+          <Geom IX="0">
+            <MoveTo IX="1">
+              <X F="Width*0"/>
+              <Y F="Height*0"/>
+            </MoveTo>
+            <SplineStart IX="2">
+              <X F="Width*0.0240904"/>
+              <Y F="Height*0.106264"/>
+              <A>0</A>
+              <B>0</B>
+              <C>4</C>
+              <D>3</D>
+            </SplineStart>
+            <SplineKnot IX="3">
+              <X F="Width*0.0481809"/>
+              <Y F="Height*0.212528"/>
+              <A>0</A>
+            </SplineKnot>
+            <SplineKnot IX="4">
+              <X F="Width*0.0722713"/>
+              <Y F="Height*0.318792"/>
+              <A>0</A>
+            </SplineKnot>
+            <SplineKnot IX="5">
+              <X F="Width*0.103836"/>
+              <Y F="Height*0.501887"/>
+              <A>1</A>
+            </SplineKnot>
+            <SplineKnot IX="6">
+              <X F="Width*0.107919"/>
+              <Y F="Height*0.786189"/>
+              <A>1</A>
+            </SplineKnot>
+            <SplineKnot IX="7">
+              <X F="Width*0.139426"/>
+              <Y F="Height*0.928302"/>
+              <A>1</A>
+            </SplineKnot>
+            <SplineKnot IX="8">
+              <X F="Width*0.15426"/>
+              <Y F="Height*1"/>
+              <A>2</A>
+            </SplineKnot>
+            <SplineKnot IX="9">
+              <X F="Width*0.157824"/>
+              <Y F="Height*0.915472"/>
+              <A>2</A>
+            </SplineKnot>
+            <SplineKnot IX="10">
+              <X F="Width*0.172543"/>
+              <Y F="Height*0.905208"/>
+              <A>2</A>
+            </SplineKnot>
+            <SplineKnot IX="11">
+              <X F="Width*0.450298"/>
+              <Y F="Height*0.670491"/>
+              <A>3</A>
+            </SplineKnot>
+            <SplineKnot IX="12">
+              <X F="Width*0.766516"/>
+              <Y F="Height*0.285887"/>
+              <A>3</A>
+            </SplineKnot>
+            <SplineKnot IX="13">
+              <X F="Width*1"/>
+              <Y F="Height*0"/>
+              <A>3</A>
+            </SplineKnot>
+            <NoFill>1</NoFill>
+          </Geom>
+          <Text>4</Text>
+          <XForm1D>
+            <BeginX F="PAR(PNT(Sheet.13!Connections.X2,SHEET.13!Connections.Y2))"/>
+            <BeginY F="PAR(PNT(Sheet.13!Connections.X2,SHEET.13!Connections.Y2))"/>
+            <EndX F="PAR(PNT(Sheet.5!Connections.X4,SHEET.5!Connections.Y4))"/>
+            <EndY F="PAR(PNT(Sheet.5!Connections.X4,SHEET.5!Connections.Y4))"/>
+          </XForm1D>
+        </Shape>
+        <Shape ID="16">
+          <XForm>
+            <PinX>8.19444</PinX>
+            <PinY>0.236111</PinY>
+            <Width>5.44444</Width>
+            <Height>0.388889</Height>
+            <LocPinX F="Width*0.5"/>
+            <LocPinY F="Height*0.5"/>
+          </XForm>
+          <TextXForm>
+            <TxtPinX F="Width*0.0204082">0.111111</TxtPinX>
+            <TxtPinY F="Height*0.857143">0.333333</TxtPinY>
+            <TxtWidth>5.22222</TxtWidth>
+            <TxtHeight>0.263889</TxtHeight>
+            <TxtLocPinX F="0*TxtWidth"/>
+            <TxtLocPinY F="1*TxtHeight"/>
+            <TxtAngle F="-Angle"/>
+          </TextXForm>
+          <Fill>
+            <FillForegnd F="RGB(255,255,255)"/>
+          </Fill>
+          <Line>
+            <LineWeight>0.0138889</LineWeight>
+            <LineColor F="RGB(190,190,190)"/>
+            <LinePattern>1</LinePattern>
+          </Line>
+          <Char IX="0">
+            <Font F="FONTTOID(&quot;Arial&quot;)">0</Font>
+            <Color F="RGB(0,0,0)"/>
+            <Style>0</Style>
+            <Size>0.166667</Size>
+          </Char>
+          <Geom IX="0">
+            <MoveTo IX="1">
+              <X F="Width*1">5.44444</X>
+              <Y F="Height*1">0.388889</Y>
+            </MoveTo>
+            <LineTo IX="2">
+              <X F="Width*0.00765306">0.0416667</X>
+              <Y F="Height*1">0.388889</Y>
+            </LineTo>
+            <LineTo IX="3">
+              <X F="Width*0">0</X>
+              <Y F="Height*0.892857">0.347222</Y>
+            </LineTo>
+            <LineTo IX="4">
+              <X F="Width*0">0</X>
+              <Y F="Height*0">0</Y>
+            </LineTo>
+            <LineTo IX="5">
+              <X F="Width*0.992347">5.40278</X>
+              <Y F="Height*0">0</Y>
+            </LineTo>
+            <LineTo IX="6">
+              <X F="Width*1">5.44444</X>
+              <Y F="Height*0.142857">0.0555556</Y>
+            </LineTo>
+            <LineTo IX="7">
+              <X F="Width*1">5.44444</X>
+              <Y F="Height*1">0.388889</Y>
+            </LineTo>
+            <MoveTo IX="8">
+              <X F="Width*0.992347">5.40278</X>
+              <Y F="Height*0.892857">0.347222</Y>
+            </MoveTo>
+            <LineTo IX="9">
+              <X F="Width*0">0</X>
+              <Y F="Height*0.892857">0.347222</Y>
+            </LineTo>
+            <MoveTo IX="10">
+              <X F="Width*0.992347">5.40278</X>
+              <Y F="Height*0.892857">0.347222</Y>
+            </MoveTo>
+            <LineTo IX="11">
+              <X F="Width*0.992347">5.40278</X>
+              <Y F="Height*0">0</Y>
+            </LineTo>
+            <MoveTo IX="12">
+              <X F="Width*0.992347">5.40278</X>
+              <Y F="Height*0.892857">0.347222</Y>
+            </MoveTo>
+            <LineTo IX="13">
+              <X F="Width*1">5.44444</X>
+              <Y F="Height*1">0.388889</Y>
+            </LineTo>
+          </Geom>
+          <Text>src/jaco-ros/jaco_driver/src/jaco_arm_kinematics.cpp</Text>
+          <Connection IX="0">
+            <X F="Width*0">0</X>
+            <Y F="Height*0.428571">0.166667</Y>
+          </Connection>
+        </Shape>
+        <Shape ID="17">
+          <XForm>
+            <PinX>2.19444</PinX>
+            <PinY>2.09028</PinY>
+            <Width>3.55556</Width>
+            <Height>0.375</Height>
+            <LocPinX F="Width*0.5"/>
+            <LocPinY F="Height*0.5"/>
+          </XForm>
+          <TextXForm>
+            <TxtPinX F="Width*0.03125">0.111111</TxtPinX>
+            <TxtPinY F="Height*0.851852">0.319444</TxtPinY>
+            <TxtWidth>3.33333</TxtWidth>
+            <TxtHeight>0.263889</TxtHeight>
+            <TxtLocPinX F="0*TxtWidth"/>
+            <TxtLocPinY F="1*TxtHeight"/>
+            <TxtAngle F="-Angle"/>
+          </TextXForm>
+          <Fill>
+            <FillForegnd F="RGB(255,255,255)"/>
+          </Fill>
+          <Line>
+            <LineWeight>0.0138889</LineWeight>
+            <LineColor F="RGB(190,190,190)"/>
+            <LinePattern>1</LinePattern>
+          </Line>
+          <Char IX="0">
+            <Font F="FONTTOID(&quot;Arial&quot;)">0</Font>
+            <Color F="RGB(0,0,0)"/>
+            <Style>0</Style>
+            <Size>0.166667</Size>
+          </Char>
+          <Geom IX="0">
+            <MoveTo IX="1">
+              <X F="Width*1">3.55556</X>
+              <Y F="Height*1">0.375</Y>
+            </MoveTo>
+            <LineTo IX="2">
+              <X F="Width*0.0117188">0.0416667</X>
+              <Y F="Height*1">0.375</Y>
+            </LineTo>
+            <LineTo IX="3">
+              <X F="Width*0">0</X>
+              <Y F="Height*0.888889">0.333333</Y>
+            </LineTo>
+            <LineTo IX="4">
+              <X F="Width*0">0</X>
+              <Y F="Height*0">0</Y>
+            </LineTo>
+            <LineTo IX="5">
+              <X F="Width*0.988281">3.51389</X>
+              <Y F="Height*0">0</Y>
+            </LineTo>
+            <LineTo IX="6">
+              <X F="Width*1">3.55556</X>
+              <Y F="Height*0.111111">0.0416667</Y>
+            </LineTo>
+            <LineTo IX="7">
+              <X F="Width*1">3.55556</X>
+              <Y F="Height*1">0.375</Y>
+            </LineTo>
+            <MoveTo IX="8">
+              <X F="Width*0.988281">3.51389</X>
+              <Y F="Height*0.888889">0.333333</Y>
+            </MoveTo>
+            <LineTo IX="9">
+              <X F="Width*0">0</X>
+              <Y F="Height*0.888889">0.333333</Y>
+            </LineTo>
+            <MoveTo IX="10">
+              <X F="Width*0.988281">3.51389</X>
+              <Y F="Height*0.888889">0.333333</Y>
+            </MoveTo>
+            <LineTo IX="11">
+              <X F="Width*0.988281">3.51389</X>
+              <Y F="Height*0">0</Y>
+            </LineTo>
+            <MoveTo IX="12">
+              <X F="Width*0.988281">3.51389</X>
+              <Y F="Height*0.888889">0.333333</Y>
+            </MoveTo>
+            <LineTo IX="13">
+              <X F="Width*1">3.55556</X>
+              <Y F="Height*1">0.375</Y>
+            </LineTo>
+          </Geom>
+          <Text>src/jaco-ros/jaco_driver/src/nodes</Text>
+          <Connection IX="0">
+            <X F="Width*0.558594">1.98611</X>
+            <Y F="Height*0">0</Y>
+          </Connection>
+          <Connection IX="1">
+            <X F="Width*1">3.55556</X>
+            <Y F="Height*0.148148">0.0555556</Y>
+          </Connection>
+          <Connection IX="2">
+            <X F="Width*0.6875">2.44444</X>
+            <Y F="Height*0">0</Y>
+          </Connection>
+          <Connection IX="3">
+            <X F="Width*1">3.55556</X>
+            <Y F="Height*0.888889">0.333333</Y>
+          </Connection>
+          <Connection IX="4">
+            <X F="Width*0.9375">3.33333</X>
+            <Y F="Height*0.962963">0.361111</Y>
+          </Connection>
+          <Connection IX="5">
+            <X F="Width*1">3.55556</X>
+            <Y F="Height*0.666667">0.25</Y>
+          </Connection>
+        </Shape>
+        <Shape ID="18">
+          <XForm>
+            <PinX F="(BeginX+EndX)/2"/>
+            <PinY F="(BeginY+EndY)/2"/>
+            <Width F="SQRT((EndX-BeginX)^2+(EndY-BeginY)^2)"/>
+            <Height>0.385353</Height>
+            <LocPinX F="Width*0.5"/>
+            <LocPinY F="Height*1"/>
+            <Angle F="ATAN2(EndY-BeginY,EndX-BeginX)"/>
+          </XForm>
+          <TextXForm>
+            <TxtPinX F="Width*0.786505">198.544</TxtPinX>
+            <TxtPinY F="Height*1.16276">0.0627216</TxtPinY>
+            <TxtWidth>0.125</TxtWidth>
+            <TxtHeight>0.263889</TxtHeight>
+            <TxtLocPinX F="0*TxtWidth"/>
+            <TxtLocPinY F="1*TxtHeight"/>
+            <TxtAngle F="-Angle"/>
+          </TextXForm>
+          <Line>
+            <LineWeight>0.0138889</LineWeight>
+            <LineColor F="RGB(0,0,205)"/>
+            <LinePattern>1</LinePattern>
+            <BeginArrow>0</BeginArrow>
+            <EndArrow>4</EndArrow>
+          </Line>
+          <Char IX="0">
+            <Font F="FONTTOID(&quot;Arial&quot;)">0</Font>
+            <Color F="RGB(0,0,0)"/>
+            <Style>0</Style>
+            <Size>0.166667</Size>
+          </Char>
+          <Geom IX="0">
+            <MoveTo IX="1">
+              <X F="Width*0"/>
+              <Y F="Height*1"/>
+            </MoveTo>
+            <SplineStart IX="2">
+              <X F="Width*0.155732"/>
+              <Y F="Height*0.670617"/>
+              <A>0</A>
+              <B>0</B>
+              <C>2</C>
+              <D>3</D>
+            </SplineStart>
+            <SplineKnot IX="3">
+              <X F="Width*0.522213"/>
+              <Y F="Height*0"/>
+              <A>0</A>
+            </SplineKnot>
+            <SplineKnot IX="4">
+              <X F="Width*0.819412"/>
+              <Y F="Height*0.545831"/>
+              <A>0</A>
+            </SplineKnot>
+            <SplineKnot IX="5">
+              <X F="Width*0.872154"/>
+              <Y F="Height*0.646059"/>
+              <A>1</A>
+            </SplineKnot>
+            <SplineKnot IX="6">
+              <X F="Width*0.92645"/>
+              <Y F="Height*0.79526"/>
+              <A>1</A>
+            </SplineKnot>
+            <SplineKnot IX="7">
+              <X F="Width*1"/>
+              <Y F="Height*1"/>
+              <A>1</A>
+            </SplineKnot>
+            <NoFill>1</NoFill>
+          </Geom>
+          <Text>2</Text>
+          <XForm1D>
+            <BeginX F="PAR(PNT(Sheet.17!Connections.X1,SHEET.17!Connections.Y1))"/>
+            <BeginY F="PAR(PNT(Sheet.17!Connections.X1,SHEET.17!Connections.Y1))"/>
+            <EndX F="PAR(PNT(Sheet.16!Connections.X1,SHEET.16!Connections.Y1))"/>
+            <EndY F="PAR(PNT(Sheet.16!Connections.X1,SHEET.16!Connections.Y1))"/>
+          </XForm1D>
+        </Shape>
+        <Shape ID="19">
+          <XForm>
+            <PinX F="(BeginX+EndX)/2"/>
+            <PinY F="(BeginY+EndY)/2"/>
+            <Width F="SQRT((EndX-BeginX)^2+(EndY-BeginY)^2)"/>
+            <Height>0.00583696</Height>
+            <LocPinX F="Width*0.5"/>
+            <LocPinY F="Height*0"/>
+            <Angle F="ATAN2(EndY-BeginY,EndX-BeginX)"/>
+          </XForm>
+          <TextXForm>
+            <TxtPinX F="Width*0.54197">61.901</TxtPinX>
+            <TxtPinY F="Height*47.1875">0.275432</TxtPinY>
+            <TxtWidth>0.125</TxtWidth>
+            <TxtHeight>0.263889</TxtHeight>
+            <TxtLocPinX F="0*TxtWidth"/>
+            <TxtLocPinY F="1*TxtHeight"/>
+            <TxtAngle F="-Angle"/>
+          </TextXForm>
+          <Line>
+            <LineWeight>0.0138889</LineWeight>
+            <LineColor F="RGB(0,0,205)"/>
+            <LinePattern>1</LinePattern>
+            <BeginArrow>0</BeginArrow>
+            <EndArrow>4</EndArrow>
+          </Line>
+          <Char IX="0">
+            <Font F="FONTTOID(&quot;Arial&quot;)">0</Font>
+            <Color F="RGB(0,0,0)"/>
+            <Style>0</Style>
+            <Size>0.166667</Size>
+          </Char>
+          <Geom IX="0">
+            <MoveTo IX="1">
+              <X F="Width*0"/>
+              <Y F="Height*0"/>
+            </MoveTo>
+            <SplineStart IX="2">
+              <X F="Width*0.298199"/>
+              <Y F="Height*0.208333"/>
+              <A>0</A>
+              <B>0</B>
+              <C>1</C>
+              <D>3</D>
+            </SplineStart>
+            <SplineKnot IX="3">
+              <X F="Width*0.631353"/>
+              <Y F="Height*1"/>
+              <A>0</A>
+            </SplineKnot>
+            <SplineKnot IX="4">
+              <X F="Width*1"/>
+              <Y F="Height*0"/>
+              <A>0</A>
+            </SplineKnot>
+            <NoFill>1</NoFill>
+          </Geom>
+          <Text>2</Text>
+          <XForm1D>
+            <BeginX F="PAR(PNT(Sheet.17!Connections.X2,SHEET.17!Connections.Y2))"/>
+            <BeginY F="PAR(PNT(Sheet.17!Connections.X2,SHEET.17!Connections.Y2))"/>
+            <EndX F="PAR(PNT(Sheet.7!Connections.X3,SHEET.7!Connections.Y3))"/>
+            <EndY F="PAR(PNT(Sheet.7!Connections.X3,SHEET.7!Connections.Y3))"/>
+          </XForm1D>
+        </Shape>
+        <Shape ID="20">
+          <XForm>
+            <PinX F="(BeginX+EndX)/2"/>
+            <PinY F="(BeginY+EndY)/2"/>
+            <Width F="SQRT((EndX-BeginX)^2+(EndY-BeginY)^2)"/>
+            <Height>0.637451</Height>
+            <LocPinX F="Width*0.5"/>
+            <LocPinY F="Height*1"/>
+            <Angle F="ATAN2(EndY-BeginY,EndX-BeginX)"/>
+          </XForm>
+          <TextXForm>
+            <TxtPinX F="Width*0.568772">622.835</TxtPinX>
+            <TxtPinY F="Height*0.762232">-0.151566</TxtPinY>
+            <TxtWidth>0.125</TxtWidth>
+            <TxtHeight>0.263889</TxtHeight>
+            <TxtLocPinX F="0*TxtWidth"/>
+            <TxtLocPinY F="1*TxtHeight"/>
+            <TxtAngle F="-Angle"/>
+          </TextXForm>
+          <Line>
+            <LineWeight>0.0138889</LineWeight>
+            <LineColor F="RGB(0,0,205)"/>
+            <LinePattern>1</LinePattern>
+            <BeginArrow>0</BeginArrow>
+            <EndArrow>4</EndArrow>
+          </Line>
+          <Char IX="0">
+            <Font F="FONTTOID(&quot;Arial&quot;)">0</Font>
+            <Color F="RGB(0,0,0)"/>
+            <Style>0</Style>
+            <Size>0.166667</Size>
+          </Char>
+          <Geom IX="0">
+            <MoveTo IX="1">
+              <X F="Width*0"/>
+              <Y F="Height*1"/>
+            </MoveTo>
+            <SplineStart IX="2">
+              <X F="Width*0.0435663"/>
+              <Y F="Height*0.77994"/>
+              <A>0</A>
+              <B>0</B>
+              <C>2</C>
+              <D>3</D>
+            </SplineStart>
+            <SplineKnot IX="3">
+              <X F="Width*0.112934"/>
+              <Y F="Height*0.48847"/>
+              <A>0</A>
+            </SplineKnot>
+            <SplineKnot IX="4">
+              <X F="Width*0.173539"/>
+              <Y F="Height*0.402475"/>
+              <A>0</A>
+            </SplineKnot>
+            <SplineKnot IX="5">
+              <X F="Width*0.465515"/>
+              <Y F="Height*0"/>
+              <A>1</A>
+            </SplineKnot>
+            <SplineKnot IX="6">
+              <X F="Width*0.808011"/>
+              <Y F="Height*0.588233"/>
+              <A>1</A>
+            </SplineKnot>
+            <SplineKnot IX="7">
+              <X F="Width*1"/>
+              <Y F="Height*1"/>
+              <A>1</A>
+            </SplineKnot>
+            <NoFill>1</NoFill>
+          </Geom>
+          <Text>1</Text>
+          <XForm1D>
+            <BeginX F="PAR(PNT(Sheet.17!Connections.X3,SHEET.17!Connections.Y3))"/>
+            <BeginY F="PAR(PNT(Sheet.17!Connections.X3,SHEET.17!Connections.Y3))"/>
+            <EndX F="PAR(PNT(Sheet.3!Connections.X2,SHEET.3!Connections.Y2))"/>
+            <EndY F="PAR(PNT(Sheet.3!Connections.X2,SHEET.3!Connections.Y2))"/>
+          </XForm1D>
+        </Shape>
+        <Shape ID="21">
+          <XForm>
+            <PinX F="(BeginX+EndX)/2"/>
+            <PinY F="(BeginY+EndY)/2"/>
+            <Width F="SQRT((EndX-BeginX)^2+(EndY-BeginY)^2)"/>
+            <Height>0.311726</Height>
+            <LocPinX F="Width*0.5"/>
+            <LocPinY F="Height*0.35743"/>
+            <Angle F="ATAN2(EndY-BeginY,EndX-BeginX)"/>
+          </XForm>
+          <TextXForm>
+            <TxtPinX F="Width*0.575886">95.8344</TxtPinX>
+            <TxtPinY F="Height*1.67068">0.409375</TxtPinY>
+            <TxtWidth>0.125</TxtWidth>
+            <TxtHeight>0.263889</TxtHeight>
+            <TxtLocPinX F="0*TxtWidth"/>
+            <TxtLocPinY F="1*TxtHeight"/>
+            <TxtAngle F="-Angle"/>
+          </TextXForm>
+          <Line>
+            <LineWeight>0.0138889</LineWeight>
+            <LineColor F="RGB(0,0,205)"/>
+            <LinePattern>1</LinePattern>
+            <BeginArrow>0</BeginArrow>
+            <EndArrow>4</EndArrow>
+          </Line>
+          <Char IX="0">
+            <Font F="FONTTOID(&quot;Arial&quot;)">0</Font>
+            <Color F="RGB(0,0,0)"/>
+            <Style>0</Style>
+            <Size>0.166667</Size>
+          </Char>
+          <Geom IX="0">
+            <MoveTo IX="1">
+              <X F="Width*0"/>
+              <Y F="Height*0.35743"/>
+            </MoveTo>
+            <SplineStart IX="2">
+              <X F="Width*0.0549236"/>
+              <Y F="Height*0.244177"/>
+              <A>0</A>
+              <B>0</B>
+              <C>4</C>
+              <D>3</D>
+            </SplineStart>
+            <SplineKnot IX="3">
+              <X F="Width*0.113206"/>
+              <Y F="Height*0.167871"/>
+              <A>0</A>
+            </SplineKnot>
+            <SplineKnot IX="4">
+              <X F="Width*0.166504"/>
+              <Y F="Height*0.116466"/>
+              <A>0</A>
+            </SplineKnot>
+            <SplineKnot IX="5">
+              <X F="Width*0.308092"/>
+              <Y F="Height*0"/>
+              <A>1</A>
+            </SplineKnot>
+            <SplineKnot IX="6">
+              <X F="Width*0.338425"/>
+              <Y F="Height*0.493173"/>
+              <A>1</A>
+            </SplineKnot>
+            <SplineKnot IX="7">
+              <X F="Width*0.473513"/>
+              <Y F="Height*0.624096"/>
+              <A>1</A>
+            </SplineKnot>
+            <SplineKnot IX="8">
+              <X F="Width*0.625284"/>
+              <Y F="Height*0.779116"/>
+              <A>2</A>
+            </SplineKnot>
+            <SplineKnot IX="9">
+              <X F="Width*0.6671"/>
+              <Y F="Height*1"/>
+              <A>2</A>
+            </SplineKnot>
+            <SplineKnot IX="10">
+              <X F="Width*0.816921"/>
+              <Y F="Height*0.73494"/>
+              <A>2</A>
+            </SplineKnot>
+            <SplineKnot IX="11">
+              <X F="Width*0.866862"/>
+              <Y F="Height*0.646586"/>
+              <A>3</A>
+            </SplineKnot>
+            <SplineKnot IX="12">
+              <X F="Width*0.916802"/>
+              <Y F="Height*0.558233"/>
+              <A>3</A>
+            </SplineKnot>
+            <SplineKnot IX="13">
+              <X F="Width*1"/>
+              <Y F="Height*0.35743"/>
+              <A>3</A>
+            </SplineKnot>
+            <NoFill>1</NoFill>
+          </Geom>
+          <Text>2</Text>
+          <XForm1D>
+            <BeginX F="PAR(PNT(Sheet.17!Connections.X4,SHEET.17!Connections.Y4))"/>
+            <BeginY F="PAR(PNT(Sheet.17!Connections.X4,SHEET.17!Connections.Y4))"/>
+            <EndX F="PAR(PNT(Sheet.10!Connections.X3,SHEET.10!Connections.Y3))"/>
+            <EndY F="PAR(PNT(Sheet.10!Connections.X3,SHEET.10!Connections.Y3))"/>
+          </XForm1D>
+        </Shape>
+        <Shape ID="22">
+          <XForm>
+            <PinX F="(BeginX+EndX)/2"/>
+            <PinY F="(BeginY+EndY)/2"/>
+            <Width F="SQRT((EndX-BeginX)^2+(EndY-BeginY)^2)"/>
+            <Height>0.0825087</Height>
+            <LocPinX F="Width*0.5"/>
+            <LocPinY F="Height*0.140468"/>
+            <Angle F="ATAN2(EndY-BeginY,EndX-BeginX)"/>
+          </XForm>
+          <TextXForm>
+            <TxtPinX F="Width*0.43082">86.7351</TxtPinX>
+            <TxtPinY F="Height*4.14883">0.330725</TxtPinY>
+            <TxtWidth>0.125</TxtWidth>
+            <TxtHeight>0.263889</TxtHeight>
+            <TxtLocPinX F="0*TxtWidth"/>
+            <TxtLocPinY F="1*TxtHeight"/>
+            <TxtAngle F="-Angle"/>
+          </TextXForm>
+          <Line>
+            <LineWeight>0.0138889</LineWeight>
+            <LineColor F="RGB(0,0,205)"/>
+            <LinePattern>1</LinePattern>
+            <BeginArrow>0</BeginArrow>
+            <EndArrow>4</EndArrow>
+          </Line>
+          <Char IX="0">
+            <Font F="FONTTOID(&quot;Arial&quot;)">0</Font>
+            <Color F="RGB(0,0,0)"/>
+            <Style>0</Style>
+            <Size>0.166667</Size>
+          </Char>
+          <Geom IX="0">
+            <MoveTo IX="1">
+              <X F="Width*0"/>
+              <Y F="Height*0.140468"/>
+            </MoveTo>
+            <SplineStart IX="2">
+              <X F="Width*0.0711043"/>
+              <Y F="Height*0.0936455"/>
+              <A>0</A>
+              <B>0</B>
+              <C>3</C>
+              <D>3</D>
+            </SplineStart>
+            <SplineKnot IX="3">
+              <X F="Width*0.147044"/>
+              <Y F="Height*0.0083612"/>
+              <A>0</A>
+            </SplineKnot>
+            <SplineKnot IX="4">
+              <X F="Width*0.213313"/>
+              <Y F="Height*0"/>
+              <A>0</A>
+            </SplineKnot>
+            <SplineKnot IX="5">
+              <X F="Width*0.300059"/>
+              <Y F="Height*0.00167224"/>
+              <A>1</A>
+            </SplineKnot>
+            <SplineKnot IX="6">
+              <X F="Width*0.319106"/>
+              <Y F="Height*0.541806"/>
+              <A>1</A>
+            </SplineKnot>
+            <SplineKnot IX="7">
+              <X F="Width*0.402151"/>
+              <Y F="Height*0.745819"/>
+              <A>1</A>
+            </SplineKnot>
+            <SplineKnot IX="8">
+              <X F="Width*0.587585"/>
+              <Y F="Height*1"/>
+              <A>2</A>
+            </SplineKnot>
+            <SplineKnot IX="9">
+              <X F="Width*0.788957"/>
+              <Y F="Height*0.608696"/>
+              <A>2</A>
+            </SplineKnot>
+            <SplineKnot IX="10">
+              <X F="Width*1"/>
+              <Y F="Height*0.140468"/>
+              <A>2</A>
+            </SplineKnot>
+            <NoFill>1</NoFill>
+          </Geom>
+          <Text>2</Text>
+          <XForm1D>
+            <BeginX F="PAR(PNT(Sheet.17!Connections.X5,SHEET.17!Connections.Y5))"/>
+            <BeginY F="PAR(PNT(Sheet.17!Connections.X5,SHEET.17!Connections.Y5))"/>
+            <EndX F="PAR(PNT(Sheet.13!Connections.X3,SHEET.13!Connections.Y3))"/>
+            <EndY F="PAR(PNT(Sheet.13!Connections.X3,SHEET.13!Connections.Y3))"/>
+          </XForm1D>
+        </Shape>
+        <Shape ID="23">
+          <XForm>
+            <PinX F="(BeginX+EndX)/2"/>
+            <PinY F="(BeginY+EndY)/2"/>
+            <Width F="SQRT((EndX-BeginX)^2+(EndY-BeginY)^2)"/>
+            <Height>0.00658543</Height>
+            <LocPinX F="Width*0.5"/>
+            <LocPinY F="Height*0"/>
+            <Angle F="ATAN2(EndY-BeginY,EndX-BeginX)"/>
+          </XForm>
+          <TextXForm>
+            <TxtPinX F="Width*0.510503">301.467</TxtPinX>
+            <TxtPinY F="Height*59.6071">0.392539</TxtPinY>
+            <TxtWidth>0.125</TxtWidth>
+            <TxtHeight>0.263889</TxtHeight>
+            <TxtLocPinX F="0*TxtWidth"/>
+            <TxtLocPinY F="1*TxtHeight"/>
+            <TxtAngle F="-Angle"/>
+          </TextXForm>
+          <Line>
+            <LineWeight>0.0138889</LineWeight>
+            <LineColor F="RGB(0,0,205)"/>
+            <LinePattern>1</LinePattern>
+            <BeginArrow>0</BeginArrow>
+            <EndArrow>4</EndArrow>
+          </Line>
+          <Char IX="0">
+            <Font F="FONTTOID(&quot;Arial&quot;)">0</Font>
+            <Color F="RGB(0,0,0)"/>
+            <Style>0</Style>
+            <Size>0.166667</Size>
+          </Char>
+          <Geom IX="0">
+            <MoveTo IX="1">
+              <X F="Width*0"/>
+              <Y F="Height*0"/>
+            </MoveTo>
+            <SplineStart IX="2">
+              <X F="Width*0.261051"/>
+              <Y F="Height*1"/>
+              <A>0</A>
+              <B>0</B>
+              <C>1</C>
+              <D>3</D>
+            </SplineStart>
+            <SplineKnot IX="3">
+              <X F="Width*0.70342"/>
+              <Y F="Height*0.875"/>
+              <A>0</A>
+            </SplineKnot>
+            <SplineKnot IX="4">
+              <X F="Width*1"/>
+              <Y F="Height*0"/>
+              <A>0</A>
+            </SplineKnot>
+            <NoFill>1</NoFill>
+          </Geom>
+          <Text>2</Text>
+          <XForm1D>
+            <BeginX F="PAR(PNT(Sheet.17!Connections.X6,SHEET.17!Connections.Y6))"/>
+            <BeginY F="PAR(PNT(Sheet.17!Connections.X6,SHEET.17!Connections.Y6))"/>
+            <EndX F="PAR(PNT(Sheet.2!Connections.X6,SHEET.2!Connections.Y6))"/>
+            <EndY F="PAR(PNT(Sheet.2!Connections.X6,SHEET.2!Connections.Y6))"/>
+          </XForm1D>
+        </Shape>
+        <Shape ID="24">
+          <XForm>
+            <PinX>2.19444</PinX>
+            <PinY>2.71528</PinY>
+            <Width>4.27778</Width>
+            <Height>0.375</Height>
+            <LocPinX F="Width*0.5"/>
+            <LocPinY F="Height*0.5"/>
+          </XForm>
+          <TextXForm>
+            <TxtPinX F="Width*0.025974">0.111111</TxtPinX>
+            <TxtPinY F="Height*0.851852">0.319444</TxtPinY>
+            <TxtWidth>4.05556</TxtWidth>
+            <TxtHeight>0.263889</TxtHeight>
+            <TxtLocPinX F="0*TxtWidth"/>
+            <TxtLocPinY F="1*TxtHeight"/>
+            <TxtAngle F="-Angle"/>
+          </TextXForm>
+          <Fill>
+            <FillForegnd F="RGB(255,255,255)"/>
+          </Fill>
+          <Line>
+            <LineWeight>0.0138889</LineWeight>
+            <LineColor F="RGB(190,190,190)"/>
+            <LinePattern>1</LinePattern>
+          </Line>
+          <Char IX="0">
+            <Font F="FONTTOID(&quot;Arial&quot;)">0</Font>
+            <Color F="RGB(0,0,0)"/>
+            <Style>0</Style>
+            <Size>0.166667</Size>
+          </Char>
+          <Geom IX="0">
+            <MoveTo IX="1">
+              <X F="Width*1">4.27778</X>
+              <Y F="Height*1">0.375</Y>
+            </MoveTo>
+            <LineTo IX="2">
+              <X F="Width*0.00974026">0.0416667</X>
+              <Y F="Height*1">0.375</Y>
+            </LineTo>
+            <LineTo IX="3">
+              <X F="Width*0">0</X>
+              <Y F="Height*0.888889">0.333333</Y>
+            </LineTo>
+            <LineTo IX="4">
+              <X F="Width*0">0</X>
+              <Y F="Height*0">0</Y>
+            </LineTo>
+            <LineTo IX="5">
+              <X F="Width*0.99026">4.23611</X>
+              <Y F="Height*0">0</Y>
+            </LineTo>
+            <LineTo IX="6">
+              <X F="Width*1">4.27778</X>
+              <Y F="Height*0.111111">0.0416667</Y>
+            </LineTo>
+            <LineTo IX="7">
+              <X F="Width*1">4.27778</X>
+              <Y F="Height*1">0.375</Y>
+            </LineTo>
+            <MoveTo IX="8">
+              <X F="Width*0.99026">4.23611</X>
+              <Y F="Height*0.888889">0.333333</Y>
+            </MoveTo>
+            <LineTo IX="9">
+              <X F="Width*0">0</X>
+              <Y F="Height*0.888889">0.333333</Y>
+            </LineTo>
+            <MoveTo IX="10">
+              <X F="Width*0.99026">4.23611</X>
+              <Y F="Height*0.888889">0.333333</Y>
+            </MoveTo>
+            <LineTo IX="11">
+              <X F="Width*0.99026">4.23611</X>
+              <Y F="Height*0">0</Y>
+            </LineTo>
+            <MoveTo IX="12">
+              <X F="Width*0.99026">4.23611</X>
+              <Y F="Height*0.888889">0.333333</Y>
+            </MoveTo>
+            <LineTo IX="13">
+              <X F="Width*1">4.27778</X>
+              <Y F="Height*1">0.375</Y>
+            </LineTo>
+          </Geom>
+          <Text>src/jaco-ros/jaco_driver/src/jaco_arm.cpp</Text>
+        </Shape>
+      </Shapes>
+      <Connects>
+        <Connect ToPart="100" ToSheet="3" FromPart="12" FromSheet="4"/>
+        <Connect ToPart="100" ToSheet="2" FromPart="9" FromSheet="4"/>
+        <Connect ToPart="100" ToSheet="5" FromPart="12" FromSheet="6"/>
+        <Connect ToPart="101" ToSheet="2" FromPart="9" FromSheet="6"/>
+        <Connect ToPart="102" ToSheet="2" FromPart="12" FromSheet="8"/>
+        <Connect ToPart="100" ToSheet="7" FromPart="9" FromSheet="8"/>
+        <Connect ToPart="101" ToSheet="5" FromPart="12" FromSheet="9"/>
+        <Connect ToPart="101" ToSheet="7" FromPart="9" FromSheet="9"/>
+        <Connect ToPart="103" ToSheet="2" FromPart="12" FromSheet="11"/>
+        <Connect ToPart="100" ToSheet="10" FromPart="9" FromSheet="11"/>
+        <Connect ToPart="102" ToSheet="5" FromPart="12" FromSheet="12"/>
+        <Connect ToPart="101" ToSheet="10" FromPart="9" FromSheet="12"/>
+        <Connect ToPart="104" ToSheet="2" FromPart="12" FromSheet="14"/>
+        <Connect ToPart="100" ToSheet="13" FromPart="9" FromSheet="14"/>
+        <Connect ToPart="103" ToSheet="5" FromPart="12" FromSheet="15"/>
+        <Connect ToPart="101" ToSheet="13" FromPart="9" FromSheet="15"/>
+        <Connect ToPart="100" ToSheet="16" FromPart="12" FromSheet="18"/>
+        <Connect ToPart="100" ToSheet="17" FromPart="9" FromSheet="18"/>
+        <Connect ToPart="102" ToSheet="7" FromPart="12" FromSheet="19"/>
+        <Connect ToPart="101" ToSheet="17" FromPart="9" FromSheet="19"/>
+        <Connect ToPart="101" ToSheet="3" FromPart="12" FromSheet="20"/>
+        <Connect ToPart="102" ToSheet="17" FromPart="9" FromSheet="20"/>
+        <Connect ToPart="102" ToSheet="10" FromPart="12" FromSheet="21"/>
+        <Connect ToPart="103" ToSheet="17" FromPart="9" FromSheet="21"/>
+        <Connect ToPart="102" ToSheet="13" FromPart="12" FromSheet="22"/>
+        <Connect ToPart="104" ToSheet="17" FromPart="9" FromSheet="22"/>
+        <Connect ToPart="105" ToSheet="2" FromPart="12" FromSheet="23"/>
+        <Connect ToPart="105" ToSheet="17" FromPart="9" FromSheet="23"/>
+      </Connects>
+    </Page>
+  </Pages>
+</VisioDocument>
