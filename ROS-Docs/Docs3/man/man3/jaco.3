@@ -1,0 +1,343 @@
+.TH "jaco" 3 "Thu Mar 3 2016" "Version 1.0.1" "Kinova-ROS" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+jaco \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBFingerAngles\fP"
+.br
+.ti -1c
+.RI "class \fBJacoAngles\fP"
+.br
+.ti -1c
+.RI "class \fBJacoAnglesActionServer\fP"
+.br
+.ti -1c
+.RI "class \fBJacoAPI\fP"
+.br
+.ti -1c
+.RI "class \fBJacoArm\fP"
+.br
+.ti -1c
+.RI "class \fBJacoComm\fP"
+.br
+.ti -1c
+.RI "class \fBJacoCommException\fP"
+.br
+.ti -1c
+.RI "class \fBJacoException\fP"
+.br
+.ti -1c
+.RI "class \fBJacoFingersActionServer\fP"
+.br
+.ti -1c
+.RI "class \fBJacoKinematics\fP"
+.br
+.ti -1c
+.RI "class \fBJacoPose\fP"
+.br
+.ti -1c
+.RI "class \fBJacoPoseActionServer\fP"
+.br
+.ti -1c
+.RI "class \fBJacoTFTree\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "bool \fBareValuesClose\fP (float first, float second, float tolerance)"
+.br
+.ti -1c
+.RI "void * \fBcheckApiInit\fP (void *usbLib, const char *name)"
+.br
+.ti -1c
+.RI "std::string \fBconcatTfName\fP (const std::string &prefix, const std::string name)"
+.br
+.ti -1c
+.RI "float \fBnormalizeInDegrees\fP (float degrees)"
+.br
+.ti -1c
+.RI "float \fBnormalizeInRads\fP (float rads)"
+.br
+.ti -1c
+.RI "float \fBnormalizePositiveInDegrees\fP (float degrees)"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "static const int \fBJACO_JOINTS_COUNT\fP = 9"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.PP
+ / _ \\ / _/ \\ \\ / / _/ \\ / _/ _ \\ ___ _ ___ ___ ____ ____ ___ _____ _ _ \\ / _/ \\ / / _| | | __| / _ \\ | ++ \\ | ++ \\ / _ \\ |_ _|| | | | \\ _/ _/ / | | | | | ++ | |_| || ++ / | ++_/| |_| | | | | +-+ | \\ _/ / | |_ | |_ | ++ | _ || |\\ \\ | | | _ | | | | +-+ | _____/ ___/|___||___||_| |_||_| _|_| |_| |_| |_| |_| |_| ROBOTICS™
+.PP
+File: \fBjaco_angles_action\&.cpp\fP Desc: Class for moving/querying jaco arm\&. Auth: Alex Bencz, Jeff Schmidt
+.PP
+Copyright (c) 2013, Clearpath Robotics, Inc\&. All Rights Reserved
+.PP
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+.IP "\(bu" 2
+Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer\&.
+.IP "\(bu" 2
+Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution\&.
+.IP "\(bu" 2
+Neither the name of Clearpath Robotics, Inc\&. nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission\&.
+.PP
+.PP
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS 'AS IS' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED\&. IN NO EVENT SHALL CLEARPATH ROBOTICS, INC\&. BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE\&.
+.PP
+Please send comments, questions, or patches to skynet@clearpathrobotics.com
+.PP
+.PP
+ / _ \\ / _/ \\ \\ / / _/ \\ / _/ _ \\ ___ _ ___ ___ ____ ____ ___ _____ _ _ \\ / _/ \\ / / _| | | __| / _ \\ | ++ \\ | ++ \\ / _ \\ |_ _|| | | | \\ _/ _/ / | | | | | ++ | |_| || ++ / | ++_/| |_| | | | | +-+ | \\ _/ / | |_ | |_ | ++ | _ || |\\ \\ | | | _ | | | | +-+ | _____/ ___/|___||___||_| |_||_| _|_| |_| |_| |_| |_| |_| ROBOTICS™
+.PP
+File: \fBjaco_comm\&.cpp\fP Desc: Class for moving/querying jaco arm\&. Auth: Alex Bencz, Jeff Schmidt
+.PP
+Copyright (c) 2013, Clearpath Robotics, Inc\&. All Rights Reserved
+.PP
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+.IP "\(bu" 2
+Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer\&.
+.IP "\(bu" 2
+Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution\&.
+.IP "\(bu" 2
+Neither the name of Clearpath Robotics, Inc\&. nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission\&.
+.PP
+.PP
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS 'AS IS' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED\&. IN NO EVENT SHALL CLEARPATH ROBOTICS, INC\&. BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE\&.
+.PP
+Please send comments, questions, or patches to skynet@clearpathrobotics.com
+.PP
+.PP
+ / _ \\ / _/ \\ \\ / / _/ \\ / _/ _ \\ ___ _ ___ ___ ____ ____ ___ _____ _ _ \\ / _/ \\ / / _| | | __| / _ \\ | ++ \\ | ++ \\ / _ \\ |_ _|| | | | \\ _/ _/ / | | | | | ++ | |_| || ++ / | ++_/| |_| | | | | +-+ | \\ _/ / | |_ | |_ | ++ | _ || |\\ \\ | | | _ | | | | +-+ | _____/ ___/|___||___||_| |_||_| _|_| |_| |_| |_| |_| |_| ROBOTICS™
+.PP
+File: \fBjaco_fingers_action\&.cpp\fP Desc: Class for moving/querying jaco arm fingers\&. Auth: Jeff Schmidt
+.PP
+Copyright (c) 2013, Clearpath Robotics, Inc\&. All Rights Reserved
+.PP
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+.IP "\(bu" 2
+Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer\&.
+.IP "\(bu" 2
+Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution\&.
+.IP "\(bu" 2
+Neither the name of Clearpath Robotics, Inc\&. nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission\&.
+.PP
+.PP
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS 'AS IS' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED\&. IN NO EVENT SHALL CLEARPATH ROBOTICS, INC\&. BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE\&.
+.PP
+Please send comments, questions, or patches to skynet@clearpathrobotics.com
+.PP
+.PP
+ / _ \\ / _/ \\ \\ / / _/ \\ / _/ _ \\ ___ _ ___ ___ ____ ____ ___ _____ _ _ \\ / _/ \\ / / _| | | __| / _ \\ | ++ \\ | ++ \\ / _ \\ |_ _|| | | | \\ _/ _/ / | | | | | ++ | |_| || ++ / | ++_/| |_| | | | | +-+ | \\ _/ / | |_ | |_ | ++ | _ || |\\ \\ | | | _ | | | | +-+ | _____/ ___/|___||___||_| |_||_| _|_| |_| |_| |_| |_| |_| ROBOTICS™
+.PP
+File: \fBjaco_pose_action\&.cpp\fP Desc: Class for moving/querying jaco arm\&. Auth: Alex Bencz, Jeff Schmidt
+.PP
+Copyright (c) 2013, Clearpath Robotics, Inc\&. All Rights Reserved
+.PP
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+.IP "\(bu" 2
+Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer\&.
+.IP "\(bu" 2
+Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution\&.
+.IP "\(bu" 2
+Neither the name of Clearpath Robotics, Inc\&. nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission\&.
+.PP
+.PP
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS 'AS IS' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED\&. IN NO EVENT SHALL CLEARPATH ROBOTICS, INC\&. BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE\&.
+.PP
+Please send comments, questions, or patches to skynet@clearpathrobotics.com
+.PP
+.PP
+ / _ \\ / _/ \\ \\ / / _/ \\ / _/ _ \\ ___ _ ___ ___ ____ ____ ___ _____ _ _ \\ / _/ \\ / / _| | | __| / _ \\ | ++ \\ | ++ \\ / _ \\ |_ _|| | | | \\ _/ _/ / | | | | | ++ | |_| || ++ / | ++_/| |_| | | | | +-+ | \\ _/ / | |_ | |_ | ++ | _ || |\\ \\ | | | _ | | | | +-+ | _____/ ___/|___||___||_| |_||_| _|_| |_| |_| |_| |_| |_| ROBOTICS™
+.PP
+File: \fBjaco_types\&.cpp\fP Desc: Wrappers around Kinova structs to facilitate easier conversion to ROS types\&. Auth: Alex Bencz
+.PP
+Copyright (c) 2013, Clearpath Robotics, Inc\&. All Rights Reserved
+.PP
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+.IP "\(bu" 2
+Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer\&.
+.IP "\(bu" 2
+Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution\&.
+.IP "\(bu" 2
+Neither the name of Clearpath Robotics, Inc\&. nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission\&.
+.PP
+.PP
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS 'AS IS' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED\&. IN NO EVENT SHALL CLEARPATH ROBOTICS, INC\&. BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE\&.
+.PP
+Please send comments, questions, or patches to skynet@clearpathrobotics.com
+.PP
+.PP
+ / _ \\ / _/ \\ \\ / / _/ \\ / _/ _ \\ ___ _ ___ ___ ____ ____ ___ _____ _ _ \\ / _/ \\ / / _| | | __| / _ \\ | ++ \\ | ++ \\ / _ \\ |_ _|| | | | \\ _/ _/ / | | | | | ++ | |_| || ++ / | ++_/| |_| | | | | +-+ | \\ _/ / | |_ | |_ | ++ | _ || |\\ \\ | | | _ | | | | +-+ | _____/ ___/|___||___||_| |_||_| _|_| |_| |_| |_| |_| |_| ROBOTICS™
+.PP
+File: \fBjaco_angles_action\&.h\fP Desc: Action server for jaco arm\&. Auth: Alex Bencz, Jeff Schmidt
+.PP
+Copyright (c) 2013, Clearpath Robotics, Inc\&. All Rights Reserved
+.PP
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+.IP "\(bu" 2
+Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer\&.
+.IP "\(bu" 2
+Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution\&.
+.IP "\(bu" 2
+Neither the name of Clearpath Robotics, Inc\&. nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission\&.
+.PP
+.PP
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS 'AS IS' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED\&. IN NO EVENT SHALL CLEARPATH ROBOTICS, INC\&. BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE\&.
+.PP
+Please send comments, questions, or patches to skynet@clearpathrobotics.com
+.PP
+.PP
+ / _ \\ / _/ \\ \\ / / _/ \\ / _/ _ \\ ___ _ ___ ___ ____ ____ ___ _____ _ _ \\ / _/ \\ / / _| | | __| / _ \\ | ++ \\ | ++ \\ / _ \\ |_ _|| | | | \\ _/ _/ / | | | | | ++ | |_| || ++ / | ++_/| |_| | | | | +-+ | \\ _/ / | |_ | |_ | ++ | _ || |\\ \\ | | | _ | | | | +-+ | _____/ ___/|___||___||_| |_||_| _|_| |_| |_| |_| |_| |_| ROBOTICS™
+.PP
+File: \fBjaco_comm\&.h\fP Desc: Class for moving/querying jaco arm\&. Auth: Alex Bencz, Jeff Schmidt
+.PP
+Copyright (c) 2013, Clearpath Robotics, Inc\&. All Rights Reserved
+.PP
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+.IP "\(bu" 2
+Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer\&.
+.IP "\(bu" 2
+Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution\&.
+.IP "\(bu" 2
+Neither the name of Clearpath Robotics, Inc\&. nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission\&.
+.PP
+.PP
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS 'AS IS' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED\&. IN NO EVENT SHALL CLEARPATH ROBOTICS, INC\&. BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE\&.
+.PP
+Please send comments, questions, or patches to skynet@clearpathrobotics.com
+.PP
+.PP
+ / _ \\ / _/ \\ \\ / / _/ \\ / _/ _ \\ ___ _ ___ ___ ____ ____ ___ _____ _ _ \\ / _/ \\ / / _| | | __| / _ \\ | ++ \\ | ++ \\ / _ \\ |_ _|| | | | \\ _/ _/ / | | | | | ++ | |_| || ++ / | ++_/| |_| | | | | +-+ | \\ _/ / | |_ | |_ | ++ | _ || |\\ \\ | | | _ | | | | +-+ | _____/ ___/|___||___||_| |_||_| _|_| |_| |_| |_| |_| |_| ROBOTICS™
+.PP
+File: \fBjaco_fingers_action\&.h\fP Desc: Action server for jaco arm fingers\&. Auth: Jeff Schmidt
+.PP
+Copyright (c) 2013, Clearpath Robotics, Inc\&. All Rights Reserved
+.PP
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+.IP "\(bu" 2
+Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer\&.
+.IP "\(bu" 2
+Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution\&.
+.IP "\(bu" 2
+Neither the name of Clearpath Robotics, Inc\&. nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission\&.
+.PP
+.PP
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS 'AS IS' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED\&. IN NO EVENT SHALL CLEARPATH ROBOTICS, INC\&. BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE\&.
+.PP
+Please send comments, questions, or patches to skynet@clearpathrobotics.com
+.PP
+.PP
+ / _ \\ / _/ \\ \\ / / _/ \\ / _/ _ \\ ___ _ ___ ___ ____ ____ ___ _____ _ _ \\ / _/ \\ / / _| | | __| / _ \\ | ++ \\ | ++ \\ / _ \\ |_ _|| | | | \\ _/ _/ / | | | | | ++ | |_| || ++ / | ++_/| |_| | | | | +-+ | \\ _/ / | |_ | |_ | ++ | _ || |\\ \\ | | | _ | | | | +-+ | _____/ ___/|___||___||_| |_||_| _|_| |_| |_| |_| |_| |_| ROBOTICS™
+.PP
+File: \fBjaco_pose_action\&.h\fP Desc: Action server for jaco arm\&. Auth: Alex Bencz, Jeff Schmidt
+.PP
+Copyright (c) 2013, Clearpath Robotics, Inc\&. All Rights Reserved
+.PP
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+.IP "\(bu" 2
+Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer\&.
+.IP "\(bu" 2
+Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution\&.
+.IP "\(bu" 2
+Neither the name of Clearpath Robotics, Inc\&. nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission\&.
+.PP
+.PP
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS 'AS IS' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED\&. IN NO EVENT SHALL CLEARPATH ROBOTICS, INC\&. BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE\&.
+.PP
+Please send comments, questions, or patches to skynet@clearpathrobotics.com
+.PP
+.PP
+ / _ \\ / _/ \\ \\ / / _/ \\ / _/ _ \\ ___ _ ___ ___ ____ ____ ___ _____ _ _ \\ / _/ \\ / / _| | | __| / _ \\ | ++ \\ | ++ \\ / _ \\ |_ _|| | | | \\ _/ _/ / | | | | | ++ | |_| || ++ / | ++_/| |_| | | | | +-+ | \\ _/ / | |_ | |_ | ++ | _ || |\\ \\ | | | _ | | | | +-+ | _____/ ___/|___||___||_| |_||_| _|_| |_| |_| |_| |_| |_| ROBOTICS™
+.PP
+File: \fBjaco_types\&.h\fP Desc: Wrappers around Kinova types\&. Auth: Alex Bencz
+.PP
+Copyright (c) 2013, Clearpath Robotics, Inc\&. All Rights Reserved
+.PP
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+.IP "\(bu" 2
+Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer\&.
+.IP "\(bu" 2
+Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution\&.
+.IP "\(bu" 2
+Neither the name of Clearpath Robotics, Inc\&. nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission\&.
+.PP
+.PP
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS 'AS IS' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED\&. IN NO EVENT SHALL CLEARPATH ROBOTICS, INC\&. BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE\&.
+.PP
+Please send comments, questions, or patches to skynet@clearpathrobotics.com 
+.SH "Function Documentation"
+.PP 
+.SS "bool jaco::areValuesClose (float first, float second, float tolerance)"
+
+.PP
+.nf
+79 {
+80     return ((first <= second + tolerance) && (first >= second - tolerance));
+81 }
+.fi
+.SS "void* jaco::checkApiInit (void * usbLib, const char * name)"
+
+.PP
+.nf
+17 {
+18     void * function_pointer = dlsym(usbLib, name);
+19     assert(function_pointer != NULL);
+20     return function_pointer;
+21 }
+.fi
+.SS "std::string jaco::concatTfName (const std::string & prefix, const std::string name)"
+
+.PP
+.nf
+16 {
+17     std::stringstream ss;
+18     ss << prefix << name;
+19     return ss\&.str();
+20 }
+.fi
+.SS "float jaco::normalizeInDegrees (float degrees)"
+
+.PP
+.nf
+73 {
+74     return angles::to_degrees(angles::normalize_angle(angles::from_degrees(degrees)));
+75 }
+.fi
+.SS "float jaco::normalizeInRads (float rads)"
+
+.PP
+.nf
+61 {
+62     return static_cast<float>(angles::normalize_angle_positive(rads));
+63 }
+.fi
+.SS "float jaco::normalizePositiveInDegrees (float degrees)"
+
+.PP
+.nf
+67 {
+68     return angles::to_degrees(angles::normalize_angle_positive(angles::from_degrees(degrees)));
+69 }
+.fi
+.SH "Variable Documentation"
+.PP 
+.SS "const int jaco::JACO_JOINTS_COUNT = 9\fC [static]\fP"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Kinova-ROS from the source code\&.

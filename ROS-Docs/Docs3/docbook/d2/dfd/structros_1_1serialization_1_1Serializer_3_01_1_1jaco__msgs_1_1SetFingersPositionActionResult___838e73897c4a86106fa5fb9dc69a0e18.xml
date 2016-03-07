@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="d2/dfd/structros_1_1serialization_1_1Serializer_3_01_1_1jaco__msgs_1_1SetFingersPositionActionResult___838e73897c4a86106fa5fb9dc69a0e18">
+<title>ros::serialization::Serializer&lt; ::jaco_msgs::SetFingersPositionActionResult_&lt; ContainerAllocator &gt; &gt; struct Reference</title>
+<para>
+    <programlisting>#include <link linkend="db/d1b/SetFingersPositionActionResult_8h">&quot;SetFingersPositionActionResult.h&quot;</link></programlisting>
+</para>
+<para>Inheritance diagram for ros::serialization::Serializer&lt; ::jaco_msgs::SetFingersPositionActionResult_&lt; ContainerAllocator &gt; &gt;</para>
+<para>
+    <figure>
+        <title>Inheritance graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../dd/d24/structros_1_1serialization_1_1Serializer_3_01_1_1jaco__msgs_1_1SetFingersPositionActionResult___79aaf0ccc51859f68bda332ba6afaed8.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Collaboration diagram for ros::serialization::Serializer&lt; ::jaco_msgs::SetFingersPositionActionResult_&lt; ContainerAllocator &gt; &gt;</para>
+<para>
+    <figure>
+        <title>Collaboration graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../d6/d96/structros_1_1serialization_1_1Serializer_3_01_1_1jaco__msgs_1_1SetFingersPositionActionResult___f339c173735d22c1928b5ff50f25a2b5.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+    <templateparamlist>
+      <param>
+        <type>class ContainerAllocator</type>
+      </param>
+    </templateparamlist>
+        <section>
+            <title>Public Attributes</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>ROS_DECLARE_ALLINONE_SERIALIZER</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static void <link linkend="d2/dfd/structros_1_1serialization_1_1Serializer_3_01_1_1jaco__msgs_1_1SetFingersPositionActionResult___838e73897c4a86106fa5fb9dc69a0e18_1ada21712728ca9802ec5889ef6b7f9f0e">allInOne</link> (
+Stream &amp; stream, T m)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Member Data Documentation</title>
+        </section>
+            <section xml:id="d2/dfd/structros_1_1serialization_1_1Serializer_3_01_1_1jaco__msgs_1_1SetFingersPositionActionResult___838e73897c4a86106fa5fb9dc69a0e18_1ada21712728ca9802ec5889ef6b7f9f0e">
+                <title>static void ros::serialization::Serializer&lt; ::jaco_msgs::SetFingersPositionActionResult_&lt; ContainerAllocator &gt; &gt;::allInOne (Stream &amp;stream, T m)</title> <emphasis></emphasis>
+                
+            </section>
+</section>

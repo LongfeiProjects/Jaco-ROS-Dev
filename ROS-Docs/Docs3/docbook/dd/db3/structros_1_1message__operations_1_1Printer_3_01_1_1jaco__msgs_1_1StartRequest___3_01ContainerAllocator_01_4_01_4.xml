@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="dd/db3/structros_1_1message__operations_1_1Printer_3_01_1_1jaco__msgs_1_1StartRequest___3_01ContainerAllocator_01_4_01_4">
+<title>ros::message_operations::Printer&lt; ::jaco_msgs::StartRequest_&lt; ContainerAllocator &gt; &gt; struct Reference</title>
+<para>
+    <programlisting>#include <link linkend="de/ddc/StartRequest_8h">&quot;StartRequest.h&quot;</link></programlisting>
+</para>
+<para>Inheritance diagram for ros::message_operations::Printer&lt; ::jaco_msgs::StartRequest_&lt; ContainerAllocator &gt; &gt;</para>
+<para>
+    <figure>
+        <title>Inheritance graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../d9/da7/structros_1_1message__operations_1_1Printer_3_01_1_1jaco__msgs_1_1StartRequest___3_01ContainerAla38fe4f595ac7631822416bc1053a467.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Collaboration diagram for ros::message_operations::Printer&lt; ::jaco_msgs::StartRequest_&lt; ContainerAllocator &gt; &gt;</para>
+<para>
+    <figure>
+        <title>Collaboration graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../d0/d6f/structros_1_1message__operations_1_1Printer_3_01_1_1jaco__msgs_1_1StartRequest___3_01ContainerAllocator_01_4_01_4__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+    <templateparamlist>
+      <param>
+        <type>class ContainerAllocator</type>
+      </param>
+    </templateparamlist>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static void <link linkend="dd/db3/structros_1_1message__operations_1_1Printer_3_01_1_1jaco__msgs_1_1StartRequest___3_01ContainerAllocator_01_4_01_4_1ade236317de56bd2036054704959f1d7f">stream</link> (
+Stream &amp; , const std::string &amp; , const ::<link linkend="d3/ded/structjaco__msgs_1_1StartRequest__">jaco_msgs::StartRequest_</link>&lt; ContainerAllocator &gt; &amp; )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+            <section xml:id="dd/db3/structros_1_1message__operations_1_1Printer_3_01_1_1jaco__msgs_1_1StartRequest___3_01ContainerAllocator_01_4_01_4_1ade236317de56bd2036054704959f1d7f">
+                <title>static void ros::message_operations::Printer&lt; ::jaco_msgs::StartRequest_&lt; ContainerAllocator &gt; &gt;::stream (Stream &amp;, const std::string &amp;, const ::jaco_msgs::StartRequest_&lt; ContainerAllocator &gt; &amp;)</title> <emphasis></emphasis>
+                
+            </section>
+</section>

@@ -1,0 +1,424 @@
+.TH "jaco_msgs.msg._ArmPoseActionGoal.ArmPoseActionGoal" 3 "Thu Mar 3 2016" "Version 1.0.1" "Kinova-ROS" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+jaco_msgs.msg._ArmPoseActionGoal.ArmPoseActionGoal \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits Message\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "def \fB__init__\fP (self, args, kwds)"
+.br
+.ti -1c
+.RI "def \fBdeserialize\fP (self, str)"
+.br
+.ti -1c
+.RI "def \fBdeserialize_numpy\fP (self, str, numpy)"
+.br
+.ti -1c
+.RI "def \fBserialize\fP (self, buff)"
+.br
+.ti -1c
+.RI "def \fBserialize_numpy\fP (self, buff, numpy)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBgoal\fP"
+.br
+.ti -1c
+.RI "\fBgoal_id\fP"
+.br
+.ti -1c
+.RI "\fBheader\fP"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "def \fB_get_types\fP (self)"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "list \fB__slots__\fP = ['\fBheader\fP','\fBgoal_id\fP','\fBgoal\fP']"
+.br
+.ti -1c
+.RI "string \fB_full_text\fP"
+.br
+.ti -1c
+.RI "bool \fB_has_header\fP = True"
+.br
+.ti -1c
+.RI "string \fB_md5sum\fP = '0f976a59bdc328547eecdf07b04a9787'"
+.br
+.ti -1c
+.RI "list \fB_slot_types\fP = ['std_msgs/Header','actionlib_msgs/GoalID','jaco_msgs/\fBArmPoseGoal\fP']"
+.br
+.ti -1c
+.RI "string \fB_type\fP = 'jaco_msgs/\fBArmPoseActionGoal\fP'"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "def jaco_msgs\&.msg\&._ArmPoseActionGoal\&.ArmPoseActionGoal\&.__init__ ( self,  args,  kwds)"
+
+.PP
+.nf
+Constructor. Any message fields that are implicitly/explicitly
+set to None will be assigned a default value. The recommend
+use is keyword arguments as this is more robust to future message
+changes.  You cannot mix in-order arguments and keyword arguments.
+
+The available fields are:
+   header,goal_id,goal
+
+:param args: complete set of field values, in .msg order
+:param kwds: use keyword arguments corresponding to message field names
+to set specific fields.
+
+.fi
+.PP
+ 
+.PP
+.nf
+92   def __init__(self, *args, **kwds):
+93     """
+94     Constructor\&. Any message fields that are implicitly/explicitly
+95     set to None will be assigned a default value\&. The recommend
+96     use is keyword arguments as this is more robust to future message
+97     changes\&.  You cannot mix in-order arguments and keyword arguments\&.
+98 
+99     The available fields are:
+100        header,goal_id,goal
+101 
+102     :param args: complete set of field values, in \&.msg order
+103     :param kwds: use keyword arguments corresponding to message field names
+104     to set specific fields\&.
+105     """
+106     if args or kwds:
+107       super(ArmPoseActionGoal, self)\&.__init__(*args, **kwds)
+108       #message fields cannot be None, assign default values for those that are
+109       if self\&.header is None:
+110         self\&.header = std_msgs\&.msg\&.Header()
+111       if self\&.goal_id is None:
+112         self\&.goal_id = actionlib_msgs\&.msg\&.GoalID()
+113       if self\&.goal is None:
+114         self\&.goal = jaco_msgs\&.msg\&.ArmPoseGoal()
+115     else:
+116       self\&.header = std_msgs\&.msg\&.Header()
+117       self\&.goal_id = actionlib_msgs\&.msg\&.GoalID()
+118       self\&.goal = jaco_msgs\&.msg\&.ArmPoseGoal()
+119 
+.fi
+.SH "Member Function Documentation"
+.PP 
+.SS "def jaco_msgs\&.msg\&._ArmPoseActionGoal\&.ArmPoseActionGoal\&._get_types ( self)\fC [private]\fP"
+
+.PP
+.nf
+internal API method
+
+.fi
+.PP
+ 
+.PP
+.nf
+120   def _get_types(self):
+121     """
+122     internal API method
+123     """
+124     return self\&._slot_types
+125 
+.fi
+.SS "def jaco_msgs\&.msg\&._ArmPoseActionGoal\&.ArmPoseActionGoal\&.deserialize ( self,  str)"
+
+.PP
+.nf
+unpack serialized message in str into this message instance
+:param str: byte array of serialized message, ``str``
+
+.fi
+.PP
+ 
+.PP
+.nf
+161   def deserialize(self, str):
+162     """
+163     unpack serialized message in str into this message instance
+164     :param str: byte array of serialized message, ``str``
+165     """
+166     try:
+167       if self\&.header is None:
+168         self\&.header = std_msgs\&.msg\&.Header()
+169       if self\&.goal_id is None:
+170         self\&.goal_id = actionlib_msgs\&.msg\&.GoalID()
+171       if self\&.goal is None:
+172         self\&.goal = jaco_msgs\&.msg\&.ArmPoseGoal()
+173       end = 0
+174       _x = self
+175       start = end
+176       end += 12
+177       (_x\&.header\&.seq, _x\&.header\&.stamp\&.secs, _x\&.header\&.stamp\&.nsecs,) = _struct_3I\&.unpack(str[start:end])
+178       start = end
+179       end += 4
+180       (length,) = _struct_I\&.unpack(str[start:end])
+181       start = end
+182       end += length
+183       if python3:
+184         self\&.header\&.frame_id = str[start:end]\&.decode('utf-8')
+185       else:
+186         self\&.header\&.frame_id = str[start:end]
+187       _x = self
+188       start = end
+189       end += 8
+190       (_x\&.goal_id\&.stamp\&.secs, _x\&.goal_id\&.stamp\&.nsecs,) = _struct_2I\&.unpack(str[start:end])
+191       start = end
+192       end += 4
+193       (length,) = _struct_I\&.unpack(str[start:end])
+194       start = end
+195       end += length
+196       if python3:
+197         self\&.goal_id\&.id = str[start:end]\&.decode('utf-8')
+198       else:
+199         self\&.goal_id\&.id = str[start:end]
+200       _x = self
+201       start = end
+202       end += 12
+203       (_x\&.goal\&.pose\&.header\&.seq, _x\&.goal\&.pose\&.header\&.stamp\&.secs, _x\&.goal\&.pose\&.header\&.stamp\&.nsecs,) = _struct_3I\&.unpack(str[start:end])
+204       start = end
+205       end += 4
+206       (length,) = _struct_I\&.unpack(str[start:end])
+207       start = end
+208       end += length
+209       if python3:
+210         self\&.goal\&.pose\&.header\&.frame_id = str[start:end]\&.decode('utf-8')
+211       else:
+212         self\&.goal\&.pose\&.header\&.frame_id = str[start:end]
+213       _x = self
+214       start = end
+215       end += 56
+216       (_x\&.goal\&.pose\&.pose\&.position\&.x, _x\&.goal\&.pose\&.pose\&.position\&.y, _x\&.goal\&.pose\&.pose\&.position\&.z, _x\&.goal\&.pose\&.pose\&.orientation\&.x, _x\&.goal\&.pose\&.pose\&.orientation\&.y, _x\&.goal\&.pose\&.pose\&.orientation\&.z, _x\&.goal\&.pose\&.pose\&.orientation\&.w,) = _struct_7d\&.unpack(str[start:end])
+217       return self
+218     except struct\&.error as e:
+219       raise genpy\&.DeserializationError(e) #most likely buffer underfill
+220 
+221 
+.fi
+.SS "def jaco_msgs\&.msg\&._ArmPoseActionGoal\&.ArmPoseActionGoal\&.deserialize_numpy ( self,  str,  numpy)"
+
+.PP
+.nf
+unpack serialized message in str into this message instance using numpy for array types
+:param str: byte array of serialized message, ``str``
+:param numpy: numpy python module
+
+.fi
+.PP
+ 
+.PP
+.nf
+258   def deserialize_numpy(self, str, numpy):
+259     """
+260     unpack serialized message in str into this message instance using numpy for array types
+261     :param str: byte array of serialized message, ``str``
+262     :param numpy: numpy python module
+263     """
+264     try:
+265       if self\&.header is None:
+266         self\&.header = std_msgs\&.msg\&.Header()
+267       if self\&.goal_id is None:
+268         self\&.goal_id = actionlib_msgs\&.msg\&.GoalID()
+269       if self\&.goal is None:
+270         self\&.goal = jaco_msgs\&.msg\&.ArmPoseGoal()
+271       end = 0
+272       _x = self
+273       start = end
+274       end += 12
+275       (_x\&.header\&.seq, _x\&.header\&.stamp\&.secs, _x\&.header\&.stamp\&.nsecs,) = _struct_3I\&.unpack(str[start:end])
+276       start = end
+277       end += 4
+278       (length,) = _struct_I\&.unpack(str[start:end])
+279       start = end
+280       end += length
+281       if python3:
+282         self\&.header\&.frame_id = str[start:end]\&.decode('utf-8')
+283       else:
+284         self\&.header\&.frame_id = str[start:end]
+285       _x = self
+286       start = end
+287       end += 8
+288       (_x\&.goal_id\&.stamp\&.secs, _x\&.goal_id\&.stamp\&.nsecs,) = _struct_2I\&.unpack(str[start:end])
+289       start = end
+290       end += 4
+291       (length,) = _struct_I\&.unpack(str[start:end])
+292       start = end
+293       end += length
+294       if python3:
+295         self\&.goal_id\&.id = str[start:end]\&.decode('utf-8')
+296       else:
+297         self\&.goal_id\&.id = str[start:end]
+298       _x = self
+299       start = end
+300       end += 12
+301       (_x\&.goal\&.pose\&.header\&.seq, _x\&.goal\&.pose\&.header\&.stamp\&.secs, _x\&.goal\&.pose\&.header\&.stamp\&.nsecs,) = _struct_3I\&.unpack(str[start:end])
+302       start = end
+303       end += 4
+304       (length,) = _struct_I\&.unpack(str[start:end])
+305       start = end
+306       end += length
+307       if python3:
+308         self\&.goal\&.pose\&.header\&.frame_id = str[start:end]\&.decode('utf-8')
+309       else:
+310         self\&.goal\&.pose\&.header\&.frame_id = str[start:end]
+311       _x = self
+312       start = end
+313       end += 56
+314       (_x\&.goal\&.pose\&.pose\&.position\&.x, _x\&.goal\&.pose\&.pose\&.position\&.y, _x\&.goal\&.pose\&.pose\&.position\&.z, _x\&.goal\&.pose\&.pose\&.orientation\&.x, _x\&.goal\&.pose\&.pose\&.orientation\&.y, _x\&.goal\&.pose\&.pose\&.orientation\&.z, _x\&.goal\&.pose\&.pose\&.orientation\&.w,) = _struct_7d\&.unpack(str[start:end])
+315       return self
+316     except struct\&.error as e:
+317       raise genpy\&.DeserializationError(e) #most likely buffer underfill
+318 
+.fi
+.SS "def jaco_msgs\&.msg\&._ArmPoseActionGoal\&.ArmPoseActionGoal\&.serialize ( self,  buff)"
+
+.PP
+.nf
+serialize message into buffer
+:param buff: buffer, ``StringIO``
+
+.fi
+.PP
+ 
+.PP
+.nf
+126   def serialize(self, buff):
+127     """
+128     serialize message into buffer
+129     :param buff: buffer, ``StringIO``
+130     """
+131     try:
+132       _x = self
+133       buff\&.write(_struct_3I\&.pack(_x\&.header\&.seq, _x\&.header\&.stamp\&.secs, _x\&.header\&.stamp\&.nsecs))
+134       _x = self\&.header\&.frame_id
+135       length = len(_x)
+136       if python3 or type(_x) == unicode:
+137         _x = _x\&.encode('utf-8')
+138         length = len(_x)
+139       buff\&.write(struct\&.pack('<I%ss'%length, length, _x))
+140       _x = self
+141       buff\&.write(_struct_2I\&.pack(_x\&.goal_id\&.stamp\&.secs, _x\&.goal_id\&.stamp\&.nsecs))
+142       _x = self\&.goal_id\&.id
+143       length = len(_x)
+144       if python3 or type(_x) == unicode:
+145         _x = _x\&.encode('utf-8')
+146         length = len(_x)
+147       buff\&.write(struct\&.pack('<I%ss'%length, length, _x))
+148       _x = self
+149       buff\&.write(_struct_3I\&.pack(_x\&.goal\&.pose\&.header\&.seq, _x\&.goal\&.pose\&.header\&.stamp\&.secs, _x\&.goal\&.pose\&.header\&.stamp\&.nsecs))
+150       _x = self\&.goal\&.pose\&.header\&.frame_id
+151       length = len(_x)
+152       if python3 or type(_x) == unicode:
+153         _x = _x\&.encode('utf-8')
+154         length = len(_x)
+155       buff\&.write(struct\&.pack('<I%ss'%length, length, _x))
+156       _x = self
+157       buff\&.write(_struct_7d\&.pack(_x\&.goal\&.pose\&.pose\&.position\&.x, _x\&.goal\&.pose\&.pose\&.position\&.y, _x\&.goal\&.pose\&.pose\&.position\&.z, _x\&.goal\&.pose\&.pose\&.orientation\&.x, _x\&.goal\&.pose\&.pose\&.orientation\&.y, _x\&.goal\&.pose\&.pose\&.orientation\&.z, _x\&.goal\&.pose\&.pose\&.orientation\&.w))
+158     except struct\&.error as se: self\&._check_types(struct\&.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(_x))))
+159     except TypeError as te: self\&._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(_x))))
+160 
+.fi
+.SS "def jaco_msgs\&.msg\&._ArmPoseActionGoal\&.ArmPoseActionGoal\&.serialize_numpy ( self,  buff,  numpy)"
+
+.PP
+.nf
+serialize message with numpy array types into buffer
+:param buff: buffer, ``StringIO``
+:param numpy: numpy python module
+
+.fi
+.PP
+ 
+.PP
+.nf
+222   def serialize_numpy(self, buff, numpy):
+223     """
+224     serialize message with numpy array types into buffer
+225     :param buff: buffer, ``StringIO``
+226     :param numpy: numpy python module
+227     """
+228     try:
+229       _x = self
+230       buff\&.write(_struct_3I\&.pack(_x\&.header\&.seq, _x\&.header\&.stamp\&.secs, _x\&.header\&.stamp\&.nsecs))
+231       _x = self\&.header\&.frame_id
+232       length = len(_x)
+233       if python3 or type(_x) == unicode:
+234         _x = _x\&.encode('utf-8')
+235         length = len(_x)
+236       buff\&.write(struct\&.pack('<I%ss'%length, length, _x))
+237       _x = self
+238       buff\&.write(_struct_2I\&.pack(_x\&.goal_id\&.stamp\&.secs, _x\&.goal_id\&.stamp\&.nsecs))
+239       _x = self\&.goal_id\&.id
+240       length = len(_x)
+241       if python3 or type(_x) == unicode:
+242         _x = _x\&.encode('utf-8')
+243         length = len(_x)
+244       buff\&.write(struct\&.pack('<I%ss'%length, length, _x))
+245       _x = self
+246       buff\&.write(_struct_3I\&.pack(_x\&.goal\&.pose\&.header\&.seq, _x\&.goal\&.pose\&.header\&.stamp\&.secs, _x\&.goal\&.pose\&.header\&.stamp\&.nsecs))
+247       _x = self\&.goal\&.pose\&.header\&.frame_id
+248       length = len(_x)
+249       if python3 or type(_x) == unicode:
+250         _x = _x\&.encode('utf-8')
+251         length = len(_x)
+252       buff\&.write(struct\&.pack('<I%ss'%length, length, _x))
+253       _x = self
+254       buff\&.write(_struct_7d\&.pack(_x\&.goal\&.pose\&.pose\&.position\&.x, _x\&.goal\&.pose\&.pose\&.position\&.y, _x\&.goal\&.pose\&.pose\&.position\&.z, _x\&.goal\&.pose\&.pose\&.orientation\&.x, _x\&.goal\&.pose\&.pose\&.orientation\&.y, _x\&.goal\&.pose\&.pose\&.orientation\&.z, _x\&.goal\&.pose\&.pose\&.orientation\&.w))
+255     except struct\&.error as se: self\&._check_types(struct\&.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(_x))))
+256     except TypeError as te: self\&._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(_x))))
+257 
+.fi
+.SH "Member Data Documentation"
+.PP 
+.SS "list jaco_msgs\&.msg\&._ArmPoseActionGoal\&.ArmPoseActionGoal\&.__slots__ = ['\fBheader\fP','\fBgoal_id\fP','\fBgoal\fP']\fC [static]\fP, \fC [private]\fP"
+
+.SS "string jaco_msgs\&.msg\&._ArmPoseActionGoal\&.ArmPoseActionGoal\&._full_text\fC [static]\fP, \fC [private]\fP"
+
+.SS "bool jaco_msgs\&.msg\&._ArmPoseActionGoal\&.ArmPoseActionGoal\&._has_header = True\fC [static]\fP, \fC [private]\fP"
+
+.SS "string jaco_msgs\&.msg\&._ArmPoseActionGoal\&.ArmPoseActionGoal\&._md5sum = '0f976a59bdc328547eecdf07b04a9787'\fC [static]\fP, \fC [private]\fP"
+
+.SS "list jaco_msgs\&.msg\&._ArmPoseActionGoal\&.ArmPoseActionGoal\&._slot_types = ['std_msgs/Header','actionlib_msgs/GoalID','jaco_msgs/\fBArmPoseGoal\fP']\fC [static]\fP, \fC [private]\fP"
+
+.PP
+Referenced by jaco_msgs\&.msg\&._ArmPoseActionGoal\&.ArmPoseActionGoal\&._get_types()\&.
+.SS "string jaco_msgs\&.msg\&._ArmPoseActionGoal\&.ArmPoseActionGoal\&._type = 'jaco_msgs/\fBArmPoseActionGoal\fP'\fC [static]\fP, \fC [private]\fP"
+
+.SS "jaco_msgs\&.msg\&._ArmPoseActionGoal\&.ArmPoseActionGoal\&.goal"
+
+.PP
+Referenced by jaco_msgs\&.msg\&._ArmPoseActionGoal\&.ArmPoseActionGoal\&.deserialize(), and jaco_msgs\&.msg\&._ArmPoseActionGoal\&.ArmPoseActionGoal\&.deserialize_numpy()\&.
+.SS "jaco_msgs\&.msg\&._ArmPoseActionGoal\&.ArmPoseActionGoal\&.goal_id"
+
+.PP
+Referenced by jaco_msgs\&.msg\&._ArmPoseActionGoal\&.ArmPoseActionGoal\&.deserialize(), and jaco_msgs\&.msg\&._ArmPoseActionGoal\&.ArmPoseActionGoal\&.deserialize_numpy()\&.
+.SS "jaco_msgs\&.msg\&._ArmPoseActionGoal\&.ArmPoseActionGoal\&.header"
+
+.PP
+Referenced by jaco_msgs\&.msg\&._ArmPoseActionGoal\&.ArmPoseActionGoal\&.__init__(), jaco_msgs\&.msg\&._ArmPoseActionGoal\&.ArmPoseActionGoal\&.deserialize(), and jaco_msgs\&.msg\&._ArmPoseActionGoal\&.ArmPoseActionGoal\&.deserialize_numpy()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Kinova-ROS from the source code\&.

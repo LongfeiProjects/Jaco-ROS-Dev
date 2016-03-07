@@ -1,0 +1,89 @@
+.TH "cartesian_workout" 3 "Thu Mar 3 2016" "Version 1.0.1" "Kinova-ROS" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+cartesian_workout \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "def \fBcartesian_pose_client\fP (position, orientation)"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "\fBmag\fP = np\&.sqrt(sum(np\&.power(\fBraw_pose\fP[3:], 2)))"
+.br
+.ti -1c
+.RI "\fBposes\fP = \fBgoal_generators\&.random_pose_generator\fP(int(sys\&.argv[3]))"
+.br
+.ti -1c
+.RI "list \fBraw_pose\fP = [float(n) for n in sys\&.argv[2:]]"
+.br
+.ti -1c
+.RI "\fBresult\fP = \fBcartesian_pose_client\fP(pos, orient)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.PP
+.nf
+A helper program to test cartesian goals for the JACO and MICO arms.
+.fi
+.PP
+ 
+.SH "Function Documentation"
+.PP 
+.SS "def cartesian_workout\&.cartesian_pose_client ( position,  orientation)"
+
+.PP
+.nf
+Send a cartesian goal to the action server.
+.fi
+.PP
+ 
+.PP
+.nf
+18 def cartesian_pose_client(position, orientation):
+19     """Send a cartesian goal to the action server\&."""
+20     action_address = '/' + str(sys\&.argv[1]) + '_arm_driver/arm_pose/arm_pose'
+21     client = actionlib\&.SimpleActionClient(action_address, jaco_msgs\&.msg\&.ArmPoseAction)
+22     client\&.wait_for_server()
+23 
+24     goal = jaco_msgs\&.msg\&.ArmPoseGoal()
+25     goal\&.pose\&.header = std_msgs\&.msg\&.Header(frame_id=(str(sys\&.argv[1]) + '_api_origin'))
+26     goal\&.pose\&.pose\&.position = geometry_msgs\&.msg\&.Point(
+27         x=position[0], y=position[1], z=position[2])
+28     goal\&.pose\&.pose\&.orientation = geometry_msgs\&.msg\&.Quaternion(
+29         x=orientation[0], y=orientation[1], z=orientation[2], w=orientation[3])
+30 
+31     client\&.send_goal(goal)
+32 
+33     if client\&.wait_for_result(rospy\&.Duration(10\&.0)):
+34         return client\&.get_result()
+35     else:
+36         client\&.cancel_all_goals()
+37         print('        the cartesian action timed-out')
+38         return None
+39 
+40 
+.fi
+.SH "Variable Documentation"
+.PP 
+.SS "cartesian_workout\&.mag = np\&.sqrt(sum(np\&.power(\fBraw_pose\fP[3:], 2)))"
+
+.SS "list cartesian_workout\&.poses = \fBgoal_generators\&.random_pose_generator\fP(int(sys\&.argv[3]))"
+
+.SS "list cartesian_workout\&.raw_pose = [float(n) for n in sys\&.argv[2:]]"
+
+.SS "cartesian_workout\&.result = \fBcartesian_pose_client\fP(pos, orient)"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Kinova-ROS from the source code\&.

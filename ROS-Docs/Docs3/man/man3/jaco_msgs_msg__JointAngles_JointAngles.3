@@ -1,0 +1,317 @@
+.TH "jaco_msgs.msg._JointAngles.JointAngles" 3 "Thu Mar 3 2016" "Version 1.0.1" "Kinova-ROS" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+jaco_msgs.msg._JointAngles.JointAngles \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits Message\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "def \fB__init__\fP (self, args, kwds)"
+.br
+.ti -1c
+.RI "def \fBdeserialize\fP (self, str)"
+.br
+.ti -1c
+.RI "def \fBdeserialize_numpy\fP (self, str, numpy)"
+.br
+.ti -1c
+.RI "def \fBserialize\fP (self, buff)"
+.br
+.ti -1c
+.RI "def \fBserialize_numpy\fP (self, buff, numpy)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBjoint1\fP"
+.br
+.ti -1c
+.RI "\fBjoint2\fP"
+.br
+.ti -1c
+.RI "\fBjoint3\fP"
+.br
+.ti -1c
+.RI "\fBjoint4\fP"
+.br
+.ti -1c
+.RI "\fBjoint5\fP"
+.br
+.ti -1c
+.RI "\fBjoint6\fP"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "def \fB_get_types\fP (self)"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "list \fB__slots__\fP = ['\fBjoint1\fP','\fBjoint2\fP','\fBjoint3\fP','\fBjoint4\fP','\fBjoint5\fP','\fBjoint6\fP']"
+.br
+.ti -1c
+.RI "string \fB_full_text\fP"
+.br
+.ti -1c
+.RI "bool \fB_has_header\fP = False"
+.br
+.ti -1c
+.RI "string \fB_md5sum\fP = 'b0068422b386ec8608fa05052ffe139f'"
+.br
+.ti -1c
+.RI "list \fB_slot_types\fP = ['float32','float32','float32','float32','float32','float32']"
+.br
+.ti -1c
+.RI "string \fB_type\fP = 'jaco_msgs/\fBJointAngles\fP'"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "def jaco_msgs\&.msg\&._JointAngles\&.JointAngles\&.__init__ ( self,  args,  kwds)"
+
+.PP
+.nf
+Constructor. Any message fields that are implicitly/explicitly
+set to None will be assigned a default value. The recommend
+use is keyword arguments as this is more robust to future message
+changes.  You cannot mix in-order arguments and keyword arguments.
+
+The available fields are:
+   joint1,joint2,joint3,joint4,joint5,joint6
+
+:param args: complete set of field values, in .msg order
+:param kwds: use keyword arguments corresponding to message field names
+to set specific fields.
+
+.fi
+.PP
+ 
+.PP
+.nf
+23   def __init__(self, *args, **kwds):
+24     """
+25     Constructor\&. Any message fields that are implicitly/explicitly
+26     set to None will be assigned a default value\&. The recommend
+27     use is keyword arguments as this is more robust to future message
+28     changes\&.  You cannot mix in-order arguments and keyword arguments\&.
+29 
+30     The available fields are:
+31        joint1,joint2,joint3,joint4,joint5,joint6
+32 
+33     :param args: complete set of field values, in \&.msg order
+34     :param kwds: use keyword arguments corresponding to message field names
+35     to set specific fields\&.
+36     """
+37     if args or kwds:
+38       super(JointAngles, self)\&.__init__(*args, **kwds)
+39       #message fields cannot be None, assign default values for those that are
+40       if self\&.joint1 is None:
+41         self\&.joint1 = 0\&.
+42       if self\&.joint2 is None:
+43         self\&.joint2 = 0\&.
+44       if self\&.joint3 is None:
+45         self\&.joint3 = 0\&.
+46       if self\&.joint4 is None:
+47         self\&.joint4 = 0\&.
+48       if self\&.joint5 is None:
+49         self\&.joint5 = 0\&.
+50       if self\&.joint6 is None:
+51         self\&.joint6 = 0\&.
+52     else:
+53       self\&.joint1 = 0\&.
+54       self\&.joint2 = 0\&.
+55       self\&.joint3 = 0\&.
+56       self\&.joint4 = 0\&.
+57       self\&.joint5 = 0\&.
+58       self\&.joint6 = 0\&.
+59 
+.fi
+.SH "Member Function Documentation"
+.PP 
+.SS "def jaco_msgs\&.msg\&._JointAngles\&.JointAngles\&._get_types ( self)\fC [private]\fP"
+
+.PP
+.nf
+internal API method
+
+.fi
+.PP
+ 
+.PP
+.nf
+60   def _get_types(self):
+61     """
+62     internal API method
+63     """
+64     return self\&._slot_types
+65 
+.fi
+.SS "def jaco_msgs\&.msg\&._JointAngles\&.JointAngles\&.deserialize ( self,  str)"
+
+.PP
+.nf
+unpack serialized message in str into this message instance
+:param str: byte array of serialized message, ``str``
+
+.fi
+.PP
+ 
+.PP
+.nf
+77   def deserialize(self, str):
+78     """
+79     unpack serialized message in str into this message instance
+80     :param str: byte array of serialized message, ``str``
+81     """
+82     try:
+83       end = 0
+84       _x = self
+85       start = end
+86       end += 24
+87       (_x\&.joint1, _x\&.joint2, _x\&.joint3, _x\&.joint4, _x\&.joint5, _x\&.joint6,) = _struct_6f\&.unpack(str[start:end])
+88       return self
+89     except struct\&.error as e:
+90       raise genpy\&.DeserializationError(e) #most likely buffer underfill
+91 
+92 
+.fi
+.SS "def jaco_msgs\&.msg\&._JointAngles\&.JointAngles\&.deserialize_numpy ( self,  str,  numpy)"
+
+.PP
+.nf
+unpack serialized message in str into this message instance using numpy for array types
+:param str: byte array of serialized message, ``str``
+:param numpy: numpy python module
+
+.fi
+.PP
+ 
+.PP
+.nf
+105   def deserialize_numpy(self, str, numpy):
+106     """
+107     unpack serialized message in str into this message instance using numpy for array types
+108     :param str: byte array of serialized message, ``str``
+109     :param numpy: numpy python module
+110     """
+111     try:
+112       end = 0
+113       _x = self
+114       start = end
+115       end += 24
+116       (_x\&.joint1, _x\&.joint2, _x\&.joint3, _x\&.joint4, _x\&.joint5, _x\&.joint6,) = _struct_6f\&.unpack(str[start:end])
+117       return self
+118     except struct\&.error as e:
+119       raise genpy\&.DeserializationError(e) #most likely buffer underfill
+120 
+.fi
+.SS "def jaco_msgs\&.msg\&._JointAngles\&.JointAngles\&.serialize ( self,  buff)"
+
+.PP
+.nf
+serialize message into buffer
+:param buff: buffer, ``StringIO``
+
+.fi
+.PP
+ 
+.PP
+.nf
+66   def serialize(self, buff):
+67     """
+68     serialize message into buffer
+69     :param buff: buffer, ``StringIO``
+70     """
+71     try:
+72       _x = self
+73       buff\&.write(_struct_6f\&.pack(_x\&.joint1, _x\&.joint2, _x\&.joint3, _x\&.joint4, _x\&.joint5, _x\&.joint6))
+74     except struct\&.error as se: self\&._check_types(struct\&.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(_x))))
+75     except TypeError as te: self\&._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(_x))))
+76 
+.fi
+.SS "def jaco_msgs\&.msg\&._JointAngles\&.JointAngles\&.serialize_numpy ( self,  buff,  numpy)"
+
+.PP
+.nf
+serialize message with numpy array types into buffer
+:param buff: buffer, ``StringIO``
+:param numpy: numpy python module
+
+.fi
+.PP
+ 
+.PP
+.nf
+93   def serialize_numpy(self, buff, numpy):
+94     """
+95     serialize message with numpy array types into buffer
+96     :param buff: buffer, ``StringIO``
+97     :param numpy: numpy python module
+98     """
+99     try:
+100       _x = self
+101       buff\&.write(_struct_6f\&.pack(_x\&.joint1, _x\&.joint2, _x\&.joint3, _x\&.joint4, _x\&.joint5, _x\&.joint6))
+102     except struct\&.error as se: self\&._check_types(struct\&.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(_x))))
+103     except TypeError as te: self\&._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(_x))))
+104 
+.fi
+.SH "Member Data Documentation"
+.PP 
+.SS "list jaco_msgs\&.msg\&._JointAngles\&.JointAngles\&.__slots__ = ['\fBjoint1\fP','\fBjoint2\fP','\fBjoint3\fP','\fBjoint4\fP','\fBjoint5\fP','\fBjoint6\fP']\fC [static]\fP, \fC [private]\fP"
+
+.SS "string jaco_msgs\&.msg\&._JointAngles\&.JointAngles\&._full_text\fC [static]\fP, \fC [private]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+1 = """float32 joint1
+2 float32 joint2
+3 float32 joint3
+4 float32 joint4
+5 float32 joint5
+6 float32 joint6
+7 
+8 """
+.fi
+.SS "bool jaco_msgs\&.msg\&._JointAngles\&.JointAngles\&._has_header = False\fC [static]\fP, \fC [private]\fP"
+
+.SS "string jaco_msgs\&.msg\&._JointAngles\&.JointAngles\&._md5sum = 'b0068422b386ec8608fa05052ffe139f'\fC [static]\fP, \fC [private]\fP"
+
+.SS "list jaco_msgs\&.msg\&._JointAngles\&.JointAngles\&._slot_types = ['float32','float32','float32','float32','float32','float32']\fC [static]\fP, \fC [private]\fP"
+
+.PP
+Referenced by jaco_msgs\&.msg\&._JointAngles\&.JointAngles\&._get_types()\&.
+.SS "string jaco_msgs\&.msg\&._JointAngles\&.JointAngles\&._type = 'jaco_msgs/\fBJointAngles\fP'\fC [static]\fP, \fC [private]\fP"
+
+.SS "jaco_msgs\&.msg\&._JointAngles\&.JointAngles\&.joint1"
+
+.PP
+Referenced by jaco_msgs\&.msg\&._JointAngles\&.JointAngles\&.__init__()\&.
+.SS "jaco_msgs\&.msg\&._JointAngles\&.JointAngles\&.joint2"
+
+.SS "jaco_msgs\&.msg\&._JointAngles\&.JointAngles\&.joint3"
+
+.SS "jaco_msgs\&.msg\&._JointAngles\&.JointAngles\&.joint4"
+
+.SS "jaco_msgs\&.msg\&._JointAngles\&.JointAngles\&.joint5"
+
+.SS "jaco_msgs\&.msg\&._JointAngles\&.JointAngles\&.joint6"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Kinova-ROS from the source code\&.

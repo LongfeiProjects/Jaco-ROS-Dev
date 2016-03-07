@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="dir_dca50d5d80148f851647347384a3751f">
+    <title>D:/Longfei/Desktop/catkin_KinovaROS/build/jaco-ros/jaco_msgs Directory Reference</title>
+<para>Directory dependency diagram for D:/Longfei/Desktop/catkin_KinovaROS/build/jaco-ros/jaco_msgs</para>
+<para>
+    <figure>
+        <title>Directory Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../dir_dca50d5d80148f851647347384a3751f_dep.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+        <simplesect>
+            <title> Directories </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>dir <link linkend="dir_da42d01044bcb1967825693bf17c7c8c">D:/Longfei/Desktop/catkin_KinovaROS/build/jaco-ros/jaco_msgs/catkin_generated</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>dir <link linkend="dir_64b5f51ba509f5eb6524d242b743f942">D:/Longfei/Desktop/catkin_KinovaROS/build/jaco-ros/jaco_msgs/cmake</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+    <simplesect>
+        <title>Detailed Description</title>
+    <para>Directory location is D:/Longfei/Desktop/catkin_KinovaROS/build/jaco-ros/jaco_msgs/</para>
+    </simplesect>
+</section>

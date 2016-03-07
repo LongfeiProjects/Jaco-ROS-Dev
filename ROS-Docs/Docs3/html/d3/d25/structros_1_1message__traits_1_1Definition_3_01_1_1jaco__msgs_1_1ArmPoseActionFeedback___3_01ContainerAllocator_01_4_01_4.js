@@ -1,0 +1,5 @@
+var structros_1_1message__traits_1_1Definition_3_01_1_1jaco__msgs_1_1ArmPoseActionFeedback___3_01ContainerAllocator_01_4_01_4 =
+[
+    [ "value", "d3/d25/structros_1_1message__traits_1_1Definition_3_01_1_1jaco__msgs_1_1ArmPoseActionFeedback___3_01ContainerAllocator_01_4_01_4.html#a73f56b75c9bf91ad7e2fb268ee927c18", null ],
+    [ "value", "d3/d25/structros_1_1message__traits_1_1Definition_3_01_1_1jaco__msgs_1_1ArmPoseActionFeedback___3_01ContainerAllocator_01_4_01_4.html#aca9fc68e22b2f6f9984575b70b96f247", null ]
+];

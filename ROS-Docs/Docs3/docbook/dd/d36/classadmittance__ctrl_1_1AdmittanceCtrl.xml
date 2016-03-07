@@ -1,0 +1,167 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="dd/d36/classadmittance__ctrl_1_1AdmittanceCtrl">
+<title>admittance_ctrl::AdmittanceCtrl class Reference</title>
+<para>Inheritance diagram for admittance_ctrl::AdmittanceCtrl</para>
+<para>
+    <figure>
+        <title>Inheritance graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../d8/dd5/classadmittance__ctrl_1_1AdmittanceCtrl__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Collaboration diagram for admittance_ctrl::AdmittanceCtrl</para>
+<para>
+    <figure>
+        <title>Collaboration graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../d2/d03/classadmittance__ctrl_1_1AdmittanceCtrl__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+        <section>
+            <title>Public Attributes</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>cur_wrench</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>dz_x_max</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>dz_x_min</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>dz_y_max</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>dz_y_min</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>dz_z_max</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>dz_z_min</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>k_f</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>pub_cmd_vel</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>sub_wrench</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>timer</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>vel_max</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>def <link linkend="dd/d36/classadmittance__ctrl_1_1AdmittanceCtrl_1a6e303b642da1e5fe2c9a3a29a148dbb9">__init__</link> (
+self )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>def <link linkend="dd/d36/classadmittance__ctrl_1_1AdmittanceCtrl_1a7191d1d7f805fbeef6a0a0667bd0ac65">saturate_vel</link> (
+self , vel )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>def <link linkend="dd/d36/classadmittance__ctrl_1_1AdmittanceCtrl_1a38c53c8d924147104986363e8bd630f7">timer_cb</link> (
+self , event )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>def <link linkend="dd/d36/classadmittance__ctrl_1_1AdmittanceCtrl_1a26b129bab2045988a9de094fbc7b582d">wrench_cb</link> (
+self , msg )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Member Data Documentation</title>
+        </section>
+            <section xml:id="dd/d36/classadmittance__ctrl_1_1AdmittanceCtrl_1a6e303b642da1e5fe2c9a3a29a148dbb9">
+                <title>def admittance_ctrl.AdmittanceCtrl.__init__ (self)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="dd/d36/classadmittance__ctrl_1_1AdmittanceCtrl_1a7191d1d7f805fbeef6a0a0667bd0ac65">
+                <title>def admittance_ctrl.AdmittanceCtrl.saturate_vel (self, vel)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="dd/d36/classadmittance__ctrl_1_1AdmittanceCtrl_1a38c53c8d924147104986363e8bd630f7">
+                <title>def admittance_ctrl.AdmittanceCtrl.timer_cb (self, event)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="dd/d36/classadmittance__ctrl_1_1AdmittanceCtrl_1a26b129bab2045988a9de094fbc7b582d">
+                <title>def admittance_ctrl.AdmittanceCtrl.wrench_cb (self, msg)</title> <emphasis></emphasis>
+                
+            </section>
+</section>

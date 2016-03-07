@@ -1,0 +1,420 @@
+.TH "jaco_msgs.msg._ArmJointAnglesActionFeedback.ArmJointAnglesActionFeedback" 3 "Thu Mar 3 2016" "Version 1.0.1" "Kinova-ROS" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+jaco_msgs.msg._ArmJointAnglesActionFeedback.ArmJointAnglesActionFeedback \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits Message\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "def \fB__init__\fP (self, args, kwds)"
+.br
+.ti -1c
+.RI "def \fBdeserialize\fP (self, str)"
+.br
+.ti -1c
+.RI "def \fBdeserialize_numpy\fP (self, str, numpy)"
+.br
+.ti -1c
+.RI "def \fBserialize\fP (self, buff)"
+.br
+.ti -1c
+.RI "def \fBserialize_numpy\fP (self, buff, numpy)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBfeedback\fP"
+.br
+.ti -1c
+.RI "\fBheader\fP"
+.br
+.ti -1c
+.RI "\fBstatus\fP"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "def \fB_get_types\fP (self)"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "list \fB__slots__\fP = ['\fBheader\fP','\fBstatus\fP','\fBfeedback\fP']"
+.br
+.ti -1c
+.RI "string \fB_full_text\fP"
+.br
+.ti -1c
+.RI "bool \fB_has_header\fP = True"
+.br
+.ti -1c
+.RI "string \fB_md5sum\fP = '259ba80d31f6908ee48a8aea4f111a35'"
+.br
+.ti -1c
+.RI "list \fB_slot_types\fP = ['std_msgs/Header','actionlib_msgs/GoalStatus','jaco_msgs/\fBArmJointAnglesFeedback\fP']"
+.br
+.ti -1c
+.RI "string \fB_type\fP = 'jaco_msgs/\fBArmJointAnglesActionFeedback\fP'"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "def jaco_msgs\&.msg\&._ArmJointAnglesActionFeedback\&.ArmJointAnglesActionFeedback\&.__init__ ( self,  args,  kwds)"
+
+.PP
+.nf
+Constructor. Any message fields that are implicitly/explicitly
+set to None will be assigned a default value. The recommend
+use is keyword arguments as this is more robust to future message
+changes.  You cannot mix in-order arguments and keyword arguments.
+
+The available fields are:
+   header,status,feedback
+
+:param args: complete set of field values, in .msg order
+:param kwds: use keyword arguments corresponding to message field names
+to set specific fields.
+
+.fi
+.PP
+ 
+.PP
+.nf
+99   def __init__(self, *args, **kwds):
+100     """
+101     Constructor\&. Any message fields that are implicitly/explicitly
+102     set to None will be assigned a default value\&. The recommend
+103     use is keyword arguments as this is more robust to future message
+104     changes\&.  You cannot mix in-order arguments and keyword arguments\&.
+105 
+106     The available fields are:
+107        header,status,feedback
+108 
+109     :param args: complete set of field values, in \&.msg order
+110     :param kwds: use keyword arguments corresponding to message field names
+111     to set specific fields\&.
+112     """
+113     if args or kwds:
+114       super(ArmJointAnglesActionFeedback, self)\&.__init__(*args, **kwds)
+115       #message fields cannot be None, assign default values for those that are
+116       if self\&.header is None:
+117         self\&.header = std_msgs\&.msg\&.Header()
+118       if self\&.status is None:
+119         self\&.status = actionlib_msgs\&.msg\&.GoalStatus()
+120       if self\&.feedback is None:
+121         self\&.feedback = jaco_msgs\&.msg\&.ArmJointAnglesFeedback()
+122     else:
+123       self\&.header = std_msgs\&.msg\&.Header()
+124       self\&.status = actionlib_msgs\&.msg\&.GoalStatus()
+125       self\&.feedback = jaco_msgs\&.msg\&.ArmJointAnglesFeedback()
+126 
+.fi
+.SH "Member Function Documentation"
+.PP 
+.SS "def jaco_msgs\&.msg\&._ArmJointAnglesActionFeedback\&.ArmJointAnglesActionFeedback\&._get_types ( self)\fC [private]\fP"
+
+.PP
+.nf
+internal API method
+
+.fi
+.PP
+ 
+.PP
+.nf
+127   def _get_types(self):
+128     """
+129     internal API method
+130     """
+131     return self\&._slot_types
+132 
+.fi
+.SS "def jaco_msgs\&.msg\&._ArmJointAnglesActionFeedback\&.ArmJointAnglesActionFeedback\&.deserialize ( self,  str)"
+
+.PP
+.nf
+unpack serialized message in str into this message instance
+:param str: byte array of serialized message, ``str``
+
+.fi
+.PP
+ 
+.PP
+.nf
+167   def deserialize(self, str):
+168     """
+169     unpack serialized message in str into this message instance
+170     :param str: byte array of serialized message, ``str``
+171     """
+172     try:
+173       if self\&.header is None:
+174         self\&.header = std_msgs\&.msg\&.Header()
+175       if self\&.status is None:
+176         self\&.status = actionlib_msgs\&.msg\&.GoalStatus()
+177       if self\&.feedback is None:
+178         self\&.feedback = jaco_msgs\&.msg\&.ArmJointAnglesFeedback()
+179       end = 0
+180       _x = self
+181       start = end
+182       end += 12
+183       (_x\&.header\&.seq, _x\&.header\&.stamp\&.secs, _x\&.header\&.stamp\&.nsecs,) = _struct_3I\&.unpack(str[start:end])
+184       start = end
+185       end += 4
+186       (length,) = _struct_I\&.unpack(str[start:end])
+187       start = end
+188       end += length
+189       if python3:
+190         self\&.header\&.frame_id = str[start:end]\&.decode('utf-8')
+191       else:
+192         self\&.header\&.frame_id = str[start:end]
+193       _x = self
+194       start = end
+195       end += 8
+196       (_x\&.status\&.goal_id\&.stamp\&.secs, _x\&.status\&.goal_id\&.stamp\&.nsecs,) = _struct_2I\&.unpack(str[start:end])
+197       start = end
+198       end += 4
+199       (length,) = _struct_I\&.unpack(str[start:end])
+200       start = end
+201       end += length
+202       if python3:
+203         self\&.status\&.goal_id\&.id = str[start:end]\&.decode('utf-8')
+204       else:
+205         self\&.status\&.goal_id\&.id = str[start:end]
+206       start = end
+207       end += 1
+208       (self\&.status\&.status,) = _struct_B\&.unpack(str[start:end])
+209       start = end
+210       end += 4
+211       (length,) = _struct_I\&.unpack(str[start:end])
+212       start = end
+213       end += length
+214       if python3:
+215         self\&.status\&.text = str[start:end]\&.decode('utf-8')
+216       else:
+217         self\&.status\&.text = str[start:end]
+218       _x = self
+219       start = end
+220       end += 24
+221       (_x\&.feedback\&.angles\&.joint1, _x\&.feedback\&.angles\&.joint2, _x\&.feedback\&.angles\&.joint3, _x\&.feedback\&.angles\&.joint4, _x\&.feedback\&.angles\&.joint5, _x\&.feedback\&.angles\&.joint6,) = _struct_6f\&.unpack(str[start:end])
+222       return self
+223     except struct\&.error as e:
+224       raise genpy\&.DeserializationError(e) #most likely buffer underfill
+225 
+226 
+.fi
+.SS "def jaco_msgs\&.msg\&._ArmJointAnglesActionFeedback\&.ArmJointAnglesActionFeedback\&.deserialize_numpy ( self,  str,  numpy)"
+
+.PP
+.nf
+unpack serialized message in str into this message instance using numpy for array types
+:param str: byte array of serialized message, ``str``
+:param numpy: numpy python module
+
+.fi
+.PP
+ 
+.PP
+.nf
+262   def deserialize_numpy(self, str, numpy):
+263     """
+264     unpack serialized message in str into this message instance using numpy for array types
+265     :param str: byte array of serialized message, ``str``
+266     :param numpy: numpy python module
+267     """
+268     try:
+269       if self\&.header is None:
+270         self\&.header = std_msgs\&.msg\&.Header()
+271       if self\&.status is None:
+272         self\&.status = actionlib_msgs\&.msg\&.GoalStatus()
+273       if self\&.feedback is None:
+274         self\&.feedback = jaco_msgs\&.msg\&.ArmJointAnglesFeedback()
+275       end = 0
+276       _x = self
+277       start = end
+278       end += 12
+279       (_x\&.header\&.seq, _x\&.header\&.stamp\&.secs, _x\&.header\&.stamp\&.nsecs,) = _struct_3I\&.unpack(str[start:end])
+280       start = end
+281       end += 4
+282       (length,) = _struct_I\&.unpack(str[start:end])
+283       start = end
+284       end += length
+285       if python3:
+286         self\&.header\&.frame_id = str[start:end]\&.decode('utf-8')
+287       else:
+288         self\&.header\&.frame_id = str[start:end]
+289       _x = self
+290       start = end
+291       end += 8
+292       (_x\&.status\&.goal_id\&.stamp\&.secs, _x\&.status\&.goal_id\&.stamp\&.nsecs,) = _struct_2I\&.unpack(str[start:end])
+293       start = end
+294       end += 4
+295       (length,) = _struct_I\&.unpack(str[start:end])
+296       start = end
+297       end += length
+298       if python3:
+299         self\&.status\&.goal_id\&.id = str[start:end]\&.decode('utf-8')
+300       else:
+301         self\&.status\&.goal_id\&.id = str[start:end]
+302       start = end
+303       end += 1
+304       (self\&.status\&.status,) = _struct_B\&.unpack(str[start:end])
+305       start = end
+306       end += 4
+307       (length,) = _struct_I\&.unpack(str[start:end])
+308       start = end
+309       end += length
+310       if python3:
+311         self\&.status\&.text = str[start:end]\&.decode('utf-8')
+312       else:
+313         self\&.status\&.text = str[start:end]
+314       _x = self
+315       start = end
+316       end += 24
+317       (_x\&.feedback\&.angles\&.joint1, _x\&.feedback\&.angles\&.joint2, _x\&.feedback\&.angles\&.joint3, _x\&.feedback\&.angles\&.joint4, _x\&.feedback\&.angles\&.joint5, _x\&.feedback\&.angles\&.joint6,) = _struct_6f\&.unpack(str[start:end])
+318       return self
+319     except struct\&.error as e:
+320       raise genpy\&.DeserializationError(e) #most likely buffer underfill
+321 
+.fi
+.SS "def jaco_msgs\&.msg\&._ArmJointAnglesActionFeedback\&.ArmJointAnglesActionFeedback\&.serialize ( self,  buff)"
+
+.PP
+.nf
+serialize message into buffer
+:param buff: buffer, ``StringIO``
+
+.fi
+.PP
+ 
+.PP
+.nf
+133   def serialize(self, buff):
+134     """
+135     serialize message into buffer
+136     :param buff: buffer, ``StringIO``
+137     """
+138     try:
+139       _x = self
+140       buff\&.write(_struct_3I\&.pack(_x\&.header\&.seq, _x\&.header\&.stamp\&.secs, _x\&.header\&.stamp\&.nsecs))
+141       _x = self\&.header\&.frame_id
+142       length = len(_x)
+143       if python3 or type(_x) == unicode:
+144         _x = _x\&.encode('utf-8')
+145         length = len(_x)
+146       buff\&.write(struct\&.pack('<I%ss'%length, length, _x))
+147       _x = self
+148       buff\&.write(_struct_2I\&.pack(_x\&.status\&.goal_id\&.stamp\&.secs, _x\&.status\&.goal_id\&.stamp\&.nsecs))
+149       _x = self\&.status\&.goal_id\&.id
+150       length = len(_x)
+151       if python3 or type(_x) == unicode:
+152         _x = _x\&.encode('utf-8')
+153         length = len(_x)
+154       buff\&.write(struct\&.pack('<I%ss'%length, length, _x))
+155       buff\&.write(_struct_B\&.pack(self\&.status\&.status))
+156       _x = self\&.status\&.text
+157       length = len(_x)
+158       if python3 or type(_x) == unicode:
+159         _x = _x\&.encode('utf-8')
+160         length = len(_x)
+161       buff\&.write(struct\&.pack('<I%ss'%length, length, _x))
+162       _x = self
+163       buff\&.write(_struct_6f\&.pack(_x\&.feedback\&.angles\&.joint1, _x\&.feedback\&.angles\&.joint2, _x\&.feedback\&.angles\&.joint3, _x\&.feedback\&.angles\&.joint4, _x\&.feedback\&.angles\&.joint5, _x\&.feedback\&.angles\&.joint6))
+164     except struct\&.error as se: self\&._check_types(struct\&.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(_x))))
+165     except TypeError as te: self\&._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(_x))))
+166 
+.fi
+.SS "def jaco_msgs\&.msg\&._ArmJointAnglesActionFeedback\&.ArmJointAnglesActionFeedback\&.serialize_numpy ( self,  buff,  numpy)"
+
+.PP
+.nf
+serialize message with numpy array types into buffer
+:param buff: buffer, ``StringIO``
+:param numpy: numpy python module
+
+.fi
+.PP
+ 
+.PP
+.nf
+227   def serialize_numpy(self, buff, numpy):
+228     """
+229     serialize message with numpy array types into buffer
+230     :param buff: buffer, ``StringIO``
+231     :param numpy: numpy python module
+232     """
+233     try:
+234       _x = self
+235       buff\&.write(_struct_3I\&.pack(_x\&.header\&.seq, _x\&.header\&.stamp\&.secs, _x\&.header\&.stamp\&.nsecs))
+236       _x = self\&.header\&.frame_id
+237       length = len(_x)
+238       if python3 or type(_x) == unicode:
+239         _x = _x\&.encode('utf-8')
+240         length = len(_x)
+241       buff\&.write(struct\&.pack('<I%ss'%length, length, _x))
+242       _x = self
+243       buff\&.write(_struct_2I\&.pack(_x\&.status\&.goal_id\&.stamp\&.secs, _x\&.status\&.goal_id\&.stamp\&.nsecs))
+244       _x = self\&.status\&.goal_id\&.id
+245       length = len(_x)
+246       if python3 or type(_x) == unicode:
+247         _x = _x\&.encode('utf-8')
+248         length = len(_x)
+249       buff\&.write(struct\&.pack('<I%ss'%length, length, _x))
+250       buff\&.write(_struct_B\&.pack(self\&.status\&.status))
+251       _x = self\&.status\&.text
+252       length = len(_x)
+253       if python3 or type(_x) == unicode:
+254         _x = _x\&.encode('utf-8')
+255         length = len(_x)
+256       buff\&.write(struct\&.pack('<I%ss'%length, length, _x))
+257       _x = self
+258       buff\&.write(_struct_6f\&.pack(_x\&.feedback\&.angles\&.joint1, _x\&.feedback\&.angles\&.joint2, _x\&.feedback\&.angles\&.joint3, _x\&.feedback\&.angles\&.joint4, _x\&.feedback\&.angles\&.joint5, _x\&.feedback\&.angles\&.joint6))
+259     except struct\&.error as se: self\&._check_types(struct\&.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(_x))))
+260     except TypeError as te: self\&._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(_x))))
+261 
+.fi
+.SH "Member Data Documentation"
+.PP 
+.SS "list jaco_msgs\&.msg\&._ArmJointAnglesActionFeedback\&.ArmJointAnglesActionFeedback\&.__slots__ = ['\fBheader\fP','\fBstatus\fP','\fBfeedback\fP']\fC [static]\fP, \fC [private]\fP"
+
+.SS "string jaco_msgs\&.msg\&._ArmJointAnglesActionFeedback\&.ArmJointAnglesActionFeedback\&._full_text\fC [static]\fP, \fC [private]\fP"
+
+.SS "bool jaco_msgs\&.msg\&._ArmJointAnglesActionFeedback\&.ArmJointAnglesActionFeedback\&._has_header = True\fC [static]\fP, \fC [private]\fP"
+
+.SS "string jaco_msgs\&.msg\&._ArmJointAnglesActionFeedback\&.ArmJointAnglesActionFeedback\&._md5sum = '259ba80d31f6908ee48a8aea4f111a35'\fC [static]\fP, \fC [private]\fP"
+
+.SS "list jaco_msgs\&.msg\&._ArmJointAnglesActionFeedback\&.ArmJointAnglesActionFeedback\&._slot_types = ['std_msgs/Header','actionlib_msgs/GoalStatus','jaco_msgs/\fBArmJointAnglesFeedback\fP']\fC [static]\fP, \fC [private]\fP"
+
+.PP
+Referenced by jaco_msgs\&.msg\&._ArmJointAnglesActionFeedback\&.ArmJointAnglesActionFeedback\&._get_types()\&.
+.SS "string jaco_msgs\&.msg\&._ArmJointAnglesActionFeedback\&.ArmJointAnglesActionFeedback\&._type = 'jaco_msgs/\fBArmJointAnglesActionFeedback\fP'\fC [static]\fP, \fC [private]\fP"
+
+.SS "jaco_msgs\&.msg\&._ArmJointAnglesActionFeedback\&.ArmJointAnglesActionFeedback\&.feedback"
+
+.PP
+Referenced by jaco_msgs\&.msg\&._ArmJointAnglesActionFeedback\&.ArmJointAnglesActionFeedback\&.deserialize(), and jaco_msgs\&.msg\&._ArmJointAnglesActionFeedback\&.ArmJointAnglesActionFeedback\&.deserialize_numpy()\&.
+.SS "jaco_msgs\&.msg\&._ArmJointAnglesActionFeedback\&.ArmJointAnglesActionFeedback\&.header"
+
+.PP
+Referenced by jaco_msgs\&.msg\&._ArmJointAnglesActionFeedback\&.ArmJointAnglesActionFeedback\&.__init__(), jaco_msgs\&.msg\&._ArmJointAnglesActionFeedback\&.ArmJointAnglesActionFeedback\&.deserialize(), and jaco_msgs\&.msg\&._ArmJointAnglesActionFeedback\&.ArmJointAnglesActionFeedback\&.deserialize_numpy()\&.
+.SS "jaco_msgs\&.msg\&._ArmJointAnglesActionFeedback\&.ArmJointAnglesActionFeedback\&.status"
+
+.PP
+Referenced by jaco_msgs\&.msg\&._ArmJointAnglesActionFeedback\&.ArmJointAnglesActionFeedback\&.deserialize(), and jaco_msgs\&.msg\&._ArmJointAnglesActionFeedback\&.ArmJointAnglesActionFeedback\&.deserialize_numpy()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Kinova-ROS from the source code\&.

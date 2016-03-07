@@ -1,0 +1,158 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="dc/dc7/classjaco_1_1JacoPoseActionServer">
+<title>jaco::JacoPoseActionServer class Reference</title>
+<para>
+    <programlisting>#include <link linkend="d9/dd3/jaco__pose__action_8h">&quot;jaco_pose_action.h&quot;</link></programlisting>
+</para>
+<para>Inheritance diagram for jaco::JacoPoseActionServer</para>
+<para>
+    <figure>
+        <title>Inheritance graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../d5/de7/classjaco_1_1JacoPoseActionServer__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Collaboration diagram for jaco::JacoPoseActionServer</para>
+<para>
+    <figure>
+        <title>Collaboration graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../d9/de2/classjaco_1_1JacoPoseActionServer__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+        <section>
+            <title>Private Attributes</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>actionlib::SimpleActionServer&lt; jaco_msgs::ArmPoseAction &gt; action_server_</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>std::string api_origin_frame_</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>JacoComm &amp; arm_comm_</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>jaco::JacoPose last_nonstall_pose_</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>ros::Time last_nonstall_time_</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>tf::TransformListener listener</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>ros::NodeHandle node_handle_</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>double rate_hz_</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>double stall_interval_seconds_</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>double stall_threshold_</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>std::string tf_prefix_</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>float tolerance_</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="dc/dc7/classjaco_1_1JacoPoseActionServer_1a82396bb5f219f54518a80493bfd38f26">actionCallback</link> (
+const <link linkend="d7/dba/namespacejaco__msgs_1ab8464776109924758c47fab6ce179567">jaco_msgs::ArmPoseGoalConstPtr</link> &amp; )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="dc/dc7/classjaco_1_1JacoPoseActionServer_1aadc62df5a70d28ec54c90ceeec00fbe3">JacoPoseActionServer</link> (
+<link linkend="d5/d2b/classjaco_1_1JacoComm">JacoComm</link> &amp; , const ros::NodeHandle &amp; n)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="dc/dc7/classjaco_1_1JacoPoseActionServer_1ab1c488f56f4759f917c46406230e6c84">~JacoPoseActionServer</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Member Data Documentation</title>
+        </section>
+            <section xml:id="dc/dc7/classjaco_1_1JacoPoseActionServer_1a82396bb5f219f54518a80493bfd38f26">
+                <title>void jaco::JacoPoseActionServer::actionCallback (const jaco_msgs::ArmPoseGoalConstPtr &amp;)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="dc/dc7/classjaco_1_1JacoPoseActionServer_1aadc62df5a70d28ec54c90ceeec00fbe3">
+                <title>jaco::JacoPoseActionServer::JacoPoseActionServer (JacoComm &amp;, const ros::NodeHandle &amp;n)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="dc/dc7/classjaco_1_1JacoPoseActionServer_1ab1c488f56f4759f917c46406230e6c84">
+                <title>jaco::JacoPoseActionServer::~JacoPoseActionServer ()</title> <emphasis></emphasis>
+                
+            </section>
+</section>

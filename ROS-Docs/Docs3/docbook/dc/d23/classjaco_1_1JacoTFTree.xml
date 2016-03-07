@@ -1,0 +1,124 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="dc/d23/classjaco_1_1JacoTFTree">
+<title>jaco::JacoTFTree class Reference</title>
+<para>
+    <programlisting>#include <link linkend="d6/de4/jaco__tf__updater_8h">&quot;jaco_tf_updater.h&quot;</link></programlisting>
+</para>
+<para>Inheritance diagram for jaco::JacoTFTree</para>
+<para>
+    <figure>
+        <title>Inheritance graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../df/db8/classjaco_1_1JacoTFTree__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Collaboration diagram for jaco::JacoTFTree</para>
+<para>
+    <figure>
+        <title>Collaboration graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../d6/d82/classjaco_1_1JacoTFTree__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+        <section>
+            <title>Private Attributes</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>jaco_msgs::JointAngles current_angles_</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>ros::Subscriber joint_angles_subscriber_</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>jaco::JacoKinematics kinematics_</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>ros::Time last_angle_update_</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>ros::Timer tf_update_timer_</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="dc/d23/classjaco_1_1JacoTFTree_1aff3a20fea72ff3089968609d7a32ce53">JacoTFTree</link> (
+ros::NodeHandle nh)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="dc/d23/classjaco_1_1JacoTFTree_1a9d27ae1569454f687fdb3efc3c2718cf">calculatePostion</link> (
+void )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="dc/d23/classjaco_1_1JacoTFTree_1ad3cc49dbb3058895d32aa825f386d9d5">jointAnglesMsgHandler</link> (
+const <link linkend="d7/dba/namespacejaco__msgs_1a32b25235cc3066080b29ddfde0640ae9">jaco_msgs::JointAnglesConstPtr</link> &amp; joint_angles)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="dc/d23/classjaco_1_1JacoTFTree_1a6c1129c477dfc9e17cd2185924033ad5">tfUpdateHandler</link> (
+const ros::TimerEvent &amp; )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Member Data Documentation</title>
+        </section>
+            <section xml:id="dc/d23/classjaco_1_1JacoTFTree_1aff3a20fea72ff3089968609d7a32ce53">
+                <title>jaco::JacoTFTree::JacoTFTree (ros::NodeHandle nh)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="dc/d23/classjaco_1_1JacoTFTree_1a9d27ae1569454f687fdb3efc3c2718cf">
+                <title>void jaco::JacoTFTree::calculatePostion (void)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="dc/d23/classjaco_1_1JacoTFTree_1ad3cc49dbb3058895d32aa825f386d9d5">
+                <title>void jaco::JacoTFTree::jointAnglesMsgHandler (const jaco_msgs::JointAnglesConstPtr &amp;joint_angles)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="dc/d23/classjaco_1_1JacoTFTree_1a6c1129c477dfc9e17cd2185924033ad5">
+                <title>void jaco::JacoTFTree::tfUpdateHandler (const ros::TimerEvent &amp;)</title> <emphasis></emphasis>
+                
+            </section>
+</section>

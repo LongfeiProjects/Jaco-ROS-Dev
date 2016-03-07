@@ -1,0 +1,471 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="d5/d16/SetForceControlParamsRequest_8h">
+    <title>SetForceControlParamsRequest.h File Reference</title>
+    <programlisting>#include &lt;string&gt;</programlisting>
+    <programlisting>#include &lt;vector&gt;</programlisting>
+    <programlisting>#include &lt;map&gt;</programlisting>
+    <programlisting>#include &lt;ros/types.h&gt;</programlisting>
+    <programlisting>#include &lt;ros/serialization.h&gt;</programlisting>
+    <programlisting>#include &lt;ros/builtin_message_traits.h&gt;</programlisting>
+    <programlisting>#include &lt;ros/message_operations.h&gt;</programlisting>
+    <programlisting>#include &lt;geometry_msgs/Vector3.h&gt;</programlisting>
+<para>Include dependency diagram for SetForceControlParamsRequest.h</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../dd/d56/SetForceControlParamsRequest_8h__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Included by dependency diagram for SetForceControlParamsRequest.h</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../d7/d47/SetForceControlParamsRequest_8h__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+        <section>
+            <title> Classes </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="df/db3/structjaco__msgs_1_1SetForceControlParamsRequest__">jaco_msgs::SetForceControlParamsRequest_</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="de/d76/structros_1_1message__operations_1_1Printer_3_01_1_1jaco__msgs_1_1SetForceControlParamsRequest__16dc020b89aeac404d6fe4c2259e46cf">ros::message_operations::Printer&lt; ::jaco_msgs::SetForceControlParamsRequest_&lt; ContainerAllocator &gt; &gt;</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d3/d17/structros_1_1message__traits_1_1DataType_3_01_1_1jaco__msgs_1_1SetForceControlParamsRequest___3_01ContainerAllocator_01_4_01_4">ros::message_traits::DataType&lt; ::jaco_msgs::SetForceControlParamsRequest_&lt; ContainerAllocator &gt; &gt;</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d2/d85/structros_1_1message__traits_1_1Definition_3_01_1_1jaco__msgs_1_1SetForceControlParamsRequest___c59584efc00e1eca7e3af5d8ad03eba5">ros::message_traits::Definition&lt; ::jaco_msgs::SetForceControlParamsRequest_&lt; ContainerAllocator &gt; &gt;</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d9/dd5/structros_1_1message__traits_1_1HasHeader_3_01_1_1jaco__msgs_1_1SetForceControlParamsRequest___3_01ContainerAllocator_01_4_01_4">ros::message_traits::HasHeader&lt; ::jaco_msgs::SetForceControlParamsRequest_&lt; ContainerAllocator &gt; &gt;</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d7/d28/structros_1_1message__traits_1_1HasHeader_3_01_1_1jaco__msgs_1_1SetForceControlParamsRequest___3ac67f2ab7236d5242eb8dbcd0649c942">ros::message_traits::HasHeader&lt; ::jaco_msgs::SetForceControlParamsRequest_&lt; ContainerAllocator &gt; const  &gt;</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="dd/dc7/structros_1_1message__traits_1_1IsFixedSize_3_01_1_1jaco__msgs_1_1SetForceControlParamsRequest__2487360664878e89c340edfa5baef7b5">ros::message_traits::IsFixedSize&lt; ::jaco_msgs::SetForceControlParamsRequest_&lt; ContainerAllocator &gt; &gt;</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d0/d83/structros_1_1message__traits_1_1IsFixedSize_3_01_1_1jaco__msgs_1_1SetForceControlParamsRequest__09b702f8420bd83419a6253f0f7f7347">ros::message_traits::IsFixedSize&lt; ::jaco_msgs::SetForceControlParamsRequest_&lt; ContainerAllocator &gt; const  &gt;</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d3/d92/structros_1_1message__traits_1_1IsMessage_3_01_1_1jaco__msgs_1_1SetForceControlParamsRequest___3_01ContainerAllocator_01_4_01_4">ros::message_traits::IsMessage&lt; ::jaco_msgs::SetForceControlParamsRequest_&lt; ContainerAllocator &gt; &gt;</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d9/d10/structros_1_1message__traits_1_1IsMessage_3_01_1_1jaco__msgs_1_1SetForceControlParamsRequest___36dfc005745f617550309adf362f6b717">ros::message_traits::IsMessage&lt; ::jaco_msgs::SetForceControlParamsRequest_&lt; ContainerAllocator &gt; const  &gt;</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d9/db9/structros_1_1message__traits_1_1MD5Sum_3_01_1_1jaco__msgs_1_1SetForceControlParamsRequest___3_01ContainerAllocator_01_4_01_4">ros::message_traits::MD5Sum&lt; ::jaco_msgs::SetForceControlParamsRequest_&lt; ContainerAllocator &gt; &gt;</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d4/d59/structros_1_1serialization_1_1Serializer_3_01_1_1jaco__msgs_1_1SetForceControlParamsRequest___3_01ContainerAllocator_01_4_01_4">ros::serialization::Serializer&lt; ::jaco_msgs::SetForceControlParamsRequest_&lt; ContainerAllocator &gt; &gt;</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <simplesect>
+            <title> Namespaces </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d7/dba/namespacejaco__msgs">jaco_msgs</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="db/d2f/namespaceros">ros</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d6/db4/namespaceros_1_1message__operations">ros::message_operations</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d0/db0/namespaceros_1_1message__traits">ros::message_traits</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="da/d37/namespaceros_1_1serialization">ros::serialization</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+    <simplesect>
+        <title>Detailed Description</title>
+    <para>Definition in file D:/Longfei/Desktop/catkin_KinovaROS/devel/include/jaco_msgs/SetForceControlParamsRequest.h</para>
+    </simplesect>
+    <literallayout><computeroutput>
+1 <emphasis class="comment">/*&#32;Software&#32;License&#32;Agreement&#32;(BSD&#32;License)</emphasis>
+2 <emphasis class="comment">&#32;*</emphasis>
+3 <emphasis class="comment">&#32;*&#32;Copyright&#32;(c)&#32;2011,&#32;Willow&#32;Garage,&#32;Inc.</emphasis>
+4 <emphasis class="comment">&#32;*&#32;All&#32;rights&#32;reserved.</emphasis>
+5 <emphasis class="comment">&#32;*</emphasis>
+6 <emphasis class="comment">&#32;*&#32;Redistribution&#32;and&#32;use&#32;in&#32;source&#32;and&#32;binary&#32;forms,&#32;with&#32;or&#32;without</emphasis>
+7 <emphasis class="comment">&#32;*&#32;modification,&#32;are&#32;permitted&#32;provided&#32;that&#32;the&#32;following&#32;conditions</emphasis>
+8 <emphasis class="comment">&#32;*&#32;are&#32;met:</emphasis>
+9 <emphasis class="comment">&#32;*</emphasis>
+10 <emphasis class="comment">&#32;*&#32;&#32;*&#32;Redistributions&#32;of&#32;source&#32;code&#32;must&#32;retain&#32;the&#32;above&#32;copyright</emphasis>
+11 <emphasis class="comment">&#32;*&#32;&#32;&#32;&#32;notice,&#32;this&#32;list&#32;of&#32;conditions&#32;and&#32;the&#32;following&#32;disclaimer.</emphasis>
+12 <emphasis class="comment">&#32;*&#32;&#32;*&#32;Redistributions&#32;in&#32;binary&#32;form&#32;must&#32;reproduce&#32;the&#32;above</emphasis>
+13 <emphasis class="comment">&#32;*&#32;&#32;&#32;&#32;copyright&#32;notice,&#32;this&#32;list&#32;of&#32;conditions&#32;and&#32;the&#32;following</emphasis>
+14 <emphasis class="comment">&#32;*&#32;&#32;&#32;&#32;disclaimer&#32;in&#32;the&#32;documentation&#32;and/or&#32;other&#32;materials&#32;provided</emphasis>
+15 <emphasis class="comment">&#32;*&#32;&#32;&#32;&#32;with&#32;the&#32;distribution.</emphasis>
+16 <emphasis class="comment">&#32;*&#32;&#32;*&#32;Neither&#32;the&#32;name&#32;of&#32;Willow&#32;Garage,&#32;Inc.&#32;nor&#32;the&#32;names&#32;of&#32;its</emphasis>
+17 <emphasis class="comment">&#32;*&#32;&#32;&#32;&#32;contributors&#32;may&#32;be&#32;used&#32;to&#32;endorse&#32;or&#32;promote&#32;products&#32;derived</emphasis>
+18 <emphasis class="comment">&#32;*&#32;&#32;&#32;&#32;from&#32;this&#32;software&#32;without&#32;specific&#32;prior&#32;written&#32;permission.</emphasis>
+19 <emphasis class="comment">&#32;*</emphasis>
+20 <emphasis class="comment">&#32;*&#32;THIS&#32;SOFTWARE&#32;IS&#32;PROVIDED&#32;BY&#32;THE&#32;COPYRIGHT&#32;HOLDERS&#32;AND&#32;CONTRIBUTORS</emphasis>
+21 <emphasis class="comment">&#32;*&#32;&quot;AS&#32;IS&quot;&#32;AND&#32;ANY&#32;EXPRESS&#32;OR&#32;IMPLIED&#32;WARRANTIES,&#32;INCLUDING,&#32;BUT&#32;NOT</emphasis>
+22 <emphasis class="comment">&#32;*&#32;LIMITED&#32;TO,&#32;THE&#32;IMPLIED&#32;WARRANTIES&#32;OF&#32;MERCHANTABILITY&#32;AND&#32;FITNESS</emphasis>
+23 <emphasis class="comment">&#32;*&#32;FOR&#32;A&#32;PARTICULAR&#32;PURPOSE&#32;ARE&#32;DISCLAIMED.&#32;IN&#32;NO&#32;EVENT&#32;SHALL&#32;THE</emphasis>
+24 <emphasis class="comment">&#32;*&#32;COPYRIGHT&#32;OWNER&#32;OR&#32;CONTRIBUTORS&#32;BE&#32;LIABLE&#32;FOR&#32;ANY&#32;DIRECT,&#32;INDIRECT,</emphasis>
+25 <emphasis class="comment">&#32;*&#32;INCIDENTAL,&#32;SPECIAL,&#32;EXEMPLARY,&#32;OR&#32;CONSEQUENTIAL&#32;DAMAGES&#32;(INCLUDING,</emphasis>
+26 <emphasis class="comment">&#32;*&#32;BUT&#32;NOT&#32;LIMITED&#32;TO,&#32;PROCUREMENT&#32;OF&#32;SUBSTITUTE&#32;GOODS&#32;OR&#32;SERVICES;</emphasis>
+27 <emphasis class="comment">&#32;*&#32;LOSS&#32;OF&#32;USE,&#32;DATA,&#32;OR&#32;PROFITS;&#32;OR&#32;BUSINESS&#32;INTERRUPTION)&#32;HOWEVER</emphasis>
+28 <emphasis class="comment">&#32;*&#32;CAUSED&#32;AND&#32;ON&#32;ANY&#32;THEORY&#32;OF&#32;LIABILITY,&#32;WHETHER&#32;IN&#32;CONTRACT,&#32;STRICT</emphasis>
+29 <emphasis class="comment">&#32;*&#32;LIABILITY,&#32;OR&#32;TORT&#32;(INCLUDING&#32;NEGLIGENCE&#32;OR&#32;OTHERWISE)&#32;ARISING&#32;IN</emphasis>
+30 <emphasis class="comment">&#32;*&#32;ANY&#32;WAY&#32;OUT&#32;OF&#32;THE&#32;USE&#32;OF&#32;THIS&#32;SOFTWARE,&#32;EVEN&#32;IF&#32;ADVISED&#32;OF&#32;THE</emphasis>
+31 <emphasis class="comment">&#32;*&#32;POSSIBILITY&#32;OF&#32;SUCH&#32;DAMAGE.</emphasis>
+32 <emphasis class="comment">&#32;*</emphasis>
+33 <emphasis class="comment">&#32;*&#32;Auto-generated&#32;by&#32;genmsg_cpp&#32;from&#32;file&#32;/home/longfei/catkin_KinovaROS/src/jaco-ros/jaco_msgs/srv/SetForceControlParams.srv</emphasis>
+34 <emphasis class="comment">&#32;*</emphasis>
+35 <emphasis class="comment">&#32;*/</emphasis>
+36 
+37 
+38 <emphasis class="preprocessor">#ifndef&#32;JACO_MSGS_MESSAGE_SETFORCECONTROLPARAMSREQUEST_H</emphasis>
+39 <emphasis class="preprocessor">#define&#32;JACO_MSGS_MESSAGE_SETFORCECONTROLPARAMSREQUEST_H</emphasis>
+40 
+41 
+42 <emphasis class="preprocessor">#include&#32;&lt;string&gt;</emphasis>
+43 <emphasis class="preprocessor">#include&#32;&lt;vector&gt;</emphasis>
+44 <emphasis class="preprocessor">#include&#32;&lt;map&gt;</emphasis>
+45 
+46 <emphasis class="preprocessor">#include&#32;&lt;ros/types.h&gt;</emphasis>
+47 <emphasis class="preprocessor">#include&#32;&lt;ros/serialization.h&gt;</emphasis>
+48 <emphasis class="preprocessor">#include&#32;&lt;ros/builtin_message_traits.h&gt;</emphasis>
+49 <emphasis class="preprocessor">#include&#32;&lt;ros/message_operations.h&gt;</emphasis>
+50 
+51 <emphasis class="preprocessor">#include&#32;&lt;geometry_msgs/Vector3.h&gt;</emphasis>
+52 <emphasis class="preprocessor">#include&#32;&lt;geometry_msgs/Vector3.h&gt;</emphasis>
+53 <emphasis class="preprocessor">#include&#32;&lt;geometry_msgs/Vector3.h&gt;</emphasis>
+54 <emphasis class="preprocessor">#include&#32;&lt;geometry_msgs/Vector3.h&gt;</emphasis>
+55 <emphasis class="preprocessor">#include&#32;&lt;geometry_msgs/Vector3.h&gt;</emphasis>
+56 <emphasis class="preprocessor">#include&#32;&lt;geometry_msgs/Vector3.h&gt;</emphasis>
+57 <emphasis class="preprocessor">#include&#32;&lt;geometry_msgs/Vector3.h&gt;</emphasis>
+58 <emphasis class="preprocessor">#include&#32;&lt;geometry_msgs/Vector3.h&gt;</emphasis>
+59 
+60 <emphasis class="keyword">namespace&#32;</emphasis><link linkend="d7/dba/namespacejaco__msgs">jaco_msgs</link>
+61 {
+62 <emphasis class="keyword">template</emphasis>&#32;&lt;<emphasis class="keyword">class</emphasis>&#32;ContainerAllocator&gt;
+<link linkend="df/db3/structjaco__msgs_1_1SetForceControlParamsRequest__">63 </link><emphasis class="keyword">struct&#32;</emphasis><link linkend="df/db3/structjaco__msgs_1_1SetForceControlParamsRequest__">SetForceControlParamsRequest_</link>
+64 {
+<link linkend="df/db3/structjaco__msgs_1_1SetForceControlParamsRequest___1a68a11fb0d92ae57132efabb6443b4df7">65 </link>&#32;&#32;<emphasis class="keyword">typedef</emphasis>&#32;<link linkend="df/db3/structjaco__msgs_1_1SetForceControlParamsRequest__">SetForceControlParamsRequest_&lt;ContainerAllocator&gt;</link>&#32;<link linkend="df/db3/structjaco__msgs_1_1SetForceControlParamsRequest___1a68a11fb0d92ae57132efabb6443b4df7">Type</link>;
+66 
+<link linkend="df/db3/structjaco__msgs_1_1SetForceControlParamsRequest___1a49ff77a144d175d9eec07a86b2991d97">67 </link>&#32;&#32;<link linkend="df/db3/structjaco__msgs_1_1SetForceControlParamsRequest___1a49ff77a144d175d9eec07a86b2991d97">SetForceControlParamsRequest_</link>()
+68 &#32;&#32;&#32;&#32;:&#32;<link linkend="df/db3/structjaco__msgs_1_1SetForceControlParamsRequest___1a1163bd5470638964c3bd0f3146617695">inertia_linear</link>()
+69 &#32;&#32;&#32;&#32;,&#32;<link linkend="df/db3/structjaco__msgs_1_1SetForceControlParamsRequest___1aee7ba36455fcb2b5ea168a5bf6331b7b">inertia_angular</link>()
+70 &#32;&#32;&#32;&#32;,&#32;<link linkend="df/db3/structjaco__msgs_1_1SetForceControlParamsRequest___1a8512d209d48fdb9db5ada5584e41033b">damping_linear</link>()
+71 &#32;&#32;&#32;&#32;,&#32;<link linkend="df/db3/structjaco__msgs_1_1SetForceControlParamsRequest___1aad2dc5a6c218abdb8723023e6ea7aa40">damping_angular</link>()
+72 &#32;&#32;&#32;&#32;,&#32;<link linkend="df/db3/structjaco__msgs_1_1SetForceControlParamsRequest___1a6acec93f53a7132d740aa0335a05a36d">force_min_linear</link>()
+73 &#32;&#32;&#32;&#32;,&#32;<link linkend="df/db3/structjaco__msgs_1_1SetForceControlParamsRequest___1ab84d0d8b19f11eca2319c4ef903caafd">force_min_angular</link>()
+74 &#32;&#32;&#32;&#32;,&#32;<link linkend="df/db3/structjaco__msgs_1_1SetForceControlParamsRequest___1a89805bac05f838a5bc70a641539715f0">force_max_linear</link>()
+75 &#32;&#32;&#32;&#32;,&#32;<link linkend="df/db3/structjaco__msgs_1_1SetForceControlParamsRequest___1afa6dc239b7bd0cd6b43b4ccea1ec92af">force_max_angular</link>()&#32;&#32;{
+76 &#32;&#32;&#32;&#32;}
+<link linkend="df/db3/structjaco__msgs_1_1SetForceControlParamsRequest___1adaad20b373b37b06d5ee26ac8b243ede">77 </link>&#32;&#32;<link linkend="df/db3/structjaco__msgs_1_1SetForceControlParamsRequest___1adaad20b373b37b06d5ee26ac8b243ede">SetForceControlParamsRequest_</link>(<emphasis class="keyword">const</emphasis>&#32;ContainerAllocator&amp;&#32;_alloc)
+78 &#32;&#32;&#32;&#32;:&#32;<link linkend="df/db3/structjaco__msgs_1_1SetForceControlParamsRequest___1a1163bd5470638964c3bd0f3146617695">inertia_linear</link>(_alloc)
+79 &#32;&#32;&#32;&#32;,&#32;<link linkend="df/db3/structjaco__msgs_1_1SetForceControlParamsRequest___1aee7ba36455fcb2b5ea168a5bf6331b7b">inertia_angular</link>(_alloc)
+80 &#32;&#32;&#32;&#32;,&#32;<link linkend="df/db3/structjaco__msgs_1_1SetForceControlParamsRequest___1a8512d209d48fdb9db5ada5584e41033b">damping_linear</link>(_alloc)
+81 &#32;&#32;&#32;&#32;,&#32;<link linkend="df/db3/structjaco__msgs_1_1SetForceControlParamsRequest___1aad2dc5a6c218abdb8723023e6ea7aa40">damping_angular</link>(_alloc)
+82 &#32;&#32;&#32;&#32;,&#32;<link linkend="df/db3/structjaco__msgs_1_1SetForceControlParamsRequest___1a6acec93f53a7132d740aa0335a05a36d">force_min_linear</link>(_alloc)
+83 &#32;&#32;&#32;&#32;,&#32;<link linkend="df/db3/structjaco__msgs_1_1SetForceControlParamsRequest___1ab84d0d8b19f11eca2319c4ef903caafd">force_min_angular</link>(_alloc)
+84 &#32;&#32;&#32;&#32;,&#32;<link linkend="df/db3/structjaco__msgs_1_1SetForceControlParamsRequest___1a89805bac05f838a5bc70a641539715f0">force_max_linear</link>(_alloc)
+85 &#32;&#32;&#32;&#32;,&#32;<link linkend="df/db3/structjaco__msgs_1_1SetForceControlParamsRequest___1afa6dc239b7bd0cd6b43b4ccea1ec92af">force_max_angular</link>(_alloc)&#32;&#32;{
+86 &#32;&#32;&#32;&#32;}
+87 
+88 
+89 
+<link linkend="df/db3/structjaco__msgs_1_1SetForceControlParamsRequest___1a72df435d24614736e733258c4a1b8919">90 </link>&#32;&#32;&#32;typedef&#32;&#32;::geometry_msgs::Vector3_&lt;ContainerAllocator&gt;&#32;&#32;<link linkend="df/db3/structjaco__msgs_1_1SetForceControlParamsRequest___1a72df435d24614736e733258c4a1b8919">_inertia_linear_type</link>;
+<link linkend="df/db3/structjaco__msgs_1_1SetForceControlParamsRequest___1a1163bd5470638964c3bd0f3146617695">91 </link>&#32;&#32;_inertia_linear_type&#32;<link linkend="df/db3/structjaco__msgs_1_1SetForceControlParamsRequest___1a1163bd5470638964c3bd0f3146617695">inertia_linear</link>;
+92 
+<link linkend="df/db3/structjaco__msgs_1_1SetForceControlParamsRequest___1a6f395e799c9b87fa1ed44f2639681860">93 </link>&#32;&#32;&#32;typedef&#32;&#32;::geometry_msgs::Vector3_&lt;ContainerAllocator&gt;&#32;&#32;<link linkend="df/db3/structjaco__msgs_1_1SetForceControlParamsRequest___1a6f395e799c9b87fa1ed44f2639681860">_inertia_angular_type</link>;
+<link linkend="df/db3/structjaco__msgs_1_1SetForceControlParamsRequest___1aee7ba36455fcb2b5ea168a5bf6331b7b">94 </link>&#32;&#32;_inertia_angular_type&#32;<link linkend="df/db3/structjaco__msgs_1_1SetForceControlParamsRequest___1aee7ba36455fcb2b5ea168a5bf6331b7b">inertia_angular</link>;
+95 
+<link linkend="df/db3/structjaco__msgs_1_1SetForceControlParamsRequest___1adc25193330852db72172327eabad17a8">96 </link>&#32;&#32;&#32;typedef&#32;&#32;::geometry_msgs::Vector3_&lt;ContainerAllocator&gt;&#32;&#32;<link linkend="df/db3/structjaco__msgs_1_1SetForceControlParamsRequest___1adc25193330852db72172327eabad17a8">_damping_linear_type</link>;
+<link linkend="df/db3/structjaco__msgs_1_1SetForceControlParamsRequest___1a8512d209d48fdb9db5ada5584e41033b">97 </link>&#32;&#32;_damping_linear_type&#32;<link linkend="df/db3/structjaco__msgs_1_1SetForceControlParamsRequest___1a8512d209d48fdb9db5ada5584e41033b">damping_linear</link>;
+98 
+<link linkend="df/db3/structjaco__msgs_1_1SetForceControlParamsRequest___1a237f71deae909129820dbba65df1a9ab">99 </link>&#32;&#32;&#32;typedef&#32;&#32;::geometry_msgs::Vector3_&lt;ContainerAllocator&gt;&#32;&#32;<link linkend="df/db3/structjaco__msgs_1_1SetForceControlParamsRequest___1a237f71deae909129820dbba65df1a9ab">_damping_angular_type</link>;
+<link linkend="df/db3/structjaco__msgs_1_1SetForceControlParamsRequest___1aad2dc5a6c218abdb8723023e6ea7aa40">100 </link>&#32;&#32;_damping_angular_type&#32;<link linkend="df/db3/structjaco__msgs_1_1SetForceControlParamsRequest___1aad2dc5a6c218abdb8723023e6ea7aa40">damping_angular</link>;
+101 
+<link linkend="df/db3/structjaco__msgs_1_1SetForceControlParamsRequest___1aaaf1a2020f17e7b8ff8e0b368f511353">102 </link>&#32;&#32;&#32;typedef&#32;&#32;::geometry_msgs::Vector3_&lt;ContainerAllocator&gt;&#32;&#32;<link linkend="df/db3/structjaco__msgs_1_1SetForceControlParamsRequest___1aaaf1a2020f17e7b8ff8e0b368f511353">_force_min_linear_type</link>;
+<link linkend="df/db3/structjaco__msgs_1_1SetForceControlParamsRequest___1a6acec93f53a7132d740aa0335a05a36d">103 </link>&#32;&#32;_force_min_linear_type&#32;<link linkend="df/db3/structjaco__msgs_1_1SetForceControlParamsRequest___1a6acec93f53a7132d740aa0335a05a36d">force_min_linear</link>;
+104 
+<link linkend="df/db3/structjaco__msgs_1_1SetForceControlParamsRequest___1a3c572a2972a591dc6d8ac2e7490919e8">105 </link>&#32;&#32;&#32;typedef&#32;&#32;::geometry_msgs::Vector3_&lt;ContainerAllocator&gt;&#32;&#32;<link linkend="df/db3/structjaco__msgs_1_1SetForceControlParamsRequest___1a3c572a2972a591dc6d8ac2e7490919e8">_force_min_angular_type</link>;
+<link linkend="df/db3/structjaco__msgs_1_1SetForceControlParamsRequest___1ab84d0d8b19f11eca2319c4ef903caafd">106 </link>&#32;&#32;_force_min_angular_type&#32;<link linkend="df/db3/structjaco__msgs_1_1SetForceControlParamsRequest___1ab84d0d8b19f11eca2319c4ef903caafd">force_min_angular</link>;
+107 
+<link linkend="df/db3/structjaco__msgs_1_1SetForceControlParamsRequest___1a8f99b85942145effd0d125e03c36c3b2">108 </link>&#32;&#32;&#32;typedef&#32;&#32;::geometry_msgs::Vector3_&lt;ContainerAllocator&gt;&#32;&#32;<link linkend="df/db3/structjaco__msgs_1_1SetForceControlParamsRequest___1a8f99b85942145effd0d125e03c36c3b2">_force_max_linear_type</link>;
+<link linkend="df/db3/structjaco__msgs_1_1SetForceControlParamsRequest___1a89805bac05f838a5bc70a641539715f0">109 </link>&#32;&#32;_force_max_linear_type&#32;<link linkend="df/db3/structjaco__msgs_1_1SetForceControlParamsRequest___1a89805bac05f838a5bc70a641539715f0">force_max_linear</link>;
+110 
+<link linkend="df/db3/structjaco__msgs_1_1SetForceControlParamsRequest___1adcfd9cb3d8af6d83169e04fd708d9e43">111 </link>&#32;&#32;&#32;typedef&#32;&#32;::geometry_msgs::Vector3_&lt;ContainerAllocator&gt;&#32;&#32;<link linkend="df/db3/structjaco__msgs_1_1SetForceControlParamsRequest___1adcfd9cb3d8af6d83169e04fd708d9e43">_force_max_angular_type</link>;
+<link linkend="df/db3/structjaco__msgs_1_1SetForceControlParamsRequest___1afa6dc239b7bd0cd6b43b4ccea1ec92af">112 </link>&#32;&#32;_force_max_angular_type&#32;<link linkend="df/db3/structjaco__msgs_1_1SetForceControlParamsRequest___1afa6dc239b7bd0cd6b43b4ccea1ec92af">force_max_angular</link>;
+113 
+114 
+115 
+116 
+<link linkend="df/db3/structjaco__msgs_1_1SetForceControlParamsRequest___1a6f9103b3c32ab4166e19d1380abd2341">117 </link>&#32;&#32;<emphasis class="keyword">typedef</emphasis>&#32;boost::shared_ptr&lt;&#32;::jaco_msgs::SetForceControlParamsRequest_&lt;ContainerAllocator&gt;&#32;&gt;&#32;<link linkend="df/db3/structjaco__msgs_1_1SetForceControlParamsRequest___1a6f9103b3c32ab4166e19d1380abd2341">Ptr</link>;
+<link linkend="df/db3/structjaco__msgs_1_1SetForceControlParamsRequest___1ae148bd5dd3c40a09e1af84e3a2ed245a">118 </link>&#32;&#32;<emphasis class="keyword">typedef</emphasis>&#32;boost::shared_ptr&lt;&#32;::jaco_msgs::SetForceControlParamsRequest_&lt;ContainerAllocator&gt;&#32;<emphasis class="keyword">const</emphasis>&gt;&#32;<link linkend="df/db3/structjaco__msgs_1_1SetForceControlParamsRequest___1ae148bd5dd3c40a09e1af84e3a2ed245a">ConstPtr</link>;
+<link linkend="df/db3/structjaco__msgs_1_1SetForceControlParamsRequest___1a5fbf5d5d93bc38b2dcaf78f0cc37718e">119 </link>&#32;&#32;boost::shared_ptr&lt;std::map&lt;std::string,&#32;std::string&gt;&#32;&gt;&#32;<link linkend="df/db3/structjaco__msgs_1_1SetForceControlParamsRequest___1a5fbf5d5d93bc38b2dcaf78f0cc37718e">__connection_header</link>;
+120 
+121 };&#32;<emphasis class="comment">//&#32;struct&#32;SetForceControlParamsRequest_</emphasis>
+122 
+<link linkend="d7/dba/namespacejaco__msgs_1a3486b7826c8a999135bb2eded905e7a8">123 </link>typedef&#32;::jaco_msgs::SetForceControlParamsRequest_&lt;std::allocator&lt;void&gt;&#32;&gt;&#32;<link linkend="d7/dba/namespacejaco__msgs_1a3486b7826c8a999135bb2eded905e7a8">SetForceControlParamsRequest</link>;
+124 
+<link linkend="d7/dba/namespacejaco__msgs_1a8d8788dbe785e356791b6f3d2169b867">125 </link><emphasis class="keyword">typedef</emphasis>&#32;boost::shared_ptr&lt;&#32;::jaco_msgs::SetForceControlParamsRequest&#32;&gt;&#32;<link linkend="d7/dba/namespacejaco__msgs_1a8d8788dbe785e356791b6f3d2169b867">SetForceControlParamsRequestPtr</link>;
+<link linkend="d7/dba/namespacejaco__msgs_1a0b57aa518c819516dbdb7a991e89c945">126 </link><emphasis class="keyword">typedef</emphasis>&#32;boost::shared_ptr&lt;&#32;::jaco_msgs::SetForceControlParamsRequest&#32;const&gt;&#32;<link linkend="d7/dba/namespacejaco__msgs_1a0b57aa518c819516dbdb7a991e89c945">SetForceControlParamsRequestConstPtr</link>;
+127 
+128 <emphasis class="comment">//&#32;constants&#32;requiring&#32;out&#32;of&#32;line&#32;definition</emphasis>
+129 
+130 
+131 
+132 <emphasis class="keyword">template</emphasis>&lt;<emphasis class="keyword">typename</emphasis>&#32;ContainerAllocator&gt;
+<link linkend="d7/dba/namespacejaco__msgs_1ab8c153559c90e760f0a3af6f6e0fb456">133 </link>std::ostream&amp;&#32;operator&lt;&lt;(std::ostream&amp;&#32;s,&#32;const&#32;::jaco_msgs::SetForceControlParamsRequest_&lt;ContainerAllocator&gt;&#32;&amp;&#32;v)
+134 {
+135 ros::message_operations::Printer&lt;&#32;::jaco_msgs::SetForceControlParamsRequest_&lt;ContainerAllocator&gt;&#32;&gt;::stream(s,&#32;<emphasis class="stringliteral">&quot;&quot;</emphasis>,&#32;v);
+136 <emphasis class="keywordflow">return</emphasis>&#32;s;
+137 }
+138 
+139 }&#32;<emphasis class="comment">//&#32;namespace&#32;jaco_msgs</emphasis>
+140 
+141 <emphasis class="keyword">namespace&#32;</emphasis><link linkend="db/d2f/namespaceros">ros</link>
+142 {
+143 <emphasis class="keyword">namespace&#32;</emphasis>message_traits
+144 {
+145 
+146 
+147 
+148 <emphasis class="comment">//&#32;BOOLTRAITS&#32;{&apos;IsFixedSize&apos;:&#32;True,&#32;&apos;IsMessage&apos;:&#32;True,&#32;&apos;HasHeader&apos;:&#32;False}</emphasis>
+149 <emphasis class="comment">//&#32;{&apos;std_msgs&apos;:&#32;[&apos;/opt/ros/hydro/share/std_msgs/cmake/../msg&apos;],&#32;&apos;actionlib_msgs&apos;:&#32;[&apos;/opt/ros/hydro/share/actionlib_msgs/cmake/../msg&apos;],&#32;&apos;jaco_msgs&apos;:&#32;[&apos;/home/longfei/catkin_KinovaROS/src/jaco-ros/jaco_msgs/msg&apos;,&#32;&apos;/home/longfei/catkin_KinovaROS/devel/share/jaco_msgs/msg&apos;],&#32;&apos;geometry_msgs&apos;:&#32;[&apos;/opt/ros/hydro/share/geometry_msgs/cmake/../msg&apos;]}</emphasis>
+150 
+151 <emphasis class="comment">//&#32;!!!!!!!!!!!&#32;[&apos;__class__&apos;,&#32;&apos;__delattr__&apos;,&#32;&apos;__dict__&apos;,&#32;&apos;__doc__&apos;,&#32;&apos;__eq__&apos;,&#32;&apos;__format__&apos;,&#32;&apos;__getattribute__&apos;,&#32;&apos;__hash__&apos;,&#32;&apos;__init__&apos;,&#32;&apos;__module__&apos;,&#32;&apos;__ne__&apos;,&#32;&apos;__new__&apos;,&#32;&apos;__reduce__&apos;,&#32;&apos;__reduce_ex__&apos;,&#32;&apos;__repr__&apos;,&#32;&apos;__setattr__&apos;,&#32;&apos;__sizeof__&apos;,&#32;&apos;__str__&apos;,&#32;&apos;__subclasshook__&apos;,&#32;&apos;__weakref__&apos;,&#32;&apos;_parsed_fields&apos;,&#32;&apos;constants&apos;,&#32;&apos;fields&apos;,&#32;&apos;full_name&apos;,&#32;&apos;has_header&apos;,&#32;&apos;header_present&apos;,&#32;&apos;names&apos;,&#32;&apos;package&apos;,&#32;&apos;parsed_fields&apos;,&#32;&apos;short_name&apos;,&#32;&apos;text&apos;,&#32;&apos;types&apos;]</emphasis>
+152 
+153 
+154 
+155 
+156 <emphasis class="keyword">template</emphasis>&#32;&lt;<emphasis class="keyword">class</emphasis>&#32;ContainerAllocator&gt;
+<link linkend="dd/dc7/structros_1_1message__traits_1_1IsFixedSize_3_01_1_1jaco__msgs_1_1SetForceControlParamsRequest__2487360664878e89c340edfa5baef7b5">157 </link><emphasis class="keyword">struct&#32;</emphasis>IsFixedSize&lt;&#32;::<link linkend="df/db3/structjaco__msgs_1_1SetForceControlParamsRequest__">jaco_msgs::SetForceControlParamsRequest_</link>&lt;ContainerAllocator&gt;&#32;&gt;
+158 &#32;&#32;:&#32;TrueType
+159 &#32;&#32;{&#32;};
+160 
+161 <emphasis class="keyword">template</emphasis>&#32;&lt;<emphasis class="keyword">class</emphasis>&#32;ContainerAllocator&gt;
+<link linkend="d0/d83/structros_1_1message__traits_1_1IsFixedSize_3_01_1_1jaco__msgs_1_1SetForceControlParamsRequest__09b702f8420bd83419a6253f0f7f7347">162 </link><emphasis class="keyword">struct&#32;</emphasis>IsFixedSize&lt;&#32;::<link linkend="df/db3/structjaco__msgs_1_1SetForceControlParamsRequest__">jaco_msgs::SetForceControlParamsRequest_</link>&lt;ContainerAllocator&gt;&#32;const&gt;
+163 &#32;&#32;:&#32;TrueType
+164 &#32;&#32;{&#32;};
+165 
+166 <emphasis class="keyword">template</emphasis>&#32;&lt;<emphasis class="keyword">class</emphasis>&#32;ContainerAllocator&gt;
+<link linkend="d3/d92/structros_1_1message__traits_1_1IsMessage_3_01_1_1jaco__msgs_1_1SetForceControlParamsRequest___3_01ContainerAllocator_01_4_01_4">167 </link><emphasis class="keyword">struct&#32;</emphasis>IsMessage&lt;&#32;::<link linkend="df/db3/structjaco__msgs_1_1SetForceControlParamsRequest__">jaco_msgs::SetForceControlParamsRequest_</link>&lt;ContainerAllocator&gt;&#32;&gt;
+168 &#32;&#32;:&#32;TrueType
+169 &#32;&#32;{&#32;};
+170 
+171 <emphasis class="keyword">template</emphasis>&#32;&lt;<emphasis class="keyword">class</emphasis>&#32;ContainerAllocator&gt;
+<link linkend="d9/d10/structros_1_1message__traits_1_1IsMessage_3_01_1_1jaco__msgs_1_1SetForceControlParamsRequest___36dfc005745f617550309adf362f6b717">172 </link><emphasis class="keyword">struct&#32;</emphasis>IsMessage&lt;&#32;::<link linkend="df/db3/structjaco__msgs_1_1SetForceControlParamsRequest__">jaco_msgs::SetForceControlParamsRequest_</link>&lt;ContainerAllocator&gt;&#32;const&gt;
+173 &#32;&#32;:&#32;TrueType
+174 &#32;&#32;{&#32;};
+175 
+176 <emphasis class="keyword">template</emphasis>&#32;&lt;<emphasis class="keyword">class</emphasis>&#32;ContainerAllocator&gt;
+<link linkend="d9/dd5/structros_1_1message__traits_1_1HasHeader_3_01_1_1jaco__msgs_1_1SetForceControlParamsRequest___3_01ContainerAllocator_01_4_01_4">177 </link><emphasis class="keyword">struct&#32;</emphasis>HasHeader&lt;&#32;::<link linkend="df/db3/structjaco__msgs_1_1SetForceControlParamsRequest__">jaco_msgs::SetForceControlParamsRequest_</link>&lt;ContainerAllocator&gt;&#32;&gt;
+178 &#32;&#32;:&#32;FalseType
+179 &#32;&#32;{&#32;};
+180 
+181 <emphasis class="keyword">template</emphasis>&#32;&lt;<emphasis class="keyword">class</emphasis>&#32;ContainerAllocator&gt;
+<link linkend="d7/d28/structros_1_1message__traits_1_1HasHeader_3_01_1_1jaco__msgs_1_1SetForceControlParamsRequest___3ac67f2ab7236d5242eb8dbcd0649c942">182 </link><emphasis class="keyword">struct&#32;</emphasis>HasHeader&lt;&#32;::<link linkend="df/db3/structjaco__msgs_1_1SetForceControlParamsRequest__">jaco_msgs::SetForceControlParamsRequest_</link>&lt;ContainerAllocator&gt;&#32;const&gt;
+183 &#32;&#32;:&#32;FalseType
+184 &#32;&#32;{&#32;};
+185 
+186 
+187 <emphasis class="keyword">template</emphasis>&lt;<emphasis class="keyword">class</emphasis>&#32;ContainerAllocator&gt;
+<link linkend="d9/db9/structros_1_1message__traits_1_1MD5Sum_3_01_1_1jaco__msgs_1_1SetForceControlParamsRequest___3_01ContainerAllocator_01_4_01_4">188 </link><emphasis class="keyword">struct&#32;</emphasis>MD5Sum&lt;&#32;::<link linkend="df/db3/structjaco__msgs_1_1SetForceControlParamsRequest__">jaco_msgs::SetForceControlParamsRequest_</link>&lt;ContainerAllocator&gt;&#32;&gt;
+189 {
+<link linkend="d9/db9/structros_1_1message__traits_1_1MD5Sum_3_01_1_1jaco__msgs_1_1SetForceControlParamsRequest___3_01ContainerAllocator_01_4_01_4_1a52ad8b1bd4bdf26d7aa81d84a91ef1bd">190 </link>&#32;&#32;<emphasis class="keyword">static</emphasis>&#32;<emphasis class="keyword">const</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>*&#32;<link linkend="d9/db9/structros_1_1message__traits_1_1MD5Sum_3_01_1_1jaco__msgs_1_1SetForceControlParamsRequest___3_01ContainerAllocator_01_4_01_4_1a52ad8b1bd4bdf26d7aa81d84a91ef1bd">value</link>()
+191 &#32;&#32;{
+192 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;<emphasis class="stringliteral">&quot;5c0999be3d1c60dba47ea0b2fd08231e&quot;</emphasis>;
+193 &#32;&#32;}
+194 
+<link linkend="d9/db9/structros_1_1message__traits_1_1MD5Sum_3_01_1_1jaco__msgs_1_1SetForceControlParamsRequest___3_01ContainerAllocator_01_4_01_4_1ac676de98687051da29d029b7d69ae900">195 </link>&#32;&#32;<emphasis class="keyword">static</emphasis>&#32;<emphasis class="keyword">const</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>*&#32;<link linkend="d9/db9/structros_1_1message__traits_1_1MD5Sum_3_01_1_1jaco__msgs_1_1SetForceControlParamsRequest___3_01ContainerAllocator_01_4_01_4_1ac676de98687051da29d029b7d69ae900">value</link>(const&#32;::jaco_msgs::SetForceControlParamsRequest_&lt;ContainerAllocator&gt;&amp;)&#32;{&#32;<emphasis class="keywordflow">return</emphasis>&#32;<link linkend="d9/db9/structros_1_1message__traits_1_1MD5Sum_3_01_1_1jaco__msgs_1_1SetForceControlParamsRequest___3_01ContainerAllocator_01_4_01_4_1ac676de98687051da29d029b7d69ae900">value</link>();&#32;}
+<link linkend="d9/db9/structros_1_1message__traits_1_1MD5Sum_3_01_1_1jaco__msgs_1_1SetForceControlParamsRequest___3_01ContainerAllocator_01_4_01_4_1ac556b9502706fde5fff2bf4276a816b2">196 </link>&#32;&#32;<emphasis class="keyword">static</emphasis>&#32;<emphasis class="keyword">const</emphasis>&#32;uint64_t&#32;static_value1&#32;=&#32;0x5c0999be3d1c60dbULL;
+<link linkend="d9/db9/structros_1_1message__traits_1_1MD5Sum_3_01_1_1jaco__msgs_1_1SetForceControlParamsRequest___3_01ContainerAllocator_01_4_01_4_1ab202233ceb2017b3c5a8e76e97616000">197 </link>&#32;&#32;<emphasis class="keyword">static</emphasis>&#32;<emphasis class="keyword">const</emphasis>&#32;uint64_t&#32;static_value2&#32;=&#32;0xa47ea0b2fd08231eULL;
+198 };
+199 
+200 <emphasis class="keyword">template</emphasis>&lt;<emphasis class="keyword">class</emphasis>&#32;ContainerAllocator&gt;
+<link linkend="d3/d17/structros_1_1message__traits_1_1DataType_3_01_1_1jaco__msgs_1_1SetForceControlParamsRequest___3_01ContainerAllocator_01_4_01_4">201 </link><emphasis class="keyword">struct&#32;</emphasis>DataType&lt;&#32;::<link linkend="df/db3/structjaco__msgs_1_1SetForceControlParamsRequest__">jaco_msgs::SetForceControlParamsRequest_</link>&lt;ContainerAllocator&gt;&#32;&gt;
+202 {
+<link linkend="d3/d17/structros_1_1message__traits_1_1DataType_3_01_1_1jaco__msgs_1_1SetForceControlParamsRequest___3_01ContainerAllocator_01_4_01_4_1a04a30da1d26d17eda37a866d4ac7a0fb">203 </link>&#32;&#32;<emphasis class="keyword">static</emphasis>&#32;<emphasis class="keyword">const</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>*&#32;<link linkend="d3/d17/structros_1_1message__traits_1_1DataType_3_01_1_1jaco__msgs_1_1SetForceControlParamsRequest___3_01ContainerAllocator_01_4_01_4_1a04a30da1d26d17eda37a866d4ac7a0fb">value</link>()
+204 &#32;&#32;{
+205 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;<emphasis class="stringliteral">&quot;jaco_msgs/SetForceControlParamsRequest&quot;</emphasis>;
+206 &#32;&#32;}
+207 
+<link linkend="d3/d17/structros_1_1message__traits_1_1DataType_3_01_1_1jaco__msgs_1_1SetForceControlParamsRequest___3_01ContainerAllocator_01_4_01_4_1a7a967395f6e2a75b9f39fa6a6d1d59ee">208 </link>&#32;&#32;<emphasis class="keyword">static</emphasis>&#32;<emphasis class="keyword">const</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>*&#32;<link linkend="d3/d17/structros_1_1message__traits_1_1DataType_3_01_1_1jaco__msgs_1_1SetForceControlParamsRequest___3_01ContainerAllocator_01_4_01_4_1a7a967395f6e2a75b9f39fa6a6d1d59ee">value</link>(const&#32;::jaco_msgs::SetForceControlParamsRequest_&lt;ContainerAllocator&gt;&amp;)&#32;{&#32;<emphasis class="keywordflow">return</emphasis>&#32;<link linkend="d3/d17/structros_1_1message__traits_1_1DataType_3_01_1_1jaco__msgs_1_1SetForceControlParamsRequest___3_01ContainerAllocator_01_4_01_4_1a7a967395f6e2a75b9f39fa6a6d1d59ee">value</link>();&#32;}
+209 };
+210 
+211 <emphasis class="keyword">template</emphasis>&lt;<emphasis class="keyword">class</emphasis>&#32;ContainerAllocator&gt;
+<link linkend="d2/d85/structros_1_1message__traits_1_1Definition_3_01_1_1jaco__msgs_1_1SetForceControlParamsRequest___c59584efc00e1eca7e3af5d8ad03eba5">212 </link><emphasis class="keyword">struct&#32;</emphasis>Definition&lt;&#32;::<link linkend="df/db3/structjaco__msgs_1_1SetForceControlParamsRequest__">jaco_msgs::SetForceControlParamsRequest_</link>&lt;ContainerAllocator&gt;&#32;&gt;
+213 {
+<link linkend="d2/d85/structros_1_1message__traits_1_1Definition_3_01_1_1jaco__msgs_1_1SetForceControlParamsRequest___c59584efc00e1eca7e3af5d8ad03eba5_1ab32184d413a0011cb4aa158d53e2fa92">214 </link>&#32;&#32;<emphasis class="keyword">static</emphasis>&#32;<emphasis class="keyword">const</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>*&#32;<link linkend="d2/d85/structros_1_1message__traits_1_1Definition_3_01_1_1jaco__msgs_1_1SetForceControlParamsRequest___c59584efc00e1eca7e3af5d8ad03eba5_1ab32184d413a0011cb4aa158d53e2fa92">value</link>()
+215 &#32;&#32;{
+216 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;<emphasis class="stringliteral">&quot;geometry_msgs/Vector3&#32;inertia_linear\n\</emphasis>
+217 <emphasis class="stringliteral">geometry_msgs/Vector3&#32;inertia_angular\n\</emphasis>
+218 <emphasis class="stringliteral">geometry_msgs/Vector3&#32;damping_linear\n\</emphasis>
+219 <emphasis class="stringliteral">geometry_msgs/Vector3&#32;damping_angular\n\</emphasis>
+220 <emphasis class="stringliteral">geometry_msgs/Vector3&#32;force_min_linear\n\</emphasis>
+221 <emphasis class="stringliteral">geometry_msgs/Vector3&#32;force_min_angular\n\</emphasis>
+222 <emphasis class="stringliteral">geometry_msgs/Vector3&#32;force_max_linear\n\</emphasis>
+223 <emphasis class="stringliteral">geometry_msgs/Vector3&#32;force_max_angular\n\</emphasis>
+224 <emphasis class="stringliteral">\n\</emphasis>
+225 <emphasis class="stringliteral">================================================================================\n\</emphasis>
+226 <emphasis class="stringliteral">MSG:&#32;geometry_msgs/Vector3\n\</emphasis>
+227 <emphasis class="stringliteral">#&#32;This&#32;represents&#32;a&#32;vector&#32;in&#32;free&#32;space.&#32;\n\</emphasis>
+228 <emphasis class="stringliteral">\n\</emphasis>
+229 <emphasis class="stringliteral">float64&#32;x\n\</emphasis>
+230 <emphasis class="stringliteral">float64&#32;y\n\</emphasis>
+231 <emphasis class="stringliteral">float64&#32;z\n\</emphasis>
+232 <emphasis class="stringliteral">&quot;</emphasis>;
+233 &#32;&#32;}
+234 
+<link linkend="d2/d85/structros_1_1message__traits_1_1Definition_3_01_1_1jaco__msgs_1_1SetForceControlParamsRequest___c59584efc00e1eca7e3af5d8ad03eba5_1a06fb767441a8c134528174d5572ad713">235 </link>&#32;&#32;<emphasis class="keyword">static</emphasis>&#32;<emphasis class="keyword">const</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>*&#32;<link linkend="d2/d85/structros_1_1message__traits_1_1Definition_3_01_1_1jaco__msgs_1_1SetForceControlParamsRequest___c59584efc00e1eca7e3af5d8ad03eba5_1a06fb767441a8c134528174d5572ad713">value</link>(const&#32;::jaco_msgs::SetForceControlParamsRequest_&lt;ContainerAllocator&gt;&amp;)&#32;{&#32;<emphasis class="keywordflow">return</emphasis>&#32;<link linkend="d2/d85/structros_1_1message__traits_1_1Definition_3_01_1_1jaco__msgs_1_1SetForceControlParamsRequest___c59584efc00e1eca7e3af5d8ad03eba5_1a06fb767441a8c134528174d5572ad713">value</link>();&#32;}
+236 };
+237 
+238 }&#32;<emphasis class="comment">//&#32;namespace&#32;message_traits</emphasis>
+239 }&#32;<emphasis class="comment">//&#32;namespace&#32;ros</emphasis>
+240 
+241 <emphasis class="keyword">namespace&#32;</emphasis><link linkend="db/d2f/namespaceros">ros</link>
+242 {
+243 <emphasis class="keyword">namespace&#32;</emphasis>serialization
+244 {
+245 
+<link linkend="d4/d59/structros_1_1serialization_1_1Serializer_3_01_1_1jaco__msgs_1_1SetForceControlParamsRequest___3_01ContainerAllocator_01_4_01_4">246 </link>&#32;&#32;<emphasis class="keyword">template</emphasis>&lt;<emphasis class="keyword">class</emphasis>&#32;ContainerAllocator&gt;&#32;<emphasis class="keyword">struct&#32;</emphasis>Serializer&lt;&#32;::<link linkend="df/db3/structjaco__msgs_1_1SetForceControlParamsRequest__">jaco_msgs::SetForceControlParamsRequest_</link>&lt;ContainerAllocator&gt;&#32;&gt;
+247 &#32;&#32;{
+<link linkend="d4/d59/structros_1_1serialization_1_1Serializer_3_01_1_1jaco__msgs_1_1SetForceControlParamsRequest___3_01ContainerAllocator_01_4_01_4_1ab348c36559fe07b6c852bd0d6a35196e">248 </link>&#32;&#32;&#32;&#32;<emphasis class="keyword">template</emphasis>&lt;<emphasis class="keyword">typename</emphasis>&#32;Stream,&#32;<emphasis class="keyword">typename</emphasis>&#32;T&gt;&#32;<emphasis class="keyword">inline</emphasis>&#32;<emphasis class="keyword">static</emphasis>&#32;<emphasis class="keywordtype">void</emphasis>&#32;<link linkend="d4/d59/structros_1_1serialization_1_1Serializer_3_01_1_1jaco__msgs_1_1SetForceControlParamsRequest___3_01ContainerAllocator_01_4_01_4_1ab348c36559fe07b6c852bd0d6a35196e">allInOne</link>(Stream&amp;&#32;stream,&#32;T&#32;m)
+249 &#32;&#32;&#32;&#32;{
+250 &#32;&#32;&#32;&#32;&#32;&#32;stream.next(m.inertia_linear);
+251 &#32;&#32;&#32;&#32;&#32;&#32;stream.next(m.inertia_angular);
+252 &#32;&#32;&#32;&#32;&#32;&#32;stream.next(m.damping_linear);
+253 &#32;&#32;&#32;&#32;&#32;&#32;stream.next(m.damping_angular);
+254 &#32;&#32;&#32;&#32;&#32;&#32;stream.next(m.force_min_linear);
+255 &#32;&#32;&#32;&#32;&#32;&#32;stream.next(m.force_min_angular);
+256 &#32;&#32;&#32;&#32;&#32;&#32;stream.next(m.force_max_linear);
+257 &#32;&#32;&#32;&#32;&#32;&#32;stream.next(m.force_max_angular);
+258 &#32;&#32;&#32;&#32;}
+259 
+<link linkend="d4/d59/structros_1_1serialization_1_1Serializer_3_01_1_1jaco__msgs_1_1SetForceControlParamsRequest___3_01ContainerAllocator_01_4_01_4_1a7649637024091262afea2ed2fce4bcd5">260 </link>&#32;&#32;&#32;&#32;<link linkend="d4/d59/structros_1_1serialization_1_1Serializer_3_01_1_1jaco__msgs_1_1SetForceControlParamsRequest___3_01ContainerAllocator_01_4_01_4_1a7649637024091262afea2ed2fce4bcd5">ROS_DECLARE_ALLINONE_SERIALIZER</link>;
+261 &#32;&#32;};&#32;<emphasis class="comment">//&#32;struct&#32;SetForceControlParamsRequest_</emphasis>
+262 
+263 }&#32;<emphasis class="comment">//&#32;namespace&#32;serialization</emphasis>
+264 }&#32;<emphasis class="comment">//&#32;namespace&#32;ros</emphasis>
+265 
+266 <emphasis class="keyword">namespace&#32;</emphasis><link linkend="db/d2f/namespaceros">ros</link>
+267 {
+268 <emphasis class="keyword">namespace&#32;</emphasis>message_operations
+269 {
+270 
+271 <emphasis class="keyword">template</emphasis>&lt;<emphasis class="keyword">class</emphasis>&#32;ContainerAllocator&gt;
+<link linkend="de/d76/structros_1_1message__operations_1_1Printer_3_01_1_1jaco__msgs_1_1SetForceControlParamsRequest__16dc020b89aeac404d6fe4c2259e46cf">272 </link><emphasis class="keyword">struct&#32;</emphasis>Printer&lt;&#32;::<link linkend="df/db3/structjaco__msgs_1_1SetForceControlParamsRequest__">jaco_msgs::SetForceControlParamsRequest_</link>&lt;ContainerAllocator&gt;&#32;&gt;
+273 {
+<link linkend="de/d76/structros_1_1message__operations_1_1Printer_3_01_1_1jaco__msgs_1_1SetForceControlParamsRequest__16dc020b89aeac404d6fe4c2259e46cf_1aa3e2350f9d31ee8c1f97b77964bd0cfa">274 </link>&#32;&#32;<emphasis class="keyword">template</emphasis>&lt;<emphasis class="keyword">typename</emphasis>&#32;Stream&gt;&#32;<emphasis class="keyword">static</emphasis>&#32;<emphasis class="keywordtype">void</emphasis>&#32;<link linkend="de/d76/structros_1_1message__operations_1_1Printer_3_01_1_1jaco__msgs_1_1SetForceControlParamsRequest__16dc020b89aeac404d6fe4c2259e46cf_1aa3e2350f9d31ee8c1f97b77964bd0cfa">stream</link>(Stream&amp;&#32;s,&#32;<emphasis class="keyword">const</emphasis>&#32;std::string&amp;&#32;indent,&#32;const&#32;::jaco_msgs::SetForceControlParamsRequest_&lt;ContainerAllocator&gt;&amp;&#32;v)
+275 &#32;&#32;{
+276 &#32;&#32;&#32;&#32;s&#32;&lt;&lt;&#32;indent&#32;&lt;&lt;&#32;<emphasis class="stringliteral">&quot;inertia_linear:&#32;&quot;</emphasis>;
+277 &#32;&#32;&#32;&#32;s&#32;&lt;&lt;&#32;std::endl;
+278 &#32;&#32;&#32;&#32;Printer&lt;&#32;::geometry_msgs::Vector3_&lt;ContainerAllocator&gt;&#32;&gt;::stream(s,&#32;indent&#32;+&#32;<emphasis class="stringliteral">&quot;&#32;&#32;&quot;</emphasis>,&#32;v.inertia_linear);
+279 &#32;&#32;&#32;&#32;s&#32;&lt;&lt;&#32;indent&#32;&lt;&lt;&#32;<emphasis class="stringliteral">&quot;inertia_angular:&#32;&quot;</emphasis>;
+280 &#32;&#32;&#32;&#32;s&#32;&lt;&lt;&#32;std::endl;
+281 &#32;&#32;&#32;&#32;Printer&lt;&#32;::geometry_msgs::Vector3_&lt;ContainerAllocator&gt;&#32;&gt;::stream(s,&#32;indent&#32;+&#32;<emphasis class="stringliteral">&quot;&#32;&#32;&quot;</emphasis>,&#32;v.inertia_angular);
+282 &#32;&#32;&#32;&#32;s&#32;&lt;&lt;&#32;indent&#32;&lt;&lt;&#32;<emphasis class="stringliteral">&quot;damping_linear:&#32;&quot;</emphasis>;
+283 &#32;&#32;&#32;&#32;s&#32;&lt;&lt;&#32;std::endl;
+284 &#32;&#32;&#32;&#32;Printer&lt;&#32;::geometry_msgs::Vector3_&lt;ContainerAllocator&gt;&#32;&gt;::stream(s,&#32;indent&#32;+&#32;<emphasis class="stringliteral">&quot;&#32;&#32;&quot;</emphasis>,&#32;v.damping_linear);
+285 &#32;&#32;&#32;&#32;s&#32;&lt;&lt;&#32;indent&#32;&lt;&lt;&#32;<emphasis class="stringliteral">&quot;damping_angular:&#32;&quot;</emphasis>;
+286 &#32;&#32;&#32;&#32;s&#32;&lt;&lt;&#32;std::endl;
+287 &#32;&#32;&#32;&#32;Printer&lt;&#32;::geometry_msgs::Vector3_&lt;ContainerAllocator&gt;&#32;&gt;::stream(s,&#32;indent&#32;+&#32;<emphasis class="stringliteral">&quot;&#32;&#32;&quot;</emphasis>,&#32;v.damping_angular);
+288 &#32;&#32;&#32;&#32;s&#32;&lt;&lt;&#32;indent&#32;&lt;&lt;&#32;<emphasis class="stringliteral">&quot;force_min_linear:&#32;&quot;</emphasis>;
+289 &#32;&#32;&#32;&#32;s&#32;&lt;&lt;&#32;std::endl;
+290 &#32;&#32;&#32;&#32;Printer&lt;&#32;::geometry_msgs::Vector3_&lt;ContainerAllocator&gt;&#32;&gt;::stream(s,&#32;indent&#32;+&#32;<emphasis class="stringliteral">&quot;&#32;&#32;&quot;</emphasis>,&#32;v.force_min_linear);
+291 &#32;&#32;&#32;&#32;s&#32;&lt;&lt;&#32;indent&#32;&lt;&lt;&#32;<emphasis class="stringliteral">&quot;force_min_angular:&#32;&quot;</emphasis>;
+292 &#32;&#32;&#32;&#32;s&#32;&lt;&lt;&#32;std::endl;
+293 &#32;&#32;&#32;&#32;Printer&lt;&#32;::geometry_msgs::Vector3_&lt;ContainerAllocator&gt;&#32;&gt;::stream(s,&#32;indent&#32;+&#32;<emphasis class="stringliteral">&quot;&#32;&#32;&quot;</emphasis>,&#32;v.force_min_angular);
+294 &#32;&#32;&#32;&#32;s&#32;&lt;&lt;&#32;indent&#32;&lt;&lt;&#32;<emphasis class="stringliteral">&quot;force_max_linear:&#32;&quot;</emphasis>;
+295 &#32;&#32;&#32;&#32;s&#32;&lt;&lt;&#32;std::endl;
+296 &#32;&#32;&#32;&#32;Printer&lt;&#32;::geometry_msgs::Vector3_&lt;ContainerAllocator&gt;&#32;&gt;::stream(s,&#32;indent&#32;+&#32;<emphasis class="stringliteral">&quot;&#32;&#32;&quot;</emphasis>,&#32;v.force_max_linear);
+297 &#32;&#32;&#32;&#32;s&#32;&lt;&lt;&#32;indent&#32;&lt;&lt;&#32;<emphasis class="stringliteral">&quot;force_max_angular:&#32;&quot;</emphasis>;
+298 &#32;&#32;&#32;&#32;s&#32;&lt;&lt;&#32;std::endl;
+299 &#32;&#32;&#32;&#32;Printer&lt;&#32;::geometry_msgs::Vector3_&lt;ContainerAllocator&gt;&#32;&gt;::stream(s,&#32;indent&#32;+&#32;<emphasis class="stringliteral">&quot;&#32;&#32;&quot;</emphasis>,&#32;v.force_max_angular);
+300 &#32;&#32;}
+301 };
+302 
+303 }&#32;<emphasis class="comment">//&#32;namespace&#32;message_operations</emphasis>
+304 }&#32;<emphasis class="comment">//&#32;namespace&#32;ros</emphasis>
+305 
+306 <emphasis class="preprocessor">#endif&#32;//&#32;JACO_MSGS_MESSAGE_SETFORCECONTROLPARAMSREQUEST_H</emphasis>
+    </computeroutput></literallayout>
+</section>

@@ -1,0 +1,67 @@
+.TH "TrajectoryPoint" 3 "Thu Mar 3 2016" "Version 1.0.1" "Kinova-ROS" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+TrajectoryPoint \- This data structure represents a point of a trajectory\&. It contains the position a limitation that you can applied\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include 'Definition'\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBInitStruct\fP ()"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBLimitation\fP \fBLimitations\fP"
+.br
+.RI "\fI\fBLimitation\fP applied to this point if the limitation flag is active\&. \fP"
+.ti -1c
+.RI "int \fBLimitationsActive\fP"
+.br
+.RI "\fIA flag that indicatesif the limitation are active or not (1 is active 0 is not)\&. \fP"
+.ti -1c
+.RI "\fBUserPosition\fP \fBPosition\fP"
+.br
+.RI "\fIPosition information that described this trajectory point\&. \fP"
+.in -1c
+.SH "Detailed Description"
+.PP 
+This data structure represents a point of a trajectory\&. It contains the position a limitation that you can applied\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "void TrajectoryPoint::InitStruct ()\fC [inline]\fP"
+
+.PP
+.nf
+694     {
+695         Position\&.InitStruct();
+696         LimitationsActive = 0;
+697         Limitations\&.InitStruct();
+698     }
+.fi
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBLimitation\fP TrajectoryPoint::Limitations"
+
+.PP
+\fBLimitation\fP applied to this point if the limitation flag is active\&. 
+.SS "int TrajectoryPoint::LimitationsActive"
+
+.PP
+A flag that indicatesif the limitation are active or not (1 is active 0 is not)\&. 
+.SS "\fBUserPosition\fP TrajectoryPoint::Position"
+
+.PP
+Position information that described this trajectory point\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Kinova-ROS from the source code\&.

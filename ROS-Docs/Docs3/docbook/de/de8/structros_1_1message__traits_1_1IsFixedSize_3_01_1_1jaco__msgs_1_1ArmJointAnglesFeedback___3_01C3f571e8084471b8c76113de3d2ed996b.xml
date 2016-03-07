@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="de/de8/structros_1_1message__traits_1_1IsFixedSize_3_01_1_1jaco__msgs_1_1ArmJointAnglesFeedback___3_01C3f571e8084471b8c76113de3d2ed996b">
+<title>ros::message_traits::IsFixedSize&lt; ::jaco_msgs::ArmJointAnglesFeedback_&lt; ContainerAllocator &gt; const  &gt; struct Reference</title>
+<para>
+    <programlisting>#include <link linkend="dc/dc1/ArmJointAnglesFeedback_8h">&quot;ArmJointAnglesFeedback.h&quot;</link></programlisting>
+</para>
+<para>Inheritance diagram for ros::message_traits::IsFixedSize&lt; ::jaco_msgs::ArmJointAnglesFeedback_&lt; ContainerAllocator &gt; const  &gt;</para>
+<para>
+    <figure>
+        <title>Inheritance graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../d6/d9d/structros_1_1message__traits_1_1IsFixedSize_3_01_1_1jaco__msgs_1_1ArmJointAnglesFeedback___3_01Cba99d262e7cfa89da0692125ee679262.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Collaboration diagram for ros::message_traits::IsFixedSize&lt; ::jaco_msgs::ArmJointAnglesFeedback_&lt; ContainerAllocator &gt; const  &gt;</para>
+<para>
+    <figure>
+        <title>Collaboration graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../de/d5d/structros_1_1message__traits_1_1IsFixedSize_3_01_1_1jaco__msgs_1_1ArmJointAnglesFeedback___3_01Cd84e06759c68d671ea6a73e57b3c85c1.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+    <templateparamlist>
+      <param>
+        <type>class ContainerAllocator</type>
+      </param>
+    </templateparamlist>
+</section>

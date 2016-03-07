@@ -1,0 +1,120 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="d8/de6/jaco__comm_8h">
+    <title>jaco_comm.h File Reference</title>
+    <programlisting>#include &lt;boost/thread/recursive_mutex.hpp&gt;</programlisting>
+    <programlisting>#include &lt;kinova/KinovaTypes.h&gt;</programlisting>
+    <programlisting>#include &lt;jaco_driver/jaco_types.h&gt;</programlisting>
+    <programlisting>#include &quot;jaco_driver/jaco_api.h&quot;</programlisting>
+<para>Include dependency diagram for jaco_comm.h</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../d9/d82/jaco__comm_8h__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Included by dependency diagram for jaco_comm.h</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../d3/d80/jaco__comm_8h__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+        <section>
+            <title> Classes </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d5/d2b/classjaco_1_1JacoComm">jaco::JacoComm</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <simplesect>
+            <title> Namespaces </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d4/d3c/namespacejaco">jaco</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+    <simplesect>
+        <title>Detailed Description</title>
+    <para>Definition in file D:/Longfei/Desktop/catkin_KinovaROS/src/jaco-ros/jaco_driver/include/jaco_driver/jaco_comm.h</para>
+    </simplesect>
+    <literallayout><computeroutput>
+1 
+46 <emphasis class="preprocessor">#ifndef&#32;JACO_DRIVER_JACO_COMM_H</emphasis>
+47 <emphasis class="preprocessor">#define&#32;JACO_DRIVER_JACO_COMM_H</emphasis>
+48 
+49 <emphasis class="preprocessor">#include&#32;&lt;boost/thread/recursive_mutex.hpp&gt;</emphasis>
+50 
+51 <emphasis class="preprocessor">#include&#32;&lt;<link linkend="df/d36/KinovaTypes_8h">kinova/KinovaTypes.h</link>&gt;</emphasis>
+52 
+53 <emphasis class="preprocessor">#include&#32;&lt;<link linkend="d7/d98/jaco__types_8h">jaco_driver/jaco_types.h</link>&gt;</emphasis>
+54 <emphasis class="preprocessor">#include&#32;&quot;<link linkend="d0/d9e/jaco__api_8h">jaco_driver/jaco_api.h</link>&quot;</emphasis>
+55 
+56 
+57 <emphasis class="keyword">namespace&#32;</emphasis><link linkend="d4/d3c/namespacejaco">jaco</link>
+58 {
+59 
+<link linkend="d5/d2b/classjaco_1_1JacoComm">60 </link><emphasis class="keyword">class&#32;</emphasis><link linkend="d5/d2b/classjaco_1_1JacoComm">JacoComm</link>
+61 {
+62 &#32;<emphasis class="keyword">public</emphasis>:
+63 &#32;&#32;&#32;&#32;<link linkend="d5/d2b/classjaco_1_1JacoComm_1acdf234ee7f30cf5ead4f41beb3481521">JacoComm</link>(<emphasis class="keyword">const</emphasis>&#32;ros::NodeHandle&amp;&#32;node_handle,
+64 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;boost::recursive_mutex&amp;&#32;api_mutex,
+65 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keyword">const</emphasis>&#32;<emphasis class="keywordtype">bool</emphasis>&#32;is_movement_on_start);
+66 &#32;&#32;&#32;&#32;<link linkend="d5/d2b/classjaco_1_1JacoComm_1a94db89ce398a131d5dd6985a7725f495">~JacoComm</link>();
+67 
+68 &#32;&#32;&#32;&#32;<emphasis class="keywordtype">bool</emphasis>&#32;<link linkend="d5/d2b/classjaco_1_1JacoComm_1a0e7d5984a2c6ed956da7e07e6c97ba5f">isHomed</link>(<emphasis class="keywordtype">void</emphasis>);
+69 &#32;&#32;&#32;&#32;<emphasis class="keywordtype">void</emphasis>&#32;<link linkend="d5/d2b/classjaco_1_1JacoComm_1a38c69b22bc293afd3f27eff9179dec4c">homeArm</link>(<emphasis class="keywordtype">void</emphasis>);
+70 &#32;&#32;&#32;&#32;<emphasis class="keywordtype">void</emphasis>&#32;<link linkend="d5/d2b/classjaco_1_1JacoComm_1a787f049f83d8f5fa5a7c86ee6a1d0a11">initFingers</link>(<emphasis class="keywordtype">void</emphasis>);
+71 &#32;&#32;&#32;&#32;<emphasis class="keywordtype">void</emphasis>&#32;<link linkend="d5/d2b/classjaco_1_1JacoComm_1ad53fa0c190d41da8430de2e9bf997f05">setJointAngles</link>(<emphasis class="keyword">const</emphasis>&#32;<link linkend="d4/de6/classjaco_1_1JacoAngles">JacoAngles</link>&#32;&amp;<link linkend="da/dd2/namespacejoint__angle__workout_1a44cb6da34666d45961b26233ed5264bf">angles</link>,&#32;<emphasis class="keywordtype">int</emphasis>&#32;timeout&#32;=&#32;0,&#32;<emphasis class="keywordtype">bool</emphasis>&#32;push&#32;=&#32;<emphasis class="keyword">true</emphasis>);
+72 &#32;&#32;&#32;&#32;<emphasis class="keywordtype">void</emphasis>&#32;<link linkend="d5/d2b/classjaco_1_1JacoComm_1a7a7375d2609c81f0a03974b06ca07be0">setCartesianPosition</link>(<emphasis class="keyword">const</emphasis>&#32;<link linkend="dd/da4/classjaco_1_1JacoPose">JacoPose</link>&#32;&amp;position,&#32;<emphasis class="keywordtype">int</emphasis>&#32;timeout&#32;=&#32;0,&#32;<emphasis class="keywordtype">bool</emphasis>&#32;push&#32;=&#32;<emphasis class="keyword">true</emphasis>);
+73 &#32;&#32;&#32;&#32;<emphasis class="keywordtype">void</emphasis>&#32;<link linkend="d5/d2b/classjaco_1_1JacoComm_1a5cdc217373b923f7de2ed468150281fa">setFingerPositions</link>(<emphasis class="keyword">const</emphasis>&#32;<link linkend="dd/d28/classjaco_1_1FingerAngles">FingerAngles</link>&#32;&amp;fingers,&#32;<emphasis class="keywordtype">int</emphasis>&#32;timeout&#32;=&#32;0,&#32;<emphasis class="keywordtype">bool</emphasis>&#32;push&#32;=&#32;<emphasis class="keyword">true</emphasis>);
+74 &#32;&#32;&#32;&#32;<emphasis class="keywordtype">void</emphasis>&#32;<link linkend="d5/d2b/classjaco_1_1JacoComm_1af269b1c8d8b1f32c1003ca2e464252f0">setJointVelocities</link>(<emphasis class="keyword">const</emphasis>&#32;<link linkend="d0/df5/structAngularInfo">AngularInfo</link>&amp;&#32;joint_vel);
+75 &#32;&#32;&#32;&#32;<emphasis class="keywordtype">void</emphasis>&#32;<link linkend="d5/d2b/classjaco_1_1JacoComm_1a468352480a437cc2144c8d4d289815a5">setCartesianVelocities</link>(<emphasis class="keyword">const</emphasis>&#32;<link linkend="dd/d00/structCartesianInfo">CartesianInfo</link>&#32;&amp;velocities);
+76 &#32;&#32;&#32;&#32;<emphasis class="keywordtype">void</emphasis>&#32;<link linkend="d5/d2b/classjaco_1_1JacoComm_1ae7901b1dff2e84eb89256f46a7c65b62">setConfig</link>(<emphasis class="keyword">const</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1d1/d2e/structClientConfigurations">ClientConfigurations</link>&#32;&amp;config);
+77 &#32;&#32;&#32;&#32;<emphasis class="keywordtype">void</emphasis>&#32;<link linkend="d5/d2b/classjaco_1_1JacoComm_1a5fcb23bf6925a82f2ab5e42460ea3834">getJointAngles</link>(<link linkend="d4/de6/classjaco_1_1JacoAngles">JacoAngles</link>&#32;&amp;angles);
+78 &#32;&#32;&#32;&#32;<emphasis class="keywordtype">void</emphasis>&#32;<link linkend="d5/d2b/classjaco_1_1JacoComm_1aa81b5cdf89bd2c7259be3638fdb4f75a">getJointVelocities</link>(<link linkend="d4/de6/classjaco_1_1JacoAngles">JacoAngles</link>&#32;&amp;vels);
+79 &#32;&#32;&#32;&#32;<emphasis class="keywordtype">void</emphasis>&#32;<link linkend="d5/d2b/classjaco_1_1JacoComm_1af2ba4b35149e292fa5279768d47216cb">getJointTorques</link>(<link linkend="d4/de6/classjaco_1_1JacoAngles">JacoAngles</link>&#32;&amp;tqs);
+80 &#32;&#32;&#32;&#32;<emphasis class="keywordtype">void</emphasis>&#32;<link linkend="d5/d2b/classjaco_1_1JacoComm_1a855bbefed2093d0d0cc7763eb7306a0b">getCartesianPosition</link>(<link linkend="dd/da4/classjaco_1_1JacoPose">JacoPose</link>&#32;&amp;position);
+81 &#32;&#32;&#32;&#32;<emphasis class="keywordtype">void</emphasis>&#32;<link linkend="d5/d2b/classjaco_1_1JacoComm_1af181d7ddd7baeff6e46720648e7e1f31">getCartesianForce</link>(<link linkend="dd/da4/classjaco_1_1JacoPose">JacoPose</link>&#32;&amp;position);
+82 &#32;&#32;&#32;&#32;<emphasis class="keywordtype">void</emphasis>&#32;<link linkend="d5/d2b/classjaco_1_1JacoComm_1a7644bf1154b59bf4d8b97c200284e3fb">getFingerPositions</link>(<link linkend="dd/d28/classjaco_1_1FingerAngles">FingerAngles</link>&#32;&amp;fingers);
+83 &#32;&#32;&#32;&#32;<emphasis class="keywordtype">void</emphasis>&#32;<link linkend="d5/d2b/classjaco_1_1JacoComm_1afbb443b8e3fe71ef58b0013fdb3d5674">setCartesianInertiaDamping</link>(<emphasis class="keyword">const</emphasis>&#32;<link linkend="dd/d00/structCartesianInfo">CartesianInfo</link>&#32;&amp;inertia,&#32;<emphasis class="keyword">const</emphasis>&#32;<link linkend="dd/d00/structCartesianInfo">CartesianInfo</link>&amp;&#32;damping);
+84 &#32;&#32;&#32;&#32;<emphasis class="keywordtype">void</emphasis>&#32;<link linkend="d5/d2b/classjaco_1_1JacoComm_1a39faaf774115561ea1857349db182145">setCartesianForceMinMax</link>(<emphasis class="keyword">const</emphasis>&#32;<link linkend="dd/d00/structCartesianInfo">CartesianInfo</link>&#32;&amp;min,&#32;<emphasis class="keyword">const</emphasis>&#32;<link linkend="dd/d00/structCartesianInfo">CartesianInfo</link>&amp;&#32;<link linkend="d7/d70/JacoPositionConfig_8dox_1a55c9de72d9f3630abdf51bfe39c191dd">max</link>);
+85 &#32;&#32;&#32;&#32;<emphasis class="keywordtype">void</emphasis>&#32;<link linkend="d5/d2b/classjaco_1_1JacoComm_1a00e5493dfbdcaab6c1a9bd388d3b839d">startForceControl</link>();
+86 &#32;&#32;&#32;&#32;<emphasis class="keywordtype">void</emphasis>&#32;<link linkend="d5/d2b/classjaco_1_1JacoComm_1a339cf31d88fdef6409340c82a35ecb53">stopForceControl</link>();
+87 &#32;&#32;&#32;&#32;<emphasis class="keywordtype">void</emphasis>&#32;<link linkend="d5/d2b/classjaco_1_1JacoComm_1a29384597e710d4cbb4e1f2ae6b7d7e50">getQuickStatus</link>(<link linkend="df/d36/KinovaTypes_8h_1df/d9d/structQuickStatus">QuickStatus</link>&#32;&amp;quick_status);
+88 &#32;&#32;&#32;&#32;<emphasis class="keywordtype">void</emphasis>&#32;<link linkend="d5/d2b/classjaco_1_1JacoComm_1a47a3557e9b5576bc83df936caa043270">getConfig</link>(<link linkend="df/d36/KinovaTypes_8h_1d1/d2e/structClientConfigurations">ClientConfigurations</link>&#32;&amp;config);
+89 &#32;&#32;&#32;&#32;<emphasis class="keywordtype">void</emphasis>&#32;<link linkend="d5/d2b/classjaco_1_1JacoComm_1a0524faa99cdc1361d50c3c6a53d5cfe0">printAngles</link>(<emphasis class="keyword">const</emphasis>&#32;<link linkend="d4/de6/classjaco_1_1JacoAngles">JacoAngles</link>&#32;&amp;angles);
+90 &#32;&#32;&#32;&#32;<emphasis class="keywordtype">void</emphasis>&#32;<link linkend="d5/d2b/classjaco_1_1JacoComm_1ac1abf65387fa9adba237802bc97f15b1">printPosition</link>(<emphasis class="keyword">const</emphasis>&#32;<link linkend="dd/da4/classjaco_1_1JacoPose">JacoPose</link>&#32;&amp;position);
+91 &#32;&#32;&#32;&#32;<emphasis class="keywordtype">void</emphasis>&#32;<link linkend="d5/d2b/classjaco_1_1JacoComm_1ab34f7cbb2978e76644927b9031e06b4f">printFingers</link>(<emphasis class="keyword">const</emphasis>&#32;<link linkend="df/d1b/structFingersPosition">FingersPosition</link>&#32;&amp;fingers);
+92 &#32;&#32;&#32;&#32;<emphasis class="keywordtype">void</emphasis>&#32;<link linkend="d5/d2b/classjaco_1_1JacoComm_1a54661eeda2fc5324843a230bdcfe8b67">printConfig</link>(<emphasis class="keyword">const</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1d1/d2e/structClientConfigurations">ClientConfigurations</link>&#32;&amp;config);
+93 &#32;&#32;&#32;&#32;<emphasis class="keywordtype">void</emphasis>&#32;<link linkend="d5/d2b/classjaco_1_1JacoComm_1a54862830cd6414ae3ae48e46e54bf798">stopAPI</link>();
+94 &#32;&#32;&#32;&#32;<emphasis class="keywordtype">void</emphasis>&#32;<link linkend="d5/d2b/classjaco_1_1JacoComm_1a6b2a1fabc4e6c30da42c9a5e26757398">startAPI</link>();
+95 &#32;&#32;&#32;&#32;<emphasis class="keywordtype">bool</emphasis>&#32;<link linkend="d5/d2b/classjaco_1_1JacoComm_1a872b8033cda5a9fe4ccdca2e89aa03d1">isStopped</link>();
+96 &#32;&#32;&#32;&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="d5/d2b/classjaco_1_1JacoComm_1a42e11ee165ee8f2b1af7e7060f488ce1">numFingers</link>();
+97 &#32;&#32;&#32;&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="d5/d2b/classjaco_1_1JacoComm_1af20323ed50f73b59bac3e18ebd8559fa">robotType</link>();
+98 
+99 &#32;<emphasis class="keyword">private</emphasis>:
+<link linkend="d5/d2b/classjaco_1_1JacoComm_1ac6ef2a6b3c51877fc4237d834c35908a">100 </link>&#32;&#32;&#32;&#32;boost::recursive_mutex&amp;&#32;<link linkend="d5/d2b/classjaco_1_1JacoComm_1ac6ef2a6b3c51877fc4237d834c35908a">api_mutex_</link>;
+<link linkend="d5/d2b/classjaco_1_1JacoComm_1a8d1510c941f28a4e8f921691d4fd2248">101 </link>&#32;&#32;&#32;&#32;<link linkend="d5/d3c/classjaco_1_1JacoAPI">jaco::JacoAPI</link>&#32;<link linkend="d5/d2b/classjaco_1_1JacoComm_1a8d1510c941f28a4e8f921691d4fd2248">jaco_api_</link>;
+<link linkend="d5/d2b/classjaco_1_1JacoComm_1a9607500fac99c4dbc5acc98dd513eec3">102 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">bool</emphasis>&#32;<link linkend="d5/d2b/classjaco_1_1JacoComm_1a9607500fac99c4dbc5acc98dd513eec3">is_software_stop_</link>;
+<link linkend="d5/d2b/classjaco_1_1JacoComm_1a5812c7504d90ec6016c40cba097ba1bb">103 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="d5/d2b/classjaco_1_1JacoComm_1a5812c7504d90ec6016c40cba097ba1bb">num_fingers_</link>;
+<link linkend="d5/d2b/classjaco_1_1JacoComm_1afb603f289e6ed8855cbeb0d0b1400829">104 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="d5/d2b/classjaco_1_1JacoComm_1afb603f289e6ed8855cbeb0d0b1400829">robot_type_</link>;&#32;
+105 };
+106 
+107 }&#32;&#32;<emphasis class="comment">//&#32;namespace&#32;jaco</emphasis>
+108 <emphasis class="preprocessor">#endif&#32;&#32;//&#32;JACO_DRIVER_JACO_COMM_H</emphasis>
+    </computeroutput></literallayout>
+</section>

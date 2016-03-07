@@ -1,0 +1,263 @@
+\hypertarget{classadmittance__ctrl_1_1AdmittanceCtrl}{}\section{admittance\+\_\+ctrl.\+Admittance\+Ctrl Class Reference}
+\label{classadmittance__ctrl_1_1AdmittanceCtrl}\index{admittance\+\_\+ctrl.\+Admittance\+Ctrl@{admittance\+\_\+ctrl.\+Admittance\+Ctrl}}
+
+
+Collaboration diagram for admittance\+\_\+ctrl.\+Admittance\+Ctrl\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=231pt]{d2/d03/classadmittance__ctrl_1_1AdmittanceCtrl__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classadmittance__ctrl_1_1AdmittanceCtrl_a6e303b642da1e5fe2c9a3a29a148dbb9}{\+\_\+\+\_\+init\+\_\+\+\_\+} (self)
+\item 
+def \hyperlink{classadmittance__ctrl_1_1AdmittanceCtrl_a7191d1d7f805fbeef6a0a0667bd0ac65}{saturate\+\_\+vel} (self, vel)
+\item 
+def \hyperlink{classadmittance__ctrl_1_1AdmittanceCtrl_a38c53c8d924147104986363e8bd630f7}{timer\+\_\+cb} (self, event)
+\item 
+def \hyperlink{classadmittance__ctrl_1_1AdmittanceCtrl_a26b129bab2045988a9de094fbc7b582d}{wrench\+\_\+cb} (self, msg)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classadmittance__ctrl_1_1AdmittanceCtrl_a3654d3f7f31c450d8cb010a4dadb3e18}{cur\+\_\+wrench}
+\item 
+\hyperlink{classadmittance__ctrl_1_1AdmittanceCtrl_a5f68a4404ad164497f0a5e57adc06ae5}{dz\+\_\+x\+\_\+max}
+\item 
+\hyperlink{classadmittance__ctrl_1_1AdmittanceCtrl_ae12abadbff515007a7857f4ad04a2068}{dz\+\_\+x\+\_\+min}
+\item 
+\hyperlink{classadmittance__ctrl_1_1AdmittanceCtrl_af0acd0a0262fbcc79e90b8035e3197d6}{dz\+\_\+y\+\_\+max}
+\item 
+\hyperlink{classadmittance__ctrl_1_1AdmittanceCtrl_a35e4e59c55a85d6dbc1f5ccfc5b87f25}{dz\+\_\+y\+\_\+min}
+\item 
+\hyperlink{classadmittance__ctrl_1_1AdmittanceCtrl_ab3d7954604431dd6244691fd54112420}{dz\+\_\+z\+\_\+max}
+\item 
+\hyperlink{classadmittance__ctrl_1_1AdmittanceCtrl_a6c0fe2e42dde125b1e6f81814ce57c02}{dz\+\_\+z\+\_\+min}
+\item 
+\hyperlink{classadmittance__ctrl_1_1AdmittanceCtrl_a9a0d5d08a89a7cc49b27a9de9d44d8d6}{k\+\_\+f}
+\item 
+\hyperlink{classadmittance__ctrl_1_1AdmittanceCtrl_a9e2e5b35def00bad6fc3fec2d80c63c4}{pub\+\_\+cmd\+\_\+vel}
+\item 
+\hyperlink{classadmittance__ctrl_1_1AdmittanceCtrl_abcd3dae9bd287755d88fb6ab5621b66f}{sub\+\_\+wrench}
+\item 
+\hyperlink{classadmittance__ctrl_1_1AdmittanceCtrl_a83d7b0847cefa7749b3d4a9672c4d1c4}{timer}
+\item 
+\hyperlink{classadmittance__ctrl_1_1AdmittanceCtrl_a2d0c030242f05f5aed46ce03810d721a}{vel\+\_\+max}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{admittance\+\_\+ctrl\+::\+Admittance\+Ctrl@{admittance\+\_\+ctrl\+::\+Admittance\+Ctrl}!\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}!admittance\+\_\+ctrl\+::\+Admittance\+Ctrl@{admittance\+\_\+ctrl\+::\+Admittance\+Ctrl}}
+\subsubsection[{\texorpdfstring{\+\_\+\+\_\+init\+\_\+\+\_\+(self)}{__init__(self)}}]{\setlength{\rightskip}{0pt plus 5cm}def admittance\+\_\+ctrl.\+Admittance\+Ctrl.\+\_\+\+\_\+init\+\_\+\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\hypertarget{classadmittance__ctrl_1_1AdmittanceCtrl_a6e303b642da1e5fe2c9a3a29a148dbb9}{}\label{classadmittance__ctrl_1_1AdmittanceCtrl_a6e303b642da1e5fe2c9a3a29a148dbb9}
+
+\begin{DoxyCode}
+40     \textcolor{keyword}{def }\hyperlink{classadmittance__ctrl_1_1AdmittanceCtrl_a6e303b642da1e5fe2c9a3a29a148dbb9}{\_\_init\_\_}(self):
+41         self.\hyperlink{classadmittance__ctrl_1_1AdmittanceCtrl_a3654d3f7f31c450d8cb010a4dadb3e18}{cur\_wrench} = Wrench()
+42 
+43         self.\hyperlink{classadmittance__ctrl_1_1AdmittanceCtrl_ae12abadbff515007a7857f4ad04a2068}{dz\_x\_min} = rospy.get\_param(\textcolor{stringliteral}{"~dz\_x\_min"},  -10)
+44         self.\hyperlink{classadmittance__ctrl_1_1AdmittanceCtrl_a5f68a4404ad164497f0a5e57adc06ae5}{dz\_x\_max} = rospy.get\_param(\textcolor{stringliteral}{"~dz\_x\_max"},   10)
+45         self.\hyperlink{classadmittance__ctrl_1_1AdmittanceCtrl_a35e4e59c55a85d6dbc1f5ccfc5b87f25}{dz\_y\_min} = rospy.get\_param(\textcolor{stringliteral}{"~dz\_y\_min"},  -10)
+46         self.\hyperlink{classadmittance__ctrl_1_1AdmittanceCtrl_af0acd0a0262fbcc79e90b8035e3197d6}{dz\_y\_max} = rospy.get\_param(\textcolor{stringliteral}{"~dz\_y\_max"},   10)
+47         self.\hyperlink{classadmittance__ctrl_1_1AdmittanceCtrl_a6c0fe2e42dde125b1e6f81814ce57c02}{dz\_z\_min} = rospy.get\_param(\textcolor{stringliteral}{"~dz\_z\_min"},  -10)
+48         self.\hyperlink{classadmittance__ctrl_1_1AdmittanceCtrl_ab3d7954604431dd6244691fd54112420}{dz\_z\_max} = rospy.get\_param(\textcolor{stringliteral}{"~dz\_z\_max"},   30)
+49         self.\hyperlink{classadmittance__ctrl_1_1AdmittanceCtrl_a9a0d5d08a89a7cc49b27a9de9d44d8d6}{k\_f}      = rospy.get\_param(\textcolor{stringliteral}{"~k\_f"},      -0.1)
+50         self.\hyperlink{classadmittance__ctrl_1_1AdmittanceCtrl_a2d0c030242f05f5aed46ce03810d721a}{vel\_max}  = rospy.get\_param(\textcolor{stringliteral}{"~vel\_max"},   0.1)
+51         period        = rospy.get\_param(\textcolor{stringliteral}{"~period"},    0.1)
+52 
+53         self.\hyperlink{classadmittance__ctrl_1_1AdmittanceCtrl_abcd3dae9bd287755d88fb6ab5621b66f}{sub\_wrench}  = rospy.Subscriber(\textcolor{stringliteral}{"wrench"}, WrenchStamped, self.
+      \hyperlink{classadmittance__ctrl_1_1AdmittanceCtrl_a26b129bab2045988a9de094fbc7b582d}{wrench\_cb})
+54         self.\hyperlink{classadmittance__ctrl_1_1AdmittanceCtrl_a9e2e5b35def00bad6fc3fec2d80c63c4}{pub\_cmd\_vel} = rospy.Publisher(\textcolor{stringliteral}{"cmd\_vel"}, TwistStamped, queue\_size=1)
+55         self.\hyperlink{classadmittance__ctrl_1_1AdmittanceCtrl_a83d7b0847cefa7749b3d4a9672c4d1c4}{timer}       = rospy.Timer(rospy.Duration(period), self.
+      \hyperlink{classadmittance__ctrl_1_1AdmittanceCtrl_a38c53c8d924147104986363e8bd630f7}{timer\_cb})
+56 
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{admittance\+\_\+ctrl\+::\+Admittance\+Ctrl@{admittance\+\_\+ctrl\+::\+Admittance\+Ctrl}!saturate\+\_\+vel@{saturate\+\_\+vel}}
+\index{saturate\+\_\+vel@{saturate\+\_\+vel}!admittance\+\_\+ctrl\+::\+Admittance\+Ctrl@{admittance\+\_\+ctrl\+::\+Admittance\+Ctrl}}
+\subsubsection[{\texorpdfstring{saturate\+\_\+vel(self, vel)}{saturate_vel(self, vel)}}]{\setlength{\rightskip}{0pt plus 5cm}def admittance\+\_\+ctrl.\+Admittance\+Ctrl.\+saturate\+\_\+vel (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{vel}
+\end{DoxyParamCaption}
+)}\hypertarget{classadmittance__ctrl_1_1AdmittanceCtrl_a7191d1d7f805fbeef6a0a0667bd0ac65}{}\label{classadmittance__ctrl_1_1AdmittanceCtrl_a7191d1d7f805fbeef6a0a0667bd0ac65}
+
+\begin{DoxyCode}
+100     \textcolor{keyword}{def }\hyperlink{classadmittance__ctrl_1_1AdmittanceCtrl_a7191d1d7f805fbeef6a0a0667bd0ac65}{saturate\_vel}(self, vel):
+101         avel = abs(vel)
+102         \textcolor{keywordflow}{if} avel > self.\hyperlink{classadmittance__ctrl_1_1AdmittanceCtrl_a2d0c030242f05f5aed46ce03810d721a}{vel\_max}: 
+103             \textcolor{keywordflow}{return} vel / avel * self.\hyperlink{classadmittance__ctrl_1_1AdmittanceCtrl_a2d0c030242f05f5aed46ce03810d721a}{vel\_max}
+104         \textcolor{keywordflow}{else}:
+105             \textcolor{keywordflow}{return} vel
+106 
+\end{DoxyCode}
+\index{admittance\+\_\+ctrl\+::\+Admittance\+Ctrl@{admittance\+\_\+ctrl\+::\+Admittance\+Ctrl}!timer\+\_\+cb@{timer\+\_\+cb}}
+\index{timer\+\_\+cb@{timer\+\_\+cb}!admittance\+\_\+ctrl\+::\+Admittance\+Ctrl@{admittance\+\_\+ctrl\+::\+Admittance\+Ctrl}}
+\subsubsection[{\texorpdfstring{timer\+\_\+cb(self, event)}{timer_cb(self, event)}}]{\setlength{\rightskip}{0pt plus 5cm}def admittance\+\_\+ctrl.\+Admittance\+Ctrl.\+timer\+\_\+cb (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{event}
+\end{DoxyParamCaption}
+)}\hypertarget{classadmittance__ctrl_1_1AdmittanceCtrl_a38c53c8d924147104986363e8bd630f7}{}\label{classadmittance__ctrl_1_1AdmittanceCtrl_a38c53c8d924147104986363e8bd630f7}
+
+\begin{DoxyCode}
+62     \textcolor{keyword}{def }\hyperlink{classadmittance__ctrl_1_1AdmittanceCtrl_a38c53c8d924147104986363e8bd630f7}{timer\_cb}(self, event):
+63         enable = \textcolor{keyword}{False}
+64 
+65         twist = Twist()
+66 
+67         fx = self.cur\_wrench.force.x
+68         fy = self.cur\_wrench.force.y
+69         fz = self.cur\_wrench.force.z
+70 
+71         \textcolor{keywordflow}{if}   (fx > self.\hyperlink{classadmittance__ctrl_1_1AdmittanceCtrl_a5f68a4404ad164497f0a5e57adc06ae5}{dz\_x\_max}):
+72             twist.linear.x = self.\hyperlink{classadmittance__ctrl_1_1AdmittanceCtrl_a9a0d5d08a89a7cc49b27a9de9d44d8d6}{k\_f} * (fx - self.\hyperlink{classadmittance__ctrl_1_1AdmittanceCtrl_a5f68a4404ad164497f0a5e57adc06ae5}{dz\_x\_max})
+73             enable = \textcolor{keyword}{True}
+74         \textcolor{keywordflow}{elif} (fx < self.\hyperlink{classadmittance__ctrl_1_1AdmittanceCtrl_ae12abadbff515007a7857f4ad04a2068}{dz\_x\_min}):
+75             twist.linear.x = self.\hyperlink{classadmittance__ctrl_1_1AdmittanceCtrl_a9a0d5d08a89a7cc49b27a9de9d44d8d6}{k\_f} * (fx - self.\hyperlink{classadmittance__ctrl_1_1AdmittanceCtrl_ae12abadbff515007a7857f4ad04a2068}{dz\_x\_min})
+76             enable = \textcolor{keyword}{True}
+77         \textcolor{keywordflow}{if}   (fy > self.\hyperlink{classadmittance__ctrl_1_1AdmittanceCtrl_af0acd0a0262fbcc79e90b8035e3197d6}{dz\_y\_max}):
+78             twist.linear.y = self.\hyperlink{classadmittance__ctrl_1_1AdmittanceCtrl_a9a0d5d08a89a7cc49b27a9de9d44d8d6}{k\_f} * (fy - self.\hyperlink{classadmittance__ctrl_1_1AdmittanceCtrl_af0acd0a0262fbcc79e90b8035e3197d6}{dz\_y\_max})
+79             enable = \textcolor{keyword}{True}
+80         \textcolor{keywordflow}{elif} (fy < self.\hyperlink{classadmittance__ctrl_1_1AdmittanceCtrl_a35e4e59c55a85d6dbc1f5ccfc5b87f25}{dz\_y\_min}):
+81             twist.linear.y = self.\hyperlink{classadmittance__ctrl_1_1AdmittanceCtrl_a9a0d5d08a89a7cc49b27a9de9d44d8d6}{k\_f} * (fy - self.\hyperlink{classadmittance__ctrl_1_1AdmittanceCtrl_a35e4e59c55a85d6dbc1f5ccfc5b87f25}{dz\_y\_min})
+82             enable = \textcolor{keyword}{True}
+83         \textcolor{keywordflow}{if}   (fz > self.\hyperlink{classadmittance__ctrl_1_1AdmittanceCtrl_ab3d7954604431dd6244691fd54112420}{dz\_z\_max}):
+84             twist.linear.z = self.\hyperlink{classadmittance__ctrl_1_1AdmittanceCtrl_a9a0d5d08a89a7cc49b27a9de9d44d8d6}{k\_f} * (fz - self.\hyperlink{classadmittance__ctrl_1_1AdmittanceCtrl_ab3d7954604431dd6244691fd54112420}{dz\_z\_max})
+85             enable = \textcolor{keyword}{True}
+86         \textcolor{keywordflow}{elif} (fz < self.\hyperlink{classadmittance__ctrl_1_1AdmittanceCtrl_a6c0fe2e42dde125b1e6f81814ce57c02}{dz\_z\_min}):
+87             twist.linear.z = self.\hyperlink{classadmittance__ctrl_1_1AdmittanceCtrl_a9a0d5d08a89a7cc49b27a9de9d44d8d6}{k\_f} * (fz - self.\hyperlink{classadmittance__ctrl_1_1AdmittanceCtrl_a6c0fe2e42dde125b1e6f81814ce57c02}{dz\_z\_min})
+88             enable = \textcolor{keyword}{True}
+89 
+90         \textcolor{keywordflow}{if} enable:
+91             twist.linear.x = self.\hyperlink{classadmittance__ctrl_1_1AdmittanceCtrl_a7191d1d7f805fbeef6a0a0667bd0ac65}{saturate\_vel}(twist.linear.x)
+92             twist.linear.y = self.\hyperlink{classadmittance__ctrl_1_1AdmittanceCtrl_a7191d1d7f805fbeef6a0a0667bd0ac65}{saturate\_vel}(twist.linear.y)
+93             twist.linear.z = self.\hyperlink{classadmittance__ctrl_1_1AdmittanceCtrl_a7191d1d7f805fbeef6a0a0667bd0ac65}{saturate\_vel}(twist.linear.z)
+94 
+95             twist\_s = TwistStamped()
+96             twist\_s.header.stamp = rospy.get\_rostime()
+97             twist\_s.twist        = twist
+98             self.pub\_cmd\_vel.publish(twist\_s)
+99 
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dd/d36/classadmittance__ctrl_1_1AdmittanceCtrl_a38c53c8d924147104986363e8bd630f7_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{admittance\+\_\+ctrl\+::\+Admittance\+Ctrl@{admittance\+\_\+ctrl\+::\+Admittance\+Ctrl}!wrench\+\_\+cb@{wrench\+\_\+cb}}
+\index{wrench\+\_\+cb@{wrench\+\_\+cb}!admittance\+\_\+ctrl\+::\+Admittance\+Ctrl@{admittance\+\_\+ctrl\+::\+Admittance\+Ctrl}}
+\subsubsection[{\texorpdfstring{wrench\+\_\+cb(self, msg)}{wrench_cb(self, msg)}}]{\setlength{\rightskip}{0pt plus 5cm}def admittance\+\_\+ctrl.\+Admittance\+Ctrl.\+wrench\+\_\+cb (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{msg}
+\end{DoxyParamCaption}
+)}\hypertarget{classadmittance__ctrl_1_1AdmittanceCtrl_a26b129bab2045988a9de094fbc7b582d}{}\label{classadmittance__ctrl_1_1AdmittanceCtrl_a26b129bab2045988a9de094fbc7b582d}
+
+\begin{DoxyCode}
+57     \textcolor{keyword}{def }\hyperlink{classadmittance__ctrl_1_1AdmittanceCtrl_a26b129bab2045988a9de094fbc7b582d}{wrench\_cb}(self, msg):
+58         \textcolor{comment}{# NOTE: This assumes that the input wrench is in the base frame of the}
+59         \textcolor{comment}{# robot, or at least the same frame as the cartesian velocity input.}
+60         self.\hyperlink{classadmittance__ctrl_1_1AdmittanceCtrl_a3654d3f7f31c450d8cb010a4dadb3e18}{cur\_wrench} = msg.wrench
+61 
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\index{admittance\+\_\+ctrl\+::\+Admittance\+Ctrl@{admittance\+\_\+ctrl\+::\+Admittance\+Ctrl}!cur\+\_\+wrench@{cur\+\_\+wrench}}
+\index{cur\+\_\+wrench@{cur\+\_\+wrench}!admittance\+\_\+ctrl\+::\+Admittance\+Ctrl@{admittance\+\_\+ctrl\+::\+Admittance\+Ctrl}}
+\subsubsection[{\texorpdfstring{cur\+\_\+wrench}{cur_wrench}}]{\setlength{\rightskip}{0pt plus 5cm}admittance\+\_\+ctrl.\+Admittance\+Ctrl.\+cur\+\_\+wrench}\hypertarget{classadmittance__ctrl_1_1AdmittanceCtrl_a3654d3f7f31c450d8cb010a4dadb3e18}{}\label{classadmittance__ctrl_1_1AdmittanceCtrl_a3654d3f7f31c450d8cb010a4dadb3e18}
+
+
+Referenced by admittance\+\_\+ctrl.\+Admittance\+Ctrl.\+wrench\+\_\+cb().
+
+\index{admittance\+\_\+ctrl\+::\+Admittance\+Ctrl@{admittance\+\_\+ctrl\+::\+Admittance\+Ctrl}!dz\+\_\+x\+\_\+max@{dz\+\_\+x\+\_\+max}}
+\index{dz\+\_\+x\+\_\+max@{dz\+\_\+x\+\_\+max}!admittance\+\_\+ctrl\+::\+Admittance\+Ctrl@{admittance\+\_\+ctrl\+::\+Admittance\+Ctrl}}
+\subsubsection[{\texorpdfstring{dz\+\_\+x\+\_\+max}{dz_x_max}}]{\setlength{\rightskip}{0pt plus 5cm}admittance\+\_\+ctrl.\+Admittance\+Ctrl.\+dz\+\_\+x\+\_\+max}\hypertarget{classadmittance__ctrl_1_1AdmittanceCtrl_a5f68a4404ad164497f0a5e57adc06ae5}{}\label{classadmittance__ctrl_1_1AdmittanceCtrl_a5f68a4404ad164497f0a5e57adc06ae5}
+
+
+Referenced by admittance\+\_\+ctrl.\+Admittance\+Ctrl.\+timer\+\_\+cb().
+
+\index{admittance\+\_\+ctrl\+::\+Admittance\+Ctrl@{admittance\+\_\+ctrl\+::\+Admittance\+Ctrl}!dz\+\_\+x\+\_\+min@{dz\+\_\+x\+\_\+min}}
+\index{dz\+\_\+x\+\_\+min@{dz\+\_\+x\+\_\+min}!admittance\+\_\+ctrl\+::\+Admittance\+Ctrl@{admittance\+\_\+ctrl\+::\+Admittance\+Ctrl}}
+\subsubsection[{\texorpdfstring{dz\+\_\+x\+\_\+min}{dz_x_min}}]{\setlength{\rightskip}{0pt plus 5cm}admittance\+\_\+ctrl.\+Admittance\+Ctrl.\+dz\+\_\+x\+\_\+min}\hypertarget{classadmittance__ctrl_1_1AdmittanceCtrl_ae12abadbff515007a7857f4ad04a2068}{}\label{classadmittance__ctrl_1_1AdmittanceCtrl_ae12abadbff515007a7857f4ad04a2068}
+
+
+Referenced by admittance\+\_\+ctrl.\+Admittance\+Ctrl.\+timer\+\_\+cb().
+
+\index{admittance\+\_\+ctrl\+::\+Admittance\+Ctrl@{admittance\+\_\+ctrl\+::\+Admittance\+Ctrl}!dz\+\_\+y\+\_\+max@{dz\+\_\+y\+\_\+max}}
+\index{dz\+\_\+y\+\_\+max@{dz\+\_\+y\+\_\+max}!admittance\+\_\+ctrl\+::\+Admittance\+Ctrl@{admittance\+\_\+ctrl\+::\+Admittance\+Ctrl}}
+\subsubsection[{\texorpdfstring{dz\+\_\+y\+\_\+max}{dz_y_max}}]{\setlength{\rightskip}{0pt plus 5cm}admittance\+\_\+ctrl.\+Admittance\+Ctrl.\+dz\+\_\+y\+\_\+max}\hypertarget{classadmittance__ctrl_1_1AdmittanceCtrl_af0acd0a0262fbcc79e90b8035e3197d6}{}\label{classadmittance__ctrl_1_1AdmittanceCtrl_af0acd0a0262fbcc79e90b8035e3197d6}
+
+
+Referenced by admittance\+\_\+ctrl.\+Admittance\+Ctrl.\+timer\+\_\+cb().
+
+\index{admittance\+\_\+ctrl\+::\+Admittance\+Ctrl@{admittance\+\_\+ctrl\+::\+Admittance\+Ctrl}!dz\+\_\+y\+\_\+min@{dz\+\_\+y\+\_\+min}}
+\index{dz\+\_\+y\+\_\+min@{dz\+\_\+y\+\_\+min}!admittance\+\_\+ctrl\+::\+Admittance\+Ctrl@{admittance\+\_\+ctrl\+::\+Admittance\+Ctrl}}
+\subsubsection[{\texorpdfstring{dz\+\_\+y\+\_\+min}{dz_y_min}}]{\setlength{\rightskip}{0pt plus 5cm}admittance\+\_\+ctrl.\+Admittance\+Ctrl.\+dz\+\_\+y\+\_\+min}\hypertarget{classadmittance__ctrl_1_1AdmittanceCtrl_a35e4e59c55a85d6dbc1f5ccfc5b87f25}{}\label{classadmittance__ctrl_1_1AdmittanceCtrl_a35e4e59c55a85d6dbc1f5ccfc5b87f25}
+
+
+Referenced by admittance\+\_\+ctrl.\+Admittance\+Ctrl.\+timer\+\_\+cb().
+
+\index{admittance\+\_\+ctrl\+::\+Admittance\+Ctrl@{admittance\+\_\+ctrl\+::\+Admittance\+Ctrl}!dz\+\_\+z\+\_\+max@{dz\+\_\+z\+\_\+max}}
+\index{dz\+\_\+z\+\_\+max@{dz\+\_\+z\+\_\+max}!admittance\+\_\+ctrl\+::\+Admittance\+Ctrl@{admittance\+\_\+ctrl\+::\+Admittance\+Ctrl}}
+\subsubsection[{\texorpdfstring{dz\+\_\+z\+\_\+max}{dz_z_max}}]{\setlength{\rightskip}{0pt plus 5cm}admittance\+\_\+ctrl.\+Admittance\+Ctrl.\+dz\+\_\+z\+\_\+max}\hypertarget{classadmittance__ctrl_1_1AdmittanceCtrl_ab3d7954604431dd6244691fd54112420}{}\label{classadmittance__ctrl_1_1AdmittanceCtrl_ab3d7954604431dd6244691fd54112420}
+
+
+Referenced by admittance\+\_\+ctrl.\+Admittance\+Ctrl.\+timer\+\_\+cb().
+
+\index{admittance\+\_\+ctrl\+::\+Admittance\+Ctrl@{admittance\+\_\+ctrl\+::\+Admittance\+Ctrl}!dz\+\_\+z\+\_\+min@{dz\+\_\+z\+\_\+min}}
+\index{dz\+\_\+z\+\_\+min@{dz\+\_\+z\+\_\+min}!admittance\+\_\+ctrl\+::\+Admittance\+Ctrl@{admittance\+\_\+ctrl\+::\+Admittance\+Ctrl}}
+\subsubsection[{\texorpdfstring{dz\+\_\+z\+\_\+min}{dz_z_min}}]{\setlength{\rightskip}{0pt plus 5cm}admittance\+\_\+ctrl.\+Admittance\+Ctrl.\+dz\+\_\+z\+\_\+min}\hypertarget{classadmittance__ctrl_1_1AdmittanceCtrl_a6c0fe2e42dde125b1e6f81814ce57c02}{}\label{classadmittance__ctrl_1_1AdmittanceCtrl_a6c0fe2e42dde125b1e6f81814ce57c02}
+
+
+Referenced by admittance\+\_\+ctrl.\+Admittance\+Ctrl.\+timer\+\_\+cb().
+
+\index{admittance\+\_\+ctrl\+::\+Admittance\+Ctrl@{admittance\+\_\+ctrl\+::\+Admittance\+Ctrl}!k\+\_\+f@{k\+\_\+f}}
+\index{k\+\_\+f@{k\+\_\+f}!admittance\+\_\+ctrl\+::\+Admittance\+Ctrl@{admittance\+\_\+ctrl\+::\+Admittance\+Ctrl}}
+\subsubsection[{\texorpdfstring{k\+\_\+f}{k_f}}]{\setlength{\rightskip}{0pt plus 5cm}admittance\+\_\+ctrl.\+Admittance\+Ctrl.\+k\+\_\+f}\hypertarget{classadmittance__ctrl_1_1AdmittanceCtrl_a9a0d5d08a89a7cc49b27a9de9d44d8d6}{}\label{classadmittance__ctrl_1_1AdmittanceCtrl_a9a0d5d08a89a7cc49b27a9de9d44d8d6}
+
+
+Referenced by admittance\+\_\+ctrl.\+Admittance\+Ctrl.\+timer\+\_\+cb().
+
+\index{admittance\+\_\+ctrl\+::\+Admittance\+Ctrl@{admittance\+\_\+ctrl\+::\+Admittance\+Ctrl}!pub\+\_\+cmd\+\_\+vel@{pub\+\_\+cmd\+\_\+vel}}
+\index{pub\+\_\+cmd\+\_\+vel@{pub\+\_\+cmd\+\_\+vel}!admittance\+\_\+ctrl\+::\+Admittance\+Ctrl@{admittance\+\_\+ctrl\+::\+Admittance\+Ctrl}}
+\subsubsection[{\texorpdfstring{pub\+\_\+cmd\+\_\+vel}{pub_cmd_vel}}]{\setlength{\rightskip}{0pt plus 5cm}admittance\+\_\+ctrl.\+Admittance\+Ctrl.\+pub\+\_\+cmd\+\_\+vel}\hypertarget{classadmittance__ctrl_1_1AdmittanceCtrl_a9e2e5b35def00bad6fc3fec2d80c63c4}{}\label{classadmittance__ctrl_1_1AdmittanceCtrl_a9e2e5b35def00bad6fc3fec2d80c63c4}
+\index{admittance\+\_\+ctrl\+::\+Admittance\+Ctrl@{admittance\+\_\+ctrl\+::\+Admittance\+Ctrl}!sub\+\_\+wrench@{sub\+\_\+wrench}}
+\index{sub\+\_\+wrench@{sub\+\_\+wrench}!admittance\+\_\+ctrl\+::\+Admittance\+Ctrl@{admittance\+\_\+ctrl\+::\+Admittance\+Ctrl}}
+\subsubsection[{\texorpdfstring{sub\+\_\+wrench}{sub_wrench}}]{\setlength{\rightskip}{0pt plus 5cm}admittance\+\_\+ctrl.\+Admittance\+Ctrl.\+sub\+\_\+wrench}\hypertarget{classadmittance__ctrl_1_1AdmittanceCtrl_abcd3dae9bd287755d88fb6ab5621b66f}{}\label{classadmittance__ctrl_1_1AdmittanceCtrl_abcd3dae9bd287755d88fb6ab5621b66f}
+\index{admittance\+\_\+ctrl\+::\+Admittance\+Ctrl@{admittance\+\_\+ctrl\+::\+Admittance\+Ctrl}!timer@{timer}}
+\index{timer@{timer}!admittance\+\_\+ctrl\+::\+Admittance\+Ctrl@{admittance\+\_\+ctrl\+::\+Admittance\+Ctrl}}
+\subsubsection[{\texorpdfstring{timer}{timer}}]{\setlength{\rightskip}{0pt plus 5cm}admittance\+\_\+ctrl.\+Admittance\+Ctrl.\+timer}\hypertarget{classadmittance__ctrl_1_1AdmittanceCtrl_a83d7b0847cefa7749b3d4a9672c4d1c4}{}\label{classadmittance__ctrl_1_1AdmittanceCtrl_a83d7b0847cefa7749b3d4a9672c4d1c4}
+\index{admittance\+\_\+ctrl\+::\+Admittance\+Ctrl@{admittance\+\_\+ctrl\+::\+Admittance\+Ctrl}!vel\+\_\+max@{vel\+\_\+max}}
+\index{vel\+\_\+max@{vel\+\_\+max}!admittance\+\_\+ctrl\+::\+Admittance\+Ctrl@{admittance\+\_\+ctrl\+::\+Admittance\+Ctrl}}
+\subsubsection[{\texorpdfstring{vel\+\_\+max}{vel_max}}]{\setlength{\rightskip}{0pt plus 5cm}admittance\+\_\+ctrl.\+Admittance\+Ctrl.\+vel\+\_\+max}\hypertarget{classadmittance__ctrl_1_1AdmittanceCtrl_a2d0c030242f05f5aed46ce03810d721a}{}\label{classadmittance__ctrl_1_1AdmittanceCtrl_a2d0c030242f05f5aed46ce03810d721a}
+
+
+Referenced by admittance\+\_\+ctrl.\+Admittance\+Ctrl.\+saturate\+\_\+vel().
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Longfei/\+Desktop/catkin\+\_\+\+Kinova\+R\+O\+S/src/jaco-\/ros/jaco\+\_\+demo/nodes/jaco\+\_\+demo/\hyperlink{admittance__ctrl_8py}{admittance\+\_\+ctrl.\+py}\end{DoxyCompactItemize}

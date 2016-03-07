@@ -1,0 +1,166 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="df/d0f/structjaco__msgs_1_1ArmJointAnglesActionFeedback__">
+<title>jaco_msgs::ArmJointAnglesActionFeedback_ struct Reference</title>
+<para>
+    <programlisting>#include <link linkend="d9/d12/ArmJointAnglesActionFeedback_8h">&quot;ArmJointAnglesActionFeedback.h&quot;</link></programlisting>
+</para>
+<para>Inheritance diagram for jaco_msgs::ArmJointAnglesActionFeedback_</para>
+<para>
+    <figure>
+        <title>Inheritance graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../d3/de0/structjaco__msgs_1_1ArmJointAnglesActionFeedback____inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Collaboration diagram for jaco_msgs::ArmJointAnglesActionFeedback_</para>
+<para>
+    <figure>
+        <title>Collaboration graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../d7/df4/structjaco__msgs_1_1ArmJointAnglesActionFeedback____coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+    <templateparamlist>
+      <param>
+        <type>class</type>
+        <declname>ContainerAllocator</declname>
+        <defname>ContainerAllocator</defname>
+      </param>
+    </templateparamlist>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef ::<link linkend="d8/dcc/structjaco__msgs_1_1ArmJointAnglesFeedback__">jaco_msgs::ArmJointAnglesFeedback_</link>&lt; ContainerAllocator &gt;  <link linkend="df/d0f/structjaco__msgs_1_1ArmJointAnglesActionFeedback___1a7256b5b631f5765fd7a67cbd8dfe5b47">_feedback_type</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef ::std_msgs::Header_&lt; ContainerAllocator &gt;  <link linkend="df/d0f/structjaco__msgs_1_1ArmJointAnglesActionFeedback___1a6607c88f7d652054e5c5295d2b0f2c1d">_header_type</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef ::actionlib_msgs::GoalStatus_&lt; ContainerAllocator &gt;  <link linkend="df/d0f/structjaco__msgs_1_1ArmJointAnglesActionFeedback___1aab3ce75e46a0b19c8699b2d683d7bf1d">_status_type</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef boost::shared_ptr&lt; ::<link linkend="df/d0f/structjaco__msgs_1_1ArmJointAnglesActionFeedback__">jaco_msgs::ArmJointAnglesActionFeedback_</link>&lt; ContainerAllocator &gt; const  &gt;  <link linkend="df/d0f/structjaco__msgs_1_1ArmJointAnglesActionFeedback___1a695a4ffab62a086481b14d1f08475d06">ConstPtr</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef boost::shared_ptr&lt; ::<link linkend="df/d0f/structjaco__msgs_1_1ArmJointAnglesActionFeedback__">jaco_msgs::ArmJointAnglesActionFeedback_</link>&lt; ContainerAllocator &gt; &gt;  <link linkend="df/d0f/structjaco__msgs_1_1ArmJointAnglesActionFeedback___1aee3a600e716f11e9662b2ef982c271a6">Ptr</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef <link linkend="df/d0f/structjaco__msgs_1_1ArmJointAnglesActionFeedback__">ArmJointAnglesActionFeedback_</link>&lt; ContainerAllocator &gt;  <link linkend="df/d0f/structjaco__msgs_1_1ArmJointAnglesActionFeedback___1af4ed900d239fe058855459eb150e621f">Type</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Public Attributes</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>boost::shared_ptr&lt; std::map&lt; std::string, std::string &gt; &gt; __connection_header</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>_feedback_type feedback</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>_header_type header</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>_status_type status</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="df/d0f/structjaco__msgs_1_1ArmJointAnglesActionFeedback___1ac8dd781b03039cea3467ed197d7cb26b">ArmJointAnglesActionFeedback_</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="df/d0f/structjaco__msgs_1_1ArmJointAnglesActionFeedback___1a37206c7f17d4545c03855b4c8e15296e">ArmJointAnglesActionFeedback_</link> (
+const ContainerAllocator &amp; _alloc)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+            <section xml:id="df/d0f/structjaco__msgs_1_1ArmJointAnglesActionFeedback___1a7256b5b631f5765fd7a67cbd8dfe5b47">
+                <title>typedef ::jaco_msgs::ArmJointAnglesFeedback_&lt;ContainerAllocator&gt; jaco_msgs::ArmJointAnglesActionFeedback_&lt; ContainerAllocator &gt;::_feedback_type</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="df/d0f/structjaco__msgs_1_1ArmJointAnglesActionFeedback___1a6607c88f7d652054e5c5295d2b0f2c1d">
+                <title>typedef ::std_msgs::Header_&lt;ContainerAllocator&gt; jaco_msgs::ArmJointAnglesActionFeedback_&lt; ContainerAllocator &gt;::_header_type</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="df/d0f/structjaco__msgs_1_1ArmJointAnglesActionFeedback___1aab3ce75e46a0b19c8699b2d683d7bf1d">
+                <title>typedef ::actionlib_msgs::GoalStatus_&lt;ContainerAllocator&gt; jaco_msgs::ArmJointAnglesActionFeedback_&lt; ContainerAllocator &gt;::_status_type</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="df/d0f/structjaco__msgs_1_1ArmJointAnglesActionFeedback___1a695a4ffab62a086481b14d1f08475d06">
+                <title>typedef boost::shared_ptr&lt; ::jaco_msgs::ArmJointAnglesActionFeedback_&lt;ContainerAllocator&gt; const&gt; jaco_msgs::ArmJointAnglesActionFeedback_&lt; ContainerAllocator &gt;::ConstPtr</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="df/d0f/structjaco__msgs_1_1ArmJointAnglesActionFeedback___1aee3a600e716f11e9662b2ef982c271a6">
+                <title>typedef boost::shared_ptr&lt; ::jaco_msgs::ArmJointAnglesActionFeedback_&lt;ContainerAllocator&gt; &gt; jaco_msgs::ArmJointAnglesActionFeedback_&lt; ContainerAllocator &gt;::Ptr</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="df/d0f/structjaco__msgs_1_1ArmJointAnglesActionFeedback___1af4ed900d239fe058855459eb150e621f">
+                <title>typedef ArmJointAnglesActionFeedback_&lt;ContainerAllocator&gt; jaco_msgs::ArmJointAnglesActionFeedback_&lt; ContainerAllocator &gt;::Type</title> <emphasis></emphasis>
+                
+            </section>
+        <section>
+            <title>Member Data Documentation</title>
+        </section>
+            <section xml:id="df/d0f/structjaco__msgs_1_1ArmJointAnglesActionFeedback___1ac8dd781b03039cea3467ed197d7cb26b">
+                <title>jaco_msgs::ArmJointAnglesActionFeedback_&lt; ContainerAllocator &gt;::ArmJointAnglesActionFeedback_ ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="df/d0f/structjaco__msgs_1_1ArmJointAnglesActionFeedback___1a37206c7f17d4545c03855b4c8e15296e">
+                <title>jaco_msgs::ArmJointAnglesActionFeedback_&lt; ContainerAllocator &gt;::ArmJointAnglesActionFeedback_ (const ContainerAllocator &amp;_alloc)</title> <emphasis></emphasis>
+                
+            </section>
+</section>

@@ -1,0 +1,496 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="d5/d2b/classjaco_1_1JacoComm">
+<title>jaco::JacoComm class Reference</title>
+<para>
+    <programlisting>#include <link linkend="d8/de6/jaco__comm_8h">&quot;jaco_comm.h&quot;</link></programlisting>
+</para>
+<para>Inheritance diagram for jaco::JacoComm</para>
+<para>
+    <figure>
+        <title>Inheritance graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../d0/d2d/classjaco_1_1JacoComm__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Collaboration diagram for jaco::JacoComm</para>
+<para>
+    <figure>
+        <title>Collaboration graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../dc/dca/classjaco_1_1JacoComm__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+        <section>
+            <title>Private Attributes</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>boost::recursive_mutex &amp; api_mutex_</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>bool is_software_stop_</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>jaco::JacoAPI jaco_api_</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int num_fingers_</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int robot_type_</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="d5/d2b/classjaco_1_1JacoComm_1af181d7ddd7baeff6e46720648e7e1f31">getCartesianForce</link> (
+<link linkend="dd/da4/classjaco_1_1JacoPose">JacoPose</link> &amp; position)<para><emphasis>API call to obtain the current cartesian force of the arm.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="d5/d2b/classjaco_1_1JacoComm_1a855bbefed2093d0d0cc7763eb7306a0b">getCartesianPosition</link> (
+<link linkend="dd/da4/classjaco_1_1JacoPose">JacoPose</link> &amp; position)<para><emphasis>API call to obtain the current cartesian position of the arm.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="d5/d2b/classjaco_1_1JacoComm_1a47a3557e9b5576bc83df936caa043270">getConfig</link> (
+<link linkend="df/d36/KinovaTypes_8h_1d1/d2e/structClientConfigurations">ClientConfigurations</link> &amp; config)<para><emphasis>API call to obtain the current client configuration.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="d5/d2b/classjaco_1_1JacoComm_1a7644bf1154b59bf4d8b97c200284e3fb">getFingerPositions</link> (
+<link linkend="dd/d28/classjaco_1_1FingerAngles">FingerAngles</link> &amp; fingers)<para><emphasis>API call to obtain the current finger positions.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="d5/d2b/classjaco_1_1JacoComm_1a5fcb23bf6925a82f2ab5e42460ea3834">getJointAngles</link> (
+<link linkend="d4/de6/classjaco_1_1JacoAngles">JacoAngles</link> &amp; angles)<para><emphasis>API call to obtain the current angular position of all the joints.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="d5/d2b/classjaco_1_1JacoComm_1af2ba4b35149e292fa5279768d47216cb">getJointTorques</link> (
+<link linkend="d4/de6/classjaco_1_1JacoAngles">JacoAngles</link> &amp; tqs)<para><emphasis>API call to obtain the current torque of all the joints.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="d5/d2b/classjaco_1_1JacoComm_1aa81b5cdf89bd2c7259be3638fdb4f75a">getJointVelocities</link> (
+<link linkend="d4/de6/classjaco_1_1JacoAngles">JacoAngles</link> &amp; vels)<para><emphasis>API call to obtain the current angular velocities of all the joints.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="d5/d2b/classjaco_1_1JacoComm_1a29384597e710d4cbb4e1f2ae6b7d7e50">getQuickStatus</link> (
+<link linkend="df/d36/KinovaTypes_8h_1df/d9d/structQuickStatus">QuickStatus</link> &amp; quick_status)<para><emphasis>API call to obtain the current &quot;quick status&quot;.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="d5/d2b/classjaco_1_1JacoComm_1a38c69b22bc293afd3f27eff9179dec4c">homeArm</link> (
+void )<para><emphasis>Send the arm to the &quot;home&quot; position.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="d5/d2b/classjaco_1_1JacoComm_1a787f049f83d8f5fa5a7c86ee6a1d0a11">initFingers</link> (
+void )<para><emphasis>Initialize finger actuators.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>bool <link linkend="d5/d2b/classjaco_1_1JacoComm_1a0e7d5984a2c6ed956da7e07e6c97ba5f">isHomed</link> (
+void )<para><emphasis>Determines whether the arm has returned to its &quot;Home&quot; state.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>bool <link linkend="d5/d2b/classjaco_1_1JacoComm_1a872b8033cda5a9fe4ccdca2e89aa03d1">isStopped</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="d5/d2b/classjaco_1_1JacoComm_1acdf234ee7f30cf5ead4f41beb3481521">JacoComm</link> (
+const ros::NodeHandle &amp; node_handle, boost::recursive_mutex &amp; api_mutex, const bool is_movement_on_start)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="d5/d2b/classjaco_1_1JacoComm_1a42e11ee165ee8f2b1af7e7060f488ce1">numFingers</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="d5/d2b/classjaco_1_1JacoComm_1a0524faa99cdc1361d50c3c6a53d5cfe0">printAngles</link> (
+const <link linkend="d4/de6/classjaco_1_1JacoAngles">JacoAngles</link> &amp; angles)<para><emphasis>Dumps the current joint angles onto the screen.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="d5/d2b/classjaco_1_1JacoComm_1a54661eeda2fc5324843a230bdcfe8b67">printConfig</link> (
+const <link linkend="df/d36/KinovaTypes_8h_1d1/d2e/structClientConfigurations">ClientConfigurations</link> &amp; config)<para><emphasis>Dumps the client configuration onto the screen.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="d5/d2b/classjaco_1_1JacoComm_1ab34f7cbb2978e76644927b9031e06b4f">printFingers</link> (
+const <link linkend="df/d1b/structFingersPosition">FingersPosition</link> &amp; fingers)<para><emphasis>Dumps the current finger positions onto the screen.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="d5/d2b/classjaco_1_1JacoComm_1ac1abf65387fa9adba237802bc97f15b1">printPosition</link> (
+const <link linkend="dd/da4/classjaco_1_1JacoPose">JacoPose</link> &amp; position)<para><emphasis>Dumps the current cartesian positions onto the screen.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="d5/d2b/classjaco_1_1JacoComm_1af20323ed50f73b59bac3e18ebd8559fa">robotType</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="d5/d2b/classjaco_1_1JacoComm_1a39faaf774115561ea1857349db182145">setCartesianForceMinMax</link> (
+const <link linkend="dd/d00/structCartesianInfo">CartesianInfo</link> &amp; min, const <link linkend="dd/d00/structCartesianInfo">CartesianInfo</link> &amp; max)<para><emphasis>Set the cartesian min and max force parameters for force control.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="d5/d2b/classjaco_1_1JacoComm_1afbb443b8e3fe71ef58b0013fdb3d5674">setCartesianInertiaDamping</link> (
+const <link linkend="dd/d00/structCartesianInfo">CartesianInfo</link> &amp; inertia, const <link linkend="dd/d00/structCartesianInfo">CartesianInfo</link> &amp; damping)<para><emphasis>Set the cartesian inertia and damping parameters for force control.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="d5/d2b/classjaco_1_1JacoComm_1a7a7375d2609c81f0a03974b06ca07be0">setCartesianPosition</link> (
+const <link linkend="dd/da4/classjaco_1_1JacoPose">JacoPose</link> &amp; position, int timeout, bool push)<para><emphasis>Sends a cartesian coordinate trajectory to the Jaco arm.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="d5/d2b/classjaco_1_1JacoComm_1a468352480a437cc2144c8d4d289815a5">setCartesianVelocities</link> (
+const <link linkend="dd/d00/structCartesianInfo">CartesianInfo</link> &amp; velocities)<para><emphasis>Set the cartesian velocity of the tool tip.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="d5/d2b/classjaco_1_1JacoComm_1ae7901b1dff2e84eb89256f46a7c65b62">setConfig</link> (
+const <link linkend="df/d36/KinovaTypes_8h_1d1/d2e/structClientConfigurations">ClientConfigurations</link> &amp; config)<para><emphasis>Obtains the current arm configuration.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="d5/d2b/classjaco_1_1JacoComm_1a5cdc217373b923f7de2ed468150281fa">setFingerPositions</link> (
+const <link linkend="dd/d28/classjaco_1_1FingerAngles">FingerAngles</link> &amp; fingers, int timeout, bool push)<para><emphasis>Sets the finger positions.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="d5/d2b/classjaco_1_1JacoComm_1ad53fa0c190d41da8430de2e9bf997f05">setJointAngles</link> (
+const <link linkend="d4/de6/classjaco_1_1JacoAngles">JacoAngles</link> &amp; angles, int timeout, bool push)<para><emphasis>Sends a joint angle command to the Jaco arm.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="d5/d2b/classjaco_1_1JacoComm_1af269b1c8d8b1f32c1003ca2e464252f0">setJointVelocities</link> (
+const <link linkend="d0/df5/structAngularInfo">AngularInfo</link> &amp; joint_vel)<para><emphasis>Set the angular velocity of the joints.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="d5/d2b/classjaco_1_1JacoComm_1a6b2a1fabc4e6c30da42c9a5e26757398">startAPI</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="d5/d2b/classjaco_1_1JacoComm_1a00e5493dfbdcaab6c1a9bd388d3b839d">startForceControl</link> (
+)<para><emphasis>Start cartesian force control.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="d5/d2b/classjaco_1_1JacoComm_1a54862830cd6414ae3ae48e46e54bf798">stopAPI</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="d5/d2b/classjaco_1_1JacoComm_1a339cf31d88fdef6409340c82a35ecb53">stopForceControl</link> (
+)<para><emphasis>Stop cartesian force control.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="d5/d2b/classjaco_1_1JacoComm_1a94db89ce398a131d5dd6985a7725f495">~JacoComm</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Member Data Documentation</title>
+        </section>
+            <section xml:id="d5/d2b/classjaco_1_1JacoComm_1af181d7ddd7baeff6e46720648e7e1f31">
+                <title>void jaco::JacoComm::getCartesianForce (JacoPose &amp;position)</title> <emphasis>API call to obtain the current cartesian force of the arm.</emphasis>
+                
+            </section>
+            <section xml:id="d5/d2b/classjaco_1_1JacoComm_1a855bbefed2093d0d0cc7763eb7306a0b">
+                <title>void jaco::JacoComm::getCartesianPosition (JacoPose &amp;position)</title> <emphasis>API call to obtain the current cartesian position of the arm.</emphasis>
+                
+            </section>
+            <section xml:id="d5/d2b/classjaco_1_1JacoComm_1a47a3557e9b5576bc83df936caa043270">
+                <title>void jaco::JacoComm::getConfig (ClientConfigurations &amp;config)</title> <emphasis>API call to obtain the current client configuration.</emphasis>
+                
+            </section>
+            <section xml:id="d5/d2b/classjaco_1_1JacoComm_1a7644bf1154b59bf4d8b97c200284e3fb">
+                <title>void jaco::JacoComm::getFingerPositions (FingerAngles &amp;fingers)</title> <emphasis>API call to obtain the current finger positions.</emphasis>
+                
+            </section>
+            <section xml:id="d5/d2b/classjaco_1_1JacoComm_1a5fcb23bf6925a82f2ab5e42460ea3834">
+                <title>void jaco::JacoComm::getJointAngles (JacoAngles &amp;angles)</title> <emphasis>API call to obtain the current angular position of all the joints.</emphasis>
+                
+            </section>
+            <section xml:id="d5/d2b/classjaco_1_1JacoComm_1af2ba4b35149e292fa5279768d47216cb">
+                <title>void jaco::JacoComm::getJointTorques (JacoAngles &amp;tqs)</title> <emphasis>API call to obtain the current torque of all the joints.</emphasis>
+                
+            </section>
+            <section xml:id="d5/d2b/classjaco_1_1JacoComm_1aa81b5cdf89bd2c7259be3638fdb4f75a">
+                <title>void jaco::JacoComm::getJointVelocities (JacoAngles &amp;vels)</title> <emphasis>API call to obtain the current angular velocities of all the joints.</emphasis>
+                
+            </section>
+            <section xml:id="d5/d2b/classjaco_1_1JacoComm_1a29384597e710d4cbb4e1f2ae6b7d7e50">
+                <title>void jaco::JacoComm::getQuickStatus (QuickStatus &amp;quick_status)</title> <emphasis>API call to obtain the current &quot;quick status&quot;.</emphasis>
+                
+            </section>
+            <section xml:id="d5/d2b/classjaco_1_1JacoComm_1a38c69b22bc293afd3f27eff9179dec4c">
+                <title>void jaco::JacoComm::homeArm (void)</title> <emphasis>Send the arm to the &quot;home&quot; position.</emphasis>
+                
+<para>The code replicates the function of the &quot;home&quot; button on the user controller by &quot;pressing&quot; the home button long enough for the arm to return to the home position.</para>
+
+<para>Fingers are homed by manually opening them fully, then returning them to a half-open position. </para>
+
+            </section>
+            <section xml:id="d5/d2b/classjaco_1_1JacoComm_1a787f049f83d8f5fa5a7c86ee6a1d0a11">
+                <title>void jaco::JacoComm::initFingers (void)</title> <emphasis>Initialize finger actuators.</emphasis>
+                
+<para>Move fingers to the full-open position to initialize them for use. Note, The this routine requires firmware version 5.05.x (or higher?). </para>
+
+            </section>
+            <section xml:id="d5/d2b/classjaco_1_1JacoComm_1a0e7d5984a2c6ed956da7e07e6c97ba5f">
+                <title>bool jaco::JacoComm::isHomed (void)</title> <emphasis>Determines whether the arm has returned to its &quot;Home&quot; state.</emphasis>
+                
+<para>Checks the current joint angles, then compares them to the known &quot;Home&quot; joint angles. </para>
+
+            </section>
+            <section xml:id="d5/d2b/classjaco_1_1JacoComm_1a872b8033cda5a9fe4ccdca2e89aa03d1">
+                <title>bool jaco::JacoComm::isStopped ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="d5/d2b/classjaco_1_1JacoComm_1acdf234ee7f30cf5ead4f41beb3481521">
+                <title>jaco::JacoComm::JacoComm (const ros::NodeHandle &amp;node_handle, boost::recursive_mutex &amp;api_mutex, const bool is_movement_on_start)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="d5/d2b/classjaco_1_1JacoComm_1a42e11ee165ee8f2b1af7e7060f488ce1">
+                <title>int jaco::JacoComm::numFingers ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="d5/d2b/classjaco_1_1JacoComm_1a0524faa99cdc1361d50c3c6a53d5cfe0">
+                <title>void jaco::JacoComm::printAngles (const JacoAngles &amp;angles)</title> <emphasis>Dumps the current joint angles onto the screen.</emphasis>
+                
+            </section>
+            <section xml:id="d5/d2b/classjaco_1_1JacoComm_1a54661eeda2fc5324843a230bdcfe8b67">
+                <title>void jaco::JacoComm::printConfig (const ClientConfigurations &amp;config)</title> <emphasis>Dumps the client configuration onto the screen.</emphasis>
+                
+            </section>
+            <section xml:id="d5/d2b/classjaco_1_1JacoComm_1ab34f7cbb2978e76644927b9031e06b4f">
+                <title>void jaco::JacoComm::printFingers (const FingersPosition &amp;fingers)</title> <emphasis>Dumps the current finger positions onto the screen.</emphasis>
+                
+            </section>
+            <section xml:id="d5/d2b/classjaco_1_1JacoComm_1ac1abf65387fa9adba237802bc97f15b1">
+                <title>void jaco::JacoComm::printPosition (const JacoPose &amp;position)</title> <emphasis>Dumps the current cartesian positions onto the screen.</emphasis>
+                
+            </section>
+            <section xml:id="d5/d2b/classjaco_1_1JacoComm_1af20323ed50f73b59bac3e18ebd8559fa">
+                <title>int jaco::JacoComm::robotType ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="d5/d2b/classjaco_1_1JacoComm_1a39faaf774115561ea1857349db182145">
+                <title>void jaco::JacoComm::setCartesianForceMinMax (const CartesianInfo &amp;min, const CartesianInfo &amp;max)</title> <emphasis>Set the cartesian min and max force parameters for force control.</emphasis>
+                
+            </section>
+            <section xml:id="d5/d2b/classjaco_1_1JacoComm_1afbb443b8e3fe71ef58b0013fdb3d5674">
+                <title>void jaco::JacoComm::setCartesianInertiaDamping (const CartesianInfo &amp;inertia, const CartesianInfo &amp;damping)</title> <emphasis>Set the cartesian inertia and damping parameters for force control.</emphasis>
+                
+            </section>
+            <section xml:id="d5/d2b/classjaco_1_1JacoComm_1a7a7375d2609c81f0a03974b06ca07be0">
+                <title>void jaco::JacoComm::setCartesianPosition (const JacoPose &amp;position, int timeout=0, bool push=true)</title> <emphasis>Sends a cartesian coordinate trajectory to the Jaco arm.</emphasis>
+                
+<para>Waits until the arm has stopped moving before releasing control of the API. </para>
+
+            </section>
+            <section xml:id="d5/d2b/classjaco_1_1JacoComm_1a468352480a437cc2144c8d4d289815a5">
+                <title>void jaco::JacoComm::setCartesianVelocities (const CartesianInfo &amp;velocities)</title> <emphasis>Set the cartesian velocity of the tool tip.</emphasis>
+                
+            </section>
+            <section xml:id="d5/d2b/classjaco_1_1JacoComm_1ae7901b1dff2e84eb89256f46a7c65b62">
+                <title>void jaco::JacoComm::setConfig (const ClientConfigurations &amp;config)</title> <emphasis>Obtains the current arm configuration.</emphasis>
+                
+<para>This is the configuration which are stored on the arm itself. Many of these configurations may be set using the Windows interface. </para>
+
+            </section>
+            <section xml:id="d5/d2b/classjaco_1_1JacoComm_1a5cdc217373b923f7de2ed468150281fa">
+                <title>void jaco::JacoComm::setFingerPositions (const FingerAngles &amp;fingers, int timeout=0, bool push=true)</title> <emphasis>Sets the finger positions.</emphasis>
+                
+            </section>
+            <section xml:id="d5/d2b/classjaco_1_1JacoComm_1ad53fa0c190d41da8430de2e9bf997f05">
+                <title>void jaco::JacoComm::setJointAngles (const JacoAngles &amp;angles, int timeout=0, bool push=true)</title> <emphasis>Sends a joint angle command to the Jaco arm.</emphasis>
+                
+<para>Waits until the arm has stopped moving before releasing control of the API. </para>
+
+            </section>
+            <section xml:id="d5/d2b/classjaco_1_1JacoComm_1af269b1c8d8b1f32c1003ca2e464252f0">
+                <title>void jaco::JacoComm::setJointVelocities (const AngularInfo &amp;joint_vel)</title> <emphasis>Set the angular velocity of the joints.</emphasis>
+                
+            </section>
+            <section xml:id="d5/d2b/classjaco_1_1JacoComm_1a6b2a1fabc4e6c30da42c9a5e26757398">
+                <title>void jaco::JacoComm::startAPI ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="d5/d2b/classjaco_1_1JacoComm_1a00e5493dfbdcaab6c1a9bd388d3b839d">
+                <title>void jaco::JacoComm::startForceControl ()</title> <emphasis>Start cartesian force control.</emphasis>
+                
+            </section>
+            <section xml:id="d5/d2b/classjaco_1_1JacoComm_1a54862830cd6414ae3ae48e46e54bf798">
+                <title>void jaco::JacoComm::stopAPI ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="d5/d2b/classjaco_1_1JacoComm_1a339cf31d88fdef6409340c82a35ecb53">
+                <title>void jaco::JacoComm::stopForceControl ()</title> <emphasis>Stop cartesian force control.</emphasis>
+                
+            </section>
+            <section xml:id="d5/d2b/classjaco_1_1JacoComm_1a94db89ce398a131d5dd6985a7725f495">
+                <title>jaco::JacoComm::~JacoComm ()</title> <emphasis></emphasis>
+                
+            </section>
+</section>

@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="d6/d78/structros_1_1message__traits_1_1HasHeader_3_01_1_1jaco__msgs_1_1SetFingersPositionAction___3_01ContainerAllocator_01_4_01_4">
+<title>ros::message_traits::HasHeader&lt; ::jaco_msgs::SetFingersPositionAction_&lt; ContainerAllocator &gt; &gt; struct Reference</title>
+<para>
+    <programlisting>#include <link linkend="d2/d9d/SetFingersPositionAction_8h">&quot;SetFingersPositionAction.h&quot;</link></programlisting>
+</para>
+<para>Inheritance diagram for ros::message_traits::HasHeader&lt; ::jaco_msgs::SetFingersPositionAction_&lt; ContainerAllocator &gt; &gt;</para>
+<para>
+    <figure>
+        <title>Inheritance graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../dd/de8/structros_1_1message__traits_1_1HasHeader_3_01_1_1jaco__msgs_1_1SetFingersPositionAction___3_01C62c089965bea133b7c1af52bfbc3981d.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Collaboration diagram for ros::message_traits::HasHeader&lt; ::jaco_msgs::SetFingersPositionAction_&lt; ContainerAllocator &gt; &gt;</para>
+<para>
+    <figure>
+        <title>Collaboration graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../d0/dd8/structros_1_1message__traits_1_1HasHeader_3_01_1_1jaco__msgs_1_1SetFingersPositionAction___3_01Cd53432c7840b0e21a537ac5ed6466f98.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+    <templateparamlist>
+      <param>
+        <type>class ContainerAllocator</type>
+      </param>
+    </templateparamlist>
+</section>

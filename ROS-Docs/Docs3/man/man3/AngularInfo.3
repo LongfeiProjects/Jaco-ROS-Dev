@@ -1,0 +1,96 @@
+.TH "AngularInfo" 3 "Thu Mar 3 2016" "Version 1.0.1" "Kinova-ROS" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+AngularInfo \- This data structure holds values in an angular(joint by joint) control context\&. As an example struct could contains position, temperature, torque, \&.\&.\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include 'Definition'\fP
+.PP
+Inherited by \fBjaco::JacoAngles\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBInitStruct\fP ()"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "float \fBActuator1\fP"
+.br
+.RI "\fIThis is the value related to the first actuator\&. Unit depends on the context it's been used\&. \fP"
+.ti -1c
+.RI "float \fBActuator2\fP"
+.br
+.RI "\fIThis is the value related to the second actuator\&. Unit depends on the context it's been used\&. \fP"
+.ti -1c
+.RI "float \fBActuator3\fP"
+.br
+.RI "\fIThis is the value related to the third actuator\&. Unit depends on the context it's been used\&. \fP"
+.ti -1c
+.RI "float \fBActuator4\fP"
+.br
+.RI "\fIThis is the value related to the actuator #4\&. Unit depends on the context it's been used\&. \fP"
+.ti -1c
+.RI "float \fBActuator5\fP"
+.br
+.RI "\fIThis is the value related to the actuator #5\&. Unit depends on the context it's been used\&. \fP"
+.ti -1c
+.RI "float \fBActuator6\fP"
+.br
+.RI "\fIThis is the value related to the actuator #6\&. Unit depends on the context it's been used\&. \fP"
+.in -1c
+.SH "Detailed Description"
+.PP 
+This data structure holds values in an angular(joint by joint) control context\&. As an example struct could contains position, temperature, torque, \&.\&.\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "void AngularInfo::InitStruct ()\fC [inline]\fP"
+This method will initialises all the values to 0 
+.PP
+.nf
+336     {
+337         Actuator1 = 0\&.0f;
+338         Actuator2 = 0\&.0f;
+339         Actuator3 = 0\&.0f;
+340         Actuator4 = 0\&.0f;
+341         Actuator5 = 0\&.0f;
+342         Actuator6 = 0\&.0f;
+343     }
+.fi
+.SH "Member Data Documentation"
+.PP 
+.SS "float AngularInfo::Actuator1"
+
+.PP
+This is the value related to the first actuator\&. Unit depends on the context it's been used\&. As an example if the current control mode is angular position the unit will be degree but if the control mode is angular velocity then the unit will be degree per second\&. 
+.SS "float AngularInfo::Actuator2"
+
+.PP
+This is the value related to the second actuator\&. Unit depends on the context it's been used\&. As an example if the current control mode is angular position the unit will be degree but if the control mode is angular velocity then the unit will be degree per second\&. 
+.SS "float AngularInfo::Actuator3"
+
+.PP
+This is the value related to the third actuator\&. Unit depends on the context it's been used\&. As an example if the current control mode is angular position the unit will be degree but if the control mode is angular velocity then the unit will be degree per second\&. 
+.SS "float AngularInfo::Actuator4"
+
+.PP
+This is the value related to the actuator #4\&. Unit depends on the context it's been used\&. As an example if the current control mode is angular position the unit will be degree but if the control mode is angular velocity then the unit will be degree per second\&. 
+.SS "float AngularInfo::Actuator5"
+
+.PP
+This is the value related to the actuator #5\&. Unit depends on the context it's been used\&. As an example if the current control mode is angular position the unit will be degree but if the control mode is angular velocity then the unit will be degree per second\&. 
+.SS "float AngularInfo::Actuator6"
+
+.PP
+This is the value related to the actuator #6\&. Unit depends on the context it's been used\&. As an example if the current control mode is angular position the unit will be degree but if the control mode is angular velocity then the unit will be degree per second\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Kinova-ROS from the source code\&.

@@ -1,0 +1,484 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="dd/de1/ArmJointAnglesActionResult_8h">
+    <title>ArmJointAnglesActionResult.h File Reference</title>
+    <programlisting>#include &lt;string&gt;</programlisting>
+    <programlisting>#include &lt;vector&gt;</programlisting>
+    <programlisting>#include &lt;map&gt;</programlisting>
+    <programlisting>#include &lt;ros/types.h&gt;</programlisting>
+    <programlisting>#include &lt;ros/serialization.h&gt;</programlisting>
+    <programlisting>#include &lt;ros/builtin_message_traits.h&gt;</programlisting>
+    <programlisting>#include &lt;ros/message_operations.h&gt;</programlisting>
+    <programlisting>#include &lt;std_msgs/Header.h&gt;</programlisting>
+    <programlisting>#include &lt;actionlib_msgs/GoalStatus.h&gt;</programlisting>
+    <programlisting>#include &lt;jaco_msgs/ArmJointAnglesResult.h&gt;</programlisting>
+<para>Include dependency diagram for ArmJointAnglesActionResult.h</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../d3/d68/ArmJointAnglesActionResult_8h__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Included by dependency diagram for ArmJointAnglesActionResult.h</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../d4/d3b/ArmJointAnglesActionResult_8h__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+        <section>
+            <title> Classes </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d4/d5d/structjaco__msgs_1_1ArmJointAnglesActionResult__">jaco_msgs::ArmJointAnglesActionResult_</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d3/d60/structros_1_1message__operations_1_1Printer_3_01_1_1jaco__msgs_1_1ArmJointAnglesActionResult___3_01ContainerAllocator_01_4_01_4">ros::message_operations::Printer&lt; ::jaco_msgs::ArmJointAnglesActionResult_&lt; ContainerAllocator &gt; &gt;</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d2/dd5/structros_1_1message__traits_1_1DataType_3_01_1_1jaco__msgs_1_1ArmJointAnglesActionResult___3_01ContainerAllocator_01_4_01_4">ros::message_traits::DataType&lt; ::jaco_msgs::ArmJointAnglesActionResult_&lt; ContainerAllocator &gt; &gt;</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d1/d6f/structros_1_1message__traits_1_1Definition_3_01_1_1jaco__msgs_1_1ArmJointAnglesActionResult___3_01ContainerAllocator_01_4_01_4">ros::message_traits::Definition&lt; ::jaco_msgs::ArmJointAnglesActionResult_&lt; ContainerAllocator &gt; &gt;</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="de/d62/structros_1_1message__traits_1_1HasHeader_3_01_1_1jaco__msgs_1_1ArmJointAnglesActionResult___3_01ContainerAllocator_01_4_01_4">ros::message_traits::HasHeader&lt; ::jaco_msgs::ArmJointAnglesActionResult_&lt; ContainerAllocator &gt; &gt;</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d8/d19/structros_1_1message__traits_1_1HasHeader_3_01_1_1jaco__msgs_1_1ArmJointAnglesActionResult___3_07fa74239b737d4dd65345cc016c585a0">ros::message_traits::HasHeader&lt; ::jaco_msgs::ArmJointAnglesActionResult_&lt; ContainerAllocator &gt; const  &gt;</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="db/dd5/structros_1_1message__traits_1_1IsFixedSize_3_01_1_1jaco__msgs_1_1ArmJointAnglesActionResult___3_01ContainerAllocator_01_4_01_4">ros::message_traits::IsFixedSize&lt; ::jaco_msgs::ArmJointAnglesActionResult_&lt; ContainerAllocator &gt; &gt;</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="dc/d08/structros_1_1message__traits_1_1IsFixedSize_3_01_1_1jaco__msgs_1_1ArmJointAnglesActionResult___3bf1df1374d517dec039dc4942b1afdab">ros::message_traits::IsFixedSize&lt; ::jaco_msgs::ArmJointAnglesActionResult_&lt; ContainerAllocator &gt; const  &gt;</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="dd/de6/structros_1_1message__traits_1_1IsMessage_3_01_1_1jaco__msgs_1_1ArmJointAnglesActionResult___3_01ContainerAllocator_01_4_01_4">ros::message_traits::IsMessage&lt; ::jaco_msgs::ArmJointAnglesActionResult_&lt; ContainerAllocator &gt; &gt;</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="db/d31/structros_1_1message__traits_1_1IsMessage_3_01_1_1jaco__msgs_1_1ArmJointAnglesActionResult___3_0ecc0e89c5dbaf8a28c0c9b85a14163aa">ros::message_traits::IsMessage&lt; ::jaco_msgs::ArmJointAnglesActionResult_&lt; ContainerAllocator &gt; const  &gt;</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="de/dc9/structros_1_1message__traits_1_1MD5Sum_3_01_1_1jaco__msgs_1_1ArmJointAnglesActionResult___3_01ContainerAllocator_01_4_01_4">ros::message_traits::MD5Sum&lt; ::jaco_msgs::ArmJointAnglesActionResult_&lt; ContainerAllocator &gt; &gt;</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d8/d67/structros_1_1serialization_1_1Serializer_3_01_1_1jaco__msgs_1_1ArmJointAnglesActionResult___3_01ContainerAllocator_01_4_01_4">ros::serialization::Serializer&lt; ::jaco_msgs::ArmJointAnglesActionResult_&lt; ContainerAllocator &gt; &gt;</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <simplesect>
+            <title> Namespaces </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d7/dba/namespacejaco__msgs">jaco_msgs</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="db/d2f/namespaceros">ros</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d6/db4/namespaceros_1_1message__operations">ros::message_operations</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d0/db0/namespaceros_1_1message__traits">ros::message_traits</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="da/d37/namespaceros_1_1serialization">ros::serialization</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+    <simplesect>
+        <title>Detailed Description</title>
+    <para>Definition in file D:/Longfei/Desktop/catkin_KinovaROS/devel/include/jaco_msgs/ArmJointAnglesActionResult.h</para>
+    </simplesect>
+    <literallayout><computeroutput>
+1 <emphasis class="comment">/*&#32;Software&#32;License&#32;Agreement&#32;(BSD&#32;License)</emphasis>
+2 <emphasis class="comment">&#32;*</emphasis>
+3 <emphasis class="comment">&#32;*&#32;Copyright&#32;(c)&#32;2011,&#32;Willow&#32;Garage,&#32;Inc.</emphasis>
+4 <emphasis class="comment">&#32;*&#32;All&#32;rights&#32;reserved.</emphasis>
+5 <emphasis class="comment">&#32;*</emphasis>
+6 <emphasis class="comment">&#32;*&#32;Redistribution&#32;and&#32;use&#32;in&#32;source&#32;and&#32;binary&#32;forms,&#32;with&#32;or&#32;without</emphasis>
+7 <emphasis class="comment">&#32;*&#32;modification,&#32;are&#32;permitted&#32;provided&#32;that&#32;the&#32;following&#32;conditions</emphasis>
+8 <emphasis class="comment">&#32;*&#32;are&#32;met:</emphasis>
+9 <emphasis class="comment">&#32;*</emphasis>
+10 <emphasis class="comment">&#32;*&#32;&#32;*&#32;Redistributions&#32;of&#32;source&#32;code&#32;must&#32;retain&#32;the&#32;above&#32;copyright</emphasis>
+11 <emphasis class="comment">&#32;*&#32;&#32;&#32;&#32;notice,&#32;this&#32;list&#32;of&#32;conditions&#32;and&#32;the&#32;following&#32;disclaimer.</emphasis>
+12 <emphasis class="comment">&#32;*&#32;&#32;*&#32;Redistributions&#32;in&#32;binary&#32;form&#32;must&#32;reproduce&#32;the&#32;above</emphasis>
+13 <emphasis class="comment">&#32;*&#32;&#32;&#32;&#32;copyright&#32;notice,&#32;this&#32;list&#32;of&#32;conditions&#32;and&#32;the&#32;following</emphasis>
+14 <emphasis class="comment">&#32;*&#32;&#32;&#32;&#32;disclaimer&#32;in&#32;the&#32;documentation&#32;and/or&#32;other&#32;materials&#32;provided</emphasis>
+15 <emphasis class="comment">&#32;*&#32;&#32;&#32;&#32;with&#32;the&#32;distribution.</emphasis>
+16 <emphasis class="comment">&#32;*&#32;&#32;*&#32;Neither&#32;the&#32;name&#32;of&#32;Willow&#32;Garage,&#32;Inc.&#32;nor&#32;the&#32;names&#32;of&#32;its</emphasis>
+17 <emphasis class="comment">&#32;*&#32;&#32;&#32;&#32;contributors&#32;may&#32;be&#32;used&#32;to&#32;endorse&#32;or&#32;promote&#32;products&#32;derived</emphasis>
+18 <emphasis class="comment">&#32;*&#32;&#32;&#32;&#32;from&#32;this&#32;software&#32;without&#32;specific&#32;prior&#32;written&#32;permission.</emphasis>
+19 <emphasis class="comment">&#32;*</emphasis>
+20 <emphasis class="comment">&#32;*&#32;THIS&#32;SOFTWARE&#32;IS&#32;PROVIDED&#32;BY&#32;THE&#32;COPYRIGHT&#32;HOLDERS&#32;AND&#32;CONTRIBUTORS</emphasis>
+21 <emphasis class="comment">&#32;*&#32;&quot;AS&#32;IS&quot;&#32;AND&#32;ANY&#32;EXPRESS&#32;OR&#32;IMPLIED&#32;WARRANTIES,&#32;INCLUDING,&#32;BUT&#32;NOT</emphasis>
+22 <emphasis class="comment">&#32;*&#32;LIMITED&#32;TO,&#32;THE&#32;IMPLIED&#32;WARRANTIES&#32;OF&#32;MERCHANTABILITY&#32;AND&#32;FITNESS</emphasis>
+23 <emphasis class="comment">&#32;*&#32;FOR&#32;A&#32;PARTICULAR&#32;PURPOSE&#32;ARE&#32;DISCLAIMED.&#32;IN&#32;NO&#32;EVENT&#32;SHALL&#32;THE</emphasis>
+24 <emphasis class="comment">&#32;*&#32;COPYRIGHT&#32;OWNER&#32;OR&#32;CONTRIBUTORS&#32;BE&#32;LIABLE&#32;FOR&#32;ANY&#32;DIRECT,&#32;INDIRECT,</emphasis>
+25 <emphasis class="comment">&#32;*&#32;INCIDENTAL,&#32;SPECIAL,&#32;EXEMPLARY,&#32;OR&#32;CONSEQUENTIAL&#32;DAMAGES&#32;(INCLUDING,</emphasis>
+26 <emphasis class="comment">&#32;*&#32;BUT&#32;NOT&#32;LIMITED&#32;TO,&#32;PROCUREMENT&#32;OF&#32;SUBSTITUTE&#32;GOODS&#32;OR&#32;SERVICES;</emphasis>
+27 <emphasis class="comment">&#32;*&#32;LOSS&#32;OF&#32;USE,&#32;DATA,&#32;OR&#32;PROFITS;&#32;OR&#32;BUSINESS&#32;INTERRUPTION)&#32;HOWEVER</emphasis>
+28 <emphasis class="comment">&#32;*&#32;CAUSED&#32;AND&#32;ON&#32;ANY&#32;THEORY&#32;OF&#32;LIABILITY,&#32;WHETHER&#32;IN&#32;CONTRACT,&#32;STRICT</emphasis>
+29 <emphasis class="comment">&#32;*&#32;LIABILITY,&#32;OR&#32;TORT&#32;(INCLUDING&#32;NEGLIGENCE&#32;OR&#32;OTHERWISE)&#32;ARISING&#32;IN</emphasis>
+30 <emphasis class="comment">&#32;*&#32;ANY&#32;WAY&#32;OUT&#32;OF&#32;THE&#32;USE&#32;OF&#32;THIS&#32;SOFTWARE,&#32;EVEN&#32;IF&#32;ADVISED&#32;OF&#32;THE</emphasis>
+31 <emphasis class="comment">&#32;*&#32;POSSIBILITY&#32;OF&#32;SUCH&#32;DAMAGE.</emphasis>
+32 <emphasis class="comment">&#32;*</emphasis>
+33 <emphasis class="comment">&#32;*&#32;Auto-generated&#32;by&#32;genmsg_cpp&#32;from&#32;file&#32;/home/longfei/catkin_KinovaROS/devel/share/jaco_msgs/msg/ArmJointAnglesActionResult.msg</emphasis>
+34 <emphasis class="comment">&#32;*</emphasis>
+35 <emphasis class="comment">&#32;*/</emphasis>
+36 
+37 
+38 <emphasis class="preprocessor">#ifndef&#32;JACO_MSGS_MESSAGE_ARMJOINTANGLESACTIONRESULT_H</emphasis>
+39 <emphasis class="preprocessor">#define&#32;JACO_MSGS_MESSAGE_ARMJOINTANGLESACTIONRESULT_H</emphasis>
+40 
+41 
+42 <emphasis class="preprocessor">#include&#32;&lt;string&gt;</emphasis>
+43 <emphasis class="preprocessor">#include&#32;&lt;vector&gt;</emphasis>
+44 <emphasis class="preprocessor">#include&#32;&lt;map&gt;</emphasis>
+45 
+46 <emphasis class="preprocessor">#include&#32;&lt;ros/types.h&gt;</emphasis>
+47 <emphasis class="preprocessor">#include&#32;&lt;ros/serialization.h&gt;</emphasis>
+48 <emphasis class="preprocessor">#include&#32;&lt;ros/builtin_message_traits.h&gt;</emphasis>
+49 <emphasis class="preprocessor">#include&#32;&lt;ros/message_operations.h&gt;</emphasis>
+50 
+51 <emphasis class="preprocessor">#include&#32;&lt;std_msgs/Header.h&gt;</emphasis>
+52 <emphasis class="preprocessor">#include&#32;&lt;actionlib_msgs/GoalStatus.h&gt;</emphasis>
+53 <emphasis class="preprocessor">#include&#32;&lt;<link linkend="db/d55/ArmJointAnglesResult_8h">jaco_msgs/ArmJointAnglesResult.h</link>&gt;</emphasis>
+54 
+55 <emphasis class="keyword">namespace&#32;</emphasis><link linkend="d7/dba/namespacejaco__msgs">jaco_msgs</link>
+56 {
+57 <emphasis class="keyword">template</emphasis>&#32;&lt;<emphasis class="keyword">class</emphasis>&#32;ContainerAllocator&gt;
+<link linkend="d4/d5d/structjaco__msgs_1_1ArmJointAnglesActionResult__">58 </link><emphasis class="keyword">struct&#32;</emphasis><link linkend="d4/d5d/structjaco__msgs_1_1ArmJointAnglesActionResult__">ArmJointAnglesActionResult_</link>
+59 {
+<link linkend="d4/d5d/structjaco__msgs_1_1ArmJointAnglesActionResult___1afe31dc82574f7e5e57a0de66b2f68750">60 </link>&#32;&#32;<emphasis class="keyword">typedef</emphasis>&#32;<link linkend="d4/d5d/structjaco__msgs_1_1ArmJointAnglesActionResult__">ArmJointAnglesActionResult_&lt;ContainerAllocator&gt;</link>&#32;<link linkend="d4/d5d/structjaco__msgs_1_1ArmJointAnglesActionResult___1afe31dc82574f7e5e57a0de66b2f68750">Type</link>;
+61 
+<link linkend="d4/d5d/structjaco__msgs_1_1ArmJointAnglesActionResult___1af9c3aa2fd22187c85149a9495205981a">62 </link>&#32;&#32;<link linkend="d4/d5d/structjaco__msgs_1_1ArmJointAnglesActionResult___1af9c3aa2fd22187c85149a9495205981a">ArmJointAnglesActionResult_</link>()
+63 &#32;&#32;&#32;&#32;:&#32;<link linkend="d4/d5d/structjaco__msgs_1_1ArmJointAnglesActionResult___1a079944c74fedafa50405d3b8c9631a84">header</link>()
+64 &#32;&#32;&#32;&#32;,&#32;<link linkend="d4/d5d/structjaco__msgs_1_1ArmJointAnglesActionResult___1abcee28ae9e735f3212832991bce38b20">status</link>()
+65 &#32;&#32;&#32;&#32;,&#32;<link linkend="d4/d5d/structjaco__msgs_1_1ArmJointAnglesActionResult___1a7d2ea6532c4fe6e71f98b67a55df9d86">result</link>()&#32;&#32;{
+66 &#32;&#32;&#32;&#32;}
+<link linkend="d4/d5d/structjaco__msgs_1_1ArmJointAnglesActionResult___1a7d94260d27f47218564d43837a310779">67 </link>&#32;&#32;<link linkend="d4/d5d/structjaco__msgs_1_1ArmJointAnglesActionResult___1a7d94260d27f47218564d43837a310779">ArmJointAnglesActionResult_</link>(<emphasis class="keyword">const</emphasis>&#32;ContainerAllocator&amp;&#32;_alloc)
+68 &#32;&#32;&#32;&#32;:&#32;<link linkend="d4/d5d/structjaco__msgs_1_1ArmJointAnglesActionResult___1a079944c74fedafa50405d3b8c9631a84">header</link>(_alloc)
+69 &#32;&#32;&#32;&#32;,&#32;<link linkend="d4/d5d/structjaco__msgs_1_1ArmJointAnglesActionResult___1abcee28ae9e735f3212832991bce38b20">status</link>(_alloc)
+70 &#32;&#32;&#32;&#32;,&#32;<link linkend="d4/d5d/structjaco__msgs_1_1ArmJointAnglesActionResult___1a7d2ea6532c4fe6e71f98b67a55df9d86">result</link>(_alloc)&#32;&#32;{
+71 &#32;&#32;&#32;&#32;}
+72 
+73 
+74 
+<link linkend="d4/d5d/structjaco__msgs_1_1ArmJointAnglesActionResult___1a142970b220d568f61b0c132b07053d54">75 </link>&#32;&#32;&#32;typedef&#32;&#32;::std_msgs::Header_&lt;ContainerAllocator&gt;&#32;&#32;<link linkend="d4/d5d/structjaco__msgs_1_1ArmJointAnglesActionResult___1a142970b220d568f61b0c132b07053d54">_header_type</link>;
+<link linkend="d4/d5d/structjaco__msgs_1_1ArmJointAnglesActionResult___1a079944c74fedafa50405d3b8c9631a84">76 </link>&#32;&#32;_header_type&#32;<link linkend="d4/d5d/structjaco__msgs_1_1ArmJointAnglesActionResult___1a079944c74fedafa50405d3b8c9631a84">header</link>;
+77 
+<link linkend="d4/d5d/structjaco__msgs_1_1ArmJointAnglesActionResult___1a55b4d92b3d825dc61be7afb680264c3d">78 </link>&#32;&#32;&#32;typedef&#32;&#32;::actionlib_msgs::GoalStatus_&lt;ContainerAllocator&gt;&#32;&#32;<link linkend="d4/d5d/structjaco__msgs_1_1ArmJointAnglesActionResult___1a55b4d92b3d825dc61be7afb680264c3d">_status_type</link>;
+<link linkend="d4/d5d/structjaco__msgs_1_1ArmJointAnglesActionResult___1abcee28ae9e735f3212832991bce38b20">79 </link>&#32;&#32;_status_type&#32;<link linkend="d4/d5d/structjaco__msgs_1_1ArmJointAnglesActionResult___1abcee28ae9e735f3212832991bce38b20">status</link>;
+80 
+<link linkend="d4/d5d/structjaco__msgs_1_1ArmJointAnglesActionResult___1a50db46393a0ea3c38ea8de5debd933c7">81 </link>&#32;&#32;&#32;typedef&#32;&#32;::jaco_msgs::ArmJointAnglesResult_&lt;ContainerAllocator&gt;&#32;&#32;<link linkend="d4/d5d/structjaco__msgs_1_1ArmJointAnglesActionResult___1a50db46393a0ea3c38ea8de5debd933c7">_result_type</link>;
+<link linkend="d4/d5d/structjaco__msgs_1_1ArmJointAnglesActionResult___1a7d2ea6532c4fe6e71f98b67a55df9d86">82 </link>&#32;&#32;_result_type&#32;<link linkend="d4/d5d/structjaco__msgs_1_1ArmJointAnglesActionResult___1a7d2ea6532c4fe6e71f98b67a55df9d86">result</link>;
+83 
+84 
+85 
+86 
+<link linkend="d4/d5d/structjaco__msgs_1_1ArmJointAnglesActionResult___1ad7fc9c910324c1e966afa2f7962d1d25">87 </link>&#32;&#32;<emphasis class="keyword">typedef</emphasis>&#32;boost::shared_ptr&lt;&#32;::jaco_msgs::ArmJointAnglesActionResult_&lt;ContainerAllocator&gt;&#32;&gt;&#32;<link linkend="d4/d5d/structjaco__msgs_1_1ArmJointAnglesActionResult___1ad7fc9c910324c1e966afa2f7962d1d25">Ptr</link>;
+<link linkend="d4/d5d/structjaco__msgs_1_1ArmJointAnglesActionResult___1ab3afdaea077adcf14e033cacd0cfedf8">88 </link>&#32;&#32;<emphasis class="keyword">typedef</emphasis>&#32;boost::shared_ptr&lt;&#32;::jaco_msgs::ArmJointAnglesActionResult_&lt;ContainerAllocator&gt;&#32;<emphasis class="keyword">const</emphasis>&gt;&#32;<link linkend="d4/d5d/structjaco__msgs_1_1ArmJointAnglesActionResult___1ab3afdaea077adcf14e033cacd0cfedf8">ConstPtr</link>;
+<link linkend="d4/d5d/structjaco__msgs_1_1ArmJointAnglesActionResult___1a119722093e137ecf8e7c6793917312f5">89 </link>&#32;&#32;boost::shared_ptr&lt;std::map&lt;std::string,&#32;std::string&gt;&#32;&gt;&#32;<link linkend="d4/d5d/structjaco__msgs_1_1ArmJointAnglesActionResult___1a119722093e137ecf8e7c6793917312f5">__connection_header</link>;
+90 
+91 };&#32;<emphasis class="comment">//&#32;struct&#32;ArmJointAnglesActionResult_</emphasis>
+92 
+<link linkend="d7/dba/namespacejaco__msgs_1a575d1947e16ac78511c74fc00dc8006a">93 </link>typedef&#32;::jaco_msgs::ArmJointAnglesActionResult_&lt;std::allocator&lt;void&gt;&#32;&gt;&#32;<link linkend="d7/dba/namespacejaco__msgs_1a575d1947e16ac78511c74fc00dc8006a">ArmJointAnglesActionResult</link>;
+94 
+<link linkend="d7/dba/namespacejaco__msgs_1aa05f56804913edb95541044daf226bd2">95 </link><emphasis class="keyword">typedef</emphasis>&#32;boost::shared_ptr&lt;&#32;::jaco_msgs::ArmJointAnglesActionResult&#32;&gt;&#32;<link linkend="d7/dba/namespacejaco__msgs_1aa05f56804913edb95541044daf226bd2">ArmJointAnglesActionResultPtr</link>;
+<link linkend="d7/dba/namespacejaco__msgs_1a9fed6803f229ee175ae5078fdc8327fe">96 </link><emphasis class="keyword">typedef</emphasis>&#32;boost::shared_ptr&lt;&#32;::jaco_msgs::ArmJointAnglesActionResult&#32;const&gt;&#32;<link linkend="d7/dba/namespacejaco__msgs_1a9fed6803f229ee175ae5078fdc8327fe">ArmJointAnglesActionResultConstPtr</link>;
+97 
+98 <emphasis class="comment">//&#32;constants&#32;requiring&#32;out&#32;of&#32;line&#32;definition</emphasis>
+99 
+100 
+101 
+102 <emphasis class="keyword">template</emphasis>&lt;<emphasis class="keyword">typename</emphasis>&#32;ContainerAllocator&gt;
+<link linkend="d7/dba/namespacejaco__msgs_1afd55ffc64a85c12d494fe8e51a5d2188">103 </link>std::ostream&amp;&#32;operator&lt;&lt;(std::ostream&amp;&#32;s,&#32;const&#32;::jaco_msgs::ArmJointAnglesActionResult_&lt;ContainerAllocator&gt;&#32;&amp;&#32;v)
+104 {
+105 ros::message_operations::Printer&lt;&#32;::jaco_msgs::ArmJointAnglesActionResult_&lt;ContainerAllocator&gt;&#32;&gt;::stream(s,&#32;<emphasis class="stringliteral">&quot;&quot;</emphasis>,&#32;v);
+106 <emphasis class="keywordflow">return</emphasis>&#32;s;
+107 }
+108 
+109 }&#32;<emphasis class="comment">//&#32;namespace&#32;jaco_msgs</emphasis>
+110 
+111 <emphasis class="keyword">namespace&#32;</emphasis><link linkend="db/d2f/namespaceros">ros</link>
+112 {
+113 <emphasis class="keyword">namespace&#32;</emphasis>message_traits
+114 {
+115 
+116 
+117 
+118 <emphasis class="comment">//&#32;BOOLTRAITS&#32;{&apos;IsFixedSize&apos;:&#32;False,&#32;&apos;IsMessage&apos;:&#32;True,&#32;&apos;HasHeader&apos;:&#32;True}</emphasis>
+119 <emphasis class="comment">//&#32;{&apos;std_msgs&apos;:&#32;[&apos;/opt/ros/hydro/share/std_msgs/cmake/../msg&apos;],&#32;&apos;actionlib_msgs&apos;:&#32;[&apos;/opt/ros/hydro/share/actionlib_msgs/cmake/../msg&apos;],&#32;&apos;jaco_msgs&apos;:&#32;[&apos;/home/longfei/catkin_KinovaROS/src/jaco-ros/jaco_msgs/msg&apos;,&#32;&apos;/home/longfei/catkin_KinovaROS/devel/share/jaco_msgs/msg&apos;],&#32;&apos;geometry_msgs&apos;:&#32;[&apos;/opt/ros/hydro/share/geometry_msgs/cmake/../msg&apos;]}</emphasis>
+120 
+121 <emphasis class="comment">//&#32;!!!!!!!!!!!&#32;[&apos;__class__&apos;,&#32;&apos;__delattr__&apos;,&#32;&apos;__dict__&apos;,&#32;&apos;__doc__&apos;,&#32;&apos;__eq__&apos;,&#32;&apos;__format__&apos;,&#32;&apos;__getattribute__&apos;,&#32;&apos;__hash__&apos;,&#32;&apos;__init__&apos;,&#32;&apos;__module__&apos;,&#32;&apos;__ne__&apos;,&#32;&apos;__new__&apos;,&#32;&apos;__reduce__&apos;,&#32;&apos;__reduce_ex__&apos;,&#32;&apos;__repr__&apos;,&#32;&apos;__setattr__&apos;,&#32;&apos;__sizeof__&apos;,&#32;&apos;__str__&apos;,&#32;&apos;__subclasshook__&apos;,&#32;&apos;__weakref__&apos;,&#32;&apos;_parsed_fields&apos;,&#32;&apos;constants&apos;,&#32;&apos;fields&apos;,&#32;&apos;full_name&apos;,&#32;&apos;has_header&apos;,&#32;&apos;header_present&apos;,&#32;&apos;names&apos;,&#32;&apos;package&apos;,&#32;&apos;parsed_fields&apos;,&#32;&apos;short_name&apos;,&#32;&apos;text&apos;,&#32;&apos;types&apos;]</emphasis>
+122 
+123 
+124 
+125 
+126 <emphasis class="keyword">template</emphasis>&#32;&lt;<emphasis class="keyword">class</emphasis>&#32;ContainerAllocator&gt;
+<link linkend="db/dd5/structros_1_1message__traits_1_1IsFixedSize_3_01_1_1jaco__msgs_1_1ArmJointAnglesActionResult___3_01ContainerAllocator_01_4_01_4">127 </link><emphasis class="keyword">struct&#32;</emphasis>IsFixedSize&lt;&#32;::<link linkend="d4/d5d/structjaco__msgs_1_1ArmJointAnglesActionResult__">jaco_msgs::ArmJointAnglesActionResult_</link>&lt;ContainerAllocator&gt;&#32;&gt;
+128 &#32;&#32;:&#32;FalseType
+129 &#32;&#32;{&#32;};
+130 
+131 <emphasis class="keyword">template</emphasis>&#32;&lt;<emphasis class="keyword">class</emphasis>&#32;ContainerAllocator&gt;
+<link linkend="dc/d08/structros_1_1message__traits_1_1IsFixedSize_3_01_1_1jaco__msgs_1_1ArmJointAnglesActionResult___3bf1df1374d517dec039dc4942b1afdab">132 </link><emphasis class="keyword">struct&#32;</emphasis>IsFixedSize&lt;&#32;::<link linkend="d4/d5d/structjaco__msgs_1_1ArmJointAnglesActionResult__">jaco_msgs::ArmJointAnglesActionResult_</link>&lt;ContainerAllocator&gt;&#32;const&gt;
+133 &#32;&#32;:&#32;FalseType
+134 &#32;&#32;{&#32;};
+135 
+136 <emphasis class="keyword">template</emphasis>&#32;&lt;<emphasis class="keyword">class</emphasis>&#32;ContainerAllocator&gt;
+<link linkend="dd/de6/structros_1_1message__traits_1_1IsMessage_3_01_1_1jaco__msgs_1_1ArmJointAnglesActionResult___3_01ContainerAllocator_01_4_01_4">137 </link><emphasis class="keyword">struct&#32;</emphasis>IsMessage&lt;&#32;::<link linkend="d4/d5d/structjaco__msgs_1_1ArmJointAnglesActionResult__">jaco_msgs::ArmJointAnglesActionResult_</link>&lt;ContainerAllocator&gt;&#32;&gt;
+138 &#32;&#32;:&#32;TrueType
+139 &#32;&#32;{&#32;};
+140 
+141 <emphasis class="keyword">template</emphasis>&#32;&lt;<emphasis class="keyword">class</emphasis>&#32;ContainerAllocator&gt;
+<link linkend="db/d31/structros_1_1message__traits_1_1IsMessage_3_01_1_1jaco__msgs_1_1ArmJointAnglesActionResult___3_0ecc0e89c5dbaf8a28c0c9b85a14163aa">142 </link><emphasis class="keyword">struct&#32;</emphasis>IsMessage&lt;&#32;::<link linkend="d4/d5d/structjaco__msgs_1_1ArmJointAnglesActionResult__">jaco_msgs::ArmJointAnglesActionResult_</link>&lt;ContainerAllocator&gt;&#32;const&gt;
+143 &#32;&#32;:&#32;TrueType
+144 &#32;&#32;{&#32;};
+145 
+146 <emphasis class="keyword">template</emphasis>&#32;&lt;<emphasis class="keyword">class</emphasis>&#32;ContainerAllocator&gt;
+<link linkend="de/d62/structros_1_1message__traits_1_1HasHeader_3_01_1_1jaco__msgs_1_1ArmJointAnglesActionResult___3_01ContainerAllocator_01_4_01_4">147 </link><emphasis class="keyword">struct&#32;</emphasis>HasHeader&lt;&#32;::<link linkend="d4/d5d/structjaco__msgs_1_1ArmJointAnglesActionResult__">jaco_msgs::ArmJointAnglesActionResult_</link>&lt;ContainerAllocator&gt;&#32;&gt;
+148 &#32;&#32;:&#32;TrueType
+149 &#32;&#32;{&#32;};
+150 
+151 <emphasis class="keyword">template</emphasis>&#32;&lt;<emphasis class="keyword">class</emphasis>&#32;ContainerAllocator&gt;
+<link linkend="d8/d19/structros_1_1message__traits_1_1HasHeader_3_01_1_1jaco__msgs_1_1ArmJointAnglesActionResult___3_07fa74239b737d4dd65345cc016c585a0">152 </link><emphasis class="keyword">struct&#32;</emphasis>HasHeader&lt;&#32;::<link linkend="d4/d5d/structjaco__msgs_1_1ArmJointAnglesActionResult__">jaco_msgs::ArmJointAnglesActionResult_</link>&lt;ContainerAllocator&gt;&#32;const&gt;
+153 &#32;&#32;:&#32;TrueType
+154 &#32;&#32;{&#32;};
+155 
+156 
+157 <emphasis class="keyword">template</emphasis>&lt;<emphasis class="keyword">class</emphasis>&#32;ContainerAllocator&gt;
+<link linkend="de/dc9/structros_1_1message__traits_1_1MD5Sum_3_01_1_1jaco__msgs_1_1ArmJointAnglesActionResult___3_01ContainerAllocator_01_4_01_4">158 </link><emphasis class="keyword">struct&#32;</emphasis>MD5Sum&lt;&#32;::<link linkend="d4/d5d/structjaco__msgs_1_1ArmJointAnglesActionResult__">jaco_msgs::ArmJointAnglesActionResult_</link>&lt;ContainerAllocator&gt;&#32;&gt;
+159 {
+<link linkend="de/dc9/structros_1_1message__traits_1_1MD5Sum_3_01_1_1jaco__msgs_1_1ArmJointAnglesActionResult___3_01ContainerAllocator_01_4_01_4_1a6ecb7a948673bb1539e99924596dcd22">160 </link>&#32;&#32;<emphasis class="keyword">static</emphasis>&#32;<emphasis class="keyword">const</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>*&#32;<link linkend="de/dc9/structros_1_1message__traits_1_1MD5Sum_3_01_1_1jaco__msgs_1_1ArmJointAnglesActionResult___3_01ContainerAllocator_01_4_01_4_1a6ecb7a948673bb1539e99924596dcd22">value</link>()
+161 &#32;&#32;{
+162 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;<emphasis class="stringliteral">&quot;1419c77c622a1f52ee6fc0926c8ae186&quot;</emphasis>;
+163 &#32;&#32;}
+164 
+<link linkend="de/dc9/structros_1_1message__traits_1_1MD5Sum_3_01_1_1jaco__msgs_1_1ArmJointAnglesActionResult___3_01ContainerAllocator_01_4_01_4_1a07364aa37bcd1aa571cec8b0e7b77582">165 </link>&#32;&#32;<emphasis class="keyword">static</emphasis>&#32;<emphasis class="keyword">const</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>*&#32;<link linkend="de/dc9/structros_1_1message__traits_1_1MD5Sum_3_01_1_1jaco__msgs_1_1ArmJointAnglesActionResult___3_01ContainerAllocator_01_4_01_4_1a07364aa37bcd1aa571cec8b0e7b77582">value</link>(const&#32;::jaco_msgs::ArmJointAnglesActionResult_&lt;ContainerAllocator&gt;&amp;)&#32;{&#32;<emphasis class="keywordflow">return</emphasis>&#32;<link linkend="de/dc9/structros_1_1message__traits_1_1MD5Sum_3_01_1_1jaco__msgs_1_1ArmJointAnglesActionResult___3_01ContainerAllocator_01_4_01_4_1a07364aa37bcd1aa571cec8b0e7b77582">value</link>();&#32;}
+<link linkend="de/dc9/structros_1_1message__traits_1_1MD5Sum_3_01_1_1jaco__msgs_1_1ArmJointAnglesActionResult___3_01ContainerAllocator_01_4_01_4_1ab9a0fc623c75ead8b5acc716265d3406">166 </link>&#32;&#32;<emphasis class="keyword">static</emphasis>&#32;<emphasis class="keyword">const</emphasis>&#32;uint64_t&#32;static_value1&#32;=&#32;0x1419c77c622a1f52ULL;
+<link linkend="de/dc9/structros_1_1message__traits_1_1MD5Sum_3_01_1_1jaco__msgs_1_1ArmJointAnglesActionResult___3_01ContainerAllocator_01_4_01_4_1a4480cb1a1fe6fc8f22e2767758f18278">167 </link>&#32;&#32;<emphasis class="keyword">static</emphasis>&#32;<emphasis class="keyword">const</emphasis>&#32;uint64_t&#32;static_value2&#32;=&#32;0xee6fc0926c8ae186ULL;
+168 };
+169 
+170 <emphasis class="keyword">template</emphasis>&lt;<emphasis class="keyword">class</emphasis>&#32;ContainerAllocator&gt;
+<link linkend="d2/dd5/structros_1_1message__traits_1_1DataType_3_01_1_1jaco__msgs_1_1ArmJointAnglesActionResult___3_01ContainerAllocator_01_4_01_4">171 </link><emphasis class="keyword">struct&#32;</emphasis>DataType&lt;&#32;::<link linkend="d4/d5d/structjaco__msgs_1_1ArmJointAnglesActionResult__">jaco_msgs::ArmJointAnglesActionResult_</link>&lt;ContainerAllocator&gt;&#32;&gt;
+172 {
+<link linkend="d2/dd5/structros_1_1message__traits_1_1DataType_3_01_1_1jaco__msgs_1_1ArmJointAnglesActionResult___3_01ContainerAllocator_01_4_01_4_1abacc45528444e7fcadfd79aa513e6d78">173 </link>&#32;&#32;<emphasis class="keyword">static</emphasis>&#32;<emphasis class="keyword">const</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>*&#32;<link linkend="d2/dd5/structros_1_1message__traits_1_1DataType_3_01_1_1jaco__msgs_1_1ArmJointAnglesActionResult___3_01ContainerAllocator_01_4_01_4_1abacc45528444e7fcadfd79aa513e6d78">value</link>()
+174 &#32;&#32;{
+175 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;<emphasis class="stringliteral">&quot;jaco_msgs/ArmJointAnglesActionResult&quot;</emphasis>;
+176 &#32;&#32;}
+177 
+<link linkend="d2/dd5/structros_1_1message__traits_1_1DataType_3_01_1_1jaco__msgs_1_1ArmJointAnglesActionResult___3_01ContainerAllocator_01_4_01_4_1a08b3766adb5cb3c59992df572dbbeb07">178 </link>&#32;&#32;<emphasis class="keyword">static</emphasis>&#32;<emphasis class="keyword">const</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>*&#32;<link linkend="d2/dd5/structros_1_1message__traits_1_1DataType_3_01_1_1jaco__msgs_1_1ArmJointAnglesActionResult___3_01ContainerAllocator_01_4_01_4_1a08b3766adb5cb3c59992df572dbbeb07">value</link>(const&#32;::jaco_msgs::ArmJointAnglesActionResult_&lt;ContainerAllocator&gt;&amp;)&#32;{&#32;<emphasis class="keywordflow">return</emphasis>&#32;<link linkend="d2/dd5/structros_1_1message__traits_1_1DataType_3_01_1_1jaco__msgs_1_1ArmJointAnglesActionResult___3_01ContainerAllocator_01_4_01_4_1a08b3766adb5cb3c59992df572dbbeb07">value</link>();&#32;}
+179 };
+180 
+181 <emphasis class="keyword">template</emphasis>&lt;<emphasis class="keyword">class</emphasis>&#32;ContainerAllocator&gt;
+<link linkend="d1/d6f/structros_1_1message__traits_1_1Definition_3_01_1_1jaco__msgs_1_1ArmJointAnglesActionResult___3_01ContainerAllocator_01_4_01_4">182 </link><emphasis class="keyword">struct&#32;</emphasis>Definition&lt;&#32;::<link linkend="d4/d5d/structjaco__msgs_1_1ArmJointAnglesActionResult__">jaco_msgs::ArmJointAnglesActionResult_</link>&lt;ContainerAllocator&gt;&#32;&gt;
+183 {
+<link linkend="d1/d6f/structros_1_1message__traits_1_1Definition_3_01_1_1jaco__msgs_1_1ArmJointAnglesActionResult___3_01ContainerAllocator_01_4_01_4_1ad14ba6c49584f615bca38e6428704c09">184 </link>&#32;&#32;<emphasis class="keyword">static</emphasis>&#32;<emphasis class="keyword">const</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>*&#32;<link linkend="d1/d6f/structros_1_1message__traits_1_1Definition_3_01_1_1jaco__msgs_1_1ArmJointAnglesActionResult___3_01ContainerAllocator_01_4_01_4_1ad14ba6c49584f615bca38e6428704c09">value</link>()
+185 &#32;&#32;{
+186 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;<emphasis class="stringliteral">&quot;#&#32;======&#32;DO&#32;NOT&#32;MODIFY!&#32;AUTOGENERATED&#32;FROM&#32;AN&#32;ACTION&#32;DEFINITION&#32;======\n\</emphasis>
+187 <emphasis class="stringliteral">\n\</emphasis>
+188 <emphasis class="stringliteral">Header&#32;header\n\</emphasis>
+189 <emphasis class="stringliteral">actionlib_msgs/GoalStatus&#32;status\n\</emphasis>
+190 <emphasis class="stringliteral">ArmJointAnglesResult&#32;result\n\</emphasis>
+191 <emphasis class="stringliteral">\n\</emphasis>
+192 <emphasis class="stringliteral">================================================================================\n\</emphasis>
+193 <emphasis class="stringliteral">MSG:&#32;std_msgs/Header\n\</emphasis>
+194 <emphasis class="stringliteral">#&#32;Standard&#32;metadata&#32;for&#32;higher-level&#32;stamped&#32;data&#32;types.\n\</emphasis>
+195 <emphasis class="stringliteral">#&#32;This&#32;is&#32;generally&#32;used&#32;to&#32;communicate&#32;timestamped&#32;data&#32;\n\</emphasis>
+196 <emphasis class="stringliteral">#&#32;in&#32;a&#32;particular&#32;coordinate&#32;frame.\n\</emphasis>
+197 <emphasis class="stringliteral">#&#32;\n\</emphasis>
+198 <emphasis class="stringliteral">#&#32;sequence&#32;ID:&#32;consecutively&#32;increasing&#32;ID&#32;\n\</emphasis>
+199 <emphasis class="stringliteral">uint32&#32;seq\n\</emphasis>
+200 <emphasis class="stringliteral">#Two-integer&#32;timestamp&#32;that&#32;is&#32;expressed&#32;as:\n\</emphasis>
+201 <emphasis class="stringliteral">#&#32;*&#32;stamp.secs:&#32;seconds&#32;(stamp_secs)&#32;since&#32;epoch\n\</emphasis>
+202 <emphasis class="stringliteral">#&#32;*&#32;stamp.nsecs:&#32;nanoseconds&#32;since&#32;stamp_secs\n\</emphasis>
+203 <emphasis class="stringliteral">#&#32;time-handling&#32;sugar&#32;is&#32;provided&#32;by&#32;the&#32;client&#32;library\n\</emphasis>
+204 <emphasis class="stringliteral">time&#32;stamp\n\</emphasis>
+205 <emphasis class="stringliteral">#Frame&#32;this&#32;data&#32;is&#32;associated&#32;with\n\</emphasis>
+206 <emphasis class="stringliteral">#&#32;0:&#32;no&#32;frame\n\</emphasis>
+207 <emphasis class="stringliteral">#&#32;1:&#32;global&#32;frame\n\</emphasis>
+208 <emphasis class="stringliteral">string&#32;frame_id\n\</emphasis>
+209 <emphasis class="stringliteral">\n\</emphasis>
+210 <emphasis class="stringliteral">================================================================================\n\</emphasis>
+211 <emphasis class="stringliteral">MSG:&#32;actionlib_msgs/GoalStatus\n\</emphasis>
+212 <emphasis class="stringliteral">GoalID&#32;goal_id\n\</emphasis>
+213 <emphasis class="stringliteral">uint8&#32;status\n\</emphasis>
+214 <emphasis class="stringliteral">uint8&#32;PENDING&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;=&#32;0&#32;&#32;&#32;#&#32;The&#32;goal&#32;has&#32;yet&#32;to&#32;be&#32;processed&#32;by&#32;the&#32;action&#32;server\n\</emphasis>
+215 <emphasis class="stringliteral">uint8&#32;ACTIVE&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;=&#32;1&#32;&#32;&#32;#&#32;The&#32;goal&#32;is&#32;currently&#32;being&#32;processed&#32;by&#32;the&#32;action&#32;server\n\</emphasis>
+216 <emphasis class="stringliteral">uint8&#32;PREEMPTED&#32;&#32;&#32;&#32;&#32;&#32;&#32;=&#32;2&#32;&#32;&#32;#&#32;The&#32;goal&#32;received&#32;a&#32;cancel&#32;request&#32;after&#32;it&#32;started&#32;executing\n\</emphasis>
+217 <emphasis class="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;#&#32;&#32;&#32;and&#32;has&#32;since&#32;completed&#32;its&#32;execution&#32;(Terminal&#32;State)\n\</emphasis>
+218 <emphasis class="stringliteral">uint8&#32;SUCCEEDED&#32;&#32;&#32;&#32;&#32;&#32;&#32;=&#32;3&#32;&#32;&#32;#&#32;The&#32;goal&#32;was&#32;achieved&#32;successfully&#32;by&#32;the&#32;action&#32;server&#32;(Terminal&#32;State)\n\</emphasis>
+219 <emphasis class="stringliteral">uint8&#32;ABORTED&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;=&#32;4&#32;&#32;&#32;#&#32;The&#32;goal&#32;was&#32;aborted&#32;during&#32;execution&#32;by&#32;the&#32;action&#32;server&#32;due\n\</emphasis>
+220 <emphasis class="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;#&#32;&#32;&#32;&#32;to&#32;some&#32;failure&#32;(Terminal&#32;State)\n\</emphasis>
+221 <emphasis class="stringliteral">uint8&#32;REJECTED&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;=&#32;5&#32;&#32;&#32;#&#32;The&#32;goal&#32;was&#32;rejected&#32;by&#32;the&#32;action&#32;server&#32;without&#32;being&#32;processed,\n\</emphasis>
+222 <emphasis class="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;#&#32;&#32;&#32;&#32;because&#32;the&#32;goal&#32;was&#32;unattainable&#32;or&#32;invalid&#32;(Terminal&#32;State)\n\</emphasis>
+223 <emphasis class="stringliteral">uint8&#32;PREEMPTING&#32;&#32;&#32;&#32;&#32;&#32;=&#32;6&#32;&#32;&#32;#&#32;The&#32;goal&#32;received&#32;a&#32;cancel&#32;request&#32;after&#32;it&#32;started&#32;executing\n\</emphasis>
+224 <emphasis class="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;#&#32;&#32;&#32;&#32;and&#32;has&#32;not&#32;yet&#32;completed&#32;execution\n\</emphasis>
+225 <emphasis class="stringliteral">uint8&#32;RECALLING&#32;&#32;&#32;&#32;&#32;&#32;&#32;=&#32;7&#32;&#32;&#32;#&#32;The&#32;goal&#32;received&#32;a&#32;cancel&#32;request&#32;before&#32;it&#32;started&#32;executing,\n\</emphasis>
+226 <emphasis class="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;#&#32;&#32;&#32;&#32;but&#32;the&#32;action&#32;server&#32;has&#32;not&#32;yet&#32;confirmed&#32;that&#32;the&#32;goal&#32;is&#32;canceled\n\</emphasis>
+227 <emphasis class="stringliteral">uint8&#32;RECALLED&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;=&#32;8&#32;&#32;&#32;#&#32;The&#32;goal&#32;received&#32;a&#32;cancel&#32;request&#32;before&#32;it&#32;started&#32;executing\n\</emphasis>
+228 <emphasis class="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;#&#32;&#32;&#32;&#32;and&#32;was&#32;successfully&#32;cancelled&#32;(Terminal&#32;State)\n\</emphasis>
+229 <emphasis class="stringliteral">uint8&#32;LOST&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;=&#32;9&#32;&#32;&#32;#&#32;An&#32;action&#32;client&#32;can&#32;determine&#32;that&#32;a&#32;goal&#32;is&#32;LOST.&#32;This&#32;should&#32;not&#32;be\n\</emphasis>
+230 <emphasis class="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;#&#32;&#32;&#32;&#32;sent&#32;over&#32;the&#32;wire&#32;by&#32;an&#32;action&#32;server\n\</emphasis>
+231 <emphasis class="stringliteral">\n\</emphasis>
+232 <emphasis class="stringliteral">#Allow&#32;for&#32;the&#32;user&#32;to&#32;associate&#32;a&#32;string&#32;with&#32;GoalStatus&#32;for&#32;debugging\n\</emphasis>
+233 <emphasis class="stringliteral">string&#32;text\n\</emphasis>
+234 <emphasis class="stringliteral">\n\</emphasis>
+235 <emphasis class="stringliteral">\n\</emphasis>
+236 <emphasis class="stringliteral">================================================================================\n\</emphasis>
+237 <emphasis class="stringliteral">MSG:&#32;actionlib_msgs/GoalID\n\</emphasis>
+238 <emphasis class="stringliteral">#&#32;The&#32;stamp&#32;should&#32;store&#32;the&#32;time&#32;at&#32;which&#32;this&#32;goal&#32;was&#32;requested.\n\</emphasis>
+239 <emphasis class="stringliteral">#&#32;It&#32;is&#32;used&#32;by&#32;an&#32;action&#32;server&#32;when&#32;it&#32;tries&#32;to&#32;preempt&#32;all\n\</emphasis>
+240 <emphasis class="stringliteral">#&#32;goals&#32;that&#32;were&#32;requested&#32;before&#32;a&#32;certain&#32;time\n\</emphasis>
+241 <emphasis class="stringliteral">time&#32;stamp\n\</emphasis>
+242 <emphasis class="stringliteral">\n\</emphasis>
+243 <emphasis class="stringliteral">#&#32;The&#32;id&#32;provides&#32;a&#32;way&#32;to&#32;associate&#32;feedback&#32;and\n\</emphasis>
+244 <emphasis class="stringliteral">#&#32;result&#32;message&#32;with&#32;specific&#32;goal&#32;requests.&#32;The&#32;id\n\</emphasis>
+245 <emphasis class="stringliteral">#&#32;specified&#32;must&#32;be&#32;unique.\n\</emphasis>
+246 <emphasis class="stringliteral">string&#32;id\n\</emphasis>
+247 <emphasis class="stringliteral">\n\</emphasis>
+248 <emphasis class="stringliteral">\n\</emphasis>
+249 <emphasis class="stringliteral">================================================================================\n\</emphasis>
+250 <emphasis class="stringliteral">MSG:&#32;jaco_msgs/ArmJointAnglesResult\n\</emphasis>
+251 <emphasis class="stringliteral">#&#32;======&#32;DO&#32;NOT&#32;MODIFY!&#32;AUTOGENERATED&#32;FROM&#32;AN&#32;ACTION&#32;DEFINITION&#32;======\n\</emphasis>
+252 <emphasis class="stringliteral">#&#32;Result\n\</emphasis>
+253 <emphasis class="stringliteral">JointAngles&#32;angles\n\</emphasis>
+254 <emphasis class="stringliteral">\n\</emphasis>
+255 <emphasis class="stringliteral">================================================================================\n\</emphasis>
+256 <emphasis class="stringliteral">MSG:&#32;jaco_msgs/JointAngles\n\</emphasis>
+257 <emphasis class="stringliteral">float32&#32;joint1\n\</emphasis>
+258 <emphasis class="stringliteral">float32&#32;joint2\n\</emphasis>
+259 <emphasis class="stringliteral">float32&#32;joint3\n\</emphasis>
+260 <emphasis class="stringliteral">float32&#32;joint4\n\</emphasis>
+261 <emphasis class="stringliteral">float32&#32;joint5\n\</emphasis>
+262 <emphasis class="stringliteral">float32&#32;joint6\n\</emphasis>
+263 <emphasis class="stringliteral">&quot;</emphasis>;
+264 &#32;&#32;}
+265 
+<link linkend="d1/d6f/structros_1_1message__traits_1_1Definition_3_01_1_1jaco__msgs_1_1ArmJointAnglesActionResult___3_01ContainerAllocator_01_4_01_4_1af2afa0383f3d1b1fc62f941d1c630b23">266 </link>&#32;&#32;<emphasis class="keyword">static</emphasis>&#32;<emphasis class="keyword">const</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>*&#32;<link linkend="d1/d6f/structros_1_1message__traits_1_1Definition_3_01_1_1jaco__msgs_1_1ArmJointAnglesActionResult___3_01ContainerAllocator_01_4_01_4_1af2afa0383f3d1b1fc62f941d1c630b23">value</link>(const&#32;::jaco_msgs::ArmJointAnglesActionResult_&lt;ContainerAllocator&gt;&amp;)&#32;{&#32;<emphasis class="keywordflow">return</emphasis>&#32;<link linkend="d1/d6f/structros_1_1message__traits_1_1Definition_3_01_1_1jaco__msgs_1_1ArmJointAnglesActionResult___3_01ContainerAllocator_01_4_01_4_1af2afa0383f3d1b1fc62f941d1c630b23">value</link>();&#32;}
+267 };
+268 
+269 }&#32;<emphasis class="comment">//&#32;namespace&#32;message_traits</emphasis>
+270 }&#32;<emphasis class="comment">//&#32;namespace&#32;ros</emphasis>
+271 
+272 <emphasis class="keyword">namespace&#32;</emphasis><link linkend="db/d2f/namespaceros">ros</link>
+273 {
+274 <emphasis class="keyword">namespace&#32;</emphasis>serialization
+275 {
+276 
+<link linkend="d8/d67/structros_1_1serialization_1_1Serializer_3_01_1_1jaco__msgs_1_1ArmJointAnglesActionResult___3_01ContainerAllocator_01_4_01_4">277 </link>&#32;&#32;<emphasis class="keyword">template</emphasis>&lt;<emphasis class="keyword">class</emphasis>&#32;ContainerAllocator&gt;&#32;<emphasis class="keyword">struct&#32;</emphasis>Serializer&lt;&#32;::<link linkend="d4/d5d/structjaco__msgs_1_1ArmJointAnglesActionResult__">jaco_msgs::ArmJointAnglesActionResult_</link>&lt;ContainerAllocator&gt;&#32;&gt;
+278 &#32;&#32;{
+<link linkend="d8/d67/structros_1_1serialization_1_1Serializer_3_01_1_1jaco__msgs_1_1ArmJointAnglesActionResult___3_01ContainerAllocator_01_4_01_4_1a959d0c45b195a739031e326fed2e6ca0">279 </link>&#32;&#32;&#32;&#32;<emphasis class="keyword">template</emphasis>&lt;<emphasis class="keyword">typename</emphasis>&#32;Stream,&#32;<emphasis class="keyword">typename</emphasis>&#32;T&gt;&#32;<emphasis class="keyword">inline</emphasis>&#32;<emphasis class="keyword">static</emphasis>&#32;<emphasis class="keywordtype">void</emphasis>&#32;<link linkend="d8/d67/structros_1_1serialization_1_1Serializer_3_01_1_1jaco__msgs_1_1ArmJointAnglesActionResult___3_01ContainerAllocator_01_4_01_4_1a959d0c45b195a739031e326fed2e6ca0">allInOne</link>(Stream&amp;&#32;stream,&#32;T&#32;m)
+280 &#32;&#32;&#32;&#32;{
+281 &#32;&#32;&#32;&#32;&#32;&#32;stream.next(m.header);
+282 &#32;&#32;&#32;&#32;&#32;&#32;stream.next(m.status);
+283 &#32;&#32;&#32;&#32;&#32;&#32;stream.next(m.result);
+284 &#32;&#32;&#32;&#32;}
+285 
+<link linkend="d8/d67/structros_1_1serialization_1_1Serializer_3_01_1_1jaco__msgs_1_1ArmJointAnglesActionResult___3_01ContainerAllocator_01_4_01_4_1a2700ffa10263a0a771677169dac5d09a">286 </link>&#32;&#32;&#32;&#32;<link linkend="d8/d67/structros_1_1serialization_1_1Serializer_3_01_1_1jaco__msgs_1_1ArmJointAnglesActionResult___3_01ContainerAllocator_01_4_01_4_1a2700ffa10263a0a771677169dac5d09a">ROS_DECLARE_ALLINONE_SERIALIZER</link>;
+287 &#32;&#32;};&#32;<emphasis class="comment">//&#32;struct&#32;ArmJointAnglesActionResult_</emphasis>
+288 
+289 }&#32;<emphasis class="comment">//&#32;namespace&#32;serialization</emphasis>
+290 }&#32;<emphasis class="comment">//&#32;namespace&#32;ros</emphasis>
+291 
+292 <emphasis class="keyword">namespace&#32;</emphasis><link linkend="db/d2f/namespaceros">ros</link>
+293 {
+294 <emphasis class="keyword">namespace&#32;</emphasis>message_operations
+295 {
+296 
+297 <emphasis class="keyword">template</emphasis>&lt;<emphasis class="keyword">class</emphasis>&#32;ContainerAllocator&gt;
+<link linkend="d3/d60/structros_1_1message__operations_1_1Printer_3_01_1_1jaco__msgs_1_1ArmJointAnglesActionResult___3_01ContainerAllocator_01_4_01_4">298 </link><emphasis class="keyword">struct&#32;</emphasis>Printer&lt;&#32;::<link linkend="d4/d5d/structjaco__msgs_1_1ArmJointAnglesActionResult__">jaco_msgs::ArmJointAnglesActionResult_</link>&lt;ContainerAllocator&gt;&#32;&gt;
+299 {
+<link linkend="d3/d60/structros_1_1message__operations_1_1Printer_3_01_1_1jaco__msgs_1_1ArmJointAnglesActionResult___3_01ContainerAllocator_01_4_01_4_1a84ef1e26ad4c49c3b45441133f02b86a">300 </link>&#32;&#32;<emphasis class="keyword">template</emphasis>&lt;<emphasis class="keyword">typename</emphasis>&#32;Stream&gt;&#32;<emphasis class="keyword">static</emphasis>&#32;<emphasis class="keywordtype">void</emphasis>&#32;<link linkend="d3/d60/structros_1_1message__operations_1_1Printer_3_01_1_1jaco__msgs_1_1ArmJointAnglesActionResult___3_01ContainerAllocator_01_4_01_4_1a84ef1e26ad4c49c3b45441133f02b86a">stream</link>(Stream&amp;&#32;s,&#32;<emphasis class="keyword">const</emphasis>&#32;std::string&amp;&#32;indent,&#32;const&#32;::jaco_msgs::ArmJointAnglesActionResult_&lt;ContainerAllocator&gt;&amp;&#32;v)
+301 &#32;&#32;{
+302 &#32;&#32;&#32;&#32;s&#32;&lt;&lt;&#32;indent&#32;&lt;&lt;&#32;<emphasis class="stringliteral">&quot;header:&#32;&quot;</emphasis>;
+303 &#32;&#32;&#32;&#32;s&#32;&lt;&lt;&#32;std::endl;
+304 &#32;&#32;&#32;&#32;Printer&lt;&#32;::std_msgs::Header_&lt;ContainerAllocator&gt;&#32;&gt;::stream(s,&#32;indent&#32;+&#32;<emphasis class="stringliteral">&quot;&#32;&#32;&quot;</emphasis>,&#32;v.header);
+305 &#32;&#32;&#32;&#32;s&#32;&lt;&lt;&#32;indent&#32;&lt;&lt;&#32;<emphasis class="stringliteral">&quot;status:&#32;&quot;</emphasis>;
+306 &#32;&#32;&#32;&#32;s&#32;&lt;&lt;&#32;std::endl;
+307 &#32;&#32;&#32;&#32;Printer&lt;&#32;::actionlib_msgs::GoalStatus_&lt;ContainerAllocator&gt;&#32;&gt;::stream(s,&#32;indent&#32;+&#32;<emphasis class="stringliteral">&quot;&#32;&#32;&quot;</emphasis>,&#32;v.status);
+308 &#32;&#32;&#32;&#32;s&#32;&lt;&lt;&#32;indent&#32;&lt;&lt;&#32;<emphasis class="stringliteral">&quot;result:&#32;&quot;</emphasis>;
+309 &#32;&#32;&#32;&#32;s&#32;&lt;&lt;&#32;std::endl;
+310 &#32;&#32;&#32;&#32;Printer&lt;&#32;::jaco_msgs::ArmJointAnglesResult_&lt;ContainerAllocator&gt;&#32;&gt;::stream(s,&#32;indent&#32;+&#32;<emphasis class="stringliteral">&quot;&#32;&#32;&quot;</emphasis>,&#32;v.result);
+311 &#32;&#32;}
+312 };
+313 
+314 }&#32;<emphasis class="comment">//&#32;namespace&#32;message_operations</emphasis>
+315 }&#32;<emphasis class="comment">//&#32;namespace&#32;ros</emphasis>
+316 
+317 <emphasis class="preprocessor">#endif&#32;//&#32;JACO_MSGS_MESSAGE_ARMJOINTANGLESACTIONRESULT_H</emphasis>
+    </computeroutput></literallayout>
+</section>

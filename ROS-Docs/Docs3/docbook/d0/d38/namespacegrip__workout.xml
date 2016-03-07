@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="d0/d38/namespacegrip__workout">
+<title>grip_workout</title>
+        <section>
+            <title>Variables</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="d0/d38/namespacegrip__workout_1a3deafc04ebe19165cfdc795ba4f53692">positions</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>list <link linkend="d0/d38/namespacegrip__workout_1a2e28cab9dcd884944ac12b695ad4a773">raw_positions</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="d0/d38/namespacegrip__workout_1ac8e857bea751845a9f8c3f34d4fa3399">result</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Functions</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>def <link linkend="d0/d38/namespacegrip__workout_1a5c14bb069a6ceb0f3854520cc298a2c1">gripper_client</link> (
+finger_positions )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <simplesect>
+            <title>Detailed Description</title>
+
+<para><literallayout>A helper program to test gripper goals for the JACO and MICO arms.</literallayout> </para>
+                <para>Definition at line 1 of file grip_workout.py</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>grip_workout.py</para></listitem></itemizedlist></para>
+        </simplesect>
+</section>

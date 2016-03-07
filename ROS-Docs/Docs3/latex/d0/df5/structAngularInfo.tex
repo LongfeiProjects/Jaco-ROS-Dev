@@ -1,0 +1,125 @@
+\hypertarget{structAngularInfo}{}\section{Angular\+Info Struct Reference}
+\label{structAngularInfo}\index{Angular\+Info@{Angular\+Info}}
+
+
+This data structure holds values in an angular(joint by joint) control context. As an example struct could contains position, temperature, torque, ...  
+
+
+
+
+{\ttfamily \#include \char`\"{}Definition\char`\"{}}
+
+
+
+Inheritance diagram for Angular\+Info\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=201pt]{d4/d78/structAngularInfo__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Angular\+Info\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=151pt]{d3/db8/structAngularInfo__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{structAngularInfo_a092156b3e0e6cb657ed4bb2f6b15a9f0}{Init\+Struct} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float \hyperlink{structAngularInfo_a5fc555c085bddc82c33a3039fbc40932}{Actuator1}
+\begin{DoxyCompactList}\small\item\em This is the value related to the first actuator. Unit depends on the context it\textquotesingle{}s been used. \end{DoxyCompactList}\item 
+float \hyperlink{structAngularInfo_ab7b9349eef239f9741d9c28a795e4c35}{Actuator2}
+\begin{DoxyCompactList}\small\item\em This is the value related to the second actuator. Unit depends on the context it\textquotesingle{}s been used. \end{DoxyCompactList}\item 
+float \hyperlink{structAngularInfo_a30426eab94c82cfd3d697bbc8c506c2a}{Actuator3}
+\begin{DoxyCompactList}\small\item\em This is the value related to the third actuator. Unit depends on the context it\textquotesingle{}s been used. \end{DoxyCompactList}\item 
+float \hyperlink{structAngularInfo_a46a1314c4846de6a495310b44fe5e0c3}{Actuator4}
+\begin{DoxyCompactList}\small\item\em This is the value related to the actuator \#4. Unit depends on the context it\textquotesingle{}s been used. \end{DoxyCompactList}\item 
+float \hyperlink{structAngularInfo_a953c29d2481eb1c42c84e9c992d34dde}{Actuator5}
+\begin{DoxyCompactList}\small\item\em This is the value related to the actuator \#5. Unit depends on the context it\textquotesingle{}s been used. \end{DoxyCompactList}\item 
+float \hyperlink{structAngularInfo_ab54771129d8a9e451c27942dd349340d}{Actuator6}
+\begin{DoxyCompactList}\small\item\em This is the value related to the actuator \#6. Unit depends on the context it\textquotesingle{}s been used. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This data structure holds values in an angular(joint by joint) control context. As an example struct could contains position, temperature, torque, ... 
+
+\subsection{Member Function Documentation}
+\index{Angular\+Info@{Angular\+Info}!Init\+Struct@{Init\+Struct}}
+\index{Init\+Struct@{Init\+Struct}!Angular\+Info@{Angular\+Info}}
+\subsubsection[{\texorpdfstring{Init\+Struct()}{InitStruct()}}]{\setlength{\rightskip}{0pt plus 5cm}void Angular\+Info\+::\+Init\+Struct (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{structAngularInfo_a092156b3e0e6cb657ed4bb2f6b15a9f0}{}\label{structAngularInfo_a092156b3e0e6cb657ed4bb2f6b15a9f0}
+This method will initialises all the values to 0 
+\begin{DoxyCode}
+336     \{
+337         \hyperlink{structAngularInfo_a5fc555c085bddc82c33a3039fbc40932}{Actuator1} = 0.0f;
+338         \hyperlink{structAngularInfo_ab7b9349eef239f9741d9c28a795e4c35}{Actuator2} = 0.0f;
+339         \hyperlink{structAngularInfo_a30426eab94c82cfd3d697bbc8c506c2a}{Actuator3} = 0.0f;
+340         \hyperlink{structAngularInfo_a46a1314c4846de6a495310b44fe5e0c3}{Actuator4} = 0.0f;
+341         \hyperlink{structAngularInfo_a953c29d2481eb1c42c84e9c992d34dde}{Actuator5} = 0.0f;
+342         \hyperlink{structAngularInfo_ab54771129d8a9e451c27942dd349340d}{Actuator6} = 0.0f;
+343     \}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\index{Angular\+Info@{Angular\+Info}!Actuator1@{Actuator1}}
+\index{Actuator1@{Actuator1}!Angular\+Info@{Angular\+Info}}
+\subsubsection[{\texorpdfstring{Actuator1}{Actuator1}}]{\setlength{\rightskip}{0pt plus 5cm}float Angular\+Info\+::\+Actuator1}\hypertarget{structAngularInfo_a5fc555c085bddc82c33a3039fbc40932}{}\label{structAngularInfo_a5fc555c085bddc82c33a3039fbc40932}
+
+
+This is the value related to the first actuator. Unit depends on the context it\textquotesingle{}s been used. 
+
+As an example if the current control mode is angular position the unit will be degree but if the control mode is angular velocity then the unit will be degree per second. \index{Angular\+Info@{Angular\+Info}!Actuator2@{Actuator2}}
+\index{Actuator2@{Actuator2}!Angular\+Info@{Angular\+Info}}
+\subsubsection[{\texorpdfstring{Actuator2}{Actuator2}}]{\setlength{\rightskip}{0pt plus 5cm}float Angular\+Info\+::\+Actuator2}\hypertarget{structAngularInfo_ab7b9349eef239f9741d9c28a795e4c35}{}\label{structAngularInfo_ab7b9349eef239f9741d9c28a795e4c35}
+
+
+This is the value related to the second actuator. Unit depends on the context it\textquotesingle{}s been used. 
+
+As an example if the current control mode is angular position the unit will be degree but if the control mode is angular velocity then the unit will be degree per second. \index{Angular\+Info@{Angular\+Info}!Actuator3@{Actuator3}}
+\index{Actuator3@{Actuator3}!Angular\+Info@{Angular\+Info}}
+\subsubsection[{\texorpdfstring{Actuator3}{Actuator3}}]{\setlength{\rightskip}{0pt plus 5cm}float Angular\+Info\+::\+Actuator3}\hypertarget{structAngularInfo_a30426eab94c82cfd3d697bbc8c506c2a}{}\label{structAngularInfo_a30426eab94c82cfd3d697bbc8c506c2a}
+
+
+This is the value related to the third actuator. Unit depends on the context it\textquotesingle{}s been used. 
+
+As an example if the current control mode is angular position the unit will be degree but if the control mode is angular velocity then the unit will be degree per second. \index{Angular\+Info@{Angular\+Info}!Actuator4@{Actuator4}}
+\index{Actuator4@{Actuator4}!Angular\+Info@{Angular\+Info}}
+\subsubsection[{\texorpdfstring{Actuator4}{Actuator4}}]{\setlength{\rightskip}{0pt plus 5cm}float Angular\+Info\+::\+Actuator4}\hypertarget{structAngularInfo_a46a1314c4846de6a495310b44fe5e0c3}{}\label{structAngularInfo_a46a1314c4846de6a495310b44fe5e0c3}
+
+
+This is the value related to the actuator \#4. Unit depends on the context it\textquotesingle{}s been used. 
+
+As an example if the current control mode is angular position the unit will be degree but if the control mode is angular velocity then the unit will be degree per second. \index{Angular\+Info@{Angular\+Info}!Actuator5@{Actuator5}}
+\index{Actuator5@{Actuator5}!Angular\+Info@{Angular\+Info}}
+\subsubsection[{\texorpdfstring{Actuator5}{Actuator5}}]{\setlength{\rightskip}{0pt plus 5cm}float Angular\+Info\+::\+Actuator5}\hypertarget{structAngularInfo_a953c29d2481eb1c42c84e9c992d34dde}{}\label{structAngularInfo_a953c29d2481eb1c42c84e9c992d34dde}
+
+
+This is the value related to the actuator \#5. Unit depends on the context it\textquotesingle{}s been used. 
+
+As an example if the current control mode is angular position the unit will be degree but if the control mode is angular velocity then the unit will be degree per second. \index{Angular\+Info@{Angular\+Info}!Actuator6@{Actuator6}}
+\index{Actuator6@{Actuator6}!Angular\+Info@{Angular\+Info}}
+\subsubsection[{\texorpdfstring{Actuator6}{Actuator6}}]{\setlength{\rightskip}{0pt plus 5cm}float Angular\+Info\+::\+Actuator6}\hypertarget{structAngularInfo_ab54771129d8a9e451c27942dd349340d}{}\label{structAngularInfo_ab54771129d8a9e451c27942dd349340d}
+
+
+This is the value related to the actuator \#6. Unit depends on the context it\textquotesingle{}s been used. 
+
+As an example if the current control mode is angular position the unit will be degree but if the control mode is angular velocity then the unit will be degree per second. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Longfei/\+Desktop/catkin\+\_\+\+Kinova\+R\+O\+S/src/jaco-\/ros/jaco\+\_\+driver/include/kinova/\hyperlink{KinovaTypes_8h}{Kinova\+Types.\+h}\end{DoxyCompactItemize}

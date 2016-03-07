@@ -1,0 +1,112 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="d3/ded/structjaco__msgs_1_1StartRequest__">
+<title>jaco_msgs::StartRequest_ struct Reference</title>
+<para>
+    <programlisting>#include <link linkend="de/ddc/StartRequest_8h">&quot;StartRequest.h&quot;</link></programlisting>
+</para>
+<para>Inheritance diagram for jaco_msgs::StartRequest_</para>
+<para>
+    <figure>
+        <title>Inheritance graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../d5/d56/structjaco__msgs_1_1StartRequest____inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Collaboration diagram for jaco_msgs::StartRequest_</para>
+<para>
+    <figure>
+        <title>Collaboration graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../d7/dfe/structjaco__msgs_1_1StartRequest____coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+    <templateparamlist>
+      <param>
+        <type>class</type>
+        <declname>ContainerAllocator</declname>
+        <defname>ContainerAllocator</defname>
+      </param>
+    </templateparamlist>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef boost::shared_ptr&lt; ::<link linkend="d3/ded/structjaco__msgs_1_1StartRequest__">jaco_msgs::StartRequest_</link>&lt; ContainerAllocator &gt; const  &gt;  <link linkend="d3/ded/structjaco__msgs_1_1StartRequest___1a73ee55632438583c00552cfff7778a85">ConstPtr</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef boost::shared_ptr&lt; ::<link linkend="d3/ded/structjaco__msgs_1_1StartRequest__">jaco_msgs::StartRequest_</link>&lt; ContainerAllocator &gt; &gt;  <link linkend="d3/ded/structjaco__msgs_1_1StartRequest___1a1ebdb2684053bdc4c0fd9684184d50e9">Ptr</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef <link linkend="d3/ded/structjaco__msgs_1_1StartRequest__">StartRequest_</link>&lt; ContainerAllocator &gt;  <link linkend="d3/ded/structjaco__msgs_1_1StartRequest___1ad232ca42d26ee4a9770730f6f2655422">Type</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Public Attributes</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>boost::shared_ptr&lt; std::map&lt; std::string, std::string &gt; &gt; __connection_header</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="d3/ded/structjaco__msgs_1_1StartRequest___1aca22cfd53ac72bbe2ac4c833e535ed30">StartRequest_</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="d3/ded/structjaco__msgs_1_1StartRequest___1acf56b0d40c950b75798cace710f54eae">StartRequest_</link> (
+const ContainerAllocator &amp; _alloc)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+            <section xml:id="d3/ded/structjaco__msgs_1_1StartRequest___1a73ee55632438583c00552cfff7778a85">
+                <title>typedef boost::shared_ptr&lt; ::jaco_msgs::StartRequest_&lt;ContainerAllocator&gt; const&gt; jaco_msgs::StartRequest_&lt; ContainerAllocator &gt;::ConstPtr</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="d3/ded/structjaco__msgs_1_1StartRequest___1a1ebdb2684053bdc4c0fd9684184d50e9">
+                <title>typedef boost::shared_ptr&lt; ::jaco_msgs::StartRequest_&lt;ContainerAllocator&gt; &gt; jaco_msgs::StartRequest_&lt; ContainerAllocator &gt;::Ptr</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="d3/ded/structjaco__msgs_1_1StartRequest___1ad232ca42d26ee4a9770730f6f2655422">
+                <title>typedef StartRequest_&lt;ContainerAllocator&gt; jaco_msgs::StartRequest_&lt; ContainerAllocator &gt;::Type</title> <emphasis></emphasis>
+                
+            </section>
+        <section>
+            <title>Member Data Documentation</title>
+        </section>
+            <section xml:id="d3/ded/structjaco__msgs_1_1StartRequest___1aca22cfd53ac72bbe2ac4c833e535ed30">
+                <title>jaco_msgs::StartRequest_&lt; ContainerAllocator &gt;::StartRequest_ ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="d3/ded/structjaco__msgs_1_1StartRequest___1acf56b0d40c950b75798cace710f54eae">
+                <title>jaco_msgs::StartRequest_&lt; ContainerAllocator &gt;::StartRequest_ (const ContainerAllocator &amp;_alloc)</title> <emphasis></emphasis>
+                
+            </section>
+</section>

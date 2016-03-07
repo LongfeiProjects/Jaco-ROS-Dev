@@ -1,0 +1,162 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="d7/d40/structSensorsInfo">
+<title>SensorsInfo struct Reference</title>
+<para>
+    <programlisting>#include <link linkend="df/d36/KinovaTypes_8h">&quot;Definition&quot;</link></programlisting>
+</para>
+<para>Inheritance diagram for SensorsInfo</para>
+<para>
+    <figure>
+        <title>Inheritance graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../da/d4e/structSensorsInfo__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Collaboration diagram for SensorsInfo</para>
+<para>
+    <figure>
+        <title>Collaboration graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../d2/d88/structSensorsInfo__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+        <section>
+            <title>Public Attributes</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>float AccelerationX<para><emphasis>This is the value read by the acceleration sensor on the X axis. Unit is G.</emphasis></para></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>float AccelerationY<para><emphasis>This is the value read by the acceleration sensor on the Y axis. Unit is G.</emphasis></para></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>float AccelerationZ<para><emphasis>This is the value read by the acceleration sensor on the Z axis. Unit is G.</emphasis></para></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>float ActuatorTemp1<para><emphasis>This is the value read by the temperature sensor on the actuator 1. Unit is C°.</emphasis></para></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>float ActuatorTemp2<para><emphasis>This is the value read by the temperature sensor on the actuator 2. Unit is C°.</emphasis></para></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>float ActuatorTemp3<para><emphasis>This is the value read by the temperature sensor on the actuator 3. Unit is C°.</emphasis></para></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>float ActuatorTemp4<para><emphasis>This is the value read by the temperature sensor on the actuator 4. Unit is C°.</emphasis></para></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>float ActuatorTemp5<para><emphasis>This is the value read by the temperature sensor on the actuator 5. Unit is C°.</emphasis></para></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>float ActuatorTemp6<para><emphasis>This is the value read by the temperature sensor on the actuator 6. Unit is C°.</emphasis></para></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>float Current<para><emphasis>This is the main power supply&apos;s current. Unit is A.</emphasis></para></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>float FingerTemp1<para><emphasis>This is the value read by the temperature sensor on the finger 1. Unit is C°.</emphasis></para></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>float FingerTemp2<para><emphasis>This is the value read by the temperature sensor on the finger 2. Unit is C°.</emphasis></para></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>float FingerTemp3<para><emphasis>This is the value read by the temperature sensor on the finger 3. Unit is C°.</emphasis></para></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>float Voltage<para><emphasis>This is the main power supply voltage. (24 V) Unit is V.</emphasis></para></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="d7/d40/structSensorsInfo_1a321b3a120733f8a2a317422cfe8e4869">InitStruct</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+    <simplesect>
+
+<para>This data structure holds the values of the robot&apos;s sensors. </para>
+    </simplesect>
+        <simplesect>
+            <title>Detailed Description</title>
+
+<para>If the robot is a Jaco, the 3 finger values will be filled but if the robot is a Mico, the finger 3 will not be filled. </para>
+                <para>Definition at line 415 of file KinovaTypes.h</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>KinovaTypes.h</para></listitem></itemizedlist></para>
+        </simplesect>
+        <section>
+            <title>Member Data Documentation</title>
+        </section>
+            <section xml:id="d7/d40/structSensorsInfo_1a321b3a120733f8a2a317422cfe8e4869">
+                <title>void SensorsInfo::InitStruct ()</title> <emphasis></emphasis>
+                
+<para>This method will initialises all the values to 0 </para>
+
+            </section>
+</section>

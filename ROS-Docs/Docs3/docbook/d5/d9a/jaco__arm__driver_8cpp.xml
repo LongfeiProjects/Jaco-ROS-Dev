@@ -1,0 +1,95 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="d5/d9a/jaco__arm__driver_8cpp">
+    <title>jaco_arm_driver.cpp File Reference</title>
+    <programlisting>#include &quot;jaco_driver/jaco_api.h&quot;</programlisting>
+    <programlisting>#include &quot;jaco_driver/jaco_arm.h&quot;</programlisting>
+    <programlisting>#include &quot;jaco_driver/jaco_pose_action.h&quot;</programlisting>
+    <programlisting>#include &quot;jaco_driver/jaco_angles_action.h&quot;</programlisting>
+    <programlisting>#include &quot;jaco_driver/jaco_fingers_action.h&quot;</programlisting>
+<para>Include dependency diagram for jaco_arm_driver.cpp</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../d9/d42/jaco__arm__driver_8cpp__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Included by dependency diagram for jaco_arm_driver.cpp</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../d9/d3b/jaco__arm__driver_8cpp__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+        <section>
+            <title>Functions</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="d5/d9a/jaco__arm__driver_8cpp_1a3c04138a5bfe5d72780bb7e82a18e627">main</link> (
+int argc, char ** argv)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+    <simplesect>
+        <title>Detailed Description</title>
+    <para>Definition in file D:/Longfei/Desktop/catkin_KinovaROS/src/jaco-ros/jaco_driver/src/nodes/jaco_arm_driver.cpp</para>
+    </simplesect>
+    <literallayout><computeroutput>
+1 <emphasis class="comment">//============================================================================</emphasis>
+2 <emphasis class="comment">//&#32;Name&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;:&#32;jaco_arm_driver.cpp</emphasis>
+3 <emphasis class="comment">//&#32;Author&#32;&#32;&#32;&#32;&#32;&#32;:&#32;WPI,&#32;Clearpath&#32;Robotics</emphasis>
+4 <emphasis class="comment">//&#32;Version&#32;&#32;&#32;&#32;&#32;:&#32;0.5</emphasis>
+5 <emphasis class="comment">//&#32;Copyright&#32;&#32;&#32;:&#32;BSD</emphasis>
+6 <emphasis class="comment">//&#32;Description&#32;:&#32;A&#32;ROS&#32;driver&#32;for&#32;controlling&#32;the&#32;Kinova&#32;Jaco&#32;robotic&#32;manipulator&#32;arm</emphasis>
+7 <emphasis class="comment">//============================================================================</emphasis>
+8 
+9 <emphasis class="preprocessor">#include&#32;&quot;<link linkend="d0/d9e/jaco__api_8h">jaco_driver/jaco_api.h</link>&quot;</emphasis>
+10 <emphasis class="preprocessor">#include&#32;&quot;<link linkend="d8/d35/jaco__arm_8h">jaco_driver/jaco_arm.h</link>&quot;</emphasis>
+11 <emphasis class="preprocessor">#include&#32;&quot;<link linkend="d9/dd3/jaco__pose__action_8h">jaco_driver/jaco_pose_action.h</link>&quot;</emphasis>
+12 <emphasis class="preprocessor">#include&#32;&quot;<link linkend="d2/d16/jaco__angles__action_8h">jaco_driver/jaco_angles_action.h</link>&quot;</emphasis>
+13 <emphasis class="preprocessor">#include&#32;&quot;<link linkend="dc/d0a/jaco__fingers__action_8h">jaco_driver/jaco_fingers_action.h</link>&quot;</emphasis>
+14 
+15 
+<link linkend="d5/d9a/jaco__arm__driver_8cpp_1a3c04138a5bfe5d72780bb7e82a18e627">16 </link><emphasis class="keywordtype">int</emphasis>&#32;<link linkend="d5/d9a/jaco__arm__driver_8cpp_1a3c04138a5bfe5d72780bb7e82a18e627">main</link>(<emphasis class="keywordtype">int</emphasis>&#32;argc,&#32;<emphasis class="keywordtype">char</emphasis>&#32;**argv)
+17 {
+18 &#32;&#32;&#32;&#32;ros::init(argc,&#32;argv,&#32;<emphasis class="stringliteral">&quot;jaco_arm_driver&quot;</emphasis>);
+19 &#32;&#32;&#32;&#32;ros::NodeHandle&#32;nh(<emphasis class="stringliteral">&quot;~&quot;</emphasis>);
+20 &#32;&#32;&#32;&#32;boost::recursive_mutex&#32;api_mutex;
+21 
+22 &#32;&#32;&#32;&#32;<emphasis class="keywordtype">bool</emphasis>&#32;is_first_init&#32;=&#32;<emphasis class="keyword">true</emphasis>;
+23 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">while</emphasis>&#32;(ros::ok())
+24 &#32;&#32;&#32;&#32;{
+25 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">try</emphasis>
+26 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+27 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="d5/d2b/classjaco_1_1JacoComm">jaco::JacoComm</link>&#32;comm(nh,&#32;api_mutex,&#32;is_first_init);
+28 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="d3/d95/classjaco_1_1JacoArm">jaco::JacoArm</link>&#32;<link linkend="d4/d3c/namespacejaco">jaco</link>(comm,&#32;nh);
+29 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="dc/dc7/classjaco_1_1JacoPoseActionServer">jaco::JacoPoseActionServer</link>&#32;pose_server(comm,&#32;nh);
+30 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="d8/d82/classjaco_1_1JacoAnglesActionServer">jaco::JacoAnglesActionServer</link>&#32;angles_server(comm,&#32;nh);
+31 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="d7/de0/classjaco_1_1JacoFingersActionServer">jaco::JacoFingersActionServer</link>&#32;fingers_server(comm,&#32;nh);
+32 
+33 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ros::spin();
+34 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+35 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">catch</emphasis>(<emphasis class="keyword">const</emphasis>&#32;std::exception&amp;&#32;<link linkend="df/dc0/namespace__setup__util_1acdce690b925de33d6249bbbfa1109d61">e</link>)
+36 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+37 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ROS_ERROR_STREAM(e.what());
+38 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="d5/d3c/classjaco_1_1JacoAPI">jaco::JacoAPI</link>&#32;api;
+39 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;boost::recursive_mutex::scoped_lock&#32;lock(api_mutex);
+40 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;api.closeAPI();
+41 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ros::Duration(1.0).sleep();
+42 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+43 
+44 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;is_first_init&#32;=&#32;<emphasis class="keyword">false</emphasis>;
+45 &#32;&#32;&#32;&#32;}
+46 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;0;
+47 }
+    </computeroutput></literallayout>
+</section>

@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="d4/d53/structros_1_1message__traits_1_1HasHeader_3_01_1_1jaco__msgs_1_1ArmJointAnglesGoal___3_01ContainerAllocator_01_4_01_4">
+<title>ros::message_traits::HasHeader&lt; ::jaco_msgs::ArmJointAnglesGoal_&lt; ContainerAllocator &gt; &gt; struct Reference</title>
+<para>
+    <programlisting>#include <link linkend="db/d81/ArmJointAnglesGoal_8h">&quot;ArmJointAnglesGoal.h&quot;</link></programlisting>
+</para>
+<para>Inheritance diagram for ros::message_traits::HasHeader&lt; ::jaco_msgs::ArmJointAnglesGoal_&lt; ContainerAllocator &gt; &gt;</para>
+<para>
+    <figure>
+        <title>Inheritance graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../d8/d5d/structros_1_1message__traits_1_1HasHeader_3_01_1_1jaco__msgs_1_1ArmJointAnglesGoal___3_01Contain63332f8a29dd0b50901e205891980c4c.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Collaboration diagram for ros::message_traits::HasHeader&lt; ::jaco_msgs::ArmJointAnglesGoal_&lt; ContainerAllocator &gt; &gt;</para>
+<para>
+    <figure>
+        <title>Collaboration graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../d2/d70/structros_1_1message__traits_1_1HasHeader_3_01_1_1jaco__msgs_1_1ArmJointAnglesGoal___3_01Contain9e28d51f73898116bfe26940ff70dfa2.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+    <templateparamlist>
+      <param>
+        <type>class ContainerAllocator</type>
+      </param>
+    </templateparamlist>
+</section>

@@ -1,0 +1,231 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="d6/db4/namespaceros_1_1message__operations">
+<title>ros::message_operations</title>
+        <section>
+            <title> Classes </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d4/ded/structros_1_1message__operations_1_1Printer_3_01_1_1jaco__msgs_1_1ArmJointAnglesAction___3_01ContainerAllocator_01_4_01_4">ros::message_operations::Printer&lt; ::jaco_msgs::ArmJointAnglesAction_&lt; ContainerAllocator &gt; &gt;</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="df/d2a/structros_1_1message__operations_1_1Printer_3_01_1_1jaco__msgs_1_1ArmJointAnglesActionFeedback__786902009de7467387c5cc1d1cad3c62">ros::message_operations::Printer&lt; ::jaco_msgs::ArmJointAnglesActionFeedback_&lt; ContainerAllocator &gt; &gt;</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d2/dd9/structros_1_1message__operations_1_1Printer_3_01_1_1jaco__msgs_1_1ArmJointAnglesActionGoal___3_01ContainerAllocator_01_4_01_4">ros::message_operations::Printer&lt; ::jaco_msgs::ArmJointAnglesActionGoal_&lt; ContainerAllocator &gt; &gt;</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d3/d60/structros_1_1message__operations_1_1Printer_3_01_1_1jaco__msgs_1_1ArmJointAnglesActionResult___3_01ContainerAllocator_01_4_01_4">ros::message_operations::Printer&lt; ::jaco_msgs::ArmJointAnglesActionResult_&lt; ContainerAllocator &gt; &gt;</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="df/dbc/structros_1_1message__operations_1_1Printer_3_01_1_1jaco__msgs_1_1ArmJointAnglesFeedback___3_01ContainerAllocator_01_4_01_4">ros::message_operations::Printer&lt; ::jaco_msgs::ArmJointAnglesFeedback_&lt; ContainerAllocator &gt; &gt;</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d5/dbe/structros_1_1message__operations_1_1Printer_3_01_1_1jaco__msgs_1_1ArmJointAnglesGoal___3_01ContainerAllocator_01_4_01_4">ros::message_operations::Printer&lt; ::jaco_msgs::ArmJointAnglesGoal_&lt; ContainerAllocator &gt; &gt;</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d9/dae/structros_1_1message__operations_1_1Printer_3_01_1_1jaco__msgs_1_1ArmJointAnglesResult___3_01ContainerAllocator_01_4_01_4">ros::message_operations::Printer&lt; ::jaco_msgs::ArmJointAnglesResult_&lt; ContainerAllocator &gt; &gt;</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d1/d09/structros_1_1message__operations_1_1Printer_3_01_1_1jaco__msgs_1_1ArmPoseAction___3_01ContainerAllocator_01_4_01_4">ros::message_operations::Printer&lt; ::jaco_msgs::ArmPoseAction_&lt; ContainerAllocator &gt; &gt;</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="db/d62/structros_1_1message__operations_1_1Printer_3_01_1_1jaco__msgs_1_1ArmPoseActionFeedback___3_01ContainerAllocator_01_4_01_4">ros::message_operations::Printer&lt; ::jaco_msgs::ArmPoseActionFeedback_&lt; ContainerAllocator &gt; &gt;</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d2/d9a/structros_1_1message__operations_1_1Printer_3_01_1_1jaco__msgs_1_1ArmPoseActionGoal___3_01ContainerAllocator_01_4_01_4">ros::message_operations::Printer&lt; ::jaco_msgs::ArmPoseActionGoal_&lt; ContainerAllocator &gt; &gt;</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d4/d12/structros_1_1message__operations_1_1Printer_3_01_1_1jaco__msgs_1_1ArmPoseActionResult___3_01ContainerAllocator_01_4_01_4">ros::message_operations::Printer&lt; ::jaco_msgs::ArmPoseActionResult_&lt; ContainerAllocator &gt; &gt;</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d6/d42/structros_1_1message__operations_1_1Printer_3_01_1_1jaco__msgs_1_1ArmPoseFeedback___3_01ContainerAllocator_01_4_01_4">ros::message_operations::Printer&lt; ::jaco_msgs::ArmPoseFeedback_&lt; ContainerAllocator &gt; &gt;</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="da/d93/structros_1_1message__operations_1_1Printer_3_01_1_1jaco__msgs_1_1ArmPoseGoal___3_01ContainerAllocator_01_4_01_4">ros::message_operations::Printer&lt; ::jaco_msgs::ArmPoseGoal_&lt; ContainerAllocator &gt; &gt;</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="de/d10/structros_1_1message__operations_1_1Printer_3_01_1_1jaco__msgs_1_1ArmPoseResult___3_01ContainerAllocator_01_4_01_4">ros::message_operations::Printer&lt; ::jaco_msgs::ArmPoseResult_&lt; ContainerAllocator &gt; &gt;</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d5/d7c/structros_1_1message__operations_1_1Printer_3_01_1_1jaco__msgs_1_1FingerPosition___3_01ContainerAllocator_01_4_01_4">ros::message_operations::Printer&lt; ::jaco_msgs::FingerPosition_&lt; ContainerAllocator &gt; &gt;</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d0/da3/structros_1_1message__operations_1_1Printer_3_01_1_1jaco__msgs_1_1HomeArmRequest___3_01ContainerAllocator_01_4_01_4">ros::message_operations::Printer&lt; ::jaco_msgs::HomeArmRequest_&lt; ContainerAllocator &gt; &gt;</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d1/d8e/structros_1_1message__operations_1_1Printer_3_01_1_1jaco__msgs_1_1HomeArmResponse___3_01ContainerAllocator_01_4_01_4">ros::message_operations::Printer&lt; ::jaco_msgs::HomeArmResponse_&lt; ContainerAllocator &gt; &gt;</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="dd/d9a/structros_1_1message__operations_1_1Printer_3_01_1_1jaco__msgs_1_1JointAngles___3_01ContainerAllocator_01_4_01_4">ros::message_operations::Printer&lt; ::jaco_msgs::JointAngles_&lt; ContainerAllocator &gt; &gt;</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d1/db0/structros_1_1message__operations_1_1Printer_3_01_1_1jaco__msgs_1_1JointVelocity___3_01ContainerAllocator_01_4_01_4">ros::message_operations::Printer&lt; ::jaco_msgs::JointVelocity_&lt; ContainerAllocator &gt; &gt;</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="de/df8/structros_1_1message__operations_1_1Printer_3_01_1_1jaco__msgs_1_1SetFingersPositionAction___3_01ContainerAllocator_01_4_01_4">ros::message_operations::Printer&lt; ::jaco_msgs::SetFingersPositionAction_&lt; ContainerAllocator &gt; &gt;</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d6/d01/structros_1_1message__operations_1_1Printer_3_01_1_1jaco__msgs_1_1SetFingersPositionActionFeedbae13e05216e53f9116f074ec65036b29d">ros::message_operations::Printer&lt; ::jaco_msgs::SetFingersPositionActionFeedback_&lt; ContainerAllocator &gt; &gt;</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d9/d13/structros_1_1message__operations_1_1Printer_3_01_1_1jaco__msgs_1_1SetFingersPositionActionGoal__33ea544897d72e7b50aaaf79efc6fd71">ros::message_operations::Printer&lt; ::jaco_msgs::SetFingersPositionActionGoal_&lt; ContainerAllocator &gt; &gt;</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d8/df3/structros_1_1message__operations_1_1Printer_3_01_1_1jaco__msgs_1_1SetFingersPositionActionResult044e352a34a7e800d3ed4a693b89337f">ros::message_operations::Printer&lt; ::jaco_msgs::SetFingersPositionActionResult_&lt; ContainerAllocator &gt; &gt;</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="dd/db7/structros_1_1message__operations_1_1Printer_3_01_1_1jaco__msgs_1_1SetFingersPositionFeedback___3_01ContainerAllocator_01_4_01_4">ros::message_operations::Printer&lt; ::jaco_msgs::SetFingersPositionFeedback_&lt; ContainerAllocator &gt; &gt;</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d0/d3d/structros_1_1message__operations_1_1Printer_3_01_1_1jaco__msgs_1_1SetFingersPositionGoal___3_01ContainerAllocator_01_4_01_4">ros::message_operations::Printer&lt; ::jaco_msgs::SetFingersPositionGoal_&lt; ContainerAllocator &gt; &gt;</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d8/ddd/structros_1_1message__operations_1_1Printer_3_01_1_1jaco__msgs_1_1SetFingersPositionResult___3_01ContainerAllocator_01_4_01_4">ros::message_operations::Printer&lt; ::jaco_msgs::SetFingersPositionResult_&lt; ContainerAllocator &gt; &gt;</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="de/d76/structros_1_1message__operations_1_1Printer_3_01_1_1jaco__msgs_1_1SetForceControlParamsRequest__16dc020b89aeac404d6fe4c2259e46cf">ros::message_operations::Printer&lt; ::jaco_msgs::SetForceControlParamsRequest_&lt; ContainerAllocator &gt; &gt;</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="de/db1/structros_1_1message__operations_1_1Printer_3_01_1_1jaco__msgs_1_1SetForceControlParamsResponse_198e4d90f16b65b33174a1d2bb51e7bf">ros::message_operations::Printer&lt; ::jaco_msgs::SetForceControlParamsResponse_&lt; ContainerAllocator &gt; &gt;</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="dd/db3/structros_1_1message__operations_1_1Printer_3_01_1_1jaco__msgs_1_1StartRequest___3_01ContainerAllocator_01_4_01_4">ros::message_operations::Printer&lt; ::jaco_msgs::StartRequest_&lt; ContainerAllocator &gt; &gt;</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="df/d72/structros_1_1message__operations_1_1Printer_3_01_1_1jaco__msgs_1_1StartResponse___3_01ContainerAllocator_01_4_01_4">ros::message_operations::Printer&lt; ::jaco_msgs::StartResponse_&lt; ContainerAllocator &gt; &gt;</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="dd/de1/structros_1_1message__operations_1_1Printer_3_01_1_1jaco__msgs_1_1StopRequest___3_01ContainerAllocator_01_4_01_4">ros::message_operations::Printer&lt; ::jaco_msgs::StopRequest_&lt; ContainerAllocator &gt; &gt;</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="dc/dfe/structros_1_1message__operations_1_1Printer_3_01_1_1jaco__msgs_1_1StopResponse___3_01ContainerAllocator_01_4_01_4">ros::message_operations::Printer&lt; ::jaco_msgs::StopResponse_&lt; ContainerAllocator &gt; &gt;</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+</section>

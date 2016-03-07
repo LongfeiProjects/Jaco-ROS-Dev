@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="d1/db0/structros_1_1message__operations_1_1Printer_3_01_1_1jaco__msgs_1_1JointVelocity___3_01ContainerAllocator_01_4_01_4">
+<title>ros::message_operations::Printer&lt; ::jaco_msgs::JointVelocity_&lt; ContainerAllocator &gt; &gt; struct Reference</title>
+<para>
+    <programlisting>#include <link linkend="d2/d48/JointVelocity_8h">&quot;JointVelocity.h&quot;</link></programlisting>
+</para>
+<para>Inheritance diagram for ros::message_operations::Printer&lt; ::jaco_msgs::JointVelocity_&lt; ContainerAllocator &gt; &gt;</para>
+<para>
+    <figure>
+        <title>Inheritance graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../d9/d85/structros_1_1message__operations_1_1Printer_3_01_1_1jaco__msgs_1_1JointVelocity___3_01ContainerAdcd6bcdc6daee596d8251a5b994a17ee.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Collaboration diagram for ros::message_operations::Printer&lt; ::jaco_msgs::JointVelocity_&lt; ContainerAllocator &gt; &gt;</para>
+<para>
+    <figure>
+        <title>Collaboration graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../d4/d33/structros_1_1message__operations_1_1Printer_3_01_1_1jaco__msgs_1_1JointVelocity___3_01ContainerAllocator_01_4_01_4__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+    <templateparamlist>
+      <param>
+        <type>class ContainerAllocator</type>
+      </param>
+    </templateparamlist>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static void <link linkend="d1/db0/structros_1_1message__operations_1_1Printer_3_01_1_1jaco__msgs_1_1JointVelocity___3_01ContainerAllocator_01_4_01_4_1a5c0d5ba24dc6e3a95b16bc125064035e">stream</link> (
+Stream &amp; s, const std::string &amp; indent, const ::<link linkend="de/df3/structjaco__msgs_1_1JointVelocity__">jaco_msgs::JointVelocity_</link>&lt; ContainerAllocator &gt; &amp; v)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+            <section xml:id="d1/db0/structros_1_1message__operations_1_1Printer_3_01_1_1jaco__msgs_1_1JointVelocity___3_01ContainerAllocator_01_4_01_4_1a5c0d5ba24dc6e3a95b16bc125064035e">
+                <title>static void ros::message_operations::Printer&lt; ::jaco_msgs::JointVelocity_&lt; ContainerAllocator &gt; &gt;::stream (Stream &amp;s, const std::string &amp;indent, const ::jaco_msgs::JointVelocity_&lt; ContainerAllocator &gt; &amp;v)</title> <emphasis></emphasis>
+                
+            </section>
+</section>

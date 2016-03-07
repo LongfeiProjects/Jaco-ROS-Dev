@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="df/da8/namespacegoal__generators">
+<title>goal_generators</title>
+        <section>
+            <title>Variables</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="df/da8/namespacegoal__generators_1a8ffcfd842ed393511c7ee860baa70446">n_fingers</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Functions</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>def <link linkend="df/da8/namespacegoal__generators_1a39b5582c84cdf5891bf92b77ab9c0b3b">joint_angles_from_file</link> (
+filepath )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>def <link linkend="df/da8/namespacegoal__generators_1a565aa27b68e73f1f3b2d1a9da1332051">poses_from_file</link> (
+filepath )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>def <link linkend="df/da8/namespacegoal__generators_1a2b395bfee98a60349c6a7193e8d3059f">random_jaco_finger_positions</link> (
+n_positions )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>def <link linkend="df/da8/namespacegoal__generators_1a6ab109de507bd107dedc7801ca7c5381">random_joint_angles_generator</link> (
+n_poses )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>def <link linkend="df/da8/namespacegoal__generators_1a092d3fe84232b5b0ead199e6d5a822eb">random_mico_finger_positions</link> (
+n_positions )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>def <link linkend="df/da8/namespacegoal__generators_1acc20fd60c84b4f30491d22bf16139668">random_pose_generator</link> (
+n_poses )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+</section>

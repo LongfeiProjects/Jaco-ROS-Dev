@@ -1,0 +1,209 @@
+.TH "D:/Longfei/Desktop/catkin_KinovaROS/src/jaco-ros/jaco_driver/include/kinova/Kinova.API.CommLayerUbuntu.h" 3 "Thu Mar 3 2016" "Version 1.0.1" "Kinova-ROS" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+D:/Longfei/Desktop/catkin_KinovaROS/src/jaco-ros/jaco_driver/include/kinova/Kinova.API.CommLayerUbuntu.h \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <vector>\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBKinovaDevice\fP"
+.br
+.ti -1c
+.RI "struct \fBPacket\fP"
+.br
+.ti -1c
+.RI "struct \fBPacketList\fP"
+.br
+.in -1c
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBERROR_CLAIM_INTERFACE\fP   1008"
+.br
+.ti -1c
+.RI "#define \fBERROR_FREE_LIBRARY\fP   1006"
+.br
+.ti -1c
+.RI "#define \fBERROR_JACO_CONNECTION\fP   1007"
+.br
+.ti -1c
+.RI "#define \fBERROR_LIBUSB_BUSY\fP   1012"
+.br
+.ti -1c
+.RI "#define \fBERROR_LIBUSB_NO_DEVICE\fP   1011"
+.br
+.ti -1c
+.RI "#define \fBERROR_LIBUSB_NOT_SUPPORTED\fP   1013"
+.br
+.ti -1c
+.RI "#define \fBERROR_LOAD_USB_LIBRARY\fP   1001"
+.br
+.ti -1c
+.RI "#define \fBERROR_NO_DEVICE_FOUND\fP   1015"
+.br
+.ti -1c
+.RI "#define \fBERROR_NOT_INITIALIZED\fP   1010"
+.br
+.ti -1c
+.RI "#define \fBERROR_OPEN_METHOD\fP   1002"
+.br
+.ti -1c
+.RI "#define \fBERROR_READ_INT_METHOD\fP   1005"
+.br
+.ti -1c
+.RI "#define \fBERROR_READ_METHOD\fP   1004"
+.br
+.ti -1c
+.RI "#define \fBERROR_SENDPACKET_UNKNOWN\fP   1014"
+.br
+.ti -1c
+.RI "#define \fBERROR_UNKNOWN_DEVICE\fP   1009"
+.br
+.ti -1c
+.RI "#define \fBERROR_WRITE_METHOD\fP   1003"
+.br
+.ti -1c
+.RI "#define \fBKINOVADLLCOMMLAYER_API\fP   __declspec(dllimport)"
+.br
+.ti -1c
+.RI "#define \fBNO_ERROR_KINOVA\fP   1"
+.br
+.ti -1c
+.RI "#define \fBPACKET_DATA_SIZE\fP   56"
+.br
+.ti -1c
+.RI "#define \fBPACKET_HEADER_SIZE\fP   8"
+.br
+.ti -1c
+.RI "#define \fBPACKET_SIZE\fP   64"
+.br
+.ti -1c
+.RI "#define \fBSERIAL_LENGTH\fP   20"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fB__attribute__\fP ((visibility('default'))) int InitCommunication(void)"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "\fBPacket\fP & \fBpacketIn\fP"
+.br
+.ti -1c
+.RI "\fBPacket\fP int & \fBresult\fP"
+.br
+.in -1c
+.SH "Class Documentation"
+.PP 
+.SH "struct KinovaDevice"
+.PP 
+\fBClass Members:\fP
+.RS 4
+int \fIDeviceID\fP 
+.br
+.PP
+char \fISerialNumber[\fBSERIAL_LENGTH\fP]\fP 
+.br
+.PP
+.RE
+.PP
+.SH "struct Packet"
+.PP 
+\fBClass Members:\fP
+.RS 4
+unsigned char \fIData[\fBPACKET_DATA_SIZE\fP]\fP 
+.br
+.PP
+short \fIIdCommand\fP 
+.br
+.PP
+short \fIIdPacket\fP 
+.br
+.PP
+short \fITotalDataSize\fP 
+.br
+.PP
+short \fITotalPacketCount\fP 
+.br
+.PP
+.RE
+.PP
+.SH "struct PacketList"
+.PP 
+\fBClass Members:\fP
+.RS 4
+vector< \fBPacket\fP > \fIpackets\fP 
+.br
+.PP
+.RE
+.PP
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define ERROR_CLAIM_INTERFACE   1008"
+
+.SS "#define ERROR_FREE_LIBRARY   1006"
+
+.SS "#define ERROR_JACO_CONNECTION   1007"
+
+.SS "#define ERROR_LIBUSB_BUSY   1012"
+
+.SS "#define ERROR_LIBUSB_NO_DEVICE   1011"
+
+.SS "#define ERROR_LIBUSB_NOT_SUPPORTED   1013"
+
+.SS "#define ERROR_LOAD_USB_LIBRARY   1001"
+
+.SS "#define ERROR_NO_DEVICE_FOUND   1015"
+
+.SS "#define ERROR_NOT_INITIALIZED   1010"
+
+.SS "#define ERROR_OPEN_METHOD   1002"
+
+.SS "#define ERROR_READ_INT_METHOD   1005"
+
+.SS "#define ERROR_READ_METHOD   1004"
+
+.SS "#define ERROR_SENDPACKET_UNKNOWN   1014"
+
+.SS "#define ERROR_UNKNOWN_DEVICE   1009"
+
+.SS "#define ERROR_WRITE_METHOD   1003"
+
+.SS "#define KINOVADLLCOMMLAYER_API   __declspec(dllimport)"
+
+.SS "#define NO_ERROR_KINOVA   1"
+
+.SS "#define PACKET_DATA_SIZE   56"
+
+.SS "#define PACKET_HEADER_SIZE   8"
+
+.SS "#define PACKET_SIZE   64"
+
+.SS "#define SERIAL_LENGTH   20"
+
+.SH "Function Documentation"
+.PP 
+.SS "__attribute__ ((visibility('default')))"
+
+.SH "Variable Documentation"
+.PP 
+.SS "\fBPacket\fP& packetIn"
+
+.SS "\fBPacket\fP int& result"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Kinova-ROS from the source code\&.

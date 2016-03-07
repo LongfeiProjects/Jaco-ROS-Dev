@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="d2/d13/namespacepose__action__client">
+<title>pose_action_client</title>
+        <section>
+            <title>Variables</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="d2/d13/namespacepose__action__client_1af6e1b48c2733e83789035d19de147d40">result</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Functions</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>def <link linkend="d2/d13/namespacepose__action__client_1a2379b6420c9b26d36eff80d2c269ce09">pose_client</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+</section>

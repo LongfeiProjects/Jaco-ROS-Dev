@@ -1,0 +1,156 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="d7/d98/jaco__types_8h">
+    <title>jaco_types.h File Reference</title>
+    <programlisting>#include &lt;kinova/KinovaTypes.h&gt;</programlisting>
+    <programlisting>#include &lt;geometry_msgs/Pose.h&gt;</programlisting>
+    <programlisting>#include &lt;geometry_msgs/Wrench.h&gt;</programlisting>
+    <programlisting>#include &lt;jaco_msgs/JointAngles.h&gt;</programlisting>
+    <programlisting>#include &lt;jaco_msgs/FingerPosition.h&gt;</programlisting>
+    <programlisting>#include &lt;string&gt;</programlisting>
+<para>Include dependency diagram for jaco_types.h</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../d9/d86/jaco__types_8h__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Included by dependency diagram for jaco_types.h</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../d8/dbe/jaco__types_8h__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+        <section>
+            <title> Classes </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="dd/d28/classjaco_1_1FingerAngles">jaco::FingerAngles</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d4/de6/classjaco_1_1JacoAngles">jaco::JacoAngles</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="df/dbe/classjaco_1_1JacoCommException">jaco::JacoCommException</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="de/d0e/classjaco_1_1JacoException">jaco::JacoException</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="dd/da4/classjaco_1_1JacoPose">jaco::JacoPose</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <simplesect>
+            <title> Namespaces </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d4/d3c/namespacejaco">jaco</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+    <simplesect>
+        <title>Detailed Description</title>
+    <para>Definition in file D:/Longfei/Desktop/catkin_KinovaROS/src/jaco-ros/jaco_driver/include/jaco_driver/jaco_types.h</para>
+    </simplesect>
+    <literallayout><computeroutput>
+1 
+46 <emphasis class="preprocessor">#ifndef&#32;JACO_DRIVER_JACO_TYPES_H</emphasis>
+47 <emphasis class="preprocessor">#define&#32;JACO_DRIVER_JACO_TYPES_H</emphasis>
+48 
+49 <emphasis class="preprocessor">#include&#32;&lt;<link linkend="df/d36/KinovaTypes_8h">kinova/KinovaTypes.h</link>&gt;</emphasis>
+50 <emphasis class="preprocessor">#include&#32;&lt;geometry_msgs/Pose.h&gt;</emphasis>
+51 <emphasis class="preprocessor">#include&#32;&lt;geometry_msgs/Wrench.h&gt;</emphasis>
+52 <emphasis class="preprocessor">#include&#32;&lt;<link linkend="d9/d8d/JointAngles_8h">jaco_msgs/JointAngles.h</link>&gt;</emphasis>
+53 <emphasis class="preprocessor">#include&#32;&lt;<link linkend="da/d1a/FingerPosition_8h">jaco_msgs/FingerPosition.h</link>&gt;</emphasis>
+54 
+55 <emphasis class="preprocessor">#include&#32;&lt;string&gt;</emphasis>
+56 
+57 
+58 <emphasis class="keyword">namespace&#32;</emphasis><link linkend="d4/d3c/namespacejaco">jaco</link>
+59 {
+60 
+<link linkend="de/d0e/classjaco_1_1JacoException">61 </link><emphasis class="keyword">class&#32;</emphasis><link linkend="de/d0e/classjaco_1_1JacoException">JacoException</link>&#32;:&#32;<emphasis class="keyword">public</emphasis>&#32;std::exception&#32;{};
+62 
+63 
+<link linkend="df/dbe/classjaco_1_1JacoCommException">64 </link><emphasis class="keyword">class&#32;</emphasis><link linkend="df/dbe/classjaco_1_1JacoCommException">JacoCommException</link>&#32;:&#32;<emphasis class="keyword">public</emphasis>&#32;<link linkend="de/d0e/classjaco_1_1JacoException">JacoException</link>
+65 {
+66 &#32;<emphasis class="keyword">public</emphasis>:
+67 &#32;&#32;&#32;&#32;<emphasis class="keyword">explicit</emphasis>&#32;<link linkend="df/dbe/classjaco_1_1JacoCommException">JacoCommException</link>(<emphasis class="keyword">const</emphasis>&#32;std::string&amp;&#32;message,&#32;<emphasis class="keyword">const</emphasis>&#32;<emphasis class="keywordtype">int</emphasis>&#32;error_code);
+<link linkend="df/dbe/classjaco_1_1JacoCommException_1a8ef866b21c40fcc539984e0d90f355e3">68 </link>&#32;&#32;&#32;&#32;<link linkend="df/dbe/classjaco_1_1JacoCommException_1a8ef866b21c40fcc539984e0d90f355e3">~JacoCommException</link>()&#32;throw()&#32;{}
+69 
+70 &#32;&#32;&#32;&#32;<emphasis class="keyword">const</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>*&#32;what()&#32;<emphasis class="keyword">const</emphasis>&#32;<emphasis class="keywordflow">throw</emphasis>();
+71 &#32;<emphasis class="keyword">private</emphasis>:
+<link linkend="df/dbe/classjaco_1_1JacoCommException_1ab8c43df074f755cbfc7a6d6bf1b7a950">72 </link>&#32;&#32;&#32;&#32;std::string&#32;<link linkend="df/dbe/classjaco_1_1JacoCommException_1ab8c43df074f755cbfc7a6d6bf1b7a950">desc_</link>;
+73 };
+74 
+75 
+<link linkend="dd/da4/classjaco_1_1JacoPose">76 </link><emphasis class="keyword">class&#32;</emphasis><link linkend="dd/da4/classjaco_1_1JacoPose">JacoPose</link>&#32;:&#32;<emphasis class="keyword">public</emphasis>&#32;<link linkend="dd/d00/structCartesianInfo">CartesianInfo</link>
+77 {
+78 &#32;<emphasis class="keyword">public</emphasis>:
+<link linkend="dd/da4/classjaco_1_1JacoPose_1afadf92820c16343650a71572acf9c402">79 </link>&#32;&#32;&#32;&#32;<link linkend="dd/da4/classjaco_1_1JacoPose_1afadf92820c16343650a71572acf9c402">JacoPose</link>()&#32;{}
+80 &#32;&#32;&#32;&#32;<emphasis class="keyword">explicit</emphasis>&#32;<link linkend="dd/da4/classjaco_1_1JacoPose">JacoPose</link>(<emphasis class="keyword">const</emphasis>&#32;geometry_msgs::Pose&#32;&amp;pose);
+81 &#32;&#32;&#32;&#32;<emphasis class="keyword">explicit</emphasis>&#32;<link linkend="dd/da4/classjaco_1_1JacoPose">JacoPose</link>(<emphasis class="keyword">const</emphasis>&#32;<link linkend="dd/d00/structCartesianInfo">CartesianInfo</link>&#32;&amp;pose);
+82 
+83 &#32;&#32;&#32;&#32;geometry_msgs::Pose&#32;&#32;&#32;constructPoseMsg();
+84 &#32;&#32;&#32;&#32;geometry_msgs::Wrench&#32;constructWrenchMsg();
+85 
+86 &#32;&#32;&#32;&#32;<emphasis class="keywordtype">bool</emphasis>&#32;isCloseToOther(<emphasis class="keyword">const</emphasis>&#32;<link linkend="dd/da4/classjaco_1_1JacoPose">JacoPose</link>&#32;&amp;,&#32;<emphasis class="keywordtype">float</emphasis>&#32;tolerance)&#32;<emphasis class="keyword">const</emphasis>;
+87 };
+88 
+89 
+<link linkend="d4/de6/classjaco_1_1JacoAngles">90 </link><emphasis class="keyword">class&#32;</emphasis><link linkend="d4/de6/classjaco_1_1JacoAngles">JacoAngles</link>&#32;:&#32;<emphasis class="keyword">public</emphasis>&#32;<link linkend="d0/df5/structAngularInfo">AngularInfo</link>
+91 {
+92 &#32;<emphasis class="keyword">public</emphasis>:
+<link linkend="d4/de6/classjaco_1_1JacoAngles_1aaaec2ebb1538fb3c43322e578ae93100">93 </link>&#32;&#32;&#32;&#32;<link linkend="d4/de6/classjaco_1_1JacoAngles_1aaaec2ebb1538fb3c43322e578ae93100">JacoAngles</link>()&#32;{}
+94 &#32;&#32;&#32;&#32;<emphasis class="keyword">explicit</emphasis>&#32;<link linkend="d4/de6/classjaco_1_1JacoAngles">JacoAngles</link>(<emphasis class="keyword">const</emphasis>&#32;<link linkend="d7/dda/structjaco__msgs_1_1JointAngles__">jaco_msgs::JointAngles</link>&#32;&amp;<link linkend="da/dd2/namespacejoint__angle__workout_1a44cb6da34666d45961b26233ed5264bf">angles</link>);
+95 &#32;&#32;&#32;&#32;<emphasis class="keyword">explicit</emphasis>&#32;<link linkend="d4/de6/classjaco_1_1JacoAngles">JacoAngles</link>(<emphasis class="keyword">const</emphasis>&#32;<link linkend="d0/df5/structAngularInfo">AngularInfo</link>&#32;&amp;angles);
+96 
+97 &#32;&#32;&#32;&#32;<link linkend="d7/dda/structjaco__msgs_1_1JointAngles__">jaco_msgs::JointAngles</link>&#32;constructAnglesMsg();
+98 &#32;&#32;&#32;&#32;<emphasis class="keywordtype">bool</emphasis>&#32;isCloseToOther(<emphasis class="keyword">const</emphasis>&#32;<link linkend="d4/de6/classjaco_1_1JacoAngles">JacoAngles</link>&#32;&amp;,&#32;<emphasis class="keywordtype">float</emphasis>&#32;tolerance)&#32;<emphasis class="keyword">const</emphasis>;
+99 };
+100 
+101 
+<link linkend="dd/d28/classjaco_1_1FingerAngles">102 </link><emphasis class="keyword">class&#32;</emphasis><link linkend="dd/d28/classjaco_1_1FingerAngles">FingerAngles</link>&#32;:&#32;<emphasis class="keyword">public</emphasis>&#32;<link linkend="df/d1b/structFingersPosition">FingersPosition</link>
+103 {
+104 &#32;<emphasis class="keyword">public</emphasis>:
+<link linkend="dd/d28/classjaco_1_1FingerAngles_1a7fab91acaaa9865fd50980053bf21788">105 </link>&#32;&#32;&#32;&#32;<link linkend="dd/d28/classjaco_1_1FingerAngles_1a7fab91acaaa9865fd50980053bf21788">FingerAngles</link>()&#32;{}
+106 &#32;&#32;&#32;&#32;<emphasis class="keyword">explicit</emphasis>&#32;<link linkend="dd/d28/classjaco_1_1FingerAngles">FingerAngles</link>(<emphasis class="keyword">const</emphasis>&#32;<link linkend="df/d79/structjaco__msgs_1_1FingerPosition__">jaco_msgs::FingerPosition</link>&#32;&amp;position);
+107 &#32;&#32;&#32;&#32;<emphasis class="keyword">explicit</emphasis>&#32;<link linkend="dd/d28/classjaco_1_1FingerAngles">FingerAngles</link>(<emphasis class="keyword">const</emphasis>&#32;<link linkend="df/d1b/structFingersPosition">FingersPosition</link>&#32;&amp;angle);
+108 
+109 &#32;&#32;&#32;&#32;<link linkend="df/d79/structjaco__msgs_1_1FingerPosition__">jaco_msgs::FingerPosition</link>&#32;constructFingersMsg();
+110 &#32;&#32;&#32;&#32;<emphasis class="keywordtype">bool</emphasis>&#32;isCloseToOther(<emphasis class="keyword">const</emphasis>&#32;<link linkend="dd/d28/classjaco_1_1FingerAngles">FingerAngles</link>&#32;&amp;,&#32;<emphasis class="keywordtype">float</emphasis>&#32;tolerance)&#32;<emphasis class="keyword">const</emphasis>;
+111 };
+112 
+113 }&#32;&#32;<emphasis class="comment">//&#32;namespace&#32;jaco</emphasis>
+114 <emphasis class="preprocessor">#endif&#32;&#32;//&#32;JACO_DRIVER_JACO_TYPES_H</emphasis>
+    </computeroutput></literallayout>
+</section>

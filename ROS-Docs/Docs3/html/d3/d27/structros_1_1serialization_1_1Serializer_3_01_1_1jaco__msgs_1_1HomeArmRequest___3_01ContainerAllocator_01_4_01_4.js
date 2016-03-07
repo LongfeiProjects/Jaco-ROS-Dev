@@ -1,0 +1,5 @@
+var structros_1_1serialization_1_1Serializer_3_01_1_1jaco__msgs_1_1HomeArmRequest___3_01ContainerAllocator_01_4_01_4 =
+[
+    [ "allInOne", "d3/d27/structros_1_1serialization_1_1Serializer_3_01_1_1jaco__msgs_1_1HomeArmRequest___3_01ContainerAllocator_01_4_01_4.html#afd9be9caa7814f9af0c62009138828bb", null ],
+    [ "ROS_DECLARE_ALLINONE_SERIALIZER", "d3/d27/structros_1_1serialization_1_1Serializer_3_01_1_1jaco__msgs_1_1HomeArmRequest___3_01ContainerAllocator_01_4_01_4.html#a6dd14a3029060d22daa54ad04a7b4601", null ]
+];

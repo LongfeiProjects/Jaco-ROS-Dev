@@ -1,0 +1,78 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="d4/d67/structCartesianPosition">
+<title>CartesianPosition struct Reference</title>
+<para>
+    <programlisting>#include <link linkend="df/d36/KinovaTypes_8h">&quot;Definition&quot;</link></programlisting>
+</para>
+<para>Inheritance diagram for CartesianPosition</para>
+<para>
+    <figure>
+        <title>Inheritance graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../de/d32/structCartesianPosition__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Collaboration diagram for CartesianPosition</para>
+<para>
+    <figure>
+        <title>Collaboration graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../d0/df9/structCartesianPosition__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+        <section>
+            <title>Public Attributes</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>CartesianInfo Coordinates<para><emphasis>This contains values regarding the cartesian information.(end effector).</emphasis></para></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>FingersPosition Fingers<para><emphasis>This contains value regarding the fingers.</emphasis></para></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="d4/d67/structCartesianPosition_1a555e4355ff9b88f0088b3ffcfc56af96">InitStruct</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+    <simplesect>
+
+<para>This data structure holds the values of a cartesian position. </para>
+    </simplesect>
+        <simplesect>
+            <title>Detailed Description</title>
+
+<para>Coordinates holds the cartesian parts of the position and Fingers holds contains the value of the fingers. As an example, if an instance of the <link linkend="d4/d67/structCartesianPosition">CartesianPosition</link> is used in a cartesian velocity control context, the values in the struct will be velocity. </para>
+                <para>Definition at line 549 of file KinovaTypes.h</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>KinovaTypes.h</para></listitem></itemizedlist></para>
+        </simplesect>
+        <section>
+            <title>Member Data Documentation</title>
+        </section>
+            <section xml:id="d4/d67/structCartesianPosition_1a555e4355ff9b88f0088b3ffcfc56af96">
+                <title>void CartesianPosition::InitStruct ()</title> <emphasis></emphasis>
+                
+<para>This method will initialises all the values to 0 </para>
+
+            </section>
+</section>

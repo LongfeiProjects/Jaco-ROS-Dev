@@ -1,0 +1,145 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="d0/d9e/jaco__api_8h">
+    <title>jaco_api.h File Reference</title>
+    <programlisting>#include &lt;dlfcn.h&gt;</programlisting>
+    <programlisting>#include &lt;ros/ros.h&gt;</programlisting>
+    <programlisting>#include &lt;iostream&gt;</programlisting>
+    <programlisting>#include &lt;vector&gt;</programlisting>
+    <programlisting>#include &quot;kinova/Kinova.API.UsbCommandLayerUbuntu.h&quot;</programlisting>
+    <programlisting>#include &quot;kinova/KinovaTypes.h&quot;</programlisting>
+<para>Include dependency diagram for jaco_api.h</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../d1/db7/jaco__api_8h__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Included by dependency diagram for jaco_api.h</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../d0/d16/jaco__api_8h__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+        <section>
+            <title> Classes </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d5/d3c/classjaco_1_1JacoAPI">jaco::JacoAPI</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <simplesect>
+            <title> Namespaces </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d4/d3c/namespacejaco">jaco</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <section>
+            <title>Macros</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="d0/d9e/jaco__api_8h_1aaaae826d3bd581061d04edd16b17117e">JACO_USB_LIBRARY</link> &quot;Kinova.API.USBCommandLayerUbuntu.so&quot;</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+    <simplesect>
+        <title>Detailed Description</title>
+    <para>Definition in file D:/Longfei/Desktop/catkin_KinovaROS/src/jaco-ros/jaco_driver/include/jaco_driver/jaco_api.h</para>
+    </simplesect>
+    <literallayout><computeroutput>
+1 <emphasis class="comment">/*</emphasis>
+2 <emphasis class="comment">&#32;*&#32;jacolib.h</emphasis>
+3 <emphasis class="comment">&#32;*</emphasis>
+4 <emphasis class="comment">&#32;*&#32;&#32;Created&#32;on:&#32;Feb&#32;16,&#32;2013</emphasis>
+5 <emphasis class="comment">&#32;*&#32;&#32;Modified&#32;on:&#32;June&#32;25,&#32;2013</emphasis>
+6 <emphasis class="comment">&#32;*&#32;&#32;&#32;&#32;&#32;&#32;Author:&#32;mdedonato,&#32;Clearpath&#32;Robotics</emphasis>
+7 <emphasis class="comment">&#32;*/</emphasis>
+8 
+9 <emphasis class="preprocessor">#ifndef&#32;JACO_DRIVER_JACO_API_H</emphasis>
+10 <emphasis class="preprocessor">#define&#32;JACO_DRIVER_JACO_API_H</emphasis>
+11 
+12 <emphasis class="preprocessor">#include&#32;&lt;dlfcn.h&gt;</emphasis>
+13 <emphasis class="preprocessor">#include&#32;&lt;ros/ros.h&gt;</emphasis>
+14 
+15 <emphasis class="preprocessor">#include&#32;&lt;iostream&gt;</emphasis>
+16 <emphasis class="preprocessor">#include&#32;&lt;vector&gt;</emphasis>
+17 
+18 <emphasis class="preprocessor">#include&#32;&quot;<link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h">kinova/Kinova.API.UsbCommandLayerUbuntu.h</link>&quot;</emphasis>
+19 <emphasis class="preprocessor">#include&#32;&quot;<link linkend="df/d36/KinovaTypes_8h">kinova/KinovaTypes.h</link>&quot;</emphasis>
+20 
+21 
+22 <emphasis class="keyword">namespace&#32;</emphasis><link linkend="d4/d3c/namespacejaco">jaco</link>
+23 {
+24 
+<link linkend="d0/d9e/jaco__api_8h_1aaaae826d3bd581061d04edd16b17117e">25 </link><emphasis class="preprocessor">#define&#32;JACO_USB_LIBRARY&#32;&quot;Kinova.API.USBCommandLayerUbuntu.so&quot;</emphasis>
+26 
+<link linkend="d5/d3c/classjaco_1_1JacoAPI">27 </link><emphasis class="keyword">class&#32;</emphasis><link linkend="d5/d3c/classjaco_1_1JacoAPI">JacoAPI</link>
+28 {
+29 &#32;<emphasis class="keyword">public</emphasis>:
+30 &#32;&#32;&#32;&#32;<link linkend="d5/d3c/classjaco_1_1JacoAPI_1ac9bb26a48274e51c96d460f74372ccd0">JacoAPI</link>(<emphasis class="keywordtype">void</emphasis>);
+31 
+<link linkend="d5/d3c/classjaco_1_1JacoAPI_1a06eae62c9dd3e144cc4275048c3129e6">32 </link>&#32;&#32;&#32;&#32;int&#32;(*<link linkend="d5/d3c/classjaco_1_1JacoAPI_1a06eae62c9dd3e144cc4275048c3129e6">initAPI</link>)(void);
+<link linkend="d5/d3c/classjaco_1_1JacoAPI_1a941453ebf5242c5adad823c0636f930f">33 </link>&#32;&#32;&#32;&#32;int&#32;(*<link linkend="d5/d3c/classjaco_1_1JacoAPI_1a941453ebf5242c5adad823c0636f930f">closeAPI</link>)(void);
+<link linkend="d5/d3c/classjaco_1_1JacoAPI_1a90f1033a1174ea7f97d48186b7ca867a">34 </link>&#32;&#32;&#32;&#32;int&#32;(*<link linkend="d5/d3c/classjaco_1_1JacoAPI_1a90f1033a1174ea7f97d48186b7ca867a">getAPIVersion</link>)(std::vector&lt;int&gt;&#32;&amp;);
+<link linkend="d5/d3c/classjaco_1_1JacoAPI_1a6f80ab16b2518ecb0ddefcd7183027c1">35 </link>&#32;&#32;&#32;&#32;int&#32;(*<link linkend="d5/d3c/classjaco_1_1JacoAPI_1a6f80ab16b2518ecb0ddefcd7183027c1">getDevices</link>)(std::vector&lt;KinovaDevice&gt;&#32;&amp;,&#32;<emphasis class="keywordtype">int</emphasis>&#32;&amp;);
+<link linkend="d5/d3c/classjaco_1_1JacoAPI_1a4e0c8fc007f20e985545b59abf571ea0">36 </link>&#32;&#32;&#32;&#32;int&#32;(*<link linkend="d5/d3c/classjaco_1_1JacoAPI_1a4e0c8fc007f20e985545b59abf571ea0">setActiveDevice</link>)(<link linkend="db/dfe/Kinova_8API_8CommLayerUbuntu_8h_1da/dd6/structKinovaDevice">KinovaDevice</link>);
+37 
+<link linkend="d5/d3c/classjaco_1_1JacoAPI_1ae1e29dcccd26e66e34271beff3a52f8c">38 </link>&#32;&#32;&#32;&#32;int&#32;(*<link linkend="d5/d3c/classjaco_1_1JacoAPI_1ae1e29dcccd26e66e34271beff3a52f8c">getGeneralInformations</link>)(<link linkend="df/d36/KinovaTypes_8h_1d2/d0f/structGeneralInformations">GeneralInformations</link>&#32;&amp;);
+<link linkend="d5/d3c/classjaco_1_1JacoAPI_1ae4297fe364b296252a1c91efb9024b03">39 </link>&#32;&#32;&#32;&#32;int&#32;(*<link linkend="d5/d3c/classjaco_1_1JacoAPI_1ae4297fe364b296252a1c91efb9024b03">getQuickStatus</link>)(<link linkend="df/d36/KinovaTypes_8h_1df/d9d/structQuickStatus">QuickStatus</link>&#32;&amp;);
+40 &#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;int&#32;(*GetForcesInfo)(ForcesInfo&#32;&amp;);</emphasis>
+41 
+<link linkend="d5/d3c/classjaco_1_1JacoAPI_1ab2e6426177bd24cd1a381f0f1a9d277a">42 </link>&#32;&#32;&#32;&#32;int&#32;(*<link linkend="d5/d3c/classjaco_1_1JacoAPI_1ab2e6426177bd24cd1a381f0f1a9d277a">getCodeVersion</link>)(std::vector&lt;int&gt;&#32;&amp;);
+<link linkend="d5/d3c/classjaco_1_1JacoAPI_1a75d269278bf284a368f42ce1f8a3eb2e">43 </link>&#32;&#32;&#32;&#32;int&#32;(*<link linkend="d5/d3c/classjaco_1_1JacoAPI_1a75d269278bf284a368f42ce1f8a3eb2e">startControlAPI</link>)();
+<link linkend="d5/d3c/classjaco_1_1JacoAPI_1a41fefb13b76fc591cde461d1a9b91bb2">44 </link>&#32;&#32;&#32;&#32;int&#32;(*<link linkend="d5/d3c/classjaco_1_1JacoAPI_1a41fefb13b76fc591cde461d1a9b91bb2">stopControlAPI</link>)();
+<link linkend="d5/d3c/classjaco_1_1JacoAPI_1a2e57f45393bda81a7c7c91373a6c6359">45 </link>&#32;&#32;&#32;&#32;int&#32;(*<link linkend="d5/d3c/classjaco_1_1JacoAPI_1a2e57f45393bda81a7c7c91373a6c6359">initFingers</link>)();
+46 
+<link linkend="d5/d3c/classjaco_1_1JacoAPI_1a3f3b46efd241e60665a70505fe1853af">47 </link>&#32;&#32;&#32;&#32;int&#32;(*<link linkend="d5/d3c/classjaco_1_1JacoAPI_1a3f3b46efd241e60665a70505fe1853af">moveHome</link>)();
+48 
+<link linkend="d5/d3c/classjaco_1_1JacoAPI_1a6c3640d554617754a9ed2e875b1a2cd0">49 </link>&#32;&#32;&#32;&#32;int&#32;(*<link linkend="d5/d3c/classjaco_1_1JacoAPI_1a6c3640d554617754a9ed2e875b1a2cd0">getCartesianPosition</link>)(<link linkend="d4/d67/structCartesianPosition">CartesianPosition</link>&#32;&amp;);
+<link linkend="d5/d3c/classjaco_1_1JacoAPI_1a8d2e9b00c5953e3fc024f86e128f01df">50 </link>&#32;&#32;&#32;&#32;int&#32;(*<link linkend="d5/d3c/classjaco_1_1JacoAPI_1a8d2e9b00c5953e3fc024f86e128f01df">getAngularPosition</link>)(<link linkend="df/d36/KinovaTypes_8h_1de/de7/structAngularPosition">AngularPosition</link>&#32;&amp;);
+<link linkend="d5/d3c/classjaco_1_1JacoAPI_1af50f11de8f7c2b661f53d76f576eb3ae">51 </link>&#32;&#32;&#32;&#32;int&#32;(*<link linkend="d5/d3c/classjaco_1_1JacoAPI_1af50f11de8f7c2b661f53d76f576eb3ae">getAngularVelocity</link>)(<link linkend="df/d36/KinovaTypes_8h_1de/de7/structAngularPosition">AngularPosition</link>&#32;&amp;);
+<link linkend="d5/d3c/classjaco_1_1JacoAPI_1af82e531abda1dd3e87ab33f1f5474ca5">52 </link>&#32;&#32;&#32;&#32;int&#32;(*<link linkend="d5/d3c/classjaco_1_1JacoAPI_1af82e531abda1dd3e87ab33f1f5474ca5">getCartesianForce</link>)(<link linkend="d4/d67/structCartesianPosition">CartesianPosition</link>&#32;&amp;);
+<link linkend="d5/d3c/classjaco_1_1JacoAPI_1aa592360dc8cc3d2a2343621d8ec8dac5">53 </link>&#32;&#32;&#32;&#32;int&#32;(*<link linkend="d5/d3c/classjaco_1_1JacoAPI_1aa592360dc8cc3d2a2343621d8ec8dac5">setCartesianForceMinMax</link>)(<link linkend="dd/d00/structCartesianInfo">CartesianInfo</link>,&#32;<link linkend="dd/d00/structCartesianInfo">CartesianInfo</link>);
+<link linkend="d5/d3c/classjaco_1_1JacoAPI_1a24709f5e768c7aab4a9b1de1308d65ea">54 </link>&#32;&#32;&#32;&#32;int&#32;(*<link linkend="d5/d3c/classjaco_1_1JacoAPI_1a24709f5e768c7aab4a9b1de1308d65ea">setCartesianInertiaDamping</link>)(<link linkend="dd/d00/structCartesianInfo">CartesianInfo</link>,&#32;<link linkend="dd/d00/structCartesianInfo">CartesianInfo</link>);
+<link linkend="d5/d3c/classjaco_1_1JacoAPI_1a548f1d6251582bb4fe9cb5cb69f08b2d">55 </link>&#32;&#32;&#32;&#32;int&#32;(*<link linkend="d5/d3c/classjaco_1_1JacoAPI_1a548f1d6251582bb4fe9cb5cb69f08b2d">startForceControl</link>)();
+<link linkend="d5/d3c/classjaco_1_1JacoAPI_1ac3881ef354400b32a4d71796dba66d67">56 </link>&#32;&#32;&#32;&#32;int&#32;(*<link linkend="d5/d3c/classjaco_1_1JacoAPI_1ac3881ef354400b32a4d71796dba66d67">stopForceControl</link>)();
+<link linkend="d5/d3c/classjaco_1_1JacoAPI_1aea22577840f066fb2d5da409e50f9760">57 </link>&#32;&#32;&#32;&#32;int&#32;(*<link linkend="d5/d3c/classjaco_1_1JacoAPI_1aea22577840f066fb2d5da409e50f9760">getAngularForce</link>)(<link linkend="df/d36/KinovaTypes_8h_1de/de7/structAngularPosition">AngularPosition</link>&#32;&amp;);
+<link linkend="d5/d3c/classjaco_1_1JacoAPI_1ac24c226ba8ee3b72618a84eaab9d722a">58 </link>&#32;&#32;&#32;&#32;int&#32;(*<link linkend="d5/d3c/classjaco_1_1JacoAPI_1ac24c226ba8ee3b72618a84eaab9d722a">getAngularCurrent</link>)(<link linkend="df/d36/KinovaTypes_8h_1de/de7/structAngularPosition">AngularPosition</link>&#32;&amp;);
+<link linkend="d5/d3c/classjaco_1_1JacoAPI_1aff9218e13471d4d021f8144738c73ff1">59 </link>&#32;&#32;&#32;&#32;int&#32;(*<link linkend="d5/d3c/classjaco_1_1JacoAPI_1aff9218e13471d4d021f8144738c73ff1">getControlType</link>)(<emphasis class="keywordtype">int</emphasis>&#32;&amp;);
+<link linkend="d5/d3c/classjaco_1_1JacoAPI_1af2f83a5e6bef4f10dc4c7d714a593e4c">60 </link>&#32;&#32;&#32;&#32;int&#32;(*<link linkend="d5/d3c/classjaco_1_1JacoAPI_1af2f83a5e6bef4f10dc4c7d714a593e4c">getActualTrajectoryInfo</link>)(<link linkend="d4/d8e/structTrajectoryPoint">TrajectoryPoint</link>&#32;&amp;);
+<link linkend="d5/d3c/classjaco_1_1JacoAPI_1a9638cf9678156df980370819dabd685e">61 </link>&#32;&#32;&#32;&#32;int&#32;(*<link linkend="d5/d3c/classjaco_1_1JacoAPI_1a9638cf9678156df980370819dabd685e">getGlobalTrajectoryInfo</link>)(<link linkend="df/d36/KinovaTypes_8h_1d7/ddf/structTrajectoryFIFO">TrajectoryFIFO</link>&#32;&amp;);
+<link linkend="d5/d3c/classjaco_1_1JacoAPI_1a390a9f4759fe2bd34a43634a17598638">62 </link>&#32;&#32;&#32;&#32;int&#32;(*<link linkend="d5/d3c/classjaco_1_1JacoAPI_1a390a9f4759fe2bd34a43634a17598638">getSensorsInfo</link>)(<link linkend="d7/d40/structSensorsInfo">SensorsInfo</link>&#32;&amp;);
+<link linkend="d5/d3c/classjaco_1_1JacoAPI_1a4ce9340d50866cf102722ad6c370bdfd">63 </link>&#32;&#32;&#32;&#32;int&#32;(*<link linkend="d5/d3c/classjaco_1_1JacoAPI_1a4ce9340d50866cf102722ad6c370bdfd">setAngularControl</link>)();
+<link linkend="d5/d3c/classjaco_1_1JacoAPI_1a24b6c14f08d97bea2a5562c8c2f10877">64 </link>&#32;&#32;&#32;&#32;int&#32;(*<link linkend="d5/d3c/classjaco_1_1JacoAPI_1a24b6c14f08d97bea2a5562c8c2f10877">setCartesianControl</link>)();
+<link linkend="d5/d3c/classjaco_1_1JacoAPI_1a64825b0563a56de02532a558ef902586">65 </link>&#32;&#32;&#32;&#32;int&#32;(*<link linkend="d5/d3c/classjaco_1_1JacoAPI_1a64825b0563a56de02532a558ef902586">restoreFactoryDefault</link>)();
+<link linkend="d5/d3c/classjaco_1_1JacoAPI_1a57328804ef00fd40492ba065be3fe3f1">66 </link>&#32;&#32;&#32;&#32;int&#32;(*<link linkend="d5/d3c/classjaco_1_1JacoAPI_1a57328804ef00fd40492ba065be3fe3f1">sendJoystickCommand</link>)(<link linkend="db/d40/structJoystickCommand">JoystickCommand</link>);
+<link linkend="d5/d3c/classjaco_1_1JacoAPI_1a30abd0123d85582b684fbd86437d403c">67 </link>&#32;&#32;&#32;&#32;int&#32;(*<link linkend="d5/d3c/classjaco_1_1JacoAPI_1a30abd0123d85582b684fbd86437d403c">sendAdvanceTrajectory</link>)(<link linkend="d4/d8e/structTrajectoryPoint">TrajectoryPoint</link>);
+<link linkend="d5/d3c/classjaco_1_1JacoAPI_1acbaea3e47825b270d85d783c9f29d472">68 </link>&#32;&#32;&#32;&#32;int&#32;(*<link linkend="d5/d3c/classjaco_1_1JacoAPI_1acbaea3e47825b270d85d783c9f29d472">sendBasicTrajectory</link>)(<link linkend="d4/d8e/structTrajectoryPoint">TrajectoryPoint</link>);
+<link linkend="d5/d3c/classjaco_1_1JacoAPI_1a215a64d2dee8b2555d317da41e25ae16">69 </link>&#32;&#32;&#32;&#32;int&#32;(*<link linkend="d5/d3c/classjaco_1_1JacoAPI_1a215a64d2dee8b2555d317da41e25ae16">getClientConfigurations</link>)(<link linkend="df/d36/KinovaTypes_8h_1d1/d2e/structClientConfigurations">ClientConfigurations</link>&#32;&amp;);
+<link linkend="d5/d3c/classjaco_1_1JacoAPI_1ad6b85298e2502e6888ce6b7a1e494e49">70 </link>&#32;&#32;&#32;&#32;int&#32;(*<link linkend="d5/d3c/classjaco_1_1JacoAPI_1ad6b85298e2502e6888ce6b7a1e494e49">setClientConfigurations</link>)(<link linkend="df/d36/KinovaTypes_8h_1d1/d2e/structClientConfigurations">ClientConfigurations</link>);
+<link linkend="d5/d3c/classjaco_1_1JacoAPI_1a97db09d91923328b1780bb50a0e2548d">71 </link>&#32;&#32;&#32;&#32;int&#32;(*<link linkend="d5/d3c/classjaco_1_1JacoAPI_1a97db09d91923328b1780bb50a0e2548d">eraseAllTrajectories</link>)();
+<link linkend="d5/d3c/classjaco_1_1JacoAPI_1ac38d62b7adb611552bee71aa49f967b9">72 </link>&#32;&#32;&#32;&#32;int&#32;(*<link linkend="d5/d3c/classjaco_1_1JacoAPI_1ac38d62b7adb611552bee71aa49f967b9">getPositionCurrentActuators</link>)(std::vector&lt;float&gt;&#32;&amp;);
+<link linkend="d5/d3c/classjaco_1_1JacoAPI_1a3fff8abf62a8b45c1905bad4c5592126">73 </link>&#32;&#32;&#32;&#32;int&#32;(*<link linkend="d5/d3c/classjaco_1_1JacoAPI_1a3fff8abf62a8b45c1905bad4c5592126">setActuatorPID</link>)(<emphasis class="keywordtype">unsigned</emphasis>&#32;int,&#32;float,&#32;float,&#32;float);
+74 };
+75 
+76 }&#32;&#32;<emphasis class="comment">//&#32;namespace&#32;jaco</emphasis>
+77 <emphasis class="preprocessor">#endif&#32;&#32;//&#32;JACO_DRIVER_JACO_API_H</emphasis>
+    </computeroutput></literallayout>
+</section>

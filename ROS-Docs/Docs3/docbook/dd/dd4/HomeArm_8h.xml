@@ -1,0 +1,267 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="dd/dd4/HomeArm_8h">
+    <title>HomeArm.h File Reference</title>
+    <programlisting>#include &lt;ros/service_traits.h&gt;</programlisting>
+    <programlisting>#include &lt;jaco_msgs/HomeArmRequest.h&gt;</programlisting>
+    <programlisting>#include &lt;jaco_msgs/HomeArmResponse.h&gt;</programlisting>
+<para>Include dependency diagram for HomeArm.h</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../d7/d36/HomeArm_8h__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Included by dependency diagram for HomeArm.h</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../d6/d4d/HomeArm_8h__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+        <section>
+            <title> Classes </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d7/dba/namespacejaco__msgs">jaco_msgs::HomeArm</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d2/d62/structros_1_1service__traits_1_1DataType_3_01_1_1jaco__msgs_1_1HomeArm_01_4">ros::service_traits::DataType&lt; ::jaco_msgs::HomeArm &gt;</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d5/d9d/structros_1_1service__traits_1_1DataType_3_01_1_1jaco__msgs_1_1HomeArmRequest_01_4">ros::service_traits::DataType&lt; ::jaco_msgs::HomeArmRequest &gt;</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d8/d07/structros_1_1service__traits_1_1DataType_3_01_1_1jaco__msgs_1_1HomeArmResponse_01_4">ros::service_traits::DataType&lt; ::jaco_msgs::HomeArmResponse &gt;</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d0/d36/structros_1_1service__traits_1_1MD5Sum_3_01_1_1jaco__msgs_1_1HomeArm_01_4">ros::service_traits::MD5Sum&lt; ::jaco_msgs::HomeArm &gt;</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d8/df1/structros_1_1service__traits_1_1MD5Sum_3_01_1_1jaco__msgs_1_1HomeArmRequest_01_4">ros::service_traits::MD5Sum&lt; ::jaco_msgs::HomeArmRequest &gt;</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d6/d2f/structros_1_1service__traits_1_1MD5Sum_3_01_1_1jaco__msgs_1_1HomeArmResponse_01_4">ros::service_traits::MD5Sum&lt; ::jaco_msgs::HomeArmResponse &gt;</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <simplesect>
+            <title> Namespaces </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d7/dba/namespacejaco__msgs">jaco_msgs</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="db/d2f/namespaceros">ros</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d4/dd1/namespaceros_1_1service__traits">ros::service_traits</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+    <simplesect>
+        <title>Detailed Description</title>
+    <para>Definition in file D:/Longfei/Desktop/catkin_KinovaROS/devel/include/jaco_msgs/HomeArm.h</para>
+    </simplesect>
+    <literallayout><computeroutput>
+1 <emphasis class="comment">/*&#32;Software&#32;License&#32;Agreement&#32;(BSD&#32;License)</emphasis>
+2 <emphasis class="comment">&#32;*</emphasis>
+3 <emphasis class="comment">&#32;*&#32;Copyright&#32;(c)&#32;2011,&#32;Willow&#32;Garage,&#32;Inc.</emphasis>
+4 <emphasis class="comment">&#32;*&#32;All&#32;rights&#32;reserved.</emphasis>
+5 <emphasis class="comment">&#32;*</emphasis>
+6 <emphasis class="comment">&#32;*&#32;Redistribution&#32;and&#32;use&#32;in&#32;source&#32;and&#32;binary&#32;forms,&#32;with&#32;or&#32;without</emphasis>
+7 <emphasis class="comment">&#32;*&#32;modification,&#32;are&#32;permitted&#32;provided&#32;that&#32;the&#32;following&#32;conditions</emphasis>
+8 <emphasis class="comment">&#32;*&#32;are&#32;met:</emphasis>
+9 <emphasis class="comment">&#32;*</emphasis>
+10 <emphasis class="comment">&#32;*&#32;&#32;*&#32;Redistributions&#32;of&#32;source&#32;code&#32;must&#32;retain&#32;the&#32;above&#32;copyright</emphasis>
+11 <emphasis class="comment">&#32;*&#32;&#32;&#32;&#32;notice,&#32;this&#32;list&#32;of&#32;conditions&#32;and&#32;the&#32;following&#32;disclaimer.</emphasis>
+12 <emphasis class="comment">&#32;*&#32;&#32;*&#32;Redistributions&#32;in&#32;binary&#32;form&#32;must&#32;reproduce&#32;the&#32;above</emphasis>
+13 <emphasis class="comment">&#32;*&#32;&#32;&#32;&#32;copyright&#32;notice,&#32;this&#32;list&#32;of&#32;conditions&#32;and&#32;the&#32;following</emphasis>
+14 <emphasis class="comment">&#32;*&#32;&#32;&#32;&#32;disclaimer&#32;in&#32;the&#32;documentation&#32;and/or&#32;other&#32;materials&#32;provided</emphasis>
+15 <emphasis class="comment">&#32;*&#32;&#32;&#32;&#32;with&#32;the&#32;distribution.</emphasis>
+16 <emphasis class="comment">&#32;*&#32;&#32;*&#32;Neither&#32;the&#32;name&#32;of&#32;Willow&#32;Garage,&#32;Inc.&#32;nor&#32;the&#32;names&#32;of&#32;its</emphasis>
+17 <emphasis class="comment">&#32;*&#32;&#32;&#32;&#32;contributors&#32;may&#32;be&#32;used&#32;to&#32;endorse&#32;or&#32;promote&#32;products&#32;derived</emphasis>
+18 <emphasis class="comment">&#32;*&#32;&#32;&#32;&#32;from&#32;this&#32;software&#32;without&#32;specific&#32;prior&#32;written&#32;permission.</emphasis>
+19 <emphasis class="comment">&#32;*</emphasis>
+20 <emphasis class="comment">&#32;*&#32;THIS&#32;SOFTWARE&#32;IS&#32;PROVIDED&#32;BY&#32;THE&#32;COPYRIGHT&#32;HOLDERS&#32;AND&#32;CONTRIBUTORS</emphasis>
+21 <emphasis class="comment">&#32;*&#32;&quot;AS&#32;IS&quot;&#32;AND&#32;ANY&#32;EXPRESS&#32;OR&#32;IMPLIED&#32;WARRANTIES,&#32;INCLUDING,&#32;BUT&#32;NOT</emphasis>
+22 <emphasis class="comment">&#32;*&#32;LIMITED&#32;TO,&#32;THE&#32;IMPLIED&#32;WARRANTIES&#32;OF&#32;MERCHANTABILITY&#32;AND&#32;FITNESS</emphasis>
+23 <emphasis class="comment">&#32;*&#32;FOR&#32;A&#32;PARTICULAR&#32;PURPOSE&#32;ARE&#32;DISCLAIMED.&#32;IN&#32;NO&#32;EVENT&#32;SHALL&#32;THE</emphasis>
+24 <emphasis class="comment">&#32;*&#32;COPYRIGHT&#32;OWNER&#32;OR&#32;CONTRIBUTORS&#32;BE&#32;LIABLE&#32;FOR&#32;ANY&#32;DIRECT,&#32;INDIRECT,</emphasis>
+25 <emphasis class="comment">&#32;*&#32;INCIDENTAL,&#32;SPECIAL,&#32;EXEMPLARY,&#32;OR&#32;CONSEQUENTIAL&#32;DAMAGES&#32;(INCLUDING,</emphasis>
+26 <emphasis class="comment">&#32;*&#32;BUT&#32;NOT&#32;LIMITED&#32;TO,&#32;PROCUREMENT&#32;OF&#32;SUBSTITUTE&#32;GOODS&#32;OR&#32;SERVICES;</emphasis>
+27 <emphasis class="comment">&#32;*&#32;LOSS&#32;OF&#32;USE,&#32;DATA,&#32;OR&#32;PROFITS;&#32;OR&#32;BUSINESS&#32;INTERRUPTION)&#32;HOWEVER</emphasis>
+28 <emphasis class="comment">&#32;*&#32;CAUSED&#32;AND&#32;ON&#32;ANY&#32;THEORY&#32;OF&#32;LIABILITY,&#32;WHETHER&#32;IN&#32;CONTRACT,&#32;STRICT</emphasis>
+29 <emphasis class="comment">&#32;*&#32;LIABILITY,&#32;OR&#32;TORT&#32;(INCLUDING&#32;NEGLIGENCE&#32;OR&#32;OTHERWISE)&#32;ARISING&#32;IN</emphasis>
+30 <emphasis class="comment">&#32;*&#32;ANY&#32;WAY&#32;OUT&#32;OF&#32;THE&#32;USE&#32;OF&#32;THIS&#32;SOFTWARE,&#32;EVEN&#32;IF&#32;ADVISED&#32;OF&#32;THE</emphasis>
+31 <emphasis class="comment">&#32;*&#32;POSSIBILITY&#32;OF&#32;SUCH&#32;DAMAGE.</emphasis>
+32 <emphasis class="comment">&#32;*</emphasis>
+33 <emphasis class="comment">&#32;*&#32;Auto-generated&#32;by&#32;gensrv_cpp&#32;from&#32;file&#32;/home/longfei/catkin_KinovaROS/src/jaco-ros/jaco_msgs/srv/HomeArm.srv</emphasis>
+34 <emphasis class="comment">&#32;*</emphasis>
+35 <emphasis class="comment">&#32;*/</emphasis>
+36 
+37 
+38 <emphasis class="preprocessor">#ifndef&#32;JACO_MSGS_MESSAGE_HOMEARM_H</emphasis>
+39 <emphasis class="preprocessor">#define&#32;JACO_MSGS_MESSAGE_HOMEARM_H</emphasis>
+40 
+41 <emphasis class="preprocessor">#include&#32;&lt;ros/service_traits.h&gt;</emphasis>
+42 
+43 
+44 <emphasis class="preprocessor">#include&#32;&lt;<link linkend="d1/d5a/HomeArmRequest_8h">jaco_msgs/HomeArmRequest.h</link>&gt;</emphasis>
+45 <emphasis class="preprocessor">#include&#32;&lt;<link linkend="db/dda/HomeArmResponse_8h">jaco_msgs/HomeArmResponse.h</link>&gt;</emphasis>
+46 
+47 
+48 <emphasis class="keyword">namespace&#32;</emphasis><link linkend="d7/dba/namespacejaco__msgs">jaco_msgs</link>
+49 {
+50 
+<link linkend="d7/dba/namespacejaco__msgs">51 </link><emphasis class="keyword">struct&#32;</emphasis><link linkend="d7/dba/namespacejaco__msgs_1d2/d3e/structjaco__msgs_1_1HomeArm">HomeArm</link>
+52 {
+53 
+<link linkend="d7/dba/namespacejaco__msgs_1a9ec1a0126f783da04c0c07f2142c54e8">54 </link><emphasis class="keyword">typedef</emphasis>&#32;<link linkend="de/dcb/structjaco__msgs_1_1HomeArmRequest__">HomeArmRequest</link>&#32;<link linkend="d7/dba/namespacejaco__msgs_1a9ec1a0126f783da04c0c07f2142c54e8">Request</link>;
+<link linkend="d7/dba/namespacejaco__msgs_1a73b7d664d9eb1b07a5e5eebf08b4b444">55 </link><emphasis class="keyword">typedef</emphasis>&#32;<link linkend="d8/d71/structjaco__msgs_1_1HomeArmResponse__">HomeArmResponse</link>&#32;<link linkend="d7/dba/namespacejaco__msgs_1a73b7d664d9eb1b07a5e5eebf08b4b444">Response</link>;
+<link linkend="d7/dba/namespacejaco__msgs_1a5f40190abc365cd8aaf54465ee7e9b98">56 </link>Request&#32;<link linkend="d7/dba/namespacejaco__msgs_1a5f40190abc365cd8aaf54465ee7e9b98">request</link>;
+<link linkend="d7/dba/namespacejaco__msgs_1a26dfaf931c3f3edf4776d498bd473fa2">57 </link>Response&#32;<link linkend="d7/dba/namespacejaco__msgs_1a26dfaf931c3f3edf4776d498bd473fa2">response</link>;
+58 
+<link linkend="d7/dba/namespacejaco__msgs_1acb638c1518fd6f4129c262bc37611c5d">59 </link><emphasis class="keyword">typedef</emphasis>&#32;Request&#32;<link linkend="d7/dba/namespacejaco__msgs_1acb638c1518fd6f4129c262bc37611c5d">RequestType</link>;
+<link linkend="d7/dba/namespacejaco__msgs_1a2d258230b8b7e1ce8f3a2fbb3032ff29">60 </link><emphasis class="keyword">typedef</emphasis>&#32;Response&#32;<link linkend="d7/dba/namespacejaco__msgs_1a2d258230b8b7e1ce8f3a2fbb3032ff29">ResponseType</link>;
+61 
+62 };&#32;<emphasis class="comment">//&#32;struct&#32;HomeArm</emphasis>
+63 }&#32;<emphasis class="comment">//&#32;namespace&#32;jaco_msgs</emphasis>
+64 
+65 
+66 <emphasis class="keyword">namespace&#32;</emphasis><link linkend="db/d2f/namespaceros">ros</link>
+67 {
+<link linkend="d4/dd1/namespaceros_1_1service__traits">68 </link><emphasis class="keyword">namespace&#32;</emphasis>service_traits
+69 {
+70 
+71 
+72 <emphasis class="keyword">template</emphasis>&lt;&gt;
+<link linkend="d0/d36/structros_1_1service__traits_1_1MD5Sum_3_01_1_1jaco__msgs_1_1HomeArm_01_4">73 </link><emphasis class="keyword">struct&#32;</emphasis>MD5Sum&lt;&#32;::<link linkend="d7/dba/namespacejaco__msgs_1d2/d3e/structjaco__msgs_1_1HomeArm">jaco_msgs::HomeArm</link>&#32;&gt;&#32;{
+<link linkend="d0/d36/structros_1_1service__traits_1_1MD5Sum_3_01_1_1jaco__msgs_1_1HomeArm_01_4_1a1bceb87f47cdef0e474c63b48092c539">74 </link>&#32;&#32;<emphasis class="keyword">static</emphasis>&#32;<emphasis class="keyword">const</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>*&#32;<link linkend="d0/d36/structros_1_1service__traits_1_1MD5Sum_3_01_1_1jaco__msgs_1_1HomeArm_01_4_1a1bceb87f47cdef0e474c63b48092c539">value</link>()
+75 &#32;&#32;{
+76 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;<emphasis class="stringliteral">&quot;46e470f2c1a7177398c57a43eafe8d67&quot;</emphasis>;
+77 &#32;&#32;}
+78 
+<link linkend="d0/d36/structros_1_1service__traits_1_1MD5Sum_3_01_1_1jaco__msgs_1_1HomeArm_01_4_1a811a3c8cf1fd7fb653fe3b42212a676b">79 </link>&#32;&#32;<emphasis class="keyword">static</emphasis>&#32;<emphasis class="keyword">const</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>*&#32;<link linkend="d0/d36/structros_1_1service__traits_1_1MD5Sum_3_01_1_1jaco__msgs_1_1HomeArm_01_4_1a811a3c8cf1fd7fb653fe3b42212a676b">value</link>(const&#32;::jaco_msgs::HomeArm&amp;)&#32;{&#32;<emphasis class="keywordflow">return</emphasis>&#32;<link linkend="d0/d36/structros_1_1service__traits_1_1MD5Sum_3_01_1_1jaco__msgs_1_1HomeArm_01_4_1a811a3c8cf1fd7fb653fe3b42212a676b">value</link>();&#32;}
+80 };
+81 
+82 <emphasis class="keyword">template</emphasis>&lt;&gt;
+<link linkend="d2/d62/structros_1_1service__traits_1_1DataType_3_01_1_1jaco__msgs_1_1HomeArm_01_4">83 </link><emphasis class="keyword">struct&#32;</emphasis>DataType&lt;&#32;::<link linkend="d7/dba/namespacejaco__msgs_1d2/d3e/structjaco__msgs_1_1HomeArm">jaco_msgs::HomeArm</link>&#32;&gt;&#32;{
+<link linkend="d2/d62/structros_1_1service__traits_1_1DataType_3_01_1_1jaco__msgs_1_1HomeArm_01_4_1acbc0e45eed97b41dd1eae5097f37c936">84 </link>&#32;&#32;<emphasis class="keyword">static</emphasis>&#32;<emphasis class="keyword">const</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>*&#32;<link linkend="d2/d62/structros_1_1service__traits_1_1DataType_3_01_1_1jaco__msgs_1_1HomeArm_01_4_1acbc0e45eed97b41dd1eae5097f37c936">value</link>()
+85 &#32;&#32;{
+86 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;<emphasis class="stringliteral">&quot;jaco_msgs/HomeArm&quot;</emphasis>;
+87 &#32;&#32;}
+88 
+<link linkend="d2/d62/structros_1_1service__traits_1_1DataType_3_01_1_1jaco__msgs_1_1HomeArm_01_4_1a08ea5ed49ad956bb0822b6dc20b6024d">89 </link>&#32;&#32;<emphasis class="keyword">static</emphasis>&#32;<emphasis class="keyword">const</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>*&#32;<link linkend="d2/d62/structros_1_1service__traits_1_1DataType_3_01_1_1jaco__msgs_1_1HomeArm_01_4_1a08ea5ed49ad956bb0822b6dc20b6024d">value</link>(const&#32;::jaco_msgs::HomeArm&amp;)&#32;{&#32;<emphasis class="keywordflow">return</emphasis>&#32;<link linkend="d2/d62/structros_1_1service__traits_1_1DataType_3_01_1_1jaco__msgs_1_1HomeArm_01_4_1a08ea5ed49ad956bb0822b6dc20b6024d">value</link>();&#32;}
+90 };
+91 
+92 
+93 <emphasis class="comment">//&#32;service_traits::MD5Sum&lt;&#32;::jaco_msgs::HomeArmRequest&gt;&#32;should&#32;match&#32;</emphasis>
+94 <emphasis class="comment">//&#32;service_traits::MD5Sum&lt;&#32;::jaco_msgs::HomeArm&#32;&gt;&#32;</emphasis>
+95 <emphasis class="keyword">template</emphasis>&lt;&gt;
+<link linkend="d8/df1/structros_1_1service__traits_1_1MD5Sum_3_01_1_1jaco__msgs_1_1HomeArmRequest_01_4">96 </link><emphasis class="keyword">struct&#32;</emphasis>MD5Sum&lt;&#32;::<link linkend="de/dcb/structjaco__msgs_1_1HomeArmRequest__">jaco_msgs::HomeArmRequest</link>&gt;
+97 {
+<link linkend="d8/df1/structros_1_1service__traits_1_1MD5Sum_3_01_1_1jaco__msgs_1_1HomeArmRequest_01_4_1a49e0ac95ee76a4f79e0ce4b1086545a0">98 </link>&#32;&#32;<emphasis class="keyword">static</emphasis>&#32;<emphasis class="keyword">const</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>*&#32;<link linkend="d8/df1/structros_1_1service__traits_1_1MD5Sum_3_01_1_1jaco__msgs_1_1HomeArmRequest_01_4_1a49e0ac95ee76a4f79e0ce4b1086545a0">value</link>()
+99 &#32;&#32;{
+100 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;MD5Sum&lt;&#32;::jaco_msgs::HomeArm&#32;&gt;::value();
+101 &#32;&#32;}
+<link linkend="d8/df1/structros_1_1service__traits_1_1MD5Sum_3_01_1_1jaco__msgs_1_1HomeArmRequest_01_4_1a2b0aa86319fe7e0045d32928ea5ed184">102 </link>&#32;&#32;<emphasis class="keyword">static</emphasis>&#32;<emphasis class="keyword">const</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>*&#32;<link linkend="d8/df1/structros_1_1service__traits_1_1MD5Sum_3_01_1_1jaco__msgs_1_1HomeArmRequest_01_4_1a2b0aa86319fe7e0045d32928ea5ed184">value</link>(<link linkend="d7/dba/namespacejaco__msgs_1a8c93ee6cb88452df5f0a3c5aec628121">const ::jaco_msgs::HomeArmRequest</link>&amp;)
+103 &#32;&#32;{
+104 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;value();
+105 &#32;&#32;}
+106 };
+107 
+108 <emphasis class="comment">//&#32;service_traits::DataType&lt;&#32;::jaco_msgs::HomeArmRequest&gt;&#32;should&#32;match&#32;</emphasis>
+109 <emphasis class="comment">//&#32;service_traits::DataType&lt;&#32;::jaco_msgs::HomeArm&#32;&gt;&#32;</emphasis>
+110 <emphasis class="keyword">template</emphasis>&lt;&gt;
+<link linkend="d5/d9d/structros_1_1service__traits_1_1DataType_3_01_1_1jaco__msgs_1_1HomeArmRequest_01_4">111 </link><emphasis class="keyword">struct&#32;</emphasis>DataType&lt;&#32;::<link linkend="de/dcb/structjaco__msgs_1_1HomeArmRequest__">jaco_msgs::HomeArmRequest</link>&gt;
+112 {
+<link linkend="d5/d9d/structros_1_1service__traits_1_1DataType_3_01_1_1jaco__msgs_1_1HomeArmRequest_01_4_1a56600149c4c818c07df96aced2047288">113 </link>&#32;&#32;<emphasis class="keyword">static</emphasis>&#32;<emphasis class="keyword">const</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>*&#32;<link linkend="d5/d9d/structros_1_1service__traits_1_1DataType_3_01_1_1jaco__msgs_1_1HomeArmRequest_01_4_1a56600149c4c818c07df96aced2047288">value</link>()
+114 &#32;&#32;{
+115 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;DataType&lt;&#32;::jaco_msgs::HomeArm&#32;&gt;::value();
+116 &#32;&#32;}
+<link linkend="d5/d9d/structros_1_1service__traits_1_1DataType_3_01_1_1jaco__msgs_1_1HomeArmRequest_01_4_1acf9efc88ba27d328e6d7fa8df342095d">117 </link>&#32;&#32;<emphasis class="keyword">static</emphasis>&#32;<emphasis class="keyword">const</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>*&#32;<link linkend="d5/d9d/structros_1_1service__traits_1_1DataType_3_01_1_1jaco__msgs_1_1HomeArmRequest_01_4_1acf9efc88ba27d328e6d7fa8df342095d">value</link>(<link linkend="d7/dba/namespacejaco__msgs_1a8c93ee6cb88452df5f0a3c5aec628121">const ::jaco_msgs::HomeArmRequest</link>&amp;)
+118 &#32;&#32;{
+119 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;value();
+120 &#32;&#32;}
+121 };
+122 
+123 <emphasis class="comment">//&#32;service_traits::MD5Sum&lt;&#32;::jaco_msgs::HomeArmResponse&gt;&#32;should&#32;match&#32;</emphasis>
+124 <emphasis class="comment">//&#32;service_traits::MD5Sum&lt;&#32;::jaco_msgs::HomeArm&#32;&gt;&#32;</emphasis>
+125 <emphasis class="keyword">template</emphasis>&lt;&gt;
+<link linkend="d6/d2f/structros_1_1service__traits_1_1MD5Sum_3_01_1_1jaco__msgs_1_1HomeArmResponse_01_4">126 </link><emphasis class="keyword">struct&#32;</emphasis>MD5Sum&lt;&#32;::<link linkend="d8/d71/structjaco__msgs_1_1HomeArmResponse__">jaco_msgs::HomeArmResponse</link>&gt;
+127 {
+<link linkend="d6/d2f/structros_1_1service__traits_1_1MD5Sum_3_01_1_1jaco__msgs_1_1HomeArmResponse_01_4_1a2f200e0034ba1f9369f2da4d4ade7f78">128 </link>&#32;&#32;<emphasis class="keyword">static</emphasis>&#32;<emphasis class="keyword">const</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>*&#32;<link linkend="d6/d2f/structros_1_1service__traits_1_1MD5Sum_3_01_1_1jaco__msgs_1_1HomeArmResponse_01_4_1a2f200e0034ba1f9369f2da4d4ade7f78">value</link>()
+129 &#32;&#32;{
+130 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;MD5Sum&lt;&#32;::jaco_msgs::HomeArm&#32;&gt;::value();
+131 &#32;&#32;}
+<link linkend="d6/d2f/structros_1_1service__traits_1_1MD5Sum_3_01_1_1jaco__msgs_1_1HomeArmResponse_01_4_1a80f7851bf27ab05743a2a0d087f047b5">132 </link>&#32;&#32;<emphasis class="keyword">static</emphasis>&#32;<emphasis class="keyword">const</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>*&#32;<link linkend="d6/d2f/structros_1_1service__traits_1_1MD5Sum_3_01_1_1jaco__msgs_1_1HomeArmResponse_01_4_1a80f7851bf27ab05743a2a0d087f047b5">value</link>(<link linkend="d7/dba/namespacejaco__msgs_1a2638ebb5f2f675bb527ce4144b66d386">const ::jaco_msgs::HomeArmResponse</link>&amp;)
+133 &#32;&#32;{
+134 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;value();
+135 &#32;&#32;}
+136 };
+137 
+138 <emphasis class="comment">//&#32;service_traits::DataType&lt;&#32;::jaco_msgs::HomeArmResponse&gt;&#32;should&#32;match&#32;</emphasis>
+139 <emphasis class="comment">//&#32;service_traits::DataType&lt;&#32;::jaco_msgs::HomeArm&#32;&gt;&#32;</emphasis>
+140 <emphasis class="keyword">template</emphasis>&lt;&gt;
+<link linkend="d8/d07/structros_1_1service__traits_1_1DataType_3_01_1_1jaco__msgs_1_1HomeArmResponse_01_4">141 </link><emphasis class="keyword">struct&#32;</emphasis>DataType&lt;&#32;::<link linkend="d8/d71/structjaco__msgs_1_1HomeArmResponse__">jaco_msgs::HomeArmResponse</link>&gt;
+142 {
+<link linkend="d8/d07/structros_1_1service__traits_1_1DataType_3_01_1_1jaco__msgs_1_1HomeArmResponse_01_4_1a2155d532cdd2240a62dde0b39ca17736">143 </link>&#32;&#32;<emphasis class="keyword">static</emphasis>&#32;<emphasis class="keyword">const</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>*&#32;<link linkend="d8/d07/structros_1_1service__traits_1_1DataType_3_01_1_1jaco__msgs_1_1HomeArmResponse_01_4_1a2155d532cdd2240a62dde0b39ca17736">value</link>()
+144 &#32;&#32;{
+145 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;DataType&lt;&#32;::jaco_msgs::HomeArm&#32;&gt;::value();
+146 &#32;&#32;}
+<link linkend="d8/d07/structros_1_1service__traits_1_1DataType_3_01_1_1jaco__msgs_1_1HomeArmResponse_01_4_1ac68e61a9c8f177c6d2834746dff6b832">147 </link>&#32;&#32;<emphasis class="keyword">static</emphasis>&#32;<emphasis class="keyword">const</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>*&#32;<link linkend="d8/d07/structros_1_1service__traits_1_1DataType_3_01_1_1jaco__msgs_1_1HomeArmResponse_01_4_1ac68e61a9c8f177c6d2834746dff6b832">value</link>(<link linkend="d7/dba/namespacejaco__msgs_1a2638ebb5f2f675bb527ce4144b66d386">const ::jaco_msgs::HomeArmResponse</link>&amp;)
+148 &#32;&#32;{
+149 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;value();
+150 &#32;&#32;}
+151 };
+152 
+153 }&#32;<emphasis class="comment">//&#32;namespace&#32;service_traits</emphasis>
+154 }&#32;<emphasis class="comment">//&#32;namespace&#32;ros</emphasis>
+155 
+156 <emphasis class="preprocessor">#endif&#32;//&#32;JACO_MSGS_MESSAGE_HOMEARM_H</emphasis>
+    </computeroutput></literallayout>
+</section>

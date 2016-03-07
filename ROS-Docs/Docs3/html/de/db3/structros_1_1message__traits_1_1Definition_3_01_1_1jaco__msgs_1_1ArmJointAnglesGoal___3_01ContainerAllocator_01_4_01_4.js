@@ -1,0 +1,5 @@
+var structros_1_1message__traits_1_1Definition_3_01_1_1jaco__msgs_1_1ArmJointAnglesGoal___3_01ContainerAllocator_01_4_01_4 =
+[
+    [ "value", "de/db3/structros_1_1message__traits_1_1Definition_3_01_1_1jaco__msgs_1_1ArmJointAnglesGoal___3_01ContainerAllocator_01_4_01_4.html#ad5720b4ad40070f8f6b848a5d0a5f1f2", null ],
+    [ "value", "de/db3/structros_1_1message__traits_1_1Definition_3_01_1_1jaco__msgs_1_1ArmJointAnglesGoal___3_01ContainerAllocator_01_4_01_4.html#a2c221e52232132aabbf5ec5e933f68f1", null ]
+];

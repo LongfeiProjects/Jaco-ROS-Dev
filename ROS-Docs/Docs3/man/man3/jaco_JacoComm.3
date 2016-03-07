@@ -1,0 +1,983 @@
+.TH "jaco::JacoComm" 3 "Thu Mar 3 2016" "Version 1.0.1" "Kinova-ROS" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+jaco::JacoComm \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include 'jaco_comm\&.h'\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBgetCartesianForce\fP (\fBJacoPose\fP &position)"
+.br
+.RI "\fIAPI call to obtain the current cartesian force of the arm\&. \fP"
+.ti -1c
+.RI "void \fBgetCartesianPosition\fP (\fBJacoPose\fP &position)"
+.br
+.RI "\fIAPI call to obtain the current cartesian position of the arm\&. \fP"
+.ti -1c
+.RI "void \fBgetConfig\fP (\fBClientConfigurations\fP &config)"
+.br
+.RI "\fIAPI call to obtain the current client configuration\&. \fP"
+.ti -1c
+.RI "void \fBgetFingerPositions\fP (\fBFingerAngles\fP &fingers)"
+.br
+.RI "\fIAPI call to obtain the current finger positions\&. \fP"
+.ti -1c
+.RI "void \fBgetJointAngles\fP (\fBJacoAngles\fP &angles)"
+.br
+.RI "\fIAPI call to obtain the current angular position of all the joints\&. \fP"
+.ti -1c
+.RI "void \fBgetJointTorques\fP (\fBJacoAngles\fP &tqs)"
+.br
+.RI "\fIAPI call to obtain the current torque of all the joints\&. \fP"
+.ti -1c
+.RI "void \fBgetJointVelocities\fP (\fBJacoAngles\fP &vels)"
+.br
+.RI "\fIAPI call to obtain the current angular velocities of all the joints\&. \fP"
+.ti -1c
+.RI "void \fBgetQuickStatus\fP (\fBQuickStatus\fP &quick_status)"
+.br
+.RI "\fIAPI call to obtain the current 'quick status'\&. \fP"
+.ti -1c
+.RI "void \fBhomeArm\fP (void)"
+.br
+.RI "\fISend the arm to the 'home' position\&. \fP"
+.ti -1c
+.RI "void \fBinitFingers\fP (void)"
+.br
+.RI "\fIInitialize finger actuators\&. \fP"
+.ti -1c
+.RI "bool \fBisHomed\fP (void)"
+.br
+.RI "\fIDetermines whether the arm has returned to its 'Home' state\&. \fP"
+.ti -1c
+.RI "bool \fBisStopped\fP ()"
+.br
+.ti -1c
+.RI "\fBJacoComm\fP (const ros::NodeHandle &node_handle, boost::recursive_mutex &api_mutex, const bool is_movement_on_start)"
+.br
+.ti -1c
+.RI "int \fBnumFingers\fP ()"
+.br
+.ti -1c
+.RI "void \fBprintAngles\fP (const \fBJacoAngles\fP &angles)"
+.br
+.RI "\fIDumps the current joint angles onto the screen\&. \fP"
+.ti -1c
+.RI "void \fBprintConfig\fP (const \fBClientConfigurations\fP &config)"
+.br
+.RI "\fIDumps the client configuration onto the screen\&. \fP"
+.ti -1c
+.RI "void \fBprintFingers\fP (const \fBFingersPosition\fP &fingers)"
+.br
+.RI "\fIDumps the current finger positions onto the screen\&. \fP"
+.ti -1c
+.RI "void \fBprintPosition\fP (const \fBJacoPose\fP &position)"
+.br
+.RI "\fIDumps the current cartesian positions onto the screen\&. \fP"
+.ti -1c
+.RI "int \fBrobotType\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetCartesianForceMinMax\fP (const \fBCartesianInfo\fP &min, const \fBCartesianInfo\fP &\fBmax\fP)"
+.br
+.RI "\fISet the cartesian min and max force parameters for force control\&. \fP"
+.ti -1c
+.RI "void \fBsetCartesianInertiaDamping\fP (const \fBCartesianInfo\fP &inertia, const \fBCartesianInfo\fP &damping)"
+.br
+.RI "\fISet the cartesian inertia and damping parameters for force control\&. \fP"
+.ti -1c
+.RI "void \fBsetCartesianPosition\fP (const \fBJacoPose\fP &position, int timeout=0, bool push=true)"
+.br
+.RI "\fISends a cartesian coordinate trajectory to the Jaco arm\&. \fP"
+.ti -1c
+.RI "void \fBsetCartesianVelocities\fP (const \fBCartesianInfo\fP &velocities)"
+.br
+.RI "\fISet the cartesian velocity of the tool tip\&. \fP"
+.ti -1c
+.RI "void \fBsetConfig\fP (const \fBClientConfigurations\fP &config)"
+.br
+.RI "\fIObtains the current arm configuration\&. \fP"
+.ti -1c
+.RI "void \fBsetFingerPositions\fP (const \fBFingerAngles\fP &fingers, int timeout=0, bool push=true)"
+.br
+.RI "\fISets the finger positions\&. \fP"
+.ti -1c
+.RI "void \fBsetJointAngles\fP (const \fBJacoAngles\fP &angles, int timeout=0, bool push=true)"
+.br
+.RI "\fISends a joint angle command to the Jaco arm\&. \fP"
+.ti -1c
+.RI "void \fBsetJointVelocities\fP (const \fBAngularInfo\fP &joint_vel)"
+.br
+.RI "\fISet the angular velocity of the joints\&. \fP"
+.ti -1c
+.RI "void \fBstartAPI\fP ()"
+.br
+.ti -1c
+.RI "void \fBstartForceControl\fP ()"
+.br
+.RI "\fIStart cartesian force control\&. \fP"
+.ti -1c
+.RI "void \fBstopAPI\fP ()"
+.br
+.ti -1c
+.RI "void \fBstopForceControl\fP ()"
+.br
+.RI "\fIStop cartesian force control\&. \fP"
+.ti -1c
+.RI "\fB~JacoComm\fP ()"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "boost::recursive_mutex & \fBapi_mutex_\fP"
+.br
+.ti -1c
+.RI "bool \fBis_software_stop_\fP"
+.br
+.ti -1c
+.RI "\fBjaco::JacoAPI\fP \fBjaco_api_\fP"
+.br
+.ti -1c
+.RI "int \fBnum_fingers_\fP"
+.br
+.ti -1c
+.RI "int \fBrobot_type_\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "jaco::JacoComm::JacoComm (const ros::NodeHandle & node_handle, boost::recursive_mutex & api_mutex, const bool is_movement_on_start)"
+
+.PP
+.nf
+58     : is_software_stop_(false), api_mutex_(api_mutex)
+59 {
+60     boost::recursive_mutex::scoped_lock lock(api_mutex_);
+61 
+62     // Get the serial number parameter for the arm we wish to connec to
+63     std::string serial_number = "";
+64     node_handle\&.getParam("serial_number", serial_number);
+65 
+66     std::vector<int> api_version;
+67     int result = jaco_api_\&.getAPIVersion(api_version);
+68     if (result != NO_ERROR_KINOVA)
+69     {
+70         throw JacoCommException("Could not get the Kinova API version", result);
+71     }
+72 
+73     ROS_INFO_STREAM("Initializing Kinova API (header version: " << COMMAND_LAYER_VERSION << ", library version: "
+74                     << api_version[0] << "\&." << api_version[1] << "\&." << api_version[2] << ")");
+75 
+76     result = jaco_api_\&.initAPI();
+77     if (result != NO_ERROR_KINOVA)
+78     {
+79         throw JacoCommException("Could not initialize Kinova API", result);
+80     }
+81 
+82     std::vector<KinovaDevice> devices_list;
+83     result = NO_ERROR_KINOVA;
+84     jaco_api_\&.getDevices(devices_list, result);
+85     if (result != NO_ERROR_KINOVA)
+86     {
+87         throw JacoCommException("Could not get devices list", result);
+88     }
+89 
+90     bool found_arm = false;
+91     for (int device_i = 0; device_i < devices_list\&.size(); device_i++)
+92     {
+93         // If no device is specified, just use the first available device
+94         if ((serial_number == "")
+95             || (std::strcmp(serial_number\&.c_str(), devices_list[device_i]\&.SerialNumber) == 0))
+96         {
+97             result = jaco_api_\&.setActiveDevice(devices_list[device_i]);
+98             if (result != NO_ERROR_KINOVA)
+99             {
+100                 throw JacoCommException("Could not set the active device", result);
+101             }
+102 
+103             GeneralInformations general_info;
+104             result = jaco_api_\&.getGeneralInformations(general_info);
+105             if (result != NO_ERROR_KINOVA)
+106             {
+107                 throw JacoCommException("Could not get general information about the device", result);
+108             }
+109 
+110             ClientConfigurations configuration;
+111             getConfig(configuration);
+112 
+113             QuickStatus quick_status;
+114             getQuickStatus(quick_status);
+115 
+116             robot_type_ = quick_status\&.RobotType;
+117             if ((robot_type_ != 0) && (robot_type_ != 1) && (robot_type_ != 3))
+118             {
+119                 ROS_ERROR("Could not get the type of the arm from the quick status, expected "
+120                           "either type 0 (JACO), or type 1 (MICO), got %d", quick_status\&.RobotType);
+121                 throw JacoCommException("Could not get the type of the arm", quick_status\&.RobotType);
+122             }
+123 
+124             switch (robot_type_) {
+125                 case 0:
+126                 case 3:
+127                     num_fingers_ = 3;
+128                     break;
+129                 case 1:
+130                     num_fingers_ = 2;
+131                     break;
+132                 default:
+133                     break;
+134             }
+135 
+136             ROS_INFO_STREAM("Found " << devices_list\&.size() << " device(s), using device at index " << device_i
+137                             << " (model: " << configuration\&.Model
+138                             << ", serial number: " << devices_list[device_i]\&.SerialNumber
+139                             << ", code version: " << general_info\&.CodeVersion
+140                             << ", code revision: " << general_info\&.CodeRevision << ")");
+141 
+142             found_arm = true;
+143             break;
+144         }
+145     }
+146 
+147     if (!found_arm)
+148     {
+149         ROS_ERROR("Could not find the specified arm (serial: %s) among the %d attached devices",
+150                   serial_number\&.c_str(), static_cast<int>(devices_list\&.size()));
+151         throw JacoCommException("Could not find the specified arm", 0);
+152     }
+153 
+154     // On a cold boot the arm may not respond to commands from the API right away\&.
+155     // This kick-starts the Control API so that it's ready to go\&.
+156     startAPI();
+157     stopAPI();
+158     startAPI();
+159 
+160     // Set the angular velocity of each of the joints to zero
+161     TrajectoryPoint jaco_velocity;
+162     memset(&jaco_velocity, 0, sizeof(jaco_velocity));
+163     setCartesianVelocities(jaco_velocity\&.Position\&.CartesianPosition);
+164 
+165     if (is_movement_on_start)
+166     {
+167         initFingers();
+168     }
+169     else
+170     {
+171         ROS_WARN("Movement on connection to the arm has been suppressed on initialization\&. You may "
+172                  "have to home the arm (through the home service) before movement is possible");
+173     }
+174 }
+.fi
+.SS "jaco::JacoComm::~JacoComm ()"
+
+.PP
+.nf
+178 {
+179     boost::recursive_mutex::scoped_lock lock(api_mutex_);
+180     jaco_api_\&.closeAPI();
+181 }
+.fi
+.SH "Member Function Documentation"
+.PP 
+.SS "void jaco::JacoComm::getCartesianForce (\fBJacoPose\fP & position)"
+
+.PP
+API call to obtain the current cartesian force of the arm\&. 
+.PP
+.nf
+596 {
+597     boost::recursive_mutex::scoped_lock lock(api_mutex_);
+598     CartesianPosition jaco_cartesian_force;
+599     memset(&jaco_cartesian_force, 0, sizeof(jaco_cartesian_force));  // zero structure
+600 
+601     int result = jaco_api_\&.getCartesianForce(jaco_cartesian_force);
+602     if (result != NO_ERROR_KINOVA)
+603     {
+604         throw JacoCommException("Could not get the Cartesian force", result);
+605     }
+606 
+607     cart_force = JacoPose(jaco_cartesian_force\&.Coordinates);
+608 }
+.fi
+.SS "void jaco::JacoComm::getCartesianPosition (\fBJacoPose\fP & position)"
+
+.PP
+API call to obtain the current cartesian position of the arm\&. 
+.PP
+.nf
+578 {
+579     boost::recursive_mutex::scoped_lock lock(api_mutex_);
+580     CartesianPosition jaco_cartesian_position;
+581     memset(&jaco_cartesian_position, 0, sizeof(jaco_cartesian_position));  // zero structure
+582 
+583     int result = jaco_api_\&.getCartesianPosition(jaco_cartesian_position);
+584     if (result != NO_ERROR_KINOVA)
+585     {
+586         throw JacoCommException("Could not get the Cartesian position", result);
+587     }
+588 
+589     position = JacoPose(jaco_cartesian_position\&.Coordinates);
+590 }
+.fi
+.SS "void jaco::JacoComm::getConfig (\fBClientConfigurations\fP & config)"
+
+.PP
+API call to obtain the current client configuration\&. 
+.PP
+.nf
+689 {
+690     boost::recursive_mutex::scoped_lock lock(api_mutex_);
+691     memset(&config, 0, sizeof(config));  // zero structure
+692 
+693     int result = jaco_api_\&.getClientConfigurations(config);
+694     if (result != NO_ERROR_KINOVA)
+695     {
+696         throw JacoCommException("Could not get client configuration", result);
+697     }
+698 }
+.fi
+.SS "void jaco::JacoComm::getFingerPositions (\fBFingerAngles\fP & fingers)"
+
+.PP
+API call to obtain the current finger positions\&. 
+.PP
+.nf
+614 {
+615     boost::recursive_mutex::scoped_lock lock(api_mutex_);
+616     CartesianPosition jaco_cartesian_position;
+617     memset(&jaco_cartesian_position, 0, sizeof(jaco_cartesian_position));  // zero structure
+618 
+619     int result = jaco_api_\&.getCartesianPosition(jaco_cartesian_position);
+620     if (result != NO_ERROR_KINOVA)
+621     {
+622         throw JacoCommException("Could not get Cartesian finger position", result);
+623     }
+624 
+625     if (num_fingers_ == 2)
+626     {
+627         jaco_cartesian_position\&.Fingers\&.Finger3 = 0\&.0;
+628     }
+629 
+630     fingers = FingerAngles(jaco_cartesian_position\&.Fingers);
+631 }
+.fi
+.SS "void jaco::JacoComm::getJointAngles (\fBJacoAngles\fP & angles)"
+
+.PP
+API call to obtain the current angular position of all the joints\&. 
+.PP
+.nf
+525 {
+526     boost::recursive_mutex::scoped_lock lock(api_mutex_);
+527     AngularPosition jaco_angles;
+528     memset(&jaco_angles, 0, sizeof(jaco_angles));  // zero structure
+529 
+530     int result = jaco_api_\&.getAngularPosition(jaco_angles);
+531     if (result != NO_ERROR_KINOVA)
+532     {
+533         throw JacoCommException("Could not get the angular position", result);
+534     }
+535 
+536     angles = JacoAngles(jaco_angles\&.Actuators);
+537 }
+.fi
+.SS "void jaco::JacoComm::getJointTorques (\fBJacoAngles\fP & tqs)"
+
+.PP
+API call to obtain the current torque of all the joints\&. 
+.PP
+.nf
+561 {
+562     boost::recursive_mutex::scoped_lock lock(api_mutex_);
+563     AngularPosition jaco_tqs;
+564     memset(&jaco_tqs, 0, sizeof(jaco_tqs));  // zero structure
+565 
+566     int result = jaco_api_\&.getAngularForce(jaco_tqs);
+567     if (result != NO_ERROR_KINOVA)
+568     {
+569         throw JacoCommException("Could not get the joint torques", result);
+570     }
+571 
+572     tqs = JacoAngles(jaco_tqs\&.Actuators);
+573 }
+.fi
+.SS "void jaco::JacoComm::getJointVelocities (\fBJacoAngles\fP & vels)"
+
+.PP
+API call to obtain the current angular velocities of all the joints\&. 
+.PP
+.nf
+543 {
+544     boost::recursive_mutex::scoped_lock lock(api_mutex_);
+545     AngularPosition jaco_vels;
+546     memset(&jaco_vels, 0, sizeof(jaco_vels));  // zero structure
+547 
+548     int result = jaco_api_\&.getAngularVelocity(jaco_vels);
+549     if (result != NO_ERROR_KINOVA)
+550     {
+551         throw JacoCommException("Could not get the angular velocity", result);
+552     }
+553 
+554     vels = JacoAngles(jaco_vels\&.Actuators);
+555 }
+.fi
+.SS "void jaco::JacoComm::getQuickStatus (\fBQuickStatus\fP & quick_status)"
+
+.PP
+API call to obtain the current 'quick status'\&. 
+.PP
+.nf
+705 {
+706     boost::recursive_mutex::scoped_lock lock(api_mutex_);
+707     memset(&quick_status, 0, sizeof(quick_status));  // zero structure
+708     int result = jaco_api_\&.getQuickStatus(quick_status);
+709     if (result != NO_ERROR_KINOVA)
+710     {
+711         throw JacoCommException("Could not get quick status", result);
+712     }
+713 }
+.fi
+.SS "void jaco::JacoComm::homeArm (void)"
+
+.PP
+Send the arm to the 'home' position\&. The code replicates the function of the 'home' button on the user controller by 'pressing' the home button long enough for the arm to return to the home position\&.
+.PP
+Fingers are homed by manually opening them fully, then returning them to a half-open position\&. 
+.PP
+.nf
+217 {
+218     boost::recursive_mutex::scoped_lock lock(api_mutex_);
+219 
+220     if (isStopped())
+221     {
+222         ROS_INFO("Arm is stopped, cannot home");
+223         return;
+224     }
+225     else if (isHomed())
+226     {
+227         ROS_INFO("Arm is already in \"home\" position");
+228         return;
+229     }
+230 
+231     stopAPI();
+232     ros::Duration(1\&.0)\&.sleep();
+233     startAPI();
+234 
+235     ROS_INFO("Homing the arm");
+236     int result = jaco_api_\&.moveHome();
+237     if (result != NO_ERROR_KINOVA)
+238     {
+239         throw JacoCommException("Move home failed", result);
+240     }
+241 }
+.fi
+.SS "void jaco::JacoComm::initFingers (void)"
+
+.PP
+Initialize finger actuators\&. Move fingers to the full-open position to initialize them for use\&. Note, The this routine requires firmware version 5\&.05\&.x (or higher?)\&. 
+.PP
+.nf
+251 {
+252     ROS_INFO("Initializing fingers\&.\&.\&.this will take a few seconds and the fingers should open completely");
+253     boost::recursive_mutex::scoped_lock lock(api_mutex_);
+254     int result = jaco_api_\&.initFingers();
+255     if (result != NO_ERROR_KINOVA)
+256     {
+257         throw JacoCommException("Could not init fingers", result);
+258     }
+259     return;
+260 }
+.fi
+.SS "bool jaco::JacoComm::isHomed (void)"
+
+.PP
+Determines whether the arm has returned to its 'Home' state\&. Checks the current joint angles, then compares them to the known 'Home' joint angles\&. 
+.PP
+.nf
+191 {
+192     QuickStatus quick_status;
+193     getQuickStatus(quick_status);
+194 
+195     if (quick_status\&.RetractType == 1)
+196     {
+197         return true;
+198     }
+199     else
+200     {
+201         return false;
+202     }
+203 }
+.fi
+.SS "bool jaco::JacoComm::isStopped ()"
+
+.PP
+.nf
+825 {
+826     return is_software_stop_;
+827 }
+.fi
+.SS "int jaco::JacoComm::numFingers ()"
+
+.PP
+.nf
+754 {
+755     return num_fingers_;
+756 }
+.fi
+.SS "void jaco::JacoComm::printAngles (const \fBJacoAngles\fP & angles)"
+
+.PP
+Dumps the current joint angles onto the screen\&. 
+.PP
+.nf
+767 {
+768     ROS_INFO("Joint angles (deg) -- J1: %f, J2: %f J3: %f, J4: %f, J5: %f, J6: %f",
+769              angles\&.Actuator1, angles\&.Actuator2, angles\&.Actuator3,
+770              angles\&.Actuator4, angles\&.Actuator5, angles\&.Actuator6);
+771 }
+.fi
+.SS "void jaco::JacoComm::printConfig (const \fBClientConfigurations\fP & config)"
+
+.PP
+Dumps the client configuration onto the screen\&. 
+.PP
+.nf
+801 {
+802     ROS_INFO_STREAM("Arm configuration:\n"
+803                     "\tClientID: " << config\&.ClientID <<
+804                     "\n\tClientName: " << config\&.ClientName <<
+805                     "\n\tOrganization: " << config\&.Organization <<
+806                     "\n\tSerial:" << config\&.Serial <<
+807                     "\n\tModel: " << config\&.Model <<
+808                     "\n\tMaxForce: " << config\&.MaxForce <<
+809                     "\n\tSensibility: " <<  config\&.Sensibility <<
+810                     "\n\tDrinkingHeight: " << config\&.DrinkingHeight <<
+811                     "\n\tComplexRetractActive: " << config\&.ComplexRetractActive <<
+812                     "\n\tRetractedPositionAngle: " << config\&.RetractedPositionAngle <<
+813                     "\n\tRetractedPositionCount: " << config\&.RetractedPositionCount <<
+814                     "\n\tDrinkingDistance: " << config\&.DrinkingDistance <<
+815                     "\n\tFingers2and3Inverted: " << config\&.Fingers2and3Inverted <<
+816                     "\n\tDrinkingLength: " << config\&.DrinkingLenght <<
+817                     "\n\tDeletePreProgrammedPositionsAtRetract: " <<
+818                     config\&.DeletePreProgrammedPositionsAtRetract <<
+819                     "\n\tEnableFlashErrorLog: " << config\&.EnableFlashErrorLog <<
+820                     "\n\tEnableFlashPositionLog: " << config\&.EnableFlashPositionLog);
+821 }
+.fi
+.SS "void jaco::JacoComm::printFingers (const \fBFingersPosition\fP & fingers)"
+
+.PP
+Dumps the current finger positions onto the screen\&. 
+.PP
+.nf
+791 {
+792     ROS_INFO("Finger positions -- F1: %f, F2: %f, F3: %f",
+793              fingers\&.Finger1, fingers\&.Finger2, fingers\&.Finger3);
+794 }
+.fi
+.SS "void jaco::JacoComm::printPosition (const \fBJacoPose\fP & position)"
+
+.PP
+Dumps the current cartesian positions onto the screen\&. 
+.PP
+.nf
+778 {
+779     ROS_INFO("Arm position\n"
+780              "\tposition (m) -- x: %f, y: %f z: %f\n"
+781              "\trotation (rad) -- theta_x: %f, theta_y: %f, theta_z: %f",
+782              position\&.X, position\&.Y, position\&.Z,
+783              position\&.ThetaX, position\&.ThetaY, position\&.ThetaZ);
+784 }
+.fi
+.SS "int jaco::JacoComm::robotType ()"
+
+.PP
+.nf
+759 {
+760     return robot_type_;
+761 }
+.fi
+.SS "void jaco::JacoComm::setCartesianForceMinMax (const \fBCartesianInfo\fP & min, const \fBCartesianInfo\fP & max)"
+
+.PP
+Set the cartesian min and max force parameters for force control\&. 
+.PP
+.nf
+650 {
+651     boost::recursive_mutex::scoped_lock lock(api_mutex_);
+652     int result = jaco_api_\&.setCartesianForceMinMax(min, max);
+653     if (result != NO_ERROR_KINOVA)
+654     {
+655         throw JacoCommException("Could not set cartesian min/max force\&.", result);
+656     }
+657 }
+.fi
+.SS "void jaco::JacoComm::setCartesianInertiaDamping (const \fBCartesianInfo\fP & inertia, const \fBCartesianInfo\fP & damping)"
+
+.PP
+Set the cartesian inertia and damping parameters for force control\&. 
+.PP
+.nf
+637 {
+638     boost::recursive_mutex::scoped_lock lock(api_mutex_);
+639     int result = jaco_api_\&.setCartesianInertiaDamping(inertia, damping);
+640     if (result != NO_ERROR_KINOVA)
+641     {
+642         throw JacoCommException("Could not set cartesian inertia and damping", result);
+643     }
+644 }
+.fi
+.SS "void jaco::JacoComm::setCartesianPosition (const \fBJacoPose\fP & position, int timeout = \fC0\fP, bool push = \fCtrue\fP)"
+
+.PP
+Sends a cartesian coordinate trajectory to the Jaco arm\&. Waits until the arm has stopped moving before releasing control of the API\&. 
+.PP
+.nf
+318 {
+319     boost::recursive_mutex::scoped_lock lock(api_mutex_);
+320 
+321     if (isStopped())
+322     {
+323         ROS_INFO("The position could not be set because the arm is stopped");
+324         return;
+325     }
+326 
+327     int result = NO_ERROR_KINOVA;
+328     TrajectoryPoint jaco_position;
+329     jaco_position\&.InitStruct();
+330     memset(&jaco_position, 0, sizeof(jaco_position));  // zero structure
+331 
+332     if (push)
+333     {
+334         result = jaco_api_\&.eraseAllTrajectories();
+335         if (result != NO_ERROR_KINOVA)
+336         {
+337             throw JacoCommException("Could not erase trajectories", result);
+338         }
+339     }
+340 
+341     //startAPI();
+342 
+343     result = jaco_api_\&.setCartesianControl();
+344     if (result != NO_ERROR_KINOVA)
+345     {
+346         throw JacoCommException("Could not set Cartesian control", result);
+347     }
+348 
+349     jaco_position\&.Position\&.Delay = 0\&.0;
+350     jaco_position\&.Position\&.Type = CARTESIAN_POSITION;
+351     jaco_position\&.Position\&.HandMode = HAND_NOMOVEMENT;
+352 
+353     // These values will not be used but are initialized anyway\&.
+354     jaco_position\&.Position\&.Actuators\&.Actuator1 = 0\&.0f;
+355     jaco_position\&.Position\&.Actuators\&.Actuator2 = 0\&.0f;
+356     jaco_position\&.Position\&.Actuators\&.Actuator3 = 0\&.0f;
+357     jaco_position\&.Position\&.Actuators\&.Actuator4 = 0\&.0f;
+358     jaco_position\&.Position\&.Actuators\&.Actuator5 = 0\&.0f;
+359     jaco_position\&.Position\&.Actuators\&.Actuator6 = 0\&.0f;
+360 
+361     jaco_position\&.Position\&.CartesianPosition = position;
+362 
+363     result = jaco_api_\&.sendBasicTrajectory(jaco_position);
+364     if (result != NO_ERROR_KINOVA)
+365     {
+366         throw JacoCommException("Could not send basic trajectory", result);
+367     }
+368 }
+.fi
+.SS "void jaco::JacoComm::setCartesianVelocities (const \fBCartesianInfo\fP & velocities)"
+
+.PP
+Set the cartesian velocity of the tool tip\&. 
+.PP
+.nf
+475 {
+476     boost::recursive_mutex::scoped_lock lock(api_mutex_);
+477 
+478     if (isStopped())
+479     {
+480         ROS_INFO("The cartesian velocities could not be set because the arm is stopped");
+481         jaco_api_\&.eraseAllTrajectories();
+482         return;
+483     }
+484 
+485     TrajectoryPoint jaco_velocity;
+486     jaco_velocity\&.InitStruct();
+487 
+488     memset(&jaco_velocity, 0, sizeof(jaco_velocity));  // zero structure
+489 
+490     //startAPI();
+491     jaco_velocity\&.Position\&.Type = CARTESIAN_VELOCITY;
+492 
+493     // confusingly, velocity is passed in the position struct
+494     jaco_velocity\&.Position\&.CartesianPosition = velocities;
+495 
+496     int result = jaco_api_\&.sendAdvanceTrajectory(jaco_velocity);
+497     if (result != NO_ERROR_KINOVA)
+498     {
+499         throw JacoCommException("Could not send advanced Cartesian velocity trajectory", result);
+500     }
+501 }
+.fi
+.SS "void jaco::JacoComm::setConfig (const \fBClientConfigurations\fP & config)"
+
+.PP
+Obtains the current arm configuration\&. This is the configuration which are stored on the arm itself\&. Many of these configurations may be set using the Windows interface\&. 
+.PP
+.nf
+511 {
+512     boost::recursive_mutex::scoped_lock lock(api_mutex_);
+513     int result = jaco_api_\&.setClientConfigurations(config);
+514     if (result != NO_ERROR_KINOVA)
+515     {
+516         throw JacoCommException("Could not set the client configuration", result);
+517     }
+518 }
+.fi
+.SS "void jaco::JacoComm::setFingerPositions (const \fBFingerAngles\fP & fingers, int timeout = \fC0\fP, bool push = \fCtrue\fP)"
+
+.PP
+Sets the finger positions\&. 
+.PP
+.nf
+375 {
+376     boost::recursive_mutex::scoped_lock lock(api_mutex_);
+377 
+378     if (isStopped())
+379     {
+380         ROS_INFO("The fingers could not be set because the arm is stopped");
+381         return;
+382     }
+383 
+384     int result = NO_ERROR_KINOVA;
+385     TrajectoryPoint jaco_position;
+386     jaco_position\&.InitStruct();
+387     memset(&jaco_position, 0, sizeof(jaco_position));  // zero structure
+388 
+389     if (push)
+390     {
+391         result = jaco_api_\&.eraseAllTrajectories();
+392         if (result != NO_ERROR_KINOVA)
+393         {
+394             throw JacoCommException("Could not erase trajectories", result);
+395         }
+396     }
+397 
+398     //startAPI();
+399 
+400     result = jaco_api_\&.setAngularControl();
+401     if (result != NO_ERROR_KINOVA)
+402     {
+403         throw JacoCommException("Could not set Cartesian control", result);
+404     }
+405 
+406     // Initialize Cartesian control of the fingers
+407     jaco_position\&.Position\&.HandMode = POSITION_MODE;
+408     jaco_position\&.Position\&.Type = ANGULAR_POSITION;
+409     jaco_position\&.Position\&.Fingers = fingers;
+410     jaco_position\&.Position\&.Delay = 0\&.0;
+411     jaco_position\&.LimitationsActive = 0;
+412 
+413     AngularPosition jaco_angles;
+414     memset(&jaco_angles, 0, sizeof(jaco_angles));  // zero structure
+415 
+416     result = jaco_api_\&.getAngularPosition(jaco_angles);
+417     if (result != NO_ERROR_KINOVA)
+418     {
+419         throw JacoCommException("Could not get the angular position", result);
+420     }
+421 
+422 
+423     jaco_position\&.Position\&.Actuators = jaco_angles\&.Actuators;
+424 
+425     // When loading a cartesian position for the fingers, values are required for the arm joints
+426     // as well or the arm goes nuts\&.  Grab the current position and feed it back to the arm\&.
+427     JacoPose pose;
+428     getCartesianPosition(pose);
+429     jaco_position\&.Position\&.CartesianPosition = pose;
+430 
+431     result = jaco_api_\&.sendAdvanceTrajectory(jaco_position);
+432     if (result != NO_ERROR_KINOVA)
+433     {
+434         throw JacoCommException("Could not send advanced finger trajectory", result);
+435     }
+436 }
+.fi
+.SS "void jaco::JacoComm::setJointAngles (const \fBJacoAngles\fP & angles, int timeout = \fC0\fP, bool push = \fCtrue\fP)"
+
+.PP
+Sends a joint angle command to the Jaco arm\&. Waits until the arm has stopped moving before releasing control of the API\&. 
+.PP
+.nf
+269 {
+270     boost::recursive_mutex::scoped_lock lock(api_mutex_);
+271 
+272     if (isStopped())
+273     {
+274         ROS_INFO("The angles could not be set because the arm is stopped");
+275         return;
+276     }
+277 
+278     int result = NO_ERROR_KINOVA;
+279     TrajectoryPoint jaco_position;
+280     jaco_position\&.InitStruct();
+281     memset(&jaco_position, 0, sizeof(jaco_position));  // zero structure
+282 
+283     if (push)
+284     {
+285         result = jaco_api_\&.eraseAllTrajectories();
+286         if (result != NO_ERROR_KINOVA)
+287         {
+288             throw JacoCommException("Could not erase trajectories", result);
+289         }
+290     }
+291 
+292     //startAPI();
+293 
+294     result = jaco_api_\&.setAngularControl();
+295     if (result != NO_ERROR_KINOVA)
+296     {
+297         throw JacoCommException("Could not set angular control", result);
+298     }
+299 
+300     jaco_position\&.Position\&.Delay = 0\&.0;
+301     jaco_position\&.Position\&.Type = ANGULAR_POSITION;
+302     jaco_position\&.Position\&.Actuators = angles;
+303 
+304     result = jaco_api_\&.sendAdvanceTrajectory(jaco_position);
+305     if (result != NO_ERROR_KINOVA)
+306     {
+307         throw JacoCommException("Could not send advanced joint angle trajectory", result);
+308     }
+309 }
+.fi
+.SS "void jaco::JacoComm::setJointVelocities (const \fBAngularInfo\fP & joint_vel)"
+
+.PP
+Set the angular velocity of the joints\&. 
+.PP
+.nf
+443 {
+444     boost::recursive_mutex::scoped_lock lock(api_mutex_);
+445 
+446     if (isStopped())
+447     {
+448         ROS_INFO("The velocities could not be set because the arm is stopped");
+449         return;
+450     }
+451 
+452     TrajectoryPoint jaco_velocity;
+453     jaco_velocity\&.InitStruct();
+454 
+455     memset(&jaco_velocity, 0, sizeof(jaco_velocity));  // zero structure
+456 
+457     //startAPI();
+458     jaco_velocity\&.Position\&.Type = ANGULAR_VELOCITY;
+459 
+460     // confusingly, velocity is passed in the position struct
+461     jaco_velocity\&.Position\&.Actuators = joint_vel;
+462 
+463     int result = jaco_api_\&.sendAdvanceTrajectory(jaco_velocity);
+464     if (result != NO_ERROR_KINOVA)
+465     {
+466         throw JacoCommException("Could not send advanced joint velocity trajectory", result);
+467     }
+468 }
+.fi
+.SS "void jaco::JacoComm::startAPI ()"
+
+.PP
+.nf
+736 {
+737     boost::recursive_mutex::scoped_lock lock(api_mutex_);
+738     if (is_software_stop_)
+739     {
+740         is_software_stop_ = false;
+741         jaco_api_\&.stopControlAPI();
+742         ros::Duration(0\&.05)\&.sleep();
+743     }
+744 
+745     int result = jaco_api_\&.startControlAPI();
+746     if (result != NO_ERROR_KINOVA)
+747     {
+748         throw JacoCommException("Could not start the control API", result);
+749     }
+750 }
+.fi
+.SS "void jaco::JacoComm::startForceControl ()"
+
+.PP
+Start cartesian force control\&. 
+.PP
+.nf
+663 {
+664     boost::recursive_mutex::scoped_lock lock(api_mutex_);
+665     int result = jaco_api_\&.startForceControl();
+666     if (result != NO_ERROR_KINOVA)
+667     {
+668         throw JacoCommException("Could not start force control\&.", result);
+669     }
+670 }
+.fi
+.SS "void jaco::JacoComm::stopAPI ()"
+
+.PP
+.nf
+717 {
+718     boost::recursive_mutex::scoped_lock lock(api_mutex_);
+719     is_software_stop_ = true;
+720 
+721     int result = jaco_api_\&.stopControlAPI();
+722     if (result != NO_ERROR_KINOVA)
+723     {
+724         throw JacoCommException("Could not stop the control API", result);
+725     }
+726 
+727     result = jaco_api_\&.eraseAllTrajectories();
+728     if (result != NO_ERROR_KINOVA)
+729     {
+730         throw JacoCommException("Could not erase all trajectories", result);
+731     }
+732 }
+.fi
+.SS "void jaco::JacoComm::stopForceControl ()"
+
+.PP
+Stop cartesian force control\&. 
+.PP
+.nf
+676 {
+677     boost::recursive_mutex::scoped_lock lock(api_mutex_);
+678     int result = jaco_api_\&.stopForceControl();
+679     if (result != NO_ERROR_KINOVA)
+680     {
+681         throw JacoCommException("Could not stop force control\&.", result);
+682     }
+683 }
+.fi
+.SH "Member Data Documentation"
+.PP 
+.SS "boost::recursive_mutex& jaco::JacoComm::api_mutex_\fC [private]\fP"
+
+.SS "bool jaco::JacoComm::is_software_stop_\fC [private]\fP"
+
+.SS "\fBjaco::JacoAPI\fP jaco::JacoComm::jaco_api_\fC [private]\fP"
+
+.SS "int jaco::JacoComm::num_fingers_\fC [private]\fP"
+
+.SS "int jaco::JacoComm::robot_type_\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Kinova-ROS from the source code\&.

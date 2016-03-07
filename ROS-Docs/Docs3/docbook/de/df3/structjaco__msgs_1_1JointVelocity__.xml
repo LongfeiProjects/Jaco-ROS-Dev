@@ -1,0 +1,220 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="de/df3/structjaco__msgs_1_1JointVelocity__">
+<title>jaco_msgs::JointVelocity_ struct Reference</title>
+<para>
+    <programlisting>#include <link linkend="d2/d48/JointVelocity_8h">&quot;JointVelocity.h&quot;</link></programlisting>
+</para>
+<para>Inheritance diagram for jaco_msgs::JointVelocity_</para>
+<para>
+    <figure>
+        <title>Inheritance graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../d2/d42/structjaco__msgs_1_1JointVelocity____inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Collaboration diagram for jaco_msgs::JointVelocity_</para>
+<para>
+    <figure>
+        <title>Collaboration graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../d1/d02/structjaco__msgs_1_1JointVelocity____coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+    <templateparamlist>
+      <param>
+        <type>class</type>
+        <declname>ContainerAllocator</declname>
+        <defname>ContainerAllocator</defname>
+      </param>
+    </templateparamlist>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef float  <link linkend="de/df3/structjaco__msgs_1_1JointVelocity___1ab6a0b6d8bf7015aff3a61c25b4bdf67b">_joint1_type</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef float  <link linkend="de/df3/structjaco__msgs_1_1JointVelocity___1a60a2a12b126edac2c3004568aa77f833">_joint2_type</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef float  <link linkend="de/df3/structjaco__msgs_1_1JointVelocity___1a516b16873309e426015d059948c9de5f">_joint3_type</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef float  <link linkend="de/df3/structjaco__msgs_1_1JointVelocity___1a5433af2aa782711e694f2dea934d1e8a">_joint4_type</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef float  <link linkend="de/df3/structjaco__msgs_1_1JointVelocity___1a994fb0216a13a4bac0b44d75b293c8d1">_joint5_type</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef float  <link linkend="de/df3/structjaco__msgs_1_1JointVelocity___1aa08791b2618486b98789028edc8fecd7">_joint6_type</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef boost::shared_ptr&lt; ::<link linkend="de/df3/structjaco__msgs_1_1JointVelocity__">jaco_msgs::JointVelocity_</link>&lt; ContainerAllocator &gt; const  &gt;  <link linkend="de/df3/structjaco__msgs_1_1JointVelocity___1a16e3f55bcdaff368c588945f63478858">ConstPtr</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef boost::shared_ptr&lt; ::<link linkend="de/df3/structjaco__msgs_1_1JointVelocity__">jaco_msgs::JointVelocity_</link>&lt; ContainerAllocator &gt; &gt;  <link linkend="de/df3/structjaco__msgs_1_1JointVelocity___1abfcfdd60981037c03b85fd7ed2989df2">Ptr</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef <link linkend="de/df3/structjaco__msgs_1_1JointVelocity__">JointVelocity_</link>&lt; ContainerAllocator &gt;  <link linkend="de/df3/structjaco__msgs_1_1JointVelocity___1a09ae16ebc5eec5d6a7f20405ab791467">Type</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Public Attributes</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>boost::shared_ptr&lt; std::map&lt; std::string, std::string &gt; &gt; __connection_header</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>_joint1_type joint1</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>_joint2_type joint2</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>_joint3_type joint3</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>_joint4_type joint4</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>_joint5_type joint5</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>_joint6_type joint6</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="de/df3/structjaco__msgs_1_1JointVelocity___1a8ebfb46d45f3cebfd0d72869b043c571">JointVelocity_</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="de/df3/structjaco__msgs_1_1JointVelocity___1a105ebf90fa802ef67761d8209dc1b45e">JointVelocity_</link> (
+const ContainerAllocator &amp; _alloc)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+            <section xml:id="de/df3/structjaco__msgs_1_1JointVelocity___1ab6a0b6d8bf7015aff3a61c25b4bdf67b">
+                <title>typedef float jaco_msgs::JointVelocity_&lt; ContainerAllocator &gt;::_joint1_type</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="de/df3/structjaco__msgs_1_1JointVelocity___1a60a2a12b126edac2c3004568aa77f833">
+                <title>typedef float jaco_msgs::JointVelocity_&lt; ContainerAllocator &gt;::_joint2_type</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="de/df3/structjaco__msgs_1_1JointVelocity___1a516b16873309e426015d059948c9de5f">
+                <title>typedef float jaco_msgs::JointVelocity_&lt; ContainerAllocator &gt;::_joint3_type</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="de/df3/structjaco__msgs_1_1JointVelocity___1a5433af2aa782711e694f2dea934d1e8a">
+                <title>typedef float jaco_msgs::JointVelocity_&lt; ContainerAllocator &gt;::_joint4_type</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="de/df3/structjaco__msgs_1_1JointVelocity___1a994fb0216a13a4bac0b44d75b293c8d1">
+                <title>typedef float jaco_msgs::JointVelocity_&lt; ContainerAllocator &gt;::_joint5_type</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="de/df3/structjaco__msgs_1_1JointVelocity___1aa08791b2618486b98789028edc8fecd7">
+                <title>typedef float jaco_msgs::JointVelocity_&lt; ContainerAllocator &gt;::_joint6_type</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="de/df3/structjaco__msgs_1_1JointVelocity___1a16e3f55bcdaff368c588945f63478858">
+                <title>typedef boost::shared_ptr&lt; ::jaco_msgs::JointVelocity_&lt;ContainerAllocator&gt; const&gt; jaco_msgs::JointVelocity_&lt; ContainerAllocator &gt;::ConstPtr</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="de/df3/structjaco__msgs_1_1JointVelocity___1abfcfdd60981037c03b85fd7ed2989df2">
+                <title>typedef boost::shared_ptr&lt; ::jaco_msgs::JointVelocity_&lt;ContainerAllocator&gt; &gt; jaco_msgs::JointVelocity_&lt; ContainerAllocator &gt;::Ptr</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="de/df3/structjaco__msgs_1_1JointVelocity___1a09ae16ebc5eec5d6a7f20405ab791467">
+                <title>typedef JointVelocity_&lt;ContainerAllocator&gt; jaco_msgs::JointVelocity_&lt; ContainerAllocator &gt;::Type</title> <emphasis></emphasis>
+                
+            </section>
+        <section>
+            <title>Member Data Documentation</title>
+        </section>
+            <section xml:id="de/df3/structjaco__msgs_1_1JointVelocity___1a8ebfb46d45f3cebfd0d72869b043c571">
+                <title>jaco_msgs::JointVelocity_&lt; ContainerAllocator &gt;::JointVelocity_ ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="de/df3/structjaco__msgs_1_1JointVelocity___1a105ebf90fa802ef67761d8209dc1b45e">
+                <title>jaco_msgs::JointVelocity_&lt; ContainerAllocator &gt;::JointVelocity_ (const ContainerAllocator &amp;_alloc)</title> <emphasis></emphasis>
+                
+            </section>
+</section>

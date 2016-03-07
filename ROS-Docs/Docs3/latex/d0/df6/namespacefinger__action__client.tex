@@ -1,0 +1,61 @@
+\hypertarget{namespacefinger__action__client}{}\section{finger\+\_\+action\+\_\+client Namespace Reference}
+\label{namespacefinger__action__client}\index{finger\+\_\+action\+\_\+client@{finger\+\_\+action\+\_\+client}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{namespacefinger__action__client_a052b0ba6f2141589b77dad69727b3246}{pose\+\_\+client} ()
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{namespacefinger__action__client_a457ef4f2bf118e0ad46b05a4956a496d}{result} = \hyperlink{namespacefinger__action__client_a052b0ba6f2141589b77dad69727b3246}{pose\+\_\+client}()
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{finger\+\_\+action\+\_\+client@{finger\+\_\+action\+\_\+client}!pose\+\_\+client@{pose\+\_\+client}}
+\index{pose\+\_\+client@{pose\+\_\+client}!finger\+\_\+action\+\_\+client@{finger\+\_\+action\+\_\+client}}
+\subsubsection[{\texorpdfstring{pose\+\_\+client()}{pose_client()}}]{\setlength{\rightskip}{0pt plus 5cm}def finger\+\_\+action\+\_\+client.\+pose\+\_\+client (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacefinger__action__client_a052b0ba6f2141589b77dad69727b3246}{}\label{namespacefinger__action__client_a052b0ba6f2141589b77dad69727b3246}
+
+\begin{DoxyCode}
+13 \textcolor{keyword}{def }\hyperlink{namespacefinger__action__client_a052b0ba6f2141589b77dad69727b3246}{pose\_client}():
+14     client = actionlib.SimpleActionClient(\textcolor{stringliteral}{'/jaco/finger\_joint\_angles'}, 
+      \hyperlink{classjaco__msgs_1_1msg_1_1__SetFingersPositionAction_1_1SetFingersPositionAction}{jaco\_msgs.msg.SetFingersPositionAction})
+15 
+16     goal = \hyperlink{classjaco__msgs_1_1msg_1_1__SetFingersPositionGoal_1_1SetFingersPositionGoal}{jaco\_msgs.msg.SetFingersPositionGoal}()
+17 
+18     \textcolor{keywordflow}{if} len(sys.argv) < 4:
+19         goal.fingers.finger1 = 4000
+20         goal.fingers.finger2 = 4000
+21         goal.fingers.finger3 = 4000
+22 
+23         rospy.logwarn(\textcolor{stringliteral}{"Using test goal: \(\backslash\)n%s"}, goal)
+24     \textcolor{keywordflow}{else}:
+25         goal.fingers.finger1 = float(sys.argv[1])
+26         goal.fingers.finger2 = float(sys.argv[2])
+27         goal.fingers.finger3 = float(sys.argv[3])
+28 
+29     client.wait\_for\_server()
+30     rospy.loginfo(\textcolor{stringliteral}{"Connected to Finger server"})
+31 
+32     client.send\_goal(goal)
+33 
+34     \textcolor{keywordflow}{try}:
+35         client.wait\_for\_result()
+36     \textcolor{keywordflow}{except} KeyboardInterrupt:
+37         rospy.loginfo(\textcolor{stringliteral}{"Program interrupted, pre-empting goal"})
+38         client.cancel\_all\_goals()
+39 
+40     \textcolor{keywordflow}{return} client.get\_result()
+41 
+\end{DoxyCode}
+
+
+\subsection{Variable Documentation}
+\index{finger\+\_\+action\+\_\+client@{finger\+\_\+action\+\_\+client}!result@{result}}
+\index{result@{result}!finger\+\_\+action\+\_\+client@{finger\+\_\+action\+\_\+client}}
+\subsubsection[{\texorpdfstring{result}{result}}]{\setlength{\rightskip}{0pt plus 5cm}finger\+\_\+action\+\_\+client.\+result = {\bf pose\+\_\+client}()}\hypertarget{namespacefinger__action__client_a457ef4f2bf118e0ad46b05a4956a496d}{}\label{namespacefinger__action__client_a457ef4f2bf118e0ad46b05a4956a496d}

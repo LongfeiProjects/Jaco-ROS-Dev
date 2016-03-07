@@ -1,0 +1,69 @@
+.TH "FingersPosition" 3 "Thu Mar 3 2016" "Version 1.0.1" "Kinova-ROS" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+FingersPosition \- This data structure holds the values of the robot's fingers\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include 'Definition'\fP
+.PP
+Inherited by \fBjaco::FingerAngles\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBInitStruct\fP ()"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "float \fBFinger1\fP"
+.br
+.RI "\fIThis is the value of the finger #1\&. The units will depends on the context it's been used\&. \fP"
+.ti -1c
+.RI "float \fBFinger2\fP"
+.br
+.RI "\fIThis is the value of the finger #2\&. The units will depends on the context it's been used\&. \fP"
+.ti -1c
+.RI "float \fBFinger3\fP"
+.br
+.RI "\fIThis is the value of the finger #3\&. The units will depends on the context it's been used\&. \fP"
+.in -1c
+.SH "Detailed Description"
+.PP 
+This data structure holds the values of the robot's fingers\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "void FingersPosition::InitStruct ()\fC [inline]\fP"
+This method will initialises all the values to 0 
+.PP
+.nf
+534     {
+535         Finger1       = 0\&.0f;
+536         Finger2       = 0\&.0f;
+537         Finger3       = 0\&.0f;
+538     }
+.fi
+.SH "Member Data Documentation"
+.PP 
+.SS "float FingersPosition::Finger1"
+
+.PP
+This is the value of the finger #1\&. The units will depends on the context it's been used\&. 
+.SS "float FingersPosition::Finger2"
+
+.PP
+This is the value of the finger #2\&. The units will depends on the context it's been used\&. 
+.SS "float FingersPosition::Finger3"
+
+.PP
+This is the value of the finger #3\&. The units will depends on the context it's been used\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Kinova-ROS from the source code\&.

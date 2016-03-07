@@ -1,0 +1,78 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="df/d96/structros_1_1message__traits_1_1MD5Sum_3_01_1_1jaco__msgs_1_1SetFingersPositionActionResult___3_01ContainerAllocator_01_4_01_4">
+<title>ros::message_traits::MD5Sum&lt; ::jaco_msgs::SetFingersPositionActionResult_&lt; ContainerAllocator &gt; &gt; struct Reference</title>
+<para>
+    <programlisting>#include <link linkend="db/d1b/SetFingersPositionActionResult_8h">&quot;SetFingersPositionActionResult.h&quot;</link></programlisting>
+</para>
+<para>Inheritance diagram for ros::message_traits::MD5Sum&lt; ::jaco_msgs::SetFingersPositionActionResult_&lt; ContainerAllocator &gt; &gt;</para>
+<para>
+    <figure>
+        <title>Inheritance graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../de/d80/structros_1_1message__traits_1_1MD5Sum_3_01_1_1jaco__msgs_1_1SetFingersPositionActionResult___3_26ac933c416db9e1d6d6ef83319d6dbf.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Collaboration diagram for ros::message_traits::MD5Sum&lt; ::jaco_msgs::SetFingersPositionActionResult_&lt; ContainerAllocator &gt; &gt;</para>
+<para>
+    <figure>
+        <title>Collaboration graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../da/d1c/structros_1_1message__traits_1_1MD5Sum_3_01_1_1jaco__msgs_1_1SetFingersPositionActionResult___3_88286064963fc5cff85fb86015c97a0e.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+    <templateparamlist>
+      <param>
+        <type>class ContainerAllocator</type>
+      </param>
+    </templateparamlist>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static const uint64_t static_value1</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static const uint64_t static_value2</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static const char * <link linkend="df/d96/structros_1_1message__traits_1_1MD5Sum_3_01_1_1jaco__msgs_1_1SetFingersPositionActionResult___3_01ContainerAllocator_01_4_01_4_1a9ddf9d312a597df8a97956e3cd77d71d">value</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static const char * <link linkend="df/d96/structros_1_1message__traits_1_1MD5Sum_3_01_1_1jaco__msgs_1_1SetFingersPositionActionResult___3_01ContainerAllocator_01_4_01_4_1a92cea316ffa76e77857f40307e466c1e">value</link> (
+const ::<link linkend="da/db7/structjaco__msgs_1_1SetFingersPositionActionResult__">jaco_msgs::SetFingersPositionActionResult_</link>&lt; ContainerAllocator &gt; &amp; )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+            <section xml:id="df/d96/structros_1_1message__traits_1_1MD5Sum_3_01_1_1jaco__msgs_1_1SetFingersPositionActionResult___3_01ContainerAllocator_01_4_01_4_1a9ddf9d312a597df8a97956e3cd77d71d">
+                <title>static const char* ros::message_traits::MD5Sum&lt; ::jaco_msgs::SetFingersPositionActionResult_&lt; ContainerAllocator &gt; &gt;::value ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="df/d96/structros_1_1message__traits_1_1MD5Sum_3_01_1_1jaco__msgs_1_1SetFingersPositionActionResult___3_01ContainerAllocator_01_4_01_4_1a92cea316ffa76e77857f40307e466c1e">
+                <title>static const char* ros::message_traits::MD5Sum&lt; ::jaco_msgs::SetFingersPositionActionResult_&lt; ContainerAllocator &gt; &gt;::value (const ::jaco_msgs::SetFingersPositionActionResult_&lt; ContainerAllocator &gt; &amp;)</title> <emphasis></emphasis>
+                
+            </section>
+</section>

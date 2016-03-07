@@ -1,0 +1,174 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="df/dc0/namespace__setup__util">
+<title>_setup_util</title>
+        <section>
+            <title>Variables</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="df/dc0/namespace__setup__util_1a547963d07c6371df1c51b1384a2dec28">args</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="df/dc0/namespace__setup__util_1a83d25140acd7788bbcb95843fe38e639">base_path</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>string <link linkend="df/dc0/namespace__setup__util_1a3fa0ca5a460a71a43cbc3d4954ab1f10">CATKIN_MARKER_FILE</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>string <link linkend="df/dc0/namespace__setup__util_1a57afd3d2c076955fb715f3e72ef098eb">CMAKE_PREFIX_PATH</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="df/dc0/namespace__setup__util_1acdce690b925de33d6249bbbfa1109d61">e</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>dictionary <link linkend="df/dc0/namespace__setup__util_1aa31804f1be8660156ce9394b33c68dc4">ENV_VAR_SUBFOLDERS</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="df/dc0/namespace__setup__util_1a9a935bdd9ee1aa0327161025bb18c136">environ</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="df/dc0/namespace__setup__util_1aea63a1b32cc79bc3d872ab7cb30dd07e">file</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>tuple <link linkend="df/dc0/namespace__setup__util_1aecbb100ce6f94bb3c7e16d58fde05f96">IS_DARWIN</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>tuple <link linkend="df/dc0/namespace__setup__util_1a6fe69c2dbd92959b6651a28cbb846e6e">IS_WINDOWS</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>list <link linkend="df/dc0/namespace__setup__util_1a8618d8be5f729d4c9696daa5e083a001">lines</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="df/dc0/namespace__setup__util_1ae9fca6a80a6923f4580be72f68fee325">system</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Functions</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>def <link linkend="df/dc0/namespace__setup__util_1ab2be07aa31918f1e1e34d6b7c4d66fcb">_get_workspaces</link> (
+<link linkend="df/dc0/namespace__setup__util_1a9a935bdd9ee1aa0327161025bb18c136">environ</link> , include_fuerte , include_non_existing )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>def <link linkend="df/dc0/namespace__setup__util_1a57d9ecb280810c9a5409d44aeb9d0a25">_parse_arguments</link> (
+<link linkend="df/dc0/namespace__setup__util_1a547963d07c6371df1c51b1384a2dec28">args</link> )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>def <link linkend="df/dc0/namespace__setup__util_1a01264d729d05078ec7ee1cad54fe6489">_prefix_env_variable</link> (
+<link linkend="df/dc0/namespace__setup__util_1a9a935bdd9ee1aa0327161025bb18c136">environ</link> , name , paths , subfolder )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>def <link linkend="df/dc0/namespace__setup__util_1a45389205be3d6e2efe8b6f8409a8059b">_rollback_env_variable</link> (
+<link linkend="df/dc0/namespace__setup__util_1a9a935bdd9ee1aa0327161025bb18c136">environ</link> , name , subfolder )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>def <link linkend="df/dc0/namespace__setup__util_1ad56c24837fa4eddc63c03fbc7035628f">assignment</link> (
+key , value )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>def <link linkend="df/dc0/namespace__setup__util_1abe8c95c4cfe8b1374dacd5f91d984353">comment</link> (
+msg )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>def <link linkend="df/dc0/namespace__setup__util_1a73de35ca77f260af6691470342ab49ce">find_env_hooks</link> (
+<link linkend="df/dc0/namespace__setup__util_1a9a935bdd9ee1aa0327161025bb18c136">environ</link> , cmake_prefix_path )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>def <link linkend="df/dc0/namespace__setup__util_1ae78d86b2c4279f5b8b1acaa146c35802">prepend</link> (
+<link linkend="df/dc0/namespace__setup__util_1a9a935bdd9ee1aa0327161025bb18c136">environ</link> , key , prefix )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>def <link linkend="df/dc0/namespace__setup__util_1a832417d18b85bd1d276a87547e86f860">prepend_env_variables</link> (
+<link linkend="df/dc0/namespace__setup__util_1a9a935bdd9ee1aa0327161025bb18c136">environ</link> , env_var_subfolders , workspaces )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>def <link linkend="df/dc0/namespace__setup__util_1af3030db6102b5aa35cd354a2fb6cca03">rollback_env_variables</link> (
+<link linkend="df/dc0/namespace__setup__util_1a9a935bdd9ee1aa0327161025bb18c136">environ</link> , env_var_subfolders )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+</section>

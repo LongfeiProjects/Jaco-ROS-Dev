@@ -1,0 +1,74 @@
+\hypertarget{namespacepose__action__client}{}\section{pose\+\_\+action\+\_\+client Namespace Reference}
+\label{namespacepose__action__client}\index{pose\+\_\+action\+\_\+client@{pose\+\_\+action\+\_\+client}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{namespacepose__action__client_a2379b6420c9b26d36eff80d2c269ce09}{pose\+\_\+client} ()
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{namespacepose__action__client_af6e1b48c2733e83789035d19de147d40}{result} = \hyperlink{namespacepose__action__client_a2379b6420c9b26d36eff80d2c269ce09}{pose\+\_\+client}()
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{pose\+\_\+action\+\_\+client@{pose\+\_\+action\+\_\+client}!pose\+\_\+client@{pose\+\_\+client}}
+\index{pose\+\_\+client@{pose\+\_\+client}!pose\+\_\+action\+\_\+client@{pose\+\_\+action\+\_\+client}}
+\subsubsection[{\texorpdfstring{pose\+\_\+client()}{pose_client()}}]{\setlength{\rightskip}{0pt plus 5cm}def pose\+\_\+action\+\_\+client.\+pose\+\_\+client (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacepose__action__client_a2379b6420c9b26d36eff80d2c269ce09}{}\label{namespacepose__action__client_a2379b6420c9b26d36eff80d2c269ce09}
+
+\begin{DoxyCode}
+13 \textcolor{keyword}{def }\hyperlink{namespacepose__action__client_a2379b6420c9b26d36eff80d2c269ce09}{pose\_client}():
+14     client = actionlib.SimpleActionClient(\textcolor{stringliteral}{'/jaco/arm\_pose'}, 
+      \hyperlink{classjaco__msgs_1_1msg_1_1__ArmPoseAction_1_1ArmPoseAction}{jaco\_msgs.msg.ArmPoseAction})
+15 
+16     goal = \hyperlink{classjaco__msgs_1_1msg_1_1__ArmPoseGoal_1_1ArmPoseGoal}{jaco\_msgs.msg.ArmPoseGoal}()
+17 
+18     goal.pose.header.frame\_id = \textcolor{stringliteral}{"/jaco\_api\_origin"}
+19     pose = goal.pose.pose
+20 
+21     \textcolor{keywordflow}{if} len(sys.argv) < 8: \textcolor{comment}{# default pose}
+22         pose.position.x = -0.314269423485
+23         pose.position.y = -0.339179039001
+24         pose.position.z = 0.600132465363
+25 
+26         pose.orientation.x = -0.590686044496
+27         pose.orientation.y = -0.519369415388
+28         pose.orientation.z = 0.324703360925
+29         pose.orientation.w = 0.525274342226
+30 
+31         rospy.logwarn(\textcolor{stringliteral}{"Using test goal: \(\backslash\)n%s"}, goal)
+32     \textcolor{keywordflow}{else}: \textcolor{comment}{# use pose from command line}
+33         pose.position.x = float(sys.argv[1])
+34         pose.position.y = float(sys.argv[2])
+35         pose.position.z = float(sys.argv[3])
+36 
+37         pose.orientation.x = float(sys.argv[4])
+38         pose.orientation.y = float(sys.argv[5])
+39         pose.orientation.z = float(sys.argv[6])
+40         pose.orientation.w = float(sys.argv[7])
+41 
+42     client.wait\_for\_server()
+43     rospy.loginfo(\textcolor{stringliteral}{"Connected to Pose server"})
+44 
+45     client.send\_goal(goal)
+46 
+47     \textcolor{keywordflow}{try}:
+48         client.wait\_for\_result()
+49     \textcolor{keywordflow}{except} KeyboardInterrupt:
+50         rospy.loginfo(\textcolor{stringliteral}{"Program interrupted, pre-empting goal"})
+51         client.cancel\_all\_goals()
+52 
+53     \textcolor{keywordflow}{return} client.get\_result()
+54 
+\end{DoxyCode}
+
+
+\subsection{Variable Documentation}
+\index{pose\+\_\+action\+\_\+client@{pose\+\_\+action\+\_\+client}!result@{result}}
+\index{result@{result}!pose\+\_\+action\+\_\+client@{pose\+\_\+action\+\_\+client}}
+\subsubsection[{\texorpdfstring{result}{result}}]{\setlength{\rightskip}{0pt plus 5cm}pose\+\_\+action\+\_\+client.\+result = {\bf pose\+\_\+client}()}\hypertarget{namespacepose__action__client_af6e1b48c2733e83789035d19de147d40}{}\label{namespacepose__action__client_af6e1b48c2733e83789035d19de147d40}

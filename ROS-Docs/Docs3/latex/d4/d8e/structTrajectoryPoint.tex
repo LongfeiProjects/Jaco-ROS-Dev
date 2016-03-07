@@ -1,0 +1,85 @@
+\hypertarget{structTrajectoryPoint}{}\section{Trajectory\+Point Struct Reference}
+\label{structTrajectoryPoint}\index{Trajectory\+Point@{Trajectory\+Point}}
+
+
+This data structure represents a point of a trajectory. It contains the position a limitation that you can applied.  
+
+
+
+
+{\ttfamily \#include \char`\"{}Definition\char`\"{}}
+
+
+
+Collaboration diagram for Trajectory\+Point\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/dc4/structTrajectoryPoint__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{structTrajectoryPoint_a1a9f12ad88f5011c6a4644792fa67f99}{Init\+Struct} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structLimitation}{Limitation} \hyperlink{structTrajectoryPoint_ad6d7f13b1dee1ef3a5300ffffd77cac8}{Limitations}
+\begin{DoxyCompactList}\small\item\em \hyperlink{structLimitation}{Limitation} applied to this point if the limitation flag is active. \end{DoxyCompactList}\item 
+int \hyperlink{structTrajectoryPoint_acec47b76503d6f202e78bd00ec8fa02d}{Limitations\+Active}
+\begin{DoxyCompactList}\small\item\em A flag that indicatesif the limitation are active or not (1 is active 0 is not). \end{DoxyCompactList}\item 
+\hyperlink{structUserPosition}{User\+Position} \hyperlink{structTrajectoryPoint_aa24430dc273e9d7968a6c44e3bcee259}{Position}
+\begin{DoxyCompactList}\small\item\em Position information that described this trajectory point. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This data structure represents a point of a trajectory. It contains the position a limitation that you can applied. 
+
+\subsection{Member Function Documentation}
+\index{Trajectory\+Point@{Trajectory\+Point}!Init\+Struct@{Init\+Struct}}
+\index{Init\+Struct@{Init\+Struct}!Trajectory\+Point@{Trajectory\+Point}}
+\subsubsection[{\texorpdfstring{Init\+Struct()}{InitStruct()}}]{\setlength{\rightskip}{0pt plus 5cm}void Trajectory\+Point\+::\+Init\+Struct (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{structTrajectoryPoint_a1a9f12ad88f5011c6a4644792fa67f99}{}\label{structTrajectoryPoint_a1a9f12ad88f5011c6a4644792fa67f99}
+
+\begin{DoxyCode}
+694     \{
+695         \hyperlink{structTrajectoryPoint_aa24430dc273e9d7968a6c44e3bcee259}{Position}.\hyperlink{structUserPosition_ad682f9be07fa2307028f86624ded2958}{InitStruct}();
+696         \hyperlink{structTrajectoryPoint_acec47b76503d6f202e78bd00ec8fa02d}{LimitationsActive} = 0;
+697         \hyperlink{structTrajectoryPoint_ad6d7f13b1dee1ef3a5300ffffd77cac8}{Limitations}.\hyperlink{structLimitation_a098f4ee5d0eb6baf844ff3164f1a20f6}{InitStruct}();
+698     \}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\index{Trajectory\+Point@{Trajectory\+Point}!Limitations@{Limitations}}
+\index{Limitations@{Limitations}!Trajectory\+Point@{Trajectory\+Point}}
+\subsubsection[{\texorpdfstring{Limitations}{Limitations}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Limitation} Trajectory\+Point\+::\+Limitations}\hypertarget{structTrajectoryPoint_ad6d7f13b1dee1ef3a5300ffffd77cac8}{}\label{structTrajectoryPoint_ad6d7f13b1dee1ef3a5300ffffd77cac8}
+
+
+\hyperlink{structLimitation}{Limitation} applied to this point if the limitation flag is active. 
+
+\index{Trajectory\+Point@{Trajectory\+Point}!Limitations\+Active@{Limitations\+Active}}
+\index{Limitations\+Active@{Limitations\+Active}!Trajectory\+Point@{Trajectory\+Point}}
+\subsubsection[{\texorpdfstring{Limitations\+Active}{LimitationsActive}}]{\setlength{\rightskip}{0pt plus 5cm}int Trajectory\+Point\+::\+Limitations\+Active}\hypertarget{structTrajectoryPoint_acec47b76503d6f202e78bd00ec8fa02d}{}\label{structTrajectoryPoint_acec47b76503d6f202e78bd00ec8fa02d}
+
+
+A flag that indicatesif the limitation are active or not (1 is active 0 is not). 
+
+\index{Trajectory\+Point@{Trajectory\+Point}!Position@{Position}}
+\index{Position@{Position}!Trajectory\+Point@{Trajectory\+Point}}
+\subsubsection[{\texorpdfstring{Position}{Position}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf User\+Position} Trajectory\+Point\+::\+Position}\hypertarget{structTrajectoryPoint_aa24430dc273e9d7968a6c44e3bcee259}{}\label{structTrajectoryPoint_aa24430dc273e9d7968a6c44e3bcee259}
+
+
+Position information that described this trajectory point. 
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Longfei/\+Desktop/catkin\+\_\+\+Kinova\+R\+O\+S/src/jaco-\/ros/jaco\+\_\+driver/include/kinova/\hyperlink{KinovaTypes_8h}{Kinova\+Types.\+h}\end{DoxyCompactItemize}

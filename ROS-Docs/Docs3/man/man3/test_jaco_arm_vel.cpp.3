@@ -1,0 +1,87 @@
+.TH "D:/Longfei/Desktop/catkin_KinovaROS/src/jaco-ros/jaco_driver/src/testers/test_jaco_arm_vel.cpp" 3 "Thu Mar 3 2016" "Version 1.0.1" "Kinova-ROS" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+D:/Longfei/Desktop/catkin_KinovaROS/src/jaco-ros/jaco_driver/src/testers/test_jaco_arm_vel.cpp \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <geometry_msgs/PoseStamped\&.h>\fP
+.br
+\fC#include <geometry_msgs/TwistStamped\&.h>\fP
+.br
+\fC#include <tf/tf\&.h>\fP
+.br
+\fC#include <ros/ros\&.h>\fP
+.br
+\fC#include <jaco_msgs/cartesian_velocity\&.h>\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "int \fBmain\fP (int argc, char **argv)"
+.br
+.ti -1c
+.RI "void \fBTimerCallback\fP (const ros::TimerEvent &)"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "ros::Publisher \fBpub\fP"
+.br
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "int main (int argc, char ** argv)"
+String containing the topic name for cartesian commands 
+.PP
+.nf
+43                                 {
+44 
+45     /* Set up ROS */
+46     ros::init(argc, argv, "test_jaco_arm_vel");
+47     ros::NodeHandle nh;
+48     ros::NodeHandle param_nh("~");
+49 
+50     std::string JointVelocity("CartesianVelocity"); 
+51 
+52      pub = nh\&.advertise<jaco_msgs::cartesian_velocity>(JointVelocity,
+53             2);
+54 
+55     ros::Timer timer = nh\&.createTimer(ros::Duration(0\&.01),TimerCallback);
+56 
+57 
+58     ros::spin();
+59 }
+.fi
+.SS "void TimerCallback (const ros::TimerEvent &)"
+
+.PP
+.nf
+27 {
+28     jaco_msgs::cartesian_velocity test_msg;
+29 
+30             test_msg\&.Velocity_X = 0\&.0;
+31             test_msg\&.Velocity_Y = 10;
+32             test_msg\&.Velocity_Z = 0;
+33             test_msg\&.Velocity_TX = 0;
+34             test_msg\&.Velocity_TY = 0;
+35             test_msg\&.Velocity_TZ = 0;
+36 
+37 
+38             pub\&.publish(test_msg);
+39 
+40 
+41 }
+.fi
+.SH "Variable Documentation"
+.PP 
+.SS "ros::Publisher pub"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Kinova-ROS from the source code\&.

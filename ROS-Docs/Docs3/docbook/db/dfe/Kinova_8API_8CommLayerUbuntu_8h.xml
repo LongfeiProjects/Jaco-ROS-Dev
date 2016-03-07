@@ -1,0 +1,361 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="db/dfe/Kinova_8API_8CommLayerUbuntu_8h">
+    <title>Kinova.API.CommLayerUbuntu.h File Reference</title>
+    <programlisting>#include &lt;vector&gt;</programlisting>
+<para>Include dependency diagram for Kinova.API.CommLayerUbuntu.h</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../d3/d29/Kinova_8API_8CommLayerUbuntu_8h__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Included by dependency diagram for Kinova.API.CommLayerUbuntu.h</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../d1/ddf/Kinova_8API_8CommLayerUbuntu_8h__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+        <section>
+            <title> Classes </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="db/dfe/Kinova_8API_8CommLayerUbuntu_8h">KinovaDevice</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="db/dfe/Kinova_8API_8CommLayerUbuntu_8h">Packet</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="db/dfe/Kinova_8API_8CommLayerUbuntu_8h">PacketList</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Macros</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="db/dfe/Kinova_8API_8CommLayerUbuntu_8h_1a8bef7198cac5a66787097490eb9289a6">ERROR_CLAIM_INTERFACE</link> 1008</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="db/dfe/Kinova_8API_8CommLayerUbuntu_8h_1a135c6a9b1729ec2cc26109fa1011dd60">ERROR_FREE_LIBRARY</link> 1006</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="db/dfe/Kinova_8API_8CommLayerUbuntu_8h_1afd94861330305625c61219ed28b02a36">ERROR_JACO_CONNECTION</link> 1007</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="db/dfe/Kinova_8API_8CommLayerUbuntu_8h_1ac990045d67e6561d7cddb33a9484e48c">ERROR_LIBUSB_BUSY</link> 1012</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="db/dfe/Kinova_8API_8CommLayerUbuntu_8h_1ad42ee2931c53f250d85555f35bb8ee81">ERROR_LIBUSB_NO_DEVICE</link> 1011</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="db/dfe/Kinova_8API_8CommLayerUbuntu_8h_1af88b346701ceadbdd6fc3d8ca1f4befe">ERROR_LIBUSB_NOT_SUPPORTED</link> 1013</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="db/dfe/Kinova_8API_8CommLayerUbuntu_8h_1af3dbe9ae36e3aa0ba20d139a987cb354">ERROR_LOAD_USB_LIBRARY</link> 1001</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="db/dfe/Kinova_8API_8CommLayerUbuntu_8h_1ad6dae5cdf107e5b57dc4e13427c608b7">ERROR_NO_DEVICE_FOUND</link> 1015</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="db/dfe/Kinova_8API_8CommLayerUbuntu_8h_1a605e0ff46555922872461535eca0d0b9">ERROR_NOT_INITIALIZED</link> 1010</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="db/dfe/Kinova_8API_8CommLayerUbuntu_8h_1ae16383b6f1c8166cf8ae3c4ea51f1f0b">ERROR_OPEN_METHOD</link> 1002</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="db/dfe/Kinova_8API_8CommLayerUbuntu_8h_1a0cc1d32fe6982ee696be9d1a001340fe">ERROR_READ_INT_METHOD</link> 1005</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="db/dfe/Kinova_8API_8CommLayerUbuntu_8h_1aef66c12ea6482b4c496c08a288cc7faa">ERROR_READ_METHOD</link> 1004</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="db/dfe/Kinova_8API_8CommLayerUbuntu_8h_1a46ec259f48cc0f825cec63da32c2d640">ERROR_SENDPACKET_UNKNOWN</link> 1014</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="db/dfe/Kinova_8API_8CommLayerUbuntu_8h_1ad8ff335f164c59e9ea2f9f500fb81c50">ERROR_UNKNOWN_DEVICE</link> 1009</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="db/dfe/Kinova_8API_8CommLayerUbuntu_8h_1ada338ad6d3a9bc98d7ab9a91e13af88c">ERROR_WRITE_METHOD</link> 1003</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="db/dfe/Kinova_8API_8CommLayerUbuntu_8h_1ad200cf58a0e33b783c540d745ca27add">KINOVADLLCOMMLAYER_API</link> __declspec(dllimport)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="db/dfe/Kinova_8API_8CommLayerUbuntu_8h_1a510f2320a2a31d2d225adc0da7bef595">NO_ERROR_KINOVA</link> 1</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="db/dfe/Kinova_8API_8CommLayerUbuntu_8h_1a515f46a87f301d94d9f3b06a6bb2540a">PACKET_DATA_SIZE</link> 56</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="db/dfe/Kinova_8API_8CommLayerUbuntu_8h_1a69bfb6e73bae0625ac56f441ccf542d1">PACKET_HEADER_SIZE</link> 8</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="db/dfe/Kinova_8API_8CommLayerUbuntu_8h_1aebdc7d8ca8e25ed8efc90bb88ef7ef5b">PACKET_SIZE</link> 64</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="db/dfe/Kinova_8API_8CommLayerUbuntu_8h_1a2e19fae8619e7a3b28aecdcf5d7cd51d">SERIAL_LENGTH</link> 20</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Variables</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="db/dfe/Kinova_8API_8CommLayerUbuntu_8h_1d3/d5f/structPacket">Packet</link> &amp; <link linkend="db/dfe/Kinova_8API_8CommLayerUbuntu_8h_1a0929bb1a4a68ea14e4871a32a70d7fa6">packetIn</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="db/dfe/Kinova_8API_8CommLayerUbuntu_8h_1d3/d5f/structPacket">Packet</link> int &amp; <link linkend="db/dfe/Kinova_8API_8CommLayerUbuntu_8h_1a900dac90961bada00f57c207562a6a9a">result</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Functions</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="db/dfe/Kinova_8API_8CommLayerUbuntu_8h_1a1d3678de7e45bc92e4c8ee7ece40c833">__attribute__</link> (
+(visibility(&quot;default&quot;)) )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+    <simplesect>
+        <title>Detailed Description</title>
+    <para>Definition in file D:/Longfei/Desktop/catkin_KinovaROS/src/jaco-ros/jaco_driver/include/kinova/Kinova.API.CommLayerUbuntu.h</para>
+    </simplesect>
+    <literallayout><computeroutput>
+1 <emphasis class="comment">/*</emphasis>
+2 <emphasis class="comment">&#32;*&#32;Kinova.DLL.CommLayerUbuntu.h</emphasis>
+3 <emphasis class="comment">&#32;*</emphasis>
+4 <emphasis class="comment">&#32;*&#32;&#32;Created&#32;on:&#32;Oct&#32;16,&#32;2012</emphasis>
+5 <emphasis class="comment">&#32;*&#32;&#32;&#32;&#32;&#32;&#32;Author:&#32;H.&#32;Lamontagne,&#32;Kinova</emphasis>
+6 <emphasis class="comment">&#32;*/</emphasis>
+7 
+8 <emphasis class="preprocessor">#ifndef&#32;KINOVA_DLL_COMMLAYERUBUNTU_H_</emphasis>
+9 <emphasis class="preprocessor">#define&#32;KINOVA_DLL_COMMLAYERUBUNTU_H_</emphasis>
+10 
+11 <emphasis class="preprocessor">#ifdef&#32;KINOVADLLCOMMLAYER_EXPORTS</emphasis>
+12 <emphasis class="preprocessor">#define&#32;KINOVADLLCOMMLAYER_API&#32;__declspec(dllexport)</emphasis>
+13 <emphasis class="preprocessor">#else</emphasis>
+<link linkend="db/dfe/Kinova_8API_8CommLayerUbuntu_8h_1ad200cf58a0e33b783c540d745ca27add">14 </link><emphasis class="preprocessor">#define&#32;KINOVADLLCOMMLAYER_API&#32;__declspec(dllimport)</emphasis>
+15 <emphasis class="preprocessor">#endif</emphasis>
+16 
+17 <emphasis class="preprocessor">#include&#32;&lt;vector&gt;</emphasis>
+18 
+19 <emphasis class="comment">//&#32;*****&#32;E&#32;R&#32;R&#32;O&#32;R&#32;&#32;&#32;C&#32;O&#32;D&#32;E&#32;S&#32;******</emphasis>
+20 
+21 <emphasis class="comment">//No&#32;error,&#32;everything&#32;is&#32;fine.</emphasis>
+<link linkend="db/dfe/Kinova_8API_8CommLayerUbuntu_8h_1a510f2320a2a31d2d225adc0da7bef595">22 </link><emphasis class="preprocessor">#define&#32;NO_ERROR_KINOVA&#32;1</emphasis>
+23 
+24 <emphasis class="comment">//Unable&#32;to&#32;load&#32;the&#32;USB&#32;library.</emphasis>
+<link linkend="db/dfe/Kinova_8API_8CommLayerUbuntu_8h_1af3dbe9ae36e3aa0ba20d139a987cb354">25 </link><emphasis class="preprocessor">#define&#32;ERROR_LOAD_USB_LIBRARY&#32;1001</emphasis>
+26 
+27 <emphasis class="comment">//Unable&#32;to&#32;access&#32;the&#32;Open&#32;method&#32;from&#32;the&#32;USB&#32;library.</emphasis>
+<link linkend="db/dfe/Kinova_8API_8CommLayerUbuntu_8h_1ae16383b6f1c8166cf8ae3c4ea51f1f0b">28 </link><emphasis class="preprocessor">#define&#32;ERROR_OPEN_METHOD&#32;&#32;1002</emphasis>
+29 
+30 <emphasis class="comment">//Unable&#32;to&#32;access&#32;the&#32;Write&#32;method&#32;from&#32;the&#32;USB&#32;library.</emphasis>
+<link linkend="db/dfe/Kinova_8API_8CommLayerUbuntu_8h_1ada338ad6d3a9bc98d7ab9a91e13af88c">31 </link><emphasis class="preprocessor">#define&#32;ERROR_WRITE_METHOD&#32;&#32;1003</emphasis>
+32 
+33 <emphasis class="comment">//Unable&#32;to&#32;access&#32;the&#32;Read&#32;method&#32;from&#32;the&#32;USB&#32;library.</emphasis>
+<link linkend="db/dfe/Kinova_8API_8CommLayerUbuntu_8h_1aef66c12ea6482b4c496c08a288cc7faa">34 </link><emphasis class="preprocessor">#define&#32;ERROR_READ_METHOD&#32;&#32;1004</emphasis>
+35 
+36 <emphasis class="comment">//Unable&#32;to&#32;access&#32;the&#32;Read&#32;Int&#32;method&#32;from&#32;the&#32;USB&#32;library.</emphasis>
+<link linkend="db/dfe/Kinova_8API_8CommLayerUbuntu_8h_1a0cc1d32fe6982ee696be9d1a001340fe">37 </link><emphasis class="preprocessor">#define&#32;ERROR_READ_INT_METHOD&#32;&#32;1005</emphasis>
+38 
+39 <emphasis class="comment">//Unable&#32;to&#32;access&#32;the&#32;Free&#32;Library&#32;method&#32;from&#32;the&#32;USB&#32;library.</emphasis>
+<link linkend="db/dfe/Kinova_8API_8CommLayerUbuntu_8h_1a135c6a9b1729ec2cc26109fa1011dd60">40 </link><emphasis class="preprocessor">#define&#32;ERROR_FREE_LIBRARY&#32;&#32;1006</emphasis>
+41 
+42 <emphasis class="comment">//There&#32;is&#32;a&#32;problem&#32;with&#32;the&#32;USB&#32;connection&#32;between&#32;the&#32;device&#32;and&#32;the&#32;computer.</emphasis>
+<link linkend="db/dfe/Kinova_8API_8CommLayerUbuntu_8h_1afd94861330305625c61219ed28b02a36">43 </link><emphasis class="preprocessor">#define&#32;ERROR_JACO_CONNECTION&#32;1007</emphasis>
+44 
+45 <emphasis class="comment">//Unable&#32;to&#32;claim&#32;the&#32;USB&#32;interface.</emphasis>
+<link linkend="db/dfe/Kinova_8API_8CommLayerUbuntu_8h_1a8bef7198cac5a66787097490eb9289a6">46 </link><emphasis class="preprocessor">#define&#32;ERROR_CLAIM_INTERFACE&#32;1008</emphasis>
+47 
+48 <emphasis class="comment">//Unknown&#32;type&#32;of&#32;device.</emphasis>
+<link linkend="db/dfe/Kinova_8API_8CommLayerUbuntu_8h_1ad8ff335f164c59e9ea2f9f500fb81c50">49 </link><emphasis class="preprocessor">#define&#32;ERROR_UNKNOWN_DEVICE&#32;1009</emphasis>
+50 
+51 <emphasis class="comment">//The&#32;functionality&#32;you&#32;are&#32;trying&#32;to&#32;use&#32;has&#32;not&#32;been&#32;initialized.</emphasis>
+<link linkend="db/dfe/Kinova_8API_8CommLayerUbuntu_8h_1a605e0ff46555922872461535eca0d0b9">52 </link><emphasis class="preprocessor">#define&#32;ERROR_NOT_INITIALIZED&#32;1010</emphasis>
+53 
+54 <emphasis class="comment">//The&#32;USB&#32;library&#32;cannot&#32;find&#32;the&#32;device.</emphasis>
+<link linkend="db/dfe/Kinova_8API_8CommLayerUbuntu_8h_1ad42ee2931c53f250d85555f35bb8ee81">55 </link><emphasis class="preprocessor">#define&#32;ERROR_LIBUSB_NO_DEVICE&#32;1011</emphasis>
+56 
+57 <emphasis class="comment">//The&#32;USB&#32;Library&#32;is&#32;bussy&#32;and&#32;could&#32;not&#32;perform&#32;the&#32;action.</emphasis>
+<link linkend="db/dfe/Kinova_8API_8CommLayerUbuntu_8h_1ac990045d67e6561d7cddb33a9484e48c">58 </link><emphasis class="preprocessor">#define&#32;ERROR_LIBUSB_BUSY&#32;1012</emphasis>
+59 
+60 <emphasis class="comment">//The&#32;functionality&#32;you&#32;are&#32;trying&#32;to&#32;perform&#32;is&#32;not&#32;supported&#32;by&#32;the&#32;version&#32;installed.</emphasis>
+<link linkend="db/dfe/Kinova_8API_8CommLayerUbuntu_8h_1af88b346701ceadbdd6fc3d8ca1f4befe">61 </link><emphasis class="preprocessor">#define&#32;ERROR_LIBUSB_NOT_SUPPORTED&#32;1013</emphasis>
+62 
+63 <emphasis class="comment">//Unknown&#32;error&#32;while&#32;sending&#32;a&#32;packet.</emphasis>
+<link linkend="db/dfe/Kinova_8API_8CommLayerUbuntu_8h_1a46ec259f48cc0f825cec63da32c2d640">64 </link><emphasis class="preprocessor">#define&#32;ERROR_SENDPACKET_UNKNOWN&#32;1014</emphasis>
+65 
+66 <emphasis class="comment">//Cannot&#32;find&#32;the&#32;requested&#32;device.</emphasis>
+<link linkend="db/dfe/Kinova_8API_8CommLayerUbuntu_8h_1ad6dae5cdf107e5b57dc4e13427c608b7">67 </link><emphasis class="preprocessor">#define&#32;ERROR_NO_DEVICE_FOUND&#32;1015</emphasis>
+68 
+69 <emphasis class="comment">//&#32;*****&#32;E&#32;N&#32;D&#32;&#32;O&#32;F&#32;&#32;E&#32;R&#32;R&#32;O&#32;R&#32;&#32;&#32;C&#32;O&#32;D&#32;E&#32;S&#32;******</emphasis>
+70 
+71 
+72 <emphasis class="comment">//Total&#32;size&#32;of&#32;our&#32;packet&#32;in&#32;bytes.</emphasis>
+<link linkend="db/dfe/Kinova_8API_8CommLayerUbuntu_8h_1aebdc7d8ca8e25ed8efc90bb88ef7ef5b">73 </link><emphasis class="preprocessor">#define&#32;PACKET_SIZE&#32;64</emphasis>
+74 
+75 <emphasis class="comment">//Data&apos;s&#32;size&#32;of&#32;a&#32;single&#32;packet.</emphasis>
+<link linkend="db/dfe/Kinova_8API_8CommLayerUbuntu_8h_1a515f46a87f301d94d9f3b06a6bb2540a">76 </link><emphasis class="preprocessor">#define&#32;PACKET_DATA_SIZE&#32;56</emphasis>
+77 
+78 <emphasis class="comment">//Header&apos;s&#32;size&#32;of&#32;a&#32;packet.</emphasis>
+<link linkend="db/dfe/Kinova_8API_8CommLayerUbuntu_8h_1a69bfb6e73bae0625ac56f441ccf542d1">79 </link><emphasis class="preprocessor">#define&#32;PACKET_HEADER_SIZE&#32;8</emphasis>
+80 
+81 <emphasis class="comment">//Max&#32;character&#32;count&#32;in&#32;our&#32;string.</emphasis>
+<link linkend="db/dfe/Kinova_8API_8CommLayerUbuntu_8h_1a2e19fae8619e7a3b28aecdcf5d7cd51d">82 </link><emphasis class="preprocessor">#define&#32;SERIAL_LENGTH&#32;20</emphasis>
+83 
+84 <emphasis class="comment">//That&#32;represents&#32;a&#32;packet.</emphasis>
+<link linkend="db/dfe/Kinova_8API_8CommLayerUbuntu_8h">85 </link><emphasis class="keyword">struct&#32;</emphasis><link linkend="db/dfe/Kinova_8API_8CommLayerUbuntu_8h_1d3/d5f/structPacket">Packet</link>
+86 {
+<link linkend="db/dfe/Kinova_8API_8CommLayerUbuntu_8h_1af74e2cb3038d19a97729f6e6bf1e8e93">87 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">short</emphasis>&#32;<link linkend="db/dfe/Kinova_8API_8CommLayerUbuntu_8h_1af74e2cb3038d19a97729f6e6bf1e8e93">IdPacket</link>;
+<link linkend="db/dfe/Kinova_8API_8CommLayerUbuntu_8h_1a146c0888f5e5e591735df01d1b627ae6">88 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">short</emphasis>&#32;<link linkend="db/dfe/Kinova_8API_8CommLayerUbuntu_8h_1a146c0888f5e5e591735df01d1b627ae6">TotalPacketCount</link>;
+<link linkend="db/dfe/Kinova_8API_8CommLayerUbuntu_8h_1a16775da153c1fcceb514766c0054ad0b">89 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">short</emphasis>&#32;<link linkend="db/dfe/Kinova_8API_8CommLayerUbuntu_8h_1a16775da153c1fcceb514766c0054ad0b">IdCommand</link>;
+<link linkend="db/dfe/Kinova_8API_8CommLayerUbuntu_8h_1a1f7f00740719cb05e71795512c70657b">90 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">short</emphasis>&#32;<link linkend="db/dfe/Kinova_8API_8CommLayerUbuntu_8h_1a1f7f00740719cb05e71795512c70657b">TotalDataSize</link>;
+<link linkend="db/dfe/Kinova_8API_8CommLayerUbuntu_8h_1a51fd5c26ef2995c2e93b49a5a7100397">91 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>&#32;<link linkend="db/dfe/Kinova_8API_8CommLayerUbuntu_8h_1a51fd5c26ef2995c2e93b49a5a7100397">Data</link>[<link linkend="db/dfe/Kinova_8API_8CommLayerUbuntu_8h_1a515f46a87f301d94d9f3b06a6bb2540a">PACKET_DATA_SIZE</link>];
+92 };
+93 
+94 <emphasis class="comment">//That&#32;is&#32;simply&#32;a&#32;list&#32;of&#32;packet</emphasis>
+<link linkend="db/dfe/Kinova_8API_8CommLayerUbuntu_8h">95 </link><emphasis class="keyword">struct&#32;</emphasis><link linkend="db/dfe/Kinova_8API_8CommLayerUbuntu_8h_1d6/d06/structPacketList">PacketList</link>
+96 {
+<link linkend="db/dfe/Kinova_8API_8CommLayerUbuntu_8h_1ab65d649c78c882976472908a781e256d">97 </link>&#32;&#32;&#32;&#32;std::vector&lt;Packet&gt;&#32;<link linkend="db/dfe/Kinova_8API_8CommLayerUbuntu_8h_1ab65d649c78c882976472908a781e256d">packets</link>;
+98 };
+99 
+100 <emphasis class="comment">//That&#32;is&#32;a&#32;device&#32;you&#32;can&#32;communicate&#32;with&#32;via&#32;this&#32;library.</emphasis>
+<link linkend="db/dfe/Kinova_8API_8CommLayerUbuntu_8h">101 </link><emphasis class="keyword">struct&#32;</emphasis><link linkend="db/dfe/Kinova_8API_8CommLayerUbuntu_8h_1da/dd6/structKinovaDevice">KinovaDevice</link>
+102 {
+103 &#32;&#32;&#32;&#32;<emphasis class="comment">//The&#32;serial&#32;number&#32;of&#32;the&#32;device.&#32;If&#32;you&#32;are&#32;communicating&#32;with&#32;more&#32;than&#32;1&#32;device,&#32;this&#32;will&#32;be&#32;used&#32;to&#32;identify</emphasis>
+104 &#32;&#32;&#32;&#32;<emphasis class="comment">//the&#32;devices.</emphasis>
+<link linkend="db/dfe/Kinova_8API_8CommLayerUbuntu_8h_1ac30b34d321f4bd56ef42bfabc2cf6e65">105 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">char</emphasis>&#32;SerialNumber[<link linkend="db/dfe/Kinova_8API_8CommLayerUbuntu_8h_1a2e19fae8619e7a3b28aecdcf5d7cd51d">SERIAL_LENGTH</link>];
+106 
+107 &#32;&#32;&#32;&#32;<emphasis class="comment">//This&#32;is&#32;a&#32;device&#32;ID&#32;used&#32;by&#32;the&#32;API.&#32;User&#32;should&#32;not&#32;use&#32;it.</emphasis>
+<link linkend="db/dfe/Kinova_8API_8CommLayerUbuntu_8h_1a8083dd1a66b42e373823fdb1a16b02e7">108 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="db/dfe/Kinova_8API_8CommLayerUbuntu_8h_1a8083dd1a66b42e373823fdb1a16b02e7">DeviceID</link>;
+109 };
+110 
+111 <emphasis class="comment">//Functions&#32;available&#32;outside&#32;of&#32;this&#32;library.</emphasis>
+112 <emphasis class="keyword">extern</emphasis>&#32;<emphasis class="stringliteral">&quot;C&quot;</emphasis>&#32;<link linkend="db/dfe/Kinova_8API_8CommLayerUbuntu_8h_1a1d3678de7e45bc92e4c8ee7ece40c833">__attribute__</link>&#32;((visibility&#32;(<emphasis class="stringliteral">&quot;default&quot;</emphasis>)))&#32;int&#32;InitCommunication(<emphasis class="keywordtype">void</emphasis>);
+113 
+114 extern&#32;&quot;C&quot;&#32;<link linkend="db/dfe/Kinova_8API_8CommLayerUbuntu_8h_1a1d3678de7e45bc92e4c8ee7ece40c833">__attribute__</link>&#32;((visibility&#32;(&quot;<link linkend="d7/d70/JacoPositionConfig_8dox_1a94d02332ecf13e7845f06fe8c343e101">default</link>&quot;)))&#32;<emphasis class="keywordtype">int</emphasis>&#32;CloseCommunication(<emphasis class="keywordtype">void</emphasis>);
+115 
+116 extern&#32;&quot;C&quot;&#32;<link linkend="db/dfe/Kinova_8API_8CommLayerUbuntu_8h_1a1d3678de7e45bc92e4c8ee7ece40c833">__attribute__</link>&#32;((visibility&#32;(&quot;<link linkend="d7/d70/JacoPositionConfig_8dox_1a94d02332ecf13e7845f06fe8c343e101">default</link>&quot;)))&#32;<emphasis class="keywordtype">int</emphasis>&#32;GetDeviceCount(<emphasis class="keywordtype">int</emphasis>&#32;&amp;<link linkend="db/dfe/Kinova_8API_8CommLayerUbuntu_8h_1a900dac90961bada00f57c207562a6a9a">result</link>);
+117 
+<link linkend="db/dfe/Kinova_8API_8CommLayerUbuntu_8h_1a900dac90961bada00f57c207562a6a9a">118 </link>extern&#32;&quot;C&quot;&#32;<link linkend="db/dfe/Kinova_8API_8CommLayerUbuntu_8h_1a1d3678de7e45bc92e4c8ee7ece40c833">__attribute__</link>&#32;((visibility&#32;(&quot;<link linkend="d7/d70/JacoPositionConfig_8dox_1a94d02332ecf13e7845f06fe8c343e101">default</link>&quot;)))&#32;<link linkend="db/dfe/Kinova_8API_8CommLayerUbuntu_8h_1d3/d5f/structPacket">Packet</link>&#32;SendPacket(<link linkend="db/dfe/Kinova_8API_8CommLayerUbuntu_8h_1d3/d5f/structPacket">Packet</link>&#32;&amp;packetOut,&#32;<link linkend="db/dfe/Kinova_8API_8CommLayerUbuntu_8h_1d3/d5f/structPacket">Packet</link>&#32;&amp;<link linkend="db/dfe/Kinova_8API_8CommLayerUbuntu_8h_1a0929bb1a4a68ea14e4871a32a70d7fa6">packetIn</link>,&#32;<emphasis class="keywordtype">int</emphasis>&#32;&amp;result);
+119 
+120 extern&#32;&quot;C&quot;&#32;<link linkend="db/dfe/Kinova_8API_8CommLayerUbuntu_8h_1a1d3678de7e45bc92e4c8ee7ece40c833">__attribute__</link>&#32;((visibility&#32;(&quot;<link linkend="d7/d70/JacoPositionConfig_8dox_1a94d02332ecf13e7845f06fe8c343e101">default</link>&quot;)))&#32;<emphasis class="keywordtype">int</emphasis>&#32;ScanForNewDevice();
+121 
+122 extern&#32;&quot;C&quot;&#32;<link linkend="db/dfe/Kinova_8API_8CommLayerUbuntu_8h_1a1d3678de7e45bc92e4c8ee7ece40c833">__attribute__</link>&#32;((visibility&#32;(&quot;<link linkend="d7/d70/JacoPositionConfig_8dox_1a94d02332ecf13e7845f06fe8c343e101">default</link>&quot;)))&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1a5814f5c47fb3f439269f12c310f287a4">GetDevices</link>(<link linkend="d8/dcc/namespacestd">std</link>::vector&lt;<link linkend="db/dfe/Kinova_8API_8CommLayerUbuntu_8h_1da/dd6/structKinovaDevice">KinovaDevice</link>&gt;&amp;&#32;list,&#32;<emphasis class="keywordtype">int</emphasis>&#32;&amp;result);
+123 
+124 extern&#32;&quot;C&quot;&#32;<link linkend="db/dfe/Kinova_8API_8CommLayerUbuntu_8h_1a1d3678de7e45bc92e4c8ee7ece40c833">__attribute__</link>&#32;((visibility&#32;(&quot;<link linkend="d7/d70/JacoPositionConfig_8dox_1a94d02332ecf13e7845f06fe8c343e101">default</link>&quot;)))&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1a4506116c4053d8c12c13d6ef974699c2">SetActiveDevice</link>(<link linkend="db/dfe/Kinova_8API_8CommLayerUbuntu_8h_1da/dd6/structKinovaDevice">KinovaDevice</link>&#32;device);
+125 
+126 <emphasis class="preprocessor">#endif&#32;</emphasis><emphasis class="comment">/*&#32;KINOVA_DLL_COMMLAYERUBUNTU_H_&#32;*/</emphasis><emphasis class="preprocessor"></emphasis>
+    </computeroutput></literallayout>
+</section>

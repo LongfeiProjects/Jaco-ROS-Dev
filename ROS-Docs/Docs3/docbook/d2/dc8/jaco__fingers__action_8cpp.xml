@@ -1,0 +1,170 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="d2/dc8/jaco__fingers__action_8cpp">
+    <title>jaco_fingers_action.cpp File Reference</title>
+    <programlisting>#include &lt;kinova/KinovaTypes.h&gt;</programlisting>
+    <programlisting>#include &quot;jaco_driver/jaco_fingers_action.h&quot;</programlisting>
+    <programlisting>#include &quot;jaco_driver/jaco_types.h&quot;</programlisting>
+<para>Include dependency diagram for jaco_fingers_action.cpp</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../da/d8f/jaco__fingers__action_8cpp__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Included by dependency diagram for jaco_fingers_action.cpp</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../d0/db6/jaco__fingers__action_8cpp__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+        <simplesect>
+            <title> Namespaces </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d4/d3c/namespacejaco">jaco</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+    <simplesect>
+        <title>Detailed Description</title>
+    <para>Definition in file D:/Longfei/Desktop/catkin_KinovaROS/src/jaco-ros/jaco_driver/src/jaco_fingers_action.cpp</para>
+    </simplesect>
+    <literallayout><computeroutput>
+1 
+46 <emphasis class="preprocessor">#include&#32;&lt;<link linkend="df/d36/KinovaTypes_8h">kinova/KinovaTypes.h</link>&gt;</emphasis>
+47 <emphasis class="preprocessor">#include&#32;&quot;<link linkend="dc/d0a/jaco__fingers__action_8h">jaco_driver/jaco_fingers_action.h</link>&quot;</emphasis>
+48 <emphasis class="preprocessor">#include&#32;&quot;<link linkend="d7/d98/jaco__types_8h">jaco_driver/jaco_types.h</link>&quot;</emphasis>
+49 
+50 
+51 <emphasis class="keyword">namespace&#32;</emphasis><link linkend="d4/d3c/namespacejaco">jaco</link>
+52 {
+53 
+<link linkend="d7/de0/classjaco_1_1JacoFingersActionServer_1aae225d4ab0745de98795cf7af2132d0c">54 </link><link linkend="d7/de0/classjaco_1_1JacoFingersActionServer_1aae225d4ab0745de98795cf7af2132d0c">JacoFingersActionServer::JacoFingersActionServer</link>(<link linkend="d5/d2b/classjaco_1_1JacoComm">JacoComm</link>&#32;&amp;arm_comm,&#32;<emphasis class="keyword">const</emphasis>&#32;ros::NodeHandle&#32;&amp;nh)
+55 &#32;&#32;&#32;&#32;:&#32;arm_comm_(arm_comm),
+56 &#32;&#32;&#32;&#32;&#32;&#32;node_handle_(nh,&#32;<emphasis class="stringliteral">&quot;fingers&quot;</emphasis>),
+57 &#32;&#32;&#32;&#32;&#32;&#32;action_server_(node_handle_,&#32;<emphasis class="stringliteral">&quot;finger_positions&quot;</emphasis>,
+58 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;boost::bind(&amp;<link linkend="d7/de0/classjaco_1_1JacoFingersActionServer">JacoFingersActionServer</link>::actionCallback,&#32;this,&#32;_1),&#32;false)
+59 {
+60 &#32;&#32;&#32;&#32;<emphasis class="keywordtype">double</emphasis>&#32;tolerance;
+61 &#32;&#32;&#32;&#32;<link linkend="d7/de0/classjaco_1_1JacoFingersActionServer_1a7cdaaf5a70f820aeef87a18fe24ff5ec">node_handle_</link>.param&lt;<emphasis class="keywordtype">double</emphasis>&gt;(<emphasis class="stringliteral">&quot;stall_interval_seconds&quot;</emphasis>,&#32;<link linkend="d7/de0/classjaco_1_1JacoFingersActionServer_1abd1f212225ef99b5880753f5c9261976">stall_interval_seconds_</link>,&#32;0.5);
+62 &#32;&#32;&#32;&#32;<link linkend="d7/de0/classjaco_1_1JacoFingersActionServer_1a7cdaaf5a70f820aeef87a18fe24ff5ec">node_handle_</link>.param&lt;<emphasis class="keywordtype">double</emphasis>&gt;(<emphasis class="stringliteral">&quot;stall_threshold&quot;</emphasis>,&#32;<link linkend="d7/de0/classjaco_1_1JacoFingersActionServer_1a809ce35a92032be0b9e768fc29fd2cbf">stall_threshold_</link>,&#32;1.0);
+63 &#32;&#32;&#32;&#32;<link linkend="d7/de0/classjaco_1_1JacoFingersActionServer_1a7cdaaf5a70f820aeef87a18fe24ff5ec">node_handle_</link>.param&lt;<emphasis class="keywordtype">double</emphasis>&gt;(<emphasis class="stringliteral">&quot;rate_hz&quot;</emphasis>,&#32;<link linkend="d7/de0/classjaco_1_1JacoFingersActionServer_1a402a46cdd8ce3ac114cdd9f6e048f0e2">rate_hz_</link>,&#32;10.0);
+64 &#32;&#32;&#32;&#32;<link linkend="d7/de0/classjaco_1_1JacoFingersActionServer_1a7cdaaf5a70f820aeef87a18fe24ff5ec">node_handle_</link>.param&lt;<emphasis class="keywordtype">double</emphasis>&gt;(<emphasis class="stringliteral">&quot;tolerance&quot;</emphasis>,&#32;tolerance,&#32;2.0);
+65 &#32;&#32;&#32;&#32;<link linkend="d7/de0/classjaco_1_1JacoFingersActionServer_1ad02d71429e1d137cb9fbd47cef703737">tolerance_</link>&#32;=&#32;<emphasis class="keyword">static_cast&lt;</emphasis><emphasis class="keywordtype">float</emphasis><emphasis class="keyword">&gt;</emphasis>(tolerance);
+66 
+67 &#32;&#32;&#32;&#32;<link linkend="d7/de0/classjaco_1_1JacoFingersActionServer_1a34f6a67ccd8fe1ad2bc75873d20da0f1">action_server_</link>.start();
+68 }
+69 
+70 
+<link linkend="d7/de0/classjaco_1_1JacoFingersActionServer_1a0497dec496f6224031096e5f6735e9c8">71 </link><link linkend="d7/de0/classjaco_1_1JacoFingersActionServer_1a0497dec496f6224031096e5f6735e9c8">JacoFingersActionServer::~JacoFingersActionServer</link>()
+72 {
+73 }
+74 
+75 
+<link linkend="d7/de0/classjaco_1_1JacoFingersActionServer_1a642f494b27d513457e9f29de7a4b31b6">76 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="d7/de0/classjaco_1_1JacoFingersActionServer_1a642f494b27d513457e9f29de7a4b31b6">JacoFingersActionServer::actionCallback</link>(<emphasis class="keyword">const</emphasis>&#32;<link linkend="d7/dba/namespacejaco__msgs_1a4432ef01b2858fafbc445a38e7c6dcba">jaco_msgs::SetFingersPositionGoalConstPtr</link>&#32;&amp;goal)
+77 {
+78 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;((<link linkend="d7/de0/classjaco_1_1JacoFingersActionServer_1afbddf1665a5e66b79cc79cae0b2badeb">arm_comm_</link>.<link linkend="d5/d2b/classjaco_1_1JacoComm_1a42e11ee165ee8f2b1af7e7060f488ce1">numFingers</link>()&#32;&lt;&#32;3)&#32;&amp;&amp;&#32;(goal-&gt;fingers.finger3&#32;!=&#32;0.0))
+79 &#32;&#32;&#32;&#32;{
+80 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ROS_WARN(<emphasis class="stringliteral">&quot;Detected&#32;that&#32;the&#32;third&#32;finger&#32;command&#32;was&#32;non-zero&#32;even&#32;though&#32;there&#32;&quot;</emphasis>
+81 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="stringliteral">&quot;are&#32;only&#32;two&#32;fingers&#32;on&#32;the&#32;gripper.&#32;The&#32;goal&#32;for&#32;the&#32;third&#32;finger&#32;&quot;</emphasis>
+82 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="stringliteral">&quot;should&#32;be&#32;set&#32;to&#32;zero&#32;or&#32;you&#32;make&#32;experience&#32;delays&#32;in&#32;action&#32;results.&quot;</emphasis>);
+83 &#32;&#32;&#32;&#32;}
+84 
+85 &#32;&#32;&#32;&#32;<link linkend="da/d4e/structjaco__msgs_1_1SetFingersPositionFeedback__">jaco_msgs::SetFingersPositionFeedback</link>&#32;feedback;
+86 &#32;&#32;&#32;&#32;<link linkend="d3/d75/structjaco__msgs_1_1SetFingersPositionResult__">jaco_msgs::SetFingersPositionResult</link>&#32;<link linkend="db/dfe/Kinova_8API_8CommLayerUbuntu_8h_1a900dac90961bada00f57c207562a6a9a">result</link>;
+87 &#32;&#32;&#32;&#32;<link linkend="dd/d28/classjaco_1_1FingerAngles">FingerAngles</link>&#32;current_finger_positions;
+88 &#32;&#32;&#32;&#32;ros::Time&#32;current_time&#32;=&#32;ros::Time::now();
+89 
+90 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">try</emphasis>
+91 &#32;&#32;&#32;&#32;{
+92 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="d7/de0/classjaco_1_1JacoFingersActionServer_1afbddf1665a5e66b79cc79cae0b2badeb">arm_comm_</link>.<link linkend="d5/d2b/classjaco_1_1JacoComm_1a7644bf1154b59bf4d8b97c200284e3fb">getFingerPositions</link>(current_finger_positions);
+93 
+94 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(<link linkend="d7/de0/classjaco_1_1JacoFingersActionServer_1afbddf1665a5e66b79cc79cae0b2badeb">arm_comm_</link>.<link linkend="d5/d2b/classjaco_1_1JacoComm_1a872b8033cda5a9fe4ccdca2e89aa03d1">isStopped</link>())
+95 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+96 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ROS_INFO(<emphasis class="stringliteral">&quot;Could&#32;not&#32;complete&#32;finger&#32;action&#32;because&#32;the&#32;arm&#32;is&#32;stopped&quot;</emphasis>);
+97 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;result.<link linkend="d3/d75/structjaco__msgs_1_1SetFingersPositionResult___1a5c4ac8ab3df0087e2ea584f4b419e91a">fingers</link>&#32;=&#32;current_finger_positions.<link linkend="dd/d28/classjaco_1_1FingerAngles_1afe84a9beae8b4a0617ace657d7608a49">constructFingersMsg</link>();
+98 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="d7/de0/classjaco_1_1JacoFingersActionServer_1a34f6a67ccd8fe1ad2bc75873d20da0f1">action_server_</link>.setAborted(result);
+99 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">return</emphasis>;
+100 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+101 
+102 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="d7/de0/classjaco_1_1JacoFingersActionServer_1ad9ee1e4c978970bdfac066f6dc9c4316">last_nonstall_time_</link>&#32;=&#32;current_time;
+103 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="d7/de0/classjaco_1_1JacoFingersActionServer_1a77586bea5c075f6439f6dc3858513e46">last_nonstall_finger_positions_</link>&#32;=&#32;current_finger_positions;
+104 
+105 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="dd/d28/classjaco_1_1FingerAngles">FingerAngles</link>&#32;target(goal-&gt;fingers);
+106 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="d7/de0/classjaco_1_1JacoFingersActionServer_1afbddf1665a5e66b79cc79cae0b2badeb">arm_comm_</link>.<link linkend="d5/d2b/classjaco_1_1JacoComm_1a5cdc217373b923f7de2ed468150281fa">setFingerPositions</link>(target);
+107 
+108 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;Loop&#32;until&#32;the&#32;action&#32;completed,&#32;is&#32;preempted,&#32;or&#32;fails&#32;in&#32;some&#32;way.</emphasis>
+109 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;timeout&#32;is&#32;left&#32;to&#32;the&#32;caller&#32;since&#32;the&#32;timeout&#32;may&#32;greatly&#32;depend&#32;on</emphasis>
+110 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;the&#32;context&#32;of&#32;the&#32;movement.</emphasis>
+111 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">while</emphasis>&#32;(<emphasis class="keyword">true</emphasis>)
+112 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+113 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ros::spinOnce();
+114 
+115 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(<link linkend="d7/de0/classjaco_1_1JacoFingersActionServer_1a34f6a67ccd8fe1ad2bc75873d20da0f1">action_server_</link>.isPreemptRequested()&#32;||&#32;!ros::ok())
+116 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+117 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;result.<link linkend="d3/d75/structjaco__msgs_1_1SetFingersPositionResult___1a5c4ac8ab3df0087e2ea584f4b419e91a">fingers</link>&#32;=&#32;current_finger_positions.<link linkend="dd/d28/classjaco_1_1FingerAngles_1afe84a9beae8b4a0617ace657d7608a49">constructFingersMsg</link>();
+118 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="d7/de0/classjaco_1_1JacoFingersActionServer_1afbddf1665a5e66b79cc79cae0b2badeb">arm_comm_</link>.<link linkend="d5/d2b/classjaco_1_1JacoComm_1a54862830cd6414ae3ae48e46e54bf798">stopAPI</link>();
+119 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="d7/de0/classjaco_1_1JacoFingersActionServer_1afbddf1665a5e66b79cc79cae0b2badeb">arm_comm_</link>.<link linkend="d5/d2b/classjaco_1_1JacoComm_1a6b2a1fabc4e6c30da42c9a5e26757398">startAPI</link>();
+120 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="d7/de0/classjaco_1_1JacoFingersActionServer_1a34f6a67ccd8fe1ad2bc75873d20da0f1">action_server_</link>.setPreempted(result);
+121 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">return</emphasis>;
+122 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+123 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">else</emphasis>&#32;<emphasis class="keywordflow">if</emphasis>&#32;(<link linkend="d7/de0/classjaco_1_1JacoFingersActionServer_1afbddf1665a5e66b79cc79cae0b2badeb">arm_comm_</link>.<link linkend="d5/d2b/classjaco_1_1JacoComm_1a872b8033cda5a9fe4ccdca2e89aa03d1">isStopped</link>())
+124 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+125 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;result.<link linkend="d3/d75/structjaco__msgs_1_1SetFingersPositionResult___1a5c4ac8ab3df0087e2ea584f4b419e91a">fingers</link>&#32;=&#32;current_finger_positions.<link linkend="dd/d28/classjaco_1_1FingerAngles_1afe84a9beae8b4a0617ace657d7608a49">constructFingersMsg</link>();
+126 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="d7/de0/classjaco_1_1JacoFingersActionServer_1a34f6a67ccd8fe1ad2bc75873d20da0f1">action_server_</link>.setAborted(result);
+127 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">return</emphasis>;
+128 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+129 
+130 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="d7/de0/classjaco_1_1JacoFingersActionServer_1afbddf1665a5e66b79cc79cae0b2badeb">arm_comm_</link>.<link linkend="d5/d2b/classjaco_1_1JacoComm_1a7644bf1154b59bf4d8b97c200284e3fb">getFingerPositions</link>(current_finger_positions);
+131 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;current_time&#32;=&#32;ros::Time::now();
+132 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;feedback.<link linkend="da/d4e/structjaco__msgs_1_1SetFingersPositionFeedback___1ae2565d164d4f0daf1be357023e5d0be2">fingers</link>&#32;=&#32;current_finger_positions.<link linkend="dd/d28/classjaco_1_1FingerAngles_1afe84a9beae8b4a0617ace657d7608a49">constructFingersMsg</link>();
+133 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="d7/de0/classjaco_1_1JacoFingersActionServer_1a34f6a67ccd8fe1ad2bc75873d20da0f1">action_server_</link>.publishFeedback(feedback);
+134 
+135 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(target.<link linkend="dd/d28/classjaco_1_1FingerAngles_1a1fb3bd563983bbe24350e89a6b96e715">isCloseToOther</link>(current_finger_positions,&#32;<link linkend="d7/de0/classjaco_1_1JacoFingersActionServer_1ad02d71429e1d137cb9fbd47cef703737">tolerance_</link>))
+136 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+137 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;Check&#32;if&#32;the&#32;action&#32;has&#32;succeeeded</emphasis>
+138 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;result.<link linkend="d3/d75/structjaco__msgs_1_1SetFingersPositionResult___1a5c4ac8ab3df0087e2ea584f4b419e91a">fingers</link>&#32;=&#32;current_finger_positions.<link linkend="dd/d28/classjaco_1_1FingerAngles_1afe84a9beae8b4a0617ace657d7608a49">constructFingersMsg</link>();
+139 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="d7/de0/classjaco_1_1JacoFingersActionServer_1a34f6a67ccd8fe1ad2bc75873d20da0f1">action_server_</link>.setSucceeded(result);
+140 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">return</emphasis>;
+141 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+142 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">else</emphasis>&#32;<emphasis class="keywordflow">if</emphasis>&#32;(!<link linkend="d7/de0/classjaco_1_1JacoFingersActionServer_1a77586bea5c075f6439f6dc3858513e46">last_nonstall_finger_positions_</link>.<link linkend="dd/d28/classjaco_1_1FingerAngles_1a1fb3bd563983bbe24350e89a6b96e715">isCloseToOther</link>(current_finger_positions,&#32;<link linkend="d7/de0/classjaco_1_1JacoFingersActionServer_1a809ce35a92032be0b9e768fc29fd2cbf">stall_threshold_</link>))
+143 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+144 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;Check&#32;if&#32;we&#32;are&#32;outside&#32;of&#32;a&#32;potential&#32;stall&#32;condition</emphasis>
+145 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="d7/de0/classjaco_1_1JacoFingersActionServer_1ad9ee1e4c978970bdfac066f6dc9c4316">last_nonstall_time_</link>&#32;=&#32;current_time;
+146 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="d7/de0/classjaco_1_1JacoFingersActionServer_1a77586bea5c075f6439f6dc3858513e46">last_nonstall_finger_positions_</link>&#32;=&#32;current_finger_positions;
+147 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+148 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">else</emphasis>&#32;<emphasis class="keywordflow">if</emphasis>&#32;((current_time&#32;-&#32;<link linkend="d7/de0/classjaco_1_1JacoFingersActionServer_1ad9ee1e4c978970bdfac066f6dc9c4316">last_nonstall_time_</link>).toSec()&#32;&gt;&#32;<link linkend="d7/de0/classjaco_1_1JacoFingersActionServer_1abd1f212225ef99b5880753f5c9261976">stall_interval_seconds_</link>)
+149 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+150 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;Check&#32;if&#32;the&#32;full&#32;stall&#32;condition&#32;has&#32;been&#32;meet</emphasis>
+151 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;result.<link linkend="d3/d75/structjaco__msgs_1_1SetFingersPositionResult___1a5c4ac8ab3df0087e2ea584f4b419e91a">fingers</link>&#32;=&#32;current_finger_positions.<link linkend="dd/d28/classjaco_1_1FingerAngles_1afe84a9beae8b4a0617ace657d7608a49">constructFingersMsg</link>();
+152 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="d7/de0/classjaco_1_1JacoFingersActionServer_1afbddf1665a5e66b79cc79cae0b2badeb">arm_comm_</link>.<link linkend="d5/d2b/classjaco_1_1JacoComm_1a54862830cd6414ae3ae48e46e54bf798">stopAPI</link>();
+153 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="d7/de0/classjaco_1_1JacoFingersActionServer_1afbddf1665a5e66b79cc79cae0b2badeb">arm_comm_</link>.<link linkend="d5/d2b/classjaco_1_1JacoComm_1a6b2a1fabc4e6c30da42c9a5e26757398">startAPI</link>();
+154 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="d7/de0/classjaco_1_1JacoFingersActionServer_1a34f6a67ccd8fe1ad2bc75873d20da0f1">action_server_</link>.setPreempted(result);
+155 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">return</emphasis>;
+156 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+157 
+158 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ros::Rate(<link linkend="d7/de0/classjaco_1_1JacoFingersActionServer_1a402a46cdd8ce3ac114cdd9f6e048f0e2">rate_hz_</link>).sleep();
+159 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+160 &#32;&#32;&#32;&#32;}
+161 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">catch</emphasis>(<emphasis class="keyword">const</emphasis>&#32;std::exception&amp;&#32;<link linkend="df/dc0/namespace__setup__util_1acdce690b925de33d6249bbbfa1109d61">e</link>)
+162 &#32;&#32;&#32;&#32;{
+163 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;result.<link linkend="d3/d75/structjaco__msgs_1_1SetFingersPositionResult___1a5c4ac8ab3df0087e2ea584f4b419e91a">fingers</link>&#32;=&#32;current_finger_positions.<link linkend="dd/d28/classjaco_1_1FingerAngles_1afe84a9beae8b4a0617ace657d7608a49">constructFingersMsg</link>();
+164 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ROS_ERROR_STREAM(e.what());
+165 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="d7/de0/classjaco_1_1JacoFingersActionServer_1a34f6a67ccd8fe1ad2bc75873d20da0f1">action_server_</link>.setAborted(result);
+166 &#32;&#32;&#32;&#32;}
+167 }
+168 
+169 }&#32;&#32;<emphasis class="comment">//&#32;namespace&#32;jaco</emphasis>
+    </computeroutput></literallayout>
+</section>

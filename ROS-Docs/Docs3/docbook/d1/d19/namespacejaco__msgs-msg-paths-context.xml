@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="d1/d19/namespacejaco__msgs-msg-paths-context">
+<title>jaco_msgs-msg-paths-context</title>
+        <section>
+            <title>Variables</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>string <link linkend="d1/d19/namespacejaco__msgs-msg-paths-context_1ac3895b5ef2c57e7c5bbab6bc600b5b98">ARG_DEPENDENCIES</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>string <link linkend="d1/d19/namespacejaco__msgs-msg-paths-context_1adffb8432fbac7333d3bc5236b5cc1af1">DEVELSPACE</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>string <link linkend="d1/d19/namespacejaco__msgs-msg-paths-context_1aa9c588ac9faf9483a91cb495a8be5af4">INSTALLSPACE</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>string <link linkend="d1/d19/namespacejaco__msgs-msg-paths-context_1a615c13a91bdf0d70e95ff767b9bb1f66">PKG_MSG_INCLUDE_DIRS</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>string <link linkend="d1/d19/namespacejaco__msgs-msg-paths-context_1a07c6ad829df8f3bb3913008e8a58a711">PROJECT_NAME</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+</section>

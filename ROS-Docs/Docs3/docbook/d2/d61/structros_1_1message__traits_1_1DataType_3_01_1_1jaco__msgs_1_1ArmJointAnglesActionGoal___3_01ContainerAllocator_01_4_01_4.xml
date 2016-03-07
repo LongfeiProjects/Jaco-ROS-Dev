@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="d2/d61/structros_1_1message__traits_1_1DataType_3_01_1_1jaco__msgs_1_1ArmJointAnglesActionGoal___3_01ContainerAllocator_01_4_01_4">
+<title>ros::message_traits::DataType&lt; ::jaco_msgs::ArmJointAnglesActionGoal_&lt; ContainerAllocator &gt; &gt; struct Reference</title>
+<para>
+    <programlisting>#include <link linkend="dd/d23/ArmJointAnglesActionGoal_8h">&quot;ArmJointAnglesActionGoal.h&quot;</link></programlisting>
+</para>
+<para>Inheritance diagram for ros::message_traits::DataType&lt; ::jaco_msgs::ArmJointAnglesActionGoal_&lt; ContainerAllocator &gt; &gt;</para>
+<para>
+    <figure>
+        <title>Inheritance graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../d5/d1b/structros_1_1message__traits_1_1DataType_3_01_1_1jaco__msgs_1_1ArmJointAnglesActionGoal___3_01Coa898c07cdf543ba5076155d44f876cff.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Collaboration diagram for ros::message_traits::DataType&lt; ::jaco_msgs::ArmJointAnglesActionGoal_&lt; ContainerAllocator &gt; &gt;</para>
+<para>
+    <figure>
+        <title>Collaboration graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../d9/dae/structros_1_1message__traits_1_1DataType_3_01_1_1jaco__msgs_1_1ArmJointAnglesActionGoal___3_01Co84b4eb7ccaa5e1d07c62c9666d34decb.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+    <templateparamlist>
+      <param>
+        <type>class ContainerAllocator</type>
+      </param>
+    </templateparamlist>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static const char * <link linkend="d2/d61/structros_1_1message__traits_1_1DataType_3_01_1_1jaco__msgs_1_1ArmJointAnglesActionGoal___3_01ContainerAllocator_01_4_01_4_1ae6f16f3ab255528adffed52ed28a9458">value</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static const char * <link linkend="d2/d61/structros_1_1message__traits_1_1DataType_3_01_1_1jaco__msgs_1_1ArmJointAnglesActionGoal___3_01ContainerAllocator_01_4_01_4_1a6ed0fe31583df180a7b175651ad734eb">value</link> (
+const ::<link linkend="da/dcb/structjaco__msgs_1_1ArmJointAnglesActionGoal__">jaco_msgs::ArmJointAnglesActionGoal_</link>&lt; ContainerAllocator &gt; &amp; )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+            <section xml:id="d2/d61/structros_1_1message__traits_1_1DataType_3_01_1_1jaco__msgs_1_1ArmJointAnglesActionGoal___3_01ContainerAllocator_01_4_01_4_1ae6f16f3ab255528adffed52ed28a9458">
+                <title>static const char* ros::message_traits::DataType&lt; ::jaco_msgs::ArmJointAnglesActionGoal_&lt; ContainerAllocator &gt; &gt;::value ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="d2/d61/structros_1_1message__traits_1_1DataType_3_01_1_1jaco__msgs_1_1ArmJointAnglesActionGoal___3_01ContainerAllocator_01_4_01_4_1a6ed0fe31583df180a7b175651ad734eb">
+                <title>static const char* ros::message_traits::DataType&lt; ::jaco_msgs::ArmJointAnglesActionGoal_&lt; ContainerAllocator &gt; &gt;::value (const ::jaco_msgs::ArmJointAnglesActionGoal_&lt; ContainerAllocator &gt; &amp;)</title> <emphasis></emphasis>
+                
+            </section>
+</section>

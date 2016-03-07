@@ -1,0 +1,428 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="d2/d48/JointVelocity_8h">
+    <title>JointVelocity.h File Reference</title>
+    <programlisting>#include &lt;string&gt;</programlisting>
+    <programlisting>#include &lt;vector&gt;</programlisting>
+    <programlisting>#include &lt;map&gt;</programlisting>
+    <programlisting>#include &lt;ros/types.h&gt;</programlisting>
+    <programlisting>#include &lt;ros/serialization.h&gt;</programlisting>
+    <programlisting>#include &lt;ros/builtin_message_traits.h&gt;</programlisting>
+    <programlisting>#include &lt;ros/message_operations.h&gt;</programlisting>
+<para>Include dependency diagram for JointVelocity.h</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../da/d0e/JointVelocity_8h__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Included by dependency diagram for JointVelocity.h</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../df/dea/JointVelocity_8h__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+        <section>
+            <title> Classes </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="de/df3/structjaco__msgs_1_1JointVelocity__">jaco_msgs::JointVelocity_</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d1/db0/structros_1_1message__operations_1_1Printer_3_01_1_1jaco__msgs_1_1JointVelocity___3_01ContainerAllocator_01_4_01_4">ros::message_operations::Printer&lt; ::jaco_msgs::JointVelocity_&lt; ContainerAllocator &gt; &gt;</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d7/db4/structros_1_1message__traits_1_1DataType_3_01_1_1jaco__msgs_1_1JointVelocity___3_01ContainerAllocator_01_4_01_4">ros::message_traits::DataType&lt; ::jaco_msgs::JointVelocity_&lt; ContainerAllocator &gt; &gt;</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d8/d5f/structros_1_1message__traits_1_1Definition_3_01_1_1jaco__msgs_1_1JointVelocity___3_01ContainerAllocator_01_4_01_4">ros::message_traits::Definition&lt; ::jaco_msgs::JointVelocity_&lt; ContainerAllocator &gt; &gt;</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="df/d7e/structros_1_1message__traits_1_1HasHeader_3_01_1_1jaco__msgs_1_1JointVelocity___3_01ContainerAllocator_01_4_01_4">ros::message_traits::HasHeader&lt; ::jaco_msgs::JointVelocity_&lt; ContainerAllocator &gt; &gt;</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d9/dbd/structros_1_1message__traits_1_1HasHeader_3_01_1_1jaco__msgs_1_1JointVelocity___3_01ContainerAllocator_01_4_01const_01_01_4">ros::message_traits::HasHeader&lt; ::jaco_msgs::JointVelocity_&lt; ContainerAllocator &gt; const  &gt;</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d7/d75/structros_1_1message__traits_1_1IsFixedSize_3_01_1_1jaco__msgs_1_1JointVelocity___3_01ContainerAllocator_01_4_01_4">ros::message_traits::IsFixedSize&lt; ::jaco_msgs::JointVelocity_&lt; ContainerAllocator &gt; &gt;</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d3/d2b/structros_1_1message__traits_1_1IsFixedSize_3_01_1_1jaco__msgs_1_1JointVelocity___3_01ContainerAllocator_01_4_01const_01_01_4">ros::message_traits::IsFixedSize&lt; ::jaco_msgs::JointVelocity_&lt; ContainerAllocator &gt; const  &gt;</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d6/d02/structros_1_1message__traits_1_1IsMessage_3_01_1_1jaco__msgs_1_1JointVelocity___3_01ContainerAllocator_01_4_01_4">ros::message_traits::IsMessage&lt; ::jaco_msgs::JointVelocity_&lt; ContainerAllocator &gt; &gt;</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d7/d8a/structros_1_1message__traits_1_1IsMessage_3_01_1_1jaco__msgs_1_1JointVelocity___3_01ContainerAllocator_01_4_01const_01_01_4">ros::message_traits::IsMessage&lt; ::jaco_msgs::JointVelocity_&lt; ContainerAllocator &gt; const  &gt;</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d7/d58/structros_1_1message__traits_1_1MD5Sum_3_01_1_1jaco__msgs_1_1JointVelocity___3_01ContainerAllocator_01_4_01_4">ros::message_traits::MD5Sum&lt; ::jaco_msgs::JointVelocity_&lt; ContainerAllocator &gt; &gt;</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d9/d93/structros_1_1serialization_1_1Serializer_3_01_1_1jaco__msgs_1_1JointVelocity___3_01ContainerAllocator_01_4_01_4">ros::serialization::Serializer&lt; ::jaco_msgs::JointVelocity_&lt; ContainerAllocator &gt; &gt;</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <simplesect>
+            <title> Namespaces </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d7/dba/namespacejaco__msgs">jaco_msgs</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="db/d2f/namespaceros">ros</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d6/db4/namespaceros_1_1message__operations">ros::message_operations</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d0/db0/namespaceros_1_1message__traits">ros::message_traits</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="da/d37/namespaceros_1_1serialization">ros::serialization</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+    <simplesect>
+        <title>Detailed Description</title>
+    <para>Definition in file D:/Longfei/Desktop/catkin_KinovaROS/devel/include/jaco_msgs/JointVelocity.h</para>
+    </simplesect>
+    <literallayout><computeroutput>
+1 <emphasis class="comment">/*&#32;Software&#32;License&#32;Agreement&#32;(BSD&#32;License)</emphasis>
+2 <emphasis class="comment">&#32;*</emphasis>
+3 <emphasis class="comment">&#32;*&#32;Copyright&#32;(c)&#32;2011,&#32;Willow&#32;Garage,&#32;Inc.</emphasis>
+4 <emphasis class="comment">&#32;*&#32;All&#32;rights&#32;reserved.</emphasis>
+5 <emphasis class="comment">&#32;*</emphasis>
+6 <emphasis class="comment">&#32;*&#32;Redistribution&#32;and&#32;use&#32;in&#32;source&#32;and&#32;binary&#32;forms,&#32;with&#32;or&#32;without</emphasis>
+7 <emphasis class="comment">&#32;*&#32;modification,&#32;are&#32;permitted&#32;provided&#32;that&#32;the&#32;following&#32;conditions</emphasis>
+8 <emphasis class="comment">&#32;*&#32;are&#32;met:</emphasis>
+9 <emphasis class="comment">&#32;*</emphasis>
+10 <emphasis class="comment">&#32;*&#32;&#32;*&#32;Redistributions&#32;of&#32;source&#32;code&#32;must&#32;retain&#32;the&#32;above&#32;copyright</emphasis>
+11 <emphasis class="comment">&#32;*&#32;&#32;&#32;&#32;notice,&#32;this&#32;list&#32;of&#32;conditions&#32;and&#32;the&#32;following&#32;disclaimer.</emphasis>
+12 <emphasis class="comment">&#32;*&#32;&#32;*&#32;Redistributions&#32;in&#32;binary&#32;form&#32;must&#32;reproduce&#32;the&#32;above</emphasis>
+13 <emphasis class="comment">&#32;*&#32;&#32;&#32;&#32;copyright&#32;notice,&#32;this&#32;list&#32;of&#32;conditions&#32;and&#32;the&#32;following</emphasis>
+14 <emphasis class="comment">&#32;*&#32;&#32;&#32;&#32;disclaimer&#32;in&#32;the&#32;documentation&#32;and/or&#32;other&#32;materials&#32;provided</emphasis>
+15 <emphasis class="comment">&#32;*&#32;&#32;&#32;&#32;with&#32;the&#32;distribution.</emphasis>
+16 <emphasis class="comment">&#32;*&#32;&#32;*&#32;Neither&#32;the&#32;name&#32;of&#32;Willow&#32;Garage,&#32;Inc.&#32;nor&#32;the&#32;names&#32;of&#32;its</emphasis>
+17 <emphasis class="comment">&#32;*&#32;&#32;&#32;&#32;contributors&#32;may&#32;be&#32;used&#32;to&#32;endorse&#32;or&#32;promote&#32;products&#32;derived</emphasis>
+18 <emphasis class="comment">&#32;*&#32;&#32;&#32;&#32;from&#32;this&#32;software&#32;without&#32;specific&#32;prior&#32;written&#32;permission.</emphasis>
+19 <emphasis class="comment">&#32;*</emphasis>
+20 <emphasis class="comment">&#32;*&#32;THIS&#32;SOFTWARE&#32;IS&#32;PROVIDED&#32;BY&#32;THE&#32;COPYRIGHT&#32;HOLDERS&#32;AND&#32;CONTRIBUTORS</emphasis>
+21 <emphasis class="comment">&#32;*&#32;&quot;AS&#32;IS&quot;&#32;AND&#32;ANY&#32;EXPRESS&#32;OR&#32;IMPLIED&#32;WARRANTIES,&#32;INCLUDING,&#32;BUT&#32;NOT</emphasis>
+22 <emphasis class="comment">&#32;*&#32;LIMITED&#32;TO,&#32;THE&#32;IMPLIED&#32;WARRANTIES&#32;OF&#32;MERCHANTABILITY&#32;AND&#32;FITNESS</emphasis>
+23 <emphasis class="comment">&#32;*&#32;FOR&#32;A&#32;PARTICULAR&#32;PURPOSE&#32;ARE&#32;DISCLAIMED.&#32;IN&#32;NO&#32;EVENT&#32;SHALL&#32;THE</emphasis>
+24 <emphasis class="comment">&#32;*&#32;COPYRIGHT&#32;OWNER&#32;OR&#32;CONTRIBUTORS&#32;BE&#32;LIABLE&#32;FOR&#32;ANY&#32;DIRECT,&#32;INDIRECT,</emphasis>
+25 <emphasis class="comment">&#32;*&#32;INCIDENTAL,&#32;SPECIAL,&#32;EXEMPLARY,&#32;OR&#32;CONSEQUENTIAL&#32;DAMAGES&#32;(INCLUDING,</emphasis>
+26 <emphasis class="comment">&#32;*&#32;BUT&#32;NOT&#32;LIMITED&#32;TO,&#32;PROCUREMENT&#32;OF&#32;SUBSTITUTE&#32;GOODS&#32;OR&#32;SERVICES;</emphasis>
+27 <emphasis class="comment">&#32;*&#32;LOSS&#32;OF&#32;USE,&#32;DATA,&#32;OR&#32;PROFITS;&#32;OR&#32;BUSINESS&#32;INTERRUPTION)&#32;HOWEVER</emphasis>
+28 <emphasis class="comment">&#32;*&#32;CAUSED&#32;AND&#32;ON&#32;ANY&#32;THEORY&#32;OF&#32;LIABILITY,&#32;WHETHER&#32;IN&#32;CONTRACT,&#32;STRICT</emphasis>
+29 <emphasis class="comment">&#32;*&#32;LIABILITY,&#32;OR&#32;TORT&#32;(INCLUDING&#32;NEGLIGENCE&#32;OR&#32;OTHERWISE)&#32;ARISING&#32;IN</emphasis>
+30 <emphasis class="comment">&#32;*&#32;ANY&#32;WAY&#32;OUT&#32;OF&#32;THE&#32;USE&#32;OF&#32;THIS&#32;SOFTWARE,&#32;EVEN&#32;IF&#32;ADVISED&#32;OF&#32;THE</emphasis>
+31 <emphasis class="comment">&#32;*&#32;POSSIBILITY&#32;OF&#32;SUCH&#32;DAMAGE.</emphasis>
+32 <emphasis class="comment">&#32;*</emphasis>
+33 <emphasis class="comment">&#32;*&#32;Auto-generated&#32;by&#32;genmsg_cpp&#32;from&#32;file&#32;/home/longfei/catkin_KinovaROS/src/jaco-ros/jaco_msgs/msg/JointVelocity.msg</emphasis>
+34 <emphasis class="comment">&#32;*</emphasis>
+35 <emphasis class="comment">&#32;*/</emphasis>
+36 
+37 
+38 <emphasis class="preprocessor">#ifndef&#32;JACO_MSGS_MESSAGE_JOINTVELOCITY_H</emphasis>
+39 <emphasis class="preprocessor">#define&#32;JACO_MSGS_MESSAGE_JOINTVELOCITY_H</emphasis>
+40 
+41 
+42 <emphasis class="preprocessor">#include&#32;&lt;string&gt;</emphasis>
+43 <emphasis class="preprocessor">#include&#32;&lt;vector&gt;</emphasis>
+44 <emphasis class="preprocessor">#include&#32;&lt;map&gt;</emphasis>
+45 
+46 <emphasis class="preprocessor">#include&#32;&lt;ros/types.h&gt;</emphasis>
+47 <emphasis class="preprocessor">#include&#32;&lt;ros/serialization.h&gt;</emphasis>
+48 <emphasis class="preprocessor">#include&#32;&lt;ros/builtin_message_traits.h&gt;</emphasis>
+49 <emphasis class="preprocessor">#include&#32;&lt;ros/message_operations.h&gt;</emphasis>
+50 
+51 
+52 <emphasis class="keyword">namespace&#32;</emphasis><link linkend="d7/dba/namespacejaco__msgs">jaco_msgs</link>
+53 {
+54 <emphasis class="keyword">template</emphasis>&#32;&lt;<emphasis class="keyword">class</emphasis>&#32;ContainerAllocator&gt;
+<link linkend="de/df3/structjaco__msgs_1_1JointVelocity__">55 </link><emphasis class="keyword">struct&#32;</emphasis><link linkend="de/df3/structjaco__msgs_1_1JointVelocity__">JointVelocity_</link>
+56 {
+<link linkend="de/df3/structjaco__msgs_1_1JointVelocity___1a09ae16ebc5eec5d6a7f20405ab791467">57 </link>&#32;&#32;<emphasis class="keyword">typedef</emphasis>&#32;<link linkend="de/df3/structjaco__msgs_1_1JointVelocity__">JointVelocity_&lt;ContainerAllocator&gt;</link>&#32;<link linkend="de/df3/structjaco__msgs_1_1JointVelocity___1a09ae16ebc5eec5d6a7f20405ab791467">Type</link>;
+58 
+<link linkend="de/df3/structjaco__msgs_1_1JointVelocity___1a8ebfb46d45f3cebfd0d72869b043c571">59 </link>&#32;&#32;<link linkend="de/df3/structjaco__msgs_1_1JointVelocity___1a8ebfb46d45f3cebfd0d72869b043c571">JointVelocity_</link>()
+60 &#32;&#32;&#32;&#32;:&#32;<link linkend="de/df3/structjaco__msgs_1_1JointVelocity___1ac67bdfc1a5c298799a523d8a9ba4b87e">joint1</link>(0.0)
+61 &#32;&#32;&#32;&#32;,&#32;<link linkend="de/df3/structjaco__msgs_1_1JointVelocity___1a4cb4b1f563bb3df4c9f2471f4682e33d">joint2</link>(0.0)
+62 &#32;&#32;&#32;&#32;,&#32;<link linkend="de/df3/structjaco__msgs_1_1JointVelocity___1aa14dad415721aae4794da85ea545843f">joint3</link>(0.0)
+63 &#32;&#32;&#32;&#32;,&#32;<link linkend="de/df3/structjaco__msgs_1_1JointVelocity___1a42d5c803c0510958d3ea50a5195fd430">joint4</link>(0.0)
+64 &#32;&#32;&#32;&#32;,&#32;<link linkend="de/df3/structjaco__msgs_1_1JointVelocity___1af03f322785d0b58fbd4bd639ad48545c">joint5</link>(0.0)
+65 &#32;&#32;&#32;&#32;,&#32;<link linkend="de/df3/structjaco__msgs_1_1JointVelocity___1ac4597081b297a5080198455fc6f13090">joint6</link>(0.0)&#32;&#32;{
+66 &#32;&#32;&#32;&#32;}
+<link linkend="de/df3/structjaco__msgs_1_1JointVelocity___1a105ebf90fa802ef67761d8209dc1b45e">67 </link>&#32;&#32;<link linkend="de/df3/structjaco__msgs_1_1JointVelocity___1a105ebf90fa802ef67761d8209dc1b45e">JointVelocity_</link>(<emphasis class="keyword">const</emphasis>&#32;ContainerAllocator&amp;&#32;_alloc)
+68 &#32;&#32;&#32;&#32;:&#32;<link linkend="de/df3/structjaco__msgs_1_1JointVelocity___1ac67bdfc1a5c298799a523d8a9ba4b87e">joint1</link>(0.0)
+69 &#32;&#32;&#32;&#32;,&#32;<link linkend="de/df3/structjaco__msgs_1_1JointVelocity___1a4cb4b1f563bb3df4c9f2471f4682e33d">joint2</link>(0.0)
+70 &#32;&#32;&#32;&#32;,&#32;<link linkend="de/df3/structjaco__msgs_1_1JointVelocity___1aa14dad415721aae4794da85ea545843f">joint3</link>(0.0)
+71 &#32;&#32;&#32;&#32;,&#32;<link linkend="de/df3/structjaco__msgs_1_1JointVelocity___1a42d5c803c0510958d3ea50a5195fd430">joint4</link>(0.0)
+72 &#32;&#32;&#32;&#32;,&#32;<link linkend="de/df3/structjaco__msgs_1_1JointVelocity___1af03f322785d0b58fbd4bd639ad48545c">joint5</link>(0.0)
+73 &#32;&#32;&#32;&#32;,&#32;<link linkend="de/df3/structjaco__msgs_1_1JointVelocity___1ac4597081b297a5080198455fc6f13090">joint6</link>(0.0)&#32;&#32;{
+74 &#32;&#32;&#32;&#32;}
+75 
+76 
+77 
+<link linkend="de/df3/structjaco__msgs_1_1JointVelocity___1ab6a0b6d8bf7015aff3a61c25b4bdf67b">78 </link>&#32;&#32;&#32;<emphasis class="keyword">typedef</emphasis>&#32;<emphasis class="keywordtype">float</emphasis>&#32;<link linkend="de/df3/structjaco__msgs_1_1JointVelocity___1ab6a0b6d8bf7015aff3a61c25b4bdf67b">_joint1_type</link>;
+<link linkend="de/df3/structjaco__msgs_1_1JointVelocity___1ac67bdfc1a5c298799a523d8a9ba4b87e">79 </link>&#32;&#32;_joint1_type&#32;<link linkend="de/df3/structjaco__msgs_1_1JointVelocity___1ac67bdfc1a5c298799a523d8a9ba4b87e">joint1</link>;
+80 
+<link linkend="de/df3/structjaco__msgs_1_1JointVelocity___1a60a2a12b126edac2c3004568aa77f833">81 </link>&#32;&#32;&#32;<emphasis class="keyword">typedef</emphasis>&#32;<emphasis class="keywordtype">float</emphasis>&#32;<link linkend="de/df3/structjaco__msgs_1_1JointVelocity___1a60a2a12b126edac2c3004568aa77f833">_joint2_type</link>;
+<link linkend="de/df3/structjaco__msgs_1_1JointVelocity___1a4cb4b1f563bb3df4c9f2471f4682e33d">82 </link>&#32;&#32;_joint2_type&#32;<link linkend="de/df3/structjaco__msgs_1_1JointVelocity___1a4cb4b1f563bb3df4c9f2471f4682e33d">joint2</link>;
+83 
+<link linkend="de/df3/structjaco__msgs_1_1JointVelocity___1a516b16873309e426015d059948c9de5f">84 </link>&#32;&#32;&#32;<emphasis class="keyword">typedef</emphasis>&#32;<emphasis class="keywordtype">float</emphasis>&#32;<link linkend="de/df3/structjaco__msgs_1_1JointVelocity___1a516b16873309e426015d059948c9de5f">_joint3_type</link>;
+<link linkend="de/df3/structjaco__msgs_1_1JointVelocity___1aa14dad415721aae4794da85ea545843f">85 </link>&#32;&#32;_joint3_type&#32;<link linkend="de/df3/structjaco__msgs_1_1JointVelocity___1aa14dad415721aae4794da85ea545843f">joint3</link>;
+86 
+<link linkend="de/df3/structjaco__msgs_1_1JointVelocity___1a5433af2aa782711e694f2dea934d1e8a">87 </link>&#32;&#32;&#32;<emphasis class="keyword">typedef</emphasis>&#32;<emphasis class="keywordtype">float</emphasis>&#32;<link linkend="de/df3/structjaco__msgs_1_1JointVelocity___1a5433af2aa782711e694f2dea934d1e8a">_joint4_type</link>;
+<link linkend="de/df3/structjaco__msgs_1_1JointVelocity___1a42d5c803c0510958d3ea50a5195fd430">88 </link>&#32;&#32;_joint4_type&#32;<link linkend="de/df3/structjaco__msgs_1_1JointVelocity___1a42d5c803c0510958d3ea50a5195fd430">joint4</link>;
+89 
+<link linkend="de/df3/structjaco__msgs_1_1JointVelocity___1a994fb0216a13a4bac0b44d75b293c8d1">90 </link>&#32;&#32;&#32;<emphasis class="keyword">typedef</emphasis>&#32;<emphasis class="keywordtype">float</emphasis>&#32;<link linkend="de/df3/structjaco__msgs_1_1JointVelocity___1a994fb0216a13a4bac0b44d75b293c8d1">_joint5_type</link>;
+<link linkend="de/df3/structjaco__msgs_1_1JointVelocity___1af03f322785d0b58fbd4bd639ad48545c">91 </link>&#32;&#32;_joint5_type&#32;<link linkend="de/df3/structjaco__msgs_1_1JointVelocity___1af03f322785d0b58fbd4bd639ad48545c">joint5</link>;
+92 
+<link linkend="de/df3/structjaco__msgs_1_1JointVelocity___1aa08791b2618486b98789028edc8fecd7">93 </link>&#32;&#32;&#32;<emphasis class="keyword">typedef</emphasis>&#32;<emphasis class="keywordtype">float</emphasis>&#32;<link linkend="de/df3/structjaco__msgs_1_1JointVelocity___1aa08791b2618486b98789028edc8fecd7">_joint6_type</link>;
+<link linkend="de/df3/structjaco__msgs_1_1JointVelocity___1ac4597081b297a5080198455fc6f13090">94 </link>&#32;&#32;_joint6_type&#32;<link linkend="de/df3/structjaco__msgs_1_1JointVelocity___1ac4597081b297a5080198455fc6f13090">joint6</link>;
+95 
+96 
+97 
+98 
+<link linkend="de/df3/structjaco__msgs_1_1JointVelocity___1abfcfdd60981037c03b85fd7ed2989df2">99 </link>&#32;&#32;<emphasis class="keyword">typedef</emphasis>&#32;boost::shared_ptr&lt;&#32;::jaco_msgs::JointVelocity_&lt;ContainerAllocator&gt;&#32;&gt;&#32;<link linkend="de/df3/structjaco__msgs_1_1JointVelocity___1abfcfdd60981037c03b85fd7ed2989df2">Ptr</link>;
+<link linkend="de/df3/structjaco__msgs_1_1JointVelocity___1a16e3f55bcdaff368c588945f63478858">100 </link>&#32;&#32;<emphasis class="keyword">typedef</emphasis>&#32;boost::shared_ptr&lt;&#32;::jaco_msgs::JointVelocity_&lt;ContainerAllocator&gt;&#32;<emphasis class="keyword">const</emphasis>&gt;&#32;<link linkend="de/df3/structjaco__msgs_1_1JointVelocity___1a16e3f55bcdaff368c588945f63478858">ConstPtr</link>;
+<link linkend="de/df3/structjaco__msgs_1_1JointVelocity___1a25b3f657d79262342a571595d6ece714">101 </link>&#32;&#32;boost::shared_ptr&lt;std::map&lt;std::string,&#32;std::string&gt;&#32;&gt;&#32;<link linkend="de/df3/structjaco__msgs_1_1JointVelocity___1a25b3f657d79262342a571595d6ece714">__connection_header</link>;
+102 
+103 };&#32;<emphasis class="comment">//&#32;struct&#32;JointVelocity_</emphasis>
+104 
+<link linkend="d7/dba/namespacejaco__msgs_1a3885bcb43e15bd44e269141fd88ae604">105 </link>typedef&#32;::jaco_msgs::JointVelocity_&lt;std::allocator&lt;void&gt;&#32;&gt;&#32;<link linkend="d7/dba/namespacejaco__msgs_1a3885bcb43e15bd44e269141fd88ae604">JointVelocity</link>;
+106 
+<link linkend="d7/dba/namespacejaco__msgs_1a7bf43beaff6bea1d39b3392ed5ce08d6">107 </link><emphasis class="keyword">typedef</emphasis>&#32;boost::shared_ptr&lt;&#32;::jaco_msgs::JointVelocity&#32;&gt;&#32;<link linkend="d7/dba/namespacejaco__msgs_1a7bf43beaff6bea1d39b3392ed5ce08d6">JointVelocityPtr</link>;
+<link linkend="d7/dba/namespacejaco__msgs_1aab606d270e36965850c5e08ce8073242">108 </link><emphasis class="keyword">typedef</emphasis>&#32;boost::shared_ptr&lt;&#32;::jaco_msgs::JointVelocity&#32;const&gt;&#32;<link linkend="d7/dba/namespacejaco__msgs_1aab606d270e36965850c5e08ce8073242">JointVelocityConstPtr</link>;
+109 
+110 <emphasis class="comment">//&#32;constants&#32;requiring&#32;out&#32;of&#32;line&#32;definition</emphasis>
+111 
+112 
+113 
+114 <emphasis class="keyword">template</emphasis>&lt;<emphasis class="keyword">typename</emphasis>&#32;ContainerAllocator&gt;
+<link linkend="d7/dba/namespacejaco__msgs_1afdfb4e85e6c37c07fbc3c2720ed3b39a">115 </link>std::ostream&amp;&#32;operator&lt;&lt;(std::ostream&amp;&#32;s,&#32;const&#32;::jaco_msgs::JointVelocity_&lt;ContainerAllocator&gt;&#32;&amp;&#32;v)
+116 {
+117 ros::message_operations::Printer&lt;&#32;::jaco_msgs::JointVelocity_&lt;ContainerAllocator&gt;&#32;&gt;::stream(s,&#32;<emphasis class="stringliteral">&quot;&quot;</emphasis>,&#32;v);
+118 <emphasis class="keywordflow">return</emphasis>&#32;s;
+119 }
+120 
+121 }&#32;<emphasis class="comment">//&#32;namespace&#32;jaco_msgs</emphasis>
+122 
+123 <emphasis class="keyword">namespace&#32;</emphasis><link linkend="db/d2f/namespaceros">ros</link>
+124 {
+125 <emphasis class="keyword">namespace&#32;</emphasis>message_traits
+126 {
+127 
+128 
+129 
+130 <emphasis class="comment">//&#32;BOOLTRAITS&#32;{&apos;IsFixedSize&apos;:&#32;True,&#32;&apos;IsMessage&apos;:&#32;True,&#32;&apos;HasHeader&apos;:&#32;False}</emphasis>
+131 <emphasis class="comment">//&#32;{&apos;std_msgs&apos;:&#32;[&apos;/opt/ros/hydro/share/std_msgs/cmake/../msg&apos;],&#32;&apos;actionlib_msgs&apos;:&#32;[&apos;/opt/ros/hydro/share/actionlib_msgs/cmake/../msg&apos;],&#32;&apos;jaco_msgs&apos;:&#32;[&apos;/home/longfei/catkin_KinovaROS/src/jaco-ros/jaco_msgs/msg&apos;,&#32;&apos;/home/longfei/catkin_KinovaROS/devel/share/jaco_msgs/msg&apos;],&#32;&apos;geometry_msgs&apos;:&#32;[&apos;/opt/ros/hydro/share/geometry_msgs/cmake/../msg&apos;]}</emphasis>
+132 
+133 <emphasis class="comment">//&#32;!!!!!!!!!!!&#32;[&apos;__class__&apos;,&#32;&apos;__delattr__&apos;,&#32;&apos;__dict__&apos;,&#32;&apos;__doc__&apos;,&#32;&apos;__eq__&apos;,&#32;&apos;__format__&apos;,&#32;&apos;__getattribute__&apos;,&#32;&apos;__hash__&apos;,&#32;&apos;__init__&apos;,&#32;&apos;__module__&apos;,&#32;&apos;__ne__&apos;,&#32;&apos;__new__&apos;,&#32;&apos;__reduce__&apos;,&#32;&apos;__reduce_ex__&apos;,&#32;&apos;__repr__&apos;,&#32;&apos;__setattr__&apos;,&#32;&apos;__sizeof__&apos;,&#32;&apos;__str__&apos;,&#32;&apos;__subclasshook__&apos;,&#32;&apos;__weakref__&apos;,&#32;&apos;_parsed_fields&apos;,&#32;&apos;constants&apos;,&#32;&apos;fields&apos;,&#32;&apos;full_name&apos;,&#32;&apos;has_header&apos;,&#32;&apos;header_present&apos;,&#32;&apos;names&apos;,&#32;&apos;package&apos;,&#32;&apos;parsed_fields&apos;,&#32;&apos;short_name&apos;,&#32;&apos;text&apos;,&#32;&apos;types&apos;]</emphasis>
+134 
+135 
+136 
+137 
+138 <emphasis class="keyword">template</emphasis>&#32;&lt;<emphasis class="keyword">class</emphasis>&#32;ContainerAllocator&gt;
+<link linkend="d7/d75/structros_1_1message__traits_1_1IsFixedSize_3_01_1_1jaco__msgs_1_1JointVelocity___3_01ContainerAllocator_01_4_01_4">139 </link><emphasis class="keyword">struct&#32;</emphasis>IsFixedSize&lt;&#32;::<link linkend="de/df3/structjaco__msgs_1_1JointVelocity__">jaco_msgs::JointVelocity_</link>&lt;ContainerAllocator&gt;&#32;&gt;
+140 &#32;&#32;:&#32;TrueType
+141 &#32;&#32;{&#32;};
+142 
+143 <emphasis class="keyword">template</emphasis>&#32;&lt;<emphasis class="keyword">class</emphasis>&#32;ContainerAllocator&gt;
+<link linkend="d3/d2b/structros_1_1message__traits_1_1IsFixedSize_3_01_1_1jaco__msgs_1_1JointVelocity___3_01ContainerAllocator_01_4_01const_01_01_4">144 </link><emphasis class="keyword">struct&#32;</emphasis>IsFixedSize&lt;&#32;::<link linkend="de/df3/structjaco__msgs_1_1JointVelocity__">jaco_msgs::JointVelocity_</link>&lt;ContainerAllocator&gt;&#32;const&gt;
+145 &#32;&#32;:&#32;TrueType
+146 &#32;&#32;{&#32;};
+147 
+148 <emphasis class="keyword">template</emphasis>&#32;&lt;<emphasis class="keyword">class</emphasis>&#32;ContainerAllocator&gt;
+<link linkend="d6/d02/structros_1_1message__traits_1_1IsMessage_3_01_1_1jaco__msgs_1_1JointVelocity___3_01ContainerAllocator_01_4_01_4">149 </link><emphasis class="keyword">struct&#32;</emphasis>IsMessage&lt;&#32;::<link linkend="de/df3/structjaco__msgs_1_1JointVelocity__">jaco_msgs::JointVelocity_</link>&lt;ContainerAllocator&gt;&#32;&gt;
+150 &#32;&#32;:&#32;TrueType
+151 &#32;&#32;{&#32;};
+152 
+153 <emphasis class="keyword">template</emphasis>&#32;&lt;<emphasis class="keyword">class</emphasis>&#32;ContainerAllocator&gt;
+<link linkend="d7/d8a/structros_1_1message__traits_1_1IsMessage_3_01_1_1jaco__msgs_1_1JointVelocity___3_01ContainerAllocator_01_4_01const_01_01_4">154 </link><emphasis class="keyword">struct&#32;</emphasis>IsMessage&lt;&#32;::<link linkend="de/df3/structjaco__msgs_1_1JointVelocity__">jaco_msgs::JointVelocity_</link>&lt;ContainerAllocator&gt;&#32;const&gt;
+155 &#32;&#32;:&#32;TrueType
+156 &#32;&#32;{&#32;};
+157 
+158 <emphasis class="keyword">template</emphasis>&#32;&lt;<emphasis class="keyword">class</emphasis>&#32;ContainerAllocator&gt;
+<link linkend="df/d7e/structros_1_1message__traits_1_1HasHeader_3_01_1_1jaco__msgs_1_1JointVelocity___3_01ContainerAllocator_01_4_01_4">159 </link><emphasis class="keyword">struct&#32;</emphasis>HasHeader&lt;&#32;::<link linkend="de/df3/structjaco__msgs_1_1JointVelocity__">jaco_msgs::JointVelocity_</link>&lt;ContainerAllocator&gt;&#32;&gt;
+160 &#32;&#32;:&#32;FalseType
+161 &#32;&#32;{&#32;};
+162 
+163 <emphasis class="keyword">template</emphasis>&#32;&lt;<emphasis class="keyword">class</emphasis>&#32;ContainerAllocator&gt;
+<link linkend="d9/dbd/structros_1_1message__traits_1_1HasHeader_3_01_1_1jaco__msgs_1_1JointVelocity___3_01ContainerAllocator_01_4_01const_01_01_4">164 </link><emphasis class="keyword">struct&#32;</emphasis>HasHeader&lt;&#32;::<link linkend="de/df3/structjaco__msgs_1_1JointVelocity__">jaco_msgs::JointVelocity_</link>&lt;ContainerAllocator&gt;&#32;const&gt;
+165 &#32;&#32;:&#32;FalseType
+166 &#32;&#32;{&#32;};
+167 
+168 
+169 <emphasis class="keyword">template</emphasis>&lt;<emphasis class="keyword">class</emphasis>&#32;ContainerAllocator&gt;
+<link linkend="d7/d58/structros_1_1message__traits_1_1MD5Sum_3_01_1_1jaco__msgs_1_1JointVelocity___3_01ContainerAllocator_01_4_01_4">170 </link><emphasis class="keyword">struct&#32;</emphasis>MD5Sum&lt;&#32;::<link linkend="de/df3/structjaco__msgs_1_1JointVelocity__">jaco_msgs::JointVelocity_</link>&lt;ContainerAllocator&gt;&#32;&gt;
+171 {
+<link linkend="d7/d58/structros_1_1message__traits_1_1MD5Sum_3_01_1_1jaco__msgs_1_1JointVelocity___3_01ContainerAllocator_01_4_01_4_1a4ad10d062381a72fac6cfdc42fb46f02">172 </link>&#32;&#32;<emphasis class="keyword">static</emphasis>&#32;<emphasis class="keyword">const</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>*&#32;<link linkend="d7/d58/structros_1_1message__traits_1_1MD5Sum_3_01_1_1jaco__msgs_1_1JointVelocity___3_01ContainerAllocator_01_4_01_4_1a4ad10d062381a72fac6cfdc42fb46f02">value</link>()
+173 &#32;&#32;{
+174 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;<emphasis class="stringliteral">&quot;b0068422b386ec8608fa05052ffe139f&quot;</emphasis>;
+175 &#32;&#32;}
+176 
+<link linkend="d7/d58/structros_1_1message__traits_1_1MD5Sum_3_01_1_1jaco__msgs_1_1JointVelocity___3_01ContainerAllocator_01_4_01_4_1a64924e93ecf648746b442fe22bbec68e">177 </link>&#32;&#32;<emphasis class="keyword">static</emphasis>&#32;<emphasis class="keyword">const</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>*&#32;<link linkend="d7/d58/structros_1_1message__traits_1_1MD5Sum_3_01_1_1jaco__msgs_1_1JointVelocity___3_01ContainerAllocator_01_4_01_4_1a64924e93ecf648746b442fe22bbec68e">value</link>(const&#32;::jaco_msgs::JointVelocity_&lt;ContainerAllocator&gt;&amp;)&#32;{&#32;<emphasis class="keywordflow">return</emphasis>&#32;<link linkend="d7/d58/structros_1_1message__traits_1_1MD5Sum_3_01_1_1jaco__msgs_1_1JointVelocity___3_01ContainerAllocator_01_4_01_4_1a64924e93ecf648746b442fe22bbec68e">value</link>();&#32;}
+<link linkend="d7/d58/structros_1_1message__traits_1_1MD5Sum_3_01_1_1jaco__msgs_1_1JointVelocity___3_01ContainerAllocator_01_4_01_4_1a0709a64a1a6641970610b55bed41cc69">178 </link>&#32;&#32;<emphasis class="keyword">static</emphasis>&#32;<emphasis class="keyword">const</emphasis>&#32;uint64_t&#32;static_value1&#32;=&#32;0xb0068422b386ec86ULL;
+<link linkend="d7/d58/structros_1_1message__traits_1_1MD5Sum_3_01_1_1jaco__msgs_1_1JointVelocity___3_01ContainerAllocator_01_4_01_4_1ab3ec3ceccf2f3596cf29c9221bf32c72">179 </link>&#32;&#32;<emphasis class="keyword">static</emphasis>&#32;<emphasis class="keyword">const</emphasis>&#32;uint64_t&#32;static_value2&#32;=&#32;0x08fa05052ffe139fULL;
+180 };
+181 
+182 <emphasis class="keyword">template</emphasis>&lt;<emphasis class="keyword">class</emphasis>&#32;ContainerAllocator&gt;
+<link linkend="d7/db4/structros_1_1message__traits_1_1DataType_3_01_1_1jaco__msgs_1_1JointVelocity___3_01ContainerAllocator_01_4_01_4">183 </link><emphasis class="keyword">struct&#32;</emphasis>DataType&lt;&#32;::<link linkend="de/df3/structjaco__msgs_1_1JointVelocity__">jaco_msgs::JointVelocity_</link>&lt;ContainerAllocator&gt;&#32;&gt;
+184 {
+<link linkend="d7/db4/structros_1_1message__traits_1_1DataType_3_01_1_1jaco__msgs_1_1JointVelocity___3_01ContainerAllocator_01_4_01_4_1a3a628fa73c5209fdd928da2e65294c93">185 </link>&#32;&#32;<emphasis class="keyword">static</emphasis>&#32;<emphasis class="keyword">const</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>*&#32;<link linkend="d7/db4/structros_1_1message__traits_1_1DataType_3_01_1_1jaco__msgs_1_1JointVelocity___3_01ContainerAllocator_01_4_01_4_1a3a628fa73c5209fdd928da2e65294c93">value</link>()
+186 &#32;&#32;{
+187 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;<emphasis class="stringliteral">&quot;jaco_msgs/JointVelocity&quot;</emphasis>;
+188 &#32;&#32;}
+189 
+<link linkend="d7/db4/structros_1_1message__traits_1_1DataType_3_01_1_1jaco__msgs_1_1JointVelocity___3_01ContainerAllocator_01_4_01_4_1a031dd686d7d274366d215aa3ae335f17">190 </link>&#32;&#32;<emphasis class="keyword">static</emphasis>&#32;<emphasis class="keyword">const</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>*&#32;<link linkend="d7/db4/structros_1_1message__traits_1_1DataType_3_01_1_1jaco__msgs_1_1JointVelocity___3_01ContainerAllocator_01_4_01_4_1a031dd686d7d274366d215aa3ae335f17">value</link>(const&#32;::jaco_msgs::JointVelocity_&lt;ContainerAllocator&gt;&amp;)&#32;{&#32;<emphasis class="keywordflow">return</emphasis>&#32;<link linkend="d7/db4/structros_1_1message__traits_1_1DataType_3_01_1_1jaco__msgs_1_1JointVelocity___3_01ContainerAllocator_01_4_01_4_1a031dd686d7d274366d215aa3ae335f17">value</link>();&#32;}
+191 };
+192 
+193 <emphasis class="keyword">template</emphasis>&lt;<emphasis class="keyword">class</emphasis>&#32;ContainerAllocator&gt;
+<link linkend="d8/d5f/structros_1_1message__traits_1_1Definition_3_01_1_1jaco__msgs_1_1JointVelocity___3_01ContainerAllocator_01_4_01_4">194 </link><emphasis class="keyword">struct&#32;</emphasis>Definition&lt;&#32;::<link linkend="de/df3/structjaco__msgs_1_1JointVelocity__">jaco_msgs::JointVelocity_</link>&lt;ContainerAllocator&gt;&#32;&gt;
+195 {
+<link linkend="d8/d5f/structros_1_1message__traits_1_1Definition_3_01_1_1jaco__msgs_1_1JointVelocity___3_01ContainerAllocator_01_4_01_4_1a53bfbf517bb0a6efe47ffa6451172965">196 </link>&#32;&#32;<emphasis class="keyword">static</emphasis>&#32;<emphasis class="keyword">const</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>*&#32;<link linkend="d8/d5f/structros_1_1message__traits_1_1Definition_3_01_1_1jaco__msgs_1_1JointVelocity___3_01ContainerAllocator_01_4_01_4_1a53bfbf517bb0a6efe47ffa6451172965">value</link>()
+197 &#32;&#32;{
+198 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;<emphasis class="stringliteral">&quot;float32&#32;joint1\n\</emphasis>
+199 <emphasis class="stringliteral">float32&#32;joint2\n\</emphasis>
+200 <emphasis class="stringliteral">float32&#32;joint3\n\</emphasis>
+201 <emphasis class="stringliteral">float32&#32;joint4\n\</emphasis>
+202 <emphasis class="stringliteral">float32&#32;joint5\n\</emphasis>
+203 <emphasis class="stringliteral">float32&#32;joint6\n\</emphasis>
+204 <emphasis class="stringliteral">&quot;</emphasis>;
+205 &#32;&#32;}
+206 
+<link linkend="d8/d5f/structros_1_1message__traits_1_1Definition_3_01_1_1jaco__msgs_1_1JointVelocity___3_01ContainerAllocator_01_4_01_4_1a4b900e690813f8d781aab86c9837f6e7">207 </link>&#32;&#32;<emphasis class="keyword">static</emphasis>&#32;<emphasis class="keyword">const</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>*&#32;<link linkend="d8/d5f/structros_1_1message__traits_1_1Definition_3_01_1_1jaco__msgs_1_1JointVelocity___3_01ContainerAllocator_01_4_01_4_1a4b900e690813f8d781aab86c9837f6e7">value</link>(const&#32;::jaco_msgs::JointVelocity_&lt;ContainerAllocator&gt;&amp;)&#32;{&#32;<emphasis class="keywordflow">return</emphasis>&#32;<link linkend="d8/d5f/structros_1_1message__traits_1_1Definition_3_01_1_1jaco__msgs_1_1JointVelocity___3_01ContainerAllocator_01_4_01_4_1a4b900e690813f8d781aab86c9837f6e7">value</link>();&#32;}
+208 };
+209 
+210 }&#32;<emphasis class="comment">//&#32;namespace&#32;message_traits</emphasis>
+211 }&#32;<emphasis class="comment">//&#32;namespace&#32;ros</emphasis>
+212 
+213 <emphasis class="keyword">namespace&#32;</emphasis><link linkend="db/d2f/namespaceros">ros</link>
+214 {
+215 <emphasis class="keyword">namespace&#32;</emphasis>serialization
+216 {
+217 
+<link linkend="d9/d93/structros_1_1serialization_1_1Serializer_3_01_1_1jaco__msgs_1_1JointVelocity___3_01ContainerAllocator_01_4_01_4">218 </link>&#32;&#32;<emphasis class="keyword">template</emphasis>&lt;<emphasis class="keyword">class</emphasis>&#32;ContainerAllocator&gt;&#32;<emphasis class="keyword">struct&#32;</emphasis>Serializer&lt;&#32;::<link linkend="de/df3/structjaco__msgs_1_1JointVelocity__">jaco_msgs::JointVelocity_</link>&lt;ContainerAllocator&gt;&#32;&gt;
+219 &#32;&#32;{
+<link linkend="d9/d93/structros_1_1serialization_1_1Serializer_3_01_1_1jaco__msgs_1_1JointVelocity___3_01ContainerAllocator_01_4_01_4_1a504c1717d4ee6580336dbef40a913f95">220 </link>&#32;&#32;&#32;&#32;<emphasis class="keyword">template</emphasis>&lt;<emphasis class="keyword">typename</emphasis>&#32;Stream,&#32;<emphasis class="keyword">typename</emphasis>&#32;T&gt;&#32;<emphasis class="keyword">inline</emphasis>&#32;<emphasis class="keyword">static</emphasis>&#32;<emphasis class="keywordtype">void</emphasis>&#32;<link linkend="d9/d93/structros_1_1serialization_1_1Serializer_3_01_1_1jaco__msgs_1_1JointVelocity___3_01ContainerAllocator_01_4_01_4_1a504c1717d4ee6580336dbef40a913f95">allInOne</link>(Stream&amp;&#32;stream,&#32;T&#32;m)
+221 &#32;&#32;&#32;&#32;{
+222 &#32;&#32;&#32;&#32;&#32;&#32;stream.next(m.joint1);
+223 &#32;&#32;&#32;&#32;&#32;&#32;stream.next(m.joint2);
+224 &#32;&#32;&#32;&#32;&#32;&#32;stream.next(m.joint3);
+225 &#32;&#32;&#32;&#32;&#32;&#32;stream.next(m.joint4);
+226 &#32;&#32;&#32;&#32;&#32;&#32;stream.next(m.joint5);
+227 &#32;&#32;&#32;&#32;&#32;&#32;stream.next(m.joint6);
+228 &#32;&#32;&#32;&#32;}
+229 
+<link linkend="d9/d93/structros_1_1serialization_1_1Serializer_3_01_1_1jaco__msgs_1_1JointVelocity___3_01ContainerAllocator_01_4_01_4_1ad5d6db3f0b71c920faec7f13f2b5d49c">230 </link>&#32;&#32;&#32;&#32;<link linkend="d9/d93/structros_1_1serialization_1_1Serializer_3_01_1_1jaco__msgs_1_1JointVelocity___3_01ContainerAllocator_01_4_01_4_1ad5d6db3f0b71c920faec7f13f2b5d49c">ROS_DECLARE_ALLINONE_SERIALIZER</link>;
+231 &#32;&#32;};&#32;<emphasis class="comment">//&#32;struct&#32;JointVelocity_</emphasis>
+232 
+233 }&#32;<emphasis class="comment">//&#32;namespace&#32;serialization</emphasis>
+234 }&#32;<emphasis class="comment">//&#32;namespace&#32;ros</emphasis>
+235 
+236 <emphasis class="keyword">namespace&#32;</emphasis><link linkend="db/d2f/namespaceros">ros</link>
+237 {
+238 <emphasis class="keyword">namespace&#32;</emphasis>message_operations
+239 {
+240 
+241 <emphasis class="keyword">template</emphasis>&lt;<emphasis class="keyword">class</emphasis>&#32;ContainerAllocator&gt;
+<link linkend="d1/db0/structros_1_1message__operations_1_1Printer_3_01_1_1jaco__msgs_1_1JointVelocity___3_01ContainerAllocator_01_4_01_4">242 </link><emphasis class="keyword">struct&#32;</emphasis>Printer&lt;&#32;::<link linkend="de/df3/structjaco__msgs_1_1JointVelocity__">jaco_msgs::JointVelocity_</link>&lt;ContainerAllocator&gt;&#32;&gt;
+243 {
+<link linkend="d1/db0/structros_1_1message__operations_1_1Printer_3_01_1_1jaco__msgs_1_1JointVelocity___3_01ContainerAllocator_01_4_01_4_1a5c0d5ba24dc6e3a95b16bc125064035e">244 </link>&#32;&#32;<emphasis class="keyword">template</emphasis>&lt;<emphasis class="keyword">typename</emphasis>&#32;Stream&gt;&#32;<emphasis class="keyword">static</emphasis>&#32;<emphasis class="keywordtype">void</emphasis>&#32;<link linkend="d1/db0/structros_1_1message__operations_1_1Printer_3_01_1_1jaco__msgs_1_1JointVelocity___3_01ContainerAllocator_01_4_01_4_1a5c0d5ba24dc6e3a95b16bc125064035e">stream</link>(Stream&amp;&#32;s,&#32;<emphasis class="keyword">const</emphasis>&#32;std::string&amp;&#32;indent,&#32;const&#32;::jaco_msgs::JointVelocity_&lt;ContainerAllocator&gt;&amp;&#32;v)
+245 &#32;&#32;{
+246 &#32;&#32;&#32;&#32;s&#32;&lt;&lt;&#32;indent&#32;&lt;&lt;&#32;<emphasis class="stringliteral">&quot;joint1:&#32;&quot;</emphasis>;
+247 &#32;&#32;&#32;&#32;Printer&lt;float&gt;::stream(s,&#32;indent&#32;+&#32;<emphasis class="stringliteral">&quot;&#32;&#32;&quot;</emphasis>,&#32;v.joint1);
+248 &#32;&#32;&#32;&#32;s&#32;&lt;&lt;&#32;indent&#32;&lt;&lt;&#32;<emphasis class="stringliteral">&quot;joint2:&#32;&quot;</emphasis>;
+249 &#32;&#32;&#32;&#32;Printer&lt;float&gt;::stream(s,&#32;indent&#32;+&#32;<emphasis class="stringliteral">&quot;&#32;&#32;&quot;</emphasis>,&#32;v.joint2);
+250 &#32;&#32;&#32;&#32;s&#32;&lt;&lt;&#32;indent&#32;&lt;&lt;&#32;<emphasis class="stringliteral">&quot;joint3:&#32;&quot;</emphasis>;
+251 &#32;&#32;&#32;&#32;Printer&lt;float&gt;::stream(s,&#32;indent&#32;+&#32;<emphasis class="stringliteral">&quot;&#32;&#32;&quot;</emphasis>,&#32;v.joint3);
+252 &#32;&#32;&#32;&#32;s&#32;&lt;&lt;&#32;indent&#32;&lt;&lt;&#32;<emphasis class="stringliteral">&quot;joint4:&#32;&quot;</emphasis>;
+253 &#32;&#32;&#32;&#32;Printer&lt;float&gt;::stream(s,&#32;indent&#32;+&#32;<emphasis class="stringliteral">&quot;&#32;&#32;&quot;</emphasis>,&#32;v.joint4);
+254 &#32;&#32;&#32;&#32;s&#32;&lt;&lt;&#32;indent&#32;&lt;&lt;&#32;<emphasis class="stringliteral">&quot;joint5:&#32;&quot;</emphasis>;
+255 &#32;&#32;&#32;&#32;Printer&lt;float&gt;::stream(s,&#32;indent&#32;+&#32;<emphasis class="stringliteral">&quot;&#32;&#32;&quot;</emphasis>,&#32;v.joint5);
+256 &#32;&#32;&#32;&#32;s&#32;&lt;&lt;&#32;indent&#32;&lt;&lt;&#32;<emphasis class="stringliteral">&quot;joint6:&#32;&quot;</emphasis>;
+257 &#32;&#32;&#32;&#32;Printer&lt;float&gt;::stream(s,&#32;indent&#32;+&#32;<emphasis class="stringliteral">&quot;&#32;&#32;&quot;</emphasis>,&#32;v.joint6);
+258 &#32;&#32;}
+259 };
+260 
+261 }&#32;<emphasis class="comment">//&#32;namespace&#32;message_operations</emphasis>
+262 }&#32;<emphasis class="comment">//&#32;namespace&#32;ros</emphasis>
+263 
+264 <emphasis class="preprocessor">#endif&#32;//&#32;JACO_MSGS_MESSAGE_JOINTVELOCITY_H</emphasis>
+    </computeroutput></literallayout>
+</section>

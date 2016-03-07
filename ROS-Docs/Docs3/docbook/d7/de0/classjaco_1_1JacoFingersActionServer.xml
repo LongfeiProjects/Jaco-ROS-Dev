@@ -1,0 +1,137 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="d7/de0/classjaco_1_1JacoFingersActionServer">
+<title>jaco::JacoFingersActionServer class Reference</title>
+<para>
+    <programlisting>#include <link linkend="dc/d0a/jaco__fingers__action_8h">&quot;jaco_fingers_action.h&quot;</link></programlisting>
+</para>
+<para>Inheritance diagram for jaco::JacoFingersActionServer</para>
+<para>
+    <figure>
+        <title>Inheritance graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../db/d29/classjaco_1_1JacoFingersActionServer__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Collaboration diagram for jaco::JacoFingersActionServer</para>
+<para>
+    <figure>
+        <title>Collaboration graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../d6/d35/classjaco_1_1JacoFingersActionServer__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+        <section>
+            <title>Private Attributes</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>actionlib::SimpleActionServer&lt; jaco_msgs::SetFingersPositionAction &gt; action_server_</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>JacoComm &amp; arm_comm_</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>jaco::FingerAngles last_nonstall_finger_positions_</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>ros::Time last_nonstall_time_</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>ros::NodeHandle node_handle_</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>double rate_hz_</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>double stall_interval_seconds_</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>double stall_threshold_</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>float tolerance_</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="d7/de0/classjaco_1_1JacoFingersActionServer_1a642f494b27d513457e9f29de7a4b31b6">actionCallback</link> (
+const <link linkend="d7/dba/namespacejaco__msgs_1a4432ef01b2858fafbc445a38e7c6dcba">jaco_msgs::SetFingersPositionGoalConstPtr</link> &amp; )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="d7/de0/classjaco_1_1JacoFingersActionServer_1aae225d4ab0745de98795cf7af2132d0c">JacoFingersActionServer</link> (
+<link linkend="d5/d2b/classjaco_1_1JacoComm">JacoComm</link> &amp; , const ros::NodeHandle &amp; n)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="d7/de0/classjaco_1_1JacoFingersActionServer_1a0497dec496f6224031096e5f6735e9c8">~JacoFingersActionServer</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Member Data Documentation</title>
+        </section>
+            <section xml:id="d7/de0/classjaco_1_1JacoFingersActionServer_1a642f494b27d513457e9f29de7a4b31b6">
+                <title>void jaco::JacoFingersActionServer::actionCallback (const jaco_msgs::SetFingersPositionGoalConstPtr &amp;)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="d7/de0/classjaco_1_1JacoFingersActionServer_1aae225d4ab0745de98795cf7af2132d0c">
+                <title>jaco::JacoFingersActionServer::JacoFingersActionServer (JacoComm &amp;, const ros::NodeHandle &amp;n)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="d7/de0/classjaco_1_1JacoFingersActionServer_1a0497dec496f6224031096e5f6735e9c8">
+                <title>jaco::JacoFingersActionServer::~JacoFingersActionServer ()</title> <emphasis></emphasis>
+                
+            </section>
+</section>

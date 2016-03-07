@@ -1,0 +1,5 @@
+var structros_1_1message__traits_1_1DataType_3_01_1_1jaco__msgs_1_1SetFingersPositionActionResult___261d7fa0605a3d790ae7a5ae14788b18 =
+[
+    [ "value", "df/d4b/structros_1_1message__traits_1_1DataType_3_01_1_1jaco__msgs_1_1SetFingersPositionActionResult___261d7fa0605a3d790ae7a5ae14788b18.html#a5000d3315db097c977274cc246e0a210", null ],
+    [ "value", "df/d4b/structros_1_1message__traits_1_1DataType_3_01_1_1jaco__msgs_1_1SetFingersPositionActionResult___261d7fa0605a3d790ae7a5ae14788b18.html#a953e8593af0cd31ec2e378f24b213a8d", null ]
+];

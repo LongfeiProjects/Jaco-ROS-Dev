@@ -1,0 +1,65 @@
+\hypertarget{jaco__arm__driver_8cpp}{}\section{D\+:/\+Longfei/\+Desktop/catkin\+\_\+\+Kinova\+R\+O\+S/src/jaco-\/ros/jaco\+\_\+driver/src/nodes/jaco\+\_\+arm\+\_\+driver.cpp File Reference}
+\label{jaco__arm__driver_8cpp}\index{D\+:/\+Longfei/\+Desktop/catkin\+\_\+\+Kinova\+R\+O\+S/src/jaco-\/ros/jaco\+\_\+driver/src/nodes/jaco\+\_\+arm\+\_\+driver.\+cpp@{D\+:/\+Longfei/\+Desktop/catkin\+\_\+\+Kinova\+R\+O\+S/src/jaco-\/ros/jaco\+\_\+driver/src/nodes/jaco\+\_\+arm\+\_\+driver.\+cpp}}
+{\ttfamily \#include \char`\"{}jaco\+\_\+driver/jaco\+\_\+api.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}jaco\+\_\+driver/jaco\+\_\+arm.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}jaco\+\_\+driver/jaco\+\_\+pose\+\_\+action.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}jaco\+\_\+driver/jaco\+\_\+angles\+\_\+action.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}jaco\+\_\+driver/jaco\+\_\+fingers\+\_\+action.\+h\char`\"{}}\\*
+Include dependency graph for jaco\+\_\+arm\+\_\+driver.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d9/d42/jaco__arm__driver_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{jaco__arm__driver_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{main} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{jaco\+\_\+arm\+\_\+driver.\+cpp@{jaco\+\_\+arm\+\_\+driver.\+cpp}!main@{main}}
+\index{main@{main}!jaco\+\_\+arm\+\_\+driver.\+cpp@{jaco\+\_\+arm\+\_\+driver.\+cpp}}
+\subsubsection[{\texorpdfstring{main(int argc, char $\ast$$\ast$argv)}{main(int argc, char **argv)}}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char $\ast$$\ast$}]{argv}
+\end{DoxyParamCaption}
+)}\hypertarget{jaco__arm__driver_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{}\label{jaco__arm__driver_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}
+
+\begin{DoxyCode}
+17 \{
+18     ros::init(argc, argv, \textcolor{stringliteral}{"jaco\_arm\_driver"});
+19     ros::NodeHandle nh(\textcolor{stringliteral}{"~"});
+20     boost::recursive\_mutex api\_mutex;
+21 
+22     \textcolor{keywordtype}{bool} is\_first\_init = \textcolor{keyword}{true};
+23     \textcolor{keywordflow}{while} (ros::ok())
+24     \{
+25         \textcolor{keywordflow}{try}
+26         \{
+27             \hyperlink{classjaco_1_1JacoComm}{jaco::JacoComm} comm(nh, api\_mutex, is\_first\_init);
+28             \hyperlink{classjaco_1_1JacoArm}{jaco::JacoArm} \hyperlink{namespacejaco}{jaco}(comm, nh);
+29             \hyperlink{classjaco_1_1JacoPoseActionServer}{jaco::JacoPoseActionServer} pose\_server(comm, nh);
+30             \hyperlink{classjaco_1_1JacoAnglesActionServer}{jaco::JacoAnglesActionServer} angles\_server(comm, nh);
+31             \hyperlink{classjaco_1_1JacoFingersActionServer}{jaco::JacoFingersActionServer} fingers\_server(comm, nh);
+32 
+33             ros::spin();
+34         \}
+35         \textcolor{keywordflow}{catch}(\textcolor{keyword}{const} std::exception& \hyperlink{namespace__setup__util_acdce690b925de33d6249bbbfa1109d61}{e})
+36         \{
+37             ROS\_ERROR\_STREAM(e.what());
+38             \hyperlink{classjaco_1_1JacoAPI}{jaco::JacoAPI} api;
+39             boost::recursive\_mutex::scoped\_lock lock(api\_mutex);
+40             api.closeAPI();
+41             ros::Duration(1.0).sleep();
+42         \}
+43 
+44         is\_first\_init = \textcolor{keyword}{false};
+45     \}
+46     \textcolor{keywordflow}{return} 0;
+47 \}
+\end{DoxyCode}

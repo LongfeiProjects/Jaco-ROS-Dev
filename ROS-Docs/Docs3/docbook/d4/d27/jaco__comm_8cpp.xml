@@ -1,0 +1,737 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="d4/d27/jaco__comm_8cpp">
+    <title>jaco_comm.cpp File Reference</title>
+    <programlisting>#include &lt;ros/ros.h&gt;</programlisting>
+    <programlisting>#include &quot;jaco_driver/jaco_comm.h&quot;</programlisting>
+    <programlisting>#include &lt;string&gt;</programlisting>
+    <programlisting>#include &lt;vector&gt;</programlisting>
+<para>Include dependency diagram for jaco_comm.cpp</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../dc/dd7/jaco__comm_8cpp__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Included by dependency diagram for jaco_comm.cpp</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../d9/d00/jaco__comm_8cpp__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+        <simplesect>
+            <title> Namespaces </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d4/d3c/namespacejaco">jaco</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+    <simplesect>
+        <title>Detailed Description</title>
+    <para>Definition in file D:/Longfei/Desktop/catkin_KinovaROS/src/jaco-ros/jaco_driver/src/jaco_comm.cpp</para>
+    </simplesect>
+    <literallayout><computeroutput>
+1 
+46 <emphasis class="preprocessor">#include&#32;&lt;ros/ros.h&gt;</emphasis>
+47 <emphasis class="preprocessor">#include&#32;&quot;<link linkend="d8/de6/jaco__comm_8h">jaco_driver/jaco_comm.h</link>&quot;</emphasis>
+48 <emphasis class="preprocessor">#include&#32;&lt;string&gt;</emphasis>
+49 <emphasis class="preprocessor">#include&#32;&lt;vector&gt;</emphasis>
+50 
+51 
+52 <emphasis class="keyword">namespace&#32;</emphasis><link linkend="d4/d3c/namespacejaco">jaco</link>
+53 {
+54 
+<link linkend="d5/d2b/classjaco_1_1JacoComm_1acdf234ee7f30cf5ead4f41beb3481521">55 </link><link linkend="d5/d2b/classjaco_1_1JacoComm_1acdf234ee7f30cf5ead4f41beb3481521">JacoComm::JacoComm</link>(<emphasis class="keyword">const</emphasis>&#32;ros::NodeHandle&amp;&#32;node_handle,
+56 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;boost::recursive_mutex&#32;&amp;api_mutex,
+57 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keyword">const</emphasis>&#32;<emphasis class="keywordtype">bool</emphasis>&#32;is_movement_on_start)
+58 &#32;&#32;&#32;&#32;:&#32;is_software_stop_(false),&#32;api_mutex_(api_mutex)
+59 {
+60 &#32;&#32;&#32;&#32;boost::recursive_mutex::scoped_lock&#32;lock(<link linkend="d5/d2b/classjaco_1_1JacoComm_1ac6ef2a6b3c51877fc4237d834c35908a">api_mutex_</link>);
+61 
+62 &#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;Get&#32;the&#32;serial&#32;number&#32;parameter&#32;for&#32;the&#32;arm&#32;we&#32;wish&#32;to&#32;connec&#32;to</emphasis>
+63 &#32;&#32;&#32;&#32;std::string&#32;serial_number&#32;=&#32;<emphasis class="stringliteral">&quot;&quot;</emphasis>;
+64 &#32;&#32;&#32;&#32;node_handle.getParam(<emphasis class="stringliteral">&quot;serial_number&quot;</emphasis>,&#32;serial_number);
+65 
+66 &#32;&#32;&#32;&#32;std::vector&lt;int&gt;&#32;api_version;
+67 &#32;&#32;&#32;&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="db/dfe/Kinova_8API_8CommLayerUbuntu_8h_1a900dac90961bada00f57c207562a6a9a">result</link>&#32;=&#32;<link linkend="d5/d2b/classjaco_1_1JacoComm_1a8d1510c941f28a4e8f921691d4fd2248">jaco_api_</link>.<link linkend="d5/d3c/classjaco_1_1JacoAPI_1a90f1033a1174ea7f97d48186b7ca867a">getAPIVersion</link>(api_version);
+68 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(result&#32;!=&#32;<link linkend="db/dfe/Kinova_8API_8CommLayerUbuntu_8h_1a510f2320a2a31d2d225adc0da7bef595">NO_ERROR_KINOVA</link>)
+69 &#32;&#32;&#32;&#32;{
+70 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">throw</emphasis>&#32;<link linkend="df/dbe/classjaco_1_1JacoCommException">JacoCommException</link>(<emphasis class="stringliteral">&quot;Could&#32;not&#32;get&#32;the&#32;Kinova&#32;API&#32;version&quot;</emphasis>,&#32;result);
+71 &#32;&#32;&#32;&#32;}
+72 
+73 &#32;&#32;&#32;&#32;ROS_INFO_STREAM(<emphasis class="stringliteral">&quot;Initializing&#32;Kinova&#32;API&#32;(header&#32;version:&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;<link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1aaeb890c653dc6657b1238afe3ce1a0f9">COMMAND_LAYER_VERSION</link>&#32;&lt;&lt;&#32;<emphasis class="stringliteral">&quot;,&#32;library&#32;version:&#32;&quot;</emphasis>
+74 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;&lt;&#32;api_version[0]&#32;&lt;&lt;&#32;<emphasis class="stringliteral">&quot;.&quot;</emphasis>&#32;&lt;&lt;&#32;api_version[1]&#32;&lt;&lt;&#32;<emphasis class="stringliteral">&quot;.&quot;</emphasis>&#32;&lt;&lt;&#32;api_version[2]&#32;&lt;&lt;&#32;<emphasis class="stringliteral">&quot;)&quot;</emphasis>);
+75 
+76 &#32;&#32;&#32;&#32;result&#32;=&#32;<link linkend="d5/d2b/classjaco_1_1JacoComm_1a8d1510c941f28a4e8f921691d4fd2248">jaco_api_</link>.<link linkend="d5/d3c/classjaco_1_1JacoAPI_1a06eae62c9dd3e144cc4275048c3129e6">initAPI</link>();
+77 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(result&#32;!=&#32;<link linkend="db/dfe/Kinova_8API_8CommLayerUbuntu_8h_1a510f2320a2a31d2d225adc0da7bef595">NO_ERROR_KINOVA</link>)
+78 &#32;&#32;&#32;&#32;{
+79 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">throw</emphasis>&#32;<link linkend="df/dbe/classjaco_1_1JacoCommException">JacoCommException</link>(<emphasis class="stringliteral">&quot;Could&#32;not&#32;initialize&#32;Kinova&#32;API&quot;</emphasis>,&#32;result);
+80 &#32;&#32;&#32;&#32;}
+81 
+82 &#32;&#32;&#32;&#32;std::vector&lt;KinovaDevice&gt;&#32;devices_list;
+83 &#32;&#32;&#32;&#32;result&#32;=&#32;<link linkend="db/dfe/Kinova_8API_8CommLayerUbuntu_8h_1a510f2320a2a31d2d225adc0da7bef595">NO_ERROR_KINOVA</link>;
+84 &#32;&#32;&#32;&#32;<link linkend="d5/d2b/classjaco_1_1JacoComm_1a8d1510c941f28a4e8f921691d4fd2248">jaco_api_</link>.<link linkend="d5/d3c/classjaco_1_1JacoAPI_1a6f80ab16b2518ecb0ddefcd7183027c1">getDevices</link>(devices_list,&#32;result);
+85 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(result&#32;!=&#32;<link linkend="db/dfe/Kinova_8API_8CommLayerUbuntu_8h_1a510f2320a2a31d2d225adc0da7bef595">NO_ERROR_KINOVA</link>)
+86 &#32;&#32;&#32;&#32;{
+87 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">throw</emphasis>&#32;<link linkend="df/dbe/classjaco_1_1JacoCommException">JacoCommException</link>(<emphasis class="stringliteral">&quot;Could&#32;not&#32;get&#32;devices&#32;list&quot;</emphasis>,&#32;result);
+88 &#32;&#32;&#32;&#32;}
+89 
+90 &#32;&#32;&#32;&#32;<emphasis class="keywordtype">bool</emphasis>&#32;found_arm&#32;=&#32;<emphasis class="keyword">false</emphasis>;
+91 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">for</emphasis>&#32;(<emphasis class="keywordtype">int</emphasis>&#32;device_i&#32;=&#32;0;&#32;device_i&#32;&lt;&#32;devices_list.size();&#32;device_i++)
+92 &#32;&#32;&#32;&#32;{
+93 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;If&#32;no&#32;device&#32;is&#32;specified,&#32;just&#32;use&#32;the&#32;first&#32;available&#32;device</emphasis>
+94 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;((serial_number&#32;==&#32;<emphasis class="stringliteral">&quot;&quot;</emphasis>)
+95 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;||&#32;(std::strcmp(serial_number.c_str(),&#32;devices_list[device_i].SerialNumber)&#32;==&#32;0))
+96 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+97 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;result&#32;=&#32;<link linkend="d5/d2b/classjaco_1_1JacoComm_1a8d1510c941f28a4e8f921691d4fd2248">jaco_api_</link>.<link linkend="d5/d3c/classjaco_1_1JacoAPI_1a4e0c8fc007f20e985545b59abf571ea0">setActiveDevice</link>(devices_list[device_i]);
+98 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(result&#32;!=&#32;<link linkend="db/dfe/Kinova_8API_8CommLayerUbuntu_8h_1a510f2320a2a31d2d225adc0da7bef595">NO_ERROR_KINOVA</link>)
+99 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+100 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">throw</emphasis>&#32;<link linkend="df/dbe/classjaco_1_1JacoCommException">JacoCommException</link>(<emphasis class="stringliteral">&quot;Could&#32;not&#32;set&#32;the&#32;active&#32;device&quot;</emphasis>,&#32;result);
+101 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+102 
+103 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="df/d36/KinovaTypes_8h_1d2/d0f/structGeneralInformations">GeneralInformations</link>&#32;general_info;
+104 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;result&#32;=&#32;<link linkend="d5/d2b/classjaco_1_1JacoComm_1a8d1510c941f28a4e8f921691d4fd2248">jaco_api_</link>.<link linkend="d5/d3c/classjaco_1_1JacoAPI_1ae1e29dcccd26e66e34271beff3a52f8c">getGeneralInformations</link>(general_info);
+105 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(result&#32;!=&#32;<link linkend="db/dfe/Kinova_8API_8CommLayerUbuntu_8h_1a510f2320a2a31d2d225adc0da7bef595">NO_ERROR_KINOVA</link>)
+106 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+107 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">throw</emphasis>&#32;<link linkend="df/dbe/classjaco_1_1JacoCommException">JacoCommException</link>(<emphasis class="stringliteral">&quot;Could&#32;not&#32;get&#32;general&#32;information&#32;about&#32;the&#32;device&quot;</emphasis>,&#32;result);
+108 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+109 
+110 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="df/d36/KinovaTypes_8h_1d1/d2e/structClientConfigurations">ClientConfigurations</link>&#32;configuration;
+111 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="d5/d2b/classjaco_1_1JacoComm_1a47a3557e9b5576bc83df936caa043270">getConfig</link>(configuration);
+112 
+113 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="df/d36/KinovaTypes_8h_1df/d9d/structQuickStatus">QuickStatus</link>&#32;quick_status;
+114 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="d5/d2b/classjaco_1_1JacoComm_1a29384597e710d4cbb4e1f2ae6b7d7e50">getQuickStatus</link>(quick_status);
+115 
+116 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="d5/d2b/classjaco_1_1JacoComm_1afb603f289e6ed8855cbeb0d0b1400829">robot_type_</link>&#32;=&#32;quick_status.<link linkend="df/d36/KinovaTypes_8h_1a74b2c900b935a07df18fbea12c3f4d68">RobotType</link>;
+117 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;((<link linkend="d5/d2b/classjaco_1_1JacoComm_1afb603f289e6ed8855cbeb0d0b1400829">robot_type_</link>&#32;!=&#32;0)&#32;&amp;&amp;&#32;(<link linkend="d5/d2b/classjaco_1_1JacoComm_1afb603f289e6ed8855cbeb0d0b1400829">robot_type_</link>&#32;!=&#32;1)&#32;&amp;&amp;&#32;(<link linkend="d5/d2b/classjaco_1_1JacoComm_1afb603f289e6ed8855cbeb0d0b1400829">robot_type_</link>&#32;!=&#32;3))
+118 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+119 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ROS_ERROR(<emphasis class="stringliteral">&quot;Could&#32;not&#32;get&#32;the&#32;type&#32;of&#32;the&#32;arm&#32;from&#32;the&#32;quick&#32;status,&#32;expected&#32;&quot;</emphasis>
+120 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="stringliteral">&quot;either&#32;type&#32;0&#32;(JACO),&#32;or&#32;type&#32;1&#32;(MICO),&#32;got&#32;%d&quot;</emphasis>,&#32;quick_status.<link linkend="df/d36/KinovaTypes_8h_1a74b2c900b935a07df18fbea12c3f4d68">RobotType</link>);
+121 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">throw</emphasis>&#32;<link linkend="df/dbe/classjaco_1_1JacoCommException">JacoCommException</link>(<emphasis class="stringliteral">&quot;Could&#32;not&#32;get&#32;the&#32;type&#32;of&#32;the&#32;arm&quot;</emphasis>,&#32;quick_status.<link linkend="df/d36/KinovaTypes_8h_1a74b2c900b935a07df18fbea12c3f4d68">RobotType</link>);
+122 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+123 
+124 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">switch</emphasis>&#32;(<link linkend="d5/d2b/classjaco_1_1JacoComm_1afb603f289e6ed8855cbeb0d0b1400829">robot_type_</link>)&#32;{
+125 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">case</emphasis>&#32;0:
+126 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">case</emphasis>&#32;3:
+127 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="d5/d2b/classjaco_1_1JacoComm_1a5812c7504d90ec6016c40cba097ba1bb">num_fingers_</link>&#32;=&#32;3;
+128 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">break</emphasis>;
+129 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">case</emphasis>&#32;1:
+130 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="d5/d2b/classjaco_1_1JacoComm_1a5812c7504d90ec6016c40cba097ba1bb">num_fingers_</link>&#32;=&#32;2;
+131 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">break</emphasis>;
+132 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">default</emphasis>:
+133 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">break</emphasis>;
+134 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+135 
+136 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ROS_INFO_STREAM(<emphasis class="stringliteral">&quot;Found&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;devices_list.size()&#32;&lt;&lt;&#32;<emphasis class="stringliteral">&quot;&#32;device(s),&#32;using&#32;device&#32;at&#32;index&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;device_i
+137 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;&lt;&#32;<emphasis class="stringliteral">&quot;&#32;(model:&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;configuration.<link linkend="df/d36/KinovaTypes_8h_1a5bb86440679384635d0d0f41ca431249">Model</link>
+138 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;&lt;&#32;<emphasis class="stringliteral">&quot;,&#32;serial&#32;number:&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;devices_list[device_i].SerialNumber
+139 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;&lt;&#32;<emphasis class="stringliteral">&quot;,&#32;code&#32;version:&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;general_info.<link linkend="df/d36/KinovaTypes_8h_1ac71288477c2e447e7dd298ca707bcec3">CodeVersion</link>
+140 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;&lt;&#32;<emphasis class="stringliteral">&quot;,&#32;code&#32;revision:&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;general_info.<link linkend="df/d36/KinovaTypes_8h_1a56f6f5dc8067f0ea4deb4b0c5cc3f971">CodeRevision</link>&#32;&lt;&lt;&#32;<emphasis class="stringliteral">&quot;)&quot;</emphasis>);
+141 
+142 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;found_arm&#32;=&#32;<emphasis class="keyword">true</emphasis>;
+143 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">break</emphasis>;
+144 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+145 &#32;&#32;&#32;&#32;}
+146 
+147 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(!found_arm)
+148 &#32;&#32;&#32;&#32;{
+149 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ROS_ERROR(<emphasis class="stringliteral">&quot;Could&#32;not&#32;find&#32;the&#32;specified&#32;arm&#32;(serial:&#32;%s)&#32;among&#32;the&#32;%d&#32;attached&#32;devices&quot;</emphasis>,
+150 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;serial_number.c_str(),&#32;<emphasis class="keyword">static_cast&lt;</emphasis><emphasis class="keywordtype">int</emphasis><emphasis class="keyword">&gt;</emphasis>(devices_list.size()));
+151 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">throw</emphasis>&#32;<link linkend="df/dbe/classjaco_1_1JacoCommException">JacoCommException</link>(<emphasis class="stringliteral">&quot;Could&#32;not&#32;find&#32;the&#32;specified&#32;arm&quot;</emphasis>,&#32;0);
+152 &#32;&#32;&#32;&#32;}
+153 
+154 &#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;On&#32;a&#32;cold&#32;boot&#32;the&#32;arm&#32;may&#32;not&#32;respond&#32;to&#32;commands&#32;from&#32;the&#32;API&#32;right&#32;away.</emphasis>
+155 &#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;This&#32;kick-starts&#32;the&#32;Control&#32;API&#32;so&#32;that&#32;it&apos;s&#32;ready&#32;to&#32;go.</emphasis>
+156 &#32;&#32;&#32;&#32;<link linkend="d5/d2b/classjaco_1_1JacoComm_1a6b2a1fabc4e6c30da42c9a5e26757398">startAPI</link>();
+157 &#32;&#32;&#32;&#32;<link linkend="d5/d2b/classjaco_1_1JacoComm_1a54862830cd6414ae3ae48e46e54bf798">stopAPI</link>();
+158 &#32;&#32;&#32;&#32;<link linkend="d5/d2b/classjaco_1_1JacoComm_1a6b2a1fabc4e6c30da42c9a5e26757398">startAPI</link>();
+159 
+160 &#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;Set&#32;the&#32;angular&#32;velocity&#32;of&#32;each&#32;of&#32;the&#32;joints&#32;to&#32;zero</emphasis>
+161 &#32;&#32;&#32;&#32;<link linkend="d4/d8e/structTrajectoryPoint">TrajectoryPoint</link>&#32;jaco_velocity;
+162 &#32;&#32;&#32;&#32;memset(&amp;jaco_velocity,&#32;0,&#32;<emphasis class="keyword">sizeof</emphasis>(jaco_velocity));
+163 &#32;&#32;&#32;&#32;<link linkend="d5/d2b/classjaco_1_1JacoComm_1a468352480a437cc2144c8d4d289815a5">setCartesianVelocities</link>(jaco_velocity.<link linkend="d4/d8e/structTrajectoryPoint_1aa24430dc273e9d7968a6c44e3bcee259">Position</link>.<link linkend="db/dfb/structUserPosition_1ab363c40971853637f728978e604c438f">CartesianPosition</link>);
+164 
+165 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(is_movement_on_start)
+166 &#32;&#32;&#32;&#32;{
+167 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="d5/d2b/classjaco_1_1JacoComm_1a787f049f83d8f5fa5a7c86ee6a1d0a11">initFingers</link>();
+168 &#32;&#32;&#32;&#32;}
+169 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">else</emphasis>
+170 &#32;&#32;&#32;&#32;{
+171 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ROS_WARN(<emphasis class="stringliteral">&quot;Movement&#32;on&#32;connection&#32;to&#32;the&#32;arm&#32;has&#32;been&#32;suppressed&#32;on&#32;initialization.&#32;You&#32;may&#32;&quot;</emphasis>
+172 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="stringliteral">&quot;have&#32;to&#32;home&#32;the&#32;arm&#32;(through&#32;the&#32;home&#32;service)&#32;before&#32;movement&#32;is&#32;possible&quot;</emphasis>);
+173 &#32;&#32;&#32;&#32;}
+174 }
+175 
+176 
+<link linkend="d5/d2b/classjaco_1_1JacoComm_1a94db89ce398a131d5dd6985a7725f495">177 </link><link linkend="d5/d2b/classjaco_1_1JacoComm_1a94db89ce398a131d5dd6985a7725f495">JacoComm::~JacoComm</link>()
+178 {
+179 &#32;&#32;&#32;&#32;boost::recursive_mutex::scoped_lock&#32;lock(<link linkend="d5/d2b/classjaco_1_1JacoComm_1ac6ef2a6b3c51877fc4237d834c35908a">api_mutex_</link>);
+180 &#32;&#32;&#32;&#32;<link linkend="d5/d2b/classjaco_1_1JacoComm_1a8d1510c941f28a4e8f921691d4fd2248">jaco_api_</link>.<link linkend="d5/d3c/classjaco_1_1JacoAPI_1a941453ebf5242c5adad823c0636f930f">closeAPI</link>();
+181 }
+182 
+183 
+<link linkend="d5/d2b/classjaco_1_1JacoComm_1a0e7d5984a2c6ed956da7e07e6c97ba5f">190 </link><emphasis class="keywordtype">bool</emphasis>&#32;<link linkend="d5/d2b/classjaco_1_1JacoComm_1a0e7d5984a2c6ed956da7e07e6c97ba5f">JacoComm::isHomed</link>(<emphasis class="keywordtype">void</emphasis>)
+191 {
+192 &#32;&#32;&#32;&#32;<link linkend="df/d36/KinovaTypes_8h_1df/d9d/structQuickStatus">QuickStatus</link>&#32;quick_status;
+193 &#32;&#32;&#32;&#32;<link linkend="d5/d2b/classjaco_1_1JacoComm_1a29384597e710d4cbb4e1f2ae6b7d7e50">getQuickStatus</link>(quick_status);
+194 
+195 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(quick_status.<link linkend="df/d36/KinovaTypes_8h_1a720df4ba846103ada466a72dd8d28142">RetractType</link>&#32;==&#32;1)
+196 &#32;&#32;&#32;&#32;{
+197 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;<emphasis class="keyword">true</emphasis>;
+198 &#32;&#32;&#32;&#32;}
+199 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">else</emphasis>
+200 &#32;&#32;&#32;&#32;{
+201 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;<emphasis class="keyword">false</emphasis>;
+202 &#32;&#32;&#32;&#32;}
+203 }
+204 
+205 
+<link linkend="d5/d2b/classjaco_1_1JacoComm_1a38c69b22bc293afd3f27eff9179dec4c">216 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="d5/d2b/classjaco_1_1JacoComm_1a38c69b22bc293afd3f27eff9179dec4c">JacoComm::homeArm</link>(<emphasis class="keywordtype">void</emphasis>)
+217 {
+218 &#32;&#32;&#32;&#32;boost::recursive_mutex::scoped_lock&#32;lock(<link linkend="d5/d2b/classjaco_1_1JacoComm_1ac6ef2a6b3c51877fc4237d834c35908a">api_mutex_</link>);
+219 
+220 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(<link linkend="d5/d2b/classjaco_1_1JacoComm_1a872b8033cda5a9fe4ccdca2e89aa03d1">isStopped</link>())
+221 &#32;&#32;&#32;&#32;{
+222 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ROS_INFO(<emphasis class="stringliteral">&quot;Arm&#32;is&#32;stopped,&#32;cannot&#32;home&quot;</emphasis>);
+223 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">return</emphasis>;
+224 &#32;&#32;&#32;&#32;}
+225 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">else</emphasis>&#32;<emphasis class="keywordflow">if</emphasis>&#32;(<link linkend="d5/d2b/classjaco_1_1JacoComm_1a0e7d5984a2c6ed956da7e07e6c97ba5f">isHomed</link>())
+226 &#32;&#32;&#32;&#32;{
+227 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ROS_INFO(<emphasis class="stringliteral">&quot;Arm&#32;is&#32;already&#32;in&#32;\&quot;home\&quot;&#32;position&quot;</emphasis>);
+228 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">return</emphasis>;
+229 &#32;&#32;&#32;&#32;}
+230 
+231 &#32;&#32;&#32;&#32;<link linkend="d5/d2b/classjaco_1_1JacoComm_1a54862830cd6414ae3ae48e46e54bf798">stopAPI</link>();
+232 &#32;&#32;&#32;&#32;ros::Duration(1.0).sleep();
+233 &#32;&#32;&#32;&#32;<link linkend="d5/d2b/classjaco_1_1JacoComm_1a6b2a1fabc4e6c30da42c9a5e26757398">startAPI</link>();
+234 
+235 &#32;&#32;&#32;&#32;ROS_INFO(<emphasis class="stringliteral">&quot;Homing&#32;the&#32;arm&quot;</emphasis>);
+236 &#32;&#32;&#32;&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="db/dfe/Kinova_8API_8CommLayerUbuntu_8h_1a900dac90961bada00f57c207562a6a9a">result</link>&#32;=&#32;<link linkend="d5/d2b/classjaco_1_1JacoComm_1a8d1510c941f28a4e8f921691d4fd2248">jaco_api_</link>.<link linkend="d5/d3c/classjaco_1_1JacoAPI_1a3f3b46efd241e60665a70505fe1853af">moveHome</link>();
+237 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(result&#32;!=&#32;<link linkend="db/dfe/Kinova_8API_8CommLayerUbuntu_8h_1a510f2320a2a31d2d225adc0da7bef595">NO_ERROR_KINOVA</link>)
+238 &#32;&#32;&#32;&#32;{
+239 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">throw</emphasis>&#32;<link linkend="df/dbe/classjaco_1_1JacoCommException">JacoCommException</link>(<emphasis class="stringliteral">&quot;Move&#32;home&#32;failed&quot;</emphasis>,&#32;result);
+240 &#32;&#32;&#32;&#32;}
+241 }
+242 
+243 
+<link linkend="d5/d2b/classjaco_1_1JacoComm_1a787f049f83d8f5fa5a7c86ee6a1d0a11">250 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="d5/d2b/classjaco_1_1JacoComm_1a787f049f83d8f5fa5a7c86ee6a1d0a11">JacoComm::initFingers</link>(<emphasis class="keywordtype">void</emphasis>)
+251 {
+252 &#32;&#32;&#32;&#32;ROS_INFO(<emphasis class="stringliteral">&quot;Initializing&#32;fingers...this&#32;will&#32;take&#32;a&#32;few&#32;seconds&#32;and&#32;the&#32;fingers&#32;should&#32;open&#32;completely&quot;</emphasis>);
+253 &#32;&#32;&#32;&#32;boost::recursive_mutex::scoped_lock&#32;lock(<link linkend="d5/d2b/classjaco_1_1JacoComm_1ac6ef2a6b3c51877fc4237d834c35908a">api_mutex_</link>);
+254 &#32;&#32;&#32;&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="db/dfe/Kinova_8API_8CommLayerUbuntu_8h_1a900dac90961bada00f57c207562a6a9a">result</link>&#32;=&#32;<link linkend="d5/d2b/classjaco_1_1JacoComm_1a8d1510c941f28a4e8f921691d4fd2248">jaco_api_</link>.<link linkend="d5/d3c/classjaco_1_1JacoAPI_1a2e57f45393bda81a7c7c91373a6c6359">initFingers</link>();
+255 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(result&#32;!=&#32;<link linkend="db/dfe/Kinova_8API_8CommLayerUbuntu_8h_1a510f2320a2a31d2d225adc0da7bef595">NO_ERROR_KINOVA</link>)
+256 &#32;&#32;&#32;&#32;{
+257 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">throw</emphasis>&#32;<link linkend="df/dbe/classjaco_1_1JacoCommException">JacoCommException</link>(<emphasis class="stringliteral">&quot;Could&#32;not&#32;init&#32;fingers&quot;</emphasis>,&#32;result);
+258 &#32;&#32;&#32;&#32;}
+259 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">return</emphasis>;
+260 }
+261 
+262 
+<link linkend="d5/d2b/classjaco_1_1JacoComm_1ad53fa0c190d41da8430de2e9bf997f05">268 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="d5/d2b/classjaco_1_1JacoComm_1ad53fa0c190d41da8430de2e9bf997f05">JacoComm::setJointAngles</link>(<emphasis class="keyword">const</emphasis>&#32;<link linkend="d4/de6/classjaco_1_1JacoAngles">JacoAngles</link>&#32;&amp;<link linkend="da/dd2/namespacejoint__angle__workout_1a44cb6da34666d45961b26233ed5264bf">angles</link>,&#32;<emphasis class="keywordtype">int</emphasis>&#32;timeout,&#32;<emphasis class="keywordtype">bool</emphasis>&#32;push)
+269 {
+270 &#32;&#32;&#32;&#32;boost::recursive_mutex::scoped_lock&#32;lock(<link linkend="d5/d2b/classjaco_1_1JacoComm_1ac6ef2a6b3c51877fc4237d834c35908a">api_mutex_</link>);
+271 
+272 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(<link linkend="d5/d2b/classjaco_1_1JacoComm_1a872b8033cda5a9fe4ccdca2e89aa03d1">isStopped</link>())
+273 &#32;&#32;&#32;&#32;{
+274 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ROS_INFO(<emphasis class="stringliteral">&quot;The&#32;angles&#32;could&#32;not&#32;be&#32;set&#32;because&#32;the&#32;arm&#32;is&#32;stopped&quot;</emphasis>);
+275 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">return</emphasis>;
+276 &#32;&#32;&#32;&#32;}
+277 
+278 &#32;&#32;&#32;&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="db/dfe/Kinova_8API_8CommLayerUbuntu_8h_1a900dac90961bada00f57c207562a6a9a">result</link>&#32;=&#32;<link linkend="db/dfe/Kinova_8API_8CommLayerUbuntu_8h_1a510f2320a2a31d2d225adc0da7bef595">NO_ERROR_KINOVA</link>;
+279 &#32;&#32;&#32;&#32;<link linkend="d4/d8e/structTrajectoryPoint">TrajectoryPoint</link>&#32;jaco_position;
+280 &#32;&#32;&#32;&#32;jaco_position.<link linkend="d4/d8e/structTrajectoryPoint_1a1a9f12ad88f5011c6a4644792fa67f99">InitStruct</link>();
+281 &#32;&#32;&#32;&#32;memset(&amp;jaco_position,&#32;0,&#32;<emphasis class="keyword">sizeof</emphasis>(jaco_position));&#32;&#32;<emphasis class="comment">//&#32;zero&#32;structure</emphasis>
+282 
+283 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(push)
+284 &#32;&#32;&#32;&#32;{
+285 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;result&#32;=&#32;<link linkend="d5/d2b/classjaco_1_1JacoComm_1a8d1510c941f28a4e8f921691d4fd2248">jaco_api_</link>.<link linkend="d5/d3c/classjaco_1_1JacoAPI_1a97db09d91923328b1780bb50a0e2548d">eraseAllTrajectories</link>();
+286 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(result&#32;!=&#32;<link linkend="db/dfe/Kinova_8API_8CommLayerUbuntu_8h_1a510f2320a2a31d2d225adc0da7bef595">NO_ERROR_KINOVA</link>)
+287 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+288 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">throw</emphasis>&#32;<link linkend="df/dbe/classjaco_1_1JacoCommException">JacoCommException</link>(<emphasis class="stringliteral">&quot;Could&#32;not&#32;erase&#32;trajectories&quot;</emphasis>,&#32;result);
+289 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+290 &#32;&#32;&#32;&#32;}
+291 
+292 &#32;&#32;&#32;&#32;<emphasis class="comment">//startAPI();</emphasis>
+293 
+294 &#32;&#32;&#32;&#32;result&#32;=&#32;<link linkend="d5/d2b/classjaco_1_1JacoComm_1a8d1510c941f28a4e8f921691d4fd2248">jaco_api_</link>.<link linkend="d5/d3c/classjaco_1_1JacoAPI_1a4ce9340d50866cf102722ad6c370bdfd">setAngularControl</link>();
+295 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(result&#32;!=&#32;<link linkend="db/dfe/Kinova_8API_8CommLayerUbuntu_8h_1a510f2320a2a31d2d225adc0da7bef595">NO_ERROR_KINOVA</link>)
+296 &#32;&#32;&#32;&#32;{
+297 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">throw</emphasis>&#32;<link linkend="df/dbe/classjaco_1_1JacoCommException">JacoCommException</link>(<emphasis class="stringliteral">&quot;Could&#32;not&#32;set&#32;angular&#32;control&quot;</emphasis>,&#32;result);
+298 &#32;&#32;&#32;&#32;}
+299 
+300 &#32;&#32;&#32;&#32;jaco_position.<link linkend="d4/d8e/structTrajectoryPoint_1aa24430dc273e9d7968a6c44e3bcee259">Position</link>.<link linkend="db/dfb/structUserPosition_1aa18896c1238a50c8ad81c66dfd76ac5e">Delay</link>&#32;=&#32;0.0;
+301 &#32;&#32;&#32;&#32;jaco_position.<link linkend="d4/d8e/structTrajectoryPoint_1aa24430dc273e9d7968a6c44e3bcee259">Position</link>.<link linkend="db/dfb/structUserPosition_1a93c748d4ee51239fcbcd487d88e52ffa">Type</link>&#32;=&#32;<link linkend="df/d36/KinovaTypes_8h_1a0a1c22d235ef1b13cfcd1419d10babc9acec3b882918c5c90a239fd07290d6031">ANGULAR_POSITION</link>;
+302 &#32;&#32;&#32;&#32;jaco_position.<link linkend="d4/d8e/structTrajectoryPoint_1aa24430dc273e9d7968a6c44e3bcee259">Position</link>.<link linkend="db/dfb/structUserPosition_1ab0c5b71622c1e0d3033572578e947cf3">Actuators</link>&#32;=&#32;<link linkend="da/dd2/namespacejoint__angle__workout_1a44cb6da34666d45961b26233ed5264bf">angles</link>;
+303 
+304 &#32;&#32;&#32;&#32;result&#32;=&#32;<link linkend="d5/d2b/classjaco_1_1JacoComm_1a8d1510c941f28a4e8f921691d4fd2248">jaco_api_</link>.<link linkend="d5/d3c/classjaco_1_1JacoAPI_1a30abd0123d85582b684fbd86437d403c">sendAdvanceTrajectory</link>(jaco_position);
+305 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(result&#32;!=&#32;<link linkend="db/dfe/Kinova_8API_8CommLayerUbuntu_8h_1a510f2320a2a31d2d225adc0da7bef595">NO_ERROR_KINOVA</link>)
+306 &#32;&#32;&#32;&#32;{
+307 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">throw</emphasis>&#32;<link linkend="df/dbe/classjaco_1_1JacoCommException">JacoCommException</link>(<emphasis class="stringliteral">&quot;Could&#32;not&#32;send&#32;advanced&#32;joint&#32;angle&#32;trajectory&quot;</emphasis>,&#32;result);
+308 &#32;&#32;&#32;&#32;}
+309 }
+310 
+311 
+<link linkend="d5/d2b/classjaco_1_1JacoComm_1a7a7375d2609c81f0a03974b06ca07be0">317 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="d5/d2b/classjaco_1_1JacoComm_1a7a7375d2609c81f0a03974b06ca07be0">JacoComm::setCartesianPosition</link>(<emphasis class="keyword">const</emphasis>&#32;<link linkend="dd/da4/classjaco_1_1JacoPose">JacoPose</link>&#32;&amp;position,&#32;<emphasis class="keywordtype">int</emphasis>&#32;timeout,&#32;<emphasis class="keywordtype">bool</emphasis>&#32;push)
+318 {
+319 &#32;&#32;&#32;&#32;boost::recursive_mutex::scoped_lock&#32;lock(<link linkend="d5/d2b/classjaco_1_1JacoComm_1ac6ef2a6b3c51877fc4237d834c35908a">api_mutex_</link>);
+320 
+321 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(<link linkend="d5/d2b/classjaco_1_1JacoComm_1a872b8033cda5a9fe4ccdca2e89aa03d1">isStopped</link>())
+322 &#32;&#32;&#32;&#32;{
+323 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ROS_INFO(<emphasis class="stringliteral">&quot;The&#32;position&#32;could&#32;not&#32;be&#32;set&#32;because&#32;the&#32;arm&#32;is&#32;stopped&quot;</emphasis>);
+324 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">return</emphasis>;
+325 &#32;&#32;&#32;&#32;}
+326 
+327 &#32;&#32;&#32;&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="db/dfe/Kinova_8API_8CommLayerUbuntu_8h_1a900dac90961bada00f57c207562a6a9a">result</link>&#32;=&#32;<link linkend="db/dfe/Kinova_8API_8CommLayerUbuntu_8h_1a510f2320a2a31d2d225adc0da7bef595">NO_ERROR_KINOVA</link>;
+328 &#32;&#32;&#32;&#32;<link linkend="d4/d8e/structTrajectoryPoint">TrajectoryPoint</link>&#32;jaco_position;
+329 &#32;&#32;&#32;&#32;jaco_position.<link linkend="d4/d8e/structTrajectoryPoint_1a1a9f12ad88f5011c6a4644792fa67f99">InitStruct</link>();
+330 &#32;&#32;&#32;&#32;memset(&amp;jaco_position,&#32;0,&#32;<emphasis class="keyword">sizeof</emphasis>(jaco_position));&#32;&#32;<emphasis class="comment">//&#32;zero&#32;structure</emphasis>
+331 
+332 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(push)
+333 &#32;&#32;&#32;&#32;{
+334 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;result&#32;=&#32;<link linkend="d5/d2b/classjaco_1_1JacoComm_1a8d1510c941f28a4e8f921691d4fd2248">jaco_api_</link>.<link linkend="d5/d3c/classjaco_1_1JacoAPI_1a97db09d91923328b1780bb50a0e2548d">eraseAllTrajectories</link>();
+335 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(result&#32;!=&#32;<link linkend="db/dfe/Kinova_8API_8CommLayerUbuntu_8h_1a510f2320a2a31d2d225adc0da7bef595">NO_ERROR_KINOVA</link>)
+336 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+337 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">throw</emphasis>&#32;<link linkend="df/dbe/classjaco_1_1JacoCommException">JacoCommException</link>(<emphasis class="stringliteral">&quot;Could&#32;not&#32;erase&#32;trajectories&quot;</emphasis>,&#32;result);
+338 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+339 &#32;&#32;&#32;&#32;}
+340 
+341 &#32;&#32;&#32;&#32;<emphasis class="comment">//startAPI();</emphasis>
+342 
+343 &#32;&#32;&#32;&#32;result&#32;=&#32;<link linkend="d5/d2b/classjaco_1_1JacoComm_1a8d1510c941f28a4e8f921691d4fd2248">jaco_api_</link>.<link linkend="d5/d3c/classjaco_1_1JacoAPI_1a24b6c14f08d97bea2a5562c8c2f10877">setCartesianControl</link>();
+344 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(result&#32;!=&#32;<link linkend="db/dfe/Kinova_8API_8CommLayerUbuntu_8h_1a510f2320a2a31d2d225adc0da7bef595">NO_ERROR_KINOVA</link>)
+345 &#32;&#32;&#32;&#32;{
+346 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">throw</emphasis>&#32;<link linkend="df/dbe/classjaco_1_1JacoCommException">JacoCommException</link>(<emphasis class="stringliteral">&quot;Could&#32;not&#32;set&#32;Cartesian&#32;control&quot;</emphasis>,&#32;result);
+347 &#32;&#32;&#32;&#32;}
+348 
+349 &#32;&#32;&#32;&#32;jaco_position.<link linkend="d4/d8e/structTrajectoryPoint_1aa24430dc273e9d7968a6c44e3bcee259">Position</link>.<link linkend="db/dfb/structUserPosition_1aa18896c1238a50c8ad81c66dfd76ac5e">Delay</link>&#32;=&#32;0.0;
+350 &#32;&#32;&#32;&#32;jaco_position.<link linkend="d4/d8e/structTrajectoryPoint_1aa24430dc273e9d7968a6c44e3bcee259">Position</link>.<link linkend="db/dfb/structUserPosition_1a93c748d4ee51239fcbcd487d88e52ffa">Type</link>&#32;=&#32;<link linkend="df/d36/KinovaTypes_8h_1a0a1c22d235ef1b13cfcd1419d10babc9aa98b51871329200ef579781620a475ad">CARTESIAN_POSITION</link>;
+351 &#32;&#32;&#32;&#32;jaco_position.<link linkend="d4/d8e/structTrajectoryPoint_1aa24430dc273e9d7968a6c44e3bcee259">Position</link>.<link linkend="db/dfb/structUserPosition_1a83779902810d0e5e16d533e0f964c0df">HandMode</link>&#32;=&#32;<link linkend="df/d36/KinovaTypes_8h_1ad7050e4cfb6e844e9be962fba8eeb817aacf6cc4ccee2594b38453e9918708e47">HAND_NOMOVEMENT</link>;
+352 
+353 &#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;These&#32;values&#32;will&#32;not&#32;be&#32;used&#32;but&#32;are&#32;initialized&#32;anyway.</emphasis>
+354 &#32;&#32;&#32;&#32;jaco_position.<link linkend="d4/d8e/structTrajectoryPoint_1aa24430dc273e9d7968a6c44e3bcee259">Position</link>.<link linkend="db/dfb/structUserPosition_1ab0c5b71622c1e0d3033572578e947cf3">Actuators</link>.<link linkend="d0/df5/structAngularInfo_1a5fc555c085bddc82c33a3039fbc40932">Actuator1</link>&#32;=&#32;0.0f;
+355 &#32;&#32;&#32;&#32;jaco_position.<link linkend="d4/d8e/structTrajectoryPoint_1aa24430dc273e9d7968a6c44e3bcee259">Position</link>.<link linkend="db/dfb/structUserPosition_1ab0c5b71622c1e0d3033572578e947cf3">Actuators</link>.<link linkend="d0/df5/structAngularInfo_1ab7b9349eef239f9741d9c28a795e4c35">Actuator2</link>&#32;=&#32;0.0f;
+356 &#32;&#32;&#32;&#32;jaco_position.<link linkend="d4/d8e/structTrajectoryPoint_1aa24430dc273e9d7968a6c44e3bcee259">Position</link>.<link linkend="db/dfb/structUserPosition_1ab0c5b71622c1e0d3033572578e947cf3">Actuators</link>.<link linkend="d0/df5/structAngularInfo_1a30426eab94c82cfd3d697bbc8c506c2a">Actuator3</link>&#32;=&#32;0.0f;
+357 &#32;&#32;&#32;&#32;jaco_position.<link linkend="d4/d8e/structTrajectoryPoint_1aa24430dc273e9d7968a6c44e3bcee259">Position</link>.<link linkend="db/dfb/structUserPosition_1ab0c5b71622c1e0d3033572578e947cf3">Actuators</link>.<link linkend="d0/df5/structAngularInfo_1a46a1314c4846de6a495310b44fe5e0c3">Actuator4</link>&#32;=&#32;0.0f;
+358 &#32;&#32;&#32;&#32;jaco_position.<link linkend="d4/d8e/structTrajectoryPoint_1aa24430dc273e9d7968a6c44e3bcee259">Position</link>.<link linkend="db/dfb/structUserPosition_1ab0c5b71622c1e0d3033572578e947cf3">Actuators</link>.<link linkend="d0/df5/structAngularInfo_1a953c29d2481eb1c42c84e9c992d34dde">Actuator5</link>&#32;=&#32;0.0f;
+359 &#32;&#32;&#32;&#32;jaco_position.<link linkend="d4/d8e/structTrajectoryPoint_1aa24430dc273e9d7968a6c44e3bcee259">Position</link>.<link linkend="db/dfb/structUserPosition_1ab0c5b71622c1e0d3033572578e947cf3">Actuators</link>.<link linkend="d0/df5/structAngularInfo_1ab54771129d8a9e451c27942dd349340d">Actuator6</link>&#32;=&#32;0.0f;
+360 
+361 &#32;&#32;&#32;&#32;jaco_position.<link linkend="d4/d8e/structTrajectoryPoint_1aa24430dc273e9d7968a6c44e3bcee259">Position</link>.<link linkend="db/dfb/structUserPosition_1ab363c40971853637f728978e604c438f">CartesianPosition</link>&#32;=&#32;position;
+362 
+363 &#32;&#32;&#32;&#32;result&#32;=&#32;<link linkend="d5/d2b/classjaco_1_1JacoComm_1a8d1510c941f28a4e8f921691d4fd2248">jaco_api_</link>.<link linkend="d5/d3c/classjaco_1_1JacoAPI_1acbaea3e47825b270d85d783c9f29d472">sendBasicTrajectory</link>(jaco_position);
+364 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(result&#32;!=&#32;<link linkend="db/dfe/Kinova_8API_8CommLayerUbuntu_8h_1a510f2320a2a31d2d225adc0da7bef595">NO_ERROR_KINOVA</link>)
+365 &#32;&#32;&#32;&#32;{
+366 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">throw</emphasis>&#32;<link linkend="df/dbe/classjaco_1_1JacoCommException">JacoCommException</link>(<emphasis class="stringliteral">&quot;Could&#32;not&#32;send&#32;basic&#32;trajectory&quot;</emphasis>,&#32;result);
+367 &#32;&#32;&#32;&#32;}
+368 }
+369 
+370 
+<link linkend="d5/d2b/classjaco_1_1JacoComm_1a5cdc217373b923f7de2ed468150281fa">374 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="d5/d2b/classjaco_1_1JacoComm_1a5cdc217373b923f7de2ed468150281fa">JacoComm::setFingerPositions</link>(<emphasis class="keyword">const</emphasis>&#32;<link linkend="dd/d28/classjaco_1_1FingerAngles">FingerAngles</link>&#32;&amp;fingers,&#32;<emphasis class="keywordtype">int</emphasis>&#32;timeout,&#32;<emphasis class="keywordtype">bool</emphasis>&#32;push)
+375 {
+376 &#32;&#32;&#32;&#32;boost::recursive_mutex::scoped_lock&#32;lock(<link linkend="d5/d2b/classjaco_1_1JacoComm_1ac6ef2a6b3c51877fc4237d834c35908a">api_mutex_</link>);
+377 
+378 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(<link linkend="d5/d2b/classjaco_1_1JacoComm_1a872b8033cda5a9fe4ccdca2e89aa03d1">isStopped</link>())
+379 &#32;&#32;&#32;&#32;{
+380 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ROS_INFO(<emphasis class="stringliteral">&quot;The&#32;fingers&#32;could&#32;not&#32;be&#32;set&#32;because&#32;the&#32;arm&#32;is&#32;stopped&quot;</emphasis>);
+381 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">return</emphasis>;
+382 &#32;&#32;&#32;&#32;}
+383 
+384 &#32;&#32;&#32;&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="db/dfe/Kinova_8API_8CommLayerUbuntu_8h_1a900dac90961bada00f57c207562a6a9a">result</link>&#32;=&#32;<link linkend="db/dfe/Kinova_8API_8CommLayerUbuntu_8h_1a510f2320a2a31d2d225adc0da7bef595">NO_ERROR_KINOVA</link>;
+385 &#32;&#32;&#32;&#32;<link linkend="d4/d8e/structTrajectoryPoint">TrajectoryPoint</link>&#32;jaco_position;
+386 &#32;&#32;&#32;&#32;jaco_position.<link linkend="d4/d8e/structTrajectoryPoint_1a1a9f12ad88f5011c6a4644792fa67f99">InitStruct</link>();
+387 &#32;&#32;&#32;&#32;memset(&amp;jaco_position,&#32;0,&#32;<emphasis class="keyword">sizeof</emphasis>(jaco_position));&#32;&#32;<emphasis class="comment">//&#32;zero&#32;structure</emphasis>
+388 
+389 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(push)
+390 &#32;&#32;&#32;&#32;{
+391 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;result&#32;=&#32;<link linkend="d5/d2b/classjaco_1_1JacoComm_1a8d1510c941f28a4e8f921691d4fd2248">jaco_api_</link>.<link linkend="d5/d3c/classjaco_1_1JacoAPI_1a97db09d91923328b1780bb50a0e2548d">eraseAllTrajectories</link>();
+392 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(result&#32;!=&#32;<link linkend="db/dfe/Kinova_8API_8CommLayerUbuntu_8h_1a510f2320a2a31d2d225adc0da7bef595">NO_ERROR_KINOVA</link>)
+393 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+394 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">throw</emphasis>&#32;<link linkend="df/dbe/classjaco_1_1JacoCommException">JacoCommException</link>(<emphasis class="stringliteral">&quot;Could&#32;not&#32;erase&#32;trajectories&quot;</emphasis>,&#32;result);
+395 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+396 &#32;&#32;&#32;&#32;}
+397 
+398 &#32;&#32;&#32;&#32;<emphasis class="comment">//startAPI();</emphasis>
+399 
+400 &#32;&#32;&#32;&#32;result&#32;=&#32;<link linkend="d5/d2b/classjaco_1_1JacoComm_1a8d1510c941f28a4e8f921691d4fd2248">jaco_api_</link>.<link linkend="d5/d3c/classjaco_1_1JacoAPI_1a4ce9340d50866cf102722ad6c370bdfd">setAngularControl</link>();
+401 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(result&#32;!=&#32;<link linkend="db/dfe/Kinova_8API_8CommLayerUbuntu_8h_1a510f2320a2a31d2d225adc0da7bef595">NO_ERROR_KINOVA</link>)
+402 &#32;&#32;&#32;&#32;{
+403 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">throw</emphasis>&#32;<link linkend="df/dbe/classjaco_1_1JacoCommException">JacoCommException</link>(<emphasis class="stringliteral">&quot;Could&#32;not&#32;set&#32;Cartesian&#32;control&quot;</emphasis>,&#32;result);
+404 &#32;&#32;&#32;&#32;}
+405 
+406 &#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;Initialize&#32;Cartesian&#32;control&#32;of&#32;the&#32;fingers</emphasis>
+407 &#32;&#32;&#32;&#32;jaco_position.<link linkend="d4/d8e/structTrajectoryPoint_1aa24430dc273e9d7968a6c44e3bcee259">Position</link>.<link linkend="db/dfb/structUserPosition_1a83779902810d0e5e16d533e0f964c0df">HandMode</link>&#32;=&#32;<link linkend="df/d36/KinovaTypes_8h_1ad7050e4cfb6e844e9be962fba8eeb817a21de3478520bbc47e9c35e3e651a06bf">POSITION_MODE</link>;
+408 &#32;&#32;&#32;&#32;jaco_position.<link linkend="d4/d8e/structTrajectoryPoint_1aa24430dc273e9d7968a6c44e3bcee259">Position</link>.<link linkend="db/dfb/structUserPosition_1a93c748d4ee51239fcbcd487d88e52ffa">Type</link>&#32;=&#32;<link linkend="df/d36/KinovaTypes_8h_1a0a1c22d235ef1b13cfcd1419d10babc9acec3b882918c5c90a239fd07290d6031">ANGULAR_POSITION</link>;
+409 &#32;&#32;&#32;&#32;jaco_position.<link linkend="d4/d8e/structTrajectoryPoint_1aa24430dc273e9d7968a6c44e3bcee259">Position</link>.<link linkend="db/dfb/structUserPosition_1a727907bb6a98b0f3d10aaa8011b67927">Fingers</link>&#32;=&#32;fingers;
+410 &#32;&#32;&#32;&#32;jaco_position.<link linkend="d4/d8e/structTrajectoryPoint_1aa24430dc273e9d7968a6c44e3bcee259">Position</link>.<link linkend="db/dfb/structUserPosition_1aa18896c1238a50c8ad81c66dfd76ac5e">Delay</link>&#32;=&#32;0.0;
+411 &#32;&#32;&#32;&#32;jaco_position.<link linkend="d4/d8e/structTrajectoryPoint_1acec47b76503d6f202e78bd00ec8fa02d">LimitationsActive</link>&#32;=&#32;0;
+412 
+413 &#32;&#32;&#32;&#32;<link linkend="df/d36/KinovaTypes_8h_1de/de7/structAngularPosition">AngularPosition</link>&#32;jaco_angles;
+414 &#32;&#32;&#32;&#32;memset(&amp;jaco_angles,&#32;0,&#32;<emphasis class="keyword">sizeof</emphasis>(jaco_angles));&#32;&#32;<emphasis class="comment">//&#32;zero&#32;structure</emphasis>
+415 
+416 &#32;&#32;&#32;&#32;result&#32;=&#32;<link linkend="d5/d2b/classjaco_1_1JacoComm_1a8d1510c941f28a4e8f921691d4fd2248">jaco_api_</link>.<link linkend="d5/d3c/classjaco_1_1JacoAPI_1a8d2e9b00c5953e3fc024f86e128f01df">getAngularPosition</link>(jaco_angles);
+417 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(result&#32;!=&#32;<link linkend="db/dfe/Kinova_8API_8CommLayerUbuntu_8h_1a510f2320a2a31d2d225adc0da7bef595">NO_ERROR_KINOVA</link>)
+418 &#32;&#32;&#32;&#32;{
+419 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">throw</emphasis>&#32;<link linkend="df/dbe/classjaco_1_1JacoCommException">JacoCommException</link>(<emphasis class="stringliteral">&quot;Could&#32;not&#32;get&#32;the&#32;angular&#32;position&quot;</emphasis>,&#32;result);
+420 &#32;&#32;&#32;&#32;}
+421 
+422 
+423 &#32;&#32;&#32;&#32;jaco_position.<link linkend="d4/d8e/structTrajectoryPoint_1aa24430dc273e9d7968a6c44e3bcee259">Position</link>.<link linkend="db/dfb/structUserPosition_1ab0c5b71622c1e0d3033572578e947cf3">Actuators</link>&#32;=&#32;jaco_angles.<link linkend="df/d36/KinovaTypes_8h_1a860d625d47a8a6eaae53f43903beb80b">Actuators</link>;
+424 
+425 &#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;When&#32;loading&#32;a&#32;cartesian&#32;position&#32;for&#32;the&#32;fingers,&#32;values&#32;are&#32;required&#32;for&#32;the&#32;arm&#32;joints</emphasis>
+426 &#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;as&#32;well&#32;or&#32;the&#32;arm&#32;goes&#32;nuts.&#32;&#32;Grab&#32;the&#32;current&#32;position&#32;and&#32;feed&#32;it&#32;back&#32;to&#32;the&#32;arm.</emphasis>
+427 &#32;&#32;&#32;&#32;<link linkend="dd/da4/classjaco_1_1JacoPose">JacoPose</link>&#32;pose;
+428 &#32;&#32;&#32;&#32;<link linkend="d5/d2b/classjaco_1_1JacoComm_1a855bbefed2093d0d0cc7763eb7306a0b">getCartesianPosition</link>(pose);
+429 &#32;&#32;&#32;&#32;jaco_position.<link linkend="d4/d8e/structTrajectoryPoint_1aa24430dc273e9d7968a6c44e3bcee259">Position</link>.<link linkend="db/dfb/structUserPosition_1ab363c40971853637f728978e604c438f">CartesianPosition</link>&#32;=&#32;pose;
+430 
+431 &#32;&#32;&#32;&#32;result&#32;=&#32;<link linkend="d5/d2b/classjaco_1_1JacoComm_1a8d1510c941f28a4e8f921691d4fd2248">jaco_api_</link>.<link linkend="d5/d3c/classjaco_1_1JacoAPI_1a30abd0123d85582b684fbd86437d403c">sendAdvanceTrajectory</link>(jaco_position);
+432 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(result&#32;!=&#32;<link linkend="db/dfe/Kinova_8API_8CommLayerUbuntu_8h_1a510f2320a2a31d2d225adc0da7bef595">NO_ERROR_KINOVA</link>)
+433 &#32;&#32;&#32;&#32;{
+434 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">throw</emphasis>&#32;<link linkend="df/dbe/classjaco_1_1JacoCommException">JacoCommException</link>(<emphasis class="stringliteral">&quot;Could&#32;not&#32;send&#32;advanced&#32;finger&#32;trajectory&quot;</emphasis>,&#32;result);
+435 &#32;&#32;&#32;&#32;}
+436 }
+437 
+438 
+<link linkend="d5/d2b/classjaco_1_1JacoComm_1af269b1c8d8b1f32c1003ca2e464252f0">442 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="d5/d2b/classjaco_1_1JacoComm_1af269b1c8d8b1f32c1003ca2e464252f0">JacoComm::setJointVelocities</link>(<emphasis class="keyword">const</emphasis>&#32;<link linkend="d0/df5/structAngularInfo">AngularInfo</link>&#32;&amp;joint_vel)
+443 {
+444 &#32;&#32;&#32;&#32;boost::recursive_mutex::scoped_lock&#32;lock(<link linkend="d5/d2b/classjaco_1_1JacoComm_1ac6ef2a6b3c51877fc4237d834c35908a">api_mutex_</link>);
+445 
+446 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(<link linkend="d5/d2b/classjaco_1_1JacoComm_1a872b8033cda5a9fe4ccdca2e89aa03d1">isStopped</link>())
+447 &#32;&#32;&#32;&#32;{
+448 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ROS_INFO(<emphasis class="stringliteral">&quot;The&#32;velocities&#32;could&#32;not&#32;be&#32;set&#32;because&#32;the&#32;arm&#32;is&#32;stopped&quot;</emphasis>);
+449 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">return</emphasis>;
+450 &#32;&#32;&#32;&#32;}
+451 
+452 &#32;&#32;&#32;&#32;<link linkend="d4/d8e/structTrajectoryPoint">TrajectoryPoint</link>&#32;jaco_velocity;
+453 &#32;&#32;&#32;&#32;jaco_velocity.<link linkend="d4/d8e/structTrajectoryPoint_1a1a9f12ad88f5011c6a4644792fa67f99">InitStruct</link>();
+454 
+455 &#32;&#32;&#32;&#32;memset(&amp;jaco_velocity,&#32;0,&#32;<emphasis class="keyword">sizeof</emphasis>(jaco_velocity));&#32;&#32;<emphasis class="comment">//&#32;zero&#32;structure</emphasis>
+456 
+457 &#32;&#32;&#32;&#32;<emphasis class="comment">//startAPI();</emphasis>
+458 &#32;&#32;&#32;&#32;jaco_velocity.<link linkend="d4/d8e/structTrajectoryPoint_1aa24430dc273e9d7968a6c44e3bcee259">Position</link>.<link linkend="db/dfb/structUserPosition_1a93c748d4ee51239fcbcd487d88e52ffa">Type</link>&#32;=&#32;<link linkend="df/d36/KinovaTypes_8h_1a0a1c22d235ef1b13cfcd1419d10babc9ae4d95686a349611affcf1ebfeab077f1">ANGULAR_VELOCITY</link>;
+459 
+460 &#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;confusingly,&#32;velocity&#32;is&#32;passed&#32;in&#32;the&#32;position&#32;struct</emphasis>
+461 &#32;&#32;&#32;&#32;jaco_velocity.<link linkend="d4/d8e/structTrajectoryPoint_1aa24430dc273e9d7968a6c44e3bcee259">Position</link>.<link linkend="db/dfb/structUserPosition_1ab0c5b71622c1e0d3033572578e947cf3">Actuators</link>&#32;=&#32;joint_vel;
+462 
+463 &#32;&#32;&#32;&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="db/dfe/Kinova_8API_8CommLayerUbuntu_8h_1a900dac90961bada00f57c207562a6a9a">result</link>&#32;=&#32;<link linkend="d5/d2b/classjaco_1_1JacoComm_1a8d1510c941f28a4e8f921691d4fd2248">jaco_api_</link>.<link linkend="d5/d3c/classjaco_1_1JacoAPI_1a30abd0123d85582b684fbd86437d403c">sendAdvanceTrajectory</link>(jaco_velocity);
+464 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(result&#32;!=&#32;<link linkend="db/dfe/Kinova_8API_8CommLayerUbuntu_8h_1a510f2320a2a31d2d225adc0da7bef595">NO_ERROR_KINOVA</link>)
+465 &#32;&#32;&#32;&#32;{
+466 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">throw</emphasis>&#32;<link linkend="df/dbe/classjaco_1_1JacoCommException">JacoCommException</link>(<emphasis class="stringliteral">&quot;Could&#32;not&#32;send&#32;advanced&#32;joint&#32;velocity&#32;trajectory&quot;</emphasis>,&#32;result);
+467 &#32;&#32;&#32;&#32;}
+468 }
+469 
+470 
+<link linkend="d5/d2b/classjaco_1_1JacoComm_1a468352480a437cc2144c8d4d289815a5">474 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="d5/d2b/classjaco_1_1JacoComm_1a468352480a437cc2144c8d4d289815a5">JacoComm::setCartesianVelocities</link>(<emphasis class="keyword">const</emphasis>&#32;<link linkend="dd/d00/structCartesianInfo">CartesianInfo</link>&#32;&amp;velocities)
+475 {
+476 &#32;&#32;&#32;&#32;boost::recursive_mutex::scoped_lock&#32;lock(<link linkend="d5/d2b/classjaco_1_1JacoComm_1ac6ef2a6b3c51877fc4237d834c35908a">api_mutex_</link>);
+477 
+478 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(<link linkend="d5/d2b/classjaco_1_1JacoComm_1a872b8033cda5a9fe4ccdca2e89aa03d1">isStopped</link>())
+479 &#32;&#32;&#32;&#32;{
+480 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ROS_INFO(<emphasis class="stringliteral">&quot;The&#32;cartesian&#32;velocities&#32;could&#32;not&#32;be&#32;set&#32;because&#32;the&#32;arm&#32;is&#32;stopped&quot;</emphasis>);
+481 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="d5/d2b/classjaco_1_1JacoComm_1a8d1510c941f28a4e8f921691d4fd2248">jaco_api_</link>.<link linkend="d5/d3c/classjaco_1_1JacoAPI_1a97db09d91923328b1780bb50a0e2548d">eraseAllTrajectories</link>();
+482 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">return</emphasis>;
+483 &#32;&#32;&#32;&#32;}
+484 
+485 &#32;&#32;&#32;&#32;<link linkend="d4/d8e/structTrajectoryPoint">TrajectoryPoint</link>&#32;jaco_velocity;
+486 &#32;&#32;&#32;&#32;jaco_velocity.<link linkend="d4/d8e/structTrajectoryPoint_1a1a9f12ad88f5011c6a4644792fa67f99">InitStruct</link>();
+487 
+488 &#32;&#32;&#32;&#32;memset(&amp;jaco_velocity,&#32;0,&#32;<emphasis class="keyword">sizeof</emphasis>(jaco_velocity));&#32;&#32;<emphasis class="comment">//&#32;zero&#32;structure</emphasis>
+489 
+490 &#32;&#32;&#32;&#32;<emphasis class="comment">//startAPI();</emphasis>
+491 &#32;&#32;&#32;&#32;jaco_velocity.<link linkend="d4/d8e/structTrajectoryPoint_1aa24430dc273e9d7968a6c44e3bcee259">Position</link>.<link linkend="db/dfb/structUserPosition_1a93c748d4ee51239fcbcd487d88e52ffa">Type</link>&#32;=&#32;<link linkend="df/d36/KinovaTypes_8h_1a0a1c22d235ef1b13cfcd1419d10babc9abeb6b2df651053c52240164cc205757c">CARTESIAN_VELOCITY</link>;
+492 
+493 &#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;confusingly,&#32;velocity&#32;is&#32;passed&#32;in&#32;the&#32;position&#32;struct</emphasis>
+494 &#32;&#32;&#32;&#32;jaco_velocity.<link linkend="d4/d8e/structTrajectoryPoint_1aa24430dc273e9d7968a6c44e3bcee259">Position</link>.<link linkend="db/dfb/structUserPosition_1ab363c40971853637f728978e604c438f">CartesianPosition</link>&#32;=&#32;velocities;
+495 
+496 &#32;&#32;&#32;&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="db/dfe/Kinova_8API_8CommLayerUbuntu_8h_1a900dac90961bada00f57c207562a6a9a">result</link>&#32;=&#32;<link linkend="d5/d2b/classjaco_1_1JacoComm_1a8d1510c941f28a4e8f921691d4fd2248">jaco_api_</link>.<link linkend="d5/d3c/classjaco_1_1JacoAPI_1a30abd0123d85582b684fbd86437d403c">sendAdvanceTrajectory</link>(jaco_velocity);
+497 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(result&#32;!=&#32;<link linkend="db/dfe/Kinova_8API_8CommLayerUbuntu_8h_1a510f2320a2a31d2d225adc0da7bef595">NO_ERROR_KINOVA</link>)
+498 &#32;&#32;&#32;&#32;{
+499 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">throw</emphasis>&#32;<link linkend="df/dbe/classjaco_1_1JacoCommException">JacoCommException</link>(<emphasis class="stringliteral">&quot;Could&#32;not&#32;send&#32;advanced&#32;Cartesian&#32;velocity&#32;trajectory&quot;</emphasis>,&#32;result);
+500 &#32;&#32;&#32;&#32;}
+501 }
+502 
+503 
+<link linkend="d5/d2b/classjaco_1_1JacoComm_1ae7901b1dff2e84eb89256f46a7c65b62">510 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="d5/d2b/classjaco_1_1JacoComm_1ae7901b1dff2e84eb89256f46a7c65b62">JacoComm::setConfig</link>(<emphasis class="keyword">const</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1d1/d2e/structClientConfigurations">ClientConfigurations</link>&#32;&amp;config)
+511 {
+512 &#32;&#32;&#32;&#32;boost::recursive_mutex::scoped_lock&#32;lock(<link linkend="d5/d2b/classjaco_1_1JacoComm_1ac6ef2a6b3c51877fc4237d834c35908a">api_mutex_</link>);
+513 &#32;&#32;&#32;&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="db/dfe/Kinova_8API_8CommLayerUbuntu_8h_1a900dac90961bada00f57c207562a6a9a">result</link>&#32;=&#32;<link linkend="d5/d2b/classjaco_1_1JacoComm_1a8d1510c941f28a4e8f921691d4fd2248">jaco_api_</link>.<link linkend="d5/d3c/classjaco_1_1JacoAPI_1ad6b85298e2502e6888ce6b7a1e494e49">setClientConfigurations</link>(config);
+514 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(result&#32;!=&#32;<link linkend="db/dfe/Kinova_8API_8CommLayerUbuntu_8h_1a510f2320a2a31d2d225adc0da7bef595">NO_ERROR_KINOVA</link>)
+515 &#32;&#32;&#32;&#32;{
+516 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">throw</emphasis>&#32;<link linkend="df/dbe/classjaco_1_1JacoCommException">JacoCommException</link>(<emphasis class="stringliteral">&quot;Could&#32;not&#32;set&#32;the&#32;client&#32;configuration&quot;</emphasis>,&#32;result);
+517 &#32;&#32;&#32;&#32;}
+518 }
+519 
+520 
+<link linkend="d5/d2b/classjaco_1_1JacoComm_1a5fcb23bf6925a82f2ab5e42460ea3834">524 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="d5/d2b/classjaco_1_1JacoComm_1a5fcb23bf6925a82f2ab5e42460ea3834">JacoComm::getJointAngles</link>(<link linkend="d4/de6/classjaco_1_1JacoAngles">JacoAngles</link>&#32;&amp;<link linkend="da/dd2/namespacejoint__angle__workout_1a44cb6da34666d45961b26233ed5264bf">angles</link>)
+525 {
+526 &#32;&#32;&#32;&#32;boost::recursive_mutex::scoped_lock&#32;lock(<link linkend="d5/d2b/classjaco_1_1JacoComm_1ac6ef2a6b3c51877fc4237d834c35908a">api_mutex_</link>);
+527 &#32;&#32;&#32;&#32;<link linkend="df/d36/KinovaTypes_8h_1de/de7/structAngularPosition">AngularPosition</link>&#32;jaco_angles;
+528 &#32;&#32;&#32;&#32;memset(&amp;jaco_angles,&#32;0,&#32;<emphasis class="keyword">sizeof</emphasis>(jaco_angles));&#32;&#32;<emphasis class="comment">//&#32;zero&#32;structure</emphasis>
+529 
+530 &#32;&#32;&#32;&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="db/dfe/Kinova_8API_8CommLayerUbuntu_8h_1a900dac90961bada00f57c207562a6a9a">result</link>&#32;=&#32;<link linkend="d5/d2b/classjaco_1_1JacoComm_1a8d1510c941f28a4e8f921691d4fd2248">jaco_api_</link>.<link linkend="d5/d3c/classjaco_1_1JacoAPI_1a8d2e9b00c5953e3fc024f86e128f01df">getAngularPosition</link>(jaco_angles);
+531 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(result&#32;!=&#32;<link linkend="db/dfe/Kinova_8API_8CommLayerUbuntu_8h_1a510f2320a2a31d2d225adc0da7bef595">NO_ERROR_KINOVA</link>)
+532 &#32;&#32;&#32;&#32;{
+533 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">throw</emphasis>&#32;<link linkend="df/dbe/classjaco_1_1JacoCommException">JacoCommException</link>(<emphasis class="stringliteral">&quot;Could&#32;not&#32;get&#32;the&#32;angular&#32;position&quot;</emphasis>,&#32;result);
+534 &#32;&#32;&#32;&#32;}
+535 
+536 &#32;&#32;&#32;&#32;angles&#32;=&#32;<link linkend="d4/de6/classjaco_1_1JacoAngles">JacoAngles</link>(jaco_angles.<link linkend="df/d36/KinovaTypes_8h_1a860d625d47a8a6eaae53f43903beb80b">Actuators</link>);
+537 }
+538 
+<link linkend="d5/d2b/classjaco_1_1JacoComm_1aa81b5cdf89bd2c7259be3638fdb4f75a">542 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="d5/d2b/classjaco_1_1JacoComm_1aa81b5cdf89bd2c7259be3638fdb4f75a">JacoComm::getJointVelocities</link>(<link linkend="d4/de6/classjaco_1_1JacoAngles">JacoAngles</link>&#32;&amp;vels)
+543 {
+544 &#32;&#32;&#32;&#32;boost::recursive_mutex::scoped_lock&#32;lock(<link linkend="d5/d2b/classjaco_1_1JacoComm_1ac6ef2a6b3c51877fc4237d834c35908a">api_mutex_</link>);
+545 &#32;&#32;&#32;&#32;<link linkend="df/d36/KinovaTypes_8h_1de/de7/structAngularPosition">AngularPosition</link>&#32;jaco_vels;
+546 &#32;&#32;&#32;&#32;memset(&amp;jaco_vels,&#32;0,&#32;<emphasis class="keyword">sizeof</emphasis>(jaco_vels));&#32;&#32;<emphasis class="comment">//&#32;zero&#32;structure</emphasis>
+547 
+548 &#32;&#32;&#32;&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="db/dfe/Kinova_8API_8CommLayerUbuntu_8h_1a900dac90961bada00f57c207562a6a9a">result</link>&#32;=&#32;<link linkend="d5/d2b/classjaco_1_1JacoComm_1a8d1510c941f28a4e8f921691d4fd2248">jaco_api_</link>.<link linkend="d5/d3c/classjaco_1_1JacoAPI_1af50f11de8f7c2b661f53d76f576eb3ae">getAngularVelocity</link>(jaco_vels);
+549 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(result&#32;!=&#32;<link linkend="db/dfe/Kinova_8API_8CommLayerUbuntu_8h_1a510f2320a2a31d2d225adc0da7bef595">NO_ERROR_KINOVA</link>)
+550 &#32;&#32;&#32;&#32;{
+551 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">throw</emphasis>&#32;<link linkend="df/dbe/classjaco_1_1JacoCommException">JacoCommException</link>(<emphasis class="stringliteral">&quot;Could&#32;not&#32;get&#32;the&#32;angular&#32;velocity&quot;</emphasis>,&#32;result);
+552 &#32;&#32;&#32;&#32;}
+553 
+554 &#32;&#32;&#32;&#32;vels&#32;=&#32;<link linkend="d4/de6/classjaco_1_1JacoAngles">JacoAngles</link>(jaco_vels.<link linkend="df/d36/KinovaTypes_8h_1a860d625d47a8a6eaae53f43903beb80b">Actuators</link>);
+555 }
+556 
+<link linkend="d5/d2b/classjaco_1_1JacoComm_1af2ba4b35149e292fa5279768d47216cb">560 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="d5/d2b/classjaco_1_1JacoComm_1af2ba4b35149e292fa5279768d47216cb">JacoComm::getJointTorques</link>(<link linkend="d4/de6/classjaco_1_1JacoAngles">JacoAngles</link>&#32;&amp;tqs)
+561 {
+562 &#32;&#32;&#32;&#32;boost::recursive_mutex::scoped_lock&#32;lock(<link linkend="d5/d2b/classjaco_1_1JacoComm_1ac6ef2a6b3c51877fc4237d834c35908a">api_mutex_</link>);
+563 &#32;&#32;&#32;&#32;<link linkend="df/d36/KinovaTypes_8h_1de/de7/structAngularPosition">AngularPosition</link>&#32;jaco_tqs;
+564 &#32;&#32;&#32;&#32;memset(&amp;jaco_tqs,&#32;0,&#32;<emphasis class="keyword">sizeof</emphasis>(jaco_tqs));&#32;&#32;<emphasis class="comment">//&#32;zero&#32;structure</emphasis>
+565 
+566 &#32;&#32;&#32;&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="db/dfe/Kinova_8API_8CommLayerUbuntu_8h_1a900dac90961bada00f57c207562a6a9a">result</link>&#32;=&#32;<link linkend="d5/d2b/classjaco_1_1JacoComm_1a8d1510c941f28a4e8f921691d4fd2248">jaco_api_</link>.<link linkend="d5/d3c/classjaco_1_1JacoAPI_1aea22577840f066fb2d5da409e50f9760">getAngularForce</link>(jaco_tqs);
+567 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(result&#32;!=&#32;<link linkend="db/dfe/Kinova_8API_8CommLayerUbuntu_8h_1a510f2320a2a31d2d225adc0da7bef595">NO_ERROR_KINOVA</link>)
+568 &#32;&#32;&#32;&#32;{
+569 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">throw</emphasis>&#32;<link linkend="df/dbe/classjaco_1_1JacoCommException">JacoCommException</link>(<emphasis class="stringliteral">&quot;Could&#32;not&#32;get&#32;the&#32;joint&#32;torques&quot;</emphasis>,&#32;result);
+570 &#32;&#32;&#32;&#32;}
+571 
+572 &#32;&#32;&#32;&#32;tqs&#32;=&#32;<link linkend="d4/de6/classjaco_1_1JacoAngles">JacoAngles</link>(jaco_tqs.<link linkend="df/d36/KinovaTypes_8h_1a860d625d47a8a6eaae53f43903beb80b">Actuators</link>);
+573 }
+<link linkend="d5/d2b/classjaco_1_1JacoComm_1a855bbefed2093d0d0cc7763eb7306a0b">577 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="d5/d2b/classjaco_1_1JacoComm_1a855bbefed2093d0d0cc7763eb7306a0b">JacoComm::getCartesianPosition</link>(<link linkend="dd/da4/classjaco_1_1JacoPose">JacoPose</link>&#32;&amp;position)
+578 {
+579 &#32;&#32;&#32;&#32;boost::recursive_mutex::scoped_lock&#32;lock(<link linkend="d5/d2b/classjaco_1_1JacoComm_1ac6ef2a6b3c51877fc4237d834c35908a">api_mutex_</link>);
+580 &#32;&#32;&#32;&#32;<link linkend="d4/d67/structCartesianPosition">CartesianPosition</link>&#32;jaco_cartesian_position;
+581 &#32;&#32;&#32;&#32;memset(&amp;jaco_cartesian_position,&#32;0,&#32;<emphasis class="keyword">sizeof</emphasis>(jaco_cartesian_position));&#32;&#32;<emphasis class="comment">//&#32;zero&#32;structure</emphasis>
+582 
+583 &#32;&#32;&#32;&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="db/dfe/Kinova_8API_8CommLayerUbuntu_8h_1a900dac90961bada00f57c207562a6a9a">result</link>&#32;=&#32;<link linkend="d5/d2b/classjaco_1_1JacoComm_1a8d1510c941f28a4e8f921691d4fd2248">jaco_api_</link>.<link linkend="d5/d3c/classjaco_1_1JacoAPI_1a6c3640d554617754a9ed2e875b1a2cd0">getCartesianPosition</link>(jaco_cartesian_position);
+584 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(result&#32;!=&#32;<link linkend="db/dfe/Kinova_8API_8CommLayerUbuntu_8h_1a510f2320a2a31d2d225adc0da7bef595">NO_ERROR_KINOVA</link>)
+585 &#32;&#32;&#32;&#32;{
+586 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">throw</emphasis>&#32;<link linkend="df/dbe/classjaco_1_1JacoCommException">JacoCommException</link>(<emphasis class="stringliteral">&quot;Could&#32;not&#32;get&#32;the&#32;Cartesian&#32;position&quot;</emphasis>,&#32;result);
+587 &#32;&#32;&#32;&#32;}
+588 
+589 &#32;&#32;&#32;&#32;position&#32;=&#32;<link linkend="dd/da4/classjaco_1_1JacoPose">JacoPose</link>(jaco_cartesian_position.<link linkend="d4/d67/structCartesianPosition_1aa1e120e383c650f4c4bf88ba8c780ab1">Coordinates</link>);
+590 }
+591 
+<link linkend="d5/d2b/classjaco_1_1JacoComm_1af181d7ddd7baeff6e46720648e7e1f31">595 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="d5/d2b/classjaco_1_1JacoComm_1af181d7ddd7baeff6e46720648e7e1f31">JacoComm::getCartesianForce</link>(<link linkend="dd/da4/classjaco_1_1JacoPose">JacoPose</link>&#32;&amp;cart_force)
+596 {
+597 &#32;&#32;&#32;&#32;boost::recursive_mutex::scoped_lock&#32;lock(<link linkend="d5/d2b/classjaco_1_1JacoComm_1ac6ef2a6b3c51877fc4237d834c35908a">api_mutex_</link>);
+598 &#32;&#32;&#32;&#32;<link linkend="d4/d67/structCartesianPosition">CartesianPosition</link>&#32;jaco_cartesian_force;
+599 &#32;&#32;&#32;&#32;memset(&amp;jaco_cartesian_force,&#32;0,&#32;<emphasis class="keyword">sizeof</emphasis>(jaco_cartesian_force));&#32;&#32;<emphasis class="comment">//&#32;zero&#32;structure</emphasis>
+600 
+601 &#32;&#32;&#32;&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="db/dfe/Kinova_8API_8CommLayerUbuntu_8h_1a900dac90961bada00f57c207562a6a9a">result</link>&#32;=&#32;<link linkend="d5/d2b/classjaco_1_1JacoComm_1a8d1510c941f28a4e8f921691d4fd2248">jaco_api_</link>.<link linkend="d5/d3c/classjaco_1_1JacoAPI_1af82e531abda1dd3e87ab33f1f5474ca5">getCartesianForce</link>(jaco_cartesian_force);
+602 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(result&#32;!=&#32;<link linkend="db/dfe/Kinova_8API_8CommLayerUbuntu_8h_1a510f2320a2a31d2d225adc0da7bef595">NO_ERROR_KINOVA</link>)
+603 &#32;&#32;&#32;&#32;{
+604 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">throw</emphasis>&#32;<link linkend="df/dbe/classjaco_1_1JacoCommException">JacoCommException</link>(<emphasis class="stringliteral">&quot;Could&#32;not&#32;get&#32;the&#32;Cartesian&#32;force&quot;</emphasis>,&#32;result);
+605 &#32;&#32;&#32;&#32;}
+606 
+607 &#32;&#32;&#32;&#32;cart_force&#32;=&#32;<link linkend="dd/da4/classjaco_1_1JacoPose">JacoPose</link>(jaco_cartesian_force.<link linkend="d4/d67/structCartesianPosition_1aa1e120e383c650f4c4bf88ba8c780ab1">Coordinates</link>);
+608 }
+609 
+<link linkend="d5/d2b/classjaco_1_1JacoComm_1a7644bf1154b59bf4d8b97c200284e3fb">613 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="d5/d2b/classjaco_1_1JacoComm_1a7644bf1154b59bf4d8b97c200284e3fb">JacoComm::getFingerPositions</link>(<link linkend="dd/d28/classjaco_1_1FingerAngles">FingerAngles</link>&#32;&amp;fingers)
+614 {
+615 &#32;&#32;&#32;&#32;boost::recursive_mutex::scoped_lock&#32;lock(<link linkend="d5/d2b/classjaco_1_1JacoComm_1ac6ef2a6b3c51877fc4237d834c35908a">api_mutex_</link>);
+616 &#32;&#32;&#32;&#32;<link linkend="d4/d67/structCartesianPosition">CartesianPosition</link>&#32;jaco_cartesian_position;
+617 &#32;&#32;&#32;&#32;memset(&amp;jaco_cartesian_position,&#32;0,&#32;<emphasis class="keyword">sizeof</emphasis>(jaco_cartesian_position));&#32;&#32;<emphasis class="comment">//&#32;zero&#32;structure</emphasis>
+618 
+619 &#32;&#32;&#32;&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="db/dfe/Kinova_8API_8CommLayerUbuntu_8h_1a900dac90961bada00f57c207562a6a9a">result</link>&#32;=&#32;<link linkend="d5/d2b/classjaco_1_1JacoComm_1a8d1510c941f28a4e8f921691d4fd2248">jaco_api_</link>.<link linkend="d5/d3c/classjaco_1_1JacoAPI_1a6c3640d554617754a9ed2e875b1a2cd0">getCartesianPosition</link>(jaco_cartesian_position);
+620 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(result&#32;!=&#32;<link linkend="db/dfe/Kinova_8API_8CommLayerUbuntu_8h_1a510f2320a2a31d2d225adc0da7bef595">NO_ERROR_KINOVA</link>)
+621 &#32;&#32;&#32;&#32;{
+622 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">throw</emphasis>&#32;<link linkend="df/dbe/classjaco_1_1JacoCommException">JacoCommException</link>(<emphasis class="stringliteral">&quot;Could&#32;not&#32;get&#32;Cartesian&#32;finger&#32;position&quot;</emphasis>,&#32;result);
+623 &#32;&#32;&#32;&#32;}
+624 
+625 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(<link linkend="d5/d2b/classjaco_1_1JacoComm_1a5812c7504d90ec6016c40cba097ba1bb">num_fingers_</link>&#32;==&#32;2)
+626 &#32;&#32;&#32;&#32;{
+627 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;jaco_cartesian_position.<link linkend="d4/d67/structCartesianPosition_1ad0d8710c54bb2f63dfc98d809eaeb3a4">Fingers</link>.<link linkend="df/d1b/structFingersPosition_1a03c819e4c20367e36e62a864bf829160">Finger3</link>&#32;=&#32;0.0;
+628 &#32;&#32;&#32;&#32;}
+629 
+630 &#32;&#32;&#32;&#32;fingers&#32;=&#32;<link linkend="dd/d28/classjaco_1_1FingerAngles">FingerAngles</link>(jaco_cartesian_position.<link linkend="d4/d67/structCartesianPosition_1ad0d8710c54bb2f63dfc98d809eaeb3a4">Fingers</link>);
+631 }
+632 
+<link linkend="d5/d2b/classjaco_1_1JacoComm_1afbb443b8e3fe71ef58b0013fdb3d5674">636 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="d5/d2b/classjaco_1_1JacoComm_1afbb443b8e3fe71ef58b0013fdb3d5674">JacoComm::setCartesianInertiaDamping</link>(<emphasis class="keyword">const</emphasis>&#32;<link linkend="dd/d00/structCartesianInfo">CartesianInfo</link>&#32;&amp;inertia,&#32;<emphasis class="keyword">const</emphasis>&#32;<link linkend="dd/d00/structCartesianInfo">CartesianInfo</link>&amp;&#32;damping)
+637 {
+638 &#32;&#32;&#32;&#32;boost::recursive_mutex::scoped_lock&#32;lock(<link linkend="d5/d2b/classjaco_1_1JacoComm_1ac6ef2a6b3c51877fc4237d834c35908a">api_mutex_</link>);
+639 &#32;&#32;&#32;&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="db/dfe/Kinova_8API_8CommLayerUbuntu_8h_1a900dac90961bada00f57c207562a6a9a">result</link>&#32;=&#32;<link linkend="d5/d2b/classjaco_1_1JacoComm_1a8d1510c941f28a4e8f921691d4fd2248">jaco_api_</link>.<link linkend="d5/d3c/classjaco_1_1JacoAPI_1a24709f5e768c7aab4a9b1de1308d65ea">setCartesianInertiaDamping</link>(inertia,&#32;damping);
+640 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(result&#32;!=&#32;<link linkend="db/dfe/Kinova_8API_8CommLayerUbuntu_8h_1a510f2320a2a31d2d225adc0da7bef595">NO_ERROR_KINOVA</link>)
+641 &#32;&#32;&#32;&#32;{
+642 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">throw</emphasis>&#32;<link linkend="df/dbe/classjaco_1_1JacoCommException">JacoCommException</link>(<emphasis class="stringliteral">&quot;Could&#32;not&#32;set&#32;cartesian&#32;inertia&#32;and&#32;damping&quot;</emphasis>,&#32;result);
+643 &#32;&#32;&#32;&#32;}
+644 }
+645 
+<link linkend="d5/d2b/classjaco_1_1JacoComm_1a39faaf774115561ea1857349db182145">649 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="d5/d2b/classjaco_1_1JacoComm_1a39faaf774115561ea1857349db182145">JacoComm::setCartesianForceMinMax</link>(<emphasis class="keyword">const</emphasis>&#32;<link linkend="dd/d00/structCartesianInfo">CartesianInfo</link>&#32;&amp;min,&#32;<emphasis class="keyword">const</emphasis>&#32;<link linkend="dd/d00/structCartesianInfo">CartesianInfo</link>&amp;&#32;<link linkend="d7/d70/JacoPositionConfig_8dox_1a55c9de72d9f3630abdf51bfe39c191dd">max</link>)
+650 {
+651 &#32;&#32;&#32;&#32;boost::recursive_mutex::scoped_lock&#32;lock(<link linkend="d5/d2b/classjaco_1_1JacoComm_1ac6ef2a6b3c51877fc4237d834c35908a">api_mutex_</link>);
+652 &#32;&#32;&#32;&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="db/dfe/Kinova_8API_8CommLayerUbuntu_8h_1a900dac90961bada00f57c207562a6a9a">result</link>&#32;=&#32;<link linkend="d5/d2b/classjaco_1_1JacoComm_1a8d1510c941f28a4e8f921691d4fd2248">jaco_api_</link>.<link linkend="d5/d3c/classjaco_1_1JacoAPI_1aa592360dc8cc3d2a2343621d8ec8dac5">setCartesianForceMinMax</link>(min,&#32;max);
+653 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(result&#32;!=&#32;<link linkend="db/dfe/Kinova_8API_8CommLayerUbuntu_8h_1a510f2320a2a31d2d225adc0da7bef595">NO_ERROR_KINOVA</link>)
+654 &#32;&#32;&#32;&#32;{
+655 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">throw</emphasis>&#32;<link linkend="df/dbe/classjaco_1_1JacoCommException">JacoCommException</link>(<emphasis class="stringliteral">&quot;Could&#32;not&#32;set&#32;cartesian&#32;min/max&#32;force.&quot;</emphasis>,&#32;result);
+656 &#32;&#32;&#32;&#32;}
+657 }
+658 
+<link linkend="d5/d2b/classjaco_1_1JacoComm_1a00e5493dfbdcaab6c1a9bd388d3b839d">662 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="d5/d2b/classjaco_1_1JacoComm_1a00e5493dfbdcaab6c1a9bd388d3b839d">JacoComm::startForceControl</link>()
+663 {
+664 &#32;&#32;&#32;&#32;boost::recursive_mutex::scoped_lock&#32;lock(<link linkend="d5/d2b/classjaco_1_1JacoComm_1ac6ef2a6b3c51877fc4237d834c35908a">api_mutex_</link>);
+665 &#32;&#32;&#32;&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="db/dfe/Kinova_8API_8CommLayerUbuntu_8h_1a900dac90961bada00f57c207562a6a9a">result</link>&#32;=&#32;<link linkend="d5/d2b/classjaco_1_1JacoComm_1a8d1510c941f28a4e8f921691d4fd2248">jaco_api_</link>.<link linkend="d5/d3c/classjaco_1_1JacoAPI_1a548f1d6251582bb4fe9cb5cb69f08b2d">startForceControl</link>();
+666 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(result&#32;!=&#32;<link linkend="db/dfe/Kinova_8API_8CommLayerUbuntu_8h_1a510f2320a2a31d2d225adc0da7bef595">NO_ERROR_KINOVA</link>)
+667 &#32;&#32;&#32;&#32;{
+668 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">throw</emphasis>&#32;<link linkend="df/dbe/classjaco_1_1JacoCommException">JacoCommException</link>(<emphasis class="stringliteral">&quot;Could&#32;not&#32;start&#32;force&#32;control.&quot;</emphasis>,&#32;result);
+669 &#32;&#32;&#32;&#32;}
+670 }
+671 
+<link linkend="d5/d2b/classjaco_1_1JacoComm_1a339cf31d88fdef6409340c82a35ecb53">675 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="d5/d2b/classjaco_1_1JacoComm_1a339cf31d88fdef6409340c82a35ecb53">JacoComm::stopForceControl</link>()
+676 {
+677 &#32;&#32;&#32;&#32;boost::recursive_mutex::scoped_lock&#32;lock(<link linkend="d5/d2b/classjaco_1_1JacoComm_1ac6ef2a6b3c51877fc4237d834c35908a">api_mutex_</link>);
+678 &#32;&#32;&#32;&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="db/dfe/Kinova_8API_8CommLayerUbuntu_8h_1a900dac90961bada00f57c207562a6a9a">result</link>&#32;=&#32;<link linkend="d5/d2b/classjaco_1_1JacoComm_1a8d1510c941f28a4e8f921691d4fd2248">jaco_api_</link>.<link linkend="d5/d3c/classjaco_1_1JacoAPI_1ac3881ef354400b32a4d71796dba66d67">stopForceControl</link>();
+679 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(result&#32;!=&#32;<link linkend="db/dfe/Kinova_8API_8CommLayerUbuntu_8h_1a510f2320a2a31d2d225adc0da7bef595">NO_ERROR_KINOVA</link>)
+680 &#32;&#32;&#32;&#32;{
+681 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">throw</emphasis>&#32;<link linkend="df/dbe/classjaco_1_1JacoCommException">JacoCommException</link>(<emphasis class="stringliteral">&quot;Could&#32;not&#32;stop&#32;force&#32;control.&quot;</emphasis>,&#32;result);
+682 &#32;&#32;&#32;&#32;}
+683 }
+684 
+<link linkend="d5/d2b/classjaco_1_1JacoComm_1a47a3557e9b5576bc83df936caa043270">688 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="d5/d2b/classjaco_1_1JacoComm_1a47a3557e9b5576bc83df936caa043270">JacoComm::getConfig</link>(<link linkend="df/d36/KinovaTypes_8h_1d1/d2e/structClientConfigurations">ClientConfigurations</link>&#32;&amp;config)
+689 {
+690 &#32;&#32;&#32;&#32;boost::recursive_mutex::scoped_lock&#32;lock(<link linkend="d5/d2b/classjaco_1_1JacoComm_1ac6ef2a6b3c51877fc4237d834c35908a">api_mutex_</link>);
+691 &#32;&#32;&#32;&#32;memset(&amp;config,&#32;0,&#32;<emphasis class="keyword">sizeof</emphasis>(config));&#32;&#32;<emphasis class="comment">//&#32;zero&#32;structure</emphasis>
+692 
+693 &#32;&#32;&#32;&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="db/dfe/Kinova_8API_8CommLayerUbuntu_8h_1a900dac90961bada00f57c207562a6a9a">result</link>&#32;=&#32;<link linkend="d5/d2b/classjaco_1_1JacoComm_1a8d1510c941f28a4e8f921691d4fd2248">jaco_api_</link>.<link linkend="d5/d3c/classjaco_1_1JacoAPI_1a215a64d2dee8b2555d317da41e25ae16">getClientConfigurations</link>(config);
+694 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(result&#32;!=&#32;<link linkend="db/dfe/Kinova_8API_8CommLayerUbuntu_8h_1a510f2320a2a31d2d225adc0da7bef595">NO_ERROR_KINOVA</link>)
+695 &#32;&#32;&#32;&#32;{
+696 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">throw</emphasis>&#32;<link linkend="df/dbe/classjaco_1_1JacoCommException">JacoCommException</link>(<emphasis class="stringliteral">&quot;Could&#32;not&#32;get&#32;client&#32;configuration&quot;</emphasis>,&#32;result);
+697 &#32;&#32;&#32;&#32;}
+698 }
+699 
+700 
+<link linkend="d5/d2b/classjaco_1_1JacoComm_1a29384597e710d4cbb4e1f2ae6b7d7e50">704 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="d5/d2b/classjaco_1_1JacoComm_1a29384597e710d4cbb4e1f2ae6b7d7e50">JacoComm::getQuickStatus</link>(<link linkend="df/d36/KinovaTypes_8h_1df/d9d/structQuickStatus">QuickStatus</link>&#32;&amp;quick_status)
+705 {
+706 &#32;&#32;&#32;&#32;boost::recursive_mutex::scoped_lock&#32;lock(<link linkend="d5/d2b/classjaco_1_1JacoComm_1ac6ef2a6b3c51877fc4237d834c35908a">api_mutex_</link>);
+707 &#32;&#32;&#32;&#32;memset(&amp;quick_status,&#32;0,&#32;<emphasis class="keyword">sizeof</emphasis>(quick_status));&#32;&#32;<emphasis class="comment">//&#32;zero&#32;structure</emphasis>
+708 &#32;&#32;&#32;&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="db/dfe/Kinova_8API_8CommLayerUbuntu_8h_1a900dac90961bada00f57c207562a6a9a">result</link>&#32;=&#32;<link linkend="d5/d2b/classjaco_1_1JacoComm_1a8d1510c941f28a4e8f921691d4fd2248">jaco_api_</link>.<link linkend="d5/d3c/classjaco_1_1JacoAPI_1ae4297fe364b296252a1c91efb9024b03">getQuickStatus</link>(quick_status);
+709 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(result&#32;!=&#32;<link linkend="db/dfe/Kinova_8API_8CommLayerUbuntu_8h_1a510f2320a2a31d2d225adc0da7bef595">NO_ERROR_KINOVA</link>)
+710 &#32;&#32;&#32;&#32;{
+711 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">throw</emphasis>&#32;<link linkend="df/dbe/classjaco_1_1JacoCommException">JacoCommException</link>(<emphasis class="stringliteral">&quot;Could&#32;not&#32;get&#32;quick&#32;status&quot;</emphasis>,&#32;result);
+712 &#32;&#32;&#32;&#32;}
+713 }
+714 
+715 
+<link linkend="d5/d2b/classjaco_1_1JacoComm_1a54862830cd6414ae3ae48e46e54bf798">716 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="d5/d2b/classjaco_1_1JacoComm_1a54862830cd6414ae3ae48e46e54bf798">JacoComm::stopAPI</link>()
+717 {
+718 &#32;&#32;&#32;&#32;boost::recursive_mutex::scoped_lock&#32;lock(<link linkend="d5/d2b/classjaco_1_1JacoComm_1ac6ef2a6b3c51877fc4237d834c35908a">api_mutex_</link>);
+719 &#32;&#32;&#32;&#32;<link linkend="d5/d2b/classjaco_1_1JacoComm_1a9607500fac99c4dbc5acc98dd513eec3">is_software_stop_</link>&#32;=&#32;<emphasis class="keyword">true</emphasis>;
+720 
+721 &#32;&#32;&#32;&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="db/dfe/Kinova_8API_8CommLayerUbuntu_8h_1a900dac90961bada00f57c207562a6a9a">result</link>&#32;=&#32;<link linkend="d5/d2b/classjaco_1_1JacoComm_1a8d1510c941f28a4e8f921691d4fd2248">jaco_api_</link>.<link linkend="d5/d3c/classjaco_1_1JacoAPI_1a41fefb13b76fc591cde461d1a9b91bb2">stopControlAPI</link>();
+722 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(result&#32;!=&#32;<link linkend="db/dfe/Kinova_8API_8CommLayerUbuntu_8h_1a510f2320a2a31d2d225adc0da7bef595">NO_ERROR_KINOVA</link>)
+723 &#32;&#32;&#32;&#32;{
+724 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">throw</emphasis>&#32;<link linkend="df/dbe/classjaco_1_1JacoCommException">JacoCommException</link>(<emphasis class="stringliteral">&quot;Could&#32;not&#32;stop&#32;the&#32;control&#32;API&quot;</emphasis>,&#32;result);
+725 &#32;&#32;&#32;&#32;}
+726 
+727 &#32;&#32;&#32;&#32;result&#32;=&#32;<link linkend="d5/d2b/classjaco_1_1JacoComm_1a8d1510c941f28a4e8f921691d4fd2248">jaco_api_</link>.<link linkend="d5/d3c/classjaco_1_1JacoAPI_1a97db09d91923328b1780bb50a0e2548d">eraseAllTrajectories</link>();
+728 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(result&#32;!=&#32;<link linkend="db/dfe/Kinova_8API_8CommLayerUbuntu_8h_1a510f2320a2a31d2d225adc0da7bef595">NO_ERROR_KINOVA</link>)
+729 &#32;&#32;&#32;&#32;{
+730 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">throw</emphasis>&#32;<link linkend="df/dbe/classjaco_1_1JacoCommException">JacoCommException</link>(<emphasis class="stringliteral">&quot;Could&#32;not&#32;erase&#32;all&#32;trajectories&quot;</emphasis>,&#32;result);
+731 &#32;&#32;&#32;&#32;}
+732 }
+733 
+734 
+<link linkend="d5/d2b/classjaco_1_1JacoComm_1a6b2a1fabc4e6c30da42c9a5e26757398">735 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="d5/d2b/classjaco_1_1JacoComm_1a6b2a1fabc4e6c30da42c9a5e26757398">JacoComm::startAPI</link>()
+736 {
+737 &#32;&#32;&#32;&#32;boost::recursive_mutex::scoped_lock&#32;lock(<link linkend="d5/d2b/classjaco_1_1JacoComm_1ac6ef2a6b3c51877fc4237d834c35908a">api_mutex_</link>);
+738 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(<link linkend="d5/d2b/classjaco_1_1JacoComm_1a9607500fac99c4dbc5acc98dd513eec3">is_software_stop_</link>)
+739 &#32;&#32;&#32;&#32;{
+740 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="d5/d2b/classjaco_1_1JacoComm_1a9607500fac99c4dbc5acc98dd513eec3">is_software_stop_</link>&#32;=&#32;<emphasis class="keyword">false</emphasis>;
+741 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="d5/d2b/classjaco_1_1JacoComm_1a8d1510c941f28a4e8f921691d4fd2248">jaco_api_</link>.<link linkend="d5/d3c/classjaco_1_1JacoAPI_1a41fefb13b76fc591cde461d1a9b91bb2">stopControlAPI</link>();
+742 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ros::Duration(0.05).sleep();
+743 &#32;&#32;&#32;&#32;}
+744 
+745 &#32;&#32;&#32;&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="db/dfe/Kinova_8API_8CommLayerUbuntu_8h_1a900dac90961bada00f57c207562a6a9a">result</link>&#32;=&#32;<link linkend="d5/d2b/classjaco_1_1JacoComm_1a8d1510c941f28a4e8f921691d4fd2248">jaco_api_</link>.<link linkend="d5/d3c/classjaco_1_1JacoAPI_1a75d269278bf284a368f42ce1f8a3eb2e">startControlAPI</link>();
+746 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(result&#32;!=&#32;<link linkend="db/dfe/Kinova_8API_8CommLayerUbuntu_8h_1a510f2320a2a31d2d225adc0da7bef595">NO_ERROR_KINOVA</link>)
+747 &#32;&#32;&#32;&#32;{
+748 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">throw</emphasis>&#32;<link linkend="df/dbe/classjaco_1_1JacoCommException">JacoCommException</link>(<emphasis class="stringliteral">&quot;Could&#32;not&#32;start&#32;the&#32;control&#32;API&quot;</emphasis>,&#32;result);
+749 &#32;&#32;&#32;&#32;}
+750 }
+751 
+752 
+<link linkend="d5/d2b/classjaco_1_1JacoComm_1a42e11ee165ee8f2b1af7e7060f488ce1">753 </link><emphasis class="keywordtype">int</emphasis>&#32;<link linkend="d5/d2b/classjaco_1_1JacoComm_1a42e11ee165ee8f2b1af7e7060f488ce1">JacoComm::numFingers</link>()
+754 {
+755 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;<link linkend="d5/d2b/classjaco_1_1JacoComm_1a5812c7504d90ec6016c40cba097ba1bb">num_fingers_</link>;
+756 }
+757 
+<link linkend="d5/d2b/classjaco_1_1JacoComm_1af20323ed50f73b59bac3e18ebd8559fa">758 </link><emphasis class="keywordtype">int</emphasis>&#32;<link linkend="d5/d2b/classjaco_1_1JacoComm_1af20323ed50f73b59bac3e18ebd8559fa">JacoComm::robotType</link>()
+759 {
+760 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;<link linkend="d5/d2b/classjaco_1_1JacoComm_1afb603f289e6ed8855cbeb0d0b1400829">robot_type_</link>;
+761 }
+762 
+<link linkend="d5/d2b/classjaco_1_1JacoComm_1a0524faa99cdc1361d50c3c6a53d5cfe0">766 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="d5/d2b/classjaco_1_1JacoComm_1a0524faa99cdc1361d50c3c6a53d5cfe0">JacoComm::printAngles</link>(<emphasis class="keyword">const</emphasis>&#32;<link linkend="d4/de6/classjaco_1_1JacoAngles">JacoAngles</link>&#32;&amp;<link linkend="da/dd2/namespacejoint__angle__workout_1a44cb6da34666d45961b26233ed5264bf">angles</link>)
+767 {
+768 &#32;&#32;&#32;&#32;ROS_INFO(<emphasis class="stringliteral">&quot;Joint&#32;angles&#32;(deg)&#32;--&#32;J1:&#32;%f,&#32;J2:&#32;%f&#32;J3:&#32;%f,&#32;J4:&#32;%f,&#32;J5:&#32;%f,&#32;J6:&#32;%f&quot;</emphasis>,
+769 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;angles.<link linkend="d0/df5/structAngularInfo_1a5fc555c085bddc82c33a3039fbc40932">Actuator1</link>,&#32;angles.<link linkend="d0/df5/structAngularInfo_1ab7b9349eef239f9741d9c28a795e4c35">Actuator2</link>,&#32;angles.<link linkend="d0/df5/structAngularInfo_1a30426eab94c82cfd3d697bbc8c506c2a">Actuator3</link>,
+770 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;angles.<link linkend="d0/df5/structAngularInfo_1a46a1314c4846de6a495310b44fe5e0c3">Actuator4</link>,&#32;angles.<link linkend="d0/df5/structAngularInfo_1a953c29d2481eb1c42c84e9c992d34dde">Actuator5</link>,&#32;angles.<link linkend="d0/df5/structAngularInfo_1ab54771129d8a9e451c27942dd349340d">Actuator6</link>);
+771 }
+772 
+773 
+<link linkend="d5/d2b/classjaco_1_1JacoComm_1ac1abf65387fa9adba237802bc97f15b1">777 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="d5/d2b/classjaco_1_1JacoComm_1ac1abf65387fa9adba237802bc97f15b1">JacoComm::printPosition</link>(<emphasis class="keyword">const</emphasis>&#32;<link linkend="dd/da4/classjaco_1_1JacoPose">JacoPose</link>&#32;&amp;position)
+778 {
+779 &#32;&#32;&#32;&#32;ROS_INFO(<emphasis class="stringliteral">&quot;Arm&#32;position\n&quot;</emphasis>
+780 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="stringliteral">&quot;\tposition&#32;(m)&#32;--&#32;x:&#32;%f,&#32;y:&#32;%f&#32;z:&#32;%f\n&quot;</emphasis>
+781 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="stringliteral">&quot;\trotation&#32;(rad)&#32;--&#32;theta_x:&#32;%f,&#32;theta_y:&#32;%f,&#32;theta_z:&#32;%f&quot;</emphasis>,
+782 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;position.<link linkend="dd/d00/structCartesianInfo_1a212cc2dcae1697132fc31fa2f5d17269">X</link>,&#32;position.<link linkend="dd/d00/structCartesianInfo_1a12c2611c89445419b336e58815d87c7c">Y</link>,&#32;position.<link linkend="dd/d00/structCartesianInfo_1a14e196e4cb38c0ae7f4658b9b070b7fe">Z</link>,
+783 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;position.<link linkend="dd/d00/structCartesianInfo_1a39135e53155aa4025c40eeefbfd3b17c">ThetaX</link>,&#32;position.<link linkend="dd/d00/structCartesianInfo_1a4aef5897f4cdcf7ecc9df6804f844d46">ThetaY</link>,&#32;position.<link linkend="dd/d00/structCartesianInfo_1a2890c501f3b7b9479e12ad51f04f0a7f">ThetaZ</link>);
+784 }
+785 
+786 
+<link linkend="d5/d2b/classjaco_1_1JacoComm_1ab34f7cbb2978e76644927b9031e06b4f">790 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="d5/d2b/classjaco_1_1JacoComm_1ab34f7cbb2978e76644927b9031e06b4f">JacoComm::printFingers</link>(<emphasis class="keyword">const</emphasis>&#32;<link linkend="df/d1b/structFingersPosition">FingersPosition</link>&#32;&amp;fingers)
+791 {
+792 &#32;&#32;&#32;&#32;ROS_INFO(<emphasis class="stringliteral">&quot;Finger&#32;positions&#32;--&#32;F1:&#32;%f,&#32;F2:&#32;%f,&#32;F3:&#32;%f&quot;</emphasis>,
+793 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;fingers.<link linkend="df/d1b/structFingersPosition_1a216f8d64e6a9c7aab84e4269ccb27e66">Finger1</link>,&#32;fingers.<link linkend="df/d1b/structFingersPosition_1a0ec9675672721d61fb13bbc2db3d3ef9">Finger2</link>,&#32;fingers.<link linkend="df/d1b/structFingersPosition_1a03c819e4c20367e36e62a864bf829160">Finger3</link>);
+794 }
+795 
+796 
+<link linkend="d5/d2b/classjaco_1_1JacoComm_1a54661eeda2fc5324843a230bdcfe8b67">800 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="d5/d2b/classjaco_1_1JacoComm_1a54661eeda2fc5324843a230bdcfe8b67">JacoComm::printConfig</link>(<emphasis class="keyword">const</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1d1/d2e/structClientConfigurations">ClientConfigurations</link>&#32;&amp;config)
+801 {
+802 &#32;&#32;&#32;&#32;ROS_INFO_STREAM(<emphasis class="stringliteral">&quot;Arm&#32;configuration:\n&quot;</emphasis>
+803 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="stringliteral">&quot;\tClientID:&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;config.<link linkend="df/d36/KinovaTypes_8h_1a2adccda7d27c7731ab0fe1160005e6ac">ClientID</link>&#32;&lt;&lt;
+804 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="stringliteral">&quot;\n\tClientName:&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;config.<link linkend="df/d36/KinovaTypes_8h_1a6ec42489c6a1e74a654809f5f39ca6f8">ClientName</link>&#32;&lt;&lt;
+805 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="stringliteral">&quot;\n\tOrganization:&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;config.<link linkend="df/d36/KinovaTypes_8h_1a55c82eb4163582b31c6d720766057767">Organization</link>&#32;&lt;&lt;
+806 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="stringliteral">&quot;\n\tSerial:&quot;</emphasis>&#32;&lt;&lt;&#32;config.<link linkend="df/d36/KinovaTypes_8h_1adb0902769a42d7eaf9cce979d0779723">Serial</link>&#32;&lt;&lt;
+807 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="stringliteral">&quot;\n\tModel:&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;config.<link linkend="df/d36/KinovaTypes_8h_1a5bb86440679384635d0d0f41ca431249">Model</link>&#32;&lt;&lt;
+808 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="stringliteral">&quot;\n\tMaxForce:&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;config.<link linkend="df/d36/KinovaTypes_8h_1a9c68b6f56291d1be104928f7db071579">MaxForce</link>&#32;&lt;&lt;
+809 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="stringliteral">&quot;\n\tSensibility:&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;&#32;config.<link linkend="df/d36/KinovaTypes_8h_1a64e61dc032b95f127cd798a9759818d8">Sensibility</link>&#32;&lt;&lt;
+810 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="stringliteral">&quot;\n\tDrinkingHeight:&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;config.<link linkend="df/d36/KinovaTypes_8h_1a05043c8fe2f31f3c216a97edc2411664">DrinkingHeight</link>&#32;&lt;&lt;
+811 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="stringliteral">&quot;\n\tComplexRetractActive:&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;config.<link linkend="df/d36/KinovaTypes_8h_1aa41bf35ba1a1dd92f54a30814d42f795">ComplexRetractActive</link>&#32;&lt;&lt;
+812 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="stringliteral">&quot;\n\tRetractedPositionAngle:&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;config.<link linkend="df/d36/KinovaTypes_8h_1ad7d6245d4683b6e31d0438466ea6bb80">RetractedPositionAngle</link>&#32;&lt;&lt;
+813 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="stringliteral">&quot;\n\tRetractedPositionCount:&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;config.<link linkend="df/d36/KinovaTypes_8h_1a4058c290c5bac0504e511f0f50e5914b">RetractedPositionCount</link>&#32;&lt;&lt;
+814 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="stringliteral">&quot;\n\tDrinkingDistance:&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;config.<link linkend="df/d36/KinovaTypes_8h_1a494c5a866ae44191aafdc66ab69033c3">DrinkingDistance</link>&#32;&lt;&lt;
+815 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="stringliteral">&quot;\n\tFingers2and3Inverted:&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;config.<link linkend="df/d36/KinovaTypes_8h_1a55cb748c864cd65d8136da316b46df61">Fingers2and3Inverted</link>&#32;&lt;&lt;
+816 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="stringliteral">&quot;\n\tDrinkingLength:&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;config.<link linkend="df/d36/KinovaTypes_8h_1a1029013b8d5d2d9ea902ab628c98a7e0">DrinkingLenght</link>&#32;&lt;&lt;
+817 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="stringliteral">&quot;\n\tDeletePreProgrammedPositionsAtRetract:&#32;&quot;</emphasis>&#32;&lt;&lt;
+818 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;config.<link linkend="df/d36/KinovaTypes_8h_1ab0dca6d6259625fafd1c725533337460">DeletePreProgrammedPositionsAtRetract</link>&#32;&lt;&lt;
+819 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="stringliteral">&quot;\n\tEnableFlashErrorLog:&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;config.<link linkend="df/d36/KinovaTypes_8h_1a16b087061d560a4f185e779352d6e2e3">EnableFlashErrorLog</link>&#32;&lt;&lt;
+820 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="stringliteral">&quot;\n\tEnableFlashPositionLog:&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;config.<link linkend="df/d36/KinovaTypes_8h_1ae0c7b4d0a3f91271e8138985807be8c6">EnableFlashPositionLog</link>);
+821 }
+822 
+823 
+<link linkend="d5/d2b/classjaco_1_1JacoComm_1a872b8033cda5a9fe4ccdca2e89aa03d1">824 </link><emphasis class="keywordtype">bool</emphasis>&#32;<link linkend="d5/d2b/classjaco_1_1JacoComm_1a872b8033cda5a9fe4ccdca2e89aa03d1">JacoComm::isStopped</link>()
+825 {
+826 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;<link linkend="d5/d2b/classjaco_1_1JacoComm_1a9607500fac99c4dbc5acc98dd513eec3">is_software_stop_</link>;
+827 }
+828 
+829 
+830 }&#32;&#32;<emphasis class="comment">//&#32;namespace&#32;jaco</emphasis>
+    </computeroutput></literallayout>
+</section>

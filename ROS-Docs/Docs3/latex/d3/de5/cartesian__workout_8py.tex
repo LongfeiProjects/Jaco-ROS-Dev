@@ -1,0 +1,23 @@
+\hypertarget{cartesian__workout_8py}{}\section{D\+:/\+Longfei/\+Desktop/catkin\+\_\+\+Kinova\+R\+O\+S/src/jaco-\/ros/jaco\+\_\+demo/nodes/jaco\+\_\+demo/cartesian\+\_\+workout.py File Reference}
+\label{cartesian__workout_8py}\index{D\+:/\+Longfei/\+Desktop/catkin\+\_\+\+Kinova\+R\+O\+S/src/jaco-\/ros/jaco\+\_\+demo/nodes/jaco\+\_\+demo/cartesian\+\_\+workout.\+py@{D\+:/\+Longfei/\+Desktop/catkin\+\_\+\+Kinova\+R\+O\+S/src/jaco-\/ros/jaco\+\_\+demo/nodes/jaco\+\_\+demo/cartesian\+\_\+workout.\+py}}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \hyperlink{namespacecartesian__workout}{cartesian\+\_\+workout}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{namespacecartesian__workout_a1fb7cd9a49c4af0ae2cf8cab45335d40}{cartesian\+\_\+workout.\+cartesian\+\_\+pose\+\_\+client} (position, orientation)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{namespacecartesian__workout_a9cc10da8ef79d18715644543b9794d80}{cartesian\+\_\+workout.\+mag} = np.\+sqrt(sum(np.\+power(raw\+\_\+pose\mbox{[}3\+:\mbox{]}, 2)))
+\item 
+\hyperlink{namespacecartesian__workout_ab293192d190a24c9cb8edbea4ef33862}{cartesian\+\_\+workout.\+poses} = \hyperlink{namespacegoal__generators_acc20fd60c84b4f30491d22bf16139668}{goal\+\_\+generators.\+random\+\_\+pose\+\_\+generator}(int(sys.\+argv\mbox{[}3\mbox{]}))
+\item 
+list \hyperlink{namespacecartesian__workout_a967ea83284096aa4c94c0b41daa5df6c}{cartesian\+\_\+workout.\+raw\+\_\+pose} = \mbox{[}float(n) for n in sys.\+argv\mbox{[}2\+:\mbox{]}\mbox{]}
+\item 
+\hyperlink{namespacecartesian__workout_ac2ac6ec3a92f53155c4912cbf5c93604}{cartesian\+\_\+workout.\+result} = cartesian\+\_\+pose\+\_\+client(pos, orient)
+\end{DoxyCompactItemize}

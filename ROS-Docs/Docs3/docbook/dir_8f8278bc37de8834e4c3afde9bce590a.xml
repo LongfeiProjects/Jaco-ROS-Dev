@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="dir_8f8278bc37de8834e4c3afde9bce590a">
+    <title>D:/Longfei/Desktop/catkin_KinovaROS Directory Reference</title>
+<para>Directory dependency diagram for D:/Longfei/Desktop/catkin_KinovaROS</para>
+<para>
+    <figure>
+        <title>Directory Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../dir_8f8278bc37de8834e4c3afde9bce590a_dep.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+        <simplesect>
+            <title> Directories </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>dir <link linkend="dir_4cf018c95bde05c261c827fcce26ed41">D:/Longfei/Desktop/catkin_KinovaROS/build</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>dir <link linkend="dir_6d2199e3216986b511dae1f12d152008">D:/Longfei/Desktop/catkin_KinovaROS/devel</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>dir <link linkend="dir_dec05b110ecbd10fd93af20bc2b19e0e">D:/Longfei/Desktop/catkin_KinovaROS/src</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+    <simplesect>
+        <title>Detailed Description</title>
+    <para>Directory location is D:/Longfei/Desktop/catkin_KinovaROS/</para>
+    </simplesect>
+</section>

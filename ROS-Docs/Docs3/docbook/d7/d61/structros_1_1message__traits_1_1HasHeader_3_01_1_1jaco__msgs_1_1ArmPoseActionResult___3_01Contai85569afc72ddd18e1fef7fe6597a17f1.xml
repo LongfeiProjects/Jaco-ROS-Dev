@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="d7/d61/structros_1_1message__traits_1_1HasHeader_3_01_1_1jaco__msgs_1_1ArmPoseActionResult___3_01Contai85569afc72ddd18e1fef7fe6597a17f1">
+<title>ros::message_traits::HasHeader&lt; ::jaco_msgs::ArmPoseActionResult_&lt; ContainerAllocator &gt; const  &gt; struct Reference</title>
+<para>
+    <programlisting>#include <link linkend="d9/de0/ArmPoseActionResult_8h">&quot;ArmPoseActionResult.h&quot;</link></programlisting>
+</para>
+<para>Inheritance diagram for ros::message_traits::HasHeader&lt; ::jaco_msgs::ArmPoseActionResult_&lt; ContainerAllocator &gt; const  &gt;</para>
+<para>
+    <figure>
+        <title>Inheritance graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../d7/da0/structros_1_1message__traits_1_1HasHeader_3_01_1_1jaco__msgs_1_1ArmPoseActionResult___3_01Contaif0b165457a3e94a309a395b94179c719.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Collaboration diagram for ros::message_traits::HasHeader&lt; ::jaco_msgs::ArmPoseActionResult_&lt; ContainerAllocator &gt; const  &gt;</para>
+<para>
+    <figure>
+        <title>Collaboration graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../de/d4b/structros_1_1message__traits_1_1HasHeader_3_01_1_1jaco__msgs_1_1ArmPoseActionResult___3_01Contai35d3be233ec2112d61dd7545155d4ce3.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+    <templateparamlist>
+      <param>
+        <type>class ContainerAllocator</type>
+      </param>
+    </templateparamlist>
+</section>

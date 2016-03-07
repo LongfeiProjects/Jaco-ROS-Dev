@@ -1,0 +1,109 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="db/d40/structJoystickCommand">
+<title>JoystickCommand struct Reference</title>
+<para>
+    <programlisting>#include <link linkend="df/d36/KinovaTypes_8h">&quot;KinovaTypes.h&quot;</link></programlisting>
+</para>
+<para>Inheritance diagram for JoystickCommand</para>
+<para>
+    <figure>
+        <title>Inheritance graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../d8/de0/structJoystickCommand__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Collaboration diagram for JoystickCommand</para>
+<para>
+    <figure>
+        <title>Collaboration graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../d4/df2/structJoystickCommand__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+        <section>
+            <title>Public Attributes</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>short ButtonValue[JOYSTICK_BUTTON_COUNT]<para><emphasis>This array contains the state of all the buttons. (1 = PRESSED, 0 = RELEASED)</emphasis></para></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>float InclineForwardBackward<para><emphasis>That holds the behaviour of the stick when it is inclined forward and backward. (value between -1 and 1 inclusively)
+2 functionalities can be mapped with this value, there is an event when the value is negative and there is one when it is positive.</emphasis></para></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>float InclineLeftRight<para><emphasis>That holds the behaviour of the stick when it is inclined from left to right. (value between -1 and 1 inclusively)
+2 functionalities can be mapped with this value, there is an event when the value is negative and there is one when it is positive.</emphasis></para></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>float MoveForwardBackward<para><emphasis>That holds the behaviour of the stick when it is moved forward and backward. (value between -1 and 1 inclusively)
+2 functionalities can be mapped with this value, there is an event when the value is negative and there is one when it is positive.</emphasis></para></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>float MoveLeftRight<para><emphasis>That holds the behaviour of the stick when it is moved from left to right. (value between -1 and 1 inclusively)
+2 functionalities can be mapped with this value, there is an event when the value is negative and there is one when it is positive.</emphasis></para></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>float PushPull<para><emphasis>That holds the behaviour of the stick when it is pushed and pulled. (value between -1 and 1 inclusively)
+2 functionalities can be mapped with this value, there is an event when the value is negative and there is one when it is positive.</emphasis></para></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>float Rotate<para><emphasis>That holds the behaviour of the stick when it is rotated clockwork and counter clockwork. (value between -1 and 1 inclusively)
+2 functionalities can be mapped with this value, there is an event when the value is negative and there is one when it is positive.</emphasis></para></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="db/d40/structJoystickCommand_1ad3d41f607c6ea6916e061a8edae5a0e4">InitStruct</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+    <simplesect>
+
+<para>This is a virtual representation of a 6-axis joystick. </para>
+    </simplesect>
+        <section>
+            <title>Member Data Documentation</title>
+        </section>
+            <section xml:id="db/d40/structJoystickCommand_1ad3d41f607c6ea6916e061a8edae5a0e4">
+                <title>void JoystickCommand::InitStruct ()</title> <emphasis></emphasis>
+                
+            </section>
+</section>

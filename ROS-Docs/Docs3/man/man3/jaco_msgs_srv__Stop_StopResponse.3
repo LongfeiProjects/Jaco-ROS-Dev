@@ -1,0 +1,291 @@
+.TH "jaco_msgs.srv._Stop.StopResponse" 3 "Thu Mar 3 2016" "Version 1.0.1" "Kinova-ROS" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+jaco_msgs.srv._Stop.StopResponse \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits Message\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "def \fB__init__\fP (self, args, kwds)"
+.br
+.ti -1c
+.RI "def \fBdeserialize\fP (self, str)"
+.br
+.ti -1c
+.RI "def \fBdeserialize_numpy\fP (self, str, numpy)"
+.br
+.ti -1c
+.RI "def \fBserialize\fP (self, buff)"
+.br
+.ti -1c
+.RI "def \fBserialize_numpy\fP (self, buff, numpy)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBstop_result\fP"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "def \fB_get_types\fP (self)"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "list \fB__slots__\fP = ['\fBstop_result\fP']"
+.br
+.ti -1c
+.RI "string \fB_full_text\fP"
+.br
+.ti -1c
+.RI "bool \fB_has_header\fP = False"
+.br
+.ti -1c
+.RI "string \fB_md5sum\fP = '585dc4164508d473dff8f8b67a05d2ad'"
+.br
+.ti -1c
+.RI "list \fB_slot_types\fP = ['string']"
+.br
+.ti -1c
+.RI "string \fB_type\fP = 'jaco_msgs/\fBStopResponse\fP'"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "def jaco_msgs\&.srv\&._Stop\&.StopResponse\&.__init__ ( self,  args,  kwds)"
+
+.PP
+.nf
+Constructor. Any message fields that are implicitly/explicitly
+set to None will be assigned a default value. The recommend
+use is keyword arguments as this is more robust to future message
+changes.  You cannot mix in-order arguments and keyword arguments.
+
+The available fields are:
+   stop_result
+
+:param args: complete set of field values, in .msg order
+:param kwds: use keyword arguments corresponding to message field names
+to set specific fields.
+
+.fi
+.PP
+ 
+.PP
+.nf
+104   def __init__(self, *args, **kwds):
+105     """
+106     Constructor\&. Any message fields that are implicitly/explicitly
+107     set to None will be assigned a default value\&. The recommend
+108     use is keyword arguments as this is more robust to future message
+109     changes\&.  You cannot mix in-order arguments and keyword arguments\&.
+110 
+111     The available fields are:
+112        stop_result
+113 
+114     :param args: complete set of field values, in \&.msg order
+115     :param kwds: use keyword arguments corresponding to message field names
+116     to set specific fields\&.
+117     """
+118     if args or kwds:
+119       super(StopResponse, self)\&.__init__(*args, **kwds)
+120       #message fields cannot be None, assign default values for those that are
+121       if self\&.stop_result is None:
+122         self\&.stop_result = ''
+123     else:
+124       self\&.stop_result = ''
+125 
+.fi
+.SH "Member Function Documentation"
+.PP 
+.SS "def jaco_msgs\&.srv\&._Stop\&.StopResponse\&._get_types ( self)\fC [private]\fP"
+
+.PP
+.nf
+internal API method
+
+.fi
+.PP
+ 
+.PP
+.nf
+126   def _get_types(self):
+127     """
+128     internal API method
+129     """
+130     return self\&._slot_types
+131 
+.fi
+.SS "def jaco_msgs\&.srv\&._Stop\&.StopResponse\&.deserialize ( self,  str)"
+
+.PP
+.nf
+unpack serialized message in str into this message instance
+:param str: byte array of serialized message, ``str``
+
+.fi
+.PP
+ 
+.PP
+.nf
+147   def deserialize(self, str):
+148     """
+149     unpack serialized message in str into this message instance
+150     :param str: byte array of serialized message, ``str``
+151     """
+152     try:
+153       end = 0
+154       start = end
+155       end += 4
+156       (length,) = _struct_I\&.unpack(str[start:end])
+157       start = end
+158       end += length
+159       if python3:
+160         self\&.stop_result = str[start:end]\&.decode('utf-8')
+161       else:
+162         self\&.stop_result = str[start:end]
+163       return self
+164     except struct\&.error as e:
+165       raise genpy\&.DeserializationError(e) #most likely buffer underfill
+166 
+167 
+.fi
+.SS "def jaco_msgs\&.srv\&._Stop\&.StopResponse\&.deserialize_numpy ( self,  str,  numpy)"
+
+.PP
+.nf
+unpack serialized message in str into this message instance using numpy for array types
+:param str: byte array of serialized message, ``str``
+:param numpy: numpy python module
+
+.fi
+.PP
+ 
+.PP
+.nf
+184   def deserialize_numpy(self, str, numpy):
+185     """
+186     unpack serialized message in str into this message instance using numpy for array types
+187     :param str: byte array of serialized message, ``str``
+188     :param numpy: numpy python module
+189     """
+190     try:
+191       end = 0
+192       start = end
+193       end += 4
+194       (length,) = _struct_I\&.unpack(str[start:end])
+195       start = end
+196       end += length
+197       if python3:
+198         self\&.stop_result = str[start:end]\&.decode('utf-8')
+199       else:
+200         self\&.stop_result = str[start:end]
+201       return self
+202     except struct\&.error as e:
+203       raise genpy\&.DeserializationError(e) #most likely buffer underfill
+204 
+.fi
+.SS "def jaco_msgs\&.srv\&._Stop\&.StopResponse\&.serialize ( self,  buff)"
+
+.PP
+.nf
+serialize message into buffer
+:param buff: buffer, ``StringIO``
+
+.fi
+.PP
+ 
+.PP
+.nf
+132   def serialize(self, buff):
+133     """
+134     serialize message into buffer
+135     :param buff: buffer, ``StringIO``
+136     """
+137     try:
+138       _x = self\&.stop_result
+139       length = len(_x)
+140       if python3 or type(_x) == unicode:
+141         _x = _x\&.encode('utf-8')
+142         length = len(_x)
+143       buff\&.write(struct\&.pack('<I%ss'%length, length, _x))
+144     except struct\&.error as se: self\&._check_types(struct\&.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(_x))))
+145     except TypeError as te: self\&._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(_x))))
+146 
+.fi
+.SS "def jaco_msgs\&.srv\&._Stop\&.StopResponse\&.serialize_numpy ( self,  buff,  numpy)"
+
+.PP
+.nf
+serialize message with numpy array types into buffer
+:param buff: buffer, ``StringIO``
+:param numpy: numpy python module
+
+.fi
+.PP
+ 
+.PP
+.nf
+168   def serialize_numpy(self, buff, numpy):
+169     """
+170     serialize message with numpy array types into buffer
+171     :param buff: buffer, ``StringIO``
+172     :param numpy: numpy python module
+173     """
+174     try:
+175       _x = self\&.stop_result
+176       length = len(_x)
+177       if python3 or type(_x) == unicode:
+178         _x = _x\&.encode('utf-8')
+179         length = len(_x)
+180       buff\&.write(struct\&.pack('<I%ss'%length, length, _x))
+181     except struct\&.error as se: self\&._check_types(struct\&.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(_x))))
+182     except TypeError as te: self\&._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(_x))))
+183 
+.fi
+.SH "Member Data Documentation"
+.PP 
+.SS "list jaco_msgs\&.srv\&._Stop\&.StopResponse\&.__slots__ = ['\fBstop_result\fP']\fC [static]\fP, \fC [private]\fP"
+
+.SS "string jaco_msgs\&.srv\&._Stop\&.StopResponse\&._full_text\fC [static]\fP, \fC [private]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+1 = """string stop_result
+2 
+3 
+4 """
+.fi
+.SS "bool jaco_msgs\&.srv\&._Stop\&.StopResponse\&._has_header = False\fC [static]\fP, \fC [private]\fP"
+
+.SS "string jaco_msgs\&.srv\&._Stop\&.StopResponse\&._md5sum = '585dc4164508d473dff8f8b67a05d2ad'\fC [static]\fP, \fC [private]\fP"
+
+.SS "list jaco_msgs\&.srv\&._Stop\&.StopResponse\&._slot_types = ['string']\fC [static]\fP, \fC [private]\fP"
+
+.PP
+Referenced by jaco_msgs\&.srv\&._Stop\&.StopResponse\&._get_types()\&.
+.SS "string jaco_msgs\&.srv\&._Stop\&.StopResponse\&._type = 'jaco_msgs/\fBStopResponse\fP'\fC [static]\fP, \fC [private]\fP"
+
+.SS "jaco_msgs\&.srv\&._Stop\&.StopResponse\&.stop_result"
+
+.PP
+Referenced by jaco_msgs\&.srv\&._Stop\&.StopResponse\&.__init__(), jaco_msgs\&.srv\&._Stop\&.StopResponse\&.deserialize(), jaco_msgs\&.srv\&._Stop\&.StopResponse\&.deserialize_numpy(), jaco_msgs\&.srv\&._Stop\&.StopResponse\&.serialize(), and jaco_msgs\&.srv\&._Stop\&.StopResponse\&.serialize_numpy()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Kinova-ROS from the source code\&.

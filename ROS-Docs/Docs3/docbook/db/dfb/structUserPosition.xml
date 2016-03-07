@@ -1,0 +1,96 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="db/dfb/structUserPosition">
+<title>UserPosition struct Reference</title>
+<para>
+    <programlisting>#include <link linkend="df/d36/KinovaTypes_8h">&quot;Definition&quot;</link></programlisting>
+</para>
+<para>Inheritance diagram for UserPosition</para>
+<para>
+    <figure>
+        <title>Inheritance graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../d7/d6e/structUserPosition__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Collaboration diagram for UserPosition</para>
+<para>
+    <figure>
+        <title>Collaboration graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../d9/daa/structUserPosition__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+        <section>
+            <title>Public Attributes</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>AngularInfo Actuators<para><emphasis>Angular information about this position.</emphasis></para></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>CartesianInfo CartesianPosition<para><emphasis>Cartesian information about this position.</emphasis></para></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>float Delay<para><emphasis>This is used only if the type of position is TIME_DELAY. It represents the delay in second.</emphasis></para></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>FingersPosition Fingers<para><emphasis>fingers information about this position.</emphasis></para></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>HAND_MODE HandMode<para><emphasis>Mode of the gripper.</emphasis></para></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>POSITION_TYPE Type<para><emphasis>The type of this position.</emphasis></para></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="db/dfb/structUserPosition_1ad682f9be07fa2307028f86624ded2958">InitStruct</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+    <simplesect>
+
+<para>This data structure represents an abstract position built by a user. Depending on the control type the Cartesian information, the angular information or both will be used. </para>
+    </simplesect>
+        <section>
+            <title>Member Data Documentation</title>
+        </section>
+            <section xml:id="db/dfb/structUserPosition_1ad682f9be07fa2307028f86624ded2958">
+                <title>void UserPosition::InitStruct ()</title> <emphasis></emphasis>
+                
+            </section>
+</section>

@@ -1,0 +1,495 @@
+\hypertarget{namespace__setup__util}{}\section{\+\_\+setup\+\_\+util Namespace Reference}
+\label{namespace__setup__util}\index{\+\_\+setup\+\_\+util@{\+\_\+setup\+\_\+util}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{namespace__setup__util_ab2be07aa31918f1e1e34d6b7c4d66fcb}{\+\_\+get\+\_\+workspaces} (\hyperlink{namespace__setup__util_a9a935bdd9ee1aa0327161025bb18c136}{environ}, include\+\_\+fuerte=False, include\+\_\+non\+\_\+existing=False)
+\item 
+def \hyperlink{namespace__setup__util_a57d9ecb280810c9a5409d44aeb9d0a25}{\+\_\+parse\+\_\+arguments} (\hyperlink{namespace__setup__util_a547963d07c6371df1c51b1384a2dec28}{args}=None)
+\item 
+def \hyperlink{namespace__setup__util_a01264d729d05078ec7ee1cad54fe6489}{\+\_\+prefix\+\_\+env\+\_\+variable} (\hyperlink{namespace__setup__util_a9a935bdd9ee1aa0327161025bb18c136}{environ}, name, paths, subfolder)
+\item 
+def \hyperlink{namespace__setup__util_a45389205be3d6e2efe8b6f8409a8059b}{\+\_\+rollback\+\_\+env\+\_\+variable} (\hyperlink{namespace__setup__util_a9a935bdd9ee1aa0327161025bb18c136}{environ}, name, subfolder)
+\item 
+def \hyperlink{namespace__setup__util_ad56c24837fa4eddc63c03fbc7035628f}{assignment} (key, value)
+\item 
+def \hyperlink{namespace__setup__util_abe8c95c4cfe8b1374dacd5f91d984353}{comment} (msg)
+\item 
+def \hyperlink{namespace__setup__util_a73de35ca77f260af6691470342ab49ce}{find\+\_\+env\+\_\+hooks} (\hyperlink{namespace__setup__util_a9a935bdd9ee1aa0327161025bb18c136}{environ}, cmake\+\_\+prefix\+\_\+path)
+\item 
+def \hyperlink{namespace__setup__util_ae78d86b2c4279f5b8b1acaa146c35802}{prepend} (\hyperlink{namespace__setup__util_a9a935bdd9ee1aa0327161025bb18c136}{environ}, key, prefix)
+\item 
+def \hyperlink{namespace__setup__util_a832417d18b85bd1d276a87547e86f860}{prepend\+\_\+env\+\_\+variables} (\hyperlink{namespace__setup__util_a9a935bdd9ee1aa0327161025bb18c136}{environ}, env\+\_\+var\+\_\+subfolders, workspaces)
+\item 
+def \hyperlink{namespace__setup__util_af3030db6102b5aa35cd354a2fb6cca03}{rollback\+\_\+env\+\_\+variables} (\hyperlink{namespace__setup__util_a9a935bdd9ee1aa0327161025bb18c136}{environ}, env\+\_\+var\+\_\+subfolders)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{namespace__setup__util_a547963d07c6371df1c51b1384a2dec28}{args} = \hyperlink{namespace__setup__util_a57d9ecb280810c9a5409d44aeb9d0a25}{\+\_\+parse\+\_\+arguments}()
+\item 
+\hyperlink{namespace__setup__util_a83d25140acd7788bbcb95843fe38e639}{base\+\_\+path} = os.\+path.\+dirname(\+\_\+\+\_\+file\+\_\+\+\_\+)
+\item 
+string \hyperlink{namespace__setup__util_a3fa0ca5a460a71a43cbc3d4954ab1f10}{C\+A\+T\+K\+I\+N\+\_\+\+M\+A\+R\+K\+E\+R\+\_\+\+F\+I\+LE} = \textquotesingle{}.catkin\textquotesingle{}
+\item 
+string \hyperlink{namespace__setup__util_a57afd3d2c076955fb715f3e72ef098eb}{C\+M\+A\+K\+E\+\_\+\+P\+R\+E\+F\+I\+X\+\_\+\+P\+A\+TH} = \textquotesingle{}/home/longfei/catkin\+\_\+ws/devel;/opt/ros/hydro\textquotesingle{}
+\item 
+\hyperlink{namespace__setup__util_acdce690b925de33d6249bbbfa1109d61}{e}
+\item 
+dictionary \hyperlink{namespace__setup__util_aa31804f1be8660156ce9394b33c68dc4}{E\+N\+V\+\_\+\+V\+A\+R\+\_\+\+S\+U\+B\+F\+O\+L\+D\+E\+RS}
+\item 
+\hyperlink{namespace__setup__util_a9a935bdd9ee1aa0327161025bb18c136}{environ} = dict(os.\+environ)
+\item 
+\hyperlink{namespace__setup__util_aea63a1b32cc79bc3d872ab7cb30dd07e}{file}
+\item 
+tuple \hyperlink{namespace__setup__util_aecbb100ce6f94bb3c7e16d58fde05f96}{I\+S\+\_\+\+D\+A\+R\+W\+IN} = (\hyperlink{namespace__setup__util_ae9fca6a80a6923f4580be72f68fee325}{system} == \textquotesingle{}Darwin\textquotesingle{})
+\item 
+tuple \hyperlink{namespace__setup__util_a6fe69c2dbd92959b6651a28cbb846e6e}{I\+S\+\_\+\+W\+I\+N\+D\+O\+WS} = (\hyperlink{namespace__setup__util_ae9fca6a80a6923f4580be72f68fee325}{system} == \textquotesingle{}Windows\textquotesingle{})
+\item 
+list \hyperlink{namespace__setup__util_a8618d8be5f729d4c9696daa5e083a001}{lines} = \mbox{[}$\,$\mbox{]}
+\item 
+\hyperlink{namespace__setup__util_ae9fca6a80a6923f4580be72f68fee325}{system} = platform.\+system()
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{\+\_\+setup\+\_\+util@{\+\_\+setup\+\_\+util}!\+\_\+get\+\_\+workspaces@{\+\_\+get\+\_\+workspaces}}
+\index{\+\_\+get\+\_\+workspaces@{\+\_\+get\+\_\+workspaces}!\+\_\+setup\+\_\+util@{\+\_\+setup\+\_\+util}}
+\subsubsection[{\texorpdfstring{\+\_\+get\+\_\+workspaces(environ, include\+\_\+fuerte=\+False, include\+\_\+non\+\_\+existing=\+False)}{_get_workspaces(environ, include_fuerte=False, include_non_existing=False)}}]{\setlength{\rightskip}{0pt plus 5cm}def \+\_\+setup\+\_\+util.\+\_\+get\+\_\+workspaces (
+\begin{DoxyParamCaption}
+\item[{}]{environ, }
+\item[{}]{include\+\_\+fuerte = {\ttfamily False}, }
+\item[{}]{include\+\_\+non\+\_\+existing = {\ttfamily False}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{namespace__setup__util_ab2be07aa31918f1e1e34d6b7c4d66fcb}{}\label{namespace__setup__util_ab2be07aa31918f1e1e34d6b7c4d66fcb}
+\begin{DoxyVerb}Based on CMAKE_PREFIX_PATH return all catkin workspaces.
+
+:param include_fuerte: The flag if paths starting with '/opt/ros/fuerte' should be considered workspaces, ``bool``
+\end{DoxyVerb}
+ 
+\begin{DoxyCode}
+111 \textcolor{keyword}{def }\hyperlink{namespace__setup__util_ab2be07aa31918f1e1e34d6b7c4d66fcb}{\_get\_workspaces}(environ, include\_fuerte=False, include\_non\_existing=False):
+112     \textcolor{stringliteral}{'''}
+113 \textcolor{stringliteral}{    Based on CMAKE\_PREFIX\_PATH return all catkin workspaces.}
+114 \textcolor{stringliteral}{}
+115 \textcolor{stringliteral}{    :param include\_fuerte: The flag if paths starting with '/opt/ros/fuerte' should be considered
+       workspaces, ``bool``}
+116 \textcolor{stringliteral}{    '''}
+117     \textcolor{comment}{# get all cmake prefix paths}
+118     env\_name = \textcolor{stringliteral}{'CMAKE\_PREFIX\_PATH'}
+119     value = environ[env\_name] \textcolor{keywordflow}{if} env\_name \textcolor{keywordflow}{in} environ \textcolor{keywordflow}{else} \textcolor{stringliteral}{''}
+120     paths = [path \textcolor{keywordflow}{for} path \textcolor{keywordflow}{in} value.split(os.pathsep) \textcolor{keywordflow}{if} path]
+121     \textcolor{comment}{# remove non-workspace paths}
+122     workspaces = [path \textcolor{keywordflow}{for} path \textcolor{keywordflow}{in} paths \textcolor{keywordflow}{if} os.path.isfile(os.path.join(path, CATKIN\_MARKER\_FILE)) \textcolor{keywordflow}{or} (
+      include\_fuerte \textcolor{keywordflow}{and} path.startswith(\textcolor{stringliteral}{'/opt/ros/fuerte'})) \textcolor{keywordflow}{or} (include\_non\_existing \textcolor{keywordflow}{and} \textcolor{keywordflow}{not} os.path.exists(path))]
+123     \textcolor{keywordflow}{return} workspaces
+124 
+125 
+\end{DoxyCode}
+\index{\+\_\+setup\+\_\+util@{\+\_\+setup\+\_\+util}!\+\_\+parse\+\_\+arguments@{\+\_\+parse\+\_\+arguments}}
+\index{\+\_\+parse\+\_\+arguments@{\+\_\+parse\+\_\+arguments}!\+\_\+setup\+\_\+util@{\+\_\+setup\+\_\+util}}
+\subsubsection[{\texorpdfstring{\+\_\+parse\+\_\+arguments(args=\+None)}{_parse_arguments(args=None)}}]{\setlength{\rightskip}{0pt plus 5cm}def \+\_\+setup\+\_\+util.\+\_\+parse\+\_\+arguments (
+\begin{DoxyParamCaption}
+\item[{}]{args = {\ttfamily None}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{namespace__setup__util_a57d9ecb280810c9a5409d44aeb9d0a25}{}\label{namespace__setup__util_a57d9ecb280810c9a5409d44aeb9d0a25}
+
+\begin{DoxyCode}
+240 \textcolor{keyword}{def }\hyperlink{namespace__setup__util_a57d9ecb280810c9a5409d44aeb9d0a25}{\_parse\_arguments}(args=None):
+241     parser = argparse.ArgumentParser(description=\textcolor{stringliteral}{'Generates code blocks for the setup.SHELL script.'})
+242     parser.add\_argument(\textcolor{stringliteral}{'--extend'}, action=\textcolor{stringliteral}{'store\_true'}, help=\textcolor{stringliteral}{'Skip unsetting previous environment
+       variables to extend context'})
+243     \textcolor{keywordflow}{return} parser.parse\_known\_args(args=args)[0]
+244 
+245 
+\end{DoxyCode}
+\index{\+\_\+setup\+\_\+util@{\+\_\+setup\+\_\+util}!\+\_\+prefix\+\_\+env\+\_\+variable@{\+\_\+prefix\+\_\+env\+\_\+variable}}
+\index{\+\_\+prefix\+\_\+env\+\_\+variable@{\+\_\+prefix\+\_\+env\+\_\+variable}!\+\_\+setup\+\_\+util@{\+\_\+setup\+\_\+util}}
+\subsubsection[{\texorpdfstring{\+\_\+prefix\+\_\+env\+\_\+variable(environ, name, paths, subfolder)}{_prefix_env_variable(environ, name, paths, subfolder)}}]{\setlength{\rightskip}{0pt plus 5cm}def \+\_\+setup\+\_\+util.\+\_\+prefix\+\_\+env\+\_\+variable (
+\begin{DoxyParamCaption}
+\item[{}]{environ, }
+\item[{}]{name, }
+\item[{}]{paths, }
+\item[{}]{subfolder}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{namespace__setup__util_a01264d729d05078ec7ee1cad54fe6489}{}\label{namespace__setup__util_a01264d729d05078ec7ee1cad54fe6489}
+\begin{DoxyVerb}Return the prefix to prepend to the environment variable NAME, adding any path in NEW_PATHS_STR without creating duplicate or empty items.
+\end{DoxyVerb}
+ 
+\begin{DoxyCode}
+146 \textcolor{keyword}{def }\hyperlink{namespace__setup__util_a01264d729d05078ec7ee1cad54fe6489}{\_prefix\_env\_variable}(environ, name, paths, subfolder):
+147     \textcolor{stringliteral}{'''}
+148 \textcolor{stringliteral}{    Return the prefix to prepend to the environment variable NAME, adding any path in NEW\_PATHS\_STR without
+       creating duplicate or empty items.}
+149 \textcolor{stringliteral}{    '''}
+150     value = environ[name] \textcolor{keywordflow}{if} name \textcolor{keywordflow}{in} environ \textcolor{keywordflow}{else} \textcolor{stringliteral}{''}
+151     environ\_paths = [path \textcolor{keywordflow}{for} path \textcolor{keywordflow}{in} value.split(os.pathsep) \textcolor{keywordflow}{if} path]
+152     checked\_paths = []
+153     \textcolor{keywordflow}{for} path \textcolor{keywordflow}{in} paths:
+154         \textcolor{keywordflow}{if} subfolder:
+155             path = os.path.join(path, subfolder)
+156         \textcolor{comment}{# exclude any path already in env and any path we already added}
+157         \textcolor{keywordflow}{if} path \textcolor{keywordflow}{not} \textcolor{keywordflow}{in} environ\_paths \textcolor{keywordflow}{and} path \textcolor{keywordflow}{not} \textcolor{keywordflow}{in} checked\_paths:
+158             checked\_paths.append(path)
+159     prefix\_str = os.pathsep.join(checked\_paths)
+160     \textcolor{keywordflow}{if} prefix\_str != \textcolor{stringliteral}{''} \textcolor{keywordflow}{and} environ\_paths:
+161         prefix\_str += os.pathsep
+162     \textcolor{keywordflow}{return} prefix\_str
+163 
+164 
+\end{DoxyCode}
+\index{\+\_\+setup\+\_\+util@{\+\_\+setup\+\_\+util}!\+\_\+rollback\+\_\+env\+\_\+variable@{\+\_\+rollback\+\_\+env\+\_\+variable}}
+\index{\+\_\+rollback\+\_\+env\+\_\+variable@{\+\_\+rollback\+\_\+env\+\_\+variable}!\+\_\+setup\+\_\+util@{\+\_\+setup\+\_\+util}}
+\subsubsection[{\texorpdfstring{\+\_\+rollback\+\_\+env\+\_\+variable(environ, name, subfolder)}{_rollback_env_variable(environ, name, subfolder)}}]{\setlength{\rightskip}{0pt plus 5cm}def \+\_\+setup\+\_\+util.\+\_\+rollback\+\_\+env\+\_\+variable (
+\begin{DoxyParamCaption}
+\item[{}]{environ, }
+\item[{}]{name, }
+\item[{}]{subfolder}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{namespace__setup__util_a45389205be3d6e2efe8b6f8409a8059b}{}\label{namespace__setup__util_a45389205be3d6e2efe8b6f8409a8059b}
+\begin{DoxyVerb}For each catkin workspace in CMAKE_PREFIX_PATH remove the first entry from env[NAME] matching workspace + subfolder.
+
+:param subfolder: str '' or subfoldername that may start with '/'
+:returns: the updated value of the environment variable.
+\end{DoxyVerb}
+ 
+\begin{DoxyCode}
+81 \textcolor{keyword}{def }\hyperlink{namespace__setup__util_a45389205be3d6e2efe8b6f8409a8059b}{\_rollback\_env\_variable}(environ, name, subfolder):
+82     \textcolor{stringliteral}{'''}
+83 \textcolor{stringliteral}{    For each catkin workspace in CMAKE\_PREFIX\_PATH remove the first entry from env[NAME] matching workspace
+       + subfolder.}
+84 \textcolor{stringliteral}{}
+85 \textcolor{stringliteral}{    :param subfolder: str '' or subfoldername that may start with '/'}
+86 \textcolor{stringliteral}{    :returns: the updated value of the environment variable.}
+87 \textcolor{stringliteral}{    '''}
+88     value = environ[name] \textcolor{keywordflow}{if} name \textcolor{keywordflow}{in} environ \textcolor{keywordflow}{else} \textcolor{stringliteral}{''}
+89     env\_paths = [path \textcolor{keywordflow}{for} path \textcolor{keywordflow}{in} value.split(os.pathsep) \textcolor{keywordflow}{if} path]
+90     value\_modified = \textcolor{keyword}{False}
+91     \textcolor{keywordflow}{if} subfolder:
+92         \textcolor{keywordflow}{if} subfolder.startswith(os.path.sep) \textcolor{keywordflow}{or} (os.path.altsep \textcolor{keywordflow}{and} subfolder.startswith(os.path.altsep)):
+93             subfolder = subfolder[1:]
+94         \textcolor{keywordflow}{if} subfolder.endswith(os.path.sep) \textcolor{keywordflow}{or} (os.path.altsep \textcolor{keywordflow}{and} subfolder.endswith(os.path.altsep)):
+95             subfolder = subfolder[:-1]
+96     \textcolor{keywordflow}{for} ws\_path \textcolor{keywordflow}{in} \hyperlink{namespace__setup__util_ab2be07aa31918f1e1e34d6b7c4d66fcb}{\_get\_workspaces}(environ, include\_fuerte=\textcolor{keyword}{True}, include\_non\_existing=\textcolor{keyword}{True}):
+97         path\_to\_find = os.path.join(ws\_path, subfolder) \textcolor{keywordflow}{if} subfolder \textcolor{keywordflow}{else} ws\_path
+98         path\_to\_remove = \textcolor{keywordtype}{None}
+99         \textcolor{keywordflow}{for} env\_path \textcolor{keywordflow}{in} env\_paths:
+100             env\_path\_clean = env\_path[:-1] \textcolor{keywordflow}{if} env\_path \textcolor{keywordflow}{and} env\_path[-1] \textcolor{keywordflow}{in} [os.path.sep, os.path.altsep] \textcolor{keywordflow}{
+      else} env\_path
+101             \textcolor{keywordflow}{if} env\_path\_clean == path\_to\_find:
+102                 path\_to\_remove = env\_path
+103                 \textcolor{keywordflow}{break}
+104         \textcolor{keywordflow}{if} path\_to\_remove:
+105             env\_paths.remove(path\_to\_remove)
+106             value\_modified = \textcolor{keyword}{True}
+107     new\_value = os.pathsep.join(env\_paths)
+108     \textcolor{keywordflow}{return} new\_value \textcolor{keywordflow}{if} value\_modified \textcolor{keywordflow}{else} \textcolor{keywordtype}{None}
+109 
+110 
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/dc0/namespace__setup__util_a45389205be3d6e2efe8b6f8409a8059b_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{\+\_\+setup\+\_\+util@{\+\_\+setup\+\_\+util}!assignment@{assignment}}
+\index{assignment@{assignment}!\+\_\+setup\+\_\+util@{\+\_\+setup\+\_\+util}}
+\subsubsection[{\texorpdfstring{assignment(key, value)}{assignment(key, value)}}]{\setlength{\rightskip}{0pt plus 5cm}def \+\_\+setup\+\_\+util.\+assignment (
+\begin{DoxyParamCaption}
+\item[{}]{key, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)}\hypertarget{namespace__setup__util_ad56c24837fa4eddc63c03fbc7035628f}{}\label{namespace__setup__util_ad56c24837fa4eddc63c03fbc7035628f}
+
+\begin{DoxyCode}
+165 \textcolor{keyword}{def }\hyperlink{namespace__setup__util_ad56c24837fa4eddc63c03fbc7035628f}{assignment}(key, value):
+166     \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} IS\_WINDOWS:
+167         \textcolor{keywordflow}{return} \textcolor{stringliteral}{'export %s="%s"'} % (key, value)
+168     \textcolor{keywordflow}{else}:
+169         \textcolor{keywordflow}{return} \textcolor{stringliteral}{'set %s=%s'} % (key, value)
+170 
+171 
+\end{DoxyCode}
+\index{\+\_\+setup\+\_\+util@{\+\_\+setup\+\_\+util}!comment@{comment}}
+\index{comment@{comment}!\+\_\+setup\+\_\+util@{\+\_\+setup\+\_\+util}}
+\subsubsection[{\texorpdfstring{comment(msg)}{comment(msg)}}]{\setlength{\rightskip}{0pt plus 5cm}def \+\_\+setup\+\_\+util.\+comment (
+\begin{DoxyParamCaption}
+\item[{}]{msg}
+\end{DoxyParamCaption}
+)}\hypertarget{namespace__setup__util_abe8c95c4cfe8b1374dacd5f91d984353}{}\label{namespace__setup__util_abe8c95c4cfe8b1374dacd5f91d984353}
+
+\begin{DoxyCode}
+172 \textcolor{keyword}{def }\hyperlink{namespace__setup__util_abe8c95c4cfe8b1374dacd5f91d984353}{comment}(msg):
+173     \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} IS\_WINDOWS:
+174         \textcolor{keywordflow}{return} \textcolor{stringliteral}{'# %s'} % msg
+175     \textcolor{keywordflow}{else}:
+176         \textcolor{keywordflow}{return} \textcolor{stringliteral}{'REM %s'} % msg
+177 
+178 
+\end{DoxyCode}
+\index{\+\_\+setup\+\_\+util@{\+\_\+setup\+\_\+util}!find\+\_\+env\+\_\+hooks@{find\+\_\+env\+\_\+hooks}}
+\index{find\+\_\+env\+\_\+hooks@{find\+\_\+env\+\_\+hooks}!\+\_\+setup\+\_\+util@{\+\_\+setup\+\_\+util}}
+\subsubsection[{\texorpdfstring{find\+\_\+env\+\_\+hooks(environ, cmake\+\_\+prefix\+\_\+path)}{find_env_hooks(environ, cmake_prefix_path)}}]{\setlength{\rightskip}{0pt plus 5cm}def \+\_\+setup\+\_\+util.\+find\+\_\+env\+\_\+hooks (
+\begin{DoxyParamCaption}
+\item[{}]{environ, }
+\item[{}]{cmake\+\_\+prefix\+\_\+path}
+\end{DoxyParamCaption}
+)}\hypertarget{namespace__setup__util_a73de35ca77f260af6691470342ab49ce}{}\label{namespace__setup__util_a73de35ca77f260af6691470342ab49ce}
+\begin{DoxyVerb}Generate shell code with found environment hooks
+for the all workspaces.
+\end{DoxyVerb}
+ 
+\begin{DoxyCode}
+188 \textcolor{keyword}{def }\hyperlink{namespace__setup__util_a73de35ca77f260af6691470342ab49ce}{find\_env\_hooks}(environ, cmake\_prefix\_path):
+189     \textcolor{stringliteral}{'''}
+190 \textcolor{stringliteral}{    Generate shell code with found environment hooks}
+191 \textcolor{stringliteral}{    for the all workspaces.}
+192 \textcolor{stringliteral}{    '''}
+193     lines = []
+194     lines.append(\hyperlink{namespace__setup__util_abe8c95c4cfe8b1374dacd5f91d984353}{comment}(\textcolor{stringliteral}{'found environment hooks in workspaces'}))
+195 
+196     generic\_env\_hooks = []
+197     generic\_env\_hooks\_workspace = []
+198     specific\_env\_hooks = []
+199     specific\_env\_hooks\_workspace = []
+200     generic\_env\_hooks\_by\_filename = \{\}
+201     specific\_env\_hooks\_by\_filename = \{\}
+202     generic\_env\_hook\_ext = \textcolor{stringliteral}{'bat'} \textcolor{keywordflow}{if} IS\_WINDOWS \textcolor{keywordflow}{else} \textcolor{stringliteral}{'sh'}
+203     specific\_env\_hook\_ext = environ[\textcolor{stringliteral}{'CATKIN\_SHELL'}] \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} IS\_WINDOWS \textcolor{keywordflow}{and} \textcolor{stringliteral}{'CATKIN\_SHELL'} \textcolor{keywordflow}{in} environ \textcolor{keywordflow}{and} 
+      environ[\textcolor{stringliteral}{'CATKIN\_SHELL'}] \textcolor{keywordflow}{else} \textcolor{keywordtype}{None}
+204     \textcolor{comment}{# remove non-workspace paths}
+205     workspaces = [path \textcolor{keywordflow}{for} path \textcolor{keywordflow}{in} cmake\_prefix\_path.split(os.pathsep) \textcolor{keywordflow}{if} path \textcolor{keywordflow}{and} os.path.isfile(
+      os.path.join(path, CATKIN\_MARKER\_FILE))]
+206     \textcolor{keywordflow}{for} workspace \textcolor{keywordflow}{in} reversed(workspaces):
+207         env\_hook\_dir = os.path.join(workspace, \textcolor{stringliteral}{'etc'}, \textcolor{stringliteral}{'catkin'}, \textcolor{stringliteral}{'profile.d'})
+208         \textcolor{keywordflow}{if} os.path.isdir(env\_hook\_dir):
+209             \textcolor{keywordflow}{for} filename \textcolor{keywordflow}{in} sorted(os.listdir(env\_hook\_dir)):
+210                 \textcolor{keywordflow}{if} filename.endswith(\textcolor{stringliteral}{'.%s'} % generic\_env\_hook\_ext):
+211                     \textcolor{comment}{# remove previous env hook with same name if present}
+212                     \textcolor{keywordflow}{if} filename \textcolor{keywordflow}{in} generic\_env\_hooks\_by\_filename:
+213                         i = generic\_env\_hooks.index(generic\_env\_hooks\_by\_filename[filename])
+214                         generic\_env\_hooks.pop(i)
+215                         generic\_env\_hooks\_workspace.pop(i)
+216                     \textcolor{comment}{# append env hook}
+217                     generic\_env\_hooks.append(os.path.join(env\_hook\_dir, filename))
+218                     generic\_env\_hooks\_workspace.append(workspace)
+219                     generic\_env\_hooks\_by\_filename[filename] = generic\_env\_hooks[-1]
+220                 \textcolor{keywordflow}{elif} specific\_env\_hook\_ext \textcolor{keywordflow}{is} \textcolor{keywordflow}{not} \textcolor{keywordtype}{None} \textcolor{keywordflow}{and} filename.endswith(\textcolor{stringliteral}{'.%s'} % specific\_env\_hook\_ext)
+      :
+221                     \textcolor{comment}{# remove previous env hook with same name if present}
+222                     \textcolor{keywordflow}{if} filename \textcolor{keywordflow}{in} specific\_env\_hooks\_by\_filename:
+223                         i = specific\_env\_hooks.index(specific\_env\_hooks\_by\_filename[filename])
+224                         specific\_env\_hooks.pop(i)
+225                         specific\_env\_hooks\_workspace.pop(i)
+226                     \textcolor{comment}{# append env hook}
+227                     specific\_env\_hooks.append(os.path.join(env\_hook\_dir, filename))
+228                     specific\_env\_hooks\_workspace.append(workspace)
+229                     specific\_env\_hooks\_by\_filename[filename] = specific\_env\_hooks[-1]
+230     env\_hooks = generic\_env\_hooks + specific\_env\_hooks
+231     env\_hooks\_workspace = generic\_env\_hooks\_workspace + specific\_env\_hooks\_workspace
+232     count = len(env\_hooks)
+233     lines.append(\hyperlink{namespace__setup__util_ad56c24837fa4eddc63c03fbc7035628f}{assignment}(\textcolor{stringliteral}{'\_CATKIN\_ENVIRONMENT\_HOOKS\_COUNT'}, count))
+234     \textcolor{keywordflow}{for} i \textcolor{keywordflow}{in} range(count):
+235         lines.append(\hyperlink{namespace__setup__util_ad56c24837fa4eddc63c03fbc7035628f}{assignment}(\textcolor{stringliteral}{'\_CATKIN\_ENVIRONMENT\_HOOKS\_%d'} % i, env\_hooks[i]))
+236         lines.append(\hyperlink{namespace__setup__util_ad56c24837fa4eddc63c03fbc7035628f}{assignment}(\textcolor{stringliteral}{'\_CATKIN\_ENVIRONMENT\_HOOKS\_%d\_WORKSPACE'} % i, env\_hooks\_workspace
+      [i]))
+237     \textcolor{keywordflow}{return} lines
+238 
+239 
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=334pt]{df/dc0/namespace__setup__util_a73de35ca77f260af6691470342ab49ce_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{\+\_\+setup\+\_\+util@{\+\_\+setup\+\_\+util}!prepend@{prepend}}
+\index{prepend@{prepend}!\+\_\+setup\+\_\+util@{\+\_\+setup\+\_\+util}}
+\subsubsection[{\texorpdfstring{prepend(environ, key, prefix)}{prepend(environ, key, prefix)}}]{\setlength{\rightskip}{0pt plus 5cm}def \+\_\+setup\+\_\+util.\+prepend (
+\begin{DoxyParamCaption}
+\item[{}]{environ, }
+\item[{}]{key, }
+\item[{}]{prefix}
+\end{DoxyParamCaption}
+)}\hypertarget{namespace__setup__util_ae78d86b2c4279f5b8b1acaa146c35802}{}\label{namespace__setup__util_ae78d86b2c4279f5b8b1acaa146c35802}
+
+\begin{DoxyCode}
+179 \textcolor{keyword}{def }\hyperlink{namespace__setup__util_ae78d86b2c4279f5b8b1acaa146c35802}{prepend}(environ, key, prefix):
+180     \textcolor{keywordflow}{if} key \textcolor{keywordflow}{not} \textcolor{keywordflow}{in} environ \textcolor{keywordflow}{or} \textcolor{keywordflow}{not} environ[key]:
+181         \textcolor{keywordflow}{return} \hyperlink{namespace__setup__util_ad56c24837fa4eddc63c03fbc7035628f}{assignment}(key, prefix)
+182     \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} IS\_WINDOWS:
+183         \textcolor{keywordflow}{return} \textcolor{stringliteral}{'export %s="%s$%s"'} % (key, prefix, key)
+184     \textcolor{keywordflow}{else}:
+185         \textcolor{keywordflow}{return} \textcolor{stringliteral}{'set %s=%s%%%s%%'} % (key, prefix, key)
+186 
+187 
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=334pt]{df/dc0/namespace__setup__util_ae78d86b2c4279f5b8b1acaa146c35802_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{\+\_\+setup\+\_\+util@{\+\_\+setup\+\_\+util}!prepend\+\_\+env\+\_\+variables@{prepend\+\_\+env\+\_\+variables}}
+\index{prepend\+\_\+env\+\_\+variables@{prepend\+\_\+env\+\_\+variables}!\+\_\+setup\+\_\+util@{\+\_\+setup\+\_\+util}}
+\subsubsection[{\texorpdfstring{prepend\+\_\+env\+\_\+variables(environ, env\+\_\+var\+\_\+subfolders, workspaces)}{prepend_env_variables(environ, env_var_subfolders, workspaces)}}]{\setlength{\rightskip}{0pt plus 5cm}def \+\_\+setup\+\_\+util.\+prepend\+\_\+env\+\_\+variables (
+\begin{DoxyParamCaption}
+\item[{}]{environ, }
+\item[{}]{env\+\_\+var\+\_\+subfolders, }
+\item[{}]{workspaces}
+\end{DoxyParamCaption}
+)}\hypertarget{namespace__setup__util_a832417d18b85bd1d276a87547e86f860}{}\label{namespace__setup__util_a832417d18b85bd1d276a87547e86f860}
+\begin{DoxyVerb}Generate shell code to prepend environment variables
+for the all workspaces.
+\end{DoxyVerb}
+ 
+\begin{DoxyCode}
+126 \textcolor{keyword}{def }\hyperlink{namespace__setup__util_a832417d18b85bd1d276a87547e86f860}{prepend\_env\_variables}(environ, env\_var\_subfolders, workspaces):
+127     \textcolor{stringliteral}{'''}
+128 \textcolor{stringliteral}{    Generate shell code to prepend environment variables}
+129 \textcolor{stringliteral}{    for the all workspaces.}
+130 \textcolor{stringliteral}{    '''}
+131     lines = []
+132     lines.append(\hyperlink{namespace__setup__util_abe8c95c4cfe8b1374dacd5f91d984353}{comment}(\textcolor{stringliteral}{'prepend folders of workspaces to environment variables'}))
+133 
+134     paths = [path \textcolor{keywordflow}{for} path \textcolor{keywordflow}{in} workspaces.split(os.pathsep) \textcolor{keywordflow}{if} path]
+135 
+136     prefix = \hyperlink{namespace__setup__util_a01264d729d05078ec7ee1cad54fe6489}{\_prefix\_env\_variable}(environ, \textcolor{stringliteral}{'CMAKE\_PREFIX\_PATH'}, paths, \textcolor{stringliteral}{''})
+137     lines.append(\hyperlink{namespace__setup__util_ae78d86b2c4279f5b8b1acaa146c35802}{prepend}(environ, \textcolor{stringliteral}{'CMAKE\_PREFIX\_PATH'}, prefix))
+138 
+139     \textcolor{keywordflow}{for} key \textcolor{keywordflow}{in} sorted([key \textcolor{keywordflow}{for} key \textcolor{keywordflow}{in} env\_var\_subfolders.keys() \textcolor{keywordflow}{if} key != \textcolor{stringliteral}{'CMAKE\_PREFIX\_PATH'}]):
+140         subfolder = env\_var\_subfolders[key]
+141         prefix = \hyperlink{namespace__setup__util_a01264d729d05078ec7ee1cad54fe6489}{\_prefix\_env\_variable}(environ, key, paths, subfolder)
+142         lines.append(\hyperlink{namespace__setup__util_ae78d86b2c4279f5b8b1acaa146c35802}{prepend}(environ, key, prefix))
+143     \textcolor{keywordflow}{return} lines
+144 
+145 
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/dc0/namespace__setup__util_a832417d18b85bd1d276a87547e86f860_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{\+\_\+setup\+\_\+util@{\+\_\+setup\+\_\+util}!rollback\+\_\+env\+\_\+variables@{rollback\+\_\+env\+\_\+variables}}
+\index{rollback\+\_\+env\+\_\+variables@{rollback\+\_\+env\+\_\+variables}!\+\_\+setup\+\_\+util@{\+\_\+setup\+\_\+util}}
+\subsubsection[{\texorpdfstring{rollback\+\_\+env\+\_\+variables(environ, env\+\_\+var\+\_\+subfolders)}{rollback_env_variables(environ, env_var_subfolders)}}]{\setlength{\rightskip}{0pt plus 5cm}def \+\_\+setup\+\_\+util.\+rollback\+\_\+env\+\_\+variables (
+\begin{DoxyParamCaption}
+\item[{}]{environ, }
+\item[{}]{env\+\_\+var\+\_\+subfolders}
+\end{DoxyParamCaption}
+)}\hypertarget{namespace__setup__util_af3030db6102b5aa35cd354a2fb6cca03}{}\label{namespace__setup__util_af3030db6102b5aa35cd354a2fb6cca03}
+\begin{DoxyVerb}Generate shell code to reset environment variables
+by unrolling modifications based on all workspaces in CMAKE_PREFIX_PATH.
+This does not cover modifications performed by environment hooks.
+\end{DoxyVerb}
+ 
+\begin{DoxyCode}
+62 \textcolor{keyword}{def }\hyperlink{namespace__setup__util_af3030db6102b5aa35cd354a2fb6cca03}{rollback\_env\_variables}(environ, env\_var\_subfolders):
+63     \textcolor{stringliteral}{'''}
+64 \textcolor{stringliteral}{    Generate shell code to reset environment variables}
+65 \textcolor{stringliteral}{    by unrolling modifications based on all workspaces in CMAKE\_PREFIX\_PATH.}
+66 \textcolor{stringliteral}{    This does not cover modifications performed by environment hooks.}
+67 \textcolor{stringliteral}{    '''}
+68     lines = []
+69     unmodified\_environ = copy.copy(environ)
+70     \textcolor{keywordflow}{for} key \textcolor{keywordflow}{in} sorted(env\_var\_subfolders.keys()):
+71         subfolder = env\_var\_subfolders[key]
+72         value = \hyperlink{namespace__setup__util_a45389205be3d6e2efe8b6f8409a8059b}{\_rollback\_env\_variable}(unmodified\_environ, key, subfolder)
+73         \textcolor{keywordflow}{if} value \textcolor{keywordflow}{is} \textcolor{keywordflow}{not} \textcolor{keywordtype}{None}:
+74             environ[key] = value
+75             lines.append(\hyperlink{namespace__setup__util_ad56c24837fa4eddc63c03fbc7035628f}{assignment}(key, value))
+76     \textcolor{keywordflow}{if} lines:
+77         lines.insert(0, \hyperlink{namespace__setup__util_abe8c95c4cfe8b1374dacd5f91d984353}{comment}(\textcolor{stringliteral}{'reset environment variables by unrolling modifications based on all
+       workspaces in CMAKE\_PREFIX\_PATH'}))
+78     \textcolor{keywordflow}{return} lines
+79 
+80 
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/dc0/namespace__setup__util_af3030db6102b5aa35cd354a2fb6cca03_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Variable Documentation}
+\index{\+\_\+setup\+\_\+util@{\+\_\+setup\+\_\+util}!args@{args}}
+\index{args@{args}!\+\_\+setup\+\_\+util@{\+\_\+setup\+\_\+util}}
+\subsubsection[{\texorpdfstring{args}{args}}]{\setlength{\rightskip}{0pt plus 5cm}\+\_\+setup\+\_\+util.\+args = {\bf \+\_\+parse\+\_\+arguments}()}\hypertarget{namespace__setup__util_a547963d07c6371df1c51b1384a2dec28}{}\label{namespace__setup__util_a547963d07c6371df1c51b1384a2dec28}
+\index{\+\_\+setup\+\_\+util@{\+\_\+setup\+\_\+util}!base\+\_\+path@{base\+\_\+path}}
+\index{base\+\_\+path@{base\+\_\+path}!\+\_\+setup\+\_\+util@{\+\_\+setup\+\_\+util}}
+\subsubsection[{\texorpdfstring{base\+\_\+path}{base_path}}]{\setlength{\rightskip}{0pt plus 5cm}\+\_\+setup\+\_\+util.\+base\+\_\+path = os.\+path.\+dirname(\+\_\+\+\_\+file\+\_\+\+\_\+)}\hypertarget{namespace__setup__util_a83d25140acd7788bbcb95843fe38e639}{}\label{namespace__setup__util_a83d25140acd7788bbcb95843fe38e639}
+\index{\+\_\+setup\+\_\+util@{\+\_\+setup\+\_\+util}!C\+A\+T\+K\+I\+N\+\_\+\+M\+A\+R\+K\+E\+R\+\_\+\+F\+I\+LE@{C\+A\+T\+K\+I\+N\+\_\+\+M\+A\+R\+K\+E\+R\+\_\+\+F\+I\+LE}}
+\index{C\+A\+T\+K\+I\+N\+\_\+\+M\+A\+R\+K\+E\+R\+\_\+\+F\+I\+LE@{C\+A\+T\+K\+I\+N\+\_\+\+M\+A\+R\+K\+E\+R\+\_\+\+F\+I\+LE}!\+\_\+setup\+\_\+util@{\+\_\+setup\+\_\+util}}
+\subsubsection[{\texorpdfstring{C\+A\+T\+K\+I\+N\+\_\+\+M\+A\+R\+K\+E\+R\+\_\+\+F\+I\+LE}{CATKIN_MARKER_FILE}}]{\setlength{\rightskip}{0pt plus 5cm}string \+\_\+setup\+\_\+util.\+C\+A\+T\+K\+I\+N\+\_\+\+M\+A\+R\+K\+E\+R\+\_\+\+F\+I\+LE = \textquotesingle{}.catkin\textquotesingle{}}\hypertarget{namespace__setup__util_a3fa0ca5a460a71a43cbc3d4954ab1f10}{}\label{namespace__setup__util_a3fa0ca5a460a71a43cbc3d4954ab1f10}
+\index{\+\_\+setup\+\_\+util@{\+\_\+setup\+\_\+util}!C\+M\+A\+K\+E\+\_\+\+P\+R\+E\+F\+I\+X\+\_\+\+P\+A\+TH@{C\+M\+A\+K\+E\+\_\+\+P\+R\+E\+F\+I\+X\+\_\+\+P\+A\+TH}}
+\index{C\+M\+A\+K\+E\+\_\+\+P\+R\+E\+F\+I\+X\+\_\+\+P\+A\+TH@{C\+M\+A\+K\+E\+\_\+\+P\+R\+E\+F\+I\+X\+\_\+\+P\+A\+TH}!\+\_\+setup\+\_\+util@{\+\_\+setup\+\_\+util}}
+\subsubsection[{\texorpdfstring{C\+M\+A\+K\+E\+\_\+\+P\+R\+E\+F\+I\+X\+\_\+\+P\+A\+TH}{CMAKE_PREFIX_PATH}}]{\setlength{\rightskip}{0pt plus 5cm}string \+\_\+setup\+\_\+util.\+C\+M\+A\+K\+E\+\_\+\+P\+R\+E\+F\+I\+X\+\_\+\+P\+A\+TH = \textquotesingle{}/home/longfei/catkin\+\_\+ws/devel;/opt/ros/hydro\textquotesingle{}}\hypertarget{namespace__setup__util_a57afd3d2c076955fb715f3e72ef098eb}{}\label{namespace__setup__util_a57afd3d2c076955fb715f3e72ef098eb}
+\index{\+\_\+setup\+\_\+util@{\+\_\+setup\+\_\+util}!e@{e}}
+\index{e@{e}!\+\_\+setup\+\_\+util@{\+\_\+setup\+\_\+util}}
+\subsubsection[{\texorpdfstring{e}{e}}]{\setlength{\rightskip}{0pt plus 5cm}\+\_\+setup\+\_\+util.\+e}\hypertarget{namespace__setup__util_acdce690b925de33d6249bbbfa1109d61}{}\label{namespace__setup__util_acdce690b925de33d6249bbbfa1109d61}
+\index{\+\_\+setup\+\_\+util@{\+\_\+setup\+\_\+util}!E\+N\+V\+\_\+\+V\+A\+R\+\_\+\+S\+U\+B\+F\+O\+L\+D\+E\+RS@{E\+N\+V\+\_\+\+V\+A\+R\+\_\+\+S\+U\+B\+F\+O\+L\+D\+E\+RS}}
+\index{E\+N\+V\+\_\+\+V\+A\+R\+\_\+\+S\+U\+B\+F\+O\+L\+D\+E\+RS@{E\+N\+V\+\_\+\+V\+A\+R\+\_\+\+S\+U\+B\+F\+O\+L\+D\+E\+RS}!\+\_\+setup\+\_\+util@{\+\_\+setup\+\_\+util}}
+\subsubsection[{\texorpdfstring{E\+N\+V\+\_\+\+V\+A\+R\+\_\+\+S\+U\+B\+F\+O\+L\+D\+E\+RS}{ENV_VAR_SUBFOLDERS}}]{\setlength{\rightskip}{0pt plus 5cm}dictionary \+\_\+setup\+\_\+util.\+E\+N\+V\+\_\+\+V\+A\+R\+\_\+\+S\+U\+B\+F\+O\+L\+D\+E\+RS}\hypertarget{namespace__setup__util_aa31804f1be8660156ce9394b33c68dc4}{}\label{namespace__setup__util_aa31804f1be8660156ce9394b33c68dc4}
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+1 = \{
+2     \textcolor{stringliteral}{'CMAKE\_PREFIX\_PATH'}: \textcolor{stringliteral}{''},
+3     \textcolor{stringliteral}{'CPATH'}: \textcolor{stringliteral}{'include'},
+4     \textcolor{stringliteral}{'LD\_LIBRARY\_PATH'} \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} IS\_DARWIN \textcolor{keywordflow}{else} \textcolor{stringliteral}{'DYLD\_LIBRARY\_PATH'}: \textcolor{stringliteral}{'lib'},
+5     \textcolor{stringliteral}{'PATH'}: \textcolor{stringliteral}{'bin'},
+6     \textcolor{stringliteral}{'PKG\_CONFIG\_PATH'}: \textcolor{stringliteral}{'lib/pkgconfig'},
+7     \textcolor{stringliteral}{'PYTHONPATH'}: \textcolor{stringliteral}{'lib/python2.7/dist-packages'},
+8 \}
+\end{DoxyCode}
+\index{\+\_\+setup\+\_\+util@{\+\_\+setup\+\_\+util}!environ@{environ}}
+\index{environ@{environ}!\+\_\+setup\+\_\+util@{\+\_\+setup\+\_\+util}}
+\subsubsection[{\texorpdfstring{environ}{environ}}]{\setlength{\rightskip}{0pt plus 5cm}\+\_\+setup\+\_\+util.\+environ = dict(os.\+environ)}\hypertarget{namespace__setup__util_a9a935bdd9ee1aa0327161025bb18c136}{}\label{namespace__setup__util_a9a935bdd9ee1aa0327161025bb18c136}
+\index{\+\_\+setup\+\_\+util@{\+\_\+setup\+\_\+util}!file@{file}}
+\index{file@{file}!\+\_\+setup\+\_\+util@{\+\_\+setup\+\_\+util}}
+\subsubsection[{\texorpdfstring{file}{file}}]{\setlength{\rightskip}{0pt plus 5cm}\+\_\+setup\+\_\+util.\+file}\hypertarget{namespace__setup__util_aea63a1b32cc79bc3d872ab7cb30dd07e}{}\label{namespace__setup__util_aea63a1b32cc79bc3d872ab7cb30dd07e}
+\index{\+\_\+setup\+\_\+util@{\+\_\+setup\+\_\+util}!I\+S\+\_\+\+D\+A\+R\+W\+IN@{I\+S\+\_\+\+D\+A\+R\+W\+IN}}
+\index{I\+S\+\_\+\+D\+A\+R\+W\+IN@{I\+S\+\_\+\+D\+A\+R\+W\+IN}!\+\_\+setup\+\_\+util@{\+\_\+setup\+\_\+util}}
+\subsubsection[{\texorpdfstring{I\+S\+\_\+\+D\+A\+R\+W\+IN}{IS_DARWIN}}]{\setlength{\rightskip}{0pt plus 5cm}tuple \+\_\+setup\+\_\+util.\+I\+S\+\_\+\+D\+A\+R\+W\+IN = ({\bf system} == \textquotesingle{}Darwin\textquotesingle{})}\hypertarget{namespace__setup__util_aecbb100ce6f94bb3c7e16d58fde05f96}{}\label{namespace__setup__util_aecbb100ce6f94bb3c7e16d58fde05f96}
+\index{\+\_\+setup\+\_\+util@{\+\_\+setup\+\_\+util}!I\+S\+\_\+\+W\+I\+N\+D\+O\+WS@{I\+S\+\_\+\+W\+I\+N\+D\+O\+WS}}
+\index{I\+S\+\_\+\+W\+I\+N\+D\+O\+WS@{I\+S\+\_\+\+W\+I\+N\+D\+O\+WS}!\+\_\+setup\+\_\+util@{\+\_\+setup\+\_\+util}}
+\subsubsection[{\texorpdfstring{I\+S\+\_\+\+W\+I\+N\+D\+O\+WS}{IS_WINDOWS}}]{\setlength{\rightskip}{0pt plus 5cm}tuple \+\_\+setup\+\_\+util.\+I\+S\+\_\+\+W\+I\+N\+D\+O\+WS = ({\bf system} == \textquotesingle{}Windows\textquotesingle{})}\hypertarget{namespace__setup__util_a6fe69c2dbd92959b6651a28cbb846e6e}{}\label{namespace__setup__util_a6fe69c2dbd92959b6651a28cbb846e6e}
+\index{\+\_\+setup\+\_\+util@{\+\_\+setup\+\_\+util}!lines@{lines}}
+\index{lines@{lines}!\+\_\+setup\+\_\+util@{\+\_\+setup\+\_\+util}}
+\subsubsection[{\texorpdfstring{lines}{lines}}]{\setlength{\rightskip}{0pt plus 5cm}list \+\_\+setup\+\_\+util.\+lines = \mbox{[}$\,$\mbox{]}}\hypertarget{namespace__setup__util_a8618d8be5f729d4c9696daa5e083a001}{}\label{namespace__setup__util_a8618d8be5f729d4c9696daa5e083a001}
+\index{\+\_\+setup\+\_\+util@{\+\_\+setup\+\_\+util}!system@{system}}
+\index{system@{system}!\+\_\+setup\+\_\+util@{\+\_\+setup\+\_\+util}}
+\subsubsection[{\texorpdfstring{system}{system}}]{\setlength{\rightskip}{0pt plus 5cm}\+\_\+setup\+\_\+util.\+system = platform.\+system()}\hypertarget{namespace__setup__util_ae9fca6a80a6923f4580be72f68fee325}{}\label{namespace__setup__util_ae9fca6a80a6923f4580be72f68fee325}

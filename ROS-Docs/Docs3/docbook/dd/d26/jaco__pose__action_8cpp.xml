@@ -1,0 +1,185 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="dd/d26/jaco__pose__action_8cpp">
+    <title>jaco_pose_action.cpp File Reference</title>
+    <programlisting>#include &quot;jaco_driver/jaco_pose_action.h&quot;</programlisting>
+    <programlisting>#include &lt;kinova/KinovaTypes.h&gt;</programlisting>
+    <programlisting>#include &quot;jaco_driver/jaco_types.h&quot;</programlisting>
+    <programlisting>#include &lt;string&gt;</programlisting>
+<para>Include dependency diagram for jaco_pose_action.cpp</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../de/d30/jaco__pose__action_8cpp__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Included by dependency diagram for jaco_pose_action.cpp</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../d3/d28/jaco__pose__action_8cpp__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+        <simplesect>
+            <title> Namespaces </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d4/d3c/namespacejaco">jaco</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+    <simplesect>
+        <title>Detailed Description</title>
+    <para>Definition in file D:/Longfei/Desktop/catkin_KinovaROS/src/jaco-ros/jaco_driver/src/jaco_pose_action.cpp</para>
+    </simplesect>
+    <literallayout><computeroutput>
+1 
+46 <emphasis class="preprocessor">#include&#32;&quot;<link linkend="d9/dd3/jaco__pose__action_8h">jaco_driver/jaco_pose_action.h</link>&quot;</emphasis>
+47 <emphasis class="preprocessor">#include&#32;&lt;<link linkend="df/d36/KinovaTypes_8h">kinova/KinovaTypes.h</link>&gt;</emphasis>
+48 <emphasis class="preprocessor">#include&#32;&quot;<link linkend="d7/d98/jaco__types_8h">jaco_driver/jaco_types.h</link>&quot;</emphasis>
+49 <emphasis class="preprocessor">#include&#32;&lt;string&gt;</emphasis>
+50 
+51 
+52 <emphasis class="keyword">namespace&#32;</emphasis><link linkend="d4/d3c/namespacejaco">jaco</link>
+53 {
+54 
+<link linkend="dc/dc7/classjaco_1_1JacoPoseActionServer_1aadc62df5a70d28ec54c90ceeec00fbe3">55 </link><link linkend="dc/dc7/classjaco_1_1JacoPoseActionServer_1aadc62df5a70d28ec54c90ceeec00fbe3">JacoPoseActionServer::JacoPoseActionServer</link>(<link linkend="d5/d2b/classjaco_1_1JacoComm">JacoComm</link>&#32;&amp;arm_comm,&#32;<emphasis class="keyword">const</emphasis>&#32;ros::NodeHandle&#32;&amp;nh)
+56 &#32;&#32;&#32;&#32;:&#32;arm_comm_(arm_comm),
+57 &#32;&#32;&#32;&#32;&#32;&#32;node_handle_(nh,&#32;<emphasis class="stringliteral">&quot;arm_pose&quot;</emphasis>),
+58 &#32;&#32;&#32;&#32;&#32;&#32;action_server_(node_handle_,&#32;<emphasis class="stringliteral">&quot;arm_pose&quot;</emphasis>,
+59 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;boost::bind(&amp;<link linkend="dc/dc7/classjaco_1_1JacoPoseActionServer">JacoPoseActionServer</link>::actionCallback,&#32;this,&#32;_1),&#32;false)
+60 {
+61 &#32;&#32;&#32;&#32;<emphasis class="keywordtype">double</emphasis>&#32;tolerance;
+62 &#32;&#32;&#32;&#32;<link linkend="dc/dc7/classjaco_1_1JacoPoseActionServer_1ae5c09c6924a4eeccd4d32ca59ed6465d">node_handle_</link>.param&lt;<emphasis class="keywordtype">double</emphasis>&gt;(<emphasis class="stringliteral">&quot;stall_interval_seconds&quot;</emphasis>,&#32;<link linkend="dc/dc7/classjaco_1_1JacoPoseActionServer_1a48c5866f584f192be487934d3fbf5ebc">stall_interval_seconds_</link>,&#32;1.0);
+63 &#32;&#32;&#32;&#32;<link linkend="dc/dc7/classjaco_1_1JacoPoseActionServer_1ae5c09c6924a4eeccd4d32ca59ed6465d">node_handle_</link>.param&lt;<emphasis class="keywordtype">double</emphasis>&gt;(<emphasis class="stringliteral">&quot;stall_threshold&quot;</emphasis>,&#32;<link linkend="dc/dc7/classjaco_1_1JacoPoseActionServer_1a71248453a7bb76ba012040b1b9d67924">stall_threshold_</link>,&#32;0.005);
+64 &#32;&#32;&#32;&#32;<link linkend="dc/dc7/classjaco_1_1JacoPoseActionServer_1ae5c09c6924a4eeccd4d32ca59ed6465d">node_handle_</link>.param&lt;<emphasis class="keywordtype">double</emphasis>&gt;(<emphasis class="stringliteral">&quot;rate_hz&quot;</emphasis>,&#32;<link linkend="dc/dc7/classjaco_1_1JacoPoseActionServer_1a3512d3517f7d55ad0b481081a7000b06">rate_hz_</link>,&#32;10.0);
+65 &#32;&#32;&#32;&#32;<link linkend="dc/dc7/classjaco_1_1JacoPoseActionServer_1ae5c09c6924a4eeccd4d32ca59ed6465d">node_handle_</link>.param&lt;<emphasis class="keywordtype">double</emphasis>&gt;(<emphasis class="stringliteral">&quot;tolerance&quot;</emphasis>,&#32;tolerance,&#32;0.01);
+66 &#32;&#32;&#32;&#32;<link linkend="dc/dc7/classjaco_1_1JacoPoseActionServer_1ae5c09c6924a4eeccd4d32ca59ed6465d">node_handle_</link>.param&lt;std::string&gt;(<emphasis class="stringliteral">&quot;tf_prefix&quot;</emphasis>,&#32;<link linkend="dc/dc7/classjaco_1_1JacoPoseActionServer_1ae846600150f2139d117f9994bf19747f">tf_prefix_</link>,&#32;<emphasis class="stringliteral">&quot;jaco_&quot;</emphasis>);
+67 
+68 &#32;&#32;&#32;&#32;<link linkend="dc/dc7/classjaco_1_1JacoPoseActionServer_1a086630400cbfd3e75414a620f8220038">tolerance_</link>&#32;=&#32;<emphasis class="keyword">static_cast&lt;</emphasis><emphasis class="keywordtype">float</emphasis><emphasis class="keyword">&gt;</emphasis>(tolerance);
+69 &#32;&#32;&#32;&#32;std::stringstream&#32;ss;
+70 &#32;&#32;&#32;&#32;ss&#32;&lt;&lt;&#32;tf_prefix_&#32;&lt;&lt;&#32;<emphasis class="stringliteral">&quot;api_origin&quot;</emphasis>;
+71 &#32;&#32;&#32;&#32;<link linkend="dc/dc7/classjaco_1_1JacoPoseActionServer_1a5f90297e166e0113362ad14abc78f13f">api_origin_frame_</link>&#32;=&#32;ss.str();
+72 
+73 &#32;&#32;&#32;&#32;<link linkend="dc/dc7/classjaco_1_1JacoPoseActionServer_1ac5ecd6a61bf824052ff744aad8bf886a">action_server_</link>.start();
+74 }
+75 
+76 
+<link linkend="dc/dc7/classjaco_1_1JacoPoseActionServer_1ab1c488f56f4759f917c46406230e6c84">77 </link><link linkend="dc/dc7/classjaco_1_1JacoPoseActionServer_1ab1c488f56f4759f917c46406230e6c84">JacoPoseActionServer::~JacoPoseActionServer</link>()
+78 {
+79 }
+80 
+81 
+<link linkend="dc/dc7/classjaco_1_1JacoPoseActionServer_1a82396bb5f219f54518a80493bfd38f26">82 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="dc/dc7/classjaco_1_1JacoPoseActionServer_1a82396bb5f219f54518a80493bfd38f26">JacoPoseActionServer::actionCallback</link>(<emphasis class="keyword">const</emphasis>&#32;<link linkend="d7/dba/namespacejaco__msgs_1ab8464776109924758c47fab6ce179567">jaco_msgs::ArmPoseGoalConstPtr</link>&#32;&amp;goal)
+83 {
+84 &#32;&#32;&#32;&#32;<link linkend="d4/d97/structjaco__msgs_1_1ArmPoseFeedback__">jaco_msgs::ArmPoseFeedback</link>&#32;feedback;
+85 &#32;&#32;&#32;&#32;<link linkend="d3/d54/structjaco__msgs_1_1ArmPoseResult__">jaco_msgs::ArmPoseResult</link>&#32;<link linkend="db/dfe/Kinova_8API_8CommLayerUbuntu_8h_1a900dac90961bada00f57c207562a6a9a">result</link>;
+86 &#32;&#32;&#32;&#32;feedback.<link linkend="d4/d97/structjaco__msgs_1_1ArmPoseFeedback___1a4a015f6a23c7830eff5fcb0036c1d98a">pose</link>.header.frame_id&#32;=&#32;goal-&gt;pose.header.frame_id;
+87 &#32;&#32;&#32;&#32;result.<link linkend="d3/d54/structjaco__msgs_1_1ArmPoseResult___1a35fabbce17a2d3c3c0e9bcd97985053b">pose</link>.header.frame_id&#32;=&#32;goal-&gt;pose.header.frame_id;
+88 
+89 &#32;&#32;&#32;&#32;ros::Time&#32;current_time&#32;=&#32;ros::Time::now();
+90 &#32;&#32;&#32;&#32;<link linkend="dd/da4/classjaco_1_1JacoPose">JacoPose</link>&#32;current_pose;
+91 &#32;&#32;&#32;&#32;geometry_msgs::PoseStamped&#32;local_pose;
+92 &#32;&#32;&#32;&#32;local_pose.header.frame_id&#32;=&#32;<link linkend="dc/dc7/classjaco_1_1JacoPoseActionServer_1a5f90297e166e0113362ad14abc78f13f">api_origin_frame_</link>;
+93 
+94 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">try</emphasis>
+95 &#32;&#32;&#32;&#32;{
+96 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;Put&#32;the&#32;goal&#32;pose&#32;into&#32;the&#32;frame&#32;used&#32;by&#32;the&#32;arm</emphasis>
+97 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(ros::ok()
+98 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&amp;&amp;&#32;!<link linkend="dc/dc7/classjaco_1_1JacoPoseActionServer_1a43c58cdc664caaa1471792c672aea7c1">listener</link>.canTransform(<link linkend="dc/dc7/classjaco_1_1JacoPoseActionServer_1a5f90297e166e0113362ad14abc78f13f">api_origin_frame_</link>,&#32;goal-&gt;pose.header.frame_id,
+99 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;goal-&gt;pose.header.stamp))
+100 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+101 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ROS_ERROR(<emphasis class="stringliteral">&quot;Could&#32;not&#32;get&#32;transfrom&#32;from&#32;%s&#32;to&#32;%s,&#32;aborting&#32;cartesian&#32;movement&quot;</emphasis>,
+102 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="dc/dc7/classjaco_1_1JacoPoseActionServer_1a5f90297e166e0113362ad14abc78f13f">api_origin_frame_</link>.c_str(),&#32;goal-&gt;pose.header.frame_id.c_str());
+103 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="dc/dc7/classjaco_1_1JacoPoseActionServer_1ac5ecd6a61bf824052ff744aad8bf886a">action_server_</link>.setAborted(result);
+104 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">return</emphasis>;
+105 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+106 
+107 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="dc/dc7/classjaco_1_1JacoPoseActionServer_1a43c58cdc664caaa1471792c672aea7c1">listener</link>.transformPose(local_pose.header.frame_id,&#32;goal-&gt;pose,&#32;local_pose);
+108 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="dc/dc7/classjaco_1_1JacoPoseActionServer_1ad849b8d5a2bb31a65ab24b586a86c9a1">arm_comm_</link>.<link linkend="d5/d2b/classjaco_1_1JacoComm_1a855bbefed2093d0d0cc7763eb7306a0b">getCartesianPosition</link>(current_pose);
+109 
+110 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(<link linkend="dc/dc7/classjaco_1_1JacoPoseActionServer_1ad849b8d5a2bb31a65ab24b586a86c9a1">arm_comm_</link>.<link linkend="d5/d2b/classjaco_1_1JacoComm_1a872b8033cda5a9fe4ccdca2e89aa03d1">isStopped</link>())
+111 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+112 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ROS_INFO(<emphasis class="stringliteral">&quot;Could&#32;not&#32;complete&#32;cartesian&#32;action&#32;because&#32;the&#32;arm&#32;is&#32;&apos;stopped&apos;.&quot;</emphasis>);
+113 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;local_pose.pose&#32;=&#32;current_pose.<link linkend="dd/da4/classjaco_1_1JacoPose_1a9f2e68a94240e365afefd84d92f5a132">constructPoseMsg</link>();
+114 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="dc/dc7/classjaco_1_1JacoPoseActionServer_1a43c58cdc664caaa1471792c672aea7c1">listener</link>.transformPose(result.<link linkend="d3/d54/structjaco__msgs_1_1ArmPoseResult___1a35fabbce17a2d3c3c0e9bcd97985053b">pose</link>.header.frame_id,&#32;local_pose,&#32;result.<link linkend="d3/d54/structjaco__msgs_1_1ArmPoseResult___1a35fabbce17a2d3c3c0e9bcd97985053b">pose</link>);
+115 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="dc/dc7/classjaco_1_1JacoPoseActionServer_1ac5ecd6a61bf824052ff744aad8bf886a">action_server_</link>.setAborted(result);
+116 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">return</emphasis>;
+117 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+118 
+119 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="dc/dc7/classjaco_1_1JacoPoseActionServer_1a6b5b38efebafd4426afd01368bcf6f87">last_nonstall_time_</link>&#32;=&#32;current_time;
+120 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="dc/dc7/classjaco_1_1JacoPoseActionServer_1aa7e288732479301e6f63762f91b08580">last_nonstall_pose_</link>&#32;=&#32;current_pose;
+121 
+122 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="dd/da4/classjaco_1_1JacoPose">JacoPose</link>&#32;target(local_pose.pose);
+123 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="dc/dc7/classjaco_1_1JacoPoseActionServer_1ad849b8d5a2bb31a65ab24b586a86c9a1">arm_comm_</link>.<link linkend="d5/d2b/classjaco_1_1JacoComm_1a7a7375d2609c81f0a03974b06ca07be0">setCartesianPosition</link>(target);
+124 
+125 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">while</emphasis>&#32;(<emphasis class="keyword">true</emphasis>)
+126 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+127 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ros::spinOnce();
+128 
+129 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(<link linkend="dc/dc7/classjaco_1_1JacoPoseActionServer_1ac5ecd6a61bf824052ff744aad8bf886a">action_server_</link>.isPreemptRequested()&#32;||&#32;!ros::ok())
+130 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+131 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;result.<link linkend="d3/d54/structjaco__msgs_1_1ArmPoseResult___1a35fabbce17a2d3c3c0e9bcd97985053b">pose</link>&#32;=&#32;feedback.<link linkend="d4/d97/structjaco__msgs_1_1ArmPoseFeedback___1a4a015f6a23c7830eff5fcb0036c1d98a">pose</link>;
+132 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="dc/dc7/classjaco_1_1JacoPoseActionServer_1ad849b8d5a2bb31a65ab24b586a86c9a1">arm_comm_</link>.<link linkend="d5/d2b/classjaco_1_1JacoComm_1a54862830cd6414ae3ae48e46e54bf798">stopAPI</link>();
+133 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="dc/dc7/classjaco_1_1JacoPoseActionServer_1ad849b8d5a2bb31a65ab24b586a86c9a1">arm_comm_</link>.<link linkend="d5/d2b/classjaco_1_1JacoComm_1a6b2a1fabc4e6c30da42c9a5e26757398">startAPI</link>();
+134 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="dc/dc7/classjaco_1_1JacoPoseActionServer_1ac5ecd6a61bf824052ff744aad8bf886a">action_server_</link>.setPreempted(result);
+135 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">return</emphasis>;
+136 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+137 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">else</emphasis>&#32;<emphasis class="keywordflow">if</emphasis>&#32;(<link linkend="dc/dc7/classjaco_1_1JacoPoseActionServer_1ad849b8d5a2bb31a65ab24b586a86c9a1">arm_comm_</link>.<link linkend="d5/d2b/classjaco_1_1JacoComm_1a872b8033cda5a9fe4ccdca2e89aa03d1">isStopped</link>())
+138 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+139 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;result.<link linkend="d3/d54/structjaco__msgs_1_1ArmPoseResult___1a35fabbce17a2d3c3c0e9bcd97985053b">pose</link>&#32;=&#32;feedback.<link linkend="d4/d97/structjaco__msgs_1_1ArmPoseFeedback___1a4a015f6a23c7830eff5fcb0036c1d98a">pose</link>;
+140 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="dc/dc7/classjaco_1_1JacoPoseActionServer_1ac5ecd6a61bf824052ff744aad8bf886a">action_server_</link>.setAborted(result);
+141 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">return</emphasis>;
+142 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+143 
+144 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="dc/dc7/classjaco_1_1JacoPoseActionServer_1ad849b8d5a2bb31a65ab24b586a86c9a1">arm_comm_</link>.<link linkend="d5/d2b/classjaco_1_1JacoComm_1a855bbefed2093d0d0cc7763eb7306a0b">getCartesianPosition</link>(current_pose);
+145 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;current_time&#32;=&#32;ros::Time::now();
+146 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;local_pose.pose&#32;=&#32;current_pose.<link linkend="dd/da4/classjaco_1_1JacoPose_1a9f2e68a94240e365afefd84d92f5a132">constructPoseMsg</link>();
+147 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="dc/dc7/classjaco_1_1JacoPoseActionServer_1a43c58cdc664caaa1471792c672aea7c1">listener</link>.transformPose(feedback.<link linkend="d4/d97/structjaco__msgs_1_1ArmPoseFeedback___1a4a015f6a23c7830eff5fcb0036c1d98a">pose</link>.header.frame_id,&#32;local_pose,&#32;feedback.<link linkend="d4/d97/structjaco__msgs_1_1ArmPoseFeedback___1a4a015f6a23c7830eff5fcb0036c1d98a">pose</link>);
+148 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="dc/dc7/classjaco_1_1JacoPoseActionServer_1ac5ecd6a61bf824052ff744aad8bf886a">action_server_</link>.publishFeedback(feedback);
+149 
+150 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(target.<link linkend="dd/da4/classjaco_1_1JacoPose_1aed0e2dcb5cc3bc8315a2988bba51d513">isCloseToOther</link>(current_pose,&#32;<link linkend="dc/dc7/classjaco_1_1JacoPoseActionServer_1a086630400cbfd3e75414a620f8220038">tolerance_</link>))
+151 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+152 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;result.<link linkend="d3/d54/structjaco__msgs_1_1ArmPoseResult___1a35fabbce17a2d3c3c0e9bcd97985053b">pose</link>&#32;=&#32;feedback.<link linkend="d4/d97/structjaco__msgs_1_1ArmPoseFeedback___1a4a015f6a23c7830eff5fcb0036c1d98a">pose</link>;
+153 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="dc/dc7/classjaco_1_1JacoPoseActionServer_1ac5ecd6a61bf824052ff744aad8bf886a">action_server_</link>.setSucceeded(result);
+154 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">return</emphasis>;
+155 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+156 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">else</emphasis>&#32;<emphasis class="keywordflow">if</emphasis>&#32;(!<link linkend="dc/dc7/classjaco_1_1JacoPoseActionServer_1aa7e288732479301e6f63762f91b08580">last_nonstall_pose_</link>.<link linkend="dd/da4/classjaco_1_1JacoPose_1aed0e2dcb5cc3bc8315a2988bba51d513">isCloseToOther</link>(current_pose,&#32;<link linkend="dc/dc7/classjaco_1_1JacoPoseActionServer_1a71248453a7bb76ba012040b1b9d67924">stall_threshold_</link>))
+157 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+158 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;Check&#32;if&#32;we&#32;are&#32;outside&#32;of&#32;a&#32;potential&#32;stall&#32;condition</emphasis>
+159 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="dc/dc7/classjaco_1_1JacoPoseActionServer_1a6b5b38efebafd4426afd01368bcf6f87">last_nonstall_time_</link>&#32;=&#32;current_time;
+160 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="dc/dc7/classjaco_1_1JacoPoseActionServer_1aa7e288732479301e6f63762f91b08580">last_nonstall_pose_</link>&#32;=&#32;current_pose;
+161 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+162 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">else</emphasis>&#32;<emphasis class="keywordflow">if</emphasis>&#32;((current_time&#32;-&#32;<link linkend="dc/dc7/classjaco_1_1JacoPoseActionServer_1a6b5b38efebafd4426afd01368bcf6f87">last_nonstall_time_</link>).toSec()&#32;&gt;&#32;<link linkend="dc/dc7/classjaco_1_1JacoPoseActionServer_1a48c5866f584f192be487934d3fbf5ebc">stall_interval_seconds_</link>)
+163 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+164 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;Check&#32;if&#32;the&#32;full&#32;stall&#32;condition&#32;has&#32;been&#32;meet</emphasis>
+165 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;result.<link linkend="d3/d54/structjaco__msgs_1_1ArmPoseResult___1a35fabbce17a2d3c3c0e9bcd97985053b">pose</link>&#32;=&#32;feedback.<link linkend="d4/d97/structjaco__msgs_1_1ArmPoseFeedback___1a4a015f6a23c7830eff5fcb0036c1d98a">pose</link>;
+166 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="dc/dc7/classjaco_1_1JacoPoseActionServer_1ad849b8d5a2bb31a65ab24b586a86c9a1">arm_comm_</link>.<link linkend="d5/d2b/classjaco_1_1JacoComm_1a54862830cd6414ae3ae48e46e54bf798">stopAPI</link>();
+167 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="dc/dc7/classjaco_1_1JacoPoseActionServer_1ad849b8d5a2bb31a65ab24b586a86c9a1">arm_comm_</link>.<link linkend="d5/d2b/classjaco_1_1JacoComm_1a6b2a1fabc4e6c30da42c9a5e26757398">startAPI</link>();
+168 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="dc/dc7/classjaco_1_1JacoPoseActionServer_1ac5ecd6a61bf824052ff744aad8bf886a">action_server_</link>.setPreempted(result);
+169 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">return</emphasis>;
+170 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+171 
+172 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ros::Rate(<link linkend="dc/dc7/classjaco_1_1JacoPoseActionServer_1a3512d3517f7d55ad0b481081a7000b06">rate_hz_</link>).sleep();
+173 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+174 &#32;&#32;&#32;&#32;}
+175 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">catch</emphasis>(<emphasis class="keyword">const</emphasis>&#32;std::exception&amp;&#32;<link linkend="df/dc0/namespace__setup__util_1acdce690b925de33d6249bbbfa1109d61">e</link>)
+176 &#32;&#32;&#32;&#32;{
+177 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;result.<link linkend="d3/d54/structjaco__msgs_1_1ArmPoseResult___1a35fabbce17a2d3c3c0e9bcd97985053b">pose</link>&#32;=&#32;feedback.<link linkend="d4/d97/structjaco__msgs_1_1ArmPoseFeedback___1a4a015f6a23c7830eff5fcb0036c1d98a">pose</link>;
+178 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ROS_ERROR_STREAM(e.what());
+179 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="dc/dc7/classjaco_1_1JacoPoseActionServer_1ac5ecd6a61bf824052ff744aad8bf886a">action_server_</link>.setAborted(result);
+180 &#32;&#32;&#32;&#32;}
+181 }
+182 
+183 }&#32;&#32;<emphasis class="comment">//&#32;namespace&#32;jaco</emphasis>
+    </computeroutput></literallayout>
+</section>

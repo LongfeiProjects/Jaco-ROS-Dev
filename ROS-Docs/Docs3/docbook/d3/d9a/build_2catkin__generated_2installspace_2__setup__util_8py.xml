@@ -1,0 +1,322 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="d3/d9a/build_2catkin__generated_2installspace_2__setup__util_8py">
+    <title>_setup_util.py File Reference</title>
+<para>Include dependency diagram for _setup_util.py</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../d2/d59/build_2catkin__generated_2installspace_2__setup__util_8py__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Included by dependency diagram for _setup_util.py</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../d4/df9/build_2catkin__generated_2installspace_2__setup__util_8py__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+        <simplesect>
+            <title> Namespaces </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="df/dc0/namespace__setup__util">_setup_util</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+    <simplesect>
+        <title>Detailed Description</title>
+    <para>Definition in file D:/Longfei/Desktop/catkin_KinovaROS/build/catkin_generated/installspace/_setup_util.py</para>
+    </simplesect>
+    <literallayout><computeroutput>
+<link linkend="df/dc0/namespace__setup__util">1 </link><emphasis class="comment">#!/usr/bin/env&#32;python</emphasis>
+2 
+3 <emphasis class="comment">#&#32;Software&#32;License&#32;Agreement&#32;(BSD&#32;License)</emphasis>
+4 <emphasis class="comment">#</emphasis>
+5 <emphasis class="comment">#&#32;Copyright&#32;(c)&#32;2012,&#32;Willow&#32;Garage,&#32;Inc.</emphasis>
+6 <emphasis class="comment">#&#32;All&#32;rights&#32;reserved.</emphasis>
+7 <emphasis class="comment">#</emphasis>
+8 <emphasis class="comment">#&#32;Redistribution&#32;and&#32;use&#32;in&#32;source&#32;and&#32;binary&#32;forms,&#32;with&#32;or&#32;without</emphasis>
+9 <emphasis class="comment">#&#32;modification,&#32;are&#32;permitted&#32;provided&#32;that&#32;the&#32;following&#32;conditions</emphasis>
+10 <emphasis class="comment">#&#32;are&#32;met:</emphasis>
+11 <emphasis class="comment">#</emphasis>
+12 <emphasis class="comment">#&#32;&#32;*&#32;Redistributions&#32;of&#32;source&#32;code&#32;must&#32;retain&#32;the&#32;above&#32;copyright</emphasis>
+13 <emphasis class="comment">#&#32;&#32;&#32;&#32;notice,&#32;this&#32;list&#32;of&#32;conditions&#32;and&#32;the&#32;following&#32;disclaimer.</emphasis>
+14 <emphasis class="comment">#&#32;&#32;*&#32;Redistributions&#32;in&#32;binary&#32;form&#32;must&#32;reproduce&#32;the&#32;above</emphasis>
+15 <emphasis class="comment">#&#32;&#32;&#32;&#32;copyright&#32;notice,&#32;this&#32;list&#32;of&#32;conditions&#32;and&#32;the&#32;following</emphasis>
+16 <emphasis class="comment">#&#32;&#32;&#32;&#32;disclaimer&#32;in&#32;the&#32;documentation&#32;and/or&#32;other&#32;materials&#32;provided</emphasis>
+17 <emphasis class="comment">#&#32;&#32;&#32;&#32;with&#32;the&#32;distribution.</emphasis>
+18 <emphasis class="comment">#&#32;&#32;*&#32;Neither&#32;the&#32;name&#32;of&#32;Willow&#32;Garage,&#32;Inc.&#32;nor&#32;the&#32;names&#32;of&#32;its</emphasis>
+19 <emphasis class="comment">#&#32;&#32;&#32;&#32;contributors&#32;may&#32;be&#32;used&#32;to&#32;endorse&#32;or&#32;promote&#32;products&#32;derived</emphasis>
+20 <emphasis class="comment">#&#32;&#32;&#32;&#32;from&#32;this&#32;software&#32;without&#32;specific&#32;prior&#32;written&#32;permission.</emphasis>
+21 <emphasis class="comment">#</emphasis>
+22 <emphasis class="comment">#&#32;THIS&#32;SOFTWARE&#32;IS&#32;PROVIDED&#32;BY&#32;THE&#32;COPYRIGHT&#32;HOLDERS&#32;AND&#32;CONTRIBUTORS</emphasis>
+23 <emphasis class="comment">#&#32;&quot;AS&#32;IS&quot;&#32;AND&#32;ANY&#32;EXPRESS&#32;OR&#32;IMPLIED&#32;WARRANTIES,&#32;INCLUDING,&#32;BUT&#32;NOT</emphasis>
+24 <emphasis class="comment">#&#32;LIMITED&#32;TO,&#32;THE&#32;IMPLIED&#32;WARRANTIES&#32;OF&#32;MERCHANTABILITY&#32;AND&#32;FITNESS</emphasis>
+25 <emphasis class="comment">#&#32;FOR&#32;A&#32;PARTICULAR&#32;PURPOSE&#32;ARE&#32;DISCLAIMED.&#32;IN&#32;NO&#32;EVENT&#32;SHALL&#32;THE</emphasis>
+26 <emphasis class="comment">#&#32;COPYRIGHT&#32;OWNER&#32;OR&#32;CONTRIBUTORS&#32;BE&#32;LIABLE&#32;FOR&#32;ANY&#32;DIRECT,&#32;INDIRECT,</emphasis>
+27 <emphasis class="comment">#&#32;INCIDENTAL,&#32;SPECIAL,&#32;EXEMPLARY,&#32;OR&#32;CONSEQUENTIAL&#32;DAMAGES&#32;(INCLUDING,</emphasis>
+28 <emphasis class="comment">#&#32;BUT&#32;NOT&#32;LIMITED&#32;TO,&#32;PROCUREMENT&#32;OF&#32;SUBSTITUTE&#32;GOODS&#32;OR&#32;SERVICES;</emphasis>
+29 <emphasis class="comment">#&#32;LOSS&#32;OF&#32;USE,&#32;DATA,&#32;OR&#32;PROFITS;&#32;OR&#32;BUSINESS&#32;INTERRUPTION)&#32;HOWEVER</emphasis>
+30 <emphasis class="comment">#&#32;CAUSED&#32;AND&#32;ON&#32;ANY&#32;THEORY&#32;OF&#32;LIABILITY,&#32;WHETHER&#32;IN&#32;CONTRACT,&#32;STRICT</emphasis>
+31 <emphasis class="comment">#&#32;LIABILITY,&#32;OR&#32;TORT&#32;(INCLUDING&#32;NEGLIGENCE&#32;OR&#32;OTHERWISE)&#32;ARISING&#32;IN</emphasis>
+32 <emphasis class="comment">#&#32;ANY&#32;WAY&#32;OUT&#32;OF&#32;THE&#32;USE&#32;OF&#32;THIS&#32;SOFTWARE,&#32;EVEN&#32;IF&#32;ADVISED&#32;OF&#32;THE</emphasis>
+33 <emphasis class="comment">#&#32;POSSIBILITY&#32;OF&#32;SUCH&#32;DAMAGE.</emphasis>
+34 
+35 <emphasis class="stringliteral">&apos;&apos;&apos;This&#32;file&#32;generates&#32;shell&#32;code&#32;for&#32;the&#32;setup.SHELL&#32;scripts&#32;to&#32;set&#32;environment&#32;variables&apos;&apos;&apos;</emphasis>
+36 
+37 <emphasis class="keyword">from</emphasis>&#32;__future__&#32;<emphasis class="keyword">import</emphasis>&#32;print_function
+38 <emphasis class="keyword">import</emphasis>&#32;argparse
+39 <emphasis class="keyword">import</emphasis>&#32;copy
+40 <emphasis class="keyword">import</emphasis>&#32;errno
+41 <emphasis class="keyword">import</emphasis>&#32;os
+42 <emphasis class="keyword">import</emphasis>&#32;platform
+43 <emphasis class="keyword">import</emphasis>&#32;sys
+44 
+<link linkend="df/dc0/namespace__setup__util_1a3fa0ca5a460a71a43cbc3d4954ab1f10">45 </link>CATKIN_MARKER_FILE&#32;=&#32;<emphasis class="stringliteral">&apos;.catkin&apos;</emphasis>
+46 
+<link linkend="df/dc0/namespace__setup__util_1ae9fca6a80a6923f4580be72f68fee325">47 </link>system&#32;=&#32;platform.system()
+<link linkend="df/dc0/namespace__setup__util_1aecbb100ce6f94bb3c7e16d58fde05f96">48 </link>IS_DARWIN&#32;=&#32;(system&#32;==&#32;<emphasis class="stringliteral">&apos;Darwin&apos;</emphasis>)
+<link linkend="df/dc0/namespace__setup__util_1a6fe69c2dbd92959b6651a28cbb846e6e">49 </link>IS_WINDOWS&#32;=&#32;(system&#32;==&#32;<emphasis class="stringliteral">&apos;Windows&apos;</emphasis>)
+50 
+51 <emphasis class="comment">#&#32;subfolder&#32;of&#32;workspace&#32;prepended&#32;to&#32;CMAKE_PREFIX_PATH</emphasis>
+<link linkend="df/dc0/namespace__setup__util_1aa31804f1be8660156ce9394b33c68dc4">52 </link>ENV_VAR_SUBFOLDERS&#32;=&#32;{
+53 &#32;&#32;&#32;&#32;<emphasis class="stringliteral">&apos;CMAKE_PREFIX_PATH&apos;</emphasis>:&#32;<emphasis class="stringliteral">&apos;&apos;</emphasis>,
+54 &#32;&#32;&#32;&#32;<emphasis class="stringliteral">&apos;CPATH&apos;</emphasis>:&#32;<emphasis class="stringliteral">&apos;include&apos;</emphasis>,
+55 &#32;&#32;&#32;&#32;<emphasis class="stringliteral">&apos;LD_LIBRARY_PATH&apos;</emphasis>&#32;<emphasis class="keywordflow">if</emphasis>&#32;<emphasis class="keywordflow">not</emphasis>&#32;IS_DARWIN&#32;<emphasis class="keywordflow">else</emphasis>&#32;<emphasis class="stringliteral">&apos;DYLD_LIBRARY_PATH&apos;</emphasis>:&#32;<emphasis class="stringliteral">&apos;lib&apos;</emphasis>,
+56 &#32;&#32;&#32;&#32;<emphasis class="stringliteral">&apos;PATH&apos;</emphasis>:&#32;<emphasis class="stringliteral">&apos;bin&apos;</emphasis>,
+57 &#32;&#32;&#32;&#32;<emphasis class="stringliteral">&apos;PKG_CONFIG_PATH&apos;</emphasis>:&#32;<emphasis class="stringliteral">&apos;lib/pkgconfig&apos;</emphasis>,
+58 &#32;&#32;&#32;&#32;<emphasis class="stringliteral">&apos;PYTHONPATH&apos;</emphasis>:&#32;<emphasis class="stringliteral">&apos;lib/python2.7/dist-packages&apos;</emphasis>,
+59 }
+60 
+61 
+<link linkend="df/dc0/namespace__setup__util_1af3030db6102b5aa35cd354a2fb6cca03">62 </link><emphasis class="keyword">def&#32;</emphasis><link linkend="df/dc0/namespace__setup__util_1af3030db6102b5aa35cd354a2fb6cca03">rollback_env_variables</link>(environ,&#32;env_var_subfolders):
+63 &#32;&#32;&#32;&#32;<emphasis class="stringliteral">&apos;&apos;&apos;</emphasis>
+64 <emphasis class="stringliteral">&#32;&#32;&#32;&#32;Generate&#32;shell&#32;code&#32;to&#32;reset&#32;environment&#32;variables</emphasis>
+65 <emphasis class="stringliteral">&#32;&#32;&#32;&#32;by&#32;unrolling&#32;modifications&#32;based&#32;on&#32;all&#32;workspaces&#32;in&#32;CMAKE_PREFIX_PATH.</emphasis>
+66 <emphasis class="stringliteral">&#32;&#32;&#32;&#32;This&#32;does&#32;not&#32;cover&#32;modifications&#32;performed&#32;by&#32;environment&#32;hooks.</emphasis>
+67 <emphasis class="stringliteral">&#32;&#32;&#32;&#32;&apos;&apos;&apos;</emphasis>
+68 &#32;&#32;&#32;&#32;lines&#32;=&#32;[]
+69 &#32;&#32;&#32;&#32;unmodified_environ&#32;=&#32;copy.copy(environ)
+70 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">for</emphasis>&#32;key&#32;<emphasis class="keywordflow">in</emphasis>&#32;sorted(env_var_subfolders.keys()):
+71 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;subfolder&#32;=&#32;env_var_subfolders[key]
+72 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;value&#32;=&#32;<link linkend="df/dc0/namespace__setup__util_1a45389205be3d6e2efe8b6f8409a8059b">_rollback_env_variable</link>(unmodified_environ,&#32;key,&#32;subfolder)
+73 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;value&#32;<emphasis class="keywordflow">is</emphasis>&#32;<emphasis class="keywordflow">not</emphasis>&#32;<emphasis class="keywordtype">None</emphasis>:
+74 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;environ[key]&#32;=&#32;value
+75 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;lines.append(<link linkend="df/dc0/namespace__setup__util_1ad56c24837fa4eddc63c03fbc7035628f">assignment</link>(key,&#32;value))
+76 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;lines:
+77 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;lines.insert(0,&#32;<link linkend="df/dc0/namespace__setup__util_1abe8c95c4cfe8b1374dacd5f91d984353">comment</link>(<emphasis class="stringliteral">&apos;reset&#32;environment&#32;variables&#32;by&#32;unrolling&#32;modifications&#32;based&#32;on&#32;all&#32;workspaces&#32;in&#32;CMAKE_PREFIX_PATH&apos;</emphasis>))
+78 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;lines
+79 
+80 
+<link linkend="df/dc0/namespace__setup__util_1a45389205be3d6e2efe8b6f8409a8059b">81 </link><emphasis class="keyword">def&#32;</emphasis><link linkend="df/dc0/namespace__setup__util_1a45389205be3d6e2efe8b6f8409a8059b">_rollback_env_variable</link>(environ,&#32;name,&#32;subfolder):
+82 &#32;&#32;&#32;&#32;<emphasis class="stringliteral">&apos;&apos;&apos;</emphasis>
+83 <emphasis class="stringliteral">&#32;&#32;&#32;&#32;For&#32;each&#32;catkin&#32;workspace&#32;in&#32;CMAKE_PREFIX_PATH&#32;remove&#32;the&#32;first&#32;entry&#32;from&#32;env[NAME]&#32;matching&#32;workspace&#32;+&#32;subfolder.</emphasis>
+84 <emphasis class="stringliteral"></emphasis>
+85 <emphasis class="stringliteral">&#32;&#32;&#32;&#32;:param&#32;subfolder:&#32;str&#32;&apos;&apos;&#32;or&#32;subfoldername&#32;that&#32;may&#32;start&#32;with&#32;&apos;/&apos;</emphasis>
+86 <emphasis class="stringliteral">&#32;&#32;&#32;&#32;:returns:&#32;the&#32;updated&#32;value&#32;of&#32;the&#32;environment&#32;variable.</emphasis>
+87 <emphasis class="stringliteral">&#32;&#32;&#32;&#32;&apos;&apos;&apos;</emphasis>
+88 &#32;&#32;&#32;&#32;value&#32;=&#32;environ[name]&#32;<emphasis class="keywordflow">if</emphasis>&#32;name&#32;<emphasis class="keywordflow">in</emphasis>&#32;environ&#32;<emphasis class="keywordflow">else</emphasis>&#32;<emphasis class="stringliteral">&apos;&apos;</emphasis>
+89 &#32;&#32;&#32;&#32;env_paths&#32;=&#32;[path&#32;<emphasis class="keywordflow">for</emphasis>&#32;path&#32;<emphasis class="keywordflow">in</emphasis>&#32;value.split(os.pathsep)&#32;<emphasis class="keywordflow">if</emphasis>&#32;path]
+90 &#32;&#32;&#32;&#32;value_modified&#32;=&#32;<emphasis class="keyword">False</emphasis>
+91 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;subfolder:
+92 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;subfolder.startswith(os.path.sep)&#32;<emphasis class="keywordflow">or</emphasis>&#32;(os.path.altsep&#32;<emphasis class="keywordflow">and</emphasis>&#32;subfolder.startswith(os.path.altsep)):
+93 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;subfolder&#32;=&#32;subfolder[1:]
+94 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;subfolder.endswith(os.path.sep)&#32;<emphasis class="keywordflow">or</emphasis>&#32;(os.path.altsep&#32;<emphasis class="keywordflow">and</emphasis>&#32;subfolder.endswith(os.path.altsep)):
+95 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;subfolder&#32;=&#32;subfolder[:-1]
+96 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">for</emphasis>&#32;ws_path&#32;<emphasis class="keywordflow">in</emphasis>&#32;<link linkend="df/dc0/namespace__setup__util_1ab2be07aa31918f1e1e34d6b7c4d66fcb">_get_workspaces</link>(environ,&#32;include_fuerte=<emphasis class="keyword">True</emphasis>,&#32;include_non_existing=<emphasis class="keyword">True</emphasis>):
+97 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;path_to_find&#32;=&#32;os.path.join(ws_path,&#32;subfolder)&#32;<emphasis class="keywordflow">if</emphasis>&#32;subfolder&#32;<emphasis class="keywordflow">else</emphasis>&#32;ws_path
+98 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;path_to_remove&#32;=&#32;<emphasis class="keywordtype">None</emphasis>
+99 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">for</emphasis>&#32;env_path&#32;<emphasis class="keywordflow">in</emphasis>&#32;env_paths:
+100 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;env_path_clean&#32;=&#32;env_path[:-1]&#32;<emphasis class="keywordflow">if</emphasis>&#32;env_path&#32;<emphasis class="keywordflow">and</emphasis>&#32;env_path[-1]&#32;<emphasis class="keywordflow">in</emphasis>&#32;[os.path.sep,&#32;os.path.altsep]&#32;<emphasis class="keywordflow">else</emphasis>&#32;env_path
+101 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;env_path_clean&#32;==&#32;path_to_find:
+102 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;path_to_remove&#32;=&#32;env_path
+103 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">break</emphasis>
+104 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;path_to_remove:
+105 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;env_paths.remove(path_to_remove)
+106 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;value_modified&#32;=&#32;<emphasis class="keyword">True</emphasis>
+107 &#32;&#32;&#32;&#32;new_value&#32;=&#32;os.pathsep.join(env_paths)
+108 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;new_value&#32;<emphasis class="keywordflow">if</emphasis>&#32;value_modified&#32;<emphasis class="keywordflow">else</emphasis>&#32;<emphasis class="keywordtype">None</emphasis>
+109 
+110 
+<link linkend="df/dc0/namespace__setup__util_1ab2be07aa31918f1e1e34d6b7c4d66fcb">111 </link><emphasis class="keyword">def&#32;</emphasis><link linkend="df/dc0/namespace__setup__util_1ab2be07aa31918f1e1e34d6b7c4d66fcb">_get_workspaces</link>(environ,&#32;include_fuerte=False,&#32;include_non_existing=False):
+112 &#32;&#32;&#32;&#32;<emphasis class="stringliteral">&apos;&apos;&apos;</emphasis>
+113 <emphasis class="stringliteral">&#32;&#32;&#32;&#32;Based&#32;on&#32;CMAKE_PREFIX_PATH&#32;return&#32;all&#32;catkin&#32;workspaces.</emphasis>
+114 <emphasis class="stringliteral"></emphasis>
+115 <emphasis class="stringliteral">&#32;&#32;&#32;&#32;:param&#32;include_fuerte:&#32;The&#32;flag&#32;if&#32;paths&#32;starting&#32;with&#32;&apos;/opt/ros/fuerte&apos;&#32;should&#32;be&#32;considered&#32;workspaces,&#32;``bool``</emphasis>
+116 <emphasis class="stringliteral">&#32;&#32;&#32;&#32;&apos;&apos;&apos;</emphasis>
+117 &#32;&#32;&#32;&#32;<emphasis class="comment">#&#32;get&#32;all&#32;cmake&#32;prefix&#32;paths</emphasis>
+118 &#32;&#32;&#32;&#32;env_name&#32;=&#32;<emphasis class="stringliteral">&apos;CMAKE_PREFIX_PATH&apos;</emphasis>
+119 &#32;&#32;&#32;&#32;value&#32;=&#32;environ[env_name]&#32;<emphasis class="keywordflow">if</emphasis>&#32;env_name&#32;<emphasis class="keywordflow">in</emphasis>&#32;environ&#32;<emphasis class="keywordflow">else</emphasis>&#32;<emphasis class="stringliteral">&apos;&apos;</emphasis>
+120 &#32;&#32;&#32;&#32;paths&#32;=&#32;[path&#32;<emphasis class="keywordflow">for</emphasis>&#32;path&#32;<emphasis class="keywordflow">in</emphasis>&#32;value.split(os.pathsep)&#32;<emphasis class="keywordflow">if</emphasis>&#32;path]
+121 &#32;&#32;&#32;&#32;<emphasis class="comment">#&#32;remove&#32;non-workspace&#32;paths</emphasis>
+122 &#32;&#32;&#32;&#32;workspaces&#32;=&#32;[path&#32;<emphasis class="keywordflow">for</emphasis>&#32;path&#32;<emphasis class="keywordflow">in</emphasis>&#32;paths&#32;<emphasis class="keywordflow">if</emphasis>&#32;os.path.isfile(os.path.join(path,&#32;CATKIN_MARKER_FILE))&#32;<emphasis class="keywordflow">or</emphasis>&#32;(include_fuerte&#32;<emphasis class="keywordflow">and</emphasis>&#32;path.startswith(<emphasis class="stringliteral">&apos;/opt/ros/fuerte&apos;</emphasis>))&#32;<emphasis class="keywordflow">or</emphasis>&#32;(include_non_existing&#32;<emphasis class="keywordflow">and</emphasis>&#32;<emphasis class="keywordflow">not</emphasis>&#32;os.path.exists(path))]
+123 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;workspaces
+124 
+125 
+<link linkend="df/dc0/namespace__setup__util_1a832417d18b85bd1d276a87547e86f860">126 </link><emphasis class="keyword">def&#32;</emphasis><link linkend="df/dc0/namespace__setup__util_1a832417d18b85bd1d276a87547e86f860">prepend_env_variables</link>(environ,&#32;env_var_subfolders,&#32;workspaces):
+127 &#32;&#32;&#32;&#32;<emphasis class="stringliteral">&apos;&apos;&apos;</emphasis>
+128 <emphasis class="stringliteral">&#32;&#32;&#32;&#32;Generate&#32;shell&#32;code&#32;to&#32;prepend&#32;environment&#32;variables</emphasis>
+129 <emphasis class="stringliteral">&#32;&#32;&#32;&#32;for&#32;the&#32;all&#32;workspaces.</emphasis>
+130 <emphasis class="stringliteral">&#32;&#32;&#32;&#32;&apos;&apos;&apos;</emphasis>
+131 &#32;&#32;&#32;&#32;lines&#32;=&#32;[]
+132 &#32;&#32;&#32;&#32;lines.append(<link linkend="df/dc0/namespace__setup__util_1abe8c95c4cfe8b1374dacd5f91d984353">comment</link>(<emphasis class="stringliteral">&apos;prepend&#32;folders&#32;of&#32;workspaces&#32;to&#32;environment&#32;variables&apos;</emphasis>))
+133 
+134 &#32;&#32;&#32;&#32;paths&#32;=&#32;[path&#32;<emphasis class="keywordflow">for</emphasis>&#32;path&#32;<emphasis class="keywordflow">in</emphasis>&#32;workspaces.split(os.pathsep)&#32;<emphasis class="keywordflow">if</emphasis>&#32;path]
+135 
+136 &#32;&#32;&#32;&#32;prefix&#32;=&#32;<link linkend="df/dc0/namespace__setup__util_1a01264d729d05078ec7ee1cad54fe6489">_prefix_env_variable</link>(environ,&#32;<emphasis class="stringliteral">&apos;CMAKE_PREFIX_PATH&apos;</emphasis>,&#32;paths,&#32;<emphasis class="stringliteral">&apos;&apos;</emphasis>)
+137 &#32;&#32;&#32;&#32;lines.append(<link linkend="df/dc0/namespace__setup__util_1ae78d86b2c4279f5b8b1acaa146c35802">prepend</link>(environ,&#32;<emphasis class="stringliteral">&apos;CMAKE_PREFIX_PATH&apos;</emphasis>,&#32;prefix))
+138 
+139 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">for</emphasis>&#32;key&#32;<emphasis class="keywordflow">in</emphasis>&#32;sorted([key&#32;<emphasis class="keywordflow">for</emphasis>&#32;key&#32;<emphasis class="keywordflow">in</emphasis>&#32;env_var_subfolders.keys()&#32;<emphasis class="keywordflow">if</emphasis>&#32;key&#32;!=&#32;<emphasis class="stringliteral">&apos;CMAKE_PREFIX_PATH&apos;</emphasis>]):
+140 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;subfolder&#32;=&#32;env_var_subfolders[key]
+141 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;prefix&#32;=&#32;<link linkend="df/dc0/namespace__setup__util_1a01264d729d05078ec7ee1cad54fe6489">_prefix_env_variable</link>(environ,&#32;key,&#32;paths,&#32;subfolder)
+142 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;lines.append(<link linkend="df/dc0/namespace__setup__util_1ae78d86b2c4279f5b8b1acaa146c35802">prepend</link>(environ,&#32;key,&#32;prefix))
+143 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;lines
+144 
+145 
+<link linkend="df/dc0/namespace__setup__util_1a01264d729d05078ec7ee1cad54fe6489">146 </link><emphasis class="keyword">def&#32;</emphasis><link linkend="df/dc0/namespace__setup__util_1a01264d729d05078ec7ee1cad54fe6489">_prefix_env_variable</link>(environ,&#32;name,&#32;paths,&#32;subfolder):
+147 &#32;&#32;&#32;&#32;<emphasis class="stringliteral">&apos;&apos;&apos;</emphasis>
+148 <emphasis class="stringliteral">&#32;&#32;&#32;&#32;Return&#32;the&#32;prefix&#32;to&#32;prepend&#32;to&#32;the&#32;environment&#32;variable&#32;NAME,&#32;adding&#32;any&#32;path&#32;in&#32;NEW_PATHS_STR&#32;without&#32;creating&#32;duplicate&#32;or&#32;empty&#32;items.</emphasis>
+149 <emphasis class="stringliteral">&#32;&#32;&#32;&#32;&apos;&apos;&apos;</emphasis>
+150 &#32;&#32;&#32;&#32;value&#32;=&#32;environ[name]&#32;<emphasis class="keywordflow">if</emphasis>&#32;name&#32;<emphasis class="keywordflow">in</emphasis>&#32;environ&#32;<emphasis class="keywordflow">else</emphasis>&#32;<emphasis class="stringliteral">&apos;&apos;</emphasis>
+151 &#32;&#32;&#32;&#32;environ_paths&#32;=&#32;[path&#32;<emphasis class="keywordflow">for</emphasis>&#32;path&#32;<emphasis class="keywordflow">in</emphasis>&#32;value.split(os.pathsep)&#32;<emphasis class="keywordflow">if</emphasis>&#32;path]
+152 &#32;&#32;&#32;&#32;checked_paths&#32;=&#32;[]
+153 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">for</emphasis>&#32;path&#32;<emphasis class="keywordflow">in</emphasis>&#32;paths:
+154 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;subfolder:
+155 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;path&#32;=&#32;os.path.join(path,&#32;subfolder)
+156 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">#&#32;exclude&#32;any&#32;path&#32;already&#32;in&#32;env&#32;and&#32;any&#32;path&#32;we&#32;already&#32;added</emphasis>
+157 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;path&#32;<emphasis class="keywordflow">not</emphasis>&#32;<emphasis class="keywordflow">in</emphasis>&#32;environ_paths&#32;<emphasis class="keywordflow">and</emphasis>&#32;path&#32;<emphasis class="keywordflow">not</emphasis>&#32;<emphasis class="keywordflow">in</emphasis>&#32;checked_paths:
+158 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;checked_paths.append(path)
+159 &#32;&#32;&#32;&#32;prefix_str&#32;=&#32;os.pathsep.join(checked_paths)
+160 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;prefix_str&#32;!=&#32;<emphasis class="stringliteral">&apos;&apos;</emphasis>&#32;<emphasis class="keywordflow">and</emphasis>&#32;environ_paths:
+161 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;prefix_str&#32;+=&#32;os.pathsep
+162 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;prefix_str
+163 
+164 
+<link linkend="df/dc0/namespace__setup__util_1ad56c24837fa4eddc63c03fbc7035628f">165 </link><emphasis class="keyword">def&#32;</emphasis><link linkend="df/dc0/namespace__setup__util_1ad56c24837fa4eddc63c03fbc7035628f">assignment</link>(key,&#32;value):
+166 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;<emphasis class="keywordflow">not</emphasis>&#32;IS_WINDOWS:
+167 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;<emphasis class="stringliteral">&apos;export&#32;%s=&quot;%s&quot;&apos;</emphasis>&#32;%&#32;(key,&#32;value)
+168 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">else</emphasis>:
+169 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;<emphasis class="stringliteral">&apos;set&#32;%s=%s&apos;</emphasis>&#32;%&#32;(key,&#32;value)
+170 
+171 
+<link linkend="df/dc0/namespace__setup__util_1abe8c95c4cfe8b1374dacd5f91d984353">172 </link><emphasis class="keyword">def&#32;</emphasis><link linkend="df/dc0/namespace__setup__util_1abe8c95c4cfe8b1374dacd5f91d984353">comment</link>(msg):
+173 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;<emphasis class="keywordflow">not</emphasis>&#32;IS_WINDOWS:
+174 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;<emphasis class="stringliteral">&apos;#&#32;%s&apos;</emphasis>&#32;%&#32;msg
+175 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">else</emphasis>:
+176 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;<emphasis class="stringliteral">&apos;REM&#32;%s&apos;</emphasis>&#32;%&#32;msg
+177 
+178 
+<link linkend="df/dc0/namespace__setup__util_1ae78d86b2c4279f5b8b1acaa146c35802">179 </link><emphasis class="keyword">def&#32;</emphasis><link linkend="df/dc0/namespace__setup__util_1ae78d86b2c4279f5b8b1acaa146c35802">prepend</link>(environ,&#32;key,&#32;prefix):
+180 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;key&#32;<emphasis class="keywordflow">not</emphasis>&#32;<emphasis class="keywordflow">in</emphasis>&#32;environ&#32;<emphasis class="keywordflow">or</emphasis>&#32;<emphasis class="keywordflow">not</emphasis>&#32;environ[key]:
+181 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;<link linkend="df/dc0/namespace__setup__util_1ad56c24837fa4eddc63c03fbc7035628f">assignment</link>(key,&#32;prefix)
+182 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;<emphasis class="keywordflow">not</emphasis>&#32;IS_WINDOWS:
+183 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;<emphasis class="stringliteral">&apos;export&#32;%s=&quot;%s$%s&quot;&apos;</emphasis>&#32;%&#32;(key,&#32;prefix,&#32;key)
+184 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">else</emphasis>:
+185 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;<emphasis class="stringliteral">&apos;set&#32;%s=%s%%%s%%&apos;</emphasis>&#32;%&#32;(key,&#32;prefix,&#32;key)
+186 
+187 
+<link linkend="df/dc0/namespace__setup__util_1a73de35ca77f260af6691470342ab49ce">188 </link><emphasis class="keyword">def&#32;</emphasis><link linkend="df/dc0/namespace__setup__util_1a73de35ca77f260af6691470342ab49ce">find_env_hooks</link>(environ,&#32;cmake_prefix_path):
+189 &#32;&#32;&#32;&#32;<emphasis class="stringliteral">&apos;&apos;&apos;</emphasis>
+190 <emphasis class="stringliteral">&#32;&#32;&#32;&#32;Generate&#32;shell&#32;code&#32;with&#32;found&#32;environment&#32;hooks</emphasis>
+191 <emphasis class="stringliteral">&#32;&#32;&#32;&#32;for&#32;the&#32;all&#32;workspaces.</emphasis>
+192 <emphasis class="stringliteral">&#32;&#32;&#32;&#32;&apos;&apos;&apos;</emphasis>
+193 &#32;&#32;&#32;&#32;lines&#32;=&#32;[]
+194 &#32;&#32;&#32;&#32;lines.append(<link linkend="df/dc0/namespace__setup__util_1abe8c95c4cfe8b1374dacd5f91d984353">comment</link>(<emphasis class="stringliteral">&apos;found&#32;environment&#32;hooks&#32;in&#32;workspaces&apos;</emphasis>))
+195 
+196 &#32;&#32;&#32;&#32;generic_env_hooks&#32;=&#32;[]
+197 &#32;&#32;&#32;&#32;generic_env_hooks_workspace&#32;=&#32;[]
+198 &#32;&#32;&#32;&#32;specific_env_hooks&#32;=&#32;[]
+199 &#32;&#32;&#32;&#32;specific_env_hooks_workspace&#32;=&#32;[]
+200 &#32;&#32;&#32;&#32;generic_env_hooks_by_filename&#32;=&#32;{}
+201 &#32;&#32;&#32;&#32;specific_env_hooks_by_filename&#32;=&#32;{}
+202 &#32;&#32;&#32;&#32;generic_env_hook_ext&#32;=&#32;<emphasis class="stringliteral">&apos;bat&apos;</emphasis>&#32;<emphasis class="keywordflow">if</emphasis>&#32;IS_WINDOWS&#32;<emphasis class="keywordflow">else</emphasis>&#32;<emphasis class="stringliteral">&apos;sh&apos;</emphasis>
+203 &#32;&#32;&#32;&#32;specific_env_hook_ext&#32;=&#32;environ[<emphasis class="stringliteral">&apos;CATKIN_SHELL&apos;</emphasis>]&#32;<emphasis class="keywordflow">if</emphasis>&#32;<emphasis class="keywordflow">not</emphasis>&#32;IS_WINDOWS&#32;<emphasis class="keywordflow">and</emphasis>&#32;<emphasis class="stringliteral">&apos;CATKIN_SHELL&apos;</emphasis>&#32;<emphasis class="keywordflow">in</emphasis>&#32;environ&#32;<emphasis class="keywordflow">and</emphasis>&#32;environ[<emphasis class="stringliteral">&apos;CATKIN_SHELL&apos;</emphasis>]&#32;<emphasis class="keywordflow">else</emphasis>&#32;<emphasis class="keywordtype">None</emphasis>
+204 &#32;&#32;&#32;&#32;<emphasis class="comment">#&#32;remove&#32;non-workspace&#32;paths</emphasis>
+205 &#32;&#32;&#32;&#32;workspaces&#32;=&#32;[path&#32;<emphasis class="keywordflow">for</emphasis>&#32;path&#32;<emphasis class="keywordflow">in</emphasis>&#32;cmake_prefix_path.split(os.pathsep)&#32;<emphasis class="keywordflow">if</emphasis>&#32;path&#32;<emphasis class="keywordflow">and</emphasis>&#32;os.path.isfile(os.path.join(path,&#32;CATKIN_MARKER_FILE))]
+206 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">for</emphasis>&#32;workspace&#32;<emphasis class="keywordflow">in</emphasis>&#32;reversed(workspaces):
+207 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;env_hook_dir&#32;=&#32;os.path.join(workspace,&#32;<emphasis class="stringliteral">&apos;etc&apos;</emphasis>,&#32;<emphasis class="stringliteral">&apos;catkin&apos;</emphasis>,&#32;<emphasis class="stringliteral">&apos;profile.d&apos;</emphasis>)
+208 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;os.path.isdir(env_hook_dir):
+209 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">for</emphasis>&#32;filename&#32;<emphasis class="keywordflow">in</emphasis>&#32;sorted(os.listdir(env_hook_dir)):
+210 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;filename.endswith(<emphasis class="stringliteral">&apos;.%s&apos;</emphasis>&#32;%&#32;generic_env_hook_ext):
+211 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">#&#32;remove&#32;previous&#32;env&#32;hook&#32;with&#32;same&#32;name&#32;if&#32;present</emphasis>
+212 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;filename&#32;<emphasis class="keywordflow">in</emphasis>&#32;generic_env_hooks_by_filename:
+213 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;i&#32;=&#32;generic_env_hooks.index(generic_env_hooks_by_filename[filename])
+214 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;generic_env_hooks.pop(i)
+215 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;generic_env_hooks_workspace.pop(i)
+216 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">#&#32;append&#32;env&#32;hook</emphasis>
+217 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;generic_env_hooks.append(os.path.join(env_hook_dir,&#32;filename))
+218 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;generic_env_hooks_workspace.append(workspace)
+219 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;generic_env_hooks_by_filename[filename]&#32;=&#32;generic_env_hooks[-1]
+220 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">elif</emphasis>&#32;specific_env_hook_ext&#32;<emphasis class="keywordflow">is</emphasis>&#32;<emphasis class="keywordflow">not</emphasis>&#32;<emphasis class="keywordtype">None</emphasis>&#32;<emphasis class="keywordflow">and</emphasis>&#32;filename.endswith(<emphasis class="stringliteral">&apos;.%s&apos;</emphasis>&#32;%&#32;specific_env_hook_ext):
+221 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">#&#32;remove&#32;previous&#32;env&#32;hook&#32;with&#32;same&#32;name&#32;if&#32;present</emphasis>
+222 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;filename&#32;<emphasis class="keywordflow">in</emphasis>&#32;specific_env_hooks_by_filename:
+223 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;i&#32;=&#32;specific_env_hooks.index(specific_env_hooks_by_filename[filename])
+224 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;specific_env_hooks.pop(i)
+225 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;specific_env_hooks_workspace.pop(i)
+226 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">#&#32;append&#32;env&#32;hook</emphasis>
+227 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;specific_env_hooks.append(os.path.join(env_hook_dir,&#32;filename))
+228 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;specific_env_hooks_workspace.append(workspace)
+229 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;specific_env_hooks_by_filename[filename]&#32;=&#32;specific_env_hooks[-1]
+230 &#32;&#32;&#32;&#32;env_hooks&#32;=&#32;generic_env_hooks&#32;+&#32;specific_env_hooks
+231 &#32;&#32;&#32;&#32;env_hooks_workspace&#32;=&#32;generic_env_hooks_workspace&#32;+&#32;specific_env_hooks_workspace
+232 &#32;&#32;&#32;&#32;count&#32;=&#32;len(env_hooks)
+233 &#32;&#32;&#32;&#32;lines.append(<link linkend="df/dc0/namespace__setup__util_1ad56c24837fa4eddc63c03fbc7035628f">assignment</link>(<emphasis class="stringliteral">&apos;_CATKIN_ENVIRONMENT_HOOKS_COUNT&apos;</emphasis>,&#32;count))
+234 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">for</emphasis>&#32;i&#32;<emphasis class="keywordflow">in</emphasis>&#32;range(count):
+235 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;lines.append(<link linkend="df/dc0/namespace__setup__util_1ad56c24837fa4eddc63c03fbc7035628f">assignment</link>(<emphasis class="stringliteral">&apos;_CATKIN_ENVIRONMENT_HOOKS_%d&apos;</emphasis>&#32;%&#32;i,&#32;env_hooks[i]))
+236 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;lines.append(<link linkend="df/dc0/namespace__setup__util_1ad56c24837fa4eddc63c03fbc7035628f">assignment</link>(<emphasis class="stringliteral">&apos;_CATKIN_ENVIRONMENT_HOOKS_%d_WORKSPACE&apos;</emphasis>&#32;%&#32;i,&#32;env_hooks_workspace[i]))
+237 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;lines
+238 
+239 
+<link linkend="df/dc0/namespace__setup__util_1a57d9ecb280810c9a5409d44aeb9d0a25">240 </link><emphasis class="keyword">def&#32;</emphasis><link linkend="df/dc0/namespace__setup__util_1a57d9ecb280810c9a5409d44aeb9d0a25">_parse_arguments</link>(args=None):
+241 &#32;&#32;&#32;&#32;parser&#32;=&#32;argparse.ArgumentParser(description=<emphasis class="stringliteral">&apos;Generates&#32;code&#32;blocks&#32;for&#32;the&#32;setup.SHELL&#32;script.&apos;</emphasis>)
+242 &#32;&#32;&#32;&#32;parser.add_argument(<emphasis class="stringliteral">&apos;--extend&apos;</emphasis>,&#32;action=<emphasis class="stringliteral">&apos;store_true&apos;</emphasis>,&#32;help=<emphasis class="stringliteral">&apos;Skip&#32;unsetting&#32;previous&#32;environment&#32;variables&#32;to&#32;extend&#32;context&apos;</emphasis>)
+243 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;parser.parse_known_args(args=args)[0]
+244 
+245 
+246 <emphasis class="keywordflow">if</emphasis>&#32;__name__&#32;==&#32;<emphasis class="stringliteral">&apos;__main__&apos;</emphasis>:
+247 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">try</emphasis>:
+248 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">try</emphasis>:
+<link linkend="df/dc0/namespace__setup__util_1a547963d07c6371df1c51b1384a2dec28">249 </link>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;args&#32;=&#32;<link linkend="df/dc0/namespace__setup__util_1a57d9ecb280810c9a5409d44aeb9d0a25">_parse_arguments</link>()
+250 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">except</emphasis>&#32;Exception&#32;<emphasis class="keyword">as</emphasis>&#32;e:
+<link linkend="df/dc0/namespace__setup__util_1aea63a1b32cc79bc3d872ab7cb30dd07e">251 </link>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;print(e,&#32;file=sys.stderr)
+252 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;sys.exit(1)
+253 
+254 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">#&#32;environment&#32;at&#32;generation&#32;time</emphasis>
+<link linkend="df/dc0/namespace__setup__util_1a57afd3d2c076955fb715f3e72ef098eb">255 </link>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;CMAKE_PREFIX_PATH&#32;=&#32;<emphasis class="stringliteral">&apos;/home/longfei/catkin_ws/devel;/opt/ros/hydro&apos;</emphasis>.split(<emphasis class="stringliteral">&apos;;&apos;</emphasis>)
+256 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">#&#32;prepend&#32;current&#32;workspace&#32;if&#32;not&#32;already&#32;part&#32;of&#32;CPP</emphasis>
+<link linkend="df/dc0/namespace__setup__util_1a83d25140acd7788bbcb95843fe38e639">257 </link>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;base_path&#32;=&#32;os.path.dirname(__file__)
+258 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;base_path&#32;<emphasis class="keywordflow">not</emphasis>&#32;<emphasis class="keywordflow">in</emphasis>&#32;CMAKE_PREFIX_PATH:
+259 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;CMAKE_PREFIX_PATH.insert(0,&#32;base_path)
+260 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;CMAKE_PREFIX_PATH&#32;=&#32;os.pathsep.join(CMAKE_PREFIX_PATH)
+261 
+<link linkend="df/dc0/namespace__setup__util_1a9a935bdd9ee1aa0327161025bb18c136">262 </link>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;environ&#32;=&#32;dict(os.environ)
+<link linkend="df/dc0/namespace__setup__util_1a8618d8be5f729d4c9696daa5e083a001">263 </link>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;lines&#32;=&#32;[]
+264 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;<emphasis class="keywordflow">not</emphasis>&#32;args.extend:
+265 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;lines&#32;+=&#32;<link linkend="df/dc0/namespace__setup__util_1af3030db6102b5aa35cd354a2fb6cca03">rollback_env_variables</link>(environ,&#32;ENV_VAR_SUBFOLDERS)
+266 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;lines&#32;+=&#32;<link linkend="df/dc0/namespace__setup__util_1a832417d18b85bd1d276a87547e86f860">prepend_env_variables</link>(environ,&#32;ENV_VAR_SUBFOLDERS,&#32;CMAKE_PREFIX_PATH)
+267 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;lines&#32;+=&#32;<link linkend="df/dc0/namespace__setup__util_1a73de35ca77f260af6691470342ab49ce">find_env_hooks</link>(environ,&#32;CMAKE_PREFIX_PATH)
+268 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;print(<emphasis class="stringliteral">&apos;\n&apos;</emphasis>.join(lines))
+269 
+270 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">#&#32;need&#32;to&#32;explicitly&#32;flush&#32;the&#32;output</emphasis>
+271 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;sys.stdout.flush()
+272 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">except</emphasis>&#32;IOError&#32;<emphasis class="keyword">as</emphasis>&#32;e:
+273 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">#&#32;and&#32;catch&#32;potantial&#32;&quot;broken&#32;pipe&quot;&#32;if&#32;stdout&#32;is&#32;not&#32;writable</emphasis>
+274 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">#&#32;which&#32;can&#32;happen&#32;when&#32;piping&#32;the&#32;output&#32;to&#32;a&#32;file&#32;but&#32;the&#32;disk&#32;is&#32;full</emphasis>
+275 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;e.errno&#32;==&#32;errno.EPIPE:
+276 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;print(e,&#32;file=sys.stderr)
+277 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;sys.exit(2)
+278 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">raise</emphasis>
+279 
+280 &#32;&#32;&#32;&#32;sys.exit(0)
+    </computeroutput></literallayout>
+</section>

@@ -1,0 +1,277 @@
+\hypertarget{classjaco_1_1JacoPose}{}\section{jaco\+:\+:Jaco\+Pose Class Reference}
+\label{classjaco_1_1JacoPose}\index{jaco\+::\+Jaco\+Pose@{jaco\+::\+Jaco\+Pose}}
+
+
+{\ttfamily \#include \char`\"{}jaco\+\_\+types.\+h\char`\"{}}
+
+
+
+Inheritance diagram for jaco\+:\+:Jaco\+Pose\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=205pt]{d3/d5f/classjaco_1_1JacoPose__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for jaco\+:\+:Jaco\+Pose\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=205pt]{d2/ddf/classjaco_1_1JacoPose__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+geometry\+\_\+msgs\+::\+Pose \hyperlink{classjaco_1_1JacoPose_a9f2e68a94240e365afefd84d92f5a132}{construct\+Pose\+Msg} ()
+\item 
+geometry\+\_\+msgs\+::\+Wrench \hyperlink{classjaco_1_1JacoPose_a0ce9524097d0c974210ab20e63049b1c}{construct\+Wrench\+Msg} ()
+\item 
+void \hyperlink{structCartesianInfo_a6d47623939d86124525ab4c8f7a2b8e9}{Init\+Struct} ()
+\item 
+bool \hyperlink{classjaco_1_1JacoPose_aed0e2dcb5cc3bc8315a2988bba51d513}{is\+Close\+To\+Other} (const \hyperlink{classjaco_1_1JacoPose}{Jaco\+Pose} \&, float tolerance) const 
+\item 
+\hyperlink{classjaco_1_1JacoPose_afadf92820c16343650a71572acf9c402}{Jaco\+Pose} ()
+\item 
+\hyperlink{classjaco_1_1JacoPose_a40acc797871a6bf6870ed0dd66ec75d7}{Jaco\+Pose} (const geometry\+\_\+msgs\+::\+Pose \&pose)
+\item 
+\hyperlink{classjaco_1_1JacoPose_a237eff1d503ce1020aad353febd51609}{Jaco\+Pose} (const \hyperlink{structCartesianInfo}{Cartesian\+Info} \&pose)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float \hyperlink{structCartesianInfo_a39135e53155aa4025c40eeefbfd3b17c}{ThetaX}
+\begin{DoxyCompactList}\small\item\em This is the value related to the orientation around the X axis. Unit depends on the context it\textquotesingle{}s been used. \end{DoxyCompactList}\item 
+float \hyperlink{structCartesianInfo_a4aef5897f4cdcf7ecc9df6804f844d46}{ThetaY}
+\begin{DoxyCompactList}\small\item\em This is the value related to the orientation around the Y axis. Unit depends on the context it\textquotesingle{}s been used. \end{DoxyCompactList}\item 
+float \hyperlink{structCartesianInfo_a2890c501f3b7b9479e12ad51f04f0a7f}{ThetaZ}
+\begin{DoxyCompactList}\small\item\em This is the value related to the orientation around the Z axis. Unit depends on the context it\textquotesingle{}s been used. \end{DoxyCompactList}\item 
+float \hyperlink{structCartesianInfo_a212cc2dcae1697132fc31fa2f5d17269}{X}
+\begin{DoxyCompactList}\small\item\em This is the value related to the translation along the X axis. Unit depends on the context it\textquotesingle{}s been used. \end{DoxyCompactList}\item 
+float \hyperlink{structCartesianInfo_a12c2611c89445419b336e58815d87c7c}{Y}
+\begin{DoxyCompactList}\small\item\em This is the value related to the translation along the Y axis. Unit depends on the context it\textquotesingle{}s been used. \end{DoxyCompactList}\item 
+float \hyperlink{structCartesianInfo_a14e196e4cb38c0ae7f4658b9b070b7fe}{Z}
+\begin{DoxyCompactList}\small\item\em This is the value related to the translation along the Z axis. Unit depends on the context it\textquotesingle{}s been used. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{jaco\+::\+Jaco\+Pose@{jaco\+::\+Jaco\+Pose}!Jaco\+Pose@{Jaco\+Pose}}
+\index{Jaco\+Pose@{Jaco\+Pose}!jaco\+::\+Jaco\+Pose@{jaco\+::\+Jaco\+Pose}}
+\subsubsection[{\texorpdfstring{Jaco\+Pose()}{JacoPose()}}]{\setlength{\rightskip}{0pt plus 5cm}jaco\+::\+Jaco\+Pose\+::\+Jaco\+Pose (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classjaco_1_1JacoPose_afadf92820c16343650a71572acf9c402}{}\label{classjaco_1_1JacoPose_afadf92820c16343650a71572acf9c402}
+
+\begin{DoxyCode}
+79 \{\}
+\end{DoxyCode}
+\index{jaco\+::\+Jaco\+Pose@{jaco\+::\+Jaco\+Pose}!Jaco\+Pose@{Jaco\+Pose}}
+\index{Jaco\+Pose@{Jaco\+Pose}!jaco\+::\+Jaco\+Pose@{jaco\+::\+Jaco\+Pose}}
+\subsubsection[{\texorpdfstring{Jaco\+Pose(const geometry\+\_\+msgs\+::\+Pose \&pose)}{JacoPose(const geometry_msgs::Pose &pose)}}]{\setlength{\rightskip}{0pt plus 5cm}jaco\+::\+Jaco\+Pose\+::\+Jaco\+Pose (
+\begin{DoxyParamCaption}
+\item[{const geometry\+\_\+msgs\+::\+Pose \&}]{pose}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [explicit]}}\hypertarget{classjaco_1_1JacoPose_a40acc797871a6bf6870ed0dd66ec75d7}{}\label{classjaco_1_1JacoPose_a40acc797871a6bf6870ed0dd66ec75d7}
+
+\begin{DoxyCode}
+104 \{
+105     \textcolor{keywordtype}{double} tx, ty, tz;
+106     tf::Quaternion q;
+107     tf::quaternionMsgToTF(pose.orientation, q);
+108 
+109     tf::Matrix3x3 bt\_q(q);
+110 
+111     bt\_q.getEulerYPR(tz, ty, tx);
+112 
+113     \hyperlink{structCartesianInfo_a212cc2dcae1697132fc31fa2f5d17269}{X} = \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{float}\textcolor{keyword}{>}(pose.position.x);
+114     \hyperlink{structCartesianInfo_a12c2611c89445419b336e58815d87c7c}{Y} = \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{float}\textcolor{keyword}{>}(pose.position.y);
+115     \hyperlink{structCartesianInfo_a14e196e4cb38c0ae7f4658b9b070b7fe}{Z} = \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{float}\textcolor{keyword}{>}(pose.position.z);
+116 
+117     \hyperlink{structCartesianInfo_a39135e53155aa4025c40eeefbfd3b17c}{ThetaX} = \hyperlink{namespacejaco_a564cf022c0783972c60ed14cfbc02a2a}{normalizeInRads}(tx);
+118     \hyperlink{structCartesianInfo_a4aef5897f4cdcf7ecc9df6804f844d46}{ThetaY} = \hyperlink{namespacejaco_a564cf022c0783972c60ed14cfbc02a2a}{normalizeInRads}(ty);
+119     \hyperlink{structCartesianInfo_a2890c501f3b7b9479e12ad51f04f0a7f}{ThetaZ} = \hyperlink{namespacejaco_a564cf022c0783972c60ed14cfbc02a2a}{normalizeInRads}(tz);
+120 \}
+\end{DoxyCode}
+\index{jaco\+::\+Jaco\+Pose@{jaco\+::\+Jaco\+Pose}!Jaco\+Pose@{Jaco\+Pose}}
+\index{Jaco\+Pose@{Jaco\+Pose}!jaco\+::\+Jaco\+Pose@{jaco\+::\+Jaco\+Pose}}
+\subsubsection[{\texorpdfstring{Jaco\+Pose(const Cartesian\+Info \&pose)}{JacoPose(const CartesianInfo &pose)}}]{\setlength{\rightskip}{0pt plus 5cm}jaco\+::\+Jaco\+Pose\+::\+Jaco\+Pose (
+\begin{DoxyParamCaption}
+\item[{const {\bf Cartesian\+Info} \&}]{pose}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [explicit]}}\hypertarget{classjaco_1_1JacoPose_a237eff1d503ce1020aad353febd51609}{}\label{classjaco_1_1JacoPose_a237eff1d503ce1020aad353febd51609}
+
+\begin{DoxyCode}
+124 \{
+125     \hyperlink{structCartesianInfo_a212cc2dcae1697132fc31fa2f5d17269}{X} = pose.\hyperlink{structCartesianInfo_a212cc2dcae1697132fc31fa2f5d17269}{X};
+126     \hyperlink{structCartesianInfo_a12c2611c89445419b336e58815d87c7c}{Y} = pose.\hyperlink{structCartesianInfo_a12c2611c89445419b336e58815d87c7c}{Y};
+127     \hyperlink{structCartesianInfo_a14e196e4cb38c0ae7f4658b9b070b7fe}{Z} = pose.\hyperlink{structCartesianInfo_a14e196e4cb38c0ae7f4658b9b070b7fe}{Z};
+128 
+129     \hyperlink{structCartesianInfo_a39135e53155aa4025c40eeefbfd3b17c}{ThetaX} = \hyperlink{namespacejaco_a564cf022c0783972c60ed14cfbc02a2a}{normalizeInRads}(pose.\hyperlink{structCartesianInfo_a39135e53155aa4025c40eeefbfd3b17c}{ThetaX});
+130     \hyperlink{structCartesianInfo_a4aef5897f4cdcf7ecc9df6804f844d46}{ThetaY} = \hyperlink{namespacejaco_a564cf022c0783972c60ed14cfbc02a2a}{normalizeInRads}(pose.\hyperlink{structCartesianInfo_a4aef5897f4cdcf7ecc9df6804f844d46}{ThetaY});
+131     \hyperlink{structCartesianInfo_a2890c501f3b7b9479e12ad51f04f0a7f}{ThetaZ} = \hyperlink{namespacejaco_a564cf022c0783972c60ed14cfbc02a2a}{normalizeInRads}(pose.\hyperlink{structCartesianInfo_a2890c501f3b7b9479e12ad51f04f0a7f}{ThetaZ});
+132 \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{jaco\+::\+Jaco\+Pose@{jaco\+::\+Jaco\+Pose}!construct\+Pose\+Msg@{construct\+Pose\+Msg}}
+\index{construct\+Pose\+Msg@{construct\+Pose\+Msg}!jaco\+::\+Jaco\+Pose@{jaco\+::\+Jaco\+Pose}}
+\subsubsection[{\texorpdfstring{construct\+Pose\+Msg()}{constructPoseMsg()}}]{\setlength{\rightskip}{0pt plus 5cm}geometry\+\_\+msgs\+::\+Pose jaco\+::\+Jaco\+Pose\+::construct\+Pose\+Msg (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classjaco_1_1JacoPose_a9f2e68a94240e365afefd84d92f5a132}{}\label{classjaco_1_1JacoPose_a9f2e68a94240e365afefd84d92f5a132}
+
+\begin{DoxyCode}
+136 \{
+137     geometry\_msgs::Pose pose;
+138     tf::Quaternion position\_quaternion;
+139 
+140     
+141     \textcolor{comment}{// TODO: QUICK FIX, bake this as a quaternion:}
+142     tf::Matrix3x3 mx(           1,            0,            0, 
+143                                 0,  cos(\hyperlink{structCartesianInfo_a39135e53155aa4025c40eeefbfd3b17c}{ThetaX}), -sin(\hyperlink{structCartesianInfo_a39135e53155aa4025c40eeefbfd3b17c}{ThetaX}),
+144                                 0,  sin(\hyperlink{structCartesianInfo_a39135e53155aa4025c40eeefbfd3b17c}{ThetaX}),  cos(\hyperlink{structCartesianInfo_a39135e53155aa4025c40eeefbfd3b17c}{ThetaX}));
+145     tf::Matrix3x3 my( cos(\hyperlink{structCartesianInfo_a4aef5897f4cdcf7ecc9df6804f844d46}{ThetaY}),            0,  sin(\hyperlink{structCartesianInfo_a4aef5897f4cdcf7ecc9df6804f844d46}{ThetaY}),
+146                                 0,            1,            0,
+147                      -sin(\hyperlink{structCartesianInfo_a4aef5897f4cdcf7ecc9df6804f844d46}{ThetaY}),            0,  cos(\hyperlink{structCartesianInfo_a4aef5897f4cdcf7ecc9df6804f844d46}{ThetaY}));
+148     tf::Matrix3x3 mz( cos(\hyperlink{structCartesianInfo_a2890c501f3b7b9479e12ad51f04f0a7f}{ThetaZ}), -sin(\hyperlink{structCartesianInfo_a2890c501f3b7b9479e12ad51f04f0a7f}{ThetaZ}),            0,
+149                       sin(\hyperlink{structCartesianInfo_a2890c501f3b7b9479e12ad51f04f0a7f}{ThetaZ}),  cos(\hyperlink{structCartesianInfo_a2890c501f3b7b9479e12ad51f04f0a7f}{ThetaZ}),            0,
+150                                 0,            0,            1);
+151 
+152     tf::Matrix3x3  mg = mx * my * mz;
+153     mg.getRotation(position\_quaternion);
+154 
+155     \textcolor{comment}{// NOTE: This doesn't work, as angles reported by the API are not fixed.}
+156     \textcolor{comment}{// position\_quaternion.setRPY(ThetaX, ThetaY, ThetaZ);}
+157 
+158     
+159     tf::quaternionTFToMsg(position\_quaternion, pose.orientation);
+160 
+161     pose.position.x = \hyperlink{structCartesianInfo_a212cc2dcae1697132fc31fa2f5d17269}{X};
+162     pose.position.y = \hyperlink{structCartesianInfo_a12c2611c89445419b336e58815d87c7c}{Y};
+163     pose.position.z = \hyperlink{structCartesianInfo_a14e196e4cb38c0ae7f4658b9b070b7fe}{Z};
+164 
+165     \textcolor{keywordflow}{return} pose;
+166 \}
+\end{DoxyCode}
+\index{jaco\+::\+Jaco\+Pose@{jaco\+::\+Jaco\+Pose}!construct\+Wrench\+Msg@{construct\+Wrench\+Msg}}
+\index{construct\+Wrench\+Msg@{construct\+Wrench\+Msg}!jaco\+::\+Jaco\+Pose@{jaco\+::\+Jaco\+Pose}}
+\subsubsection[{\texorpdfstring{construct\+Wrench\+Msg()}{constructWrenchMsg()}}]{\setlength{\rightskip}{0pt plus 5cm}geometry\+\_\+msgs\+::\+Wrench jaco\+::\+Jaco\+Pose\+::construct\+Wrench\+Msg (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classjaco_1_1JacoPose_a0ce9524097d0c974210ab20e63049b1c}{}\label{classjaco_1_1JacoPose_a0ce9524097d0c974210ab20e63049b1c}
+
+\begin{DoxyCode}
+169 \{
+170     geometry\_msgs::Wrench wrench;
+171 
+172     wrench.force.x  = \hyperlink{structCartesianInfo_a212cc2dcae1697132fc31fa2f5d17269}{X};
+173     wrench.force.y  = \hyperlink{structCartesianInfo_a12c2611c89445419b336e58815d87c7c}{Y};
+174     wrench.force.z  = \hyperlink{structCartesianInfo_a14e196e4cb38c0ae7f4658b9b070b7fe}{Z};
+175     wrench.torque.x = \hyperlink{structCartesianInfo_a39135e53155aa4025c40eeefbfd3b17c}{ThetaX};
+176     wrench.torque.y = \hyperlink{structCartesianInfo_a4aef5897f4cdcf7ecc9df6804f844d46}{ThetaY};
+177     wrench.torque.z = \hyperlink{structCartesianInfo_a2890c501f3b7b9479e12ad51f04f0a7f}{ThetaZ};
+178 
+179     \textcolor{keywordflow}{return} wrench;
+180 \}
+\end{DoxyCode}
+\index{jaco\+::\+Jaco\+Pose@{jaco\+::\+Jaco\+Pose}!Init\+Struct@{Init\+Struct}}
+\index{Init\+Struct@{Init\+Struct}!jaco\+::\+Jaco\+Pose@{jaco\+::\+Jaco\+Pose}}
+\subsubsection[{\texorpdfstring{Init\+Struct()}{InitStruct()}}]{\setlength{\rightskip}{0pt plus 5cm}void Cartesian\+Info\+::\+Init\+Struct (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [inherited]}}\hypertarget{structCartesianInfo_a6d47623939d86124525ab4c8f7a2b8e9}{}\label{structCartesianInfo_a6d47623939d86124525ab4c8f7a2b8e9}
+This method will initialises all the values to 0 
+\begin{DoxyCode}
+399     \{
+400         \hyperlink{structCartesianInfo_a212cc2dcae1697132fc31fa2f5d17269}{X} = 0.0f;
+401         \hyperlink{structCartesianInfo_a12c2611c89445419b336e58815d87c7c}{Y} = 0.0f;
+402         \hyperlink{structCartesianInfo_a14e196e4cb38c0ae7f4658b9b070b7fe}{Z} = 0.0f;
+403         \hyperlink{structCartesianInfo_a39135e53155aa4025c40eeefbfd3b17c}{ThetaX} = 0.0f;
+404         \hyperlink{structCartesianInfo_a4aef5897f4cdcf7ecc9df6804f844d46}{ThetaY} = 0.0f;
+405         \hyperlink{structCartesianInfo_a2890c501f3b7b9479e12ad51f04f0a7f}{ThetaZ} = 0.0f;
+406     \}
+\end{DoxyCode}
+\index{jaco\+::\+Jaco\+Pose@{jaco\+::\+Jaco\+Pose}!is\+Close\+To\+Other@{is\+Close\+To\+Other}}
+\index{is\+Close\+To\+Other@{is\+Close\+To\+Other}!jaco\+::\+Jaco\+Pose@{jaco\+::\+Jaco\+Pose}}
+\subsubsection[{\texorpdfstring{is\+Close\+To\+Other(const Jaco\+Pose \&, float tolerance) const }{isCloseToOther(const JacoPose &, float tolerance) const }}]{\setlength{\rightskip}{0pt plus 5cm}bool jaco\+::\+Jaco\+Pose\+::is\+Close\+To\+Other (
+\begin{DoxyParamCaption}
+\item[{const {\bf Jaco\+Pose} \&}]{other, }
+\item[{float}]{tolerance}
+\end{DoxyParamCaption}
+) const}\hypertarget{classjaco_1_1JacoPose_aed0e2dcb5cc3bc8315a2988bba51d513}{}\label{classjaco_1_1JacoPose_aed0e2dcb5cc3bc8315a2988bba51d513}
+
+\begin{DoxyCode}
+183 \{
+184     \textcolor{keywordtype}{bool} status = \textcolor{keyword}{true};
+185     status = status && \hyperlink{namespacejaco_a09e679eeb93252a2cf092b064e724125}{areValuesClose}(\hyperlink{structCartesianInfo_a212cc2dcae1697132fc31fa2f5d17269}{X}, other.X, tolerance);
+186     status = status && \hyperlink{namespacejaco_a09e679eeb93252a2cf092b064e724125}{areValuesClose}(\hyperlink{structCartesianInfo_a12c2611c89445419b336e58815d87c7c}{Y}, other.Y, tolerance);
+187     status = status && \hyperlink{namespacejaco_a09e679eeb93252a2cf092b064e724125}{areValuesClose}(\hyperlink{structCartesianInfo_a14e196e4cb38c0ae7f4658b9b070b7fe}{Z}, other.Z, tolerance);
+188     status = status && \hyperlink{namespacejaco_a09e679eeb93252a2cf092b064e724125}{areValuesClose}(\hyperlink{structCartesianInfo_a39135e53155aa4025c40eeefbfd3b17c}{ThetaX}, other.ThetaX, tolerance);
+189     status = status && \hyperlink{namespacejaco_a09e679eeb93252a2cf092b064e724125}{areValuesClose}(\hyperlink{structCartesianInfo_a4aef5897f4cdcf7ecc9df6804f844d46}{ThetaY}, other.ThetaY, tolerance);
+190     status = status && \hyperlink{namespacejaco_a09e679eeb93252a2cf092b064e724125}{areValuesClose}(\hyperlink{structCartesianInfo_a2890c501f3b7b9479e12ad51f04f0a7f}{ThetaZ}, other.ThetaZ, tolerance);
+191     \textcolor{keywordflow}{return} status;
+192 \}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\index{jaco\+::\+Jaco\+Pose@{jaco\+::\+Jaco\+Pose}!ThetaX@{ThetaX}}
+\index{ThetaX@{ThetaX}!jaco\+::\+Jaco\+Pose@{jaco\+::\+Jaco\+Pose}}
+\subsubsection[{\texorpdfstring{ThetaX}{ThetaX}}]{\setlength{\rightskip}{0pt plus 5cm}float Cartesian\+Info\+::\+ThetaX\hspace{0.3cm}{\ttfamily [inherited]}}\hypertarget{structCartesianInfo_a39135e53155aa4025c40eeefbfd3b17c}{}\label{structCartesianInfo_a39135e53155aa4025c40eeefbfd3b17c}
+
+
+This is the value related to the orientation around the X axis. Unit depends on the context it\textquotesingle{}s been used. 
+
+This is the value related to the orientation around the X axis. Depending on the context it\textquotesingle{}s been used, the unit of the value will change. As an example if the current control mode is cartesian position the unit will be R\+AD but if the control mode is cartesian velocity then the unit will be R\+AD per second. \index{jaco\+::\+Jaco\+Pose@{jaco\+::\+Jaco\+Pose}!ThetaY@{ThetaY}}
+\index{ThetaY@{ThetaY}!jaco\+::\+Jaco\+Pose@{jaco\+::\+Jaco\+Pose}}
+\subsubsection[{\texorpdfstring{ThetaY}{ThetaY}}]{\setlength{\rightskip}{0pt plus 5cm}float Cartesian\+Info\+::\+ThetaY\hspace{0.3cm}{\ttfamily [inherited]}}\hypertarget{structCartesianInfo_a4aef5897f4cdcf7ecc9df6804f844d46}{}\label{structCartesianInfo_a4aef5897f4cdcf7ecc9df6804f844d46}
+
+
+This is the value related to the orientation around the Y axis. Unit depends on the context it\textquotesingle{}s been used. 
+
+As an example if the current control mode is cartesian position the unit will be R\+AD but if the control mode is cartesian velocity then the unit will be R\+AD per second. \index{jaco\+::\+Jaco\+Pose@{jaco\+::\+Jaco\+Pose}!ThetaZ@{ThetaZ}}
+\index{ThetaZ@{ThetaZ}!jaco\+::\+Jaco\+Pose@{jaco\+::\+Jaco\+Pose}}
+\subsubsection[{\texorpdfstring{ThetaZ}{ThetaZ}}]{\setlength{\rightskip}{0pt plus 5cm}float Cartesian\+Info\+::\+ThetaZ\hspace{0.3cm}{\ttfamily [inherited]}}\hypertarget{structCartesianInfo_a2890c501f3b7b9479e12ad51f04f0a7f}{}\label{structCartesianInfo_a2890c501f3b7b9479e12ad51f04f0a7f}
+
+
+This is the value related to the orientation around the Z axis. Unit depends on the context it\textquotesingle{}s been used. 
+
+As an example if the current control mode is cartesian position the unit will be R\+AD but if the control mode is cartesian velocity then the unit will be R\+AD per second. \index{jaco\+::\+Jaco\+Pose@{jaco\+::\+Jaco\+Pose}!X@{X}}
+\index{X@{X}!jaco\+::\+Jaco\+Pose@{jaco\+::\+Jaco\+Pose}}
+\subsubsection[{\texorpdfstring{X}{X}}]{\setlength{\rightskip}{0pt plus 5cm}float Cartesian\+Info\+::X\hspace{0.3cm}{\ttfamily [inherited]}}\hypertarget{structCartesianInfo_a212cc2dcae1697132fc31fa2f5d17269}{}\label{structCartesianInfo_a212cc2dcae1697132fc31fa2f5d17269}
+
+
+This is the value related to the translation along the X axis. Unit depends on the context it\textquotesingle{}s been used. 
+
+As an example if the current control mode is cartesian position the unit will be meters but if the control mode is cartesian velocity then the unit will be meters per second. \index{jaco\+::\+Jaco\+Pose@{jaco\+::\+Jaco\+Pose}!Y@{Y}}
+\index{Y@{Y}!jaco\+::\+Jaco\+Pose@{jaco\+::\+Jaco\+Pose}}
+\subsubsection[{\texorpdfstring{Y}{Y}}]{\setlength{\rightskip}{0pt plus 5cm}float Cartesian\+Info\+::Y\hspace{0.3cm}{\ttfamily [inherited]}}\hypertarget{structCartesianInfo_a12c2611c89445419b336e58815d87c7c}{}\label{structCartesianInfo_a12c2611c89445419b336e58815d87c7c}
+
+
+This is the value related to the translation along the Y axis. Unit depends on the context it\textquotesingle{}s been used. 
+
+As an example if the current control mode is cartesian position the unit will be meters but if the control mode is cartesian velocity then the unit will be meters per second. \index{jaco\+::\+Jaco\+Pose@{jaco\+::\+Jaco\+Pose}!Z@{Z}}
+\index{Z@{Z}!jaco\+::\+Jaco\+Pose@{jaco\+::\+Jaco\+Pose}}
+\subsubsection[{\texorpdfstring{Z}{Z}}]{\setlength{\rightskip}{0pt plus 5cm}float Cartesian\+Info\+::Z\hspace{0.3cm}{\ttfamily [inherited]}}\hypertarget{structCartesianInfo_a14e196e4cb38c0ae7f4658b9b070b7fe}{}\label{structCartesianInfo_a14e196e4cb38c0ae7f4658b9b070b7fe}
+
+
+This is the value related to the translation along the Z axis. Unit depends on the context it\textquotesingle{}s been used. 
+
+As an example if the current control mode is cartesian position the unit will be meters but if the control mode is cartesian velocity then the unit will be meters per second. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Longfei/\+Desktop/catkin\+\_\+\+Kinova\+R\+O\+S/src/jaco-\/ros/jaco\+\_\+driver/include/jaco\+\_\+driver/\hyperlink{jaco__types_8h}{jaco\+\_\+types.\+h}\item 
+D\+:/\+Longfei/\+Desktop/catkin\+\_\+\+Kinova\+R\+O\+S/src/jaco-\/ros/jaco\+\_\+driver/src/\hyperlink{jaco__types_8cpp}{jaco\+\_\+types.\+cpp}\end{DoxyCompactItemize}

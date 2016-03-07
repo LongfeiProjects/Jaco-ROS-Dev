@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="dir_952d26529c5ac35ce01812b0b706831d">
+    <title>D:/Longfei/Desktop/catkin_KinovaROS/build/catkin_generated/installspace Directory Reference</title>
+<para>Directory dependency diagram for D:/Longfei/Desktop/catkin_KinovaROS/build/catkin_generated/installspace</para>
+<para>
+    <figure>
+        <title>Directory Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../dir_952d26529c5ac35ce01812b0b706831d_dep.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+        <simplesect>
+            <title> File </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>file <link linkend="d3/d9a/build_2catkin__generated_2installspace_2__setup__util_8py">_setup_util.py</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+    <simplesect>
+        <title>Detailed Description</title>
+    <para>Directory location is D:/Longfei/Desktop/catkin_KinovaROS/build/catkin_generated/installspace/</para>
+    </simplesect>
+</section>

@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="d2/d32/order__packages_8py">
+    <title>order_packages.py File Reference</title>
+<para>Include dependency diagram for order_packages.py</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../d0/d33/order__packages_8py__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Included by dependency diagram for order_packages.py</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../da/db5/order__packages_8py__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+        <simplesect>
+            <title> Namespaces </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="da/dad/namespaceorder__packages">order_packages</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+    <simplesect>
+        <title>Detailed Description</title>
+    <para>Definition in file D:/Longfei/Desktop/catkin_KinovaROS/build/catkin_generated/order_packages.py</para>
+    </simplesect>
+    <literallayout><computeroutput>
+<link linkend="da/dad/namespaceorder__packages">1 </link><emphasis class="comment">#&#32;generated&#32;from&#32;catkin/cmake/template/order_packages.context.py.in</emphasis>
+<link linkend="da/dad/namespaceorder__packages_1aff4fd297841de7fbddc2c0c33a6bab21">2 </link>source_root_dir&#32;=&#32;<emphasis class="stringliteral">&quot;/home/longfei/catkin_KinovaROS/src&quot;</emphasis>
+<link linkend="da/dad/namespaceorder__packages_1a84450a73e77dbf3689293b97dcb697a4">3 </link>whitelisted_packages&#32;=&#32;<emphasis class="stringliteral">&quot;&quot;</emphasis>.split(<emphasis class="stringliteral">&apos;;&apos;</emphasis>)&#32;<emphasis class="keywordflow">if</emphasis>&#32;<emphasis class="stringliteral">&quot;&quot;</emphasis>&#32;!=&#32;<emphasis class="stringliteral">&quot;&quot;</emphasis>&#32;<emphasis class="keywordflow">else</emphasis>&#32;[]
+<link linkend="da/dad/namespaceorder__packages_1a29ea913f00c5a0e81d3c7688e7375507">4 </link>blacklisted_packages&#32;=&#32;<emphasis class="stringliteral">&quot;&quot;</emphasis>.split(<emphasis class="stringliteral">&apos;;&apos;</emphasis>)&#32;<emphasis class="keywordflow">if</emphasis>&#32;<emphasis class="stringliteral">&quot;&quot;</emphasis>&#32;!=&#32;<emphasis class="stringliteral">&quot;&quot;</emphasis>&#32;<emphasis class="keywordflow">else</emphasis>&#32;[]
+<link linkend="da/dad/namespaceorder__packages_1a11d102ff09fd2977b9075c4c722015d2">5 </link>underlay_workspaces&#32;=&#32;<emphasis class="stringliteral">&quot;/home/longfei/catkin_ws/devel;/opt/ros/hydro&quot;</emphasis>.split(<emphasis class="stringliteral">&apos;;&apos;</emphasis>)&#32;<emphasis class="keywordflow">if</emphasis>&#32;<emphasis class="stringliteral">&quot;/home/longfei/catkin_ws/devel;/opt/ros/hydro&quot;</emphasis>&#32;!=&#32;<emphasis class="stringliteral">&quot;&quot;</emphasis>&#32;<emphasis class="keywordflow">else</emphasis>&#32;[]
+    </computeroutput></literallayout>
+</section>

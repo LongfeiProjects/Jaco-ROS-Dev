@@ -1,0 +1,1794 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="df/d36/KinovaTypes_8h">
+    <title>KinovaTypes.h File Reference</title>
+<para>Include dependency diagram for KinovaTypes.h</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../df/d7d/KinovaTypes_8h__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Included by dependency diagram for KinovaTypes.h</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../dc/d37/KinovaTypes_8h__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+        <section>
+            <title> Classes </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="dd/d18/structAngularAcceleration">AngularAcceleration</link></para>
+<para><emphasis>This data structure holds acceleration values(X, Y, Z) in an angular(joint by joint) control context.</emphasis></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d0/df5/structAngularInfo">AngularInfo</link></para>
+<para><emphasis>This data structure holds values in an angular(joint by joint) control context. As an example struct could contains position, temperature, torque, ...</emphasis></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="df/d36/KinovaTypes_8h">AngularPosition</link></para>
+<para><emphasis>This data structure holds the values of an angular(actuators) position.</emphasis></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="df/d36/KinovaTypes_8h">ButtonEvents</link></para>
+<para><emphasis>This is an event from a controller&apos;s button. Each variable of the struct can be mapped with a ControlFunctionalityTypeEnum.</emphasis></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="dd/d00/structCartesianInfo">CartesianInfo</link></para>
+<para><emphasis>This data structure holds values in an cartesian control context.</emphasis></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d4/d67/structCartesianPosition">CartesianPosition</link></para>
+<para><emphasis>This data structure holds the values of a cartesian position.</emphasis></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="df/d36/KinovaTypes_8h">ClientConfigurations</link></para>
+<para><emphasis>This structure holds informations relative to the client.
+It is mostly used for rehab clients. As an example, if you need to modify the max velocity or the retract position,
+it will be done here. The easiest way to modify the client configuration is to get the current one by calling the function
+GetClientConfigurations, modify all the parameters you need and send the structure back to the robot by calling the function
+SetClientConfigurations(). Note that some of the parameters are read only. That means that even if you modify them and send
+the structure to the robot, they will not be modified.</emphasis></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="df/d36/KinovaTypes_8h">ControlMapping</link></para>
+<para><emphasis>This represents a group of functionalities mapped to some events triggered by a specific controller.</emphasis></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="df/d36/KinovaTypes_8h">ControlMappingCharts</link></para>
+<para><emphasis>This structure holds all the control mapping of the system. It is the entry point if you want to use the mapping system.</emphasis></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="df/d36/KinovaTypes_8h">ControlsModeMap</link></para>
+<para><emphasis>Represents one mode map of a control mapping.
+Each control mapping has 2 list of mode map.</emphasis></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="df/d36/KinovaTypes_8h">Finger</link></para>
+<para><emphasis>Structure that represents a finger from the end effector&apos;s tool.</emphasis></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="df/d1b/structFingersPosition">FingersPosition</link></para>
+<para><emphasis>This data structure holds the values of the robot&apos;s fingers.</emphasis></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="df/d36/KinovaTypes_8h">ForcesInfo</link></para>
+<para><emphasis>This structure contains informations about the torque and the force of the robotical arm.</emphasis></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="df/d36/KinovaTypes_8h">GeneralInformations</link></para>
+<para><emphasis>This is structure hold almost all information of the robotical arm.</emphasis></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="df/d36/KinovaTypes_8h">Gripper</link></para>
+<para><emphasis>Structure that represents the robotical arm&apos;s gripper.</emphasis></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="db/d40/structJoystickCommand">JoystickCommand</link></para>
+<para><emphasis>This is a virtual representation of a 6-axis joystick.</emphasis></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="da/de1/structLimitation">Limitation</link></para>
+<para><emphasis>This data structure represents all limitation that can be applied to a control context.</emphasis></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="df/d36/KinovaTypes_8h">PeripheralInfo</link></para>
+<para><emphasis>This data structure holds information that describes an abstract peripheral.</emphasis></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="df/d36/KinovaTypes_8h">QuickStatus</link></para>
+<para><emphasis>This structure holds various informations but mostly it is flag status.</emphasis></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d7/d40/structSensorsInfo">SensorsInfo</link></para>
+<para><emphasis>This data structure holds the values of the robot&apos;s sensors.</emphasis></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="df/d36/KinovaTypes_8h">SingularityVector</link></para>
+<para><emphasis>This data structure represents the informations regarding the singularities surrounding the end effector.
+It is not used for now but will be in the future.</emphasis></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="df/d36/KinovaTypes_8h">StickEvents</link></para>
+<para><emphasis>This is an event from a controller&apos;s stick. Each variable of the struct can be mapped with a ControlFunctionalityTypeEnum.</emphasis></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="df/d36/KinovaTypes_8h">SystemError</link></para>
+<para><emphasis>This represents a system error. Every error generated by the system is logged in the robot&apos;s flash memory.</emphasis></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="df/d36/KinovaTypes_8h">SystemStatus</link></para>
+<para><emphasis>This structure holds system status flags.</emphasis></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="df/d36/KinovaTypes_8h">TrajectoryFIFO</link></para>
+<para><emphasis>This data structure represents the informations regarding the robot&apos;s trajectory&apos;s FIFO.</emphasis></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d4/d8e/structTrajectoryPoint">TrajectoryPoint</link></para>
+<para><emphasis>This data structure represents a point of a trajectory. It contains the position a limitation that you can applied.</emphasis></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="db/dfb/structUserPosition">UserPosition</link></para>
+<para><emphasis>This data structure represents an abstract position built by a user. Depending on the control type the Cartesian information, the angular information or both will be used.</emphasis></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="df/d36/KinovaTypes_8h">Zone</link></para>
+<para><emphasis>that represents a protection zone.</emphasis></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="df/d36/KinovaTypes_8h">ZoneLimitation</link></para>
+<para><emphasis>This represents a group of limitations that can be applied to a trajectory point.</emphasis></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="df/d36/KinovaTypes_8h">ZoneList</link></para>
+<para><emphasis>This structure represents the complete list of protection zone of the robotical arm.</emphasis></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="df/d36/KinovaTypes_8h">ZoneShape</link></para>
+<para><emphasis>Represents the 3D shape of a protection zone.</emphasis></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Macros</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="df/d36/KinovaTypes_8h_1a07e5dbf5fed1737edf7b518c431e8eaf">BUTTON_EVENT_COUNT</link> 26<para><emphasis>This is the size of the array ControlButtons contained in the structure @link ControlsModeMap @endlink .</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="df/d36/KinovaTypes_8h_1a51a2dde57dc5de96d6c31a742780c8b3">CONTROL_MAPPING_COUNT</link> 6<para><emphasis>This is the size of the array Mapping contained in the structure @link ControlMappingCharts @endlink .</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="df/d36/KinovaTypes_8h_1a5314906c9cb074ea4439ad242e230522">ERROR_DATA_COUNT_MAX</link> 50<para><emphasis>This is the size of the data array stored in a @link SystemError @endlink object.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="df/d36/KinovaTypes_8h_1a2dd3bffd406b2a44b1536030ac67b688">ERROR_FILEREADING</link> 5003<para><emphasis>This is an error code. It means that the function has some problem reading a file. Most of the time
+it is because the user don&apos;t have the privileges to do it.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="df/d36/KinovaTypes_8h_1ad0fbf72df2f7f710761d002676278db0">ERROR_LAYER_COUNT</link> 7<para><emphasis>The robot&apos;s firmware has several software layers. This describes how many layer there is in the firmware.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="df/d36/KinovaTypes_8h_1a3020b3e07b918dd57f396e81a47ea50e">ERROR_MEMORY</link> 5002<para><emphasis>This is an error code. It means that there was a memory related error. Most of the time it is because
+the system does not have enough memory.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="df/d36/KinovaTypes_8h_1aa4eaa6b064f30febd58fa4491e12227e">ERROR_UNKNOWFILE</link> 5001<para><emphasis>This is an error code. It means that the file you are trying to interact with does not exist
+or is corrupted. Either way, the OS does not recognise it.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="df/d36/KinovaTypes_8h_1a36c985755b11a97dc5ba1ecc41e3ed37">JACO_FINGERS_COUNT</link> 3<para><emphasis>This is the max finger count in a robot. (Jaco has 3 fingers and Mico has 2 fingers)</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="df/d36/KinovaTypes_8h_1a3792c81f5808ad4f30000689ee0f0d07">JOYSTICK_BUTTON_COUNT</link> 16<para><emphasis>Size of the @link ControlsModeMap @endlink array in the structure @link JoystickCommand @endlink.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="df/d36/KinovaTypes_8h_1aa8172e4bdfdf0e0f563bed72e61083f6">LEGACY_CONFIG_NB_POINTS_COUNT</link> 8<para><emphasis>This is the size of the array Points in a @link ZoneShape @endlink .</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="df/d36/KinovaTypes_8h_1a1c024cb33df9cadef7058df1e6bf8095">LEGACY_CONFIG_NB_ZONES_MAX</link> 10<para><emphasis>This represents the max count of protection zones that can be stored in the robot&apos;s memory.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="df/d36/KinovaTypes_8h_1ae65b2d54c897b15b974b833eec59a7a2">MODE_MAP_COUNT</link> 6<para><emphasis>This is the size of the arrays ModeControlsA and ModeControlsB contained in the structure @link ControlMapping @endlink .</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="df/d36/KinovaTypes_8h_1a663862aeb115e7f11080df128498e924">NB_ADVANCE_RETRACT_POSITION</link> 20<para><emphasis>Max size of the advance retract trajectory that is stored in the @link ClientConfigurations @endlink.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="df/d36/KinovaTypes_8h_1a1b14727ca81e530c9b63be023d70fe1c">STICK_EVENT_COUNT</link> 6<para><emphasis>This is the size of the array ControlSticks contained in the structure @link ControlsModeMap @endlink .</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="df/d36/KinovaTypes_8h_1ac829415013d8120cedee928452ae0f55">STRING_LENGTH</link> 20<para><emphasis>This is the size of all strings stored in the robot&apos;s firmware.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Enumerations</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para><literallayout>enum <link linkend="df/d36/KinovaTypes_8h_1a3b88714e308595eb42f64c56259a1ccf">ArmLaterality</link> {
+<link linkend="df/d36/KinovaTypes_8h_1a3b88714e308595eb42f64c56259a1ccfa4d25ca7d263c7f9cfba750640da0a350">RIGHTHAND</link>,
+<link linkend="df/d36/KinovaTypes_8h_1a3b88714e308595eb42f64c56259a1ccfa58f69685cd1501346540d18b0db06488">LEFTHAND</link>
+}</literallayout>
+<para><emphasis>That indicates if the robot will be left handed or right handed.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para><literallayout>enum <link linkend="df/d36/KinovaTypes_8h_1a28fdb369f4bb23c7d6d18d90b89feb0e">CONTROL_MODULE</link> {
+<link linkend="df/d36/KinovaTypes_8h_1a28fdb369f4bb23c7d6d18d90b89feb0ea69080f792f5f784259d3fafc4845ae32">CONTROL_MODULE_NONE</link>,
+<link linkend="df/d36/KinovaTypes_8h_1a28fdb369f4bb23c7d6d18d90b89feb0ea953b2649aa1086fae84150e8f304423a">CONTROL_MODULE_ANGULAR_VELOCITY</link>,
+<link linkend="df/d36/KinovaTypes_8h_1a28fdb369f4bb23c7d6d18d90b89feb0eaae836e42bf109e45c42a64ba00f74fe8">CONTROL_MODULE_ANGULAR_POSITION</link>,
+<link linkend="df/d36/KinovaTypes_8h_1a28fdb369f4bb23c7d6d18d90b89feb0ea44595acde2552f6c07e5275982e50402">CONTROL_MODULE_CARTESIAN_VELOCITY</link>,
+<link linkend="df/d36/KinovaTypes_8h_1a28fdb369f4bb23c7d6d18d90b89feb0ea58c91dc9796090711a65f7de250df886">CONTROL_MODULE_CARTESIAN_POSITION</link>,
+<link linkend="df/d36/KinovaTypes_8h_1a28fdb369f4bb23c7d6d18d90b89feb0ea80885f5595ffc85829ecf6cd6ba0c19e">CONTROL_MODULE_RETRACT</link>,
+<link linkend="df/d36/KinovaTypes_8h_1a28fdb369f4bb23c7d6d18d90b89feb0eabfde46eb9a12cb0502a094461bf40374">CONTROL_MODULE_TRAJECTORY</link>,
+<link linkend="df/d36/KinovaTypes_8h_1a28fdb369f4bb23c7d6d18d90b89feb0ea65dce4eaf6797c0f6f2b6a471e3c1076">CONTROL_MODULE_PREDEFINED</link>,
+<link linkend="df/d36/KinovaTypes_8h_1a28fdb369f4bb23c7d6d18d90b89feb0eab4f730306f9dae83efc136e567e27d6e">CONTROL_MODULE_TIMEDELAY</link>
+}</literallayout>
+<para><emphasis>That describes a control module of the robotical arm&apos;s firmware.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para><literallayout>enum <link linkend="df/d36/KinovaTypes_8h_1a65c8c2bedcea12c05bb3fb515b97e2b5">CONTROL_TYPE</link> {
+<link linkend="df/d36/KinovaTypes_8h_1a65c8c2bedcea12c05bb3fb515b97e2b5af4f6e33bebeeced6a23c6f76e5b689af">CONTROL_TYPE_CARTESIAN</link>= 0,
+<link linkend="df/d36/KinovaTypes_8h_1a65c8c2bedcea12c05bb3fb515b97e2b5a7c71a60742ea11c7005b141c6bdb1030">CONTROL_TYPE_ANGULAR</link>= 1
+}</literallayout>
+<para><emphasis>This represents a type of control. For now, there is 2 type of control, it can either
+cartesian control or angular control.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para><literallayout>enum <link linkend="df/d36/KinovaTypes_8h_1a3eacfd3f1347e3e69c62c71ba8e4c458">ControlFunctionalityTypeEnum</link> {
+<link linkend="df/d36/KinovaTypes_8h_1a3eacfd3f1347e3e69c62c71ba8e4c458ab7d8353a33302d11619f6c415565e488">CF_NoFunctionality</link>= 0,
+<link linkend="df/d36/KinovaTypes_8h_1a3eacfd3f1347e3e69c62c71ba8e4c458a00fbeb1be99522340e4ff01326fdb9e5">CF_Disable_EnableJoystick</link>= 1,
+<link linkend="df/d36/KinovaTypes_8h_1a3eacfd3f1347e3e69c62c71ba8e4c458a2d7352ab2b40b703a51ba27f14794a7e">CF_Retract_ReadyToUse</link>= 2,
+<link linkend="df/d36/KinovaTypes_8h_1a3eacfd3f1347e3e69c62c71ba8e4c458ade3d3e8069e2985d269be422ba74a09b">CF_Change_TwoAxis_ThreeAxis</link>= 3,
+<link linkend="df/d36/KinovaTypes_8h_1a3eacfd3f1347e3e69c62c71ba8e4c458a06bc5ef3f5b44ba10e136ea5946e1003">CF_Change_DrinkingMode</link>= 4,
+<link linkend="df/d36/KinovaTypes_8h_1a3eacfd3f1347e3e69c62c71ba8e4c458a1c7c0d3851d1f055af376af290fde372">CF_Cycle_ModeA_list</link>= 5,
+<link linkend="df/d36/KinovaTypes_8h_1a3eacfd3f1347e3e69c62c71ba8e4c458a24793b278cda3c42a23b68f56bb3d898">CF_Cycle_ModeB_list</link>= 6,
+<link linkend="df/d36/KinovaTypes_8h_1a3eacfd3f1347e3e69c62c71ba8e4c458a5dda722f556c76560545aaa91cf46d3f">CF_DecreaseSpeed</link>= 7,
+<link linkend="df/d36/KinovaTypes_8h_1a3eacfd3f1347e3e69c62c71ba8e4c458a1d4ccd9bb38d59098509bb4deb9490a2">CF_IncreaseSpeed</link>= 8,
+<link linkend="df/d36/KinovaTypes_8h_1a3eacfd3f1347e3e69c62c71ba8e4c458a6b5e858bd8e8bae703af5f348ff274f1">CF_Goto_Position1</link>= 9,
+<link linkend="df/d36/KinovaTypes_8h_1a3eacfd3f1347e3e69c62c71ba8e4c458a5565ccae6da08c0b34e11e5994b41398">CF_Goto_Position2</link>= 10,
+<link linkend="df/d36/KinovaTypes_8h_1a3eacfd3f1347e3e69c62c71ba8e4c458ac1d6050ff3070c66048d9334b3767703">CF_Goto_Position3</link>= 11,
+<link linkend="df/d36/KinovaTypes_8h_1a3eacfd3f1347e3e69c62c71ba8e4c458a6d183b0a2494b4c4315b9bb9a7dd36fc">CF_Goto_Position4</link>= 12,
+<link linkend="df/d36/KinovaTypes_8h_1a3eacfd3f1347e3e69c62c71ba8e4c458a845030bcb83a0c920936b94eb2e9e463">CF_Goto_Position5</link>= 13,
+<link linkend="df/d36/KinovaTypes_8h_1a3eacfd3f1347e3e69c62c71ba8e4c458aafee8648435e5cba46f7d1451e6a7745">CF_RecordPosition1</link>= 14,
+<link linkend="df/d36/KinovaTypes_8h_1a3eacfd3f1347e3e69c62c71ba8e4c458a7e6e845e2dd5a38bc790c4f060aa49ef">CF_RecordPosition2</link>= 15,
+<link linkend="df/d36/KinovaTypes_8h_1a3eacfd3f1347e3e69c62c71ba8e4c458a8e30a9c85fccfd3c04741c84fa5eebc0">CF_RecordPosition3</link>= 16,
+<link linkend="df/d36/KinovaTypes_8h_1a3eacfd3f1347e3e69c62c71ba8e4c458adec3e5656166d76972a288f19c497af6">CF_RecordPosition4</link>= 17,
+<link linkend="df/d36/KinovaTypes_8h_1a3eacfd3f1347e3e69c62c71ba8e4c458af8171d3bec26cf9f5d5ede27132a822c">CF_RecordPosition5</link>= 18,
+<link linkend="df/d36/KinovaTypes_8h_1a3eacfd3f1347e3e69c62c71ba8e4c458aeb9509c60375689fdfcf7880d6f8e5e7">CF_X_Positive</link>= 19,
+<link linkend="df/d36/KinovaTypes_8h_1a3eacfd3f1347e3e69c62c71ba8e4c458aca6352be369c8d9999f89b1eeafc1f10">CF_X_Negative</link>= 20,
+<link linkend="df/d36/KinovaTypes_8h_1a3eacfd3f1347e3e69c62c71ba8e4c458ae065ee74ca830631507e71fd90a18495">CF_Y_Positive</link>= 21,
+<link linkend="df/d36/KinovaTypes_8h_1a3eacfd3f1347e3e69c62c71ba8e4c458a69d72a3009fd4c75aabc50ab027e4196">CF_Y_Negative</link>= 22,
+<link linkend="df/d36/KinovaTypes_8h_1a3eacfd3f1347e3e69c62c71ba8e4c458a4901ad45d7a2ce65a28b5ae213561fd5">CF_Z_Positive</link>= 23,
+<link linkend="df/d36/KinovaTypes_8h_1a3eacfd3f1347e3e69c62c71ba8e4c458a5bc0696d24edfa47b9d844e5fb946bae">CF_Z_Negative</link>= 24,
+<link linkend="df/d36/KinovaTypes_8h_1a3eacfd3f1347e3e69c62c71ba8e4c458aa8d1496788b4cb63c8570bc8d3d2f5b2">CF_R_Positive</link>= 25,
+<link linkend="df/d36/KinovaTypes_8h_1a3eacfd3f1347e3e69c62c71ba8e4c458a42eaef27f36556ecca6e14ed514f1d7c">CF_R_Negative</link>= 26,
+<link linkend="df/d36/KinovaTypes_8h_1a3eacfd3f1347e3e69c62c71ba8e4c458a30d2f2571a0eebd3133917592eec678a">CF_U_Positive</link>= 27,
+<link linkend="df/d36/KinovaTypes_8h_1a3eacfd3f1347e3e69c62c71ba8e4c458a9f94cbfde88fb9be1016c1dab7812567">CF_U_Negative</link>= 28,
+<link linkend="df/d36/KinovaTypes_8h_1a3eacfd3f1347e3e69c62c71ba8e4c458af5fc7a0db0e3af9baf1a5722d02c3baf">CF_V_Positive</link>= 29,
+<link linkend="df/d36/KinovaTypes_8h_1a3eacfd3f1347e3e69c62c71ba8e4c458af44cdb6ff588562d18ef740e29711616">CF_V_Negative</link>= 30,
+<link linkend="df/d36/KinovaTypes_8h_1a3eacfd3f1347e3e69c62c71ba8e4c458ab627b0870083598dbd813a313e7d2a72">CF_OpenHandOneFingers</link>= 31,
+<link linkend="df/d36/KinovaTypes_8h_1a3eacfd3f1347e3e69c62c71ba8e4c458a108fe1782fcb88a8d018d5904dc5f4cf">CF_CloseHandOneFingers</link>= 32,
+<link linkend="df/d36/KinovaTypes_8h_1a3eacfd3f1347e3e69c62c71ba8e4c458a50bd7f1b407c19ee0f809c81d271f6d0">CF_OpenHandTwoFingers</link>= 33,
+<link linkend="df/d36/KinovaTypes_8h_1a3eacfd3f1347e3e69c62c71ba8e4c458a6f3c046ae5d7556b8609d1d9151a1fa4">CF_CloseHandTwoFingers</link>= 34,
+<link linkend="df/d36/KinovaTypes_8h_1a3eacfd3f1347e3e69c62c71ba8e4c458ad16fb4817b56f40bd3b5224409335894">CF_OpenHandThreeFingers</link>= 35,
+<link linkend="df/d36/KinovaTypes_8h_1a3eacfd3f1347e3e69c62c71ba8e4c458a548150f66f43f33c8742b5ef956a62d5">CF_CloseHandThreeFingers</link>= 36,
+<link linkend="df/d36/KinovaTypes_8h_1a3eacfd3f1347e3e69c62c71ba8e4c458af47d1563f90d7fea50194e6a6cf02a40">CF_ForceAngularVelocity</link>= 37,
+<link linkend="df/d36/KinovaTypes_8h_1a3eacfd3f1347e3e69c62c71ba8e4c458a1bb773366b8406580a2717dfafaeb111">CF_ForceControlStatus</link>= 38,
+<link linkend="df/d36/KinovaTypes_8h_1a3eacfd3f1347e3e69c62c71ba8e4c458a663e5bbd938ffcd1a5278aa43ad9dcbf">CF_Trajectory</link>= 39,
+<link linkend="df/d36/KinovaTypes_8h_1a3eacfd3f1347e3e69c62c71ba8e4c458a84a6d8e16a331e137b31766c3373f5c1">CF_AutomaticOrientationXPlus</link>= 40,
+<link linkend="df/d36/KinovaTypes_8h_1a3eacfd3f1347e3e69c62c71ba8e4c458a0647b18fdf2a0db1a7d0b889ab1b1feb">CF_AutomaticOrientationXMinus</link>= 41,
+<link linkend="df/d36/KinovaTypes_8h_1a3eacfd3f1347e3e69c62c71ba8e4c458ac06d93950c4eb99b6de6c33c84d11e10">CF_AutomaticOrientationYPlus</link>= 42,
+<link linkend="df/d36/KinovaTypes_8h_1a3eacfd3f1347e3e69c62c71ba8e4c458a5f9d196daa400dcd62a4b2144d80da4c">CF_AutomaticOrientationYMinus</link>= 43,
+<link linkend="df/d36/KinovaTypes_8h_1a3eacfd3f1347e3e69c62c71ba8e4c458a6f1619b21048109fa2cbcddb23bdb51e">CF_AutomaticOrientationZPlus</link>= 44,
+<link linkend="df/d36/KinovaTypes_8h_1a3eacfd3f1347e3e69c62c71ba8e4c458aae84d01990ead8ab31ea2f4f47f837be">CF_AutomaticOrientationZMinus</link>= 45,
+<link linkend="df/d36/KinovaTypes_8h_1a3eacfd3f1347e3e69c62c71ba8e4c458a0bcbad8e2f29bcd31165023f171837d4">CF_AdvanceGOTO_1</link>= 46,
+<link linkend="df/d36/KinovaTypes_8h_1a3eacfd3f1347e3e69c62c71ba8e4c458aab7d02dbe1607426d09723a096c98726">CF_AdvanceGOTO_Clear_1</link>= 47,
+<link linkend="df/d36/KinovaTypes_8h_1a3eacfd3f1347e3e69c62c71ba8e4c458aee023bbbb4a6f6c4bdca9387c70b951b">CF_AdvanceGOTO_Add_1</link>= 48
+}</literallayout>
+<para><emphasis>This is the list of available feature that can be mapped with a controller through the mappign system.
+Every list of mode that a mapping contains is mapped with one of these features. The default value is
+CF_NoFunctionality.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para><literallayout>enum <link linkend="df/d36/KinovaTypes_8h_1a6ca93caffa508f4eabf18585d3710d0f">Controller</link> {
+<link linkend="df/d36/KinovaTypes_8h_1a6ca93caffa508f4eabf18585d3710d0facc0673853cbbc74e0803ca8d24a5a576">THREE_AXIS_JOYSTICK</link>= 0,
+<link linkend="df/d36/KinovaTypes_8h_1a6ca93caffa508f4eabf18585d3710d0fad62034a1ca56878f0945d0c6c2cf4c60">TWO_AXIS_JOYSTICK</link>= 1,
+<link linkend="df/d36/KinovaTypes_8h_1a6ca93caffa508f4eabf18585d3710d0fa7fd5f3a93cf5139877f23acb316f99c0">API</link>= 2,
+<link linkend="df/d36/KinovaTypes_8h_1a6ca93caffa508f4eabf18585d3710d0fa9c4acb850ef34087a26f7cbb674ed736">EASY_RIDER</link>= 3,
+<link linkend="df/d36/KinovaTypes_8h_1a6ca93caffa508f4eabf18585d3710d0fa9135711773995175032cd79a5ce52561">UNIVERSAL_INTERFACE</link>= 4,
+<link linkend="df/d36/KinovaTypes_8h_1a6ca93caffa508f4eabf18585d3710d0fac0e594eea8dee49ca60246c88617114b">EXTERNAL_CUSTOMINTERFACE</link>= 5,
+<link linkend="df/d36/KinovaTypes_8h_1a6ca93caffa508f4eabf18585d3710d0fac157bdf0b85a40d2619cbc8bc1ae5fe2">NONE</link>= 6,
+<link linkend="df/d36/KinovaTypes_8h_1a6ca93caffa508f4eabf18585d3710d0faf5196bd2cd11a3ac1d4738f733e39337">OLED_DISPLAY</link>= 7
+}</literallayout>
+<para><emphasis>This represents a type of controller. A controller is an entity that can send control
+commands to the robot.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para><literallayout>enum <link linkend="df/d36/KinovaTypes_8h_1a0cbbbff9819ea9faabb8810022aefec3">ControlMappingMode</link> {
+<link linkend="df/d36/KinovaTypes_8h_1a0cbbbff9819ea9faabb8810022aefec3a72283e1da95f9ad3da86ef42133e0c0f">OneAxis</link>,
+<link linkend="df/d36/KinovaTypes_8h_1a0cbbbff9819ea9faabb8810022aefec3ad8a39b690305f760aff3d1fae33a7705">TwoAxis</link>,
+<link linkend="df/d36/KinovaTypes_8h_1a0cbbbff9819ea9faabb8810022aefec3a8dbaa31bef2005bbe6921b7179489808">ThreeAxis</link>,
+<link linkend="df/d36/KinovaTypes_8h_1a0cbbbff9819ea9faabb8810022aefec3a4e38ecdac412f1061d9f1f96e5e8019b">SixAxis</link>
+}</literallayout>
+<para><emphasis>Indicates the type of controller.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para><literallayout>enum <link linkend="df/d36/KinovaTypes_8h_1a45d0343c3d465533f72cb2db67fc0b8a">errorLoggerType</link> {
+<link linkend="df/d36/KinovaTypes_8h_1a45d0343c3d465533f72cb2db67fc0b8aade292e8dfffdeb5113666d65a97c0533">ERROR_NOTINITIALIZED</link>,
+<link linkend="df/d36/KinovaTypes_8h_1a45d0343c3d465533f72cb2db67fc0b8aa44086f988365734830d8750603ebe622">keos_err1</link>,
+<link linkend="df/d36/KinovaTypes_8h_1a45d0343c3d465533f72cb2db67fc0b8aa3efc0f8a94e775f35e80c27ce10b0cfb">keos_err2</link>,
+<link linkend="df/d36/KinovaTypes_8h_1a45d0343c3d465533f72cb2db67fc0b8aa0463520f46c63259eaad669fd8db7ec4">keos_err3</link>,
+<link linkend="df/d36/KinovaTypes_8h_1a45d0343c3d465533f72cb2db67fc0b8aaec8c83dd32614a6f895051e06138a9b4">User_err_start_marker</link>,
+<link linkend="df/d36/KinovaTypes_8h_1a45d0343c3d465533f72cb2db67fc0b8aa1c16ffef5b569df1a14d7e3cf7fb8e20">errorlog_Actuator_Temperature</link>,
+<link linkend="df/d36/KinovaTypes_8h_1a45d0343c3d465533f72cb2db67fc0b8aad6dfeb5abc2bdf7d55158b77e90df651">errorlog_Actuator_TemperatureOK</link>,
+<link linkend="df/d36/KinovaTypes_8h_1a45d0343c3d465533f72cb2db67fc0b8aa75fac65cdfd232098b4a977c4bdfee6b">errorlog_Finger_Temperature</link>,
+<link linkend="df/d36/KinovaTypes_8h_1a45d0343c3d465533f72cb2db67fc0b8aacb68aea52e5099354b6c6f7c180e6592">errorlog_Finger_TemperatureOK</link>,
+<link linkend="df/d36/KinovaTypes_8h_1a45d0343c3d465533f72cb2db67fc0b8aae3d73fb30f61f18f2b698500dbc0d59d">errorlog_voltage</link>,
+<link linkend="df/d36/KinovaTypes_8h_1a45d0343c3d465533f72cb2db67fc0b8aa93683e8c381b08bd6182a2affe74f5bd">errorlog_voltageOK</link>,
+<link linkend="df/d36/KinovaTypes_8h_1a45d0343c3d465533f72cb2db67fc0b8aa34ba4d395695c88f62793f33e5a0860c">errorlog_current_FingersClosing</link>,
+<link linkend="df/d36/KinovaTypes_8h_1a45d0343c3d465533f72cb2db67fc0b8aaaf16f55aaa3df79cf22a0bea670f5912">errorlog_current_FingersOpening</link>,
+<link linkend="df/d36/KinovaTypes_8h_1a45d0343c3d465533f72cb2db67fc0b8aaddca0bef1a2448180e92dfed18087886">errorlog_current_FingersOK</link>,
+<link linkend="df/d36/KinovaTypes_8h_1a45d0343c3d465533f72cb2db67fc0b8aaae9e1cadd6529c93716869d7420607c3">errorlog_current_Actuators</link>,
+<link linkend="df/d36/KinovaTypes_8h_1a45d0343c3d465533f72cb2db67fc0b8aa26ce37703ae3ba17355eedd7d77e2352">errorlog_current_ActuatorsOK</link>,
+<link linkend="df/d36/KinovaTypes_8h_1a45d0343c3d465533f72cb2db67fc0b8aac83898875555f0b37bf6418aed00c7c8">errorLog_RobotStatus_Build_Incomplete</link>,
+<link linkend="df/d36/KinovaTypes_8h_1a45d0343c3d465533f72cb2db67fc0b8aa1f896b7d3be32f1a6c4e5ded10ba4015">errorLogger_END</link>
+}</literallayout>
+<para><emphasis>That represents the type of an error. It is used mostly for identification.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para><literallayout>enum <link linkend="df/d36/KinovaTypes_8h_1ad7050e4cfb6e844e9be962fba8eeb817">HAND_MODE</link> {
+<link linkend="df/d36/KinovaTypes_8h_1ad7050e4cfb6e844e9be962fba8eeb817aacf6cc4ccee2594b38453e9918708e47">HAND_NOMOVEMENT</link>,
+<link linkend="df/d36/KinovaTypes_8h_1ad7050e4cfb6e844e9be962fba8eeb817a21de3478520bbc47e9c35e3e651a06bf">POSITION_MODE</link>,
+<link linkend="df/d36/KinovaTypes_8h_1ad7050e4cfb6e844e9be962fba8eeb817a53c6ff5c2a348365c6d73e987a375f4c">VELOCITY_MODE</link>
+}</literallayout>
+<para><emphasis>That indicates how the end effector will be used.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para><literallayout>enum <link linkend="df/d36/KinovaTypes_8h_1adea74301a58d618c08413dc43c86a95f">PERIPHERAL_TYPE</link> {
+<link linkend="df/d36/KinovaTypes_8h_1adea74301a58d618c08413dc43c86a95faae084f7fa40032e65e81c84def2049ab">PERIPHERAL_TYPE_NONE</link>= 0,
+<link linkend="df/d36/KinovaTypes_8h_1adea74301a58d618c08413dc43c86a95fab26e38677fd238b5120e7025be8f1772">PERIPHERAL_TYPE_ANY</link>= 1,
+<link linkend="df/d36/KinovaTypes_8h_1adea74301a58d618c08413dc43c86a95faa9fef6487d2124c889818597db4fec36">PERIPHERAL_TYPE_ACTUATORK01</link>= 100,
+<link linkend="df/d36/KinovaTypes_8h_1adea74301a58d618c08413dc43c86a95fa854284ca406d0d3c97f6394e32f87029">PERIPHERAL_TYPE_FINGERK01</link>= 200,
+<link linkend="df/d36/KinovaTypes_8h_1adea74301a58d618c08413dc43c86a95fa642201952077a83fc9391cba77ae3f51">PERIPHERAL_TYPE_JOYSTICK</link>= 300,
+<link linkend="df/d36/KinovaTypes_8h_1adea74301a58d618c08413dc43c86a95fa63995127f6b84f9cac86f005398a83ff">PERIPHERAL_TYPE_VIRTUAL_JOYSTICK</link>= 301,
+<link linkend="df/d36/KinovaTypes_8h_1adea74301a58d618c08413dc43c86a95fa814f77f4bc7d4b053f9b2a80a63648cc">PERIPHERAL_TYPE_CAN_INTERFACE</link>= 400
+}</literallayout>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para><literallayout>enum <link linkend="df/d36/KinovaTypes_8h_1a0a1c22d235ef1b13cfcd1419d10babc9">POSITION_TYPE</link> {
+<link linkend="df/d36/KinovaTypes_8h_1a0a1c22d235ef1b13cfcd1419d10babc9a2165a93f032054d96cec4b6f8451c88c">NOMOVEMENT_POSITION</link>= 0,
+<link linkend="df/d36/KinovaTypes_8h_1a0a1c22d235ef1b13cfcd1419d10babc9aa98b51871329200ef579781620a475ad">CARTESIAN_POSITION</link>= 1,
+<link linkend="df/d36/KinovaTypes_8h_1a0a1c22d235ef1b13cfcd1419d10babc9acec3b882918c5c90a239fd07290d6031">ANGULAR_POSITION</link>= 2,
+<link linkend="df/d36/KinovaTypes_8h_1a0a1c22d235ef1b13cfcd1419d10babc9abeb6b2df651053c52240164cc205757c">CARTESIAN_VELOCITY</link>= 7,
+<link linkend="df/d36/KinovaTypes_8h_1a0a1c22d235ef1b13cfcd1419d10babc9ae4d95686a349611affcf1ebfeab077f1">ANGULAR_VELOCITY</link>= 8,
+<link linkend="df/d36/KinovaTypes_8h_1a0a1c22d235ef1b13cfcd1419d10babc9a4eaf8baf3189ad8e32a530c053df6149">ANY_TRAJECTORY</link>= 11,
+<link linkend="df/d36/KinovaTypes_8h_1a0a1c22d235ef1b13cfcd1419d10babc9af794490ee2ac73d9fa5216c1edf466a0">TIME_DELAY</link>= 12
+}</literallayout>
+<para><emphasis>That represents the type of a position. If used during a trajectory, the type of position
+will change the behaviour of the robot. For example if the position type is CARTESIAN_POSITION,
+then the robot&apos;s end effector will move to that position using the inverse kinematics. But
+if the type of position is CARTESIAN_VELOCITY then the robot will use the values as velocity command.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para><literallayout>enum <link linkend="df/d36/KinovaTypes_8h_1a21ba32b640271b1573a56f79eb5a4585">RETRACT_TYPE</link> {
+<link linkend="df/d36/KinovaTypes_8h_1a21ba32b640271b1573a56f79eb5a4585accc110bce8f65af56b2d20ece8ea95fb">RETRACT_TYPE_NORMAL_TO_READY</link>= 0,
+<link linkend="df/d36/KinovaTypes_8h_1a21ba32b640271b1573a56f79eb5a4585a928c6a16f7150684fbddb45a8041aebe">RETRACT_TYPE_READY_STANDBY</link>= 1,
+<link linkend="df/d36/KinovaTypes_8h_1a21ba32b640271b1573a56f79eb5a4585a29b4f9b2d67a3120feb3ea05d1f0d5de">RETRACT_TYPE_READY_TO_RETRACT</link>= 2,
+<link linkend="df/d36/KinovaTypes_8h_1a21ba32b640271b1573a56f79eb5a4585a789ad5fbe3e8212bab4d9f0fa36d9eca">RETRACT_TYPE_RETRACT_STANDBY</link>= 3,
+<link linkend="df/d36/KinovaTypes_8h_1a21ba32b640271b1573a56f79eb5a4585a85fe8d7217cf1096255402f7e1bc239d">RETRACT_TYPE_RETRACT_TO_READY</link>= 4,
+<link linkend="df/d36/KinovaTypes_8h_1a21ba32b640271b1573a56f79eb5a4585afc4b75d4bc88b12090ccb4a53f6efc85">RETRACT_TYPE_NORMAL_STANDBY</link>= 5,
+<link linkend="df/d36/KinovaTypes_8h_1a21ba32b640271b1573a56f79eb5a4585a157843fabe8e5d136d70f2d07b132bde">RETRACT_TYPE_NOT_INITIALIZED</link>= 6
+}</literallayout>
+<para><emphasis>This describes the retract type the robotical arm.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para><literallayout>enum <link linkend="df/d36/KinovaTypes_8h_1a5a4538eeab397888d88a4eefcc5a1345">ShapeType</link> {
+<link linkend="df/d36/KinovaTypes_8h_1a5a4538eeab397888d88a4eefcc5a1345aee7da55565aba7f21a48892dcd8e66b9">PrismSquareBase_X</link>= 0,
+<link linkend="df/d36/KinovaTypes_8h_1a5a4538eeab397888d88a4eefcc5a1345ac66d181cc405e7b9c9f01c8f731f005e">PrismSquareBase_Y</link>= 1,
+<link linkend="df/d36/KinovaTypes_8h_1a5a4538eeab397888d88a4eefcc5a1345aa08bbd1fa096f66701b65ea198d4273c">PrismSquareBase_Z</link>= 2,
+<link linkend="df/d36/KinovaTypes_8h_1a5a4538eeab397888d88a4eefcc5a1345a5cdfa4ae63c8e5ffc1558b0076e0db92">PrismTriangularBase_X</link>= 3,
+<link linkend="df/d36/KinovaTypes_8h_1a5a4538eeab397888d88a4eefcc5a1345aa29132ada9d9c749c9b4c7bf08d23b02">PrismTriangularBase_Y</link>= 4,
+<link linkend="df/d36/KinovaTypes_8h_1a5a4538eeab397888d88a4eefcc5a1345aad797a90addeeadf898e717a5544f0dc">PrismTriangularBase_Z</link>= 5,
+<link linkend="df/d36/KinovaTypes_8h_1a5a4538eeab397888d88a4eefcc5a1345a93741628092cae967f2e417a9c0aea0d">Pyramid</link>= 6
+}</literallayout>
+<para><emphasis>This represents the type of a 3d shape.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Variables</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>const int <link linkend="df/d36/KinovaTypes_8h_1a529e6b48f86a4a2f65278aeed0329f95">ADDRESS_PAGE_SIZE</link><para><emphasis>This represents the size of a page&apos;s address.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>const unsigned short <link linkend="df/d36/KinovaTypes_8h_1ac22cf6a532ae8a2b517fc0e69bb64f01">PACKET_PER_PAGE_QTY</link><para><emphasis>This represents the quantity of USB packet stored in a memory page.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>const unsigned short <link linkend="df/d36/KinovaTypes_8h_1ae835b390ae6d9896fc0ba42ef2e46cfc">PAGE_SIZE</link><para><emphasis>This represents the size of a memory page used to program the robot.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>const int <link linkend="df/d36/KinovaTypes_8h_1a762eef8807268b2db7c79ff318e64c03">PAGEPACKET_SIZE</link><para><emphasis>That represents the data&apos;s size of each USB packet during firmware update.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>const int <link linkend="df/d36/KinovaTypes_8h_1a2bf0adf1e934b4cafeb91f0e707717a8">USB_DATA_SIZE</link><para><emphasis>That represents the data&apos;s size of a normal USB packet.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>const int <link linkend="df/d36/KinovaTypes_8h_1a46ea345967a204b3e0eebe5b95b84f63">USB_HEADER_SIZE</link><para><emphasis>That represents the size of a USB packet&apos;s header.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+    <simplesect>
+        <title>Detailed Description</title>
+
+<para>This file contains all data structures and all data type(enum and typedef) that you&apos;ll need to use this API. </para>
+    <para>Definition in file D:/Longfei/Desktop/catkin_KinovaROS/src/jaco-ros/jaco_driver/include/kinova/KinovaTypes.h</para>
+    </simplesect>
+    <literallayout><computeroutput>
+1 
+5 <emphasis class="preprocessor">#pragma&#32;once</emphasis>
+6 
+<link linkend="df/d36/KinovaTypes_8h_1a3792c81f5808ad4f30000689ee0f0d07">10 </link><emphasis class="preprocessor">#define&#32;JOYSTICK_BUTTON_COUNT&#32;16</emphasis>
+11 
+<link linkend="df/d36/KinovaTypes_8h_1a663862aeb115e7f11080df128498e924">15 </link><emphasis class="preprocessor">#define&#32;NB_ADVANCE_RETRACT_POSITION&#32;&#32;&#32;&#32;&#32;20</emphasis>
+16 
+<link linkend="df/d36/KinovaTypes_8h_1a5314906c9cb074ea4439ad242e230522">20 </link><emphasis class="preprocessor">#define&#32;ERROR_DATA_COUNT_MAX&#32;&#32;&#32;&#32;50</emphasis>
+21 
+<link linkend="df/d36/KinovaTypes_8h_1ad0fbf72df2f7f710761d002676278db0">25 </link><emphasis class="preprocessor">#define&#32;ERROR_LAYER_COUNT&#32;7</emphasis>
+26 
+<link linkend="df/d36/KinovaTypes_8h_1a1c024cb33df9cadef7058df1e6bf8095">30 </link><emphasis class="preprocessor">#define&#32;LEGACY_CONFIG_NB_ZONES_MAX&#32;&#32;&#32;&#32;&#32;&#32;10</emphasis>
+31 
+<link linkend="df/d36/KinovaTypes_8h_1aa8172e4bdfdf0e0f563bed72e61083f6">35 </link><emphasis class="preprocessor">#define&#32;LEGACY_CONFIG_NB_POINTS_COUNT&#32;&#32;&#32;8</emphasis>
+36 
+<link linkend="df/d36/KinovaTypes_8h_1a51a2dde57dc5de96d6c31a742780c8b3">40 </link><emphasis class="preprocessor">#define&#32;CONTROL_MAPPING_COUNT&#32;6</emphasis>
+41 
+<link linkend="df/d36/KinovaTypes_8h_1ae65b2d54c897b15b974b833eec59a7a2">45 </link><emphasis class="preprocessor">#define&#32;MODE_MAP_COUNT&#32;6</emphasis>
+46 
+<link linkend="df/d36/KinovaTypes_8h_1a1b14727ca81e530c9b63be023d70fe1c">50 </link><emphasis class="preprocessor">#define&#32;STICK_EVENT_COUNT&#32;6</emphasis>
+51 
+<link linkend="df/d36/KinovaTypes_8h_1a07e5dbf5fed1737edf7b518c431e8eaf">55 </link><emphasis class="preprocessor">#define&#32;BUTTON_EVENT_COUNT&#32;26</emphasis>
+56 
+<link linkend="df/d36/KinovaTypes_8h_1ac829415013d8120cedee928452ae0f55">60 </link><emphasis class="preprocessor">#define&#32;STRING_LENGTH&#32;20</emphasis>
+61 
+<link linkend="df/d36/KinovaTypes_8h_1a36c985755b11a97dc5ba1ecc41e3ed37">65 </link><emphasis class="preprocessor">#define&#32;JACO_FINGERS_COUNT&#32;3</emphasis>
+66 
+<link linkend="df/d36/KinovaTypes_8h_1aa4eaa6b064f30febd58fa4491e12227e">71 </link><emphasis class="preprocessor">#define&#32;ERROR_UNKNOWFILE&#32;5001</emphasis>
+72 
+<link linkend="df/d36/KinovaTypes_8h_1a3020b3e07b918dd57f396e81a47ea50e">77 </link><emphasis class="preprocessor">#define&#32;ERROR_MEMORY&#32;5002</emphasis>
+78 
+<link linkend="df/d36/KinovaTypes_8h_1a2dd3bffd406b2a44b1536030ac67b688">83 </link><emphasis class="preprocessor">#define&#32;ERROR_FILEREADING&#32;5003</emphasis>
+84 
+<link linkend="df/d36/KinovaTypes_8h_1ae835b390ae6d9896fc0ba42ef2e46cfc">88 </link><emphasis class="keyword">const</emphasis>&#32;<emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">short</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1ae835b390ae6d9896fc0ba42ef2e46cfc">PAGE_SIZE</link>&#32;=&#32;2048;
+89 
+<link linkend="df/d36/KinovaTypes_8h_1a529e6b48f86a4a2f65278aeed0329f95">93 </link><emphasis class="keyword">const</emphasis>&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1a529e6b48f86a4a2f65278aeed0329f95">ADDRESS_PAGE_SIZE</link>&#32;=&#32;4;
+94 
+<link linkend="df/d36/KinovaTypes_8h_1ac22cf6a532ae8a2b517fc0e69bb64f01">98 </link><emphasis class="keyword">const</emphasis>&#32;<emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">short</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1ac22cf6a532ae8a2b517fc0e69bb64f01">PACKET_PER_PAGE_QTY</link>&#32;=&#32;40;
+99 
+<link linkend="df/d36/KinovaTypes_8h_1a762eef8807268b2db7c79ff318e64c03">103 </link><emphasis class="keyword">const</emphasis>&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1a762eef8807268b2db7c79ff318e64c03">PAGEPACKET_SIZE</link>&#32;=&#32;52;
+104 
+<link linkend="df/d36/KinovaTypes_8h_1a46ea345967a204b3e0eebe5b95b84f63">108 </link><emphasis class="keyword">const</emphasis>&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1a46ea345967a204b3e0eebe5b95b84f63">USB_HEADER_SIZE</link>&#32;=&#32;8;
+109 
+<link linkend="df/d36/KinovaTypes_8h_1a2bf0adf1e934b4cafeb91f0e707717a8">113 </link><emphasis class="keyword">const</emphasis>&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1a2bf0adf1e934b4cafeb91f0e707717a8">USB_DATA_SIZE</link>&#32;=&#32;56;
+114 
+<link linkend="df/d36/KinovaTypes_8h_1a0a1c22d235ef1b13cfcd1419d10babc9">121 </link><emphasis class="keyword">enum</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1a0a1c22d235ef1b13cfcd1419d10babc9">POSITION_TYPE</link>
+122 {
+<link linkend="df/d36/KinovaTypes_8h_1a0a1c22d235ef1b13cfcd1419d10babc9a2165a93f032054d96cec4b6f8451c88c">123 </link>&#32;&#32;&#32;&#32;<link linkend="df/d36/KinovaTypes_8h_1a0a1c22d235ef1b13cfcd1419d10babc9a2165a93f032054d96cec4b6f8451c88c">NOMOVEMENT_POSITION</link>&#32;=&#32;0,&#32;&#32;&#32;&#32;
+<link linkend="df/d36/KinovaTypes_8h_1a0a1c22d235ef1b13cfcd1419d10babc9aa98b51871329200ef579781620a475ad">124 </link>&#32;&#32;&#32;&#32;<link linkend="df/d36/KinovaTypes_8h_1a0a1c22d235ef1b13cfcd1419d10babc9aa98b51871329200ef579781620a475ad">CARTESIAN_POSITION</link>&#32;=&#32;1,&#32;&#32;&#32;&#32;&#32;
+<link linkend="df/d36/KinovaTypes_8h_1a0a1c22d235ef1b13cfcd1419d10babc9acec3b882918c5c90a239fd07290d6031">125 </link>&#32;&#32;&#32;&#32;<link linkend="df/d36/KinovaTypes_8h_1a0a1c22d235ef1b13cfcd1419d10babc9acec3b882918c5c90a239fd07290d6031">ANGULAR_POSITION</link>&#32;=&#32;2,&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<link linkend="df/d36/KinovaTypes_8h_1a0a1c22d235ef1b13cfcd1419d10babc9abeb6b2df651053c52240164cc205757c">126 </link>&#32;&#32;&#32;&#32;<link linkend="df/d36/KinovaTypes_8h_1a0a1c22d235ef1b13cfcd1419d10babc9abeb6b2df651053c52240164cc205757c">CARTESIAN_VELOCITY</link>&#32;=&#32;7,&#32;&#32;&#32;&#32;&#32;
+<link linkend="df/d36/KinovaTypes_8h_1a0a1c22d235ef1b13cfcd1419d10babc9ae4d95686a349611affcf1ebfeab077f1">127 </link>&#32;&#32;&#32;&#32;<link linkend="df/d36/KinovaTypes_8h_1a0a1c22d235ef1b13cfcd1419d10babc9ae4d95686a349611affcf1ebfeab077f1">ANGULAR_VELOCITY</link>&#32;=&#32;8,&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<link linkend="df/d36/KinovaTypes_8h_1a0a1c22d235ef1b13cfcd1419d10babc9a4eaf8baf3189ad8e32a530c053df6149">128 </link>&#32;&#32;&#32;&#32;<link linkend="df/d36/KinovaTypes_8h_1a0a1c22d235ef1b13cfcd1419d10babc9a4eaf8baf3189ad8e32a530c053df6149">ANY_TRAJECTORY</link>&#32;=&#32;11,&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<link linkend="df/d36/KinovaTypes_8h_1a0a1c22d235ef1b13cfcd1419d10babc9af794490ee2ac73d9fa5216c1edf466a0">129 </link>&#32;&#32;&#32;&#32;<link linkend="df/d36/KinovaTypes_8h_1a0a1c22d235ef1b13cfcd1419d10babc9af794490ee2ac73d9fa5216c1edf466a0">TIME_DELAY</link>&#32;=&#32;12,&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+130 };
+131 
+132 
+<link linkend="df/d36/KinovaTypes_8h_1adea74301a58d618c08413dc43c86a95f">133 </link><emphasis class="keyword">enum</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1adea74301a58d618c08413dc43c86a95f">PERIPHERAL_TYPE</link>
+134 {
+<link linkend="df/d36/KinovaTypes_8h_1adea74301a58d618c08413dc43c86a95faae084f7fa40032e65e81c84def2049ab">135 </link>&#32;&#32;&#32;&#32;<link linkend="df/d36/KinovaTypes_8h_1adea74301a58d618c08413dc43c86a95faae084f7fa40032e65e81c84def2049ab">PERIPHERAL_TYPE_NONE</link>&#32;=&#32;0,&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<link linkend="df/d36/KinovaTypes_8h_1adea74301a58d618c08413dc43c86a95fab26e38677fd238b5120e7025be8f1772">136 </link>&#32;&#32;&#32;&#32;<link linkend="df/d36/KinovaTypes_8h_1adea74301a58d618c08413dc43c86a95fab26e38677fd238b5120e7025be8f1772">PERIPHERAL_TYPE_ANY</link>&#32;=&#32;1,&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<link linkend="df/d36/KinovaTypes_8h_1adea74301a58d618c08413dc43c86a95faa9fef6487d2124c889818597db4fec36">137 </link>&#32;&#32;&#32;&#32;<link linkend="df/d36/KinovaTypes_8h_1adea74301a58d618c08413dc43c86a95faa9fef6487d2124c889818597db4fec36">PERIPHERAL_TYPE_ACTUATORK01</link>&#32;=&#32;100,&#32;&#32;&#32;&#32;&#32;&#32;
+<link linkend="df/d36/KinovaTypes_8h_1adea74301a58d618c08413dc43c86a95fa854284ca406d0d3c97f6394e32f87029">138 </link>&#32;&#32;&#32;&#32;<link linkend="df/d36/KinovaTypes_8h_1adea74301a58d618c08413dc43c86a95fa854284ca406d0d3c97f6394e32f87029">PERIPHERAL_TYPE_FINGERK01</link>&#32;=&#32;200,&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<link linkend="df/d36/KinovaTypes_8h_1adea74301a58d618c08413dc43c86a95fa642201952077a83fc9391cba77ae3f51">139 </link>&#32;&#32;&#32;&#32;<link linkend="df/d36/KinovaTypes_8h_1adea74301a58d618c08413dc43c86a95fa642201952077a83fc9391cba77ae3f51">PERIPHERAL_TYPE_JOYSTICK</link>&#32;=&#32;300,&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<link linkend="df/d36/KinovaTypes_8h_1adea74301a58d618c08413dc43c86a95fa63995127f6b84f9cac86f005398a83ff">140 </link>&#32;&#32;&#32;&#32;<link linkend="df/d36/KinovaTypes_8h_1adea74301a58d618c08413dc43c86a95fa63995127f6b84f9cac86f005398a83ff">PERIPHERAL_TYPE_VIRTUAL_JOYSTICK</link>&#32;=&#32;301,&#32;
+<link linkend="df/d36/KinovaTypes_8h_1adea74301a58d618c08413dc43c86a95fa814f77f4bc7d4b053f9b2a80a63648cc">141 </link>&#32;&#32;&#32;&#32;<link linkend="df/d36/KinovaTypes_8h_1adea74301a58d618c08413dc43c86a95fa814f77f4bc7d4b053f9b2a80a63648cc">PERIPHERAL_TYPE_CAN_INTERFACE</link>&#32;=&#32;400,&#32;&#32;&#32;&#32;
+142 };
+143 
+<link linkend="df/d36/KinovaTypes_8h_1ad7050e4cfb6e844e9be962fba8eeb817">147 </link><emphasis class="keyword">enum</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1ad7050e4cfb6e844e9be962fba8eeb817">HAND_MODE</link>
+148 {
+<link linkend="df/d36/KinovaTypes_8h_1ad7050e4cfb6e844e9be962fba8eeb817aacf6cc4ccee2594b38453e9918708e47">149 </link>&#32;&#32;&#32;&#32;<link linkend="df/d36/KinovaTypes_8h_1ad7050e4cfb6e844e9be962fba8eeb817aacf6cc4ccee2594b38453e9918708e47">HAND_NOMOVEMENT</link>,&#32;
+<link linkend="df/d36/KinovaTypes_8h_1ad7050e4cfb6e844e9be962fba8eeb817a21de3478520bbc47e9c35e3e651a06bf">150 </link>&#32;&#32;&#32;&#32;<link linkend="df/d36/KinovaTypes_8h_1ad7050e4cfb6e844e9be962fba8eeb817a21de3478520bbc47e9c35e3e651a06bf">POSITION_MODE</link>,&#32;&#32;&#32;
+<link linkend="df/d36/KinovaTypes_8h_1ad7050e4cfb6e844e9be962fba8eeb817a53c6ff5c2a348365c6d73e987a375f4c">151 </link>&#32;&#32;&#32;&#32;<link linkend="df/d36/KinovaTypes_8h_1ad7050e4cfb6e844e9be962fba8eeb817a53c6ff5c2a348365c6d73e987a375f4c">VELOCITY_MODE</link>,&#32;&#32;&#32;
+152 };
+153 
+<link linkend="df/d36/KinovaTypes_8h_1a3b88714e308595eb42f64c56259a1ccf">157 </link><emphasis class="keyword">enum</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1a3b88714e308595eb42f64c56259a1ccf">ArmLaterality</link>
+158 {
+<link linkend="df/d36/KinovaTypes_8h_1a3b88714e308595eb42f64c56259a1ccfa4d25ca7d263c7f9cfba750640da0a350">159 </link>&#32;&#32;&#32;&#32;<link linkend="df/d36/KinovaTypes_8h_1a3b88714e308595eb42f64c56259a1ccfa4d25ca7d263c7f9cfba750640da0a350">RIGHTHAND</link>,&#32;
+<link linkend="df/d36/KinovaTypes_8h_1a3b88714e308595eb42f64c56259a1ccfa58f69685cd1501346540d18b0db06488">160 </link>&#32;&#32;&#32;&#32;<link linkend="df/d36/KinovaTypes_8h_1a3b88714e308595eb42f64c56259a1ccfa58f69685cd1501346540d18b0db06488">LEFTHAND</link>,&#32;&#32;
+161 };
+162 
+<link linkend="df/d36/KinovaTypes_8h_1a6ca93caffa508f4eabf18585d3710d0f">167 </link><emphasis class="keyword">enum</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1a6ca93caffa508f4eabf18585d3710d0f">Controller</link>
+168 {
+<link linkend="df/d36/KinovaTypes_8h_1a6ca93caffa508f4eabf18585d3710d0facc0673853cbbc74e0803ca8d24a5a576">169 </link>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="df/d36/KinovaTypes_8h_1a6ca93caffa508f4eabf18585d3710d0facc0673853cbbc74e0803ca8d24a5a576">THREE_AXIS_JOYSTICK</link>&#32;=&#32;0,&#32;
+<link linkend="df/d36/KinovaTypes_8h_1a6ca93caffa508f4eabf18585d3710d0fad62034a1ca56878f0945d0c6c2cf4c60">170 </link>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="df/d36/KinovaTypes_8h_1a6ca93caffa508f4eabf18585d3710d0fad62034a1ca56878f0945d0c6c2cf4c60">TWO_AXIS_JOYSTICK</link>&#32;=&#32;1,&#32;
+<link linkend="df/d36/KinovaTypes_8h_1a6ca93caffa508f4eabf18585d3710d0fa7fd5f3a93cf5139877f23acb316f99c0">171 </link>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="df/d36/KinovaTypes_8h_1a6ca93caffa508f4eabf18585d3710d0fa7fd5f3a93cf5139877f23acb316f99c0">API</link>&#32;=&#32;2,&#32;
+<link linkend="df/d36/KinovaTypes_8h_1a6ca93caffa508f4eabf18585d3710d0fa9c4acb850ef34087a26f7cbb674ed736">172 </link>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="df/d36/KinovaTypes_8h_1a6ca93caffa508f4eabf18585d3710d0fa9c4acb850ef34087a26f7cbb674ed736">EASY_RIDER</link>&#32;=&#32;3,&#32;
+<link linkend="df/d36/KinovaTypes_8h_1a6ca93caffa508f4eabf18585d3710d0fa9135711773995175032cd79a5ce52561">173 </link>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="df/d36/KinovaTypes_8h_1a6ca93caffa508f4eabf18585d3710d0fa9135711773995175032cd79a5ce52561">UNIVERSAL_INTERFACE</link>&#32;=&#32;4,&#32;
+<link linkend="df/d36/KinovaTypes_8h_1a6ca93caffa508f4eabf18585d3710d0fac0e594eea8dee49ca60246c88617114b">174 </link>&#32;&#32;&#32;&#32;<link linkend="df/d36/KinovaTypes_8h_1a6ca93caffa508f4eabf18585d3710d0fac0e594eea8dee49ca60246c88617114b">EXTERNAL_CUSTOMINTERFACE</link>&#32;=&#32;5,&#32;
+<link linkend="df/d36/KinovaTypes_8h_1a6ca93caffa508f4eabf18585d3710d0fac157bdf0b85a40d2619cbc8bc1ae5fe2">175 </link>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="df/d36/KinovaTypes_8h_1a6ca93caffa508f4eabf18585d3710d0fac157bdf0b85a40d2619cbc8bc1ae5fe2">NONE</link>&#32;=&#32;6,&#32;
+<link linkend="df/d36/KinovaTypes_8h_1a6ca93caffa508f4eabf18585d3710d0faf5196bd2cd11a3ac1d4738f733e39337">176 </link>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="df/d36/KinovaTypes_8h_1a6ca93caffa508f4eabf18585d3710d0faf5196bd2cd11a3ac1d4738f733e39337">OLED_DISPLAY</link>&#32;=&#32;7&#32;&#32;
+177 };
+178 
+<link linkend="df/d36/KinovaTypes_8h_1a65c8c2bedcea12c05bb3fb515b97e2b5">183 </link><emphasis class="keyword">enum</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1a65c8c2bedcea12c05bb3fb515b97e2b5">CONTROL_TYPE</link>
+184 {
+<link linkend="df/d36/KinovaTypes_8h_1a65c8c2bedcea12c05bb3fb515b97e2b5af4f6e33bebeeced6a23c6f76e5b689af">185 </link>&#32;&#32;&#32;&#32;<link linkend="df/d36/KinovaTypes_8h_1a65c8c2bedcea12c05bb3fb515b97e2b5af4f6e33bebeeced6a23c6f76e5b689af">CONTROL_TYPE_CARTESIAN</link>&#32;=&#32;0,&#32;
+<link linkend="df/d36/KinovaTypes_8h_1a65c8c2bedcea12c05bb3fb515b97e2b5a7c71a60742ea11c7005b141c6bdb1030">186 </link>&#32;&#32;&#32;&#32;<link linkend="df/d36/KinovaTypes_8h_1a65c8c2bedcea12c05bb3fb515b97e2b5a7c71a60742ea11c7005b141c6bdb1030">CONTROL_TYPE_ANGULAR</link>&#32;=&#32;1&#32;&#32;&#32;&#32;
+187 };
+188 
+<link linkend="df/d36/KinovaTypes_8h_1a28fdb369f4bb23c7d6d18d90b89feb0e">192 </link><emphasis class="keyword">enum</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1a28fdb369f4bb23c7d6d18d90b89feb0e">CONTROL_MODULE</link>
+193 {
+<link linkend="df/d36/KinovaTypes_8h_1a28fdb369f4bb23c7d6d18d90b89feb0ea69080f792f5f784259d3fafc4845ae32">197 </link>&#32;&#32;&#32;&#32;<link linkend="df/d36/KinovaTypes_8h_1a28fdb369f4bb23c7d6d18d90b89feb0ea69080f792f5f784259d3fafc4845ae32">CONTROL_MODULE_NONE</link>,
+198 
+<link linkend="df/d36/KinovaTypes_8h_1a28fdb369f4bb23c7d6d18d90b89feb0ea953b2649aa1086fae84150e8f304423a">202 </link>&#32;&#32;&#32;&#32;<link linkend="df/d36/KinovaTypes_8h_1a28fdb369f4bb23c7d6d18d90b89feb0ea953b2649aa1086fae84150e8f304423a">CONTROL_MODULE_ANGULAR_VELOCITY</link>,
+203 
+<link linkend="df/d36/KinovaTypes_8h_1a28fdb369f4bb23c7d6d18d90b89feb0eaae836e42bf109e45c42a64ba00f74fe8">207 </link>&#32;&#32;&#32;&#32;<link linkend="df/d36/KinovaTypes_8h_1a28fdb369f4bb23c7d6d18d90b89feb0eaae836e42bf109e45c42a64ba00f74fe8">CONTROL_MODULE_ANGULAR_POSITION</link>,
+208 
+<link linkend="df/d36/KinovaTypes_8h_1a28fdb369f4bb23c7d6d18d90b89feb0ea44595acde2552f6c07e5275982e50402">213 </link>&#32;&#32;&#32;&#32;<link linkend="df/d36/KinovaTypes_8h_1a28fdb369f4bb23c7d6d18d90b89feb0ea44595acde2552f6c07e5275982e50402">CONTROL_MODULE_CARTESIAN_VELOCITY</link>,
+214 
+<link linkend="df/d36/KinovaTypes_8h_1a28fdb369f4bb23c7d6d18d90b89feb0ea58c91dc9796090711a65f7de250df886">219 </link>&#32;&#32;&#32;&#32;<link linkend="df/d36/KinovaTypes_8h_1a28fdb369f4bb23c7d6d18d90b89feb0ea58c91dc9796090711a65f7de250df886">CONTROL_MODULE_CARTESIAN_POSITION</link>,
+220 
+<link linkend="df/d36/KinovaTypes_8h_1a28fdb369f4bb23c7d6d18d90b89feb0ea80885f5595ffc85829ecf6cd6ba0c19e">225 </link>&#32;&#32;&#32;&#32;<link linkend="df/d36/KinovaTypes_8h_1a28fdb369f4bb23c7d6d18d90b89feb0ea80885f5595ffc85829ecf6cd6ba0c19e">CONTROL_MODULE_RETRACT</link>,
+226 
+<link linkend="df/d36/KinovaTypes_8h_1a28fdb369f4bb23c7d6d18d90b89feb0eabfde46eb9a12cb0502a094461bf40374">230 </link>&#32;&#32;&#32;&#32;<link linkend="df/d36/KinovaTypes_8h_1a28fdb369f4bb23c7d6d18d90b89feb0eabfde46eb9a12cb0502a094461bf40374">CONTROL_MODULE_TRAJECTORY</link>,
+231 
+<link linkend="df/d36/KinovaTypes_8h_1a28fdb369f4bb23c7d6d18d90b89feb0ea65dce4eaf6797c0f6f2b6a471e3c1076">235 </link>&#32;&#32;&#32;&#32;<link linkend="df/d36/KinovaTypes_8h_1a28fdb369f4bb23c7d6d18d90b89feb0ea65dce4eaf6797c0f6f2b6a471e3c1076">CONTROL_MODULE_PREDEFINED</link>,
+236 
+<link linkend="df/d36/KinovaTypes_8h_1a28fdb369f4bb23c7d6d18d90b89feb0eab4f730306f9dae83efc136e567e27d6e">240 </link>&#32;&#32;&#32;&#32;<link linkend="df/d36/KinovaTypes_8h_1a28fdb369f4bb23c7d6d18d90b89feb0eab4f730306f9dae83efc136e567e27d6e">CONTROL_MODULE_TIMEDELAY</link>,
+241 };
+242 
+<link linkend="df/d36/KinovaTypes_8h_1a21ba32b640271b1573a56f79eb5a4585">246 </link><emphasis class="keyword">enum</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1a21ba32b640271b1573a56f79eb5a4585">RETRACT_TYPE</link>
+247 {
+<link linkend="df/d36/KinovaTypes_8h_1a21ba32b640271b1573a56f79eb5a4585accc110bce8f65af56b2d20ece8ea95fb">251 </link>&#32;&#32;&#32;&#32;&#32;<link linkend="df/d36/KinovaTypes_8h_1a21ba32b640271b1573a56f79eb5a4585accc110bce8f65af56b2d20ece8ea95fb">RETRACT_TYPE_NORMAL_TO_READY</link>&#32;=&#32;0,
+252 
+<link linkend="df/d36/KinovaTypes_8h_1a21ba32b640271b1573a56f79eb5a4585a928c6a16f7150684fbddb45a8041aebe">256 </link>&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="df/d36/KinovaTypes_8h_1a21ba32b640271b1573a56f79eb5a4585a928c6a16f7150684fbddb45a8041aebe">RETRACT_TYPE_READY_STANDBY</link>&#32;=&#32;1,
+257 
+<link linkend="df/d36/KinovaTypes_8h_1a21ba32b640271b1573a56f79eb5a4585a29b4f9b2d67a3120feb3ea05d1f0d5de">261 </link>&#32;&#32;&#32;&#32;<link linkend="df/d36/KinovaTypes_8h_1a21ba32b640271b1573a56f79eb5a4585a29b4f9b2d67a3120feb3ea05d1f0d5de">RETRACT_TYPE_READY_TO_RETRACT</link>&#32;=&#32;2,
+262 
+<link linkend="df/d36/KinovaTypes_8h_1a21ba32b640271b1573a56f79eb5a4585a789ad5fbe3e8212bab4d9f0fa36d9eca">266 </link>&#32;&#32;&#32;&#32;&#32;<link linkend="df/d36/KinovaTypes_8h_1a21ba32b640271b1573a56f79eb5a4585a789ad5fbe3e8212bab4d9f0fa36d9eca">RETRACT_TYPE_RETRACT_STANDBY</link>&#32;=&#32;3,
+267 
+<link linkend="df/d36/KinovaTypes_8h_1a21ba32b640271b1573a56f79eb5a4585a85fe8d7217cf1096255402f7e1bc239d">271 </link>&#32;&#32;&#32;&#32;<link linkend="df/d36/KinovaTypes_8h_1a21ba32b640271b1573a56f79eb5a4585a85fe8d7217cf1096255402f7e1bc239d">RETRACT_TYPE_RETRACT_TO_READY</link>&#32;=&#32;4,
+272 
+<link linkend="df/d36/KinovaTypes_8h_1a21ba32b640271b1573a56f79eb5a4585afc4b75d4bc88b12090ccb4a53f6efc85">276 </link>&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="df/d36/KinovaTypes_8h_1a21ba32b640271b1573a56f79eb5a4585afc4b75d4bc88b12090ccb4a53f6efc85">RETRACT_TYPE_NORMAL_STANDBY</link>&#32;=&#32;5,
+277 
+<link linkend="df/d36/KinovaTypes_8h_1a21ba32b640271b1573a56f79eb5a4585a157843fabe8e5d136d70f2d07b132bde">281 </link>&#32;&#32;&#32;&#32;&#32;<link linkend="df/d36/KinovaTypes_8h_1a21ba32b640271b1573a56f79eb5a4585a157843fabe8e5d136d70f2d07b132bde">RETRACT_TYPE_NOT_INITIALIZED</link>&#32;=&#32;6
+282 };
+283 
+<link linkend="d0/df5/structAngularInfo">287 </link><emphasis class="keyword">struct&#32;</emphasis><link linkend="d0/df5/structAngularInfo">AngularInfo</link>
+288 {
+<link linkend="d0/df5/structAngularInfo_1a5fc555c085bddc82c33a3039fbc40932">294 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">float</emphasis>&#32;<link linkend="d0/df5/structAngularInfo_1a5fc555c085bddc82c33a3039fbc40932">Actuator1</link>;
+295 
+<link linkend="d0/df5/structAngularInfo_1ab7b9349eef239f9741d9c28a795e4c35">301 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">float</emphasis>&#32;<link linkend="d0/df5/structAngularInfo_1ab7b9349eef239f9741d9c28a795e4c35">Actuator2</link>;
+302 
+<link linkend="d0/df5/structAngularInfo_1a30426eab94c82cfd3d697bbc8c506c2a">308 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">float</emphasis>&#32;<link linkend="d0/df5/structAngularInfo_1a30426eab94c82cfd3d697bbc8c506c2a">Actuator3</link>;
+309 
+<link linkend="d0/df5/structAngularInfo_1a46a1314c4846de6a495310b44fe5e0c3">315 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">float</emphasis>&#32;<link linkend="d0/df5/structAngularInfo_1a46a1314c4846de6a495310b44fe5e0c3">Actuator4</link>;
+316 
+<link linkend="d0/df5/structAngularInfo_1a953c29d2481eb1c42c84e9c992d34dde">322 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">float</emphasis>&#32;<link linkend="d0/df5/structAngularInfo_1a953c29d2481eb1c42c84e9c992d34dde">Actuator5</link>;
+323 
+<link linkend="d0/df5/structAngularInfo_1ab54771129d8a9e451c27942dd349340d">329 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">float</emphasis>&#32;<link linkend="d0/df5/structAngularInfo_1ab54771129d8a9e451c27942dd349340d">Actuator6</link>;
+330 
+331 
+<link linkend="d0/df5/structAngularInfo_1a092156b3e0e6cb657ed4bb2f6b15a9f0">335 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">void</emphasis>&#32;<link linkend="d0/df5/structAngularInfo_1a092156b3e0e6cb657ed4bb2f6b15a9f0">InitStruct</link>()
+336 &#32;&#32;&#32;&#32;{
+337 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Actuator1&#32;=&#32;0.0f;
+338 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Actuator2&#32;=&#32;0.0f;
+339 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Actuator3&#32;=&#32;0.0f;
+340 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Actuator4&#32;=&#32;0.0f;
+341 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Actuator5&#32;=&#32;0.0f;
+342 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Actuator6&#32;=&#32;0.0f;
+343 &#32;&#32;&#32;&#32;}
+344 };
+345 
+<link linkend="dd/d00/structCartesianInfo">349 </link><emphasis class="keyword">struct&#32;</emphasis><link linkend="dd/d00/structCartesianInfo">CartesianInfo</link>
+350 {
+<link linkend="dd/d00/structCartesianInfo_1a212cc2dcae1697132fc31fa2f5d17269">356 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">float</emphasis>&#32;<link linkend="dd/d00/structCartesianInfo_1a212cc2dcae1697132fc31fa2f5d17269">X</link>;
+357 
+<link linkend="dd/d00/structCartesianInfo_1a12c2611c89445419b336e58815d87c7c">363 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">float</emphasis>&#32;<link linkend="dd/d00/structCartesianInfo_1a12c2611c89445419b336e58815d87c7c">Y</link>;
+364 
+<link linkend="dd/d00/structCartesianInfo_1a14e196e4cb38c0ae7f4658b9b070b7fe">370 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">float</emphasis>&#32;<link linkend="dd/d00/structCartesianInfo_1a14e196e4cb38c0ae7f4658b9b070b7fe">Z</link>;
+371 
+<link linkend="dd/d00/structCartesianInfo_1a39135e53155aa4025c40eeefbfd3b17c">378 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">float</emphasis>&#32;<link linkend="dd/d00/structCartesianInfo_1a39135e53155aa4025c40eeefbfd3b17c">ThetaX</link>;
+379 
+<link linkend="dd/d00/structCartesianInfo_1a4aef5897f4cdcf7ecc9df6804f844d46">385 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">float</emphasis>&#32;<link linkend="dd/d00/structCartesianInfo_1a4aef5897f4cdcf7ecc9df6804f844d46">ThetaY</link>;
+386 
+<link linkend="dd/d00/structCartesianInfo_1a2890c501f3b7b9479e12ad51f04f0a7f">392 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">float</emphasis>&#32;<link linkend="dd/d00/structCartesianInfo_1a2890c501f3b7b9479e12ad51f04f0a7f">ThetaZ</link>;
+393 
+394 
+<link linkend="dd/d00/structCartesianInfo_1a6d47623939d86124525ab4c8f7a2b8e9">398 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">void</emphasis>&#32;<link linkend="dd/d00/structCartesianInfo_1a6d47623939d86124525ab4c8f7a2b8e9">InitStruct</link>()
+399 &#32;&#32;&#32;&#32;{
+400 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;X&#32;=&#32;0.0f;
+401 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Y&#32;=&#32;0.0f;
+402 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Z&#32;=&#32;0.0f;
+403 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ThetaX&#32;=&#32;0.0f;
+404 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ThetaY&#32;=&#32;0.0f;
+405 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ThetaZ&#32;=&#32;0.0f;
+406 &#32;&#32;&#32;&#32;}
+407 };
+408 
+<link linkend="d7/d40/structSensorsInfo">414 </link><emphasis class="keyword">struct&#32;</emphasis><link linkend="d7/d40/structSensorsInfo">SensorsInfo</link>
+415 {
+<link linkend="d7/d40/structSensorsInfo_1a9ced23ff499026d028b2179945091775">419 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">float</emphasis>&#32;<link linkend="d7/d40/structSensorsInfo_1a9ced23ff499026d028b2179945091775">Voltage</link>;
+420 
+<link linkend="d7/d40/structSensorsInfo_1a2be7e431dce5a2093e6f61a7333b574c">424 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">float</emphasis>&#32;<link linkend="d7/d40/structSensorsInfo_1a2be7e431dce5a2093e6f61a7333b574c">Current</link>;
+425 
+<link linkend="d7/d40/structSensorsInfo_1a3d4a04448cbb350ce537758ec9c38e51">429 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">float</emphasis>&#32;<link linkend="d7/d40/structSensorsInfo_1a3d4a04448cbb350ce537758ec9c38e51">AccelerationX</link>;
+430 
+<link linkend="d7/d40/structSensorsInfo_1af8316a86022a11ef16181d5cbc6e266e">434 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">float</emphasis>&#32;<link linkend="d7/d40/structSensorsInfo_1af8316a86022a11ef16181d5cbc6e266e">AccelerationY</link>;
+435 
+<link linkend="d7/d40/structSensorsInfo_1a98074de49d42dbb1b303e5e68e03cc90">439 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">float</emphasis>&#32;<link linkend="d7/d40/structSensorsInfo_1a98074de49d42dbb1b303e5e68e03cc90">AccelerationZ</link>;
+440 
+<link linkend="d7/d40/structSensorsInfo_1a9aa0da9e61455fd8b3faa91ad5970985">444 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">float</emphasis>&#32;<link linkend="d7/d40/structSensorsInfo_1a9aa0da9e61455fd8b3faa91ad5970985">ActuatorTemp1</link>;
+445 
+<link linkend="d7/d40/structSensorsInfo_1abf182850e94b2bab72a282eb2a76be75">449 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">float</emphasis>&#32;<link linkend="d7/d40/structSensorsInfo_1abf182850e94b2bab72a282eb2a76be75">ActuatorTemp2</link>;
+450 
+<link linkend="d7/d40/structSensorsInfo_1aae8cdcf3e2412f99ec5cdc5a13db1528">454 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">float</emphasis>&#32;<link linkend="d7/d40/structSensorsInfo_1aae8cdcf3e2412f99ec5cdc5a13db1528">ActuatorTemp3</link>;
+455 
+<link linkend="d7/d40/structSensorsInfo_1a69bb9fe27b7e18a1c09da9135a13c324">459 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">float</emphasis>&#32;<link linkend="d7/d40/structSensorsInfo_1a69bb9fe27b7e18a1c09da9135a13c324">ActuatorTemp4</link>;
+460 
+<link linkend="d7/d40/structSensorsInfo_1a03c089c08df66cc62b0aa768557e2128">464 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">float</emphasis>&#32;<link linkend="d7/d40/structSensorsInfo_1a03c089c08df66cc62b0aa768557e2128">ActuatorTemp5</link>;
+465 
+<link linkend="d7/d40/structSensorsInfo_1aa22bb78967dc3b480280c422613f8382">469 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">float</emphasis>&#32;<link linkend="d7/d40/structSensorsInfo_1aa22bb78967dc3b480280c422613f8382">ActuatorTemp6</link>;
+470 
+<link linkend="d7/d40/structSensorsInfo_1a752833e7fba2c791ecf2693b96cff3d0">474 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">float</emphasis>&#32;<link linkend="d7/d40/structSensorsInfo_1a752833e7fba2c791ecf2693b96cff3d0">FingerTemp1</link>;
+475 
+<link linkend="d7/d40/structSensorsInfo_1a97f570d85f99948f785551712da25145">479 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">float</emphasis>&#32;<link linkend="d7/d40/structSensorsInfo_1a97f570d85f99948f785551712da25145">FingerTemp2</link>;
+480 
+<link linkend="d7/d40/structSensorsInfo_1ad18fa2c352189db0a8aff1d38c1c7b52">484 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">float</emphasis>&#32;<link linkend="d7/d40/structSensorsInfo_1ad18fa2c352189db0a8aff1d38c1c7b52">FingerTemp3</link>;
+485 
+486 
+<link linkend="d7/d40/structSensorsInfo_1a321b3a120733f8a2a317422cfe8e4869">490 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">void</emphasis>&#32;<link linkend="d7/d40/structSensorsInfo_1a321b3a120733f8a2a317422cfe8e4869">InitStruct</link>()
+491 &#32;&#32;&#32;&#32;{
+492 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Voltage&#32;&#32;&#32;&#32;&#32;&#32;&#32;=&#32;0.0f;
+493 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Current&#32;&#32;&#32;&#32;&#32;&#32;&#32;=&#32;0.0f;
+494 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;AccelerationX&#32;=&#32;0.0f;
+495 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;AccelerationY&#32;=&#32;0.0f;
+496 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;AccelerationZ&#32;=&#32;0.0f;
+497 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ActuatorTemp1&#32;=&#32;0.0f;
+498 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ActuatorTemp2&#32;=&#32;0.0f;
+499 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ActuatorTemp3&#32;=&#32;0.0f;
+500 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ActuatorTemp4&#32;=&#32;0.0f;
+501 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ActuatorTemp5&#32;=&#32;0.0f;
+502 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ActuatorTemp6&#32;=&#32;0.0f;
+503 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;FingerTemp1&#32;&#32;&#32;=&#32;0.0f;
+504 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;FingerTemp2&#32;&#32;&#32;=&#32;0.0f;
+505 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;FingerTemp3&#32;&#32;&#32;=&#32;0.0f;
+506 &#32;&#32;&#32;&#32;}
+507 
+508 };
+509 
+<link linkend="df/d1b/structFingersPosition">513 </link><emphasis class="keyword">struct&#32;</emphasis><link linkend="df/d1b/structFingersPosition">FingersPosition</link>
+514 {
+<link linkend="df/d1b/structFingersPosition_1a216f8d64e6a9c7aab84e4269ccb27e66">518 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">float</emphasis>&#32;<link linkend="df/d1b/structFingersPosition_1a216f8d64e6a9c7aab84e4269ccb27e66">Finger1</link>;
+519 
+<link linkend="df/d1b/structFingersPosition_1a0ec9675672721d61fb13bbc2db3d3ef9">523 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">float</emphasis>&#32;<link linkend="df/d1b/structFingersPosition_1a0ec9675672721d61fb13bbc2db3d3ef9">Finger2</link>;
+524 
+<link linkend="df/d1b/structFingersPosition_1a03c819e4c20367e36e62a864bf829160">528 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">float</emphasis>&#32;<link linkend="df/d1b/structFingersPosition_1a03c819e4c20367e36e62a864bf829160">Finger3</link>;
+529 
+<link linkend="df/d1b/structFingersPosition_1a2d958923675995d54d56e59f8549495d">533 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">void</emphasis>&#32;<link linkend="df/d1b/structFingersPosition_1a2d958923675995d54d56e59f8549495d">InitStruct</link>()
+534 &#32;&#32;&#32;&#32;{
+535 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Finger1&#32;&#32;&#32;&#32;&#32;&#32;&#32;=&#32;0.0f;
+536 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Finger2&#32;&#32;&#32;&#32;&#32;&#32;&#32;=&#32;0.0f;
+537 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Finger3&#32;&#32;&#32;&#32;&#32;&#32;&#32;=&#32;0.0f;
+538 &#32;&#32;&#32;&#32;}
+539 };
+540 
+<link linkend="d4/d67/structCartesianPosition">548 </link><emphasis class="keyword">struct&#32;</emphasis><link linkend="d4/d67/structCartesianPosition">CartesianPosition</link>
+549 {
+<link linkend="d4/d67/structCartesianPosition_1aa1e120e383c650f4c4bf88ba8c780ab1">553 </link>&#32;&#32;&#32;&#32;<link linkend="dd/d00/structCartesianInfo">CartesianInfo</link>&#32;<link linkend="d4/d67/structCartesianPosition_1aa1e120e383c650f4c4bf88ba8c780ab1">Coordinates</link>;
+554 
+<link linkend="d4/d67/structCartesianPosition_1ad0d8710c54bb2f63dfc98d809eaeb3a4">558 </link>&#32;&#32;&#32;&#32;<link linkend="df/d1b/structFingersPosition">FingersPosition</link>&#32;<link linkend="d4/d67/structCartesianPosition_1ad0d8710c54bb2f63dfc98d809eaeb3a4">Fingers</link>;
+559 
+560 
+<link linkend="d4/d67/structCartesianPosition_1a555e4355ff9b88f0088b3ffcfc56af96">564 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">void</emphasis>&#32;<link linkend="d4/d67/structCartesianPosition_1a555e4355ff9b88f0088b3ffcfc56af96">InitStruct</link>()
+565 &#32;&#32;&#32;&#32;{
+566 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Coordinates.<link linkend="dd/d00/structCartesianInfo_1a6d47623939d86124525ab4c8f7a2b8e9">InitStruct</link>();
+567 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Fingers.<link linkend="df/d1b/structFingersPosition_1a2d958923675995d54d56e59f8549495d">InitStruct</link>();
+568 &#32;&#32;&#32;&#32;}
+569 };
+570 
+<link linkend="df/d36/KinovaTypes_8h">574 </link><emphasis class="keyword">struct&#32;</emphasis><link linkend="df/d36/KinovaTypes_8h_1de/de7/structAngularPosition">AngularPosition</link>
+575 {
+<link linkend="df/d36/KinovaTypes_8h_1a860d625d47a8a6eaae53f43903beb80b">579 </link>&#32;&#32;&#32;&#32;<link linkend="d0/df5/structAngularInfo">AngularInfo</link>&#32;<link linkend="df/d36/KinovaTypes_8h_1a860d625d47a8a6eaae53f43903beb80b">Actuators</link>;
+580 
+<link linkend="df/d36/KinovaTypes_8h_1afdb2a9bede2dde4e8f881175a58e019f">584 </link>&#32;&#32;&#32;&#32;<link linkend="df/d1b/structFingersPosition">FingersPosition</link>&#32;<link linkend="df/d36/KinovaTypes_8h_1afdb2a9bede2dde4e8f881175a58e019f">Fingers</link>;
+585 };
+586 
+<link linkend="da/de1/structLimitation">593 </link><emphasis class="keyword">struct&#32;</emphasis><link linkend="da/de1/structLimitation">Limitation</link>
+594 {
+<link linkend="da/de1/structLimitation_1a3d36f2f90548acecb3e080d8c47d00f2">598 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">float</emphasis>&#32;<link linkend="da/de1/structLimitation_1a3d36f2f90548acecb3e080d8c47d00f2">speedParameter1</link>;
+599 
+<link linkend="da/de1/structLimitation_1aa17c9688bba54c9a8e2208d38266ae93">603 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">float</emphasis>&#32;<link linkend="da/de1/structLimitation_1aa17c9688bba54c9a8e2208d38266ae93">speedParameter2</link>;
+<link linkend="da/de1/structLimitation_1a3d2e542a721c712b06b70f554d10d468">604 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">float</emphasis>&#32;<link linkend="da/de1/structLimitation_1a3d2e542a721c712b06b70f554d10d468">speedParameter3</link>;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<link linkend="da/de1/structLimitation_1abafcff837c521cea6d410245547b148e">605 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">float</emphasis>&#32;<link linkend="da/de1/structLimitation_1abafcff837c521cea6d410245547b148e">forceParameter1</link>;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<link linkend="da/de1/structLimitation_1a4a48f99b82a0078cfedb029c92355bef">606 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">float</emphasis>&#32;<link linkend="da/de1/structLimitation_1a4a48f99b82a0078cfedb029c92355bef">forceParameter2</link>;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<link linkend="da/de1/structLimitation_1a25a3f8ac4759c63b46d2201b651817e5">607 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">float</emphasis>&#32;<link linkend="da/de1/structLimitation_1a25a3f8ac4759c63b46d2201b651817e5">forceParameter3</link>;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<link linkend="da/de1/structLimitation_1a695b233ff2bd5f53460fcadad86c0cfa">608 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">float</emphasis>&#32;<link linkend="da/de1/structLimitation_1a695b233ff2bd5f53460fcadad86c0cfa">accelerationParameter1</link>;&#32;&#32;&#32;&#32;
+<link linkend="da/de1/structLimitation_1a1bc77d927cb14ce2f963ccfa53fb0d99">609 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">float</emphasis>&#32;<link linkend="da/de1/structLimitation_1a1bc77d927cb14ce2f963ccfa53fb0d99">accelerationParameter2</link>;&#32;&#32;&#32;&#32;
+<link linkend="da/de1/structLimitation_1a23cd4303674bd42a0e583fced50a3511">610 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">float</emphasis>&#32;<link linkend="da/de1/structLimitation_1a23cd4303674bd42a0e583fced50a3511">accelerationParameter3</link>;&#32;&#32;&#32;&#32;
+<link linkend="da/de1/structLimitation_1a098f4ee5d0eb6baf844ff3164f1a20f6">612 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">void</emphasis>&#32;<link linkend="da/de1/structLimitation_1a098f4ee5d0eb6baf844ff3164f1a20f6">InitStruct</link>()
+613 &#32;&#32;&#32;&#32;{
+614 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;speedParameter1&#32;=&#32;0.0f;
+615 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;speedParameter2&#32;=&#32;0.0f;
+616 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;speedParameter3&#32;=&#32;0.0f;
+617 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;forceParameter1&#32;=&#32;0.0f;
+618 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;forceParameter2&#32;=&#32;0.0f;
+619 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;forceParameter3&#32;=&#32;0.0f;
+620 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;accelerationParameter1&#32;=&#32;0.0f;
+621 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;accelerationParameter2&#32;=&#32;0.0f;
+622 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;accelerationParameter3&#32;=&#32;0.0f;
+623 &#32;&#32;&#32;&#32;}
+624 };
+625 
+<link linkend="db/dfb/structUserPosition">630 </link><emphasis class="keyword">struct&#32;</emphasis><link linkend="db/dfb/structUserPosition">UserPosition</link>
+631 {
+<link linkend="db/dfb/structUserPosition_1a93c748d4ee51239fcbcd487d88e52ffa">635 </link>&#32;&#32;&#32;&#32;<link linkend="df/d36/KinovaTypes_8h_1a0a1c22d235ef1b13cfcd1419d10babc9">POSITION_TYPE</link>&#32;<link linkend="db/dfb/structUserPosition_1a93c748d4ee51239fcbcd487d88e52ffa">Type</link>;
+636 
+<link linkend="db/dfb/structUserPosition_1aa18896c1238a50c8ad81c66dfd76ac5e">640 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">float</emphasis>&#32;<link linkend="db/dfb/structUserPosition_1aa18896c1238a50c8ad81c66dfd76ac5e">Delay</link>;
+641 
+<link linkend="db/dfb/structUserPosition_1ab363c40971853637f728978e604c438f">645 </link>&#32;&#32;&#32;&#32;<link linkend="dd/d00/structCartesianInfo">CartesianInfo</link>&#32;<link linkend="db/dfb/structUserPosition_1ab363c40971853637f728978e604c438f">CartesianPosition</link>;
+646 
+<link linkend="db/dfb/structUserPosition_1ab0c5b71622c1e0d3033572578e947cf3">650 </link>&#32;&#32;&#32;&#32;<link linkend="d0/df5/structAngularInfo">AngularInfo</link>&#32;<link linkend="db/dfb/structUserPosition_1ab0c5b71622c1e0d3033572578e947cf3">Actuators</link>;
+651 
+<link linkend="db/dfb/structUserPosition_1a83779902810d0e5e16d533e0f964c0df">655 </link>&#32;&#32;&#32;&#32;<link linkend="df/d36/KinovaTypes_8h_1ad7050e4cfb6e844e9be962fba8eeb817">HAND_MODE</link>&#32;<link linkend="db/dfb/structUserPosition_1a83779902810d0e5e16d533e0f964c0df">HandMode</link>;
+656 
+<link linkend="db/dfb/structUserPosition_1a727907bb6a98b0f3d10aaa8011b67927">660 </link>&#32;&#32;&#32;&#32;<link linkend="df/d1b/structFingersPosition">FingersPosition</link>&#32;<link linkend="db/dfb/structUserPosition_1a727907bb6a98b0f3d10aaa8011b67927">Fingers</link>;
+661 
+<link linkend="db/dfb/structUserPosition_1ad682f9be07fa2307028f86624ded2958">662 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">void</emphasis>&#32;<link linkend="db/dfb/structUserPosition_1ad682f9be07fa2307028f86624ded2958">InitStruct</link>()
+663 &#32;&#32;&#32;&#32;{
+664 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Type&#32;=&#32;<link linkend="df/d36/KinovaTypes_8h_1a0a1c22d235ef1b13cfcd1419d10babc9aa98b51871329200ef579781620a475ad">CARTESIAN_POSITION</link>;
+665 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Delay&#32;=&#32;0.0f;
+666 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;CartesianPosition.<link linkend="dd/d00/structCartesianInfo_1a6d47623939d86124525ab4c8f7a2b8e9">InitStruct</link>();
+667 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Actuators.<link linkend="d0/df5/structAngularInfo_1a092156b3e0e6cb657ed4bb2f6b15a9f0">InitStruct</link>();
+668 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;HandMode&#32;=&#32;<link linkend="df/d36/KinovaTypes_8h_1ad7050e4cfb6e844e9be962fba8eeb817a21de3478520bbc47e9c35e3e651a06bf">POSITION_MODE</link>;
+669 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Fingers.<link linkend="df/d1b/structFingersPosition_1a2d958923675995d54d56e59f8549495d">InitStruct</link>();
+670 &#32;&#32;&#32;&#32;}
+671 };
+672 
+<link linkend="d4/d8e/structTrajectoryPoint">676 </link><emphasis class="keyword">struct&#32;</emphasis><link linkend="d4/d8e/structTrajectoryPoint">TrajectoryPoint</link>
+677 {
+<link linkend="d4/d8e/structTrajectoryPoint_1aa24430dc273e9d7968a6c44e3bcee259">681 </link>&#32;&#32;&#32;&#32;<link linkend="db/dfb/structUserPosition">UserPosition</link>&#32;<link linkend="d4/d8e/structTrajectoryPoint_1aa24430dc273e9d7968a6c44e3bcee259">Position</link>;
+682 
+<link linkend="d4/d8e/structTrajectoryPoint_1acec47b76503d6f202e78bd00ec8fa02d">686 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="d4/d8e/structTrajectoryPoint_1acec47b76503d6f202e78bd00ec8fa02d">LimitationsActive</link>;
+687 
+<link linkend="d4/d8e/structTrajectoryPoint_1ad6d7f13b1dee1ef3a5300ffffd77cac8">691 </link>&#32;&#32;&#32;&#32;<link linkend="da/de1/structLimitation">Limitation</link>&#32;<link linkend="d4/d8e/structTrajectoryPoint_1ad6d7f13b1dee1ef3a5300ffffd77cac8">Limitations</link>;
+692 
+<link linkend="d4/d8e/structTrajectoryPoint_1a1a9f12ad88f5011c6a4644792fa67f99">693 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">void</emphasis>&#32;<link linkend="d4/d8e/structTrajectoryPoint_1a1a9f12ad88f5011c6a4644792fa67f99">InitStruct</link>()
+694 &#32;&#32;&#32;&#32;{
+695 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Position.<link linkend="db/dfb/structUserPosition_1ad682f9be07fa2307028f86624ded2958">InitStruct</link>();
+696 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;LimitationsActive&#32;=&#32;0;
+697 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Limitations.<link linkend="da/de1/structLimitation_1a098f4ee5d0eb6baf844ff3164f1a20f6">InitStruct</link>();
+698 &#32;&#32;&#32;&#32;}
+699 };
+700 
+<link linkend="df/d36/KinovaTypes_8h">704 </link><emphasis class="keyword">struct&#32;</emphasis><link linkend="df/d36/KinovaTypes_8h_1d7/ddf/structTrajectoryFIFO">TrajectoryFIFO</link>
+705 {
+<link linkend="df/d36/KinovaTypes_8h_1a8d2d82f71459128dd803eb7c9e09c2c6">709 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1a8d2d82f71459128dd803eb7c9e09c2c6">TrajectoryCount</link>;
+710 
+<link linkend="df/d36/KinovaTypes_8h_1aa522f62f9f815f31be1d03c0b89653f5">714 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">float</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1aa522f62f9f815f31be1d03c0b89653f5">UsedPercentage</link>;
+715 
+<link linkend="df/d36/KinovaTypes_8h_1ab57ade5bd66a71bfede38fb4d300d1d7">719 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1ab57ade5bd66a71bfede38fb4d300d1d7">MaxSize</link>;
+720 };
+721 
+<link linkend="df/d36/KinovaTypes_8h">726 </link><emphasis class="keyword">struct&#32;</emphasis><link linkend="df/d36/KinovaTypes_8h_1d5/d78/structSingularityVector">SingularityVector</link>
+727 {
+<link linkend="df/d36/KinovaTypes_8h_1ac65570b58281f94cea000ede75de19ae">728 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1ac65570b58281f94cea000ede75de19ae">TranslationSingularityCount</link>;
+<link linkend="df/d36/KinovaTypes_8h_1a7ea72e4a459d41c935135c581e6763b1">729 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1a7ea72e4a459d41c935135c581e6763b1">OrientationSingularityCount</link>;
+<link linkend="df/d36/KinovaTypes_8h_1affe09808366cb7e82427a978cbb1af6a">730 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">float</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1affe09808366cb7e82427a978cbb1af6a">TranslationSingularityDistance</link>;
+<link linkend="df/d36/KinovaTypes_8h_1ae04b0dd5f44b2d696d36860ecb7b9f35">731 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">float</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1ae04b0dd5f44b2d696d36860ecb7b9f35">OrientationSingularityDistance</link>;
+<link linkend="df/d36/KinovaTypes_8h_1adc7115ff6fe262ef37a1bff2ebbdbfee">732 </link>&#32;&#32;&#32;&#32;<link linkend="dd/d00/structCartesianInfo">CartesianInfo</link>&#32;<link linkend="df/d36/KinovaTypes_8h_1adc7115ff6fe262ef37a1bff2ebbdbfee">RepulsionVector</link>;
+733 };
+734 
+<link linkend="db/d40/structJoystickCommand">738 </link><emphasis class="keyword">struct&#32;</emphasis><link linkend="db/d40/structJoystickCommand">JoystickCommand</link>
+739 {
+<link linkend="db/d40/structJoystickCommand_1abe14f0b7b117048aa1c7f9626a669035">743 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">short</emphasis>&#32;ButtonValue[<link linkend="df/d36/KinovaTypes_8h_1a3792c81f5808ad4f30000689ee0f0d07">JOYSTICK_BUTTON_COUNT</link>];
+744 
+<link linkend="db/d40/structJoystickCommand_1a357b7ffd95720084658487aee12662c8">749 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">float</emphasis>&#32;<link linkend="db/d40/structJoystickCommand_1a357b7ffd95720084658487aee12662c8">InclineLeftRight</link>;
+750 
+<link linkend="db/d40/structJoystickCommand_1ac1ac2e83b68ea20eba3e92935b966ba6">755 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">float</emphasis>&#32;<link linkend="db/d40/structJoystickCommand_1ac1ac2e83b68ea20eba3e92935b966ba6">InclineForwardBackward</link>;
+756 
+<link linkend="db/d40/structJoystickCommand_1a02fece0bcf6cfc2135f294a3dbe9db4e">761 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">float</emphasis>&#32;<link linkend="db/d40/structJoystickCommand_1a02fece0bcf6cfc2135f294a3dbe9db4e">Rotate</link>;
+762 
+<link linkend="db/d40/structJoystickCommand_1a6ca311d7940ce3c7ea6e9a3719388181">767 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">float</emphasis>&#32;<link linkend="db/d40/structJoystickCommand_1a6ca311d7940ce3c7ea6e9a3719388181">MoveLeftRight</link>;
+768 
+<link linkend="db/d40/structJoystickCommand_1a9ca8ffe74ba1717de22528f71b0e5592">773 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">float</emphasis>&#32;<link linkend="db/d40/structJoystickCommand_1a9ca8ffe74ba1717de22528f71b0e5592">MoveForwardBackward</link>;
+774 
+<link linkend="db/d40/structJoystickCommand_1af530128a7a89e383f88a4c2b798a66b4">779 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">float</emphasis>&#32;<link linkend="db/d40/structJoystickCommand_1af530128a7a89e383f88a4c2b798a66b4">PushPull</link>;
+780 
+<link linkend="db/d40/structJoystickCommand_1ad3d41f607c6ea6916e061a8edae5a0e4">781 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">void</emphasis>&#32;<link linkend="db/d40/structJoystickCommand_1ad3d41f607c6ea6916e061a8edae5a0e4">InitStruct</link>()
+782 &#32;&#32;&#32;&#32;{
+783 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">for</emphasis>(<emphasis class="keywordtype">int</emphasis>&#32;i&#32;=&#32;0;&#32;i&#32;&lt;&#32;<link linkend="df/d36/KinovaTypes_8h_1a3792c81f5808ad4f30000689ee0f0d07">JOYSTICK_BUTTON_COUNT</link>;&#32;i++)
+784 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+785 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ButtonValue[i]&#32;=&#32;0;
+786 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+787 
+788 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;InclineLeftRight&#32;=&#32;0.0f;
+789 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;InclineForwardBackward&#32;=&#32;0.0f;
+790 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Rotate&#32;=&#32;0.0f;
+791 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;MoveLeftRight&#32;=&#32;0.0f;
+792 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;MoveForwardBackward&#32;=&#32;0.0f;
+793 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;PushPull&#32;=&#32;0.0f;
+794 &#32;&#32;&#32;&#32;}
+795 };
+796 
+<link linkend="df/d36/KinovaTypes_8h">805 </link><emphasis class="keyword">struct&#32;</emphasis><link linkend="df/d36/KinovaTypes_8h_1d1/d2e/structClientConfigurations">ClientConfigurations</link>
+806 {
+<link linkend="df/d36/KinovaTypes_8h_1a2adccda7d27c7731ab0fe1160005e6ac">810 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">char</emphasis>&#32;ClientID[<link linkend="df/d36/KinovaTypes_8h_1ac829415013d8120cedee928452ae0f55">STRING_LENGTH</link>];
+811 
+<link linkend="df/d36/KinovaTypes_8h_1a6ec42489c6a1e74a654809f5f39ca6f8">815 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">char</emphasis>&#32;ClientName[<link linkend="df/d36/KinovaTypes_8h_1ac829415013d8120cedee928452ae0f55">STRING_LENGTH</link>];
+816 
+<link linkend="df/d36/KinovaTypes_8h_1a55c82eb4163582b31c6d720766057767">820 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">char</emphasis>&#32;Organization[<link linkend="df/d36/KinovaTypes_8h_1ac829415013d8120cedee928452ae0f55">STRING_LENGTH</link>];
+821 
+<link linkend="df/d36/KinovaTypes_8h_1adb0902769a42d7eaf9cce979d0779723">825 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">char</emphasis>&#32;Serial[<link linkend="df/d36/KinovaTypes_8h_1ac829415013d8120cedee928452ae0f55">STRING_LENGTH</link>];
+826 
+<link linkend="df/d36/KinovaTypes_8h_1a5bb86440679384635d0d0f41ca431249">830 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">char</emphasis>&#32;Model[<link linkend="df/d36/KinovaTypes_8h_1ac829415013d8120cedee928452ae0f55">STRING_LENGTH</link>];
+831 
+<link linkend="df/d36/KinovaTypes_8h_1ac5eae96db1727c1330a987f49acadb0f">836 </link>&#32;&#32;&#32;&#32;<link linkend="df/d36/KinovaTypes_8h_1a3b88714e308595eb42f64c56259a1ccf">ArmLaterality</link>&#32;<link linkend="df/d36/KinovaTypes_8h_1ac5eae96db1727c1330a987f49acadb0f">Laterality</link>;
+837 
+<link linkend="df/d36/KinovaTypes_8h_1a85ae51f1716500dd154f0ce279b78a47">841 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">float</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1a85ae51f1716500dd154f0ce279b78a47">MaxTranslationVelocity</link>;
+842 
+<link linkend="df/d36/KinovaTypes_8h_1a238936e76488a26a5f816413cd25977e">846 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">float</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1a238936e76488a26a5f816413cd25977e">MaxOrientationVelocity</link>;
+847 
+<link linkend="df/d36/KinovaTypes_8h_1a787ef22ca55cd38c04f171b885eccffc">851 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">float</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1a787ef22ca55cd38c04f171b885eccffc">MaxTranslationAcceleration</link>;
+852 
+<link linkend="df/d36/KinovaTypes_8h_1a6dd1f0fa61310ae5c7c090b4f203b8a0">856 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">float</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1a6dd1f0fa61310ae5c7c090b4f203b8a0">MaxOrientationAcceleration</link>;
+857 
+<link linkend="df/d36/KinovaTypes_8h_1a9c68b6f56291d1be104928f7db071579">861 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">float</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1a9c68b6f56291d1be104928f7db071579">MaxForce</link>;
+862 
+<link linkend="df/d36/KinovaTypes_8h_1a64e61dc032b95f127cd798a9759818d8">868 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">float</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1a64e61dc032b95f127cd798a9759818d8">Sensibility</link>;
+869 
+<link linkend="df/d36/KinovaTypes_8h_1a05043c8fe2f31f3c216a97edc2411664">874 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">float</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1a05043c8fe2f31f3c216a97edc2411664">DrinkingHeight</link>;
+875 
+<link linkend="df/d36/KinovaTypes_8h_1aa41bf35ba1a1dd92f54a30814d42f795">881 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1aa41bf35ba1a1dd92f54a30814d42f795">ComplexRetractActive</link>;
+882 
+<link linkend="df/d36/KinovaTypes_8h_1ad7d6245d4683b6e31d0438466ea6bb80">886 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">float</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1ad7d6245d4683b6e31d0438466ea6bb80">RetractedPositionAngle</link>;
+887 
+<link linkend="df/d36/KinovaTypes_8h_1a4058c290c5bac0504e511f0f50e5914b">891 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1a4058c290c5bac0504e511f0f50e5914b">RetractedPositionCount</link>;
+<link linkend="df/d36/KinovaTypes_8h_1aaebc19d45af665f9db9322d74021ec22">892 </link>&#32;&#32;&#32;&#32;<link linkend="db/dfb/structUserPosition">UserPosition</link>&#32;RetractPositions[<link linkend="df/d36/KinovaTypes_8h_1a663862aeb115e7f11080df128498e924">NB_ADVANCE_RETRACT_POSITION</link>];
+893 
+<link linkend="df/d36/KinovaTypes_8h_1a494c5a866ae44191aafdc66ab69033c3">898 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">float</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1a494c5a866ae44191aafdc66ab69033c3">DrinkingDistance</link>;
+899 
+<link linkend="df/d36/KinovaTypes_8h_1a55cb748c864cd65d8136da316b46df61">903 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1a55cb748c864cd65d8136da316b46df61">Fingers2and3Inverted</link>;
+904 
+<link linkend="df/d36/KinovaTypes_8h_1a1029013b8d5d2d9ea902ab628c98a7e0">909 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">float</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1a1029013b8d5d2d9ea902ab628c98a7e0">DrinkingLenght</link>;
+910 
+<link linkend="df/d36/KinovaTypes_8h_1ab0dca6d6259625fafd1c725533337460">914 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1ab0dca6d6259625fafd1c725533337460">DeletePreProgrammedPositionsAtRetract</link>;
+915 
+<link linkend="df/d36/KinovaTypes_8h_1a16b087061d560a4f185e779352d6e2e3">919 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1a16b087061d560a4f185e779352d6e2e3">EnableFlashErrorLog</link>;
+920 
+<link linkend="df/d36/KinovaTypes_8h_1ae0c7b4d0a3f91271e8138985807be8c6">924 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1ae0c7b4d0a3f91271e8138985807be8c6">EnableFlashPositionLog</link>;
+925 
+<link linkend="df/d36/KinovaTypes_8h_1a2d47352837bfafcb6f4e6bddcf3e0278">929 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">int</emphasis>&#32;Expansion[198];
+930 };
+931 
+<link linkend="df/d36/KinovaTypes_8h_1a3eacfd3f1347e3e69c62c71ba8e4c458">937 </link><emphasis class="keyword">enum</emphasis>&#32;&#32;<link linkend="df/d36/KinovaTypes_8h_1a3eacfd3f1347e3e69c62c71ba8e4c458">ControlFunctionalityTypeEnum</link>
+938 {
+<link linkend="df/d36/KinovaTypes_8h_1a3eacfd3f1347e3e69c62c71ba8e4c458ab7d8353a33302d11619f6c415565e488">942 </link>&#32;&#32;&#32;&#32;<link linkend="df/d36/KinovaTypes_8h_1a3eacfd3f1347e3e69c62c71ba8e4c458ab7d8353a33302d11619f6c415565e488">CF_NoFunctionality</link>&#32;=&#32;0,
+943 
+<link linkend="df/d36/KinovaTypes_8h_1a3eacfd3f1347e3e69c62c71ba8e4c458a00fbeb1be99522340e4ff01326fdb9e5">947 </link>&#32;&#32;&#32;&#32;<link linkend="df/d36/KinovaTypes_8h_1a3eacfd3f1347e3e69c62c71ba8e4c458a00fbeb1be99522340e4ff01326fdb9e5">CF_Disable_EnableJoystick</link>&#32;=&#32;1,
+948 
+<link linkend="df/d36/KinovaTypes_8h_1a3eacfd3f1347e3e69c62c71ba8e4c458a2d7352ab2b40b703a51ba27f14794a7e">955 </link>&#32;&#32;&#32;&#32;<link linkend="df/d36/KinovaTypes_8h_1a3eacfd3f1347e3e69c62c71ba8e4c458a2d7352ab2b40b703a51ba27f14794a7e">CF_Retract_ReadyToUse</link>&#32;=&#32;2,
+956 
+<link linkend="df/d36/KinovaTypes_8h_1a3eacfd3f1347e3e69c62c71ba8e4c458ade3d3e8069e2985d269be422ba74a09b">960 </link>&#32;&#32;&#32;&#32;<link linkend="df/d36/KinovaTypes_8h_1a3eacfd3f1347e3e69c62c71ba8e4c458ade3d3e8069e2985d269be422ba74a09b">CF_Change_TwoAxis_ThreeAxis</link>&#32;=&#32;3,
+961 
+<link linkend="df/d36/KinovaTypes_8h_1a3eacfd3f1347e3e69c62c71ba8e4c458a06bc5ef3f5b44ba10e136ea5946e1003">965 </link>&#32;&#32;&#32;&#32;<link linkend="df/d36/KinovaTypes_8h_1a3eacfd3f1347e3e69c62c71ba8e4c458a06bc5ef3f5b44ba10e136ea5946e1003">CF_Change_DrinkingMode</link>&#32;=&#32;4,
+966 
+<link linkend="df/d36/KinovaTypes_8h_1a3eacfd3f1347e3e69c62c71ba8e4c458a1c7c0d3851d1f055af376af290fde372">970 </link>&#32;&#32;&#32;&#32;<link linkend="df/d36/KinovaTypes_8h_1a3eacfd3f1347e3e69c62c71ba8e4c458a1c7c0d3851d1f055af376af290fde372">CF_Cycle_ModeA_list</link>&#32;=&#32;5,
+971 
+<link linkend="df/d36/KinovaTypes_8h_1a3eacfd3f1347e3e69c62c71ba8e4c458a24793b278cda3c42a23b68f56bb3d898">975 </link>&#32;&#32;&#32;&#32;<link linkend="df/d36/KinovaTypes_8h_1a3eacfd3f1347e3e69c62c71ba8e4c458a24793b278cda3c42a23b68f56bb3d898">CF_Cycle_ModeB_list</link>&#32;=&#32;6,
+976 
+<link linkend="df/d36/KinovaTypes_8h_1a3eacfd3f1347e3e69c62c71ba8e4c458a5dda722f556c76560545aaa91cf46d3f">980 </link>&#32;&#32;&#32;&#32;<link linkend="df/d36/KinovaTypes_8h_1a3eacfd3f1347e3e69c62c71ba8e4c458a5dda722f556c76560545aaa91cf46d3f">CF_DecreaseSpeed</link>&#32;=&#32;7,
+981 
+<link linkend="df/d36/KinovaTypes_8h_1a3eacfd3f1347e3e69c62c71ba8e4c458a1d4ccd9bb38d59098509bb4deb9490a2">985 </link>&#32;&#32;&#32;&#32;<link linkend="df/d36/KinovaTypes_8h_1a3eacfd3f1347e3e69c62c71ba8e4c458a1d4ccd9bb38d59098509bb4deb9490a2">CF_IncreaseSpeed</link>&#32;=&#32;8,
+986 
+<link linkend="df/d36/KinovaTypes_8h_1a3eacfd3f1347e3e69c62c71ba8e4c458a6b5e858bd8e8bae703af5f348ff274f1">990 </link>&#32;&#32;&#32;&#32;<link linkend="df/d36/KinovaTypes_8h_1a3eacfd3f1347e3e69c62c71ba8e4c458a6b5e858bd8e8bae703af5f348ff274f1">CF_Goto_Position1</link>&#32;=&#32;9,
+991 
+<link linkend="df/d36/KinovaTypes_8h_1a3eacfd3f1347e3e69c62c71ba8e4c458a5565ccae6da08c0b34e11e5994b41398">995 </link>&#32;&#32;&#32;&#32;<link linkend="df/d36/KinovaTypes_8h_1a3eacfd3f1347e3e69c62c71ba8e4c458a5565ccae6da08c0b34e11e5994b41398">CF_Goto_Position2</link>&#32;=&#32;10,
+996 
+<link linkend="df/d36/KinovaTypes_8h_1a3eacfd3f1347e3e69c62c71ba8e4c458ac1d6050ff3070c66048d9334b3767703">1000 </link>&#32;&#32;&#32;&#32;<link linkend="df/d36/KinovaTypes_8h_1a3eacfd3f1347e3e69c62c71ba8e4c458ac1d6050ff3070c66048d9334b3767703">CF_Goto_Position3</link>&#32;=&#32;11,
+1001 
+<link linkend="df/d36/KinovaTypes_8h_1a3eacfd3f1347e3e69c62c71ba8e4c458a6d183b0a2494b4c4315b9bb9a7dd36fc">1005 </link>&#32;&#32;&#32;&#32;<link linkend="df/d36/KinovaTypes_8h_1a3eacfd3f1347e3e69c62c71ba8e4c458a6d183b0a2494b4c4315b9bb9a7dd36fc">CF_Goto_Position4</link>&#32;=&#32;12,
+1006 
+<link linkend="df/d36/KinovaTypes_8h_1a3eacfd3f1347e3e69c62c71ba8e4c458a845030bcb83a0c920936b94eb2e9e463">1010 </link>&#32;&#32;&#32;&#32;<link linkend="df/d36/KinovaTypes_8h_1a3eacfd3f1347e3e69c62c71ba8e4c458a845030bcb83a0c920936b94eb2e9e463">CF_Goto_Position5</link>&#32;=&#32;13,
+1011 
+<link linkend="df/d36/KinovaTypes_8h_1a3eacfd3f1347e3e69c62c71ba8e4c458aafee8648435e5cba46f7d1451e6a7745">1015 </link>&#32;&#32;&#32;&#32;<link linkend="df/d36/KinovaTypes_8h_1a3eacfd3f1347e3e69c62c71ba8e4c458aafee8648435e5cba46f7d1451e6a7745">CF_RecordPosition1</link>&#32;=&#32;14,
+1016 
+<link linkend="df/d36/KinovaTypes_8h_1a3eacfd3f1347e3e69c62c71ba8e4c458a7e6e845e2dd5a38bc790c4f060aa49ef">1020 </link>&#32;&#32;&#32;&#32;<link linkend="df/d36/KinovaTypes_8h_1a3eacfd3f1347e3e69c62c71ba8e4c458a7e6e845e2dd5a38bc790c4f060aa49ef">CF_RecordPosition2</link>&#32;=&#32;15,
+1021 
+<link linkend="df/d36/KinovaTypes_8h_1a3eacfd3f1347e3e69c62c71ba8e4c458a8e30a9c85fccfd3c04741c84fa5eebc0">1025 </link>&#32;&#32;&#32;&#32;<link linkend="df/d36/KinovaTypes_8h_1a3eacfd3f1347e3e69c62c71ba8e4c458a8e30a9c85fccfd3c04741c84fa5eebc0">CF_RecordPosition3</link>&#32;=&#32;16,
+1026 
+<link linkend="df/d36/KinovaTypes_8h_1a3eacfd3f1347e3e69c62c71ba8e4c458adec3e5656166d76972a288f19c497af6">1030 </link>&#32;&#32;&#32;&#32;<link linkend="df/d36/KinovaTypes_8h_1a3eacfd3f1347e3e69c62c71ba8e4c458adec3e5656166d76972a288f19c497af6">CF_RecordPosition4</link>&#32;=&#32;17,
+1031 
+<link linkend="df/d36/KinovaTypes_8h_1a3eacfd3f1347e3e69c62c71ba8e4c458af8171d3bec26cf9f5d5ede27132a822c">1035 </link>&#32;&#32;&#32;&#32;<link linkend="df/d36/KinovaTypes_8h_1a3eacfd3f1347e3e69c62c71ba8e4c458af8171d3bec26cf9f5d5ede27132a822c">CF_RecordPosition5</link>&#32;=&#32;18,
+1036 
+<link linkend="df/d36/KinovaTypes_8h_1a3eacfd3f1347e3e69c62c71ba8e4c458aeb9509c60375689fdfcf7880d6f8e5e7">1041 </link>&#32;&#32;&#32;&#32;<link linkend="df/d36/KinovaTypes_8h_1a3eacfd3f1347e3e69c62c71ba8e4c458aeb9509c60375689fdfcf7880d6f8e5e7">CF_X_Positive</link>&#32;=&#32;19,
+1042 
+<link linkend="df/d36/KinovaTypes_8h_1a3eacfd3f1347e3e69c62c71ba8e4c458aca6352be369c8d9999f89b1eeafc1f10">1047 </link>&#32;&#32;&#32;&#32;<link linkend="df/d36/KinovaTypes_8h_1a3eacfd3f1347e3e69c62c71ba8e4c458aca6352be369c8d9999f89b1eeafc1f10">CF_X_Negative</link>&#32;=&#32;20,
+1048 
+<link linkend="df/d36/KinovaTypes_8h_1a3eacfd3f1347e3e69c62c71ba8e4c458ae065ee74ca830631507e71fd90a18495">1053 </link>&#32;&#32;&#32;&#32;<link linkend="df/d36/KinovaTypes_8h_1a3eacfd3f1347e3e69c62c71ba8e4c458ae065ee74ca830631507e71fd90a18495">CF_Y_Positive</link>&#32;=&#32;21,
+1054 
+<link linkend="df/d36/KinovaTypes_8h_1a3eacfd3f1347e3e69c62c71ba8e4c458a69d72a3009fd4c75aabc50ab027e4196">1059 </link>&#32;&#32;&#32;&#32;<link linkend="df/d36/KinovaTypes_8h_1a3eacfd3f1347e3e69c62c71ba8e4c458a69d72a3009fd4c75aabc50ab027e4196">CF_Y_Negative</link>&#32;=&#32;22,
+1060 
+<link linkend="df/d36/KinovaTypes_8h_1a3eacfd3f1347e3e69c62c71ba8e4c458a4901ad45d7a2ce65a28b5ae213561fd5">1065 </link>&#32;&#32;&#32;&#32;<link linkend="df/d36/KinovaTypes_8h_1a3eacfd3f1347e3e69c62c71ba8e4c458a4901ad45d7a2ce65a28b5ae213561fd5">CF_Z_Positive</link>&#32;=&#32;23,
+1066 
+<link linkend="df/d36/KinovaTypes_8h_1a3eacfd3f1347e3e69c62c71ba8e4c458a5bc0696d24edfa47b9d844e5fb946bae">1071 </link>&#32;&#32;&#32;&#32;<link linkend="df/d36/KinovaTypes_8h_1a3eacfd3f1347e3e69c62c71ba8e4c458a5bc0696d24edfa47b9d844e5fb946bae">CF_Z_Negative</link>&#32;=&#32;24,
+1072 
+<link linkend="df/d36/KinovaTypes_8h_1a3eacfd3f1347e3e69c62c71ba8e4c458aa8d1496788b4cb63c8570bc8d3d2f5b2">1077 </link>&#32;&#32;&#32;&#32;<link linkend="df/d36/KinovaTypes_8h_1a3eacfd3f1347e3e69c62c71ba8e4c458aa8d1496788b4cb63c8570bc8d3d2f5b2">CF_R_Positive</link>&#32;=&#32;25,
+1078 
+<link linkend="df/d36/KinovaTypes_8h_1a3eacfd3f1347e3e69c62c71ba8e4c458a42eaef27f36556ecca6e14ed514f1d7c">1083 </link>&#32;&#32;&#32;&#32;<link linkend="df/d36/KinovaTypes_8h_1a3eacfd3f1347e3e69c62c71ba8e4c458a42eaef27f36556ecca6e14ed514f1d7c">CF_R_Negative</link>&#32;=&#32;26,
+1084 
+<link linkend="df/d36/KinovaTypes_8h_1a3eacfd3f1347e3e69c62c71ba8e4c458a30d2f2571a0eebd3133917592eec678a">1089 </link>&#32;&#32;&#32;&#32;<link linkend="df/d36/KinovaTypes_8h_1a3eacfd3f1347e3e69c62c71ba8e4c458a30d2f2571a0eebd3133917592eec678a">CF_U_Positive</link>&#32;=&#32;27,
+1090 
+<link linkend="df/d36/KinovaTypes_8h_1a3eacfd3f1347e3e69c62c71ba8e4c458a9f94cbfde88fb9be1016c1dab7812567">1095 </link>&#32;&#32;&#32;&#32;<link linkend="df/d36/KinovaTypes_8h_1a3eacfd3f1347e3e69c62c71ba8e4c458a9f94cbfde88fb9be1016c1dab7812567">CF_U_Negative</link>&#32;=&#32;28,
+1096 
+<link linkend="df/d36/KinovaTypes_8h_1a3eacfd3f1347e3e69c62c71ba8e4c458af5fc7a0db0e3af9baf1a5722d02c3baf">1101 </link>&#32;&#32;&#32;&#32;<link linkend="df/d36/KinovaTypes_8h_1a3eacfd3f1347e3e69c62c71ba8e4c458af5fc7a0db0e3af9baf1a5722d02c3baf">CF_V_Positive</link>&#32;=&#32;29,
+1102 
+<link linkend="df/d36/KinovaTypes_8h_1a3eacfd3f1347e3e69c62c71ba8e4c458af44cdb6ff588562d18ef740e29711616">1107 </link>&#32;&#32;&#32;&#32;<link linkend="df/d36/KinovaTypes_8h_1a3eacfd3f1347e3e69c62c71ba8e4c458af44cdb6ff588562d18ef740e29711616">CF_V_Negative</link>&#32;=&#32;30,
+1108 
+<link linkend="df/d36/KinovaTypes_8h_1a3eacfd3f1347e3e69c62c71ba8e4c458ab627b0870083598dbd813a313e7d2a72">1112 </link>&#32;&#32;&#32;&#32;<link linkend="df/d36/KinovaTypes_8h_1a3eacfd3f1347e3e69c62c71ba8e4c458ab627b0870083598dbd813a313e7d2a72">CF_OpenHandOneFingers</link>&#32;=&#32;31,
+1113 
+<link linkend="df/d36/KinovaTypes_8h_1a3eacfd3f1347e3e69c62c71ba8e4c458a108fe1782fcb88a8d018d5904dc5f4cf">1117 </link>&#32;&#32;&#32;&#32;<link linkend="df/d36/KinovaTypes_8h_1a3eacfd3f1347e3e69c62c71ba8e4c458a108fe1782fcb88a8d018d5904dc5f4cf">CF_CloseHandOneFingers</link>&#32;=&#32;32,
+1118 
+<link linkend="df/d36/KinovaTypes_8h_1a3eacfd3f1347e3e69c62c71ba8e4c458a50bd7f1b407c19ee0f809c81d271f6d0">1122 </link>&#32;&#32;&#32;&#32;<link linkend="df/d36/KinovaTypes_8h_1a3eacfd3f1347e3e69c62c71ba8e4c458a50bd7f1b407c19ee0f809c81d271f6d0">CF_OpenHandTwoFingers</link>&#32;=&#32;33,
+1123 
+<link linkend="df/d36/KinovaTypes_8h_1a3eacfd3f1347e3e69c62c71ba8e4c458a6f3c046ae5d7556b8609d1d9151a1fa4">1127 </link>&#32;&#32;&#32;&#32;<link linkend="df/d36/KinovaTypes_8h_1a3eacfd3f1347e3e69c62c71ba8e4c458a6f3c046ae5d7556b8609d1d9151a1fa4">CF_CloseHandTwoFingers</link>&#32;=&#32;34,
+1128 
+<link linkend="df/d36/KinovaTypes_8h_1a3eacfd3f1347e3e69c62c71ba8e4c458ad16fb4817b56f40bd3b5224409335894">1132 </link>&#32;&#32;&#32;&#32;<link linkend="df/d36/KinovaTypes_8h_1a3eacfd3f1347e3e69c62c71ba8e4c458ad16fb4817b56f40bd3b5224409335894">CF_OpenHandThreeFingers</link>&#32;=&#32;35,
+1133 
+<link linkend="df/d36/KinovaTypes_8h_1a3eacfd3f1347e3e69c62c71ba8e4c458a548150f66f43f33c8742b5ef956a62d5">1137 </link>&#32;&#32;&#32;&#32;<link linkend="df/d36/KinovaTypes_8h_1a3eacfd3f1347e3e69c62c71ba8e4c458a548150f66f43f33c8742b5ef956a62d5">CF_CloseHandThreeFingers</link>&#32;=&#32;36,
+1138 
+<link linkend="df/d36/KinovaTypes_8h_1a3eacfd3f1347e3e69c62c71ba8e4c458af47d1563f90d7fea50194e6a6cf02a40">1142 </link>&#32;&#32;&#32;&#32;<link linkend="df/d36/KinovaTypes_8h_1a3eacfd3f1347e3e69c62c71ba8e4c458af47d1563f90d7fea50194e6a6cf02a40">CF_ForceAngularVelocity</link>&#32;=&#32;37,
+1143 
+<link linkend="df/d36/KinovaTypes_8h_1a3eacfd3f1347e3e69c62c71ba8e4c458a1bb773366b8406580a2717dfafaeb111">1147 </link>&#32;&#32;&#32;&#32;<link linkend="df/d36/KinovaTypes_8h_1a3eacfd3f1347e3e69c62c71ba8e4c458a1bb773366b8406580a2717dfafaeb111">CF_ForceControlStatus</link>&#32;=&#32;38,
+1148 
+<link linkend="df/d36/KinovaTypes_8h_1a3eacfd3f1347e3e69c62c71ba8e4c458a663e5bbd938ffcd1a5278aa43ad9dcbf">1149 </link>&#32;&#32;&#32;&#32;<link linkend="df/d36/KinovaTypes_8h_1a3eacfd3f1347e3e69c62c71ba8e4c458a663e5bbd938ffcd1a5278aa43ad9dcbf">CF_Trajectory</link>&#32;=&#32;39,
+1150 
+<link linkend="df/d36/KinovaTypes_8h_1a3eacfd3f1347e3e69c62c71ba8e4c458a84a6d8e16a331e137b31766c3373f5c1">1154 </link>&#32;&#32;&#32;&#32;<link linkend="df/d36/KinovaTypes_8h_1a3eacfd3f1347e3e69c62c71ba8e4c458a84a6d8e16a331e137b31766c3373f5c1">CF_AutomaticOrientationXPlus</link>&#32;=&#32;40,
+1155 
+<link linkend="df/d36/KinovaTypes_8h_1a3eacfd3f1347e3e69c62c71ba8e4c458a0647b18fdf2a0db1a7d0b889ab1b1feb">1159 </link>&#32;&#32;&#32;&#32;<link linkend="df/d36/KinovaTypes_8h_1a3eacfd3f1347e3e69c62c71ba8e4c458a0647b18fdf2a0db1a7d0b889ab1b1feb">CF_AutomaticOrientationXMinus</link>&#32;=&#32;41,
+1160 
+<link linkend="df/d36/KinovaTypes_8h_1a3eacfd3f1347e3e69c62c71ba8e4c458ac06d93950c4eb99b6de6c33c84d11e10">1164 </link>&#32;&#32;&#32;&#32;<link linkend="df/d36/KinovaTypes_8h_1a3eacfd3f1347e3e69c62c71ba8e4c458ac06d93950c4eb99b6de6c33c84d11e10">CF_AutomaticOrientationYPlus</link>&#32;=&#32;42,
+1165 
+<link linkend="df/d36/KinovaTypes_8h_1a3eacfd3f1347e3e69c62c71ba8e4c458a5f9d196daa400dcd62a4b2144d80da4c">1169 </link>&#32;&#32;&#32;&#32;<link linkend="df/d36/KinovaTypes_8h_1a3eacfd3f1347e3e69c62c71ba8e4c458a5f9d196daa400dcd62a4b2144d80da4c">CF_AutomaticOrientationYMinus</link>&#32;=&#32;43,
+1170 
+<link linkend="df/d36/KinovaTypes_8h_1a3eacfd3f1347e3e69c62c71ba8e4c458a6f1619b21048109fa2cbcddb23bdb51e">1174 </link>&#32;&#32;&#32;&#32;<link linkend="df/d36/KinovaTypes_8h_1a3eacfd3f1347e3e69c62c71ba8e4c458a6f1619b21048109fa2cbcddb23bdb51e">CF_AutomaticOrientationZPlus</link>&#32;=&#32;44,
+1175 
+<link linkend="df/d36/KinovaTypes_8h_1a3eacfd3f1347e3e69c62c71ba8e4c458aae84d01990ead8ab31ea2f4f47f837be">1179 </link>&#32;&#32;&#32;&#32;<link linkend="df/d36/KinovaTypes_8h_1a3eacfd3f1347e3e69c62c71ba8e4c458aae84d01990ead8ab31ea2f4f47f837be">CF_AutomaticOrientationZMinus</link>&#32;=&#32;45,
+1180 
+<link linkend="df/d36/KinovaTypes_8h_1a3eacfd3f1347e3e69c62c71ba8e4c458a0bcbad8e2f29bcd31165023f171837d4">1184 </link>&#32;&#32;&#32;&#32;<link linkend="df/d36/KinovaTypes_8h_1a3eacfd3f1347e3e69c62c71ba8e4c458a0bcbad8e2f29bcd31165023f171837d4">CF_AdvanceGOTO_1</link>&#32;=&#32;46,
+1185 
+<link linkend="df/d36/KinovaTypes_8h_1a3eacfd3f1347e3e69c62c71ba8e4c458aab7d02dbe1607426d09723a096c98726">1189 </link>&#32;&#32;&#32;&#32;<link linkend="df/d36/KinovaTypes_8h_1a3eacfd3f1347e3e69c62c71ba8e4c458aab7d02dbe1607426d09723a096c98726">CF_AdvanceGOTO_Clear_1</link>&#32;=&#32;47,
+1190 
+<link linkend="df/d36/KinovaTypes_8h_1a3eacfd3f1347e3e69c62c71ba8e4c458aee023bbbb4a6f6c4bdca9387c70b951b">1194 </link>&#32;&#32;&#32;&#32;<link linkend="df/d36/KinovaTypes_8h_1a3eacfd3f1347e3e69c62c71ba8e4c458aee023bbbb4a6f6c4bdca9387c70b951b">CF_AdvanceGOTO_Add_1</link>&#32;=&#32;48,
+1195 };
+1196 
+<link linkend="df/d36/KinovaTypes_8h">1200 </link><emphasis class="keyword">struct&#32;</emphasis><link linkend="df/d36/KinovaTypes_8h_1de/da6/structStickEvents">StickEvents</link>
+1201 {
+<link linkend="df/d36/KinovaTypes_8h_1a73b68205dc2b526373df337d6a4ad532">1206 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1a73b68205dc2b526373df337d6a4ad532">Minus</link>;
+1207 
+<link linkend="df/d36/KinovaTypes_8h_1ae59f407e1c54c77b4d444fa9c27d5211">1212 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1ae59f407e1c54c77b4d444fa9c27d5211">Plus</link>;
+1213 };
+1214 
+<link linkend="df/d36/KinovaTypes_8h">1218 </link><emphasis class="keyword">struct&#32;</emphasis><link linkend="df/d36/KinovaTypes_8h_1d1/d5a/structButtonEvents">ButtonEvents</link>
+1219 {
+<link linkend="df/d36/KinovaTypes_8h_1ae264a0be71f712b37a93e72693a807cd">1223 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1ae264a0be71f712b37a93e72693a807cd">OneClick</link>;
+1224 
+<link linkend="df/d36/KinovaTypes_8h_1a2feb3df7ddb99aeafd38cd80b18a9eee">1228 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1a2feb3df7ddb99aeafd38cd80b18a9eee">TwoClick</link>;
+1229 
+<link linkend="df/d36/KinovaTypes_8h_1a7ef7e7cbb9addb84a1319b7cf635520f">1233 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1a7ef7e7cbb9addb84a1319b7cf635520f">HoldOneSec</link>;
+1234 
+<link linkend="df/d36/KinovaTypes_8h_1a0f52b2243f5ed9878283f83f5b8bd66b">1238 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1a0f52b2243f5ed9878283f83f5b8bd66b">HoldTwoSec</link>;
+1239 
+<link linkend="df/d36/KinovaTypes_8h_1ab54e7f4ce7ac349f8a0fedaa82483e8f">1243 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1ab54e7f4ce7ac349f8a0fedaa82483e8f">HoldThreeSec</link>;
+1244 
+<link linkend="df/d36/KinovaTypes_8h_1a9c871beb62f78a16231448b5718c5128">1248 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1a9c871beb62f78a16231448b5718c5128">HoldFourSec</link>;
+1249 
+<link linkend="df/d36/KinovaTypes_8h_1ad995e95da85ebfa27b5d4dedaa771b92">1253 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1ad995e95da85ebfa27b5d4dedaa771b92">HoldDown</link>;
+1254 };
+1255 
+<link linkend="df/d36/KinovaTypes_8h_1a0cbbbff9819ea9faabb8810022aefec3">1259 </link><emphasis class="keyword">enum</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1a0cbbbff9819ea9faabb8810022aefec3">ControlMappingMode</link>
+1260 {
+<link linkend="df/d36/KinovaTypes_8h_1a0cbbbff9819ea9faabb8810022aefec3a72283e1da95f9ad3da86ef42133e0c0f">1264 </link>&#32;&#32;&#32;&#32;<link linkend="df/d36/KinovaTypes_8h_1a0cbbbff9819ea9faabb8810022aefec3a72283e1da95f9ad3da86ef42133e0c0f">OneAxis</link>,
+1265 
+<link linkend="df/d36/KinovaTypes_8h_1a0cbbbff9819ea9faabb8810022aefec3ad8a39b690305f760aff3d1fae33a7705">1269 </link>&#32;&#32;&#32;&#32;<link linkend="df/d36/KinovaTypes_8h_1a0cbbbff9819ea9faabb8810022aefec3ad8a39b690305f760aff3d1fae33a7705">TwoAxis</link>,
+1270 
+<link linkend="df/d36/KinovaTypes_8h_1a0cbbbff9819ea9faabb8810022aefec3a8dbaa31bef2005bbe6921b7179489808">1274 </link>&#32;&#32;&#32;&#32;<link linkend="df/d36/KinovaTypes_8h_1a0cbbbff9819ea9faabb8810022aefec3a8dbaa31bef2005bbe6921b7179489808">ThreeAxis</link>,
+1275 
+<link linkend="df/d36/KinovaTypes_8h_1a0cbbbff9819ea9faabb8810022aefec3a4e38ecdac412f1061d9f1f96e5e8019b">1279 </link>&#32;&#32;&#32;&#32;<link linkend="df/d36/KinovaTypes_8h_1a0cbbbff9819ea9faabb8810022aefec3a4e38ecdac412f1061d9f1f96e5e8019b">SixAxis</link>
+1280 };
+1281 
+<link linkend="df/d36/KinovaTypes_8h">1286 </link><emphasis class="keyword">struct&#32;</emphasis><link linkend="df/d36/KinovaTypes_8h_1dc/d71/structControlsModeMap">ControlsModeMap</link>
+1287 {
+<link linkend="df/d36/KinovaTypes_8h_1af46c342653f85b90f59c677972c2e905">1291 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1af46c342653f85b90f59c677972c2e905">DiagonalsLocked</link>;
+1292 
+<link linkend="df/d36/KinovaTypes_8h_1a3fc6f2f0246d5ed5b4cf1635fb073c91">1296 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1a3fc6f2f0246d5ed5b4cf1635fb073c91">Expansion</link>;
+1297 
+<link linkend="df/d36/KinovaTypes_8h_1a022bc6ccf4b8c655b152d134c4738b1c">1301 </link>&#32;&#32;&#32;&#32;<link linkend="df/d36/KinovaTypes_8h_1de/da6/structStickEvents">StickEvents</link>&#32;ControlSticks[<link linkend="df/d36/KinovaTypes_8h_1a1b14727ca81e530c9b63be023d70fe1c">STICK_EVENT_COUNT</link>];
+1302 
+<link linkend="df/d36/KinovaTypes_8h_1a3b54c773477b561b1fbc505556251717">1306 </link>&#32;&#32;&#32;&#32;<link linkend="df/d36/KinovaTypes_8h_1d1/d5a/structButtonEvents">ButtonEvents</link>&#32;ControlButtons[<link linkend="df/d36/KinovaTypes_8h_1a07e5dbf5fed1737edf7b518c431e8eaf">BUTTON_EVENT_COUNT</link>];
+1307 };
+1308 
+<link linkend="df/d36/KinovaTypes_8h">1316 </link><emphasis class="keyword">struct&#32;</emphasis><link linkend="df/d36/KinovaTypes_8h_1d5/d37/structControlMapping">ControlMapping</link>
+1317 {
+<link linkend="df/d36/KinovaTypes_8h_1ab82579c661e09b8a7d4e5bae10823b47">1321 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1ab82579c661e09b8a7d4e5bae10823b47">NumOfModesA</link>;
+1322 
+<link linkend="df/d36/KinovaTypes_8h_1a07198eba22a0b4557eaec7ce5973a1c5">1326 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1a07198eba22a0b4557eaec7ce5973a1c5">NumOfModesB</link>;
+1327 
+<link linkend="df/d36/KinovaTypes_8h_1a12722cd1ab9c15c8fee5b6722d9f9f69">1332 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1a12722cd1ab9c15c8fee5b6722d9f9f69">ActualModeA</link>;
+1333 
+<link linkend="df/d36/KinovaTypes_8h_1a9c3fea40ada452fa35d9d12d003eb867">1338 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1a9c3fea40ada452fa35d9d12d003eb867">ActualModeB</link>;
+1339 
+<link linkend="df/d36/KinovaTypes_8h_1a293caba4b861368460f71e13fff5b523">1343 </link>&#32;&#32;&#32;&#32;<link linkend="df/d36/KinovaTypes_8h_1a0cbbbff9819ea9faabb8810022aefec3">ControlMappingMode</link>&#32;<link linkend="df/d36/KinovaTypes_8h_1a293caba4b861368460f71e13fff5b523">Mode</link>;
+1344 
+<link linkend="df/d36/KinovaTypes_8h_1acb57ae41b95f7beef041aa311c040a98">1349 </link>&#32;&#32;&#32;&#32;<link linkend="df/d36/KinovaTypes_8h_1dc/d71/structControlsModeMap">ControlsModeMap</link>&#32;ModeControlsA[<link linkend="df/d36/KinovaTypes_8h_1ae65b2d54c897b15b974b833eec59a7a2">MODE_MAP_COUNT</link>];
+1350 
+<link linkend="df/d36/KinovaTypes_8h_1a068cd90e7e56554639f2a24d96f6e925">1355 </link>&#32;&#32;&#32;&#32;<link linkend="df/d36/KinovaTypes_8h_1dc/d71/structControlsModeMap">ControlsModeMap</link>&#32;ModeControlsB[<link linkend="df/d36/KinovaTypes_8h_1ae65b2d54c897b15b974b833eec59a7a2">MODE_MAP_COUNT</link>];
+1356 };
+1357 
+<link linkend="df/d36/KinovaTypes_8h">1361 </link><emphasis class="keyword">struct&#32;</emphasis><link linkend="df/d36/KinovaTypes_8h_1d4/d71/structControlMappingCharts">ControlMappingCharts</link>
+1362 {
+<link linkend="df/d36/KinovaTypes_8h_1a302a3bc9e63b9e737ca9c99bb251e4d7">1366 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1a302a3bc9e63b9e737ca9c99bb251e4d7">NumOfConfiguredMapping</link>;
+1367 
+<link linkend="df/d36/KinovaTypes_8h_1a72cbb9155615519fd17ea5228fd19f8f">1371 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1a72cbb9155615519fd17ea5228fd19f8f">ActualControlMapping</link>;
+1372 
+<link linkend="df/d36/KinovaTypes_8h_1a1b72a247e0b46f49b30221f2b4f7497e">1376 </link>&#32;&#32;&#32;&#32;<link linkend="df/d36/KinovaTypes_8h_1d5/d37/structControlMapping">ControlMapping</link>&#32;Mapping[<link linkend="df/d36/KinovaTypes_8h_1a51a2dde57dc5de96d6c31a742780c8b3">CONTROL_MAPPING_COUNT</link>];
+1377 };
+1378 
+<link linkend="df/d36/KinovaTypes_8h_1a45d0343c3d465533f72cb2db67fc0b8a">1382 </link><emphasis class="keyword">enum</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1a45d0343c3d465533f72cb2db67fc0b8a">errorLoggerType</link>
+1383 {
+<link linkend="df/d36/KinovaTypes_8h_1a45d0343c3d465533f72cb2db67fc0b8aade292e8dfffdeb5113666d65a97c0533">1387 </link>&#32;&#32;&#32;&#32;<link linkend="df/d36/KinovaTypes_8h_1a45d0343c3d465533f72cb2db67fc0b8aade292e8dfffdeb5113666d65a97c0533">ERROR_NOTINITIALIZED</link>,
+1388 
+<link linkend="df/d36/KinovaTypes_8h_1a45d0343c3d465533f72cb2db67fc0b8aa44086f988365734830d8750603ebe622">1392 </link>&#32;&#32;&#32;&#32;<link linkend="df/d36/KinovaTypes_8h_1a45d0343c3d465533f72cb2db67fc0b8aa44086f988365734830d8750603ebe622">keos_err1</link>,
+1393 
+<link linkend="df/d36/KinovaTypes_8h_1a45d0343c3d465533f72cb2db67fc0b8aa3efc0f8a94e775f35e80c27ce10b0cfb">1397 </link>&#32;&#32;&#32;&#32;<link linkend="df/d36/KinovaTypes_8h_1a45d0343c3d465533f72cb2db67fc0b8aa3efc0f8a94e775f35e80c27ce10b0cfb">keos_err2</link>,
+1398 
+<link linkend="df/d36/KinovaTypes_8h_1a45d0343c3d465533f72cb2db67fc0b8aa0463520f46c63259eaad669fd8db7ec4">1402 </link>&#32;&#32;&#32;&#32;<link linkend="df/d36/KinovaTypes_8h_1a45d0343c3d465533f72cb2db67fc0b8aa0463520f46c63259eaad669fd8db7ec4">keos_err3</link>,
+1403 
+<link linkend="df/d36/KinovaTypes_8h_1a45d0343c3d465533f72cb2db67fc0b8aaec8c83dd32614a6f895051e06138a9b4">1407 </link>&#32;&#32;&#32;&#32;<link linkend="df/d36/KinovaTypes_8h_1a45d0343c3d465533f72cb2db67fc0b8aaec8c83dd32614a6f895051e06138a9b4">User_err_start_marker</link>,
+1408 
+<link linkend="df/d36/KinovaTypes_8h_1a45d0343c3d465533f72cb2db67fc0b8aa1c16ffef5b569df1a14d7e3cf7fb8e20">1412 </link>&#32;&#32;&#32;&#32;<link linkend="df/d36/KinovaTypes_8h_1a45d0343c3d465533f72cb2db67fc0b8aa1c16ffef5b569df1a14d7e3cf7fb8e20">errorlog_Actuator_Temperature</link>,
+1413 
+<link linkend="df/d36/KinovaTypes_8h_1a45d0343c3d465533f72cb2db67fc0b8aad6dfeb5abc2bdf7d55158b77e90df651">1417 </link>&#32;&#32;&#32;&#32;<link linkend="df/d36/KinovaTypes_8h_1a45d0343c3d465533f72cb2db67fc0b8aad6dfeb5abc2bdf7d55158b77e90df651">errorlog_Actuator_TemperatureOK</link>,
+1418 
+<link linkend="df/d36/KinovaTypes_8h_1a45d0343c3d465533f72cb2db67fc0b8aa75fac65cdfd232098b4a977c4bdfee6b">1422 </link>&#32;&#32;&#32;&#32;<link linkend="df/d36/KinovaTypes_8h_1a45d0343c3d465533f72cb2db67fc0b8aa75fac65cdfd232098b4a977c4bdfee6b">errorlog_Finger_Temperature</link>,
+1423 
+<link linkend="df/d36/KinovaTypes_8h_1a45d0343c3d465533f72cb2db67fc0b8aacb68aea52e5099354b6c6f7c180e6592">1427 </link>&#32;&#32;&#32;&#32;<link linkend="df/d36/KinovaTypes_8h_1a45d0343c3d465533f72cb2db67fc0b8aacb68aea52e5099354b6c6f7c180e6592">errorlog_Finger_TemperatureOK</link>,
+1428 
+<link linkend="df/d36/KinovaTypes_8h_1a45d0343c3d465533f72cb2db67fc0b8aae3d73fb30f61f18f2b698500dbc0d59d">1432 </link>&#32;&#32;&#32;&#32;<link linkend="df/d36/KinovaTypes_8h_1a45d0343c3d465533f72cb2db67fc0b8aae3d73fb30f61f18f2b698500dbc0d59d">errorlog_voltage</link>,
+1433 
+<link linkend="df/d36/KinovaTypes_8h_1a45d0343c3d465533f72cb2db67fc0b8aa93683e8c381b08bd6182a2affe74f5bd">1437 </link>&#32;&#32;&#32;&#32;<link linkend="df/d36/KinovaTypes_8h_1a45d0343c3d465533f72cb2db67fc0b8aa93683e8c381b08bd6182a2affe74f5bd">errorlog_voltageOK</link>,
+1438 
+<link linkend="df/d36/KinovaTypes_8h_1a45d0343c3d465533f72cb2db67fc0b8aa34ba4d395695c88f62793f33e5a0860c">1442 </link>&#32;&#32;&#32;&#32;<link linkend="df/d36/KinovaTypes_8h_1a45d0343c3d465533f72cb2db67fc0b8aa34ba4d395695c88f62793f33e5a0860c">errorlog_current_FingersClosing</link>,
+1443 
+<link linkend="df/d36/KinovaTypes_8h_1a45d0343c3d465533f72cb2db67fc0b8aaaf16f55aaa3df79cf22a0bea670f5912">1447 </link>&#32;&#32;&#32;&#32;<link linkend="df/d36/KinovaTypes_8h_1a45d0343c3d465533f72cb2db67fc0b8aaaf16f55aaa3df79cf22a0bea670f5912">errorlog_current_FingersOpening</link>,
+1448 
+<link linkend="df/d36/KinovaTypes_8h_1a45d0343c3d465533f72cb2db67fc0b8aaddca0bef1a2448180e92dfed18087886">1452 </link>&#32;&#32;&#32;&#32;<link linkend="df/d36/KinovaTypes_8h_1a45d0343c3d465533f72cb2db67fc0b8aaddca0bef1a2448180e92dfed18087886">errorlog_current_FingersOK</link>,
+1453 
+<link linkend="df/d36/KinovaTypes_8h_1a45d0343c3d465533f72cb2db67fc0b8aaae9e1cadd6529c93716869d7420607c3">1457 </link>&#32;&#32;&#32;&#32;<link linkend="df/d36/KinovaTypes_8h_1a45d0343c3d465533f72cb2db67fc0b8aaae9e1cadd6529c93716869d7420607c3">errorlog_current_Actuators</link>,
+1458 
+<link linkend="df/d36/KinovaTypes_8h_1a45d0343c3d465533f72cb2db67fc0b8aa26ce37703ae3ba17355eedd7d77e2352">1462 </link>&#32;&#32;&#32;&#32;<link linkend="df/d36/KinovaTypes_8h_1a45d0343c3d465533f72cb2db67fc0b8aa26ce37703ae3ba17355eedd7d77e2352">errorlog_current_ActuatorsOK</link>,
+1463 
+<link linkend="df/d36/KinovaTypes_8h_1a45d0343c3d465533f72cb2db67fc0b8aac83898875555f0b37bf6418aed00c7c8">1467 </link>&#32;&#32;&#32;&#32;<link linkend="df/d36/KinovaTypes_8h_1a45d0343c3d465533f72cb2db67fc0b8aac83898875555f0b37bf6418aed00c7c8">errorLog_RobotStatus_Build_Incomplete</link>,
+1468 
+<link linkend="df/d36/KinovaTypes_8h_1a45d0343c3d465533f72cb2db67fc0b8aa1f896b7d3be32f1a6c4e5ded10ba4015">1472 </link>&#32;&#32;&#32;&#32;<link linkend="df/d36/KinovaTypes_8h_1a45d0343c3d465533f72cb2db67fc0b8aa1f896b7d3be32f1a6c4e5ded10ba4015">errorLogger_END</link>
+1473 };
+1474 
+<link linkend="df/d36/KinovaTypes_8h">1478 </link><emphasis class="keyword">struct&#32;</emphasis><link linkend="df/d36/KinovaTypes_8h_1d0/de3/structSystemError">SystemError</link>
+1479 {
+<link linkend="df/d36/KinovaTypes_8h_1ab854e1de73db72c8e2fe47a91d58037d">1483 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1ab854e1de73db72c8e2fe47a91d58037d">ErrorHeader</link>;
+1484 
+<link linkend="df/d36/KinovaTypes_8h_1a8afdc5f30a9b376b95191c057e37cb7c">1488 </link>&#32;&#32;&#32;&#32;<link linkend="df/d36/KinovaTypes_8h_1a45d0343c3d465533f72cb2db67fc0b8a">errorLoggerType</link>&#32;<link linkend="df/d36/KinovaTypes_8h_1a8afdc5f30a9b376b95191c057e37cb7c">ErrorType</link>;
+1489 
+<link linkend="df/d36/KinovaTypes_8h_1ab58ef88af94b436bbfa4513df71d9f9c">1493 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1ab58ef88af94b436bbfa4513df71d9f9c">FirmwareVersion</link>;
+1494 
+<link linkend="df/d36/KinovaTypes_8h_1a9e8bbb5be1819da3921241691ba46e23">1498 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1a9e8bbb5be1819da3921241691ba46e23">KeosVersion</link>;
+1499 
+<link linkend="df/d36/KinovaTypes_8h_1ab6d34bb68ac78bc05dce7803cbb2b5dd">1503 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1ab6d34bb68ac78bc05dce7803cbb2b5dd">SystemTime</link>;
+1504 
+<link linkend="df/d36/KinovaTypes_8h_1a3e8c91938eb3e65d965d3895b55268b3">1508 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">bool</emphasis>&#32;LayerErrorStatus[<link linkend="df/d36/KinovaTypes_8h_1ad0fbf72df2f7f710761d002676278db0">ERROR_LAYER_COUNT</link>];
+1509 
+<link linkend="df/d36/KinovaTypes_8h_1ac651a1bd937f272e75a9280d0ea3218d">1513 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1ac651a1bd937f272e75a9280d0ea3218d">LifeTime</link>;
+1514 
+<link linkend="df/d36/KinovaTypes_8h_1a4dee5912321faa5febee95c54ab15861">1518 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1a4dee5912321faa5febee95c54ab15861">DataCount</link>;
+1519 
+<link linkend="df/d36/KinovaTypes_8h_1aa52f426b11ff538332ae93e856e987bf">1523 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">int</emphasis>&#32;Data[<link linkend="df/d36/KinovaTypes_8h_1a5314906c9cb074ea4439ad242e230522">ERROR_DATA_COUNT_MAX</link>];
+1524 
+1525 };
+1526 
+<link linkend="df/d36/KinovaTypes_8h">1530 </link><emphasis class="keyword">struct&#32;</emphasis><link linkend="df/d36/KinovaTypes_8h_1d0/d39/structZoneLimitation">ZoneLimitation</link>
+1531 {
+<link linkend="df/d36/KinovaTypes_8h_1ad950b4fb26e50ef944208963fac5ed6a">1536 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">float</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1ad950b4fb26e50ef944208963fac5ed6a">speedParameter1</link>;
+1537 
+<link linkend="df/d36/KinovaTypes_8h_1a16a15e3160b4447b38b7c9d40ef88305">1542 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">float</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1a16a15e3160b4447b38b7c9d40ef88305">speedParameter2</link>;
+1543 
+<link linkend="df/d36/KinovaTypes_8h_1a6db5f0c7f4a59fae6871ec518a7dc9c2">1547 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">float</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1a6db5f0c7f4a59fae6871ec518a7dc9c2">speedParameter3</link>;
+1548 
+<link linkend="df/d36/KinovaTypes_8h_1aba463cd66d41b3ada5a702a9e1179ee4">1552 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">float</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1aba463cd66d41b3ada5a702a9e1179ee4">forceParameter1</link>;
+1553 
+<link linkend="df/d36/KinovaTypes_8h_1aecd1956a2eae32a16b7e0c28e6191e1b">1557 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">float</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1aecd1956a2eae32a16b7e0c28e6191e1b">forceParameter2</link>;
+1558 
+<link linkend="df/d36/KinovaTypes_8h_1a00785b40bfee162c2c86692c5882c9d6">1562 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">float</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1a00785b40bfee162c2c86692c5882c9d6">forceParameter3</link>;
+1563 
+<link linkend="df/d36/KinovaTypes_8h_1af1fd03a90f7a3abd910a734ea35484c0">1567 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">float</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1af1fd03a90f7a3abd910a734ea35484c0">accelerationParameter1</link>;
+1568 
+<link linkend="df/d36/KinovaTypes_8h_1a46267cc0a41cb1fdc2df08b87a10fc4b">1572 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">float</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1a46267cc0a41cb1fdc2df08b87a10fc4b">accelerationParameter2</link>;
+1573 
+<link linkend="df/d36/KinovaTypes_8h_1acd79cd4be6eec8b839f58c65b32a63d3">1577 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">float</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1acd79cd4be6eec8b839f58c65b32a63d3">accelerationParameter3</link>;
+1578 };
+1579 
+<link linkend="df/d36/KinovaTypes_8h_1a5a4538eeab397888d88a4eefcc5a1345">1583 </link><emphasis class="keyword">enum</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1a5a4538eeab397888d88a4eefcc5a1345">ShapeType</link>
+1584 {
+<link linkend="df/d36/KinovaTypes_8h_1a5a4538eeab397888d88a4eefcc5a1345aee7da55565aba7f21a48892dcd8e66b9">1588 </link>&#32;&#32;&#32;&#32;<link linkend="df/d36/KinovaTypes_8h_1a5a4538eeab397888d88a4eefcc5a1345aee7da55565aba7f21a48892dcd8e66b9">PrismSquareBase_X</link>&#32;=&#32;0,
+1589 
+<link linkend="df/d36/KinovaTypes_8h_1a5a4538eeab397888d88a4eefcc5a1345ac66d181cc405e7b9c9f01c8f731f005e">1593 </link>&#32;&#32;&#32;&#32;<link linkend="df/d36/KinovaTypes_8h_1a5a4538eeab397888d88a4eefcc5a1345ac66d181cc405e7b9c9f01c8f731f005e">PrismSquareBase_Y</link>&#32;=&#32;1,
+1594 
+<link linkend="df/d36/KinovaTypes_8h_1a5a4538eeab397888d88a4eefcc5a1345aa08bbd1fa096f66701b65ea198d4273c">1598 </link>&#32;&#32;&#32;&#32;<link linkend="df/d36/KinovaTypes_8h_1a5a4538eeab397888d88a4eefcc5a1345aa08bbd1fa096f66701b65ea198d4273c">PrismSquareBase_Z</link>&#32;=&#32;2,
+1599 
+<link linkend="df/d36/KinovaTypes_8h_1a5a4538eeab397888d88a4eefcc5a1345a5cdfa4ae63c8e5ffc1558b0076e0db92">1603 </link>&#32;&#32;&#32;&#32;<link linkend="df/d36/KinovaTypes_8h_1a5a4538eeab397888d88a4eefcc5a1345a5cdfa4ae63c8e5ffc1558b0076e0db92">PrismTriangularBase_X</link>&#32;=&#32;3,
+1604 
+<link linkend="df/d36/KinovaTypes_8h_1a5a4538eeab397888d88a4eefcc5a1345aa29132ada9d9c749c9b4c7bf08d23b02">1608 </link>&#32;&#32;&#32;&#32;<link linkend="df/d36/KinovaTypes_8h_1a5a4538eeab397888d88a4eefcc5a1345aa29132ada9d9c749c9b4c7bf08d23b02">PrismTriangularBase_Y</link>&#32;=&#32;4,
+1609 
+<link linkend="df/d36/KinovaTypes_8h_1a5a4538eeab397888d88a4eefcc5a1345aad797a90addeeadf898e717a5544f0dc">1613 </link>&#32;&#32;&#32;&#32;<link linkend="df/d36/KinovaTypes_8h_1a5a4538eeab397888d88a4eefcc5a1345aad797a90addeeadf898e717a5544f0dc">PrismTriangularBase_Z</link>&#32;=&#32;5,
+1614 
+<link linkend="df/d36/KinovaTypes_8h_1a5a4538eeab397888d88a4eefcc5a1345a93741628092cae967f2e417a9c0aea0d">1618 </link>&#32;&#32;&#32;&#32;<link linkend="df/d36/KinovaTypes_8h_1a5a4538eeab397888d88a4eefcc5a1345a93741628092cae967f2e417a9c0aea0d">Pyramid</link>&#32;=&#32;6
+1619 };
+1620 
+<link linkend="df/d36/KinovaTypes_8h">1624 </link><emphasis class="keyword">struct&#32;</emphasis><link linkend="df/d36/KinovaTypes_8h_1d7/dff/structForcesInfo">ForcesInfo</link>
+1625 {
+<link linkend="df/d36/KinovaTypes_8h_1ab707b88bce0351a0baf4c71e6f3ef1c5">1629 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">float</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1ab707b88bce0351a0baf4c71e6f3ef1c5">Actuator1</link>;
+1630 
+<link linkend="df/d36/KinovaTypes_8h_1a5a0dd34e95a333cd094c2de924216850">1634 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">float</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1a5a0dd34e95a333cd094c2de924216850">Actuator2</link>;
+1635 
+<link linkend="df/d36/KinovaTypes_8h_1acc271f53f83035f2ffc34b9b9f0ce057">1639 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">float</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1acc271f53f83035f2ffc34b9b9f0ce057">Actuator3</link>;
+1640 
+<link linkend="df/d36/KinovaTypes_8h_1a3e618674ddfe08d0f70224e365a7f1b4">1644 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">float</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1a3e618674ddfe08d0f70224e365a7f1b4">Actuator4</link>;
+1645 
+<link linkend="df/d36/KinovaTypes_8h_1adb02a0b17096da89857031a95ac625ae">1649 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">float</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1adb02a0b17096da89857031a95ac625ae">Actuator5</link>;
+1650 
+<link linkend="df/d36/KinovaTypes_8h_1a501ce0b0d8ea6b22ddd7f140bfa32775">1654 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">float</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1a501ce0b0d8ea6b22ddd7f140bfa32775">Actuator6</link>;
+1655 
+<link linkend="df/d36/KinovaTypes_8h_1abda609c2b6bfa10a6925f6dc4563d3b1">1659 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">float</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1abda609c2b6bfa10a6925f6dc4563d3b1">X</link>;
+1660 
+<link linkend="df/d36/KinovaTypes_8h_1a47c77e75fa6c73fafe28ac2a82e6ac96">1664 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">float</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1a47c77e75fa6c73fafe28ac2a82e6ac96">Y</link>;
+1665 
+<link linkend="df/d36/KinovaTypes_8h_1a271af36e068276a370351c1ebe8ce911">1669 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">float</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1a271af36e068276a370351c1ebe8ce911">Z</link>;
+1670 
+<link linkend="df/d36/KinovaTypes_8h_1aafb194d559f4df6f76bb07194adb246c">1674 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">float</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1aafb194d559f4df6f76bb07194adb246c">ThetaX</link>;
+1675 
+<link linkend="df/d36/KinovaTypes_8h_1a4a2161c051b9d21e3403d387f437aba8">1679 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">float</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1a4a2161c051b9d21e3403d387f437aba8">ThetaY</link>;
+1680 
+<link linkend="df/d36/KinovaTypes_8h_1aabc71dcad8ea42fc58399c9cbde56fd0">1684 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">float</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1aabc71dcad8ea42fc58399c9cbde56fd0">ThetaZ</link>;
+1685 };
+1686 
+<link linkend="df/d36/KinovaTypes_8h">1690 </link><emphasis class="keyword">struct&#32;</emphasis><link linkend="df/d36/KinovaTypes_8h_1df/d9d/structQuickStatus">QuickStatus</link>
+1691 {
+<link linkend="df/d36/KinovaTypes_8h_1a8e58f5a35e358178ac17145661aa9fa3">1695 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1a8e58f5a35e358178ac17145661aa9fa3">Finger1Status</link>;
+1696 
+<link linkend="df/d36/KinovaTypes_8h_1a00d03a339f99ef4565b55f157b7d0ebc">1700 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1a00d03a339f99ef4565b55f157b7d0ebc">Finger2Status</link>;
+1701 
+<link linkend="df/d36/KinovaTypes_8h_1adb0674bfd3b4131c3e2ae0862d5bee50">1705 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1adb0674bfd3b4131c3e2ae0862d5bee50">Finger3Status</link>;
+1706 
+<link linkend="df/d36/KinovaTypes_8h_1a720df4ba846103ada466a72dd8d28142">1710 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1a720df4ba846103ada466a72dd8d28142">RetractType</link>;
+1711 
+<link linkend="df/d36/KinovaTypes_8h_1ab905987dc81a754d7966b71e6c6b31a0">1715 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1ab905987dc81a754d7966b71e6c6b31a0">RetractComplexity</link>;
+1716 
+<link linkend="df/d36/KinovaTypes_8h_1ab83f9950c5baaae77754d2fd9c42b3f8">1720 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1ab83f9950c5baaae77754d2fd9c42b3f8">ControlEnableStatus</link>;
+1721 
+<link linkend="df/d36/KinovaTypes_8h_1ab707e183f53af1789d2122a76ebb1786">1725 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1ab707e183f53af1789d2122a76ebb1786">ControlActiveModule</link>;
+1726 
+<link linkend="df/d36/KinovaTypes_8h_1a2a5b8e7585c34a53436e8bcc1650ea18">1730 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1a2a5b8e7585c34a53436e8bcc1650ea18">ControlFrameType</link>;
+1731 
+<link linkend="df/d36/KinovaTypes_8h_1a738566489a176b3dbe45c5628239c6d1">1735 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1a738566489a176b3dbe45c5628239c6d1">CartesianFaultState</link>;
+1736 
+<link linkend="df/d36/KinovaTypes_8h_1a68fa24e235f5b81c7231abf1e121be50">1740 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1a68fa24e235f5b81c7231abf1e121be50">ForceControlStatus</link>;
+1741 
+<link linkend="df/d36/KinovaTypes_8h_1a8177e27c2aeab753c3fa87fd2c7342c3">1745 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1a8177e27c2aeab753c3fa87fd2c7342c3">CurrentLimitationStatus</link>;
+1746 
+<link linkend="df/d36/KinovaTypes_8h_1a74b2c900b935a07df18fbea12c3f4d68">1750 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1a74b2c900b935a07df18fbea12c3f4d68">RobotType</link>;
+1751 
+<link linkend="df/d36/KinovaTypes_8h_1a966ce09dd5f19aaeea7edf9aff76d6d8">1755 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1a966ce09dd5f19aaeea7edf9aff76d6d8">RobotEdition</link>;
+1756 
+<link linkend="df/d36/KinovaTypes_8h_1a7281937d476103ff28398205848897f1">1760 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1a7281937d476103ff28398205848897f1">TorqueSensorsStatus</link>;
+1761 };
+1762 
+<link linkend="df/d36/KinovaTypes_8h">1766 </link><emphasis class="keyword">struct&#32;</emphasis><link linkend="df/d36/KinovaTypes_8h_1d4/dba/structFinger">Finger</link>
+1767 {
+<link linkend="df/d36/KinovaTypes_8h_1a1e81ad463f71627970a8e6820f789fab">1771 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">char</emphasis>&#32;ID[<link linkend="df/d36/KinovaTypes_8h_1ac829415013d8120cedee928452ae0f55">STRING_LENGTH</link>];
+1772 
+<link linkend="df/d36/KinovaTypes_8h_1a901a1c88ba688a7880e9070db8fee548">1776 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">float</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1a901a1c88ba688a7880e9070db8fee548">ActualCommand</link>;
+1777 
+<link linkend="df/d36/KinovaTypes_8h_1aa934199555a980635f9ddc574cc6dd84">1781 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">float</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1aa934199555a980635f9ddc574cc6dd84">ActualSpeed</link>;
+1782 
+<link linkend="df/d36/KinovaTypes_8h_1aeedf954fed8b85b6cfc6804c6533a428">1786 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">float</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1aeedf954fed8b85b6cfc6804c6533a428">ActualForce</link>;
+1787 
+<link linkend="df/d36/KinovaTypes_8h_1a8f567a1b4f79cc476c293e231f4a640c">1791 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">float</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1a8f567a1b4f79cc476c293e231f4a640c">ActualAcceleration</link>;
+1792 
+<link linkend="df/d36/KinovaTypes_8h_1ae1928102462f537b1392ca61d002c0bd">1796 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">float</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1ae1928102462f537b1392ca61d002c0bd">ActualCurrent</link>;
+1797 
+<link linkend="df/d36/KinovaTypes_8h_1a6a8082bb2dc6e4b1a809c351c2002a9d">1801 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">float</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1a6a8082bb2dc6e4b1a809c351c2002a9d">ActualPosition</link>;
+1802 
+<link linkend="df/d36/KinovaTypes_8h_1abe8eb2782ebe64bacd24b5283d6bb64f">1806 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">float</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1abe8eb2782ebe64bacd24b5283d6bb64f">ActualAverageCurrent</link>;
+1807 
+<link linkend="df/d36/KinovaTypes_8h_1a7e85083e7ee6aaf7f8ac0fcbf0b4ced8">1811 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">float</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1a7e85083e7ee6aaf7f8ac0fcbf0b4ced8">ActualTemperature</link>;
+1812 
+<link linkend="df/d36/KinovaTypes_8h_1a688ac73326f0d7e071bb3755ff3f6a02">1816 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1a688ac73326f0d7e071bb3755ff3f6a02">CommunicationErrors</link>;
+1817 
+<link linkend="df/d36/KinovaTypes_8h_1ae77cb437b8a3225ec7012645df40aa48">1821 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1ae77cb437b8a3225ec7012645df40aa48">OscillatorTuningValue</link>;
+1822 
+<link linkend="df/d36/KinovaTypes_8h_1a52eadd12c593a5fd5cc554a11619bc5d">1826 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">float</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1a52eadd12c593a5fd5cc554a11619bc5d">CycleCount</link>;
+1827 
+<link linkend="df/d36/KinovaTypes_8h_1a28ad3ba61112ad6b05532edb89427684">1831 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">float</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1a28ad3ba61112ad6b05532edb89427684">RunTime</link>;
+1832 
+<link linkend="df/d36/KinovaTypes_8h_1ac959db1d35ebd3ded1ba2639cb927fbc">1836 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">float</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1ac959db1d35ebd3ded1ba2639cb927fbc">PeakMaxTemp</link>;
+1837 
+<link linkend="df/d36/KinovaTypes_8h_1ada7e63fa8e1b618d198cafd472692185">1841 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">float</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1ada7e63fa8e1b618d198cafd472692185">PeakMinTemp</link>;
+1842 
+<link linkend="df/d36/KinovaTypes_8h_1a1a0e3b38fbeac4a9805448504e1cd537">1846 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">float</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1a1a0e3b38fbeac4a9805448504e1cd537">PeakCurrent</link>;
+1847 
+<link linkend="df/d36/KinovaTypes_8h_1a66da8cea127f215c614fdb87e0ef2b9c">1851 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">float</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1a66da8cea127f215c614fdb87e0ef2b9c">MaxSpeed</link>;
+1852 
+<link linkend="df/d36/KinovaTypes_8h_1aac1ffdc3d2b9d2cd23d90b76e39e892c">1856 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">float</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1aac1ffdc3d2b9d2cd23d90b76e39e892c">MaxForce</link>;
+1857 
+<link linkend="df/d36/KinovaTypes_8h_1a383fb587571f0e8b6bc1713499973763">1861 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">float</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1a383fb587571f0e8b6bc1713499973763">MaxAcceleration</link>;
+1862 
+<link linkend="df/d36/KinovaTypes_8h_1a0ee68473cfae080e2ab4140ae28831ce">1866 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">float</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1a0ee68473cfae080e2ab4140ae28831ce">MaxCurrent</link>;
+1867 
+<link linkend="df/d36/KinovaTypes_8h_1a1e03293d942b0d44d937b21769192d2a">1871 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">float</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1a1e03293d942b0d44d937b21769192d2a">MaxAngle</link>;
+1872 
+<link linkend="df/d36/KinovaTypes_8h_1a0dce6e32d94cfbad9313446c67138de0">1876 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">float</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1a0dce6e32d94cfbad9313446c67138de0">MinAngle</link>;
+1877 
+<link linkend="df/d36/KinovaTypes_8h_1a933827723641f328b9d640ed9fa579fe">1881 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1a933827723641f328b9d640ed9fa579fe">DeviceID</link>;
+1882 
+<link linkend="df/d36/KinovaTypes_8h_1a39f1fa57fc87fe6bcb09bc43d16a6389">1886 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1a39f1fa57fc87fe6bcb09bc43d16a6389">CodeVersion</link>;
+1887 
+<link linkend="df/d36/KinovaTypes_8h_1a234ae5da6a6f0fd24538c80b8b339c18">1891 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">short</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1a234ae5da6a6f0fd24538c80b8b339c18">IsFingerInit</link>;
+1892 
+<link linkend="df/d36/KinovaTypes_8h_1ab64ec8787b32917531d6ac4e0c8c3342">1896 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">short</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1ab64ec8787b32917531d6ac4e0c8c3342">Index</link>;
+1897 
+<link linkend="df/d36/KinovaTypes_8h_1aba71b81dc24eb8f34254954707789cd4">1901 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">short</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1aba71b81dc24eb8f34254954707789cd4">FingerAddress</link>;
+1902 
+<link linkend="df/d36/KinovaTypes_8h_1ae5f0d71293de64ba7d7dd43b4275b439">1906 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">short</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1ae5f0d71293de64ba7d7dd43b4275b439">IsFingerConnected</link>;
+1907 };
+1908 
+<link linkend="df/d36/KinovaTypes_8h">1912 </link><emphasis class="keyword">struct&#32;</emphasis><link linkend="df/d36/KinovaTypes_8h_1d8/d2c/structGripper">Gripper</link>
+1913 {
+<link linkend="df/d36/KinovaTypes_8h_1aa3b78dc0d3f43e0237049b9c99152cd0">1917 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">char</emphasis>&#32;Model[<link linkend="df/d36/KinovaTypes_8h_1ac829415013d8120cedee928452ae0f55">STRING_LENGTH</link>];
+1918 
+<link linkend="df/d36/KinovaTypes_8h_1a29c6c24f466f89ca91df7c47b5fdb7d3">1922 </link>&#32;&#32;&#32;&#32;<link linkend="df/d36/KinovaTypes_8h_1d4/dba/structFinger">Finger</link>&#32;Fingers[<link linkend="df/d36/KinovaTypes_8h_1a36c985755b11a97dc5ba1ecc41e3ed37">JACO_FINGERS_COUNT</link>];
+1923 };
+1924 
+<link linkend="df/d36/KinovaTypes_8h">1928 </link><emphasis class="keyword">struct&#32;</emphasis><link linkend="df/d36/KinovaTypes_8h_1d5/dec/structZoneShape">ZoneShape</link>
+1929 {
+<link linkend="df/d36/KinovaTypes_8h_1aeeded22d6312c356295b896f5e42805a">1933 </link>&#32;&#32;&#32;&#32;<link linkend="df/d36/KinovaTypes_8h_1a5a4538eeab397888d88a4eefcc5a1345">ShapeType</link>&#32;<link linkend="df/d36/KinovaTypes_8h_1aeeded22d6312c356295b896f5e42805a">shapeType</link>;
+1934 
+<link linkend="df/d36/KinovaTypes_8h_1a832ceb07cfc73a4cddb499228892b13d">1938 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1a832ceb07cfc73a4cddb499228892b13d">Expansion1</link>;
+1939 
+<link linkend="df/d36/KinovaTypes_8h_1a49c0935a78506729b3f7143771ddc345">1943 </link>&#32;&#32;&#32;&#32;<link linkend="dd/d00/structCartesianInfo">CartesianInfo</link>&#32;Points[<link linkend="df/d36/KinovaTypes_8h_1aa8172e4bdfdf0e0f563bed72e61083f6">LEGACY_CONFIG_NB_POINTS_COUNT</link>];
+1944 };
+1945 
+<link linkend="df/d36/KinovaTypes_8h">1949 </link><emphasis class="keyword">struct&#32;</emphasis><link linkend="df/d36/KinovaTypes_8h_1d8/d70/structZone">Zone</link>
+1950 {
+<link linkend="df/d36/KinovaTypes_8h_1ac2ca5be0d2934da5fc05d06c67caf8f0">1954 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1ac2ca5be0d2934da5fc05d06c67caf8f0">ID</link>;
+1955 
+<link linkend="df/d36/KinovaTypes_8h_1a8610fae6322b4d087aa0651eea3e4154">1959 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1a8610fae6322b4d087aa0651eea3e4154">Expansion1</link>;
+1960 
+<link linkend="df/d36/KinovaTypes_8h_1a918e45dc4df9996faeadd1366130f757">1964 </link>&#32;&#32;&#32;&#32;<link linkend="df/d36/KinovaTypes_8h_1d5/dec/structZoneShape">ZoneShape</link>&#32;<link linkend="df/d36/KinovaTypes_8h_1a918e45dc4df9996faeadd1366130f757">zoneShape</link>;
+1965 
+<link linkend="df/d36/KinovaTypes_8h_1ad5be3a05006633e4e2a7b2fdfdead52c">1970 </link>&#32;&#32;&#32;&#32;<link linkend="df/d36/KinovaTypes_8h_1d0/d39/structZoneLimitation">ZoneLimitation</link>&#32;<link linkend="df/d36/KinovaTypes_8h_1ad5be3a05006633e4e2a7b2fdfdead52c">zoneLimitation</link>;
+1971 
+<link linkend="df/d36/KinovaTypes_8h_1a762759f8b82fbbfb1dbe3a1d278558f0">1975 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1a762759f8b82fbbfb1dbe3a1d278558f0">Expansion2</link>;
+1976 };
+1977 
+<link linkend="df/d36/KinovaTypes_8h">1981 </link><emphasis class="keyword">struct&#32;</emphasis><link linkend="df/d36/KinovaTypes_8h_1dd/d29/structZoneList">ZoneList</link>
+1982 {
+<link linkend="df/d36/KinovaTypes_8h_1a57c3da2ad7f954ad2c1171e435260716">1986 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1a57c3da2ad7f954ad2c1171e435260716">NbZones</link>;
+1987 
+<link linkend="df/d36/KinovaTypes_8h_1ab9e944f94ed520a133bbb7c3bf08f55d">1991 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1ab9e944f94ed520a133bbb7c3bf08f55d">Expansion1</link>;
+1992 
+<link linkend="df/d36/KinovaTypes_8h_1aeabee24f26e18a9091b22593597a6132">1996 </link>&#32;&#32;&#32;&#32;<link linkend="df/d36/KinovaTypes_8h_1d8/d70/structZone">Zone</link>&#32;Zones[<link linkend="df/d36/KinovaTypes_8h_1a1c024cb33df9cadef7058df1e6bf8095">LEGACY_CONFIG_NB_ZONES_MAX</link>];
+1997 
+1998 };
+1999 
+<link linkend="df/d36/KinovaTypes_8h">2003 </link><emphasis class="keyword">struct&#32;</emphasis><link linkend="df/d36/KinovaTypes_8h_1d6/d1a/structSystemStatus">SystemStatus</link>
+2004 {
+<link linkend="df/d36/KinovaTypes_8h_1afff6d14c02523d89ba0fdc22c8a8825f">2008 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1afff6d14c02523d89ba0fdc22c8a8825f">JoystickActive</link>;
+2009 
+<link linkend="df/d36/KinovaTypes_8h_1abae94c0687a083017956476f140ad34d">2013 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1abae94c0687a083017956476f140ad34d">RetractStatus</link>;
+2014 
+<link linkend="df/d36/KinovaTypes_8h_1a2b07e0f791db9e94312adc4f8df5f2a0">2018 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1a2b07e0f791db9e94312adc4f8df5f2a0">DrinkingMode</link>;
+2019 
+<link linkend="df/d36/KinovaTypes_8h_1a9c587e996336850e8b89b66194fa575d">2023 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1a9c587e996336850e8b89b66194fa575d">ArmLaterality</link>;
+2024 
+<link linkend="df/d36/KinovaTypes_8h_1a426a7b594f1aa2672e01c37c93515b1c">2028 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1a426a7b594f1aa2672e01c37c93515b1c">TranslationActive</link>;
+2029 
+<link linkend="df/d36/KinovaTypes_8h_1a4f743187089a28cd66438e804c3dc8cb">2033 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1a4f743187089a28cd66438e804c3dc8cb">RotationActive</link>;
+2034 
+<link linkend="df/d36/KinovaTypes_8h_1ac7a9d66164763c99d7164419724cc71b">2038 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1ac7a9d66164763c99d7164419724cc71b">FingersActive</link>;
+2039 
+<link linkend="df/d36/KinovaTypes_8h_1a87405334f1d98467521181af5b58485c">2043 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1a87405334f1d98467521181af5b58485c">WarningOverchargeForce</link>;
+2044 
+<link linkend="df/d36/KinovaTypes_8h_1a055bea9394191a3e0fcaf740b78d651c">2048 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1a055bea9394191a3e0fcaf740b78d651c">WarningOverchargeFingers</link>;
+2049 
+<link linkend="df/d36/KinovaTypes_8h_1a690324ff7d7b755fdaf01efda3adf044">2053 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1a690324ff7d7b755fdaf01efda3adf044">WarningLowVoltage</link>;
+2054 
+<link linkend="df/d36/KinovaTypes_8h_1a6c7ed26ae5b10f514f9f10adb5cb2839">2058 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1a6c7ed26ae5b10f514f9f10adb5cb2839">MajorErrorOccured</link>;
+2059 };
+2060 
+<link linkend="df/d36/KinovaTypes_8h">2064 </link><emphasis class="keyword">struct&#32;</emphasis><link linkend="df/d36/KinovaTypes_8h_1d2/d0f/structGeneralInformations">GeneralInformations</link>
+2065 {
+<link linkend="df/d36/KinovaTypes_8h_1ab2950271f954d901892257e5364e0d64">2069 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">double</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1ab2950271f954d901892257e5364e0d64">TimeAbsolute</link>;
+2070 
+<link linkend="df/d36/KinovaTypes_8h_1ab88ee4b89e5244ada283aa21dd33bd39">2074 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">double</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1ab88ee4b89e5244ada283aa21dd33bd39">TimeFromStartup</link>;
+2075 
+<link linkend="df/d36/KinovaTypes_8h_1a112f455e7548254c639cbbc134eeaecc">2079 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1a112f455e7548254c639cbbc134eeaecc">IndexStartup</link>;
+2080 
+<link linkend="df/d36/KinovaTypes_8h_1a4df94507a8b8f6bfdc84eedaf2d47f8f">2084 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1a4df94507a8b8f6bfdc84eedaf2d47f8f">ExpansionLong1</link>;
+2085 
+<link linkend="df/d36/KinovaTypes_8h_1a9175b100c45576a34acd3524e00d7d0c">2089 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">float</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1a9175b100c45576a34acd3524e00d7d0c">TimeStampSavings</link>;
+2090 
+<link linkend="df/d36/KinovaTypes_8h_1a8641ff908d6f15eb4c3984515e369dde">2094 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">float</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1a8641ff908d6f15eb4c3984515e369dde">ExpansionFloat</link>;
+2095 
+<link linkend="df/d36/KinovaTypes_8h_1a447fdb3bf03c52d0e173302fcdf27f07">2099 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">float</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1a447fdb3bf03c52d0e173302fcdf27f07">SupplyVoltage</link>;
+2100 
+<link linkend="df/d36/KinovaTypes_8h_1a6bce22c0c87b7c9696968182a8463a3e">2104 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">float</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1a6bce22c0c87b7c9696968182a8463a3e">TotalCurrent</link>;
+2105 
+<link linkend="df/d36/KinovaTypes_8h_1aacfd4f60945e48471c09376abfbd3c46">2109 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">float</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1aacfd4f60945e48471c09376abfbd3c46">Power</link>;
+2110 
+<link linkend="df/d36/KinovaTypes_8h_1ad7ad2bf957aa53d28a43897efe201b56">2114 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">float</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1ad7ad2bf957aa53d28a43897efe201b56">AveragePower</link>;
+2115 
+<link linkend="df/d36/KinovaTypes_8h_1a3efc018f27ed117ab22e0058503b5105">2119 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">float</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1a3efc018f27ed117ab22e0058503b5105">AccelerationX</link>;
+2120 
+<link linkend="df/d36/KinovaTypes_8h_1a2119e215e49f8bafe8cb5b9ddf8c58b5">2124 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">float</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1a2119e215e49f8bafe8cb5b9ddf8c58b5">AccelerationY</link>;
+2125 
+<link linkend="df/d36/KinovaTypes_8h_1a2a22c6b9b88f19a650137a1e6df8d571">2129 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">float</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1a2a22c6b9b88f19a650137a1e6df8d571">AccelerationZ</link>;
+2130 
+<link linkend="df/d36/KinovaTypes_8h_1add8723743dfc70752472ada7ba50779c">2134 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">float</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1add8723743dfc70752472ada7ba50779c">SensorExpansion1</link>;
+2135 
+<link linkend="df/d36/KinovaTypes_8h_1af24f37b896bc32e2adeeffa8826036cd">2139 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">float</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1af24f37b896bc32e2adeeffa8826036cd">SensorExpansion2</link>;
+2140 
+<link linkend="df/d36/KinovaTypes_8h_1ac3d8b0c6a9857e27d3420e693c993565">2144 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">float</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1ac3d8b0c6a9857e27d3420e693c993565">SensorExpansion3</link>;
+2145 
+<link linkend="df/d36/KinovaTypes_8h_1ac71288477c2e447e7dd298ca707bcec3">2149 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1ac71288477c2e447e7dd298ca707bcec3">CodeVersion</link>;
+2150 
+<link linkend="df/d36/KinovaTypes_8h_1a56f6f5dc8067f0ea4deb4b0c5cc3f971">2154 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1a56f6f5dc8067f0ea4deb4b0c5cc3f971">CodeRevision</link>;
+2155 
+<link linkend="df/d36/KinovaTypes_8h_1ada03b782731dc711fc78f2ab00fe3fcd">2159 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">short</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1ada03b782731dc711fc78f2ab00fe3fcd">Status</link>;
+2160 
+<link linkend="df/d36/KinovaTypes_8h_1a3cd5d14a57c053719db5c02cc471005b">2164 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">short</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1a3cd5d14a57c053719db5c02cc471005b">Controller</link>;
+2165 
+<link linkend="df/d36/KinovaTypes_8h_1aaac67e7cb72de84d904bf96285ce97ef">2169 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">short</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1aaac67e7cb72de84d904bf96285ce97ef">ControlMode</link>;
+2170 
+<link linkend="df/d36/KinovaTypes_8h_1a2fb3e86852c3ee8fedd27e745d71d7c7">2174 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">short</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1a2fb3e86852c3ee8fedd27e745d71d7c7">HandMode</link>;
+2175 
+<link linkend="df/d36/KinovaTypes_8h_1ac8f106acda69fb0d0dc7088216854fb0">2179 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">short</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1ac8f106acda69fb0d0dc7088216854fb0">ConnectedActuatorCount</link>;
+2180 
+<link linkend="df/d36/KinovaTypes_8h_1aaca0e478d0550e1c1763fcf8efe0c561">2184 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">short</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1aaca0e478d0550e1c1763fcf8efe0c561">PositionType</link>;
+2185 
+<link linkend="df/d36/KinovaTypes_8h_1a81b7dea1c9cbcbc985eca648a8c5075c">2189 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">short</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1a81b7dea1c9cbcbc985eca648a8c5075c">ErrorsSpiExpansion1</link>;
+2190 
+<link linkend="df/d36/KinovaTypes_8h_1afcd202e8b7851289121ce9b5fd2b2dca">2194 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">short</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1afcd202e8b7851289121ce9b5fd2b2dca">ErrorsSpiExpansion2</link>;
+2195 
+<link linkend="df/d36/KinovaTypes_8h_1a810315cbb3a170f9a1124e52cc22d59c">2199 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">short</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1a810315cbb3a170f9a1124e52cc22d59c">ErrorsMainSPICount</link>;
+2200 
+<link linkend="df/d36/KinovaTypes_8h_1a53e3e2b371092bf2f0fbc922d7dff8f3">2204 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">short</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1a53e3e2b371092bf2f0fbc922d7dff8f3">ErrorsExternalSPICount</link>;
+2205 
+<link linkend="df/d36/KinovaTypes_8h_1aa2ae45e90dae092075b4662268757868">2209 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">short</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1aa2ae45e90dae092075b4662268757868">ErrorsMainCANCount</link>;
+2210 
+<link linkend="df/d36/KinovaTypes_8h_1ac7ac1443cdd9f470fda64cd077ce06fb">2214 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">short</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1ac7ac1443cdd9f470fda64cd077ce06fb">ErrorsExternalCANCount</link>;
+2215 
+<link linkend="df/d36/KinovaTypes_8h_1ac1ff05432bd5c95b73b50b9d38830105">2219 </link>&#32;&#32;&#32;&#32;<link linkend="df/d36/KinovaTypes_8h_1d6/d1a/structSystemStatus">SystemStatus</link>&#32;<link linkend="df/d36/KinovaTypes_8h_1ac1ff05432bd5c95b73b50b9d38830105">ActualSystemStatus</link>;
+2220 
+<link linkend="df/d36/KinovaTypes_8h_1a1bdb970acfdca928cf01a6850dc3ff3a">2224 </link>&#32;&#32;&#32;&#32;<link linkend="db/dfb/structUserPosition">UserPosition</link>&#32;<link linkend="df/d36/KinovaTypes_8h_1a1bdb970acfdca928cf01a6850dc3ff3a">Position</link>;
+2225 
+<link linkend="df/d36/KinovaTypes_8h_1aff852c9c84a0b313f311e1e222508cf7">2229 </link>&#32;&#32;&#32;&#32;<link linkend="db/dfb/structUserPosition">UserPosition</link>&#32;<link linkend="df/d36/KinovaTypes_8h_1aff852c9c84a0b313f311e1e222508cf7">Command</link>;
+2230 
+<link linkend="df/d36/KinovaTypes_8h_1adecf04bc979eae4013a1dc4c5d2e43db">2234 </link>&#32;&#32;&#32;&#32;<link linkend="db/dfb/structUserPosition">UserPosition</link>&#32;<link linkend="df/d36/KinovaTypes_8h_1adecf04bc979eae4013a1dc4c5d2e43db">Current</link>;
+2235 
+<link linkend="df/d36/KinovaTypes_8h_1a9f590b4fb00dc71b195348fbd18cc428">2239 </link>&#32;&#32;&#32;&#32;<link linkend="db/dfb/structUserPosition">UserPosition</link>&#32;<link linkend="df/d36/KinovaTypes_8h_1a9f590b4fb00dc71b195348fbd18cc428">Force</link>;
+2240 
+<link linkend="df/d36/KinovaTypes_8h_1a025752cc70001b073d606f277c410d93">2244 </link>&#32;&#32;&#32;&#32;<link linkend="df/d36/KinovaTypes_8h_1d0/d39/structZoneLimitation">ZoneLimitation</link>&#32;<link linkend="df/d36/KinovaTypes_8h_1a025752cc70001b073d606f277c410d93">ActualLimitations</link>;
+2245 
+<link linkend="df/d36/KinovaTypes_8h_1a361a511d14fdf377e15ce86d6ef3e3c7">2249 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">float</emphasis>&#32;ControlIncrement[6];
+2250 
+<link linkend="df/d36/KinovaTypes_8h_1a538144c6ae5efec5dbeac1db517480ed">2254 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">float</emphasis>&#32;FingerControlIncrement[3];
+2255 
+<link linkend="df/d36/KinovaTypes_8h_1ac410a6988b0b124a005e0669c9f2172a">2259 </link>&#32;&#32;&#32;&#32;<link linkend="db/d40/structJoystickCommand">JoystickCommand</link>&#32;<link linkend="df/d36/KinovaTypes_8h_1ac410a6988b0b124a005e0669c9f2172a">ActualJoystickCommand</link>;
+2260 
+<link linkend="df/d36/KinovaTypes_8h_1a0e7edf0a7d68bc5186b054bf3764699a">2264 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">int</emphasis>&#32;PeripheralsConnected[4];
+2265 
+<link linkend="df/d36/KinovaTypes_8h_1a6edf5533337f8d17956550364467679b">2269 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">int</emphasis>&#32;PeripheralsDeviceID[4];
+2270 
+<link linkend="df/d36/KinovaTypes_8h_1ad763ff96b47d372343c3f446e9b47463">2274 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">float</emphasis>&#32;ActuatorsTemperatures[6];
+2275 
+<link linkend="df/d36/KinovaTypes_8h_1a45e5897f59b7d00c5159a0a2e8d151d8">2279 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">float</emphasis>&#32;FingersTemperatures[3];
+2280 
+<link linkend="df/d36/KinovaTypes_8h_1a9acf6d8134ee89b7de200ca863d46d94">2284 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">float</emphasis>&#32;FutureTemperatures[3];
+2285 
+<link linkend="df/d36/KinovaTypes_8h_1a7281486ac36892c876e30962656660ee">2289 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">int</emphasis>&#32;ActuatorsCommErrors[6];
+2290 
+<link linkend="df/d36/KinovaTypes_8h_1a2a65ca5c2039e398982814e0a2c0e862">2294 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">int</emphasis>&#32;FingersCommErrors[3];
+2295 
+<link linkend="df/d36/KinovaTypes_8h_1abc8962194d7c8b514be5c28d99b6b4a3">2299 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1abc8962194d7c8b514be5c28d99b6b4a3">ExpansionLong2</link>;
+2300 
+<link linkend="df/d36/KinovaTypes_8h_1a8f91e2c0ca1565c5f3478923b9885389">2304 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">double</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1a8f91e2c0ca1565c5f3478923b9885389">ControlTimeAbsolute</link>;
+2305 
+<link linkend="df/d36/KinovaTypes_8h_1aa38f3afead9da07799c45bca401037eb">2310 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">double</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1aa38f3afead9da07799c45bca401037eb">ControlTimeFromStartup</link>;
+2311 
+<link linkend="df/d36/KinovaTypes_8h_1a79fda6f821bd29109818f22bfc4167b5">2315 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>&#32;ExpansionsBytes[192];
+2316 };
+2317 
+<link linkend="dd/d18/structAngularAcceleration">2321 </link><emphasis class="keyword">struct&#32;</emphasis><link linkend="dd/d18/structAngularAcceleration">AngularAcceleration</link>
+2322 {
+<link linkend="dd/d18/structAngularAcceleration_1a5cfc56b69d136bce62b14f2828db3850">2327 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">float</emphasis>&#32;<link linkend="dd/d18/structAngularAcceleration_1a5cfc56b69d136bce62b14f2828db3850">Actuator1_X</link>;
+2328 
+<link linkend="dd/d18/structAngularAcceleration_1ae7137ba81e19e031606c67f9f675ebf4">2333 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">float</emphasis>&#32;<link linkend="dd/d18/structAngularAcceleration_1ae7137ba81e19e031606c67f9f675ebf4">Actuator1_Y</link>;
+2334 
+<link linkend="dd/d18/structAngularAcceleration_1aae297625ad8f8f25a8e6ff44331ad369">2339 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">float</emphasis>&#32;<link linkend="dd/d18/structAngularAcceleration_1aae297625ad8f8f25a8e6ff44331ad369">Actuator1_Z</link>;
+2340 
+<link linkend="dd/d18/structAngularAcceleration_1a203e9902f7e841db9df92d96082dbde7">2345 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">float</emphasis>&#32;<link linkend="dd/d18/structAngularAcceleration_1a203e9902f7e841db9df92d96082dbde7">Actuator2_X</link>;
+2346 
+<link linkend="dd/d18/structAngularAcceleration_1a64c0708882b11a7e05d8c893bea8f8e1">2351 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">float</emphasis>&#32;<link linkend="dd/d18/structAngularAcceleration_1a64c0708882b11a7e05d8c893bea8f8e1">Actuator2_Y</link>;
+2352 
+<link linkend="dd/d18/structAngularAcceleration_1a617d68c9abfc43629b2293e27370b539">2357 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">float</emphasis>&#32;<link linkend="dd/d18/structAngularAcceleration_1a617d68c9abfc43629b2293e27370b539">Actuator2_Z</link>;
+2358 
+<link linkend="dd/d18/structAngularAcceleration_1a687fb8bac7a0b529fbd07e7c5c17c281">2363 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">float</emphasis>&#32;<link linkend="dd/d18/structAngularAcceleration_1a687fb8bac7a0b529fbd07e7c5c17c281">Actuator3_X</link>;
+2364 
+<link linkend="dd/d18/structAngularAcceleration_1a8b372df5c994266783918e9fc7260cb3">2369 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">float</emphasis>&#32;<link linkend="dd/d18/structAngularAcceleration_1a8b372df5c994266783918e9fc7260cb3">Actuator3_Y</link>;
+2370 
+<link linkend="dd/d18/structAngularAcceleration_1a178c35c220a0d0ecc8e0d228c10dfac0">2375 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">float</emphasis>&#32;<link linkend="dd/d18/structAngularAcceleration_1a178c35c220a0d0ecc8e0d228c10dfac0">Actuator3_Z</link>;
+2376 
+<link linkend="dd/d18/structAngularAcceleration_1a5ac59b5d6354f56a574849b3058aff8a">2381 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">float</emphasis>&#32;<link linkend="dd/d18/structAngularAcceleration_1a5ac59b5d6354f56a574849b3058aff8a">Actuator4_X</link>;
+2382 
+<link linkend="dd/d18/structAngularAcceleration_1ab19b628ee0ba917a65b5f0ccb4c663c0">2387 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">float</emphasis>&#32;<link linkend="dd/d18/structAngularAcceleration_1ab19b628ee0ba917a65b5f0ccb4c663c0">Actuator4_Y</link>;
+2388 
+<link linkend="dd/d18/structAngularAcceleration_1a4407b12848019a178128df8cd3f7a371">2393 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">float</emphasis>&#32;<link linkend="dd/d18/structAngularAcceleration_1a4407b12848019a178128df8cd3f7a371">Actuator4_Z</link>;
+2394 
+<link linkend="dd/d18/structAngularAcceleration_1a7ae66f2e31c5e90fe07b234e474ead12">2399 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">float</emphasis>&#32;<link linkend="dd/d18/structAngularAcceleration_1a7ae66f2e31c5e90fe07b234e474ead12">Actuator5_X</link>;
+2400 
+<link linkend="dd/d18/structAngularAcceleration_1a44a285d25040047b089f3d977a82546a">2405 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">float</emphasis>&#32;<link linkend="dd/d18/structAngularAcceleration_1a44a285d25040047b089f3d977a82546a">Actuator5_Y</link>;
+2406 
+<link linkend="dd/d18/structAngularAcceleration_1a9ba585569c14f9dec730713ad92cd25d">2411 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">float</emphasis>&#32;<link linkend="dd/d18/structAngularAcceleration_1a9ba585569c14f9dec730713ad92cd25d">Actuator5_Z</link>;
+2412 
+<link linkend="dd/d18/structAngularAcceleration_1a285c6634d7542d3feaffcc6cc610db05">2417 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">float</emphasis>&#32;<link linkend="dd/d18/structAngularAcceleration_1a285c6634d7542d3feaffcc6cc610db05">Actuator6_X</link>;
+2418 
+<link linkend="dd/d18/structAngularAcceleration_1a1f227cd43faadf267dde95ec75392311">2423 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">float</emphasis>&#32;<link linkend="dd/d18/structAngularAcceleration_1a1f227cd43faadf267dde95ec75392311">Actuator6_Y</link>;
+2424 
+<link linkend="dd/d18/structAngularAcceleration_1a22ce9847bc5c4aee829b734081e944fd">2429 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">float</emphasis>&#32;<link linkend="dd/d18/structAngularAcceleration_1a22ce9847bc5c4aee829b734081e944fd">Actuator6_Z</link>;
+2430 
+<link linkend="dd/d18/structAngularAcceleration_1a4afb405ec59c4f2ceac6302021eaebf8">2434 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">void</emphasis>&#32;<link linkend="dd/d18/structAngularAcceleration_1a4afb405ec59c4f2ceac6302021eaebf8">InitStruct</link>()
+2435 &#32;&#32;&#32;&#32;{
+2436 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Actuator1_X&#32;=&#32;0.0f;
+2437 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Actuator1_Y&#32;=&#32;0.0f;
+2438 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Actuator1_Z&#32;=&#32;0.0f;
+2439 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Actuator2_X&#32;=&#32;0.0f;
+2440 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Actuator2_Y&#32;=&#32;0.0f;
+2441 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Actuator2_Z&#32;=&#32;0.0f;
+2442 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Actuator3_X&#32;=&#32;0.0f;
+2443 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Actuator3_Y&#32;=&#32;0.0f;
+2444 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Actuator3_Z&#32;=&#32;0.0f;
+2445 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Actuator4_X&#32;=&#32;0.0f;
+2446 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Actuator4_Y&#32;=&#32;0.0f;
+2447 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Actuator4_Z&#32;=&#32;0.0f;
+2448 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Actuator5_X&#32;=&#32;0.0f;
+2449 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Actuator5_Y&#32;=&#32;0.0f;
+2450 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Actuator5_Z&#32;=&#32;0.0f;
+2451 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Actuator6_X&#32;=&#32;0.0f;
+2452 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Actuator6_Y&#32;=&#32;0.0f;
+2453 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Actuator6_Z&#32;=&#32;0.0f;
+2454 &#32;&#32;&#32;&#32;}
+2455 };
+2456 
+<link linkend="df/d36/KinovaTypes_8h">2460 </link><emphasis class="keyword">struct&#32;</emphasis><link linkend="df/d36/KinovaTypes_8h_1d3/d19/structPeripheralInfo">PeripheralInfo</link>
+2461 {
+<link linkend="df/d36/KinovaTypes_8h_1ad63ba012f47f06ba9eb5baa1e5c49cfb">2465 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1ad63ba012f47f06ba9eb5baa1e5c49cfb">Handle</link>;
+2466 
+<link linkend="df/d36/KinovaTypes_8h_1a68ed2672dbb345ad711011834439be4e">2470 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1a68ed2672dbb345ad711011834439be4e">Type</link>;
+2471 
+<link linkend="df/d36/KinovaTypes_8h_1acf5f236a5c5c7923edd5175ac00ae3c5">2475 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1acf5f236a5c5c7923edd5175ac00ae3c5">Port</link>;
+2476 
+<link linkend="df/d36/KinovaTypes_8h_1a18255b4f0485ada8f5658e30a6c8486e">2480 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1a18255b4f0485ada8f5658e30a6c8486e">Address</link>;
+2481 
+<link linkend="df/d36/KinovaTypes_8h_1a871b1f912f52fd20a1e8bd120ed81422">2485 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="df/d36/KinovaTypes_8h_1a871b1f912f52fd20a1e8bd120ed81422">CodeVersion</link>;
+2486 };
+    </computeroutput></literallayout>
+</section>

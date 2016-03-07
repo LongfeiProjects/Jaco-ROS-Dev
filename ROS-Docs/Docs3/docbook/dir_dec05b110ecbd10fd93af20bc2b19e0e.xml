@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="dir_dec05b110ecbd10fd93af20bc2b19e0e">
+    <title>D:/Longfei/Desktop/catkin_KinovaROS/src Directory Reference</title>
+<para>Directory dependency diagram for D:/Longfei/Desktop/catkin_KinovaROS/src</para>
+<para>
+    <figure>
+        <title>Directory Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../dir_dec05b110ecbd10fd93af20bc2b19e0e_dep.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+        <simplesect>
+            <title> Directories </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>dir <link linkend="dir_0e2d68a52ef31d9ea261da5ea251cc0f">D:/Longfei/Desktop/catkin_KinovaROS/src/jaco-ros</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+    <simplesect>
+        <title>Detailed Description</title>
+    <para>Directory location is D:/Longfei/Desktop/catkin_KinovaROS/src/</para>
+    </simplesect>
+</section>

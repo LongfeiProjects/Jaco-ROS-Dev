@@ -1,0 +1,5 @@
+var structros_1_1message__traits_1_1Definition_3_01_1_1jaco__msgs_1_1ArmJointAnglesActionFeedback___f7a0265498d8f0c8bfa24eb4de39e338 =
+[
+    [ "value", "dc/d9e/structros_1_1message__traits_1_1Definition_3_01_1_1jaco__msgs_1_1ArmJointAnglesActionFeedback___f7a0265498d8f0c8bfa24eb4de39e338.html#a3440186e3fd0a8ef3d16e5ec61924799", null ],
+    [ "value", "dc/d9e/structros_1_1message__traits_1_1Definition_3_01_1_1jaco__msgs_1_1ArmJointAnglesActionFeedback___f7a0265498d8f0c8bfa24eb4de39e338.html#a6fde77298bae60d3d4230aed7579b5ed", null ]
+];

@@ -1,0 +1,87 @@
+.TH "grip_workout" 3 "Thu Mar 3 2016" "Version 1.0.1" "Kinova-ROS" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+grip_workout \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "def \fBgripper_client\fP (finger_positions)"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "\fBpositions\fP = \fBgoal_generators\&.random_jaco_finger_positions\fP(int(sys\&.argv[3]))"
+.br
+.ti -1c
+.RI "list \fBraw_positions\fP = [float(n) for n in sys\&.argv[2:]]"
+.br
+.ti -1c
+.RI "\fBresult\fP = \fBgripper_client\fP(position)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.PP
+.nf
+A helper program to test gripper goals for the JACO and MICO arms.
+.fi
+.PP
+ 
+.SH "Function Documentation"
+.PP 
+.SS "def grip_workout\&.gripper_client ( finger_positions)"
+
+.PP
+.nf
+Send a gripper goal to the action server.
+.fi
+.PP
+ 
+.PP
+.nf
+15 def gripper_client(finger_positions):
+16     """Send a gripper goal to the action server\&."""
+17     action_address = '/' + str(sys\&.argv[1]) + '_arm_driver/fingers/finger_positions'
+18     client = actionlib\&.SimpleActionClient(action_address,
+19                                           jaco_msgs\&.msg\&.SetFingersPositionAction)
+20     client\&.wait_for_server()
+21 
+22     goal = jaco_msgs\&.msg\&.SetFingersPositionGoal()
+23     goal\&.fingers\&.finger1 = float(finger_positions[0])
+24     goal\&.fingers\&.finger2 = float(finger_positions[1])
+25 
+26     # The MICO arm has only two fingers, but the same action definition is used
+27     if len(finger_positions) < 3:
+28         goal\&.fingers\&.finger3 = 0\&.0
+29     else:
+30         goal\&.fingers\&.finger3 = float(finger_positions[2])
+31 
+32     client\&.send_goal(goal)
+33     if client\&.wait_for_result(rospy\&.Duration(5\&.0)):
+34         return client\&.get_result()
+35     else:
+36         client\&.cancel_all_goals()
+37         print('        the gripper action timed-out')
+38         return None
+39 
+40 
+.fi
+.SH "Variable Documentation"
+.PP 
+.SS "list grip_workout\&.positions = \fBgoal_generators\&.random_jaco_finger_positions\fP(int(sys\&.argv[3]))"
+
+.SS "list grip_workout\&.raw_positions = [float(n) for n in sys\&.argv[2:]]"
+
+.SS "grip_workout\&.result = \fBgripper_client\fP(position)"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Kinova-ROS from the source code\&.

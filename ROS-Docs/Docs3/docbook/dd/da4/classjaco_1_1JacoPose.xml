@@ -1,0 +1,214 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="dd/da4/classjaco_1_1JacoPose">
+<title>jaco::JacoPose class Reference</title>
+<para>
+    <programlisting>#include <link linkend="d7/d98/jaco__types_8h">&quot;jaco_types.h&quot;</link></programlisting>
+</para>
+<para>Inheritance diagram for jaco::JacoPose</para>
+<para>
+    <figure>
+        <title>Inheritance graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../d3/d5f/classjaco_1_1JacoPose__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Collaboration diagram for jaco::JacoPose</para>
+<para>
+    <figure>
+        <title>Collaboration graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../d2/ddf/classjaco_1_1JacoPose__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>geometry_msgs::Pose <link linkend="dd/da4/classjaco_1_1JacoPose_1a9f2e68a94240e365afefd84d92f5a132">constructPoseMsg</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>geometry_msgs::Wrench <link linkend="dd/da4/classjaco_1_1JacoPose_1a0ce9524097d0c974210ab20e63049b1c">constructWrenchMsg</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="dd/d00/structCartesianInfo_1a6d47623939d86124525ab4c8f7a2b8e9">InitStruct</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>bool <link linkend="dd/da4/classjaco_1_1JacoPose_1aed0e2dcb5cc3bc8315a2988bba51d513">isCloseToOther</link> (
+const <link linkend="dd/da4/classjaco_1_1JacoPose">JacoPose</link> &amp; , float tolerance)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="dd/da4/classjaco_1_1JacoPose_1afadf92820c16343650a71572acf9c402">JacoPose</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="dd/da4/classjaco_1_1JacoPose_1a40acc797871a6bf6870ed0dd66ec75d7">JacoPose</link> (
+const geometry_msgs::Pose &amp; pose)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="dd/da4/classjaco_1_1JacoPose_1a237eff1d503ce1020aad353febd51609">JacoPose</link> (
+const <link linkend="dd/d00/structCartesianInfo">CartesianInfo</link> &amp; pose)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Public Attributes</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>float ThetaX<para><emphasis>This is the value related to the orientation around the X axis. Unit depends on the context it&apos;s been used.</emphasis></para></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>float ThetaY<para><emphasis>This is the value related to the orientation around the Y axis. Unit depends on the context it&apos;s been used.</emphasis></para></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>float ThetaZ<para><emphasis>This is the value related to the orientation around the Z axis. Unit depends on the context it&apos;s been used.</emphasis></para></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>float X<para><emphasis>This is the value related to the translation along the X axis. Unit depends on the context it&apos;s been used.</emphasis></para></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>float Y<para><emphasis>This is the value related to the translation along the Y axis. Unit depends on the context it&apos;s been used.</emphasis></para></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>float Z<para><emphasis>This is the value related to the translation along the Z axis. Unit depends on the context it&apos;s been used.</emphasis></para></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+            <section xml:id="dd/da4/classjaco_1_1JacoPose_1a9f2e68a94240e365afefd84d92f5a132">
+                <title>geometry_msgs::Pose jaco::JacoPose::constructPoseMsg ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="dd/da4/classjaco_1_1JacoPose_1a0ce9524097d0c974210ab20e63049b1c">
+                <title>geometry_msgs::Wrench jaco::JacoPose::constructWrenchMsg ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="dd/d00/structCartesianInfo_1a6d47623939d86124525ab4c8f7a2b8e9">
+                <title>void CartesianInfo::InitStruct ()</title> <emphasis></emphasis>
+                
+<para>This method will initialises all the values to 0 </para>
+
+            </section>
+            <section xml:id="dd/da4/classjaco_1_1JacoPose_1aed0e2dcb5cc3bc8315a2988bba51d513">
+                <title>bool jaco::JacoPose::isCloseToOther (const JacoPose &amp;, float tolerance) const </title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="dd/da4/classjaco_1_1JacoPose_1afadf92820c16343650a71572acf9c402">
+                <title>jaco::JacoPose::JacoPose ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="dd/da4/classjaco_1_1JacoPose_1a40acc797871a6bf6870ed0dd66ec75d7">
+                <title>jaco::JacoPose::JacoPose (const geometry_msgs::Pose &amp;pose)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="dd/da4/classjaco_1_1JacoPose_1a237eff1d503ce1020aad353febd51609">
+                <title>jaco::JacoPose::JacoPose (const CartesianInfo &amp;pose)</title> <emphasis></emphasis>
+                
+            </section>
+        <section>
+            <title>Member Data Documentation</title>
+            <simplesect>
+                <title>float CartesianInfo::ThetaX</title>                
+<para>This is the value related to the orientation around the X axis. Depending on the context it&apos;s been used, the unit of the value will change. As an example if the current control mode is cartesian position the unit will be RAD but if the control mode is cartesian velocity then the unit will be RAD per second. </para>
+
+                <para>Definition at line 378 of file KinovaTypes.h</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>KinovaTypes.h</para></listitem></itemizedlist></para>
+            </simplesect>
+            <simplesect>
+                <title>float CartesianInfo::ThetaY</title>                
+<para>As an example if the current control mode is cartesian position the unit will be RAD but if the control mode is cartesian velocity then the unit will be RAD per second. </para>
+
+                <para>Definition at line 385 of file KinovaTypes.h</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>KinovaTypes.h</para></listitem></itemizedlist></para>
+            </simplesect>
+            <simplesect>
+                <title>float CartesianInfo::ThetaZ</title>                
+<para>As an example if the current control mode is cartesian position the unit will be RAD but if the control mode is cartesian velocity then the unit will be RAD per second. </para>
+
+                <para>Definition at line 392 of file KinovaTypes.h</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>KinovaTypes.h</para></listitem></itemizedlist></para>
+            </simplesect>
+            <simplesect>
+                <title>float CartesianInfo::X</title>                
+<para>As an example if the current control mode is cartesian position the unit will be meters but if the control mode is cartesian velocity then the unit will be meters per second. </para>
+
+                <para>Definition at line 356 of file KinovaTypes.h</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>KinovaTypes.h</para></listitem></itemizedlist></para>
+            </simplesect>
+            <simplesect>
+                <title>float CartesianInfo::Y</title>                
+<para>As an example if the current control mode is cartesian position the unit will be meters but if the control mode is cartesian velocity then the unit will be meters per second. </para>
+
+                <para>Definition at line 363 of file KinovaTypes.h</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>KinovaTypes.h</para></listitem></itemizedlist></para>
+            </simplesect>
+            <simplesect>
+                <title>float CartesianInfo::Z</title>                
+<para>As an example if the current control mode is cartesian position the unit will be meters but if the control mode is cartesian velocity then the unit will be meters per second. </para>
+
+                <para>Definition at line 370 of file KinovaTypes.h</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>KinovaTypes.h</para></listitem></itemizedlist></para>
+            </simplesect>
+        </section>
+</section>

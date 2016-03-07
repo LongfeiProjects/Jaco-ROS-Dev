@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="d2/d9a/structros_1_1message__operations_1_1Printer_3_01_1_1jaco__msgs_1_1ArmPoseActionGoal___3_01ContainerAllocator_01_4_01_4">
+<title>ros::message_operations::Printer&lt; ::jaco_msgs::ArmPoseActionGoal_&lt; ContainerAllocator &gt; &gt; struct Reference</title>
+<para>
+    <programlisting>#include <link linkend="d5/d01/ArmPoseActionGoal_8h">&quot;ArmPoseActionGoal.h&quot;</link></programlisting>
+</para>
+<para>Inheritance diagram for ros::message_operations::Printer&lt; ::jaco_msgs::ArmPoseActionGoal_&lt; ContainerAllocator &gt; &gt;</para>
+<para>
+    <figure>
+        <title>Inheritance graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../dd/d04/structros_1_1message__operations_1_1Printer_3_01_1_1jaco__msgs_1_1ArmPoseActionGoal___3_01Contaic6582e8dc68a166e1b73b75a56d335ea.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Collaboration diagram for ros::message_operations::Printer&lt; ::jaco_msgs::ArmPoseActionGoal_&lt; ContainerAllocator &gt; &gt;</para>
+<para>
+    <figure>
+        <title>Collaboration graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../de/d46/structros_1_1message__operations_1_1Printer_3_01_1_1jaco__msgs_1_1ArmPoseActionGoal___3_01Contai94052fb95d2bc85ee5d0bc9264fad678.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+    <templateparamlist>
+      <param>
+        <type>class ContainerAllocator</type>
+      </param>
+    </templateparamlist>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static void <link linkend="d2/d9a/structros_1_1message__operations_1_1Printer_3_01_1_1jaco__msgs_1_1ArmPoseActionGoal___3_01ContainerAllocator_01_4_01_4_1a57d43f31b8fdeebc2bbc3c5975ee7228">stream</link> (
+Stream &amp; s, const std::string &amp; indent, const ::<link linkend="dd/d54/structjaco__msgs_1_1ArmPoseActionGoal__">jaco_msgs::ArmPoseActionGoal_</link>&lt; ContainerAllocator &gt; &amp; v)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+            <section xml:id="d2/d9a/structros_1_1message__operations_1_1Printer_3_01_1_1jaco__msgs_1_1ArmPoseActionGoal___3_01ContainerAllocator_01_4_01_4_1a57d43f31b8fdeebc2bbc3c5975ee7228">
+                <title>static void ros::message_operations::Printer&lt; ::jaco_msgs::ArmPoseActionGoal_&lt; ContainerAllocator &gt; &gt;::stream (Stream &amp;s, const std::string &amp;indent, const ::jaco_msgs::ArmPoseActionGoal_&lt; ContainerAllocator &gt; &amp;v)</title> <emphasis></emphasis>
+                
+            </section>
+</section>

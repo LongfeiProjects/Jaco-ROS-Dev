@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="de/d4d/structros_1_1service__traits_1_1DataType_3_01_1_1jaco__msgs_1_1SetForceControlParams_01_4">
+<title>ros::service_traits::DataType&lt; ::jaco_msgs::SetForceControlParams &gt; struct Reference</title>
+<para>
+    <programlisting>#include <link linkend="de/de3/SetForceControlParams_8h">&quot;SetForceControlParams.h&quot;</link></programlisting>
+</para>
+<para>Inheritance diagram for ros::service_traits::DataType&lt; ::jaco_msgs::SetForceControlParams &gt;</para>
+<para>
+    <figure>
+        <title>Inheritance graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../dd/d79/structros_1_1service__traits_1_1DataType_3_01_1_1jaco__msgs_1_1SetForceControlParams_01_4__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Collaboration diagram for ros::service_traits::DataType&lt; ::jaco_msgs::SetForceControlParams &gt;</para>
+<para>
+    <figure>
+        <title>Collaboration graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../dd/dd8/structros_1_1service__traits_1_1DataType_3_01_1_1jaco__msgs_1_1SetForceControlParams_01_4__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+    <templateparamlist>
+    </templateparamlist>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static const char * <link linkend="de/d4d/structros_1_1service__traits_1_1DataType_3_01_1_1jaco__msgs_1_1SetForceControlParams_01_4_1a067f75745986762d494bcedbae0214a9">value</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static const char * <link linkend="de/d4d/structros_1_1service__traits_1_1DataType_3_01_1_1jaco__msgs_1_1SetForceControlParams_01_4_1a93009590e387994ad77d296c8494d162">value</link> (
+const ::<link linkend="d7/dba/namespacejaco__msgs_1df/d4f/structjaco__msgs_1_1SetForceControlParams">jaco_msgs::SetForceControlParams</link> &amp; )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+            <section xml:id="de/d4d/structros_1_1service__traits_1_1DataType_3_01_1_1jaco__msgs_1_1SetForceControlParams_01_4_1a067f75745986762d494bcedbae0214a9">
+                <title>static const char* ros::service_traits::DataType&lt; ::jaco_msgs::SetForceControlParams &gt;::value ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="de/d4d/structros_1_1service__traits_1_1DataType_3_01_1_1jaco__msgs_1_1SetForceControlParams_01_4_1a93009590e387994ad77d296c8494d162">
+                <title>static const char* ros::service_traits::DataType&lt; ::jaco_msgs::SetForceControlParams &gt;::value (const ::jaco_msgs::SetForceControlParams &amp;)</title> <emphasis></emphasis>
+                
+            </section>
+</section>

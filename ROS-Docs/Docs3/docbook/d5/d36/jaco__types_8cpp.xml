@@ -1,0 +1,280 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="d5/d36/jaco__types_8cpp">
+    <title>jaco_types.cpp File Reference</title>
+    <programlisting>#include &lt;math.h&gt;</programlisting>
+    <programlisting>#include &lt;angles/angles.h&gt;</programlisting>
+    <programlisting>#include &lt;tf/tf.h&gt;</programlisting>
+    <programlisting>#include &lt;jaco_driver/jaco_types.h&gt;</programlisting>
+    <programlisting>#include &lt;string&gt;</programlisting>
+<para>Include dependency diagram for jaco_types.cpp</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../da/dab/jaco__types_8cpp__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Included by dependency diagram for jaco_types.cpp</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../d7/d4e/jaco__types_8cpp__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+        <simplesect>
+            <title> Namespaces </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d4/d3c/namespacejaco">jaco</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+    <simplesect>
+        <title>Detailed Description</title>
+    <para>Definition in file D:/Longfei/Desktop/catkin_KinovaROS/src/jaco-ros/jaco_driver/src/jaco_types.cpp</para>
+    </simplesect>
+    <literallayout><computeroutput>
+1 
+47 <emphasis class="preprocessor">#include&#32;&lt;math.h&gt;</emphasis>
+48 <emphasis class="preprocessor">#include&#32;&lt;angles/angles.h&gt;</emphasis>
+49 <emphasis class="preprocessor">#include&#32;&lt;tf/tf.h&gt;</emphasis>
+50 <emphasis class="preprocessor">#include&#32;&lt;<link linkend="d7/d98/jaco__types_8h">jaco_driver/jaco_types.h</link>&gt;</emphasis>
+51 <emphasis class="preprocessor">#include&#32;&lt;string&gt;</emphasis>
+52 
+53 
+54 <emphasis class="keyword">namespace&#32;</emphasis><link linkend="d4/d3c/namespacejaco">jaco</link>
+55 {
+56 
+57 <emphasis class="comment">//&#32;A&#32;few&#32;helper&#32;functions</emphasis>
+58 <emphasis class="comment">//&#32;----------------------</emphasis>
+59 
+<link linkend="d4/d3c/namespacejaco_1a564cf022c0783972c60ed14cfbc02a2a">60 </link><emphasis class="keywordtype">float</emphasis>&#32;<link linkend="d4/d3c/namespacejaco_1a564cf022c0783972c60ed14cfbc02a2a">normalizeInRads</link>(<emphasis class="keywordtype">float</emphasis>&#32;rads)
+61 {
+62 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;<emphasis class="keyword">static_cast&lt;</emphasis><emphasis class="keywordtype">float</emphasis><emphasis class="keyword">&gt;</emphasis>(angles::normalize_angle_positive(rads));
+63 }
+64 
+65 
+<link linkend="d4/d3c/namespacejaco_1aad452eaf0313477fc5c5b403de174118">66 </link><emphasis class="keywordtype">float</emphasis>&#32;<link linkend="d4/d3c/namespacejaco_1aad452eaf0313477fc5c5b403de174118">normalizePositiveInDegrees</link>(<emphasis class="keywordtype">float</emphasis>&#32;degrees)
+67 {
+68 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;angles::to_degrees(angles::normalize_angle_positive(angles::from_degrees(degrees)));
+69 }
+70 
+71 
+<link linkend="d4/d3c/namespacejaco_1a3e97ea63ad53f1e71821c5eee9346224">72 </link><emphasis class="keywordtype">float</emphasis>&#32;<link linkend="d4/d3c/namespacejaco_1a3e97ea63ad53f1e71821c5eee9346224">normalizeInDegrees</link>(<emphasis class="keywordtype">float</emphasis>&#32;degrees)
+73 {
+74 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;angles::to_degrees(angles::normalize_angle(angles::from_degrees(degrees)));
+75 }
+76 
+77 
+<link linkend="d4/d3c/namespacejaco_1a09e679eeb93252a2cf092b064e724125">78 </link><emphasis class="keywordtype">bool</emphasis>&#32;<link linkend="d4/d3c/namespacejaco_1a09e679eeb93252a2cf092b064e724125">areValuesClose</link>(<emphasis class="keywordtype">float</emphasis>&#32;first,&#32;<emphasis class="keywordtype">float</emphasis>&#32;second,&#32;<emphasis class="keywordtype">float</emphasis>&#32;tolerance)
+79 {
+80 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;((first&#32;&lt;=&#32;second&#32;+&#32;tolerance)&#32;&amp;&amp;&#32;(first&#32;&gt;=&#32;second&#32;-&#32;tolerance));
+81 }
+82 
+83 
+84 <emphasis class="comment">//&#32;Exceptions</emphasis>
+85 <emphasis class="comment">//&#32;----------</emphasis>
+<link linkend="df/dbe/classjaco_1_1JacoCommException_1af6c28818c201bacdc8a08a346325822c">86 </link><link linkend="df/dbe/classjaco_1_1JacoCommException_1af6c28818c201bacdc8a08a346325822c">JacoCommException::JacoCommException</link>(<emphasis class="keyword">const</emphasis>&#32;std::string&amp;&#32;message,&#32;<emphasis class="keyword">const</emphasis>&#32;<emphasis class="keywordtype">int</emphasis>&#32;error_code)
+87 {
+88 &#32;&#32;&#32;&#32;std::stringstream&#32;ss;
+89 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ss&#32;&lt;&lt;&#32;<emphasis class="stringliteral">&quot;JacoCommException:&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;message&#32;&lt;&lt;&#32;<emphasis class="stringliteral">&quot;&#32;(return&#32;code:&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;error_code&#32;&lt;&lt;&#32;<emphasis class="stringliteral">&quot;)&quot;</emphasis>&#32;&lt;&lt;&#32;std::endl;
+90 &#32;&#32;&#32;&#32;<link linkend="df/dbe/classjaco_1_1JacoCommException_1ab8c43df074f755cbfc7a6d6bf1b7a950">desc_</link>&#32;=&#32;ss.str();
+91 }
+92 
+93 
+<link linkend="df/dbe/classjaco_1_1JacoCommException_1a7689658c873a6b22857db7c2bb630d43">94 </link><emphasis class="keyword">const</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>*&#32;<link linkend="df/dbe/classjaco_1_1JacoCommException_1a7689658c873a6b22857db7c2bb630d43">JacoCommException::what</link>()&#32;<emphasis class="keyword">const</emphasis>&#32;throw()
+95 {
+96 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;<link linkend="df/dbe/classjaco_1_1JacoCommException_1ab8c43df074f755cbfc7a6d6bf1b7a950">desc_</link>.c_str();
+97 }
+98 
+99 
+100 <emphasis class="comment">//&#32;Class&#32;definitions</emphasis>
+101 <emphasis class="comment">//&#32;-----------------</emphasis>
+102 
+<link linkend="dd/da4/classjaco_1_1JacoPose_1a40acc797871a6bf6870ed0dd66ec75d7">103 </link><link linkend="dd/da4/classjaco_1_1JacoPose_1afadf92820c16343650a71572acf9c402">JacoPose::JacoPose</link>(<emphasis class="keyword">const</emphasis>&#32;geometry_msgs::Pose&#32;&amp;pose)
+104 {
+105 &#32;&#32;&#32;&#32;<emphasis class="keywordtype">double</emphasis>&#32;tx,&#32;ty,&#32;tz;
+106 &#32;&#32;&#32;&#32;tf::Quaternion&#32;q;
+107 &#32;&#32;&#32;&#32;tf::quaternionMsgToTF(pose.orientation,&#32;q);
+108 
+109 &#32;&#32;&#32;&#32;tf::Matrix3x3&#32;bt_q(q);
+110 
+111 &#32;&#32;&#32;&#32;bt_q.getEulerYPR(tz,&#32;ty,&#32;tx);
+112 
+113 &#32;&#32;&#32;&#32;X&#32;=&#32;<emphasis class="keyword">static_cast&lt;</emphasis><emphasis class="keywordtype">float</emphasis><emphasis class="keyword">&gt;</emphasis>(pose.position.x);
+114 &#32;&#32;&#32;&#32;Y&#32;=&#32;<emphasis class="keyword">static_cast&lt;</emphasis><emphasis class="keywordtype">float</emphasis><emphasis class="keyword">&gt;</emphasis>(pose.position.y);
+115 &#32;&#32;&#32;&#32;Z&#32;=&#32;<emphasis class="keyword">static_cast&lt;</emphasis><emphasis class="keywordtype">float</emphasis><emphasis class="keyword">&gt;</emphasis>(pose.position.z);
+116 
+117 &#32;&#32;&#32;&#32;ThetaX&#32;=&#32;<link linkend="d4/d3c/namespacejaco_1a564cf022c0783972c60ed14cfbc02a2a">normalizeInRads</link>(tx);
+118 &#32;&#32;&#32;&#32;ThetaY&#32;=&#32;<link linkend="d4/d3c/namespacejaco_1a564cf022c0783972c60ed14cfbc02a2a">normalizeInRads</link>(ty);
+119 &#32;&#32;&#32;&#32;ThetaZ&#32;=&#32;<link linkend="d4/d3c/namespacejaco_1a564cf022c0783972c60ed14cfbc02a2a">normalizeInRads</link>(tz);
+120 }
+121 
+122 
+<link linkend="dd/da4/classjaco_1_1JacoPose_1a237eff1d503ce1020aad353febd51609">123 </link><link linkend="dd/da4/classjaco_1_1JacoPose_1afadf92820c16343650a71572acf9c402">JacoPose::JacoPose</link>(<emphasis class="keyword">const</emphasis>&#32;<link linkend="dd/d00/structCartesianInfo">CartesianInfo</link>&#32;&amp;pose)
+124 {
+125 &#32;&#32;&#32;&#32;X&#32;=&#32;pose.<link linkend="dd/d00/structCartesianInfo_1a212cc2dcae1697132fc31fa2f5d17269">X</link>;
+126 &#32;&#32;&#32;&#32;Y&#32;=&#32;pose.<link linkend="dd/d00/structCartesianInfo_1a12c2611c89445419b336e58815d87c7c">Y</link>;
+127 &#32;&#32;&#32;&#32;Z&#32;=&#32;pose.<link linkend="dd/d00/structCartesianInfo_1a14e196e4cb38c0ae7f4658b9b070b7fe">Z</link>;
+128 
+129 &#32;&#32;&#32;&#32;ThetaX&#32;=&#32;<link linkend="d4/d3c/namespacejaco_1a564cf022c0783972c60ed14cfbc02a2a">normalizeInRads</link>(pose.<link linkend="dd/d00/structCartesianInfo_1a39135e53155aa4025c40eeefbfd3b17c">ThetaX</link>);
+130 &#32;&#32;&#32;&#32;ThetaY&#32;=&#32;<link linkend="d4/d3c/namespacejaco_1a564cf022c0783972c60ed14cfbc02a2a">normalizeInRads</link>(pose.<link linkend="dd/d00/structCartesianInfo_1a4aef5897f4cdcf7ecc9df6804f844d46">ThetaY</link>);
+131 &#32;&#32;&#32;&#32;ThetaZ&#32;=&#32;<link linkend="d4/d3c/namespacejaco_1a564cf022c0783972c60ed14cfbc02a2a">normalizeInRads</link>(pose.<link linkend="dd/d00/structCartesianInfo_1a2890c501f3b7b9479e12ad51f04f0a7f">ThetaZ</link>);
+132 }
+133 
+134 
+<link linkend="dd/da4/classjaco_1_1JacoPose_1a9f2e68a94240e365afefd84d92f5a132">135 </link>geometry_msgs::Pose&#32;<link linkend="dd/da4/classjaco_1_1JacoPose_1a9f2e68a94240e365afefd84d92f5a132">JacoPose::constructPoseMsg</link>()
+136 {
+137 &#32;&#32;&#32;&#32;geometry_msgs::Pose&#32;pose;
+138 &#32;&#32;&#32;&#32;tf::Quaternion&#32;position_quaternion;
+139 
+140 &#32;&#32;&#32;&#32;
+141 &#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;TODO:&#32;QUICK&#32;FIX,&#32;bake&#32;this&#32;as&#32;a&#32;quaternion:</emphasis>
+142 &#32;&#32;&#32;&#32;tf::Matrix3x3&#32;mx(&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;1,&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0,&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0,&#32;
+143 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0,&#32;&#32;cos(ThetaX),&#32;-sin(ThetaX),
+144 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0,&#32;&#32;sin(ThetaX),&#32;&#32;cos(ThetaX));
+145 &#32;&#32;&#32;&#32;tf::Matrix3x3&#32;my(&#32;cos(ThetaY),&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0,&#32;&#32;sin(ThetaY),
+146 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0,&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;1,&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0,
+147 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;-sin(ThetaY),&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0,&#32;&#32;cos(ThetaY));
+148 &#32;&#32;&#32;&#32;tf::Matrix3x3&#32;mz(&#32;cos(ThetaZ),&#32;-sin(ThetaZ),&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0,
+149 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;sin(ThetaZ),&#32;&#32;cos(ThetaZ),&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0,
+150 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0,&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0,&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;1);
+151 
+152 &#32;&#32;&#32;&#32;tf::Matrix3x3&#32;&#32;mg&#32;=&#32;mx&#32;*&#32;my&#32;*&#32;mz;
+153 &#32;&#32;&#32;&#32;mg.getRotation(position_quaternion);
+154 
+155 &#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;NOTE:&#32;This&#32;doesn&apos;t&#32;work,&#32;as&#32;angles&#32;reported&#32;by&#32;the&#32;API&#32;are&#32;not&#32;fixed.</emphasis>
+156 &#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;position_quaternion.setRPY(ThetaX,&#32;ThetaY,&#32;ThetaZ);</emphasis>
+157 
+158 &#32;&#32;&#32;&#32;
+159 &#32;&#32;&#32;&#32;tf::quaternionTFToMsg(position_quaternion,&#32;pose.orientation);
+160 
+161 &#32;&#32;&#32;&#32;pose.position.x&#32;=&#32;X;
+162 &#32;&#32;&#32;&#32;pose.position.y&#32;=&#32;Y;
+163 &#32;&#32;&#32;&#32;pose.position.z&#32;=&#32;Z;
+164 
+165 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;pose;
+166 }
+167 
+<link linkend="dd/da4/classjaco_1_1JacoPose_1a0ce9524097d0c974210ab20e63049b1c">168 </link>geometry_msgs::Wrench&#32;<link linkend="dd/da4/classjaco_1_1JacoPose_1a0ce9524097d0c974210ab20e63049b1c">JacoPose::constructWrenchMsg</link>()
+169 {
+170 &#32;&#32;&#32;&#32;geometry_msgs::Wrench&#32;wrench;
+171 
+172 &#32;&#32;&#32;&#32;wrench.force.x&#32;&#32;=&#32;X;
+173 &#32;&#32;&#32;&#32;wrench.force.y&#32;&#32;=&#32;Y;
+174 &#32;&#32;&#32;&#32;wrench.force.z&#32;&#32;=&#32;Z;
+175 &#32;&#32;&#32;&#32;wrench.torque.x&#32;=&#32;ThetaX;
+176 &#32;&#32;&#32;&#32;wrench.torque.y&#32;=&#32;ThetaY;
+177 &#32;&#32;&#32;&#32;wrench.torque.z&#32;=&#32;ThetaZ;
+178 
+179 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;wrench;
+180 }
+181 
+<link linkend="dd/da4/classjaco_1_1JacoPose_1aed0e2dcb5cc3bc8315a2988bba51d513">182 </link><emphasis class="keywordtype">bool</emphasis>&#32;<link linkend="dd/da4/classjaco_1_1JacoPose_1aed0e2dcb5cc3bc8315a2988bba51d513">JacoPose::isCloseToOther</link>(<emphasis class="keyword">const</emphasis>&#32;<link linkend="dd/da4/classjaco_1_1JacoPose">JacoPose</link>&#32;&amp;other,&#32;<emphasis class="keywordtype">float</emphasis>&#32;tolerance)<emphasis class="keyword">&#32;const</emphasis>
+183 <emphasis class="keyword"></emphasis>{
+184 &#32;&#32;&#32;&#32;<emphasis class="keywordtype">bool</emphasis>&#32;status&#32;=&#32;<emphasis class="keyword">true</emphasis>;
+185 &#32;&#32;&#32;&#32;status&#32;=&#32;status&#32;&amp;&amp;&#32;<link linkend="d4/d3c/namespacejaco_1a09e679eeb93252a2cf092b064e724125">areValuesClose</link>(X,&#32;other.<link linkend="dd/d00/structCartesianInfo_1a212cc2dcae1697132fc31fa2f5d17269">X</link>,&#32;tolerance);
+186 &#32;&#32;&#32;&#32;status&#32;=&#32;status&#32;&amp;&amp;&#32;<link linkend="d4/d3c/namespacejaco_1a09e679eeb93252a2cf092b064e724125">areValuesClose</link>(Y,&#32;other.<link linkend="dd/d00/structCartesianInfo_1a12c2611c89445419b336e58815d87c7c">Y</link>,&#32;tolerance);
+187 &#32;&#32;&#32;&#32;status&#32;=&#32;status&#32;&amp;&amp;&#32;<link linkend="d4/d3c/namespacejaco_1a09e679eeb93252a2cf092b064e724125">areValuesClose</link>(Z,&#32;other.<link linkend="dd/d00/structCartesianInfo_1a14e196e4cb38c0ae7f4658b9b070b7fe">Z</link>,&#32;tolerance);
+188 &#32;&#32;&#32;&#32;status&#32;=&#32;status&#32;&amp;&amp;&#32;<link linkend="d4/d3c/namespacejaco_1a09e679eeb93252a2cf092b064e724125">areValuesClose</link>(ThetaX,&#32;other.<link linkend="dd/d00/structCartesianInfo_1a39135e53155aa4025c40eeefbfd3b17c">ThetaX</link>,&#32;tolerance);
+189 &#32;&#32;&#32;&#32;status&#32;=&#32;status&#32;&amp;&amp;&#32;<link linkend="d4/d3c/namespacejaco_1a09e679eeb93252a2cf092b064e724125">areValuesClose</link>(ThetaY,&#32;other.<link linkend="dd/d00/structCartesianInfo_1a4aef5897f4cdcf7ecc9df6804f844d46">ThetaY</link>,&#32;tolerance);
+190 &#32;&#32;&#32;&#32;status&#32;=&#32;status&#32;&amp;&amp;&#32;<link linkend="d4/d3c/namespacejaco_1a09e679eeb93252a2cf092b064e724125">areValuesClose</link>(ThetaZ,&#32;other.<link linkend="dd/d00/structCartesianInfo_1a2890c501f3b7b9479e12ad51f04f0a7f">ThetaZ</link>,&#32;tolerance);
+191 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;status;
+192 }
+193 
+194 
+<link linkend="d4/de6/classjaco_1_1JacoAngles_1a9afa66c0853e88b74d29bff433213843">195 </link><link linkend="d4/de6/classjaco_1_1JacoAngles_1aaaec2ebb1538fb3c43322e578ae93100">JacoAngles::JacoAngles</link>(<emphasis class="keyword">const</emphasis>&#32;<link linkend="d7/dda/structjaco__msgs_1_1JointAngles__">jaco_msgs::JointAngles</link>&#32;&amp;<link linkend="da/dd2/namespacejoint__angle__workout_1a44cb6da34666d45961b26233ed5264bf">angles</link>)
+196 {
+197 &#32;&#32;&#32;&#32;Actuator1&#32;=&#32;<link linkend="d4/d3c/namespacejaco_1aad452eaf0313477fc5c5b403de174118">normalizePositiveInDegrees</link>(180.0&#32;-&#32;(angles.<link linkend="d7/dda/structjaco__msgs_1_1JointAngles___1a5ebadd874f74af99d452dc42787489b7">joint1</link>&#32;*&#32;(180.0&#32;/&#32;M_PI)));
+198 &#32;&#32;&#32;&#32;Actuator2&#32;=&#32;<link linkend="d4/d3c/namespacejaco_1aad452eaf0313477fc5c5b403de174118">normalizePositiveInDegrees</link>((angles.<link linkend="d7/dda/structjaco__msgs_1_1JointAngles___1ad7bfb312caeafc6b2cb1fc02c6a3e116">joint2</link>&#32;*&#32;(180.0&#32;/&#32;M_PI))&#32;+&#32;270.0);
+199 &#32;&#32;&#32;&#32;Actuator3&#32;=&#32;<link linkend="d4/d3c/namespacejaco_1aad452eaf0313477fc5c5b403de174118">normalizePositiveInDegrees</link>(90.0&#32;-&#32;(angles.<link linkend="d7/dda/structjaco__msgs_1_1JointAngles___1ae8e5d407b34f0a6acd368ec1a28df526">joint3</link>&#32;*&#32;(180.0&#32;/&#32;M_PI)));
+200 &#32;&#32;&#32;&#32;Actuator4&#32;=&#32;<link linkend="d4/d3c/namespacejaco_1aad452eaf0313477fc5c5b403de174118">normalizePositiveInDegrees</link>(180.0&#32;-&#32;(angles.<link linkend="d7/dda/structjaco__msgs_1_1JointAngles___1accb31f45f3a313794a9cab57b8a9b952">joint4</link>&#32;*&#32;(180.0&#32;/&#32;M_PI)));
+201 &#32;&#32;&#32;&#32;Actuator5&#32;=&#32;<link linkend="d4/d3c/namespacejaco_1aad452eaf0313477fc5c5b403de174118">normalizePositiveInDegrees</link>(180.0&#32;-&#32;(angles.<link linkend="d7/dda/structjaco__msgs_1_1JointAngles___1ad02e456e0b382b2bf59b4eeb93318921">joint5</link>&#32;*&#32;(180.0&#32;/&#32;M_PI)));
+202 &#32;&#32;&#32;&#32;Actuator6&#32;=&#32;<link linkend="d4/d3c/namespacejaco_1aad452eaf0313477fc5c5b403de174118">normalizePositiveInDegrees</link>(260.0&#32;-&#32;(angles.<link linkend="d7/dda/structjaco__msgs_1_1JointAngles___1a474d9f2a0e329ba6bd08c8fa265e9a50">joint6</link>&#32;*&#32;(180.0&#32;/&#32;M_PI)));
+203 }
+204 
+205 
+<link linkend="d4/de6/classjaco_1_1JacoAngles_1add15d69fbabfd97c175b4d897425379a">206 </link><link linkend="d4/de6/classjaco_1_1JacoAngles_1aaaec2ebb1538fb3c43322e578ae93100">JacoAngles::JacoAngles</link>(<emphasis class="keyword">const</emphasis>&#32;<link linkend="d0/df5/structAngularInfo">AngularInfo</link>&#32;&amp;<link linkend="da/dd2/namespacejoint__angle__workout_1a44cb6da34666d45961b26233ed5264bf">angles</link>)
+207 {
+208 &#32;&#32;&#32;&#32;Actuator1&#32;=&#32;<link linkend="d4/d3c/namespacejaco_1aad452eaf0313477fc5c5b403de174118">normalizePositiveInDegrees</link>(angles.<link linkend="d0/df5/structAngularInfo_1a5fc555c085bddc82c33a3039fbc40932">Actuator1</link>);
+209 &#32;&#32;&#32;&#32;Actuator2&#32;=&#32;<link linkend="d4/d3c/namespacejaco_1aad452eaf0313477fc5c5b403de174118">normalizePositiveInDegrees</link>(angles.<link linkend="d0/df5/structAngularInfo_1ab7b9349eef239f9741d9c28a795e4c35">Actuator2</link>);
+210 &#32;&#32;&#32;&#32;Actuator3&#32;=&#32;<link linkend="d4/d3c/namespacejaco_1aad452eaf0313477fc5c5b403de174118">normalizePositiveInDegrees</link>(angles.<link linkend="d0/df5/structAngularInfo_1a30426eab94c82cfd3d697bbc8c506c2a">Actuator3</link>);
+211 &#32;&#32;&#32;&#32;Actuator4&#32;=&#32;<link linkend="d4/d3c/namespacejaco_1aad452eaf0313477fc5c5b403de174118">normalizePositiveInDegrees</link>(angles.<link linkend="d0/df5/structAngularInfo_1a46a1314c4846de6a495310b44fe5e0c3">Actuator4</link>);
+212 &#32;&#32;&#32;&#32;Actuator5&#32;=&#32;<link linkend="d4/d3c/namespacejaco_1aad452eaf0313477fc5c5b403de174118">normalizePositiveInDegrees</link>(angles.<link linkend="d0/df5/structAngularInfo_1a953c29d2481eb1c42c84e9c992d34dde">Actuator5</link>);
+213 &#32;&#32;&#32;&#32;Actuator6&#32;=&#32;<link linkend="d4/d3c/namespacejaco_1aad452eaf0313477fc5c5b403de174118">normalizePositiveInDegrees</link>(angles.<link linkend="d0/df5/structAngularInfo_1ab54771129d8a9e451c27942dd349340d">Actuator6</link>);
+214 }
+215 
+216 
+<link linkend="d4/de6/classjaco_1_1JacoAngles_1a29e69c52bf777084006965f9edcdcd9d">217 </link><link linkend="d7/dda/structjaco__msgs_1_1JointAngles__">jaco_msgs::JointAngles</link>&#32;<link linkend="d4/de6/classjaco_1_1JacoAngles_1a29e69c52bf777084006965f9edcdcd9d">JacoAngles::constructAnglesMsg</link>()
+218 {
+219 &#32;&#32;&#32;&#32;<link linkend="d7/dda/structjaco__msgs_1_1JointAngles__">jaco_msgs::JointAngles</link>&#32;<link linkend="da/dd2/namespacejoint__angle__workout_1a44cb6da34666d45961b26233ed5264bf">angles</link>;
+220 &#32;&#32;&#32;&#32;angles.<link linkend="d7/dda/structjaco__msgs_1_1JointAngles___1a5ebadd874f74af99d452dc42787489b7">joint1</link>&#32;=&#32;(180.0&#32;-&#32;Actuator1)&#32;/&#32;(180.0&#32;/&#32;M_PI);
+221 &#32;&#32;&#32;&#32;angles.<link linkend="d7/dda/structjaco__msgs_1_1JointAngles___1ad7bfb312caeafc6b2cb1fc02c6a3e116">joint2</link>&#32;=&#32;(Actuator2&#32;-&#32;270.0)&#32;/&#32;(180.0&#32;/&#32;M_PI);
+222 &#32;&#32;&#32;&#32;angles.<link linkend="d7/dda/structjaco__msgs_1_1JointAngles___1ae8e5d407b34f0a6acd368ec1a28df526">joint3</link>&#32;=&#32;(90.0&#32;-&#32;Actuator3)&#32;/&#32;(180.0&#32;/&#32;M_PI);
+223 &#32;&#32;&#32;&#32;angles.<link linkend="d7/dda/structjaco__msgs_1_1JointAngles___1accb31f45f3a313794a9cab57b8a9b952">joint4</link>&#32;=&#32;(180.0&#32;-&#32;Actuator4)&#32;/&#32;(180.0&#32;/&#32;M_PI);
+224 &#32;&#32;&#32;&#32;angles.<link linkend="d7/dda/structjaco__msgs_1_1JointAngles___1ad02e456e0b382b2bf59b4eeb93318921">joint5</link>&#32;=&#32;(180.0&#32;-&#32;Actuator5)&#32;/&#32;(180.0&#32;/&#32;M_PI);
+225 &#32;&#32;&#32;&#32;angles.<link linkend="d7/dda/structjaco__msgs_1_1JointAngles___1a474d9f2a0e329ba6bd08c8fa265e9a50">joint6</link>&#32;=&#32;(260.0&#32;-&#32;Actuator6)&#32;/&#32;(180.0&#32;/&#32;M_PI);
+226 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;<link linkend="da/dd2/namespacejoint__angle__workout_1a44cb6da34666d45961b26233ed5264bf">angles</link>;
+227 }
+228 
+229 
+<link linkend="d4/de6/classjaco_1_1JacoAngles_1aff68997afe0dac41e4c777b649c2b5d4">230 </link><emphasis class="keywordtype">bool</emphasis>&#32;<link linkend="d4/de6/classjaco_1_1JacoAngles_1aff68997afe0dac41e4c777b649c2b5d4">JacoAngles::isCloseToOther</link>(<emphasis class="keyword">const</emphasis>&#32;<link linkend="d4/de6/classjaco_1_1JacoAngles">JacoAngles</link>&#32;&amp;other,&#32;<emphasis class="keywordtype">float</emphasis>&#32;tolerance)<emphasis class="keyword">&#32;const</emphasis>
+231 <emphasis class="keyword"></emphasis>{
+232 &#32;&#32;&#32;&#32;<emphasis class="keywordtype">bool</emphasis>&#32;status&#32;=&#32;<emphasis class="keyword">true</emphasis>;
+233 &#32;&#32;&#32;&#32;status&#32;=&#32;status&#32;&amp;&amp;&#32;<link linkend="d4/d3c/namespacejaco_1a09e679eeb93252a2cf092b064e724125">areValuesClose</link>(Actuator1,&#32;other.<link linkend="d0/df5/structAngularInfo_1a5fc555c085bddc82c33a3039fbc40932">Actuator1</link>,&#32;tolerance);
+234 &#32;&#32;&#32;&#32;status&#32;=&#32;status&#32;&amp;&amp;&#32;<link linkend="d4/d3c/namespacejaco_1a09e679eeb93252a2cf092b064e724125">areValuesClose</link>(Actuator2,&#32;other.<link linkend="d0/df5/structAngularInfo_1ab7b9349eef239f9741d9c28a795e4c35">Actuator2</link>,&#32;tolerance);
+235 &#32;&#32;&#32;&#32;status&#32;=&#32;status&#32;&amp;&amp;&#32;<link linkend="d4/d3c/namespacejaco_1a09e679eeb93252a2cf092b064e724125">areValuesClose</link>(Actuator3,&#32;other.<link linkend="d0/df5/structAngularInfo_1a30426eab94c82cfd3d697bbc8c506c2a">Actuator3</link>,&#32;tolerance);
+236 &#32;&#32;&#32;&#32;status&#32;=&#32;status&#32;&amp;&amp;&#32;<link linkend="d4/d3c/namespacejaco_1a09e679eeb93252a2cf092b064e724125">areValuesClose</link>(Actuator4,&#32;other.<link linkend="d0/df5/structAngularInfo_1a46a1314c4846de6a495310b44fe5e0c3">Actuator4</link>,&#32;tolerance);
+237 &#32;&#32;&#32;&#32;status&#32;=&#32;status&#32;&amp;&amp;&#32;<link linkend="d4/d3c/namespacejaco_1a09e679eeb93252a2cf092b064e724125">areValuesClose</link>(Actuator5,&#32;other.<link linkend="d0/df5/structAngularInfo_1a953c29d2481eb1c42c84e9c992d34dde">Actuator5</link>,&#32;tolerance);
+238 &#32;&#32;&#32;&#32;status&#32;=&#32;status&#32;&amp;&amp;&#32;<link linkend="d4/d3c/namespacejaco_1a09e679eeb93252a2cf092b064e724125">areValuesClose</link>(Actuator6,&#32;other.<link linkend="d0/df5/structAngularInfo_1ab54771129d8a9e451c27942dd349340d">Actuator6</link>,&#32;tolerance);
+239 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;status;
+240 }
+241 
+242 
+<link linkend="dd/d28/classjaco_1_1FingerAngles_1a6a5ffbe70cd136c7feef97ee6748577a">243 </link><link linkend="dd/d28/classjaco_1_1FingerAngles_1a7fab91acaaa9865fd50980053bf21788">FingerAngles::FingerAngles</link>(<emphasis class="keyword">const</emphasis>&#32;<link linkend="df/d79/structjaco__msgs_1_1FingerPosition__">jaco_msgs::FingerPosition</link>&#32;&amp;position)
+244 {
+245 &#32;&#32;&#32;&#32;Finger1&#32;=&#32;position.<link linkend="df/d79/structjaco__msgs_1_1FingerPosition___1a5e08265efb8023ba04d99d556e186b14">finger1</link>;
+246 &#32;&#32;&#32;&#32;Finger2&#32;=&#32;position.<link linkend="df/d79/structjaco__msgs_1_1FingerPosition___1a7dcdd9f48dc0ff847c0170a096038917">finger2</link>;
+247 &#32;&#32;&#32;&#32;Finger3&#32;=&#32;position.<link linkend="df/d79/structjaco__msgs_1_1FingerPosition___1abb7ec1eff7489809a20c32b8ea19386b">finger3</link>;
+248 }
+249 
+250 
+<link linkend="dd/d28/classjaco_1_1FingerAngles_1aba8b42d3e90e791a7b50f2b753be8542">251 </link><link linkend="dd/d28/classjaco_1_1FingerAngles_1a7fab91acaaa9865fd50980053bf21788">FingerAngles::FingerAngles</link>(<emphasis class="keyword">const</emphasis>&#32;<link linkend="df/d1b/structFingersPosition">FingersPosition</link>&#32;&amp;angle)
+252 {
+253 &#32;&#32;&#32;&#32;Finger1&#32;=&#32;angle.<link linkend="df/d1b/structFingersPosition_1a216f8d64e6a9c7aab84e4269ccb27e66">Finger1</link>;
+254 &#32;&#32;&#32;&#32;Finger2&#32;=&#32;angle.<link linkend="df/d1b/structFingersPosition_1a0ec9675672721d61fb13bbc2db3d3ef9">Finger2</link>;
+255 &#32;&#32;&#32;&#32;Finger3&#32;=&#32;angle.<link linkend="df/d1b/structFingersPosition_1a03c819e4c20367e36e62a864bf829160">Finger3</link>;
+256 }
+257 
+258 
+<link linkend="dd/d28/classjaco_1_1FingerAngles_1afe84a9beae8b4a0617ace657d7608a49">259 </link><link linkend="df/d79/structjaco__msgs_1_1FingerPosition__">jaco_msgs::FingerPosition</link>&#32;<link linkend="dd/d28/classjaco_1_1FingerAngles_1afe84a9beae8b4a0617ace657d7608a49">FingerAngles::constructFingersMsg</link>()
+260 {
+261 &#32;&#32;&#32;&#32;<link linkend="df/d79/structjaco__msgs_1_1FingerPosition__">jaco_msgs::FingerPosition</link>&#32;<link linkend="da/dd2/namespacejoint__angle__workout_1a44cb6da34666d45961b26233ed5264bf">angles</link>;
+262 &#32;&#32;&#32;&#32;angles.<link linkend="df/d79/structjaco__msgs_1_1FingerPosition___1a5e08265efb8023ba04d99d556e186b14">finger1</link>&#32;=&#32;Finger1;
+263 &#32;&#32;&#32;&#32;angles.<link linkend="df/d79/structjaco__msgs_1_1FingerPosition___1a7dcdd9f48dc0ff847c0170a096038917">finger2</link>&#32;=&#32;Finger2;
+264 &#32;&#32;&#32;&#32;angles.<link linkend="df/d79/structjaco__msgs_1_1FingerPosition___1abb7ec1eff7489809a20c32b8ea19386b">finger3</link>&#32;=&#32;Finger3;
+265 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;<link linkend="da/dd2/namespacejoint__angle__workout_1a44cb6da34666d45961b26233ed5264bf">angles</link>;
+266 }
+267 
+268 
+<link linkend="dd/d28/classjaco_1_1FingerAngles_1a1fb3bd563983bbe24350e89a6b96e715">269 </link><emphasis class="keywordtype">bool</emphasis>&#32;<link linkend="dd/d28/classjaco_1_1FingerAngles_1a1fb3bd563983bbe24350e89a6b96e715">FingerAngles::isCloseToOther</link>(<emphasis class="keyword">const</emphasis>&#32;<link linkend="dd/d28/classjaco_1_1FingerAngles">FingerAngles</link>&#32;&amp;other,&#32;<emphasis class="keywordtype">float</emphasis>&#32;tolerance)<emphasis class="keyword">&#32;const</emphasis>
+270 <emphasis class="keyword"></emphasis>{
+271 &#32;&#32;&#32;&#32;<emphasis class="keywordtype">bool</emphasis>&#32;status&#32;=&#32;<emphasis class="keyword">true</emphasis>;
+272 &#32;&#32;&#32;&#32;status&#32;=&#32;status&#32;&amp;&amp;&#32;<link linkend="d4/d3c/namespacejaco_1a09e679eeb93252a2cf092b064e724125">areValuesClose</link>(Finger1,&#32;other.<link linkend="df/d1b/structFingersPosition_1a216f8d64e6a9c7aab84e4269ccb27e66">Finger1</link>,&#32;tolerance);
+273 &#32;&#32;&#32;&#32;status&#32;=&#32;status&#32;&amp;&amp;&#32;<link linkend="d4/d3c/namespacejaco_1a09e679eeb93252a2cf092b064e724125">areValuesClose</link>(Finger2,&#32;other.<link linkend="df/d1b/structFingersPosition_1a0ec9675672721d61fb13bbc2db3d3ef9">Finger2</link>,&#32;tolerance);
+274 &#32;&#32;&#32;&#32;status&#32;=&#32;status&#32;&amp;&amp;&#32;<link linkend="d4/d3c/namespacejaco_1a09e679eeb93252a2cf092b064e724125">areValuesClose</link>(Finger3,&#32;other.<link linkend="df/d1b/structFingersPosition_1a03c819e4c20367e36e62a864bf829160">Finger3</link>,&#32;tolerance);
+275 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;status;
+276 }
+277 
+278 }&#32;&#32;<emphasis class="comment">//&#32;namespace&#32;jaco</emphasis>
+    </computeroutput></literallayout>
+</section>

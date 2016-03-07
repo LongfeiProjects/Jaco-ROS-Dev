@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="d2/d29/structros_1_1message__traits_1_1DataType_3_01_1_1jaco__msgs_1_1StartRequest___3_01ContainerAllocator_01_4_01_4">
+<title>ros::message_traits::DataType&lt; ::jaco_msgs::StartRequest_&lt; ContainerAllocator &gt; &gt; struct Reference</title>
+<para>
+    <programlisting>#include <link linkend="de/ddc/StartRequest_8h">&quot;StartRequest.h&quot;</link></programlisting>
+</para>
+<para>Inheritance diagram for ros::message_traits::DataType&lt; ::jaco_msgs::StartRequest_&lt; ContainerAllocator &gt; &gt;</para>
+<para>
+    <figure>
+        <title>Inheritance graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../dd/d2f/structros_1_1message__traits_1_1DataType_3_01_1_1jaco__msgs_1_1StartRequest___3_01ContainerAllocator_01_4_01_4__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Collaboration diagram for ros::message_traits::DataType&lt; ::jaco_msgs::StartRequest_&lt; ContainerAllocator &gt; &gt;</para>
+<para>
+    <figure>
+        <title>Collaboration graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../db/dc3/structros_1_1message__traits_1_1DataType_3_01_1_1jaco__msgs_1_1StartRequest___3_01ContainerAllocator_01_4_01_4__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+    <templateparamlist>
+      <param>
+        <type>class ContainerAllocator</type>
+      </param>
+    </templateparamlist>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static const char * <link linkend="d2/d29/structros_1_1message__traits_1_1DataType_3_01_1_1jaco__msgs_1_1StartRequest___3_01ContainerAllocator_01_4_01_4_1a64e773d5be141e4e26a5971b22683df3">value</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static const char * <link linkend="d2/d29/structros_1_1message__traits_1_1DataType_3_01_1_1jaco__msgs_1_1StartRequest___3_01ContainerAllocator_01_4_01_4_1ab98b53da7e7dbdc85028951bd34c34c2">value</link> (
+const ::<link linkend="d3/ded/structjaco__msgs_1_1StartRequest__">jaco_msgs::StartRequest_</link>&lt; ContainerAllocator &gt; &amp; )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+            <section xml:id="d2/d29/structros_1_1message__traits_1_1DataType_3_01_1_1jaco__msgs_1_1StartRequest___3_01ContainerAllocator_01_4_01_4_1a64e773d5be141e4e26a5971b22683df3">
+                <title>static const char* ros::message_traits::DataType&lt; ::jaco_msgs::StartRequest_&lt; ContainerAllocator &gt; &gt;::value ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="d2/d29/structros_1_1message__traits_1_1DataType_3_01_1_1jaco__msgs_1_1StartRequest___3_01ContainerAllocator_01_4_01_4_1ab98b53da7e7dbdc85028951bd34c34c2">
+                <title>static const char* ros::message_traits::DataType&lt; ::jaco_msgs::StartRequest_&lt; ContainerAllocator &gt; &gt;::value (const ::jaco_msgs::StartRequest_&lt; ContainerAllocator &gt; &amp;)</title> <emphasis></emphasis>
+                
+            </section>
+</section>

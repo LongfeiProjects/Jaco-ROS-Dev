@@ -1,0 +1,199 @@
+.TH "jaco::JacoAnglesActionServer" 3 "Thu Mar 3 2016" "Version 1.0.1" "Kinova-ROS" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+jaco::JacoAnglesActionServer \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include 'jaco_angles_action\&.h'\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBactionCallback\fP (const \fBjaco_msgs::ArmJointAnglesGoalConstPtr\fP &)"
+.br
+.ti -1c
+.RI "\fBJacoAnglesActionServer\fP (\fBJacoComm\fP &, const ros::NodeHandle &n)"
+.br
+.ti -1c
+.RI "\fB~JacoAnglesActionServer\fP ()"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "actionlib::SimpleActionServer< \fBjaco_msgs::ArmJointAnglesAction\fP > \fBaction_server_\fP"
+.br
+.ti -1c
+.RI "\fBJacoComm\fP & \fBarm_comm_\fP"
+.br
+.ti -1c
+.RI "\fBJacoAngles\fP \fBlast_nonstall_angles_\fP"
+.br
+.ti -1c
+.RI "ros::Time \fBlast_nonstall_time_\fP"
+.br
+.ti -1c
+.RI "ros::NodeHandle \fBnode_handle_\fP"
+.br
+.ti -1c
+.RI "double \fBrate_hz_\fP"
+.br
+.ti -1c
+.RI "double \fBstall_interval_seconds_\fP"
+.br
+.ti -1c
+.RI "double \fBstall_threshold_\fP"
+.br
+.ti -1c
+.RI "float \fBtolerance_\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "jaco::JacoAnglesActionServer::JacoAnglesActionServer (\fBJacoComm\fP & arm_comm, const ros::NodeHandle & n)"
+
+.PP
+.nf
+58     : arm_comm_(arm_comm),
+59       node_handle_(nh, "joint_angles"),
+60       action_server_(node_handle_, "arm_joint_angles",
+61                      boost::bind(&JacoAnglesActionServer::actionCallback, this, _1), false)
+62 {
+63     double tolerance;
+64     node_handle_\&.param<double>("stall_interval_seconds", stall_interval_seconds_, 0\&.5);
+65     node_handle_\&.param<double>("stall_threshold", stall_threshold_, 1\&.0);
+66     node_handle_\&.param<double>("rate_hz", rate_hz_, 10\&.0);
+67     node_handle_\&.param<double>("tolerance", tolerance, 2\&.0);
+68     tolerance_ = (float)tolerance;
+69 
+70     action_server_\&.start();
+71 }
+.fi
+.SS "jaco::JacoAnglesActionServer::~JacoAnglesActionServer ()"
+
+.PP
+.nf
+75 {
+76 }
+.fi
+.SH "Member Function Documentation"
+.PP 
+.SS "void jaco::JacoAnglesActionServer::actionCallback (const \fBjaco_msgs::ArmJointAnglesGoalConstPtr\fP & goal)"
+
+.PP
+.nf
+80 {
+81     jaco_msgs::ArmJointAnglesFeedback feedback;
+82     jaco_msgs::ArmJointAnglesResult result;
+83     JacoAngles current_joint_angles;
+84     ros::Time current_time = ros::Time::now();
+85 
+86     try
+87     {
+88         arm_comm_\&.getJointAngles(current_joint_angles);
+89 
+90         if (arm_comm_\&.isStopped())
+91         {
+92             ROS_INFO("Could not complete joint angle action because the arm is 'stopped'\&.");
+93             result\&.angles = current_joint_angles\&.constructAnglesMsg();
+94             action_server_\&.setAborted(result);
+95             return;
+96         }
+97 
+98         last_nonstall_time_ = current_time;
+99         last_nonstall_angles_ = current_joint_angles;
+100 
+101         JacoAngles target(goal->angles);
+102         arm_comm_\&.setJointAngles(target);
+103 
+104         // Loop until the action completed, is preempted, or fails in some way\&.
+105         // timeout is left to the caller since the timeout may greatly depend on
+106         // the context of the movement\&.
+107         while (true)
+108         {
+109             ros::spinOnce();
+110 
+111             if (action_server_\&.isPreemptRequested() || !ros::ok())
+112             {
+113                 result\&.angles = current_joint_angles\&.constructAnglesMsg();
+114                 arm_comm_\&.stopAPI();
+115                 arm_comm_\&.startAPI();
+116                 action_server_\&.setPreempted(result);
+117                 return;
+118             }
+119             else if (arm_comm_\&.isStopped())
+120             {
+121                 result\&.angles = current_joint_angles\&.constructAnglesMsg();
+122                 action_server_\&.setAborted(result);
+123                 return;
+124             }
+125 
+126             arm_comm_\&.getJointAngles(current_joint_angles);
+127             current_time = ros::Time::now();
+128             feedback\&.angles = current_joint_angles\&.constructAnglesMsg();
+129             action_server_\&.publishFeedback(feedback);
+130 
+131             if (target\&.isCloseToOther(current_joint_angles, tolerance_))
+132             {
+133                 // Check if the action has succeeeded
+134                 result\&.angles = current_joint_angles\&.constructAnglesMsg();
+135                 action_server_\&.setSucceeded(result);
+136                 return;
+137             }
+138             else if (!last_nonstall_angles_\&.isCloseToOther(current_joint_angles, stall_threshold_))
+139             {
+140                 // Check if we are outside of a potential stall condition
+141                 last_nonstall_time_ = current_time;
+142                 last_nonstall_angles_ = current_joint_angles;
+143             }
+144             else if ((current_time - last_nonstall_time_)\&.toSec() > stall_interval_seconds_)
+145             {
+146                 // Check if the full stall condition has been meet
+147                 result\&.angles = current_joint_angles\&.constructAnglesMsg();
+148                 arm_comm_\&.stopAPI();
+149                 arm_comm_\&.startAPI();
+150                 action_server_\&.setPreempted(result);
+151                 return;
+152             }
+153 
+154             ros::Rate(rate_hz_)\&.sleep();
+155         }
+156     }
+157     catch(const std::exception& e)
+158     {
+159         result\&.angles = current_joint_angles\&.constructAnglesMsg();
+160         ROS_ERROR_STREAM(e\&.what());
+161         action_server_\&.setAborted(result);
+162     }
+163 }
+.fi
+.SH "Member Data Documentation"
+.PP 
+.SS "actionlib::SimpleActionServer<\fBjaco_msgs::ArmJointAnglesAction\fP> jaco::JacoAnglesActionServer::action_server_\fC [private]\fP"
+
+.SS "\fBJacoComm\fP& jaco::JacoAnglesActionServer::arm_comm_\fC [private]\fP"
+
+.SS "\fBJacoAngles\fP jaco::JacoAnglesActionServer::last_nonstall_angles_\fC [private]\fP"
+
+.SS "ros::Time jaco::JacoAnglesActionServer::last_nonstall_time_\fC [private]\fP"
+
+.SS "ros::NodeHandle jaco::JacoAnglesActionServer::node_handle_\fC [private]\fP"
+
+.SS "double jaco::JacoAnglesActionServer::rate_hz_\fC [private]\fP"
+
+.SS "double jaco::JacoAnglesActionServer::stall_interval_seconds_\fC [private]\fP"
+
+.SS "double jaco::JacoAnglesActionServer::stall_threshold_\fC [private]\fP"
+
+.SS "float jaco::JacoAnglesActionServer::tolerance_\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Kinova-ROS from the source code\&.

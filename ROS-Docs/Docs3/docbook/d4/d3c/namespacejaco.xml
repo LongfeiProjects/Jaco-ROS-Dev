@@ -1,0 +1,385 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="d4/d3c/namespacejaco">
+<title>jaco</title>
+        <section>
+            <title> Classes </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="dd/d28/classjaco_1_1FingerAngles">jaco::FingerAngles</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d4/de6/classjaco_1_1JacoAngles">jaco::JacoAngles</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d8/d82/classjaco_1_1JacoAnglesActionServer">jaco::JacoAnglesActionServer</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d5/d3c/classjaco_1_1JacoAPI">jaco::JacoAPI</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d3/d95/classjaco_1_1JacoArm">jaco::JacoArm</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d5/d2b/classjaco_1_1JacoComm">jaco::JacoComm</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="df/dbe/classjaco_1_1JacoCommException">jaco::JacoCommException</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="de/d0e/classjaco_1_1JacoException">jaco::JacoException</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d7/de0/classjaco_1_1JacoFingersActionServer">jaco::JacoFingersActionServer</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d8/da9/classjaco_1_1JacoKinematics">jaco::JacoKinematics</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="dd/da4/classjaco_1_1JacoPose">jaco::JacoPose</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="dc/dc7/classjaco_1_1JacoPoseActionServer">jaco::JacoPoseActionServer</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="dc/d23/classjaco_1_1JacoTFTree">jaco::JacoTFTree</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Variables</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static const int <link linkend="d4/d3c/namespacejaco_1a842fe600d7cc8aba974c8e39e0d88399">JACO_JOINTS_COUNT</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Functions</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>bool <link linkend="d4/d3c/namespacejaco_1a09e679eeb93252a2cf092b064e724125">areValuesClose</link> (
+float first, float second, float tolerance)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void * <link linkend="d4/d3c/namespacejaco_1ac891d6a7bd4014a514126248d0191413">checkApiInit</link> (
+void * usbLib, const char * name)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>std::string <link linkend="d4/d3c/namespacejaco_1a6320c11725be13d2957c4e3f474d62f8">concatTfName</link> (
+const std::string &amp; prefix, const std::string name)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>float <link linkend="d4/d3c/namespacejaco_1a3e97ea63ad53f1e71821c5eee9346224">normalizeInDegrees</link> (
+float degrees)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>float <link linkend="d4/d3c/namespacejaco_1a564cf022c0783972c60ed14cfbc02a2a">normalizeInRads</link> (
+float rads)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>float <link linkend="d4/d3c/namespacejaco_1aad452eaf0313477fc5c5b403de174118">normalizePositiveInDegrees</link> (
+float degrees)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <simplesect>
+            <title>Detailed Description</title>
+
+<para><informaltable frame='bottom'><tgroup cols='1'><colspec align='center'/><tbody><row><entry align='center'>
+</entry></row></tbody></tgroup></informaltable>
+ / _ \ / _/ \ \ / / _/ \ / _/ _ \ ___ _ ___ ___ ____ ____ ___ _____ _ _ \ / _/ \ / / _| | | __| / _ \ | ++ \ | ++ \ / _ \ |_ _|| | | | \ _/ _/ / | | | | | ++ | |_| || ++ / | ++_/| |_| | | | | +-+ | \ _/ / | |_ | |_ | ++ | _ || |\ \ | | | _ | | | | +-+ | _____/ ___/|___||___||_| |_||_| _|_| |_| |_| |_| |_| |_| ROBOTICS™</para>
+
+<para>File: <link linkend="d5/dd2/jaco__angles__action_8cpp">jaco_angles_action.cpp</link> Desc: Class for moving/querying jaco arm. Auth: Alex Bencz, Jeff Schmidt</para>
+
+<para>Copyright (c) 2013, Clearpath Robotics, Inc. All Rights Reserved</para>
+
+<para>Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:<itemizedlist>
+<listitem>
+<para>Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.</para>
+</listitem><listitem>
+<para>Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.</para>
+</listitem><listitem>
+<para>Neither the name of Clearpath Robotics, Inc. nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.</para>
+</listitem></itemizedlist>
+</para>
+
+<para>THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS &quot;AS IS&quot; AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL CLEARPATH ROBOTICS, INC. BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</para>
+
+<para>Please send comments, questions, or patches to <link xlink:href="mailto:skynet@clearpathrobotics.com">skynet@clearpathrobotics.com</link></para>
+
+<para><informaltable frame='bottom'><tgroup cols='1'><colspec align='center'/><tbody><row><entry align='center'>
+</entry></row></tbody></tgroup></informaltable>
+ / _ \ / _/ \ \ / / _/ \ / _/ _ \ ___ _ ___ ___ ____ ____ ___ _____ _ _ \ / _/ \ / / _| | | __| / _ \ | ++ \ | ++ \ / _ \ |_ _|| | | | \ _/ _/ / | | | | | ++ | |_| || ++ / | ++_/| |_| | | | | +-+ | \ _/ / | |_ | |_ | ++ | _ || |\ \ | | | _ | | | | +-+ | _____/ ___/|___||___||_| |_||_| _|_| |_| |_| |_| |_| |_| ROBOTICS™</para>
+
+<para>File: <link linkend="d4/d27/jaco__comm_8cpp">jaco_comm.cpp</link> Desc: Class for moving/querying jaco arm. Auth: Alex Bencz, Jeff Schmidt</para>
+
+<para>Copyright (c) 2013, Clearpath Robotics, Inc. All Rights Reserved</para>
+
+<para>Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:<itemizedlist>
+<listitem>
+<para>Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.</para>
+</listitem><listitem>
+<para>Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.</para>
+</listitem><listitem>
+<para>Neither the name of Clearpath Robotics, Inc. nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.</para>
+</listitem></itemizedlist>
+</para>
+
+<para>THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS &quot;AS IS&quot; AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL CLEARPATH ROBOTICS, INC. BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</para>
+
+<para>Please send comments, questions, or patches to <link xlink:href="mailto:skynet@clearpathrobotics.com">skynet@clearpathrobotics.com</link></para>
+
+<para><informaltable frame='bottom'><tgroup cols='1'><colspec align='center'/><tbody><row><entry align='center'>
+</entry></row></tbody></tgroup></informaltable>
+ / _ \ / _/ \ \ / / _/ \ / _/ _ \ ___ _ ___ ___ ____ ____ ___ _____ _ _ \ / _/ \ / / _| | | __| / _ \ | ++ \ | ++ \ / _ \ |_ _|| | | | \ _/ _/ / | | | | | ++ | |_| || ++ / | ++_/| |_| | | | | +-+ | \ _/ / | |_ | |_ | ++ | _ || |\ \ | | | _ | | | | +-+ | _____/ ___/|___||___||_| |_||_| _|_| |_| |_| |_| |_| |_| ROBOTICS™</para>
+
+<para>File: <link linkend="d2/dc8/jaco__fingers__action_8cpp">jaco_fingers_action.cpp</link> Desc: Class for moving/querying jaco arm fingers. Auth: Jeff Schmidt</para>
+
+<para>Copyright (c) 2013, Clearpath Robotics, Inc. All Rights Reserved</para>
+
+<para>Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:<itemizedlist>
+<listitem>
+<para>Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.</para>
+</listitem><listitem>
+<para>Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.</para>
+</listitem><listitem>
+<para>Neither the name of Clearpath Robotics, Inc. nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.</para>
+</listitem></itemizedlist>
+</para>
+
+<para>THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS &quot;AS IS&quot; AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL CLEARPATH ROBOTICS, INC. BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</para>
+
+<para>Please send comments, questions, or patches to <link xlink:href="mailto:skynet@clearpathrobotics.com">skynet@clearpathrobotics.com</link></para>
+
+<para><informaltable frame='bottom'><tgroup cols='1'><colspec align='center'/><tbody><row><entry align='center'>
+</entry></row></tbody></tgroup></informaltable>
+ / _ \ / _/ \ \ / / _/ \ / _/ _ \ ___ _ ___ ___ ____ ____ ___ _____ _ _ \ / _/ \ / / _| | | __| / _ \ | ++ \ | ++ \ / _ \ |_ _|| | | | \ _/ _/ / | | | | | ++ | |_| || ++ / | ++_/| |_| | | | | +-+ | \ _/ / | |_ | |_ | ++ | _ || |\ \ | | | _ | | | | +-+ | _____/ ___/|___||___||_| |_||_| _|_| |_| |_| |_| |_| |_| ROBOTICS™</para>
+
+<para>File: <link linkend="dd/d26/jaco__pose__action_8cpp">jaco_pose_action.cpp</link> Desc: Class for moving/querying jaco arm. Auth: Alex Bencz, Jeff Schmidt</para>
+
+<para>Copyright (c) 2013, Clearpath Robotics, Inc. All Rights Reserved</para>
+
+<para>Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:<itemizedlist>
+<listitem>
+<para>Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.</para>
+</listitem><listitem>
+<para>Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.</para>
+</listitem><listitem>
+<para>Neither the name of Clearpath Robotics, Inc. nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.</para>
+</listitem></itemizedlist>
+</para>
+
+<para>THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS &quot;AS IS&quot; AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL CLEARPATH ROBOTICS, INC. BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</para>
+
+<para>Please send comments, questions, or patches to <link xlink:href="mailto:skynet@clearpathrobotics.com">skynet@clearpathrobotics.com</link></para>
+
+<para><informaltable frame='bottom'><tgroup cols='1'><colspec align='center'/><tbody><row><entry align='center'>
+</entry></row></tbody></tgroup></informaltable>
+ / _ \ / _/ \ \ / / _/ \ / _/ _ \ ___ _ ___ ___ ____ ____ ___ _____ _ _ \ / _/ \ / / _| | | __| / _ \ | ++ \ | ++ \ / _ \ |_ _|| | | | \ _/ _/ / | | | | | ++ | |_| || ++ / | ++_/| |_| | | | | +-+ | \ _/ / | |_ | |_ | ++ | _ || |\ \ | | | _ | | | | +-+ | _____/ ___/|___||___||_| |_||_| _|_| |_| |_| |_| |_| |_| ROBOTICS™</para>
+
+<para>File: <link linkend="d5/d36/jaco__types_8cpp">jaco_types.cpp</link> Desc: Wrappers around Kinova structs to facilitate easier conversion to ROS types. Auth: Alex Bencz</para>
+
+<para>Copyright (c) 2013, Clearpath Robotics, Inc. All Rights Reserved</para>
+
+<para>Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:<itemizedlist>
+<listitem>
+<para>Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.</para>
+</listitem><listitem>
+<para>Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.</para>
+</listitem><listitem>
+<para>Neither the name of Clearpath Robotics, Inc. nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.</para>
+</listitem></itemizedlist>
+</para>
+
+<para>THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS &quot;AS IS&quot; AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL CLEARPATH ROBOTICS, INC. BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</para>
+
+<para>Please send comments, questions, or patches to <link xlink:href="mailto:skynet@clearpathrobotics.com">skynet@clearpathrobotics.com</link></para>
+
+<para><informaltable frame='bottom'><tgroup cols='1'><colspec align='center'/><tbody><row><entry align='center'>
+</entry></row></tbody></tgroup></informaltable>
+ / _ \ / _/ \ \ / / _/ \ / _/ _ \ ___ _ ___ ___ ____ ____ ___ _____ _ _ \ / _/ \ / / _| | | __| / _ \ | ++ \ | ++ \ / _ \ |_ _|| | | | \ _/ _/ / | | | | | ++ | |_| || ++ / | ++_/| |_| | | | | +-+ | \ _/ / | |_ | |_ | ++ | _ || |\ \ | | | _ | | | | +-+ | _____/ ___/|___||___||_| |_||_| _|_| |_| |_| |_| |_| |_| ROBOTICS™</para>
+
+<para>File: <link linkend="d2/d16/jaco__angles__action_8h">jaco_angles_action.h</link> Desc: Action server for jaco arm. Auth: Alex Bencz, Jeff Schmidt</para>
+
+<para>Copyright (c) 2013, Clearpath Robotics, Inc. All Rights Reserved</para>
+
+<para>Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:<itemizedlist>
+<listitem>
+<para>Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.</para>
+</listitem><listitem>
+<para>Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.</para>
+</listitem><listitem>
+<para>Neither the name of Clearpath Robotics, Inc. nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.</para>
+</listitem></itemizedlist>
+</para>
+
+<para>THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS &quot;AS IS&quot; AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL CLEARPATH ROBOTICS, INC. BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</para>
+
+<para>Please send comments, questions, or patches to <link xlink:href="mailto:skynet@clearpathrobotics.com">skynet@clearpathrobotics.com</link></para>
+
+<para><informaltable frame='bottom'><tgroup cols='1'><colspec align='center'/><tbody><row><entry align='center'>
+</entry></row></tbody></tgroup></informaltable>
+ / _ \ / _/ \ \ / / _/ \ / _/ _ \ ___ _ ___ ___ ____ ____ ___ _____ _ _ \ / _/ \ / / _| | | __| / _ \ | ++ \ | ++ \ / _ \ |_ _|| | | | \ _/ _/ / | | | | | ++ | |_| || ++ / | ++_/| |_| | | | | +-+ | \ _/ / | |_ | |_ | ++ | _ || |\ \ | | | _ | | | | +-+ | _____/ ___/|___||___||_| |_||_| _|_| |_| |_| |_| |_| |_| ROBOTICS™</para>
+
+<para>File: <link linkend="d8/de6/jaco__comm_8h">jaco_comm.h</link> Desc: Class for moving/querying jaco arm. Auth: Alex Bencz, Jeff Schmidt</para>
+
+<para>Copyright (c) 2013, Clearpath Robotics, Inc. All Rights Reserved</para>
+
+<para>Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:<itemizedlist>
+<listitem>
+<para>Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.</para>
+</listitem><listitem>
+<para>Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.</para>
+</listitem><listitem>
+<para>Neither the name of Clearpath Robotics, Inc. nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.</para>
+</listitem></itemizedlist>
+</para>
+
+<para>THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS &quot;AS IS&quot; AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL CLEARPATH ROBOTICS, INC. BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</para>
+
+<para>Please send comments, questions, or patches to <link xlink:href="mailto:skynet@clearpathrobotics.com">skynet@clearpathrobotics.com</link></para>
+
+<para><informaltable frame='bottom'><tgroup cols='1'><colspec align='center'/><tbody><row><entry align='center'>
+</entry></row></tbody></tgroup></informaltable>
+ / _ \ / _/ \ \ / / _/ \ / _/ _ \ ___ _ ___ ___ ____ ____ ___ _____ _ _ \ / _/ \ / / _| | | __| / _ \ | ++ \ | ++ \ / _ \ |_ _|| | | | \ _/ _/ / | | | | | ++ | |_| || ++ / | ++_/| |_| | | | | +-+ | \ _/ / | |_ | |_ | ++ | _ || |\ \ | | | _ | | | | +-+ | _____/ ___/|___||___||_| |_||_| _|_| |_| |_| |_| |_| |_| ROBOTICS™</para>
+
+<para>File: <link linkend="dc/d0a/jaco__fingers__action_8h">jaco_fingers_action.h</link> Desc: Action server for jaco arm fingers. Auth: Jeff Schmidt</para>
+
+<para>Copyright (c) 2013, Clearpath Robotics, Inc. All Rights Reserved</para>
+
+<para>Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:<itemizedlist>
+<listitem>
+<para>Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.</para>
+</listitem><listitem>
+<para>Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.</para>
+</listitem><listitem>
+<para>Neither the name of Clearpath Robotics, Inc. nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.</para>
+</listitem></itemizedlist>
+</para>
+
+<para>THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS &quot;AS IS&quot; AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL CLEARPATH ROBOTICS, INC. BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</para>
+
+<para>Please send comments, questions, or patches to <link xlink:href="mailto:skynet@clearpathrobotics.com">skynet@clearpathrobotics.com</link></para>
+
+<para><informaltable frame='bottom'><tgroup cols='1'><colspec align='center'/><tbody><row><entry align='center'>
+</entry></row></tbody></tgroup></informaltable>
+ / _ \ / _/ \ \ / / _/ \ / _/ _ \ ___ _ ___ ___ ____ ____ ___ _____ _ _ \ / _/ \ / / _| | | __| / _ \ | ++ \ | ++ \ / _ \ |_ _|| | | | \ _/ _/ / | | | | | ++ | |_| || ++ / | ++_/| |_| | | | | +-+ | \ _/ / | |_ | |_ | ++ | _ || |\ \ | | | _ | | | | +-+ | _____/ ___/|___||___||_| |_||_| _|_| |_| |_| |_| |_| |_| ROBOTICS™</para>
+
+<para>File: <link linkend="d9/dd3/jaco__pose__action_8h">jaco_pose_action.h</link> Desc: Action server for jaco arm. Auth: Alex Bencz, Jeff Schmidt</para>
+
+<para>Copyright (c) 2013, Clearpath Robotics, Inc. All Rights Reserved</para>
+
+<para>Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:<itemizedlist>
+<listitem>
+<para>Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.</para>
+</listitem><listitem>
+<para>Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.</para>
+</listitem><listitem>
+<para>Neither the name of Clearpath Robotics, Inc. nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.</para>
+</listitem></itemizedlist>
+</para>
+
+<para>THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS &quot;AS IS&quot; AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL CLEARPATH ROBOTICS, INC. BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</para>
+
+<para>Please send comments, questions, or patches to <link xlink:href="mailto:skynet@clearpathrobotics.com">skynet@clearpathrobotics.com</link></para>
+
+<para><informaltable frame='bottom'><tgroup cols='1'><colspec align='center'/><tbody><row><entry align='center'>
+</entry></row></tbody></tgroup></informaltable>
+ / _ \ / _/ \ \ / / _/ \ / _/ _ \ ___ _ ___ ___ ____ ____ ___ _____ _ _ \ / _/ \ / / _| | | __| / _ \ | ++ \ | ++ \ / _ \ |_ _|| | | | \ _/ _/ / | | | | | ++ | |_| || ++ / | ++_/| |_| | | | | +-+ | \ _/ / | |_ | |_ | ++ | _ || |\ \ | | | _ | | | | +-+ | _____/ ___/|___||___||_| |_||_| _|_| |_| |_| |_| |_| |_| ROBOTICS™</para>
+
+<para>File: <link linkend="d7/d98/jaco__types_8h">jaco_types.h</link> Desc: Wrappers around Kinova types. Auth: Alex Bencz</para>
+
+<para>Copyright (c) 2013, Clearpath Robotics, Inc. All Rights Reserved</para>
+
+<para>Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:<itemizedlist>
+<listitem>
+<para>Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.</para>
+</listitem><listitem>
+<para>Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.</para>
+</listitem><listitem>
+<para>Neither the name of Clearpath Robotics, Inc. nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.</para>
+</listitem></itemizedlist>
+</para>
+
+<para>THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS &quot;AS IS&quot; AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL CLEARPATH ROBOTICS, INC. BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</para>
+
+<para>Please send comments, questions, or patches to <link xlink:href="mailto:skynet@clearpathrobotics.com">skynet@clearpathrobotics.com</link> </para>
+                <para>Definition at line 55 of file jaco_angles_action.cpp</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>jaco_angles_action.cpp</para></listitem></itemizedlist></para>
+        </simplesect>
+</section>

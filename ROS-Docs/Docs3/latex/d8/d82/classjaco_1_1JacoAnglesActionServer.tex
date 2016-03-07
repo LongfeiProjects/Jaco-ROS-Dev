@@ -1,0 +1,226 @@
+\hypertarget{classjaco_1_1JacoAnglesActionServer}{}\section{jaco\+:\+:Jaco\+Angles\+Action\+Server Class Reference}
+\label{classjaco_1_1JacoAnglesActionServer}\index{jaco\+::\+Jaco\+Angles\+Action\+Server@{jaco\+::\+Jaco\+Angles\+Action\+Server}}
+
+
+{\ttfamily \#include \char`\"{}jaco\+\_\+angles\+\_\+action.\+h\char`\"{}}
+
+
+
+Collaboration diagram for jaco\+:\+:Jaco\+Angles\+Action\+Server\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{d7/d31/classjaco_1_1JacoAnglesActionServer__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classjaco_1_1JacoAnglesActionServer_a3a3da8fd412f2311534246d2287a5b90}{action\+Callback} (const \hyperlink{namespacejaco__msgs_a9056d2fb29e6973f6db43a60138ffc7c}{jaco\+\_\+msgs\+::\+Arm\+Joint\+Angles\+Goal\+Const\+Ptr} \&)
+\item 
+\hyperlink{classjaco_1_1JacoAnglesActionServer_a53ddba342c38bb3d9cf34ad773d7189f}{Jaco\+Angles\+Action\+Server} (\hyperlink{classjaco_1_1JacoComm}{Jaco\+Comm} \&, const ros\+::\+Node\+Handle \&n)
+\item 
+\hyperlink{classjaco_1_1JacoAnglesActionServer_a6d6ed0c99c45e1eebab14bba3233580e}{$\sim$\+Jaco\+Angles\+Action\+Server} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+actionlib\+::\+Simple\+Action\+Server$<$ \hyperlink{namespacejaco__msgs_afc04c716621af8a0dfe0968d1db0f90c}{jaco\+\_\+msgs\+::\+Arm\+Joint\+Angles\+Action} $>$ \hyperlink{classjaco_1_1JacoAnglesActionServer_a29d204d1bff466987e69761085a3c532}{action\+\_\+server\+\_\+}
+\item 
+\hyperlink{classjaco_1_1JacoComm}{Jaco\+Comm} \& \hyperlink{classjaco_1_1JacoAnglesActionServer_a72ed0ccae4532199d387cc3bfe278cb0}{arm\+\_\+comm\+\_\+}
+\item 
+\hyperlink{classjaco_1_1JacoAngles}{Jaco\+Angles} \hyperlink{classjaco_1_1JacoAnglesActionServer_adb99422d834b8a2fa5f26ddd3ac95e52}{last\+\_\+nonstall\+\_\+angles\+\_\+}
+\item 
+ros\+::\+Time \hyperlink{classjaco_1_1JacoAnglesActionServer_afca8c9e29d0249737632a232e149400d}{last\+\_\+nonstall\+\_\+time\+\_\+}
+\item 
+ros\+::\+Node\+Handle \hyperlink{classjaco_1_1JacoAnglesActionServer_a9d3d8137fef5e34ffb99c8cc1c6e9e17}{node\+\_\+handle\+\_\+}
+\item 
+double \hyperlink{classjaco_1_1JacoAnglesActionServer_aba435023cc4e95378e8c77333bef1ccf}{rate\+\_\+hz\+\_\+}
+\item 
+double \hyperlink{classjaco_1_1JacoAnglesActionServer_a2bf773e52f5d3751001415e8121fe276}{stall\+\_\+interval\+\_\+seconds\+\_\+}
+\item 
+double \hyperlink{classjaco_1_1JacoAnglesActionServer_a7372c88107de61bb149cea6a60932f71}{stall\+\_\+threshold\+\_\+}
+\item 
+float \hyperlink{classjaco_1_1JacoAnglesActionServer_acc1edd1f538d1bf9c05c91c94a4abfa1}{tolerance\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{jaco\+::\+Jaco\+Angles\+Action\+Server@{jaco\+::\+Jaco\+Angles\+Action\+Server}!Jaco\+Angles\+Action\+Server@{Jaco\+Angles\+Action\+Server}}
+\index{Jaco\+Angles\+Action\+Server@{Jaco\+Angles\+Action\+Server}!jaco\+::\+Jaco\+Angles\+Action\+Server@{jaco\+::\+Jaco\+Angles\+Action\+Server}}
+\subsubsection[{\texorpdfstring{Jaco\+Angles\+Action\+Server(\+Jaco\+Comm \&, const ros\+::\+Node\+Handle \&n)}{JacoAnglesActionServer(JacoComm &, const ros::NodeHandle &n)}}]{\setlength{\rightskip}{0pt plus 5cm}jaco\+::\+Jaco\+Angles\+Action\+Server\+::\+Jaco\+Angles\+Action\+Server (
+\begin{DoxyParamCaption}
+\item[{{\bf Jaco\+Comm} \&}]{arm\+\_\+comm, }
+\item[{const ros\+::\+Node\+Handle \&}]{n}
+\end{DoxyParamCaption}
+)}\hypertarget{classjaco_1_1JacoAnglesActionServer_a53ddba342c38bb3d9cf34ad773d7189f}{}\label{classjaco_1_1JacoAnglesActionServer_a53ddba342c38bb3d9cf34ad773d7189f}
+
+\begin{DoxyCode}
+58     : \hyperlink{classjaco_1_1JacoAnglesActionServer_a72ed0ccae4532199d387cc3bfe278cb0}{arm\_comm\_}(arm\_comm),
+59       \hyperlink{classjaco_1_1JacoAnglesActionServer_a9d3d8137fef5e34ffb99c8cc1c6e9e17}{node\_handle\_}(nh, \textcolor{stringliteral}{"joint\_angles"}),
+60       \hyperlink{classjaco_1_1JacoAnglesActionServer_a29d204d1bff466987e69761085a3c532}{action\_server\_}(\hyperlink{classjaco_1_1JacoAnglesActionServer_a9d3d8137fef5e34ffb99c8cc1c6e9e17}{node\_handle\_}, \textcolor{stringliteral}{"arm\_joint\_angles"},
+61                      boost::bind(&\hyperlink{classjaco_1_1JacoAnglesActionServer_a3a3da8fd412f2311534246d2287a5b90}{JacoAnglesActionServer::actionCallback}
+      , \textcolor{keyword}{this}, \_1), \textcolor{keyword}{false})
+62 \{
+63     \textcolor{keywordtype}{double} tolerance;
+64     \hyperlink{classjaco_1_1JacoAnglesActionServer_a9d3d8137fef5e34ffb99c8cc1c6e9e17}{node\_handle\_}.param<\textcolor{keywordtype}{double}>(\textcolor{stringliteral}{"stall\_interval\_seconds"}, 
+      \hyperlink{classjaco_1_1JacoAnglesActionServer_a2bf773e52f5d3751001415e8121fe276}{stall\_interval\_seconds\_}, 0.5);
+65     \hyperlink{classjaco_1_1JacoAnglesActionServer_a9d3d8137fef5e34ffb99c8cc1c6e9e17}{node\_handle\_}.param<\textcolor{keywordtype}{double}>(\textcolor{stringliteral}{"stall\_threshold"}, \hyperlink{classjaco_1_1JacoAnglesActionServer_a7372c88107de61bb149cea6a60932f71}{stall\_threshold\_}, 1.0);
+66     \hyperlink{classjaco_1_1JacoAnglesActionServer_a9d3d8137fef5e34ffb99c8cc1c6e9e17}{node\_handle\_}.param<\textcolor{keywordtype}{double}>(\textcolor{stringliteral}{"rate\_hz"}, \hyperlink{classjaco_1_1JacoAnglesActionServer_aba435023cc4e95378e8c77333bef1ccf}{rate\_hz\_}, 10.0);
+67     \hyperlink{classjaco_1_1JacoAnglesActionServer_a9d3d8137fef5e34ffb99c8cc1c6e9e17}{node\_handle\_}.param<\textcolor{keywordtype}{double}>(\textcolor{stringliteral}{"tolerance"}, tolerance, 2.0);
+68     \hyperlink{classjaco_1_1JacoAnglesActionServer_acc1edd1f538d1bf9c05c91c94a4abfa1}{tolerance\_} = (float)tolerance;
+69 
+70     \hyperlink{classjaco_1_1JacoAnglesActionServer_a29d204d1bff466987e69761085a3c532}{action\_server\_}.start();
+71 \}
+\end{DoxyCode}
+\index{jaco\+::\+Jaco\+Angles\+Action\+Server@{jaco\+::\+Jaco\+Angles\+Action\+Server}!````~Jaco\+Angles\+Action\+Server@{$\sim$\+Jaco\+Angles\+Action\+Server}}
+\index{````~Jaco\+Angles\+Action\+Server@{$\sim$\+Jaco\+Angles\+Action\+Server}!jaco\+::\+Jaco\+Angles\+Action\+Server@{jaco\+::\+Jaco\+Angles\+Action\+Server}}
+\subsubsection[{\texorpdfstring{$\sim$\+Jaco\+Angles\+Action\+Server()}{~JacoAnglesActionServer()}}]{\setlength{\rightskip}{0pt plus 5cm}jaco\+::\+Jaco\+Angles\+Action\+Server\+::$\sim$\+Jaco\+Angles\+Action\+Server (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classjaco_1_1JacoAnglesActionServer_a6d6ed0c99c45e1eebab14bba3233580e}{}\label{classjaco_1_1JacoAnglesActionServer_a6d6ed0c99c45e1eebab14bba3233580e}
+
+\begin{DoxyCode}
+75 \{
+76 \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{jaco\+::\+Jaco\+Angles\+Action\+Server@{jaco\+::\+Jaco\+Angles\+Action\+Server}!action\+Callback@{action\+Callback}}
+\index{action\+Callback@{action\+Callback}!jaco\+::\+Jaco\+Angles\+Action\+Server@{jaco\+::\+Jaco\+Angles\+Action\+Server}}
+\subsubsection[{\texorpdfstring{action\+Callback(const jaco\+\_\+msgs\+::\+Arm\+Joint\+Angles\+Goal\+Const\+Ptr \&)}{actionCallback(const jaco_msgs::ArmJointAnglesGoalConstPtr &)}}]{\setlength{\rightskip}{0pt plus 5cm}void jaco\+::\+Jaco\+Angles\+Action\+Server\+::action\+Callback (
+\begin{DoxyParamCaption}
+\item[{const {\bf jaco\+\_\+msgs\+::\+Arm\+Joint\+Angles\+Goal\+Const\+Ptr} \&}]{goal}
+\end{DoxyParamCaption}
+)}\hypertarget{classjaco_1_1JacoAnglesActionServer_a3a3da8fd412f2311534246d2287a5b90}{}\label{classjaco_1_1JacoAnglesActionServer_a3a3da8fd412f2311534246d2287a5b90}
+
+\begin{DoxyCode}
+80 \{
+81     \hyperlink{structjaco__msgs_1_1ArmJointAnglesFeedback__}{jaco\_msgs::ArmJointAnglesFeedback} feedback;
+82     \hyperlink{structjaco__msgs_1_1ArmJointAnglesResult__}{jaco\_msgs::ArmJointAnglesResult} \hyperlink{Kinova_8API_8CommLayerUbuntu_8h_a900dac90961bada00f57c207562a6a9a}{result};
+83     JacoAngles current\_joint\_angles;
+84     ros::Time current\_time = ros::Time::now();
+85 
+86     \textcolor{keywordflow}{try}
+87     \{
+88         \hyperlink{classjaco_1_1JacoAnglesActionServer_a72ed0ccae4532199d387cc3bfe278cb0}{arm\_comm\_}.\hyperlink{classjaco_1_1JacoComm_a5fcb23bf6925a82f2ab5e42460ea3834}{getJointAngles}(current\_joint\_angles);
+89 
+90         \textcolor{keywordflow}{if} (\hyperlink{classjaco_1_1JacoAnglesActionServer_a72ed0ccae4532199d387cc3bfe278cb0}{arm\_comm\_}.\hyperlink{classjaco_1_1JacoComm_a872b8033cda5a9fe4ccdca2e89aa03d1}{isStopped}())
+91         \{
+92             ROS\_INFO(\textcolor{stringliteral}{"Could not complete joint angle action because the arm is 'stopped'."});
+93             result.\hyperlink{structjaco__msgs_1_1ArmJointAnglesResult___a5b6fe64a0d822194474af38863a9f8a2}{angles} = current\_joint\_angles.constructAnglesMsg();
+94             \hyperlink{classjaco_1_1JacoAnglesActionServer_a29d204d1bff466987e69761085a3c532}{action\_server\_}.setAborted(result);
+95             \textcolor{keywordflow}{return};
+96         \}
+97 
+98         \hyperlink{classjaco_1_1JacoAnglesActionServer_afca8c9e29d0249737632a232e149400d}{last\_nonstall\_time\_} = current\_time;
+99         \hyperlink{classjaco_1_1JacoAnglesActionServer_adb99422d834b8a2fa5f26ddd3ac95e52}{last\_nonstall\_angles\_} = current\_joint\_angles;
+100 
+101         JacoAngles target(goal->angles);
+102         \hyperlink{classjaco_1_1JacoAnglesActionServer_a72ed0ccae4532199d387cc3bfe278cb0}{arm\_comm\_}.\hyperlink{classjaco_1_1JacoComm_ad53fa0c190d41da8430de2e9bf997f05}{setJointAngles}(target);
+103 
+104         \textcolor{comment}{// Loop until the action completed, is preempted, or fails in some way.}
+105         \textcolor{comment}{// timeout is left to the caller since the timeout may greatly depend on}
+106         \textcolor{comment}{// the context of the movement.}
+107         \textcolor{keywordflow}{while} (\textcolor{keyword}{true})
+108         \{
+109             ros::spinOnce();
+110 
+111             \textcolor{keywordflow}{if} (\hyperlink{classjaco_1_1JacoAnglesActionServer_a29d204d1bff466987e69761085a3c532}{action\_server\_}.isPreemptRequested() || !ros::ok())
+112             \{
+113                 result.\hyperlink{structjaco__msgs_1_1ArmJointAnglesResult___a5b6fe64a0d822194474af38863a9f8a2}{angles} = current\_joint\_angles.constructAnglesMsg();
+114                 \hyperlink{classjaco_1_1JacoAnglesActionServer_a72ed0ccae4532199d387cc3bfe278cb0}{arm\_comm\_}.\hyperlink{classjaco_1_1JacoComm_a54862830cd6414ae3ae48e46e54bf798}{stopAPI}();
+115                 \hyperlink{classjaco_1_1JacoAnglesActionServer_a72ed0ccae4532199d387cc3bfe278cb0}{arm\_comm\_}.\hyperlink{classjaco_1_1JacoComm_a6b2a1fabc4e6c30da42c9a5e26757398}{startAPI}();
+116                 \hyperlink{classjaco_1_1JacoAnglesActionServer_a29d204d1bff466987e69761085a3c532}{action\_server\_}.setPreempted(result);
+117                 \textcolor{keywordflow}{return};
+118             \}
+119             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\hyperlink{classjaco_1_1JacoAnglesActionServer_a72ed0ccae4532199d387cc3bfe278cb0}{arm\_comm\_}.\hyperlink{classjaco_1_1JacoComm_a872b8033cda5a9fe4ccdca2e89aa03d1}{isStopped}())
+120             \{
+121                 result.\hyperlink{structjaco__msgs_1_1ArmJointAnglesResult___a5b6fe64a0d822194474af38863a9f8a2}{angles} = current\_joint\_angles.constructAnglesMsg();
+122                 \hyperlink{classjaco_1_1JacoAnglesActionServer_a29d204d1bff466987e69761085a3c532}{action\_server\_}.setAborted(result);
+123                 \textcolor{keywordflow}{return};
+124             \}
+125 
+126             \hyperlink{classjaco_1_1JacoAnglesActionServer_a72ed0ccae4532199d387cc3bfe278cb0}{arm\_comm\_}.\hyperlink{classjaco_1_1JacoComm_a5fcb23bf6925a82f2ab5e42460ea3834}{getJointAngles}(current\_joint\_angles);
+127             current\_time = ros::Time::now();
+128             feedback.\hyperlink{structjaco__msgs_1_1ArmJointAnglesFeedback___a5b3d327fd594aa0715666bf1c95359e4}{angles} = current\_joint\_angles.constructAnglesMsg();
+129             \hyperlink{classjaco_1_1JacoAnglesActionServer_a29d204d1bff466987e69761085a3c532}{action\_server\_}.publishFeedback(feedback);
+130 
+131             \textcolor{keywordflow}{if} (target.isCloseToOther(current\_joint\_angles, \hyperlink{classjaco_1_1JacoAnglesActionServer_acc1edd1f538d1bf9c05c91c94a4abfa1}{tolerance\_}))
+132             \{
+133                 \textcolor{comment}{// Check if the action has succeeeded}
+134                 result.\hyperlink{structjaco__msgs_1_1ArmJointAnglesResult___a5b6fe64a0d822194474af38863a9f8a2}{angles} = current\_joint\_angles.constructAnglesMsg();
+135                 \hyperlink{classjaco_1_1JacoAnglesActionServer_a29d204d1bff466987e69761085a3c532}{action\_server\_}.setSucceeded(result);
+136                 \textcolor{keywordflow}{return};
+137             \}
+138             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (!\hyperlink{classjaco_1_1JacoAnglesActionServer_adb99422d834b8a2fa5f26ddd3ac95e52}{last\_nonstall\_angles\_}.\hyperlink{classjaco_1_1JacoAngles_aff68997afe0dac41e4c777b649c2b5d4}{isCloseToOther}(
+      current\_joint\_angles, \hyperlink{classjaco_1_1JacoAnglesActionServer_a7372c88107de61bb149cea6a60932f71}{stall\_threshold\_}))
+139             \{
+140                 \textcolor{comment}{// Check if we are outside of a potential stall condition}
+141                 \hyperlink{classjaco_1_1JacoAnglesActionServer_afca8c9e29d0249737632a232e149400d}{last\_nonstall\_time\_} = current\_time;
+142                 \hyperlink{classjaco_1_1JacoAnglesActionServer_adb99422d834b8a2fa5f26ddd3ac95e52}{last\_nonstall\_angles\_} = current\_joint\_angles;
+143             \}
+144             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} ((current\_time - \hyperlink{classjaco_1_1JacoAnglesActionServer_afca8c9e29d0249737632a232e149400d}{last\_nonstall\_time\_}).toSec() > 
+      \hyperlink{classjaco_1_1JacoAnglesActionServer_a2bf773e52f5d3751001415e8121fe276}{stall\_interval\_seconds\_})
+145             \{
+146                 \textcolor{comment}{// Check if the full stall condition has been meet}
+147                 result.\hyperlink{structjaco__msgs_1_1ArmJointAnglesResult___a5b6fe64a0d822194474af38863a9f8a2}{angles} = current\_joint\_angles.constructAnglesMsg();
+148                 \hyperlink{classjaco_1_1JacoAnglesActionServer_a72ed0ccae4532199d387cc3bfe278cb0}{arm\_comm\_}.\hyperlink{classjaco_1_1JacoComm_a54862830cd6414ae3ae48e46e54bf798}{stopAPI}();
+149                 \hyperlink{classjaco_1_1JacoAnglesActionServer_a72ed0ccae4532199d387cc3bfe278cb0}{arm\_comm\_}.\hyperlink{classjaco_1_1JacoComm_a6b2a1fabc4e6c30da42c9a5e26757398}{startAPI}();
+150                 \hyperlink{classjaco_1_1JacoAnglesActionServer_a29d204d1bff466987e69761085a3c532}{action\_server\_}.setPreempted(result);
+151                 \textcolor{keywordflow}{return};
+152             \}
+153 
+154             ros::Rate(\hyperlink{classjaco_1_1JacoAnglesActionServer_aba435023cc4e95378e8c77333bef1ccf}{rate\_hz\_}).sleep();
+155         \}
+156     \}
+157     \textcolor{keywordflow}{catch}(\textcolor{keyword}{const} std::exception& \hyperlink{namespace__setup__util_acdce690b925de33d6249bbbfa1109d61}{e})
+158     \{
+159         result.\hyperlink{structjaco__msgs_1_1ArmJointAnglesResult___a5b6fe64a0d822194474af38863a9f8a2}{angles} = current\_joint\_angles.constructAnglesMsg();
+160         ROS\_ERROR\_STREAM(e.what());
+161         \hyperlink{classjaco_1_1JacoAnglesActionServer_a29d204d1bff466987e69761085a3c532}{action\_server\_}.setAborted(result);
+162     \}
+163 \}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\index{jaco\+::\+Jaco\+Angles\+Action\+Server@{jaco\+::\+Jaco\+Angles\+Action\+Server}!action\+\_\+server\+\_\+@{action\+\_\+server\+\_\+}}
+\index{action\+\_\+server\+\_\+@{action\+\_\+server\+\_\+}!jaco\+::\+Jaco\+Angles\+Action\+Server@{jaco\+::\+Jaco\+Angles\+Action\+Server}}
+\subsubsection[{\texorpdfstring{action\+\_\+server\+\_\+}{action_server_}}]{\setlength{\rightskip}{0pt plus 5cm}actionlib\+::\+Simple\+Action\+Server$<${\bf jaco\+\_\+msgs\+::\+Arm\+Joint\+Angles\+Action}$>$ jaco\+::\+Jaco\+Angles\+Action\+Server\+::action\+\_\+server\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classjaco_1_1JacoAnglesActionServer_a29d204d1bff466987e69761085a3c532}{}\label{classjaco_1_1JacoAnglesActionServer_a29d204d1bff466987e69761085a3c532}
+\index{jaco\+::\+Jaco\+Angles\+Action\+Server@{jaco\+::\+Jaco\+Angles\+Action\+Server}!arm\+\_\+comm\+\_\+@{arm\+\_\+comm\+\_\+}}
+\index{arm\+\_\+comm\+\_\+@{arm\+\_\+comm\+\_\+}!jaco\+::\+Jaco\+Angles\+Action\+Server@{jaco\+::\+Jaco\+Angles\+Action\+Server}}
+\subsubsection[{\texorpdfstring{arm\+\_\+comm\+\_\+}{arm_comm_}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Jaco\+Comm}\& jaco\+::\+Jaco\+Angles\+Action\+Server\+::arm\+\_\+comm\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classjaco_1_1JacoAnglesActionServer_a72ed0ccae4532199d387cc3bfe278cb0}{}\label{classjaco_1_1JacoAnglesActionServer_a72ed0ccae4532199d387cc3bfe278cb0}
+\index{jaco\+::\+Jaco\+Angles\+Action\+Server@{jaco\+::\+Jaco\+Angles\+Action\+Server}!last\+\_\+nonstall\+\_\+angles\+\_\+@{last\+\_\+nonstall\+\_\+angles\+\_\+}}
+\index{last\+\_\+nonstall\+\_\+angles\+\_\+@{last\+\_\+nonstall\+\_\+angles\+\_\+}!jaco\+::\+Jaco\+Angles\+Action\+Server@{jaco\+::\+Jaco\+Angles\+Action\+Server}}
+\subsubsection[{\texorpdfstring{last\+\_\+nonstall\+\_\+angles\+\_\+}{last_nonstall_angles_}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Jaco\+Angles} jaco\+::\+Jaco\+Angles\+Action\+Server\+::last\+\_\+nonstall\+\_\+angles\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classjaco_1_1JacoAnglesActionServer_adb99422d834b8a2fa5f26ddd3ac95e52}{}\label{classjaco_1_1JacoAnglesActionServer_adb99422d834b8a2fa5f26ddd3ac95e52}
+\index{jaco\+::\+Jaco\+Angles\+Action\+Server@{jaco\+::\+Jaco\+Angles\+Action\+Server}!last\+\_\+nonstall\+\_\+time\+\_\+@{last\+\_\+nonstall\+\_\+time\+\_\+}}
+\index{last\+\_\+nonstall\+\_\+time\+\_\+@{last\+\_\+nonstall\+\_\+time\+\_\+}!jaco\+::\+Jaco\+Angles\+Action\+Server@{jaco\+::\+Jaco\+Angles\+Action\+Server}}
+\subsubsection[{\texorpdfstring{last\+\_\+nonstall\+\_\+time\+\_\+}{last_nonstall_time_}}]{\setlength{\rightskip}{0pt plus 5cm}ros\+::\+Time jaco\+::\+Jaco\+Angles\+Action\+Server\+::last\+\_\+nonstall\+\_\+time\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classjaco_1_1JacoAnglesActionServer_afca8c9e29d0249737632a232e149400d}{}\label{classjaco_1_1JacoAnglesActionServer_afca8c9e29d0249737632a232e149400d}
+\index{jaco\+::\+Jaco\+Angles\+Action\+Server@{jaco\+::\+Jaco\+Angles\+Action\+Server}!node\+\_\+handle\+\_\+@{node\+\_\+handle\+\_\+}}
+\index{node\+\_\+handle\+\_\+@{node\+\_\+handle\+\_\+}!jaco\+::\+Jaco\+Angles\+Action\+Server@{jaco\+::\+Jaco\+Angles\+Action\+Server}}
+\subsubsection[{\texorpdfstring{node\+\_\+handle\+\_\+}{node_handle_}}]{\setlength{\rightskip}{0pt plus 5cm}ros\+::\+Node\+Handle jaco\+::\+Jaco\+Angles\+Action\+Server\+::node\+\_\+handle\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classjaco_1_1JacoAnglesActionServer_a9d3d8137fef5e34ffb99c8cc1c6e9e17}{}\label{classjaco_1_1JacoAnglesActionServer_a9d3d8137fef5e34ffb99c8cc1c6e9e17}
+\index{jaco\+::\+Jaco\+Angles\+Action\+Server@{jaco\+::\+Jaco\+Angles\+Action\+Server}!rate\+\_\+hz\+\_\+@{rate\+\_\+hz\+\_\+}}
+\index{rate\+\_\+hz\+\_\+@{rate\+\_\+hz\+\_\+}!jaco\+::\+Jaco\+Angles\+Action\+Server@{jaco\+::\+Jaco\+Angles\+Action\+Server}}
+\subsubsection[{\texorpdfstring{rate\+\_\+hz\+\_\+}{rate_hz_}}]{\setlength{\rightskip}{0pt plus 5cm}double jaco\+::\+Jaco\+Angles\+Action\+Server\+::rate\+\_\+hz\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classjaco_1_1JacoAnglesActionServer_aba435023cc4e95378e8c77333bef1ccf}{}\label{classjaco_1_1JacoAnglesActionServer_aba435023cc4e95378e8c77333bef1ccf}
+\index{jaco\+::\+Jaco\+Angles\+Action\+Server@{jaco\+::\+Jaco\+Angles\+Action\+Server}!stall\+\_\+interval\+\_\+seconds\+\_\+@{stall\+\_\+interval\+\_\+seconds\+\_\+}}
+\index{stall\+\_\+interval\+\_\+seconds\+\_\+@{stall\+\_\+interval\+\_\+seconds\+\_\+}!jaco\+::\+Jaco\+Angles\+Action\+Server@{jaco\+::\+Jaco\+Angles\+Action\+Server}}
+\subsubsection[{\texorpdfstring{stall\+\_\+interval\+\_\+seconds\+\_\+}{stall_interval_seconds_}}]{\setlength{\rightskip}{0pt plus 5cm}double jaco\+::\+Jaco\+Angles\+Action\+Server\+::stall\+\_\+interval\+\_\+seconds\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classjaco_1_1JacoAnglesActionServer_a2bf773e52f5d3751001415e8121fe276}{}\label{classjaco_1_1JacoAnglesActionServer_a2bf773e52f5d3751001415e8121fe276}
+\index{jaco\+::\+Jaco\+Angles\+Action\+Server@{jaco\+::\+Jaco\+Angles\+Action\+Server}!stall\+\_\+threshold\+\_\+@{stall\+\_\+threshold\+\_\+}}
+\index{stall\+\_\+threshold\+\_\+@{stall\+\_\+threshold\+\_\+}!jaco\+::\+Jaco\+Angles\+Action\+Server@{jaco\+::\+Jaco\+Angles\+Action\+Server}}
+\subsubsection[{\texorpdfstring{stall\+\_\+threshold\+\_\+}{stall_threshold_}}]{\setlength{\rightskip}{0pt plus 5cm}double jaco\+::\+Jaco\+Angles\+Action\+Server\+::stall\+\_\+threshold\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classjaco_1_1JacoAnglesActionServer_a7372c88107de61bb149cea6a60932f71}{}\label{classjaco_1_1JacoAnglesActionServer_a7372c88107de61bb149cea6a60932f71}
+\index{jaco\+::\+Jaco\+Angles\+Action\+Server@{jaco\+::\+Jaco\+Angles\+Action\+Server}!tolerance\+\_\+@{tolerance\+\_\+}}
+\index{tolerance\+\_\+@{tolerance\+\_\+}!jaco\+::\+Jaco\+Angles\+Action\+Server@{jaco\+::\+Jaco\+Angles\+Action\+Server}}
+\subsubsection[{\texorpdfstring{tolerance\+\_\+}{tolerance_}}]{\setlength{\rightskip}{0pt plus 5cm}float jaco\+::\+Jaco\+Angles\+Action\+Server\+::tolerance\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classjaco_1_1JacoAnglesActionServer_acc1edd1f538d1bf9c05c91c94a4abfa1}{}\label{classjaco_1_1JacoAnglesActionServer_acc1edd1f538d1bf9c05c91c94a4abfa1}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Longfei/\+Desktop/catkin\+\_\+\+Kinova\+R\+O\+S/src/jaco-\/ros/jaco\+\_\+driver/include/jaco\+\_\+driver/\hyperlink{jaco__angles__action_8h}{jaco\+\_\+angles\+\_\+action.\+h}\item 
+D\+:/\+Longfei/\+Desktop/catkin\+\_\+\+Kinova\+R\+O\+S/src/jaco-\/ros/jaco\+\_\+driver/src/\hyperlink{jaco__angles__action_8cpp}{jaco\+\_\+angles\+\_\+action.\+cpp}\end{DoxyCompactItemize}

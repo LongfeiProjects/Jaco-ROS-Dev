@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="dd/d9e/namespaceanonymous__namespace_02jaco__arm_8cpp_03">
+<title>anonymous_namespace{jaco_arm.cpp}</title>
+        <section>
+            <title>Functions</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="dd/d9e/namespaceanonymous__namespace_02jaco__arm_8cpp_03_1a9f7f76b13899f576139e087e1c98e7e8">convertKinDeg</link> (
+double &amp; qd)<para><emphasis>Convert Kinova-specific angle degree variations (0..180, 360-181) to
+       a more regular representation (0..180, -180..0).</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="dd/d9e/namespaceanonymous__namespace_02jaco__arm_8cpp_03_1aea041ba3dd96c1c67a3bcaf95fe8f6f9">convertKinDeg</link> (
+std::vector&lt; double &gt; &amp; qds)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="dd/d9e/namespaceanonymous__namespace_02jaco__arm_8cpp_03_1a048a0e37d623243283fd93360d041e2b">convertKinDeg</link> (
+geometry_msgs::Vector3 &amp; qds)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+</section>

@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="d5/dc0/structros_1_1message__traits_1_1IsMessage_3_01_1_1jaco__msgs_1_1ArmPoseAction___3_01ContainerAllocator_01_4_01_4">
+<title>ros::message_traits::IsMessage&lt; ::jaco_msgs::ArmPoseAction_&lt; ContainerAllocator &gt; &gt; struct Reference</title>
+<para>
+    <programlisting>#include <link linkend="d5/dc2/ArmPoseAction_8h">&quot;ArmPoseAction.h&quot;</link></programlisting>
+</para>
+<para>Inheritance diagram for ros::message_traits::IsMessage&lt; ::jaco_msgs::ArmPoseAction_&lt; ContainerAllocator &gt; &gt;</para>
+<para>
+    <figure>
+        <title>Inheritance graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../d7/d66/structros_1_1message__traits_1_1IsMessage_3_01_1_1jaco__msgs_1_1ArmPoseAction___3_01ContainerAll05210139048b7b002439834dd0cc8c35.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Collaboration diagram for ros::message_traits::IsMessage&lt; ::jaco_msgs::ArmPoseAction_&lt; ContainerAllocator &gt; &gt;</para>
+<para>
+    <figure>
+        <title>Collaboration graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../d7/df7/structros_1_1message__traits_1_1IsMessage_3_01_1_1jaco__msgs_1_1ArmPoseAction___3_01ContainerAllocator_01_4_01_4__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+    <templateparamlist>
+      <param>
+        <type>class ContainerAllocator</type>
+      </param>
+    </templateparamlist>
+</section>

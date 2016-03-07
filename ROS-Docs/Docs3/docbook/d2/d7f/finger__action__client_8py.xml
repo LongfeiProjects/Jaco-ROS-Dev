@@ -1,0 +1,91 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="d2/d7f/finger__action__client_8py">
+    <title>finger_action_client.py File Reference</title>
+<para>Include dependency diagram for finger_action_client.py</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../de/dc5/finger__action__client_8py__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Included by dependency diagram for finger_action_client.py</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../d6/db2/finger__action__client_8py__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+        <simplesect>
+            <title> Namespaces </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d0/df6/namespacefinger__action__client">finger_action_client</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+    <simplesect>
+        <title>Detailed Description</title>
+    <para>Definition in file D:/Longfei/Desktop/catkin_KinovaROS/src/jaco-ros/jaco_driver/test/finger_action_client.py</para>
+    </simplesect>
+    <literallayout><computeroutput>
+<link linkend="d0/df6/namespacefinger__action__client">1 </link><emphasis class="comment">#!/usr/bin/env&#32;python</emphasis>
+2 
+3 <emphasis class="keyword">import</emphasis>&#32;roslib;&#32;roslib.load_manifest(<emphasis class="stringliteral">&apos;jaco_msgs&apos;</emphasis>)
+4 <emphasis class="keyword">import</emphasis>&#32;rospy
+5 
+6 <emphasis class="keyword">import</emphasis>&#32;actionlib
+7 
+8 <emphasis class="keyword">import</emphasis>&#32;<link linkend="d2/dbe/namespacejaco__msgs_1_1msg">jaco_msgs.msg</link>
+9 
+10 <emphasis class="keyword">import</emphasis>&#32;sys
+11 
+12 
+<link linkend="d0/df6/namespacefinger__action__client_1a052b0ba6f2141589b77dad69727b3246">13 </link><emphasis class="keyword">def&#32;</emphasis><link linkend="d0/df6/namespacefinger__action__client_1a052b0ba6f2141589b77dad69727b3246">pose_client</link>():
+14 &#32;&#32;&#32;&#32;client&#32;=&#32;actionlib.SimpleActionClient(<emphasis class="stringliteral">&apos;/jaco/finger_joint_angles&apos;</emphasis>,&#32;<link linkend="d9/d28/classjaco__msgs_1_1msg_1_1__SetFingersPositionAction_1_1SetFingersPositionAction">jaco_msgs.msg.SetFingersPositionAction</link>)
+15 
+16 &#32;&#32;&#32;&#32;goal&#32;=&#32;<link linkend="d7/dbc/classjaco__msgs_1_1msg_1_1__SetFingersPositionGoal_1_1SetFingersPositionGoal">jaco_msgs.msg.SetFingersPositionGoal</link>()
+17 
+18 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;len(sys.argv)&#32;&lt;&#32;4:
+19 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;goal.fingers.finger1&#32;=&#32;4000
+20 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;goal.fingers.finger2&#32;=&#32;4000
+21 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;goal.fingers.finger3&#32;=&#32;4000
+22 
+23 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;rospy.logwarn(<emphasis class="stringliteral">&quot;Using&#32;test&#32;goal:&#32;\n%s&quot;</emphasis>,&#32;goal)
+24 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">else</emphasis>:
+25 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;goal.fingers.finger1&#32;=&#32;float(sys.argv[1])
+26 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;goal.fingers.finger2&#32;=&#32;float(sys.argv[2])
+27 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;goal.fingers.finger3&#32;=&#32;float(sys.argv[3])
+28 
+29 &#32;&#32;&#32;&#32;client.wait_for_server()
+30 &#32;&#32;&#32;&#32;rospy.loginfo(<emphasis class="stringliteral">&quot;Connected&#32;to&#32;Finger&#32;server&quot;</emphasis>)
+31 
+32 &#32;&#32;&#32;&#32;client.send_goal(goal)
+33 
+34 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">try</emphasis>:
+35 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;client.wait_for_result()
+36 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">except</emphasis>&#32;KeyboardInterrupt:
+37 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;rospy.loginfo(<emphasis class="stringliteral">&quot;Program&#32;interrupted,&#32;pre-empting&#32;goal&quot;</emphasis>)
+38 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;client.cancel_all_goals()
+39 
+40 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;client.get_result()
+41 
+42 <emphasis class="keywordflow">if</emphasis>&#32;__name__&#32;==&#32;<emphasis class="stringliteral">&apos;__main__&apos;</emphasis>:
+43 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">try</emphasis>:
+44 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;rospy.init_node(<emphasis class="stringliteral">&apos;finger_pose_client&apos;</emphasis>)
+<link linkend="d0/df6/namespacefinger__action__client_1a457ef4f2bf118e0ad46b05a4956a496d">45 </link>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;result&#32;=&#32;<link linkend="d0/df6/namespacefinger__action__client_1a052b0ba6f2141589b77dad69727b3246">pose_client</link>()
+46 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;rospy.loginfo(<emphasis class="stringliteral">&quot;Result:&#32;\n%s&quot;</emphasis>,&#32;result)
+47 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">except</emphasis>&#32;rospy.ROSInterruptException:&#32;
+48 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;rospy.loginfo(<emphasis class="stringliteral">&quot;Program&#32;interrupted&#32;before&#32;completion&quot;</emphasis>)
+49 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+    </computeroutput></literallayout>
+</section>

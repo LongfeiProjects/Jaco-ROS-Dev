@@ -1,0 +1,203 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="db/d3f/test__jaco__arm__controller_8cpp">
+    <title>test_jaco_arm_controller.cpp File Reference</title>
+    <programlisting>#include &lt;geometry_msgs/PoseStamped.h&gt;</programlisting>
+    <programlisting>#include &lt;geometry_msgs/TwistStamped.h&gt;</programlisting>
+    <programlisting>#include &lt;tf/tf.h&gt;</programlisting>
+    <programlisting>#include &lt;ros/ros.h&gt;</programlisting>
+    <programlisting>#include &lt;jaco_driver/JacoPositionConfig.h&gt;</programlisting>
+    <programlisting>#include &lt;dynamic_reconfigure/server.h&gt;</programlisting>
+<para>Include dependency diagram for test_jaco_arm_controller.cpp</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../d1/d3e/test__jaco__arm__controller_8cpp__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Included by dependency diagram for test_jaco_arm_controller.cpp</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../d3/da8/test__jaco__arm__controller_8cpp__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+        <section>
+            <title>Variables</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>ros::Publisher * <link linkend="db/d3f/test__jaco__arm__controller_8cpp_1ad5e5d8e14bfcad1c0cc878616783a7e2">pub</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>float <link linkend="db/d3f/test__jaco__arm__controller_8cpp_1a7018d450f1b8ac16e05c9f60ff2c5e5c">rx_pose</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>float <link linkend="db/d3f/test__jaco__arm__controller_8cpp_1abf857bc7e68483191c2e2c3e91ac5f4c">ry_pose</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>float <link linkend="db/d3f/test__jaco__arm__controller_8cpp_1aba5846c38922e0154087cc48943e9e97">rz_pose</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>float <link linkend="db/d3f/test__jaco__arm__controller_8cpp_1a1b673edb7bae9a685deb9beeaf306434">x_pose</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>float <link linkend="db/d3f/test__jaco__arm__controller_8cpp_1a691b31f8e26c353862266520fbb806e7">y_pose</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>float <link linkend="db/d3f/test__jaco__arm__controller_8cpp_1a1d00778dfc07f0b53fdcdc73754e7ffc">z_pose</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Functions</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="db/d3f/test__jaco__arm__controller_8cpp_1a9b22877867bb7fee9e5a33831d4f5151">callback</link> (
+jaco_driver::JacoPositionConfig &amp; config, uint32_t level)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="db/d3f/test__jaco__arm__controller_8cpp_1a3c04138a5bfe5d72780bb7e82a18e627">main</link> (
+int argc, char ** argv)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="db/d3f/test__jaco__arm__controller_8cpp_1a555d06d88fe912826cb143b1eb9b595f">TimerCallback</link> (
+const ros::TimerEvent &amp; )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+    <simplesect>
+        <title>Detailed Description</title>
+    <para>Definition in file D:/Longfei/Desktop/catkin_KinovaROS/src/jaco-ros/jaco_driver/src/testers/test_jaco_arm_controller.cpp</para>
+    </simplesect>
+    <literallayout><computeroutput>
+1 <emphasis class="comment">//============================================================================</emphasis>
+2 <emphasis class="comment">//&#32;Name&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;:&#32;Jaco.cpp</emphasis>
+3 <emphasis class="comment">//&#32;Author&#32;&#32;&#32;&#32;&#32;&#32;:&#32;</emphasis>
+4 <emphasis class="comment">//&#32;Version&#32;&#32;&#32;&#32;&#32;:</emphasis>
+5 <emphasis class="comment">//&#32;Copyright&#32;&#32;&#32;:&#32;Your&#32;copyright&#32;notice</emphasis>
+6 <emphasis class="comment">//&#32;Description&#32;:&#32;Hello&#32;World&#32;in&#32;C++,&#32;Ansi-style</emphasis>
+7 <emphasis class="comment">//============================================================================</emphasis>
+8 
+17 <emphasis class="comment">//License&#32;File</emphasis>
+18 <emphasis class="preprocessor">#include&#32;&lt;geometry_msgs/PoseStamped.h&gt;</emphasis>
+19 <emphasis class="preprocessor">#include&#32;&lt;geometry_msgs/TwistStamped.h&gt;</emphasis>
+20 <emphasis class="preprocessor">#include&#32;&lt;tf/tf.h&gt;</emphasis>
+21 <emphasis class="preprocessor">#include&#32;&lt;ros/ros.h&gt;</emphasis>
+22 <emphasis class="preprocessor">#include&#32;&lt;jaco_driver/JacoPositionConfig.h&gt;</emphasis>
+23 <emphasis class="preprocessor">#include&#32;&lt;dynamic_reconfigure/server.h&gt;</emphasis>
+24 <emphasis class="keyword">using&#32;namespace&#32;</emphasis><link linkend="d8/dcc/namespacestd">std</link>;
+25 
+26 
+27 
+<link linkend="db/d3f/test__jaco__arm__controller_8cpp_1ad5e5d8e14bfcad1c0cc878616783a7e2">28 </link>ros::Publisher&#32;*<link linkend="db/d3f/test__jaco__arm__controller_8cpp_1ad5e5d8e14bfcad1c0cc878616783a7e2">pub</link>;
+29 
+<link linkend="db/d3f/test__jaco__arm__controller_8cpp_1a1b673edb7bae9a685deb9beeaf306434">30 </link><emphasis class="keywordtype">float</emphasis>&#32;<link linkend="db/d3f/test__jaco__arm__controller_8cpp_1a1b673edb7bae9a685deb9beeaf306434">x_pose</link>=0;
+<link linkend="db/d3f/test__jaco__arm__controller_8cpp_1a691b31f8e26c353862266520fbb806e7">31 </link><emphasis class="keywordtype">float</emphasis>&#32;&#32;&#32;&#32;<link linkend="db/d3f/test__jaco__arm__controller_8cpp_1a691b31f8e26c353862266520fbb806e7">y_pose</link>=0;
+<link linkend="db/d3f/test__jaco__arm__controller_8cpp_1a1d00778dfc07f0b53fdcdc73754e7ffc">32 </link><emphasis class="keywordtype">float</emphasis>&#32;&#32;&#32;&#32;<link linkend="db/d3f/test__jaco__arm__controller_8cpp_1a1d00778dfc07f0b53fdcdc73754e7ffc">z_pose</link>=0;
+<link linkend="db/d3f/test__jaco__arm__controller_8cpp_1a7018d450f1b8ac16e05c9f60ff2c5e5c">33 </link><emphasis class="keywordtype">float</emphasis>&#32;&#32;&#32;&#32;<link linkend="db/d3f/test__jaco__arm__controller_8cpp_1a7018d450f1b8ac16e05c9f60ff2c5e5c">rx_pose</link>=0;
+<link linkend="db/d3f/test__jaco__arm__controller_8cpp_1abf857bc7e68483191c2e2c3e91ac5f4c">34 </link><emphasis class="keywordtype">float</emphasis>&#32;&#32;&#32;&#32;<link linkend="db/d3f/test__jaco__arm__controller_8cpp_1abf857bc7e68483191c2e2c3e91ac5f4c">ry_pose</link>=0;
+<link linkend="db/d3f/test__jaco__arm__controller_8cpp_1aba5846c38922e0154087cc48943e9e97">35 </link><emphasis class="keywordtype">float</emphasis>&#32;&#32;&#32;&#32;<link linkend="db/d3f/test__jaco__arm__controller_8cpp_1aba5846c38922e0154087cc48943e9e97">rz_pose</link>=0;
+36 
+37 
+<link linkend="db/d3f/test__jaco__arm__controller_8cpp_1a9b22877867bb7fee9e5a33831d4f5151">38 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="db/d3f/test__jaco__arm__controller_8cpp_1a9b22877867bb7fee9e5a33831d4f5151">callback</link>(jaco_driver::JacoPositionConfig&#32;&amp;config,&#32;uint32_t&#32;level)&#32;{
+39 
+40 &#32;&#32;&#32;&#32;&#32;<link linkend="db/d3f/test__jaco__arm__controller_8cpp_1a1b673edb7bae9a685deb9beeaf306434">x_pose</link>=config.X_Pose;
+41 &#32;&#32;&#32;&#32;&#32;<link linkend="db/d3f/test__jaco__arm__controller_8cpp_1a691b31f8e26c353862266520fbb806e7">y_pose</link>=config.Y_Pose;
+42 &#32;&#32;&#32;&#32;&#32;<link linkend="db/d3f/test__jaco__arm__controller_8cpp_1a1d00778dfc07f0b53fdcdc73754e7ffc">z_pose</link>=config.Z_Pose;
+43 &#32;&#32;&#32;&#32;&#32;<link linkend="db/d3f/test__jaco__arm__controller_8cpp_1a7018d450f1b8ac16e05c9f60ff2c5e5c">rx_pose</link>=config.RX_Pose;
+44 &#32;&#32;&#32;&#32;&#32;<link linkend="db/d3f/test__jaco__arm__controller_8cpp_1abf857bc7e68483191c2e2c3e91ac5f4c">ry_pose</link>=config.RY_Pose;
+45 &#32;&#32;&#32;&#32;&#32;<link linkend="db/d3f/test__jaco__arm__controller_8cpp_1aba5846c38922e0154087cc48943e9e97">rz_pose</link>=config.RZ_Pose;
+46 
+47 &#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;&#32;ROS_INFO(&quot;Reconfigure&quot;);</emphasis>
+48 
+49 
+50 }
+51 
+52 
+53 
+<link linkend="db/d3f/test__jaco__arm__controller_8cpp_1a555d06d88fe912826cb143b1eb9b595f">54 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="db/d3f/test__jaco__arm__controller_8cpp_1a555d06d88fe912826cb143b1eb9b595f">TimerCallback</link>(<emphasis class="keyword">const</emphasis>&#32;ros::TimerEvent&amp;)
+55 {
+56 &#32;&#32;&#32;&#32;geometry_msgs::PoseStamped&#32;test_msg;
+57 
+58 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;test_msg.pose.position.x&#32;=&#32;<link linkend="db/d3f/test__jaco__arm__controller_8cpp_1a1b673edb7bae9a685deb9beeaf306434">x_pose</link>;
+59 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;test_msg.pose.position.y&#32;=&#32;<link linkend="db/d3f/test__jaco__arm__controller_8cpp_1a691b31f8e26c353862266520fbb806e7">y_pose</link>;
+60 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;test_msg.pose.position.z&#32;=&#32;<link linkend="db/d3f/test__jaco__arm__controller_8cpp_1a1d00778dfc07f0b53fdcdc73754e7ffc">z_pose</link>;
+61 
+62 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;tf::Quaternion&#32;q;
+63 
+64 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;q.setRPY(<link linkend="db/d3f/test__jaco__arm__controller_8cpp_1a7018d450f1b8ac16e05c9f60ff2c5e5c">rx_pose</link>,<link linkend="db/d3f/test__jaco__arm__controller_8cpp_1abf857bc7e68483191c2e2c3e91ac5f4c">ry_pose</link>,<link linkend="db/d3f/test__jaco__arm__controller_8cpp_1aba5846c38922e0154087cc48943e9e97">rz_pose</link>);
+65 
+66 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;tf::quaternionTFToMsg(q,test_msg.pose.orientation);
+67 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;test_msg.header.frame_id&#32;=&#32;<emphasis class="stringliteral">&quot;/arm_base&quot;</emphasis>;
+68 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;test_msg.header.stamp&#32;=&#32;ros::Time().now();
+69 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="db/d3f/test__jaco__arm__controller_8cpp_1ad5e5d8e14bfcad1c0cc878616783a7e2">pub</link>-&gt;publish(test_msg);
+70 
+71 }
+72 
+<link linkend="db/d3f/test__jaco__arm__controller_8cpp_1a3c04138a5bfe5d72780bb7e82a18e627">73 </link><emphasis class="keywordtype">int</emphasis>&#32;<link linkend="db/d3f/test__jaco__arm__controller_8cpp_1a3c04138a5bfe5d72780bb7e82a18e627">main</link>(<emphasis class="keywordtype">int</emphasis>&#32;argc,&#32;<emphasis class="keywordtype">char</emphasis>&#32;**argv)&#32;{
+74 
+75 &#32;&#32;&#32;&#32;<emphasis class="comment">/*&#32;Set&#32;up&#32;ROS&#32;*/</emphasis>
+76 &#32;&#32;&#32;&#32;ros::init(argc,&#32;argv,&#32;<emphasis class="stringliteral">&quot;test_jaco_arm_controller&quot;</emphasis>);
+77 &#32;&#32;&#32;&#32;ros::NodeHandle&#32;nh;
+78 &#32;&#32;&#32;&#32;ros::NodeHandle&#32;param_nh(<emphasis class="stringliteral">&quot;~&quot;</emphasis>);
+79 
+80 &#32;&#32;&#32;&#32;std::string&#32;ArmPose(<emphasis class="stringliteral">&quot;object_pose&quot;</emphasis>);&#32;
+81 
+82 &#32;&#32;&#32;&#32;ros::Publisher&#32;pub2&#32;=&#32;nh.advertise&lt;geometry_msgs::PoseStamped&gt;(ArmPose,
+83 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;2);
+84 
+85 &#32;&#32;&#32;&#32;<link linkend="db/d3f/test__jaco__arm__controller_8cpp_1ad5e5d8e14bfcad1c0cc878616783a7e2">pub</link>&#32;=&#32;&amp;pub2;
+86 &#32;&#32;&#32;&#32;dynamic_reconfigure::Server&lt;jaco_driver::JacoPositionConfig&gt;&#32;&#32;dr_server;
+87 &#32;dynamic_reconfigure::Server&lt;jaco_driver::JacoPositionConfig&gt;::CallbackType&#32;dr_call&#32;=&#32;boost::bind(&amp;<link linkend="db/d3f/test__jaco__arm__controller_8cpp_1a9b22877867bb7fee9e5a33831d4f5151">callback</link>,&#32;_1,&#32;_2);
+88 &#32;&#32;&#32;&#32;dr_server.setCallback(dr_call);
+89 &#32;&#32;&#32;&#32;&#32;&#32;ros::Timer&#32;&#32;&#32;&#32;timer&#32;=&#32;nh.createTimer(ros::Duration(0.1),&amp;<link linkend="db/d3f/test__jaco__arm__controller_8cpp_1a555d06d88fe912826cb143b1eb9b595f">TimerCallback</link>);
+90 
+91 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ros::spin();
+92 
+93 }
+94 
+    </computeroutput></literallayout>
+</section>

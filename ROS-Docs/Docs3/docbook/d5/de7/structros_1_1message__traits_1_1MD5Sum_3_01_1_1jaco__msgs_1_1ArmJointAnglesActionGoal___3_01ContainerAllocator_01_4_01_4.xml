@@ -1,0 +1,78 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="d5/de7/structros_1_1message__traits_1_1MD5Sum_3_01_1_1jaco__msgs_1_1ArmJointAnglesActionGoal___3_01ContainerAllocator_01_4_01_4">
+<title>ros::message_traits::MD5Sum&lt; ::jaco_msgs::ArmJointAnglesActionGoal_&lt; ContainerAllocator &gt; &gt; struct Reference</title>
+<para>
+    <programlisting>#include <link linkend="dd/d23/ArmJointAnglesActionGoal_8h">&quot;ArmJointAnglesActionGoal.h&quot;</link></programlisting>
+</para>
+<para>Inheritance diagram for ros::message_traits::MD5Sum&lt; ::jaco_msgs::ArmJointAnglesActionGoal_&lt; ContainerAllocator &gt; &gt;</para>
+<para>
+    <figure>
+        <title>Inheritance graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../d3/d2b/structros_1_1message__traits_1_1MD5Sum_3_01_1_1jaco__msgs_1_1ArmJointAnglesActionGoal___3_01Conte3f8d33dc5795a6c2de783788cb4d05f.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Collaboration diagram for ros::message_traits::MD5Sum&lt; ::jaco_msgs::ArmJointAnglesActionGoal_&lt; ContainerAllocator &gt; &gt;</para>
+<para>
+    <figure>
+        <title>Collaboration graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../d6/daf/structros_1_1message__traits_1_1MD5Sum_3_01_1_1jaco__msgs_1_1ArmJointAnglesActionGoal___3_01Contdb48cc838ea133b2d65cea8722d2f3f9.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+    <templateparamlist>
+      <param>
+        <type>class ContainerAllocator</type>
+      </param>
+    </templateparamlist>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static const uint64_t static_value1</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static const uint64_t static_value2</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static const char * <link linkend="d5/de7/structros_1_1message__traits_1_1MD5Sum_3_01_1_1jaco__msgs_1_1ArmJointAnglesActionGoal___3_01ContainerAllocator_01_4_01_4_1a173fe4a8ebc2f90fe4ec30183343c76e">value</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static const char * <link linkend="d5/de7/structros_1_1message__traits_1_1MD5Sum_3_01_1_1jaco__msgs_1_1ArmJointAnglesActionGoal___3_01ContainerAllocator_01_4_01_4_1a2a555a9c50a501037cf2c1ccaea96176">value</link> (
+const ::<link linkend="da/dcb/structjaco__msgs_1_1ArmJointAnglesActionGoal__">jaco_msgs::ArmJointAnglesActionGoal_</link>&lt; ContainerAllocator &gt; &amp; )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+            <section xml:id="d5/de7/structros_1_1message__traits_1_1MD5Sum_3_01_1_1jaco__msgs_1_1ArmJointAnglesActionGoal___3_01ContainerAllocator_01_4_01_4_1a173fe4a8ebc2f90fe4ec30183343c76e">
+                <title>static const char* ros::message_traits::MD5Sum&lt; ::jaco_msgs::ArmJointAnglesActionGoal_&lt; ContainerAllocator &gt; &gt;::value ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="d5/de7/structros_1_1message__traits_1_1MD5Sum_3_01_1_1jaco__msgs_1_1ArmJointAnglesActionGoal___3_01ContainerAllocator_01_4_01_4_1a2a555a9c50a501037cf2c1ccaea96176">
+                <title>static const char* ros::message_traits::MD5Sum&lt; ::jaco_msgs::ArmJointAnglesActionGoal_&lt; ContainerAllocator &gt; &gt;::value (const ::jaco_msgs::ArmJointAnglesActionGoal_&lt; ContainerAllocator &gt; &amp;)</title> <emphasis></emphasis>
+                
+            </section>
+</section>

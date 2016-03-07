@@ -1,0 +1,105 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="d6/de4/jaco__tf__updater_8h">
+    <title>jaco_tf_updater.h File Reference</title>
+    <programlisting>#include &lt;time.h&gt;</programlisting>
+    <programlisting>#include &lt;jaco_driver/jaco_arm_kinematics.h&gt;</programlisting>
+    <programlisting>#include &lt;ros/ros.h&gt;</programlisting>
+    <programlisting>#include &lt;std_msgs/String.h&gt;</programlisting>
+    <programlisting>#include &lt;tf/tf.h&gt;</programlisting>
+    <programlisting>#include &lt;tf/transform_broadcaster.h&gt;</programlisting>
+    <programlisting>#include &lt;tf/transform_listener.h&gt;</programlisting>
+    <programlisting>#include &quot;jaco_msgs/JointAngles.h&quot;</programlisting>
+<para>Include dependency diagram for jaco_tf_updater.h</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../d9/dee/jaco__tf__updater_8h__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Included by dependency diagram for jaco_tf_updater.h</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../d9/d14/jaco__tf__updater_8h__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+        <section>
+            <title> Classes </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="dc/d23/classjaco_1_1JacoTFTree">jaco::JacoTFTree</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <simplesect>
+            <title> Namespaces </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d4/d3c/namespacejaco">jaco</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+    <simplesect>
+        <title>Detailed Description</title>
+    <para>Definition in file D:/Longfei/Desktop/catkin_KinovaROS/src/jaco-ros/jaco_driver/include/jaco_driver/jaco_tf_updater.h</para>
+    </simplesect>
+    <literallayout><computeroutput>
+1 <emphasis class="comment">/*</emphasis>
+2 <emphasis class="comment">&#32;*&#32;jaco_tf_updater.h</emphasis>
+3 <emphasis class="comment">&#32;*</emphasis>
+4 <emphasis class="comment">&#32;*&#32;&#32;Created&#32;on:&#32;Apr&#32;16,&#32;2013</emphasis>
+5 <emphasis class="comment">&#32;*&#32;&#32;&#32;&#32;&#32;&#32;Author:&#32;mdedonato</emphasis>
+6 <emphasis class="comment">&#32;*/</emphasis>
+7 
+8 <emphasis class="preprocessor">#ifndef&#32;JACO_DRIVER_JACO_TF_UPDATER_H</emphasis>
+9 <emphasis class="preprocessor">#define&#32;JACO_DRIVER_JACO_TF_UPDATER_H</emphasis>
+10 
+11 <emphasis class="preprocessor">#include&#32;&lt;time.h&gt;</emphasis>
+12 
+13 <emphasis class="preprocessor">#include&#32;&lt;<link linkend="da/d01/jaco__arm__kinematics_8h">jaco_driver/jaco_arm_kinematics.h</link>&gt;</emphasis>
+14 
+15 <emphasis class="preprocessor">#include&#32;&lt;ros/ros.h&gt;</emphasis>
+16 <emphasis class="preprocessor">#include&#32;&lt;std_msgs/String.h&gt;</emphasis>
+17 <emphasis class="preprocessor">#include&#32;&lt;tf/tf.h&gt;</emphasis>
+18 <emphasis class="preprocessor">#include&#32;&lt;tf/transform_broadcaster.h&gt;</emphasis>
+19 <emphasis class="preprocessor">#include&#32;&lt;tf/transform_listener.h&gt;</emphasis>
+20 
+21 <emphasis class="preprocessor">#include&#32;&quot;<link linkend="d9/d8d/JointAngles_8h">jaco_msgs/JointAngles.h</link>&quot;</emphasis>
+22 
+23 
+24 <emphasis class="keyword">namespace&#32;</emphasis><link linkend="d4/d3c/namespacejaco">jaco</link>
+25 {
+26 
+<link linkend="dc/d23/classjaco_1_1JacoTFTree">27 </link><emphasis class="keyword">class&#32;</emphasis><link linkend="dc/d23/classjaco_1_1JacoTFTree">JacoTFTree</link>
+28 {
+29 &#32;<emphasis class="keyword">public</emphasis>:
+30 &#32;&#32;&#32;&#32;<emphasis class="keyword">explicit</emphasis>&#32;<link linkend="dc/d23/classjaco_1_1JacoTFTree_1aff3a20fea72ff3089968609d7a32ce53">JacoTFTree</link>(ros::NodeHandle&#32;nh);
+31 
+32 &#32;<emphasis class="keyword">private</emphasis>:
+33 &#32;&#32;&#32;&#32;<emphasis class="keywordtype">void</emphasis>&#32;<link linkend="dc/d23/classjaco_1_1JacoTFTree_1ad3cc49dbb3058895d32aa825f386d9d5">jointAnglesMsgHandler</link>(<emphasis class="keyword">const</emphasis>&#32;<link linkend="d7/dba/namespacejaco__msgs_1a32b25235cc3066080b29ddfde0640ae9">jaco_msgs::JointAnglesConstPtr</link>&amp;&#32;joint_angles);
+34 &#32;&#32;&#32;&#32;<emphasis class="keywordtype">void</emphasis>&#32;<link linkend="dc/d23/classjaco_1_1JacoTFTree_1a9d27ae1569454f687fdb3efc3c2718cf">calculatePostion</link>(<emphasis class="keywordtype">void</emphasis>);
+35 &#32;&#32;&#32;&#32;<emphasis class="keywordtype">void</emphasis>&#32;<link linkend="dc/d23/classjaco_1_1JacoTFTree_1a6c1129c477dfc9e17cd2185924033ad5">tfUpdateHandler</link>(<emphasis class="keyword">const</emphasis>&#32;ros::TimerEvent&amp;);
+36 
+<link linkend="dc/d23/classjaco_1_1JacoTFTree_1aacb83b30f56868891d78852834ef0532">37 </link>&#32;&#32;&#32;&#32;<link linkend="d8/da9/classjaco_1_1JacoKinematics">jaco::JacoKinematics</link>&#32;<link linkend="dc/d23/classjaco_1_1JacoTFTree_1aacb83b30f56868891d78852834ef0532">kinematics_</link>;
+<link linkend="dc/d23/classjaco_1_1JacoTFTree_1a352b7d128f76d3a4f01e01ec8b416e22">38 </link>&#32;&#32;&#32;&#32;<link linkend="d7/dda/structjaco__msgs_1_1JointAngles__">jaco_msgs::JointAngles</link>&#32;<link linkend="dc/d23/classjaco_1_1JacoTFTree_1a352b7d128f76d3a4f01e01ec8b416e22">current_angles_</link>;
+<link linkend="dc/d23/classjaco_1_1JacoTFTree_1a20869124ed9dd0b936d79d5d8a60b6db">39 </link>&#32;&#32;&#32;&#32;ros::Time&#32;<link linkend="dc/d23/classjaco_1_1JacoTFTree_1a20869124ed9dd0b936d79d5d8a60b6db">last_angle_update_</link>;
+<link linkend="dc/d23/classjaco_1_1JacoTFTree_1a5908642f0eee94b14d4b4ef649e4ad0f">40 </link>&#32;&#32;&#32;&#32;ros::Subscriber&#32;<link linkend="dc/d23/classjaco_1_1JacoTFTree_1a5908642f0eee94b14d4b4ef649e4ad0f">joint_angles_subscriber_</link>;
+<link linkend="dc/d23/classjaco_1_1JacoTFTree_1a1470ccde41ff4213c92b4e7ecbcad3e3">41 </link>&#32;&#32;&#32;&#32;ros::Timer&#32;<link linkend="dc/d23/classjaco_1_1JacoTFTree_1a1470ccde41ff4213c92b4e7ecbcad3e3">tf_update_timer_</link>;
+42 };
+43 
+44 }&#32;&#32;<emphasis class="comment">//&#32;namespace&#32;jaco</emphasis>
+45 <emphasis class="preprocessor">#endif&#32;&#32;//&#32;JACO_DRIVER_JACO_TF_UPDATER_H</emphasis>
+    </computeroutput></literallayout>
+</section>

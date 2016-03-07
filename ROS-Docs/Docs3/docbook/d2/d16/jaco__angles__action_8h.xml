@@ -1,0 +1,96 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="d2/d16/jaco__angles__action_8h">
+    <title>jaco_angles_action.h File Reference</title>
+    <programlisting>#include &lt;ros/ros.h&gt;</programlisting>
+    <programlisting>#include &lt;actionlib/server/simple_action_server.h&gt;</programlisting>
+    <programlisting>#include &lt;jaco_msgs/ArmJointAnglesAction.h&gt;</programlisting>
+    <programlisting>#include &quot;jaco_driver/jaco_comm.h&quot;</programlisting>
+<para>Include dependency diagram for jaco_angles_action.h</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../dc/db7/jaco__angles__action_8h__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Included by dependency diagram for jaco_angles_action.h</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../de/d38/jaco__angles__action_8h__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+        <section>
+            <title> Classes </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d8/d82/classjaco_1_1JacoAnglesActionServer">jaco::JacoAnglesActionServer</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <simplesect>
+            <title> Namespaces </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d4/d3c/namespacejaco">jaco</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+    <simplesect>
+        <title>Detailed Description</title>
+    <para>Definition in file D:/Longfei/Desktop/catkin_KinovaROS/src/jaco-ros/jaco_driver/include/jaco_driver/jaco_angles_action.h</para>
+    </simplesect>
+    <literallayout><computeroutput>
+1 
+46 <emphasis class="preprocessor">#ifndef&#32;JACO_DRIVER_JACO_ANGLES_ACTION_H</emphasis>
+47 <emphasis class="preprocessor">#define&#32;JACO_DRIVER_JACO_ANGLES_ACTION_H</emphasis>
+48 
+49 <emphasis class="preprocessor">#include&#32;&lt;ros/ros.h&gt;</emphasis>
+50 <emphasis class="preprocessor">#include&#32;&lt;actionlib/server/simple_action_server.h&gt;</emphasis>
+51 
+52 <emphasis class="preprocessor">#include&#32;&lt;<link linkend="d9/d7c/ArmJointAnglesAction_8h">jaco_msgs/ArmJointAnglesAction.h</link>&gt;</emphasis>
+53 
+54 <emphasis class="preprocessor">#include&#32;&quot;<link linkend="d8/de6/jaco__comm_8h">jaco_driver/jaco_comm.h</link>&quot;</emphasis>
+55 
+56 
+57 <emphasis class="keyword">namespace&#32;</emphasis><link linkend="d4/d3c/namespacejaco">jaco</link>
+58 {
+59 
+<link linkend="d8/d82/classjaco_1_1JacoAnglesActionServer">60 </link><emphasis class="keyword">class&#32;</emphasis><link linkend="d8/d82/classjaco_1_1JacoAnglesActionServer">JacoAnglesActionServer</link>
+61 {
+62 &#32;<emphasis class="keyword">public</emphasis>:
+63 &#32;&#32;&#32;&#32;<link linkend="d8/d82/classjaco_1_1JacoAnglesActionServer_1a53ddba342c38bb3d9cf34ad773d7189f">JacoAnglesActionServer</link>(<link linkend="d5/d2b/classjaco_1_1JacoComm">JacoComm</link>&#32;&amp;,&#32;<emphasis class="keyword">const</emphasis>&#32;ros::NodeHandle&#32;&amp;n);
+64 &#32;&#32;&#32;&#32;<link linkend="d8/d82/classjaco_1_1JacoAnglesActionServer_1a6d6ed0c99c45e1eebab14bba3233580e">~JacoAnglesActionServer</link>();
+65 
+66 &#32;&#32;&#32;&#32;<emphasis class="keywordtype">void</emphasis>&#32;<link linkend="d8/d82/classjaco_1_1JacoAnglesActionServer_1a3a3da8fd412f2311534246d2287a5b90">actionCallback</link>(<emphasis class="keyword">const</emphasis>&#32;<link linkend="d7/dba/namespacejaco__msgs_1a9056d2fb29e6973f6db43a60138ffc7c">jaco_msgs::ArmJointAnglesGoalConstPtr</link>&#32;&amp;);
+67 
+68 &#32;<emphasis class="keyword">private</emphasis>:
+<link linkend="d8/d82/classjaco_1_1JacoAnglesActionServer_1a9d3d8137fef5e34ffb99c8cc1c6e9e17">69 </link>&#32;&#32;&#32;&#32;ros::NodeHandle&#32;<link linkend="d8/d82/classjaco_1_1JacoAnglesActionServer_1a9d3d8137fef5e34ffb99c8cc1c6e9e17">node_handle_</link>;
+<link linkend="d8/d82/classjaco_1_1JacoAnglesActionServer_1a72ed0ccae4532199d387cc3bfe278cb0">70 </link>&#32;&#32;&#32;&#32;<link linkend="d5/d2b/classjaco_1_1JacoComm">JacoComm</link>&#32;&amp;<link linkend="d8/d82/classjaco_1_1JacoAnglesActionServer_1a72ed0ccae4532199d387cc3bfe278cb0">arm_comm_</link>;
+<link linkend="d8/d82/classjaco_1_1JacoAnglesActionServer_1a29d204d1bff466987e69761085a3c532">71 </link>&#32;&#32;&#32;&#32;actionlib::SimpleActionServer&lt;jaco_msgs::ArmJointAnglesAction&gt;&#32;<link linkend="d8/d82/classjaco_1_1JacoAnglesActionServer_1a29d204d1bff466987e69761085a3c532">action_server_</link>;
+72 
+<link linkend="d8/d82/classjaco_1_1JacoAnglesActionServer_1afca8c9e29d0249737632a232e149400d">73 </link>&#32;&#32;&#32;&#32;ros::Time&#32;<link linkend="d8/d82/classjaco_1_1JacoAnglesActionServer_1afca8c9e29d0249737632a232e149400d">last_nonstall_time_</link>;
+<link linkend="d8/d82/classjaco_1_1JacoAnglesActionServer_1adb99422d834b8a2fa5f26ddd3ac95e52">74 </link>&#32;&#32;&#32;&#32;<link linkend="d4/de6/classjaco_1_1JacoAngles">JacoAngles</link>&#32;<link linkend="d8/d82/classjaco_1_1JacoAnglesActionServer_1adb99422d834b8a2fa5f26ddd3ac95e52">last_nonstall_angles_</link>;
+75 
+76 &#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;Parameters</emphasis>
+<link linkend="d8/d82/classjaco_1_1JacoAnglesActionServer_1a2bf773e52f5d3751001415e8121fe276">77 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">double</emphasis>&#32;<link linkend="d8/d82/classjaco_1_1JacoAnglesActionServer_1a2bf773e52f5d3751001415e8121fe276">stall_interval_seconds_</link>;
+<link linkend="d8/d82/classjaco_1_1JacoAnglesActionServer_1a7372c88107de61bb149cea6a60932f71">78 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">double</emphasis>&#32;<link linkend="d8/d82/classjaco_1_1JacoAnglesActionServer_1a7372c88107de61bb149cea6a60932f71">stall_threshold_</link>;
+<link linkend="d8/d82/classjaco_1_1JacoAnglesActionServer_1aba435023cc4e95378e8c77333bef1ccf">79 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">double</emphasis>&#32;<link linkend="d8/d82/classjaco_1_1JacoAnglesActionServer_1aba435023cc4e95378e8c77333bef1ccf">rate_hz_</link>;
+<link linkend="d8/d82/classjaco_1_1JacoAnglesActionServer_1acc1edd1f538d1bf9c05c91c94a4abfa1">80 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">float</emphasis>&#32;<link linkend="d8/d82/classjaco_1_1JacoAnglesActionServer_1acc1edd1f538d1bf9c05c91c94a4abfa1">tolerance_</link>;
+81 };
+82 
+83 }&#32;&#32;<emphasis class="comment">//&#32;namespace&#32;jaco</emphasis>
+84 <emphasis class="preprocessor">#endif&#32;&#32;//&#32;JACO_DRIVER_JACO_ANGLES_ACTION_H</emphasis>
+    </computeroutput></literallayout>
+</section>

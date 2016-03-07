@@ -1,0 +1,5 @@
+var structros_1_1serialization_1_1Serializer_3_01_1_1jaco__msgs_1_1ArmJointAnglesActionGoal___3_01ContainerAllocator_01_4_01_4 =
+[
+    [ "allInOne", "d0/d00/structros_1_1serialization_1_1Serializer_3_01_1_1jaco__msgs_1_1ArmJointAnglesActionGoal___3_01ContainerAllocator_01_4_01_4.html#afcf3f16bbccf91d51cb764a497a760ce", null ],
+    [ "ROS_DECLARE_ALLINONE_SERIALIZER", "d0/d00/structros_1_1serialization_1_1Serializer_3_01_1_1jaco__msgs_1_1ArmJointAnglesActionGoal___3_01ContainerAllocator_01_4_01_4.html#a6a2335d800bf26d49c2f04d28e1f66ca", null ]
+];

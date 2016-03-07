@@ -1,0 +1,78 @@
+.TH "pose_action_client" 3 "Thu Mar 3 2016" "Version 1.0.1" "Kinova-ROS" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+pose_action_client \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "def \fBpose_client\fP ()"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "\fBresult\fP = \fBpose_client\fP()"
+.br
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "def pose_action_client\&.pose_client ()"
+
+.PP
+.nf
+13 def pose_client():
+14     client = actionlib\&.SimpleActionClient('/jaco/arm_pose', jaco_msgs\&.msg\&.ArmPoseAction)
+15 
+16     goal = jaco_msgs\&.msg\&.ArmPoseGoal()
+17 
+18     goal\&.pose\&.header\&.frame_id = "/jaco_api_origin"
+19     pose = goal\&.pose\&.pose
+20 
+21     if len(sys\&.argv) < 8: # default pose
+22         pose\&.position\&.x = -0\&.314269423485
+23         pose\&.position\&.y = -0\&.339179039001
+24         pose\&.position\&.z = 0\&.600132465363
+25 
+26         pose\&.orientation\&.x = -0\&.590686044496
+27         pose\&.orientation\&.y = -0\&.519369415388
+28         pose\&.orientation\&.z = 0\&.324703360925
+29         pose\&.orientation\&.w = 0\&.525274342226
+30 
+31         rospy\&.logwarn("Using test goal: \n%s", goal)
+32     else: # use pose from command line
+33         pose\&.position\&.x = float(sys\&.argv[1])
+34         pose\&.position\&.y = float(sys\&.argv[2])
+35         pose\&.position\&.z = float(sys\&.argv[3])
+36 
+37         pose\&.orientation\&.x = float(sys\&.argv[4])
+38         pose\&.orientation\&.y = float(sys\&.argv[5])
+39         pose\&.orientation\&.z = float(sys\&.argv[6])
+40         pose\&.orientation\&.w = float(sys\&.argv[7])
+41 
+42     client\&.wait_for_server()
+43     rospy\&.loginfo("Connected to Pose server")
+44 
+45     client\&.send_goal(goal)
+46 
+47     try:
+48         client\&.wait_for_result()
+49     except KeyboardInterrupt:
+50         rospy\&.loginfo("Program interrupted, pre-empting goal")
+51         client\&.cancel_all_goals()
+52 
+53     return client\&.get_result()
+54 
+.fi
+.SH "Variable Documentation"
+.PP 
+.SS "pose_action_client\&.result = \fBpose_client\fP()"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Kinova-ROS from the source code\&.

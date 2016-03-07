@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="d4/d69/namespacejaco__msgs_1_1srv">
+<title>jaco_msgs::srv</title>
+        <simplesect>
+            <title> Namespaces </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d0/d16/namespacejaco__msgs_1_1srv_1_1__HomeArm">jaco_msgs::srv::_HomeArm</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d9/d58/namespacejaco__msgs_1_1srv_1_1__SetForceControlParams">jaco_msgs::srv::_SetForceControlParams</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="dc/d20/namespacejaco__msgs_1_1srv_1_1__Start">jaco_msgs::srv::_Start</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d7/de5/namespacejaco__msgs_1_1srv_1_1__Stop">jaco_msgs::srv::_Stop</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+</section>

@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="d6/d70/JacoPositionConfig-usage_8dox">
+    <title>JacoPositionConfig-usage.dox File Reference</title>
+<para>Include dependency diagram for JacoPositionConfig-usage.dox</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../da/dff/JacoPositionConfig-usage_8dox__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Included by dependency diagram for JacoPositionConfig-usage.dox</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../d9/dad/JacoPositionConfig-usage_8dox__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+    <simplesect>
+        <title>Detailed Description</title>
+    <para>Definition in file D:/Longfei/Desktop/catkin_KinovaROS/src/jaco-ros/jaco_driver/docs/JacoPositionConfig-usage.dox</para>
+    </simplesect>
+    <literallayout><computeroutput>
+1 \subsubsection&#32;usage&#32;Usage
+2 \verbatim
+3 &lt;<link linkend="d7/d0c/namespaceadmittance__ctrl_1afea3593bd3ba80364f80f609075607fb">node</link>&#32;name=<emphasis class="stringliteral">&quot;JacoPosition&quot;</emphasis>&#32;<link linkend="d1/dda/namespacepkg">pkg</link>=<emphasis class="stringliteral">&quot;jaco_driver&quot;</emphasis>&#32;type=<emphasis class="stringliteral">&quot;JacoPosition&quot;</emphasis>&gt;
+4 &#32;&#32;&lt;param&#32;name=<emphasis class="stringliteral">&quot;X_Pose&quot;</emphasis>&#32;type=<emphasis class="stringliteral">&quot;double&quot;</emphasis>&#32;value=<emphasis class="stringliteral">&quot;0.0&quot;</emphasis>&#32;/&gt;
+5 &#32;&#32;&lt;param&#32;name=<emphasis class="stringliteral">&quot;Y_Pose&quot;</emphasis>&#32;type=<emphasis class="stringliteral">&quot;double&quot;</emphasis>&#32;value=<emphasis class="stringliteral">&quot;0.0&quot;</emphasis>&#32;/&gt;
+6 &#32;&#32;&lt;param&#32;name=<emphasis class="stringliteral">&quot;Z_Pose&quot;</emphasis>&#32;type=<emphasis class="stringliteral">&quot;double&quot;</emphasis>&#32;value=<emphasis class="stringliteral">&quot;0.0&quot;</emphasis>&#32;/&gt;
+7 &#32;&#32;&lt;param&#32;name=<emphasis class="stringliteral">&quot;RX_Pose&quot;</emphasis>&#32;type=<emphasis class="stringliteral">&quot;double&quot;</emphasis>&#32;value=<emphasis class="stringliteral">&quot;0.0&quot;</emphasis>&#32;/&gt;
+8 &#32;&#32;&lt;param&#32;name=<emphasis class="stringliteral">&quot;RY_Pose&quot;</emphasis>&#32;type=<emphasis class="stringliteral">&quot;double&quot;</emphasis>&#32;value=<emphasis class="stringliteral">&quot;0.0&quot;</emphasis>&#32;/&gt;
+9 &#32;&#32;&lt;param&#32;name=<emphasis class="stringliteral">&quot;RZ_Pose&quot;</emphasis>&#32;type=<emphasis class="stringliteral">&quot;double&quot;</emphasis>&#32;value=<emphasis class="stringliteral">&quot;0.0&quot;</emphasis>&#32;/&gt;
+10 &lt;/<link linkend="d7/d0c/namespaceadmittance__ctrl_1afea3593bd3ba80364f80f609075607fb">node</link>&gt;
+11 \endverbatim
+12 
+    </computeroutput></literallayout>
+</section>

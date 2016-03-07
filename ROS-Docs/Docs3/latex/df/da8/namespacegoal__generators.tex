@@ -1,0 +1,150 @@
+\hypertarget{namespacegoal__generators}{}\section{goal\+\_\+generators Namespace Reference}
+\label{namespacegoal__generators}\index{goal\+\_\+generators@{goal\+\_\+generators}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{namespacegoal__generators_a39b5582c84cdf5891bf92b77ab9c0b3b}{joint\+\_\+angles\+\_\+from\+\_\+file} (filepath)
+\item 
+def \hyperlink{namespacegoal__generators_a565aa27b68e73f1f3b2d1a9da1332051}{poses\+\_\+from\+\_\+file} (filepath)
+\item 
+def \hyperlink{namespacegoal__generators_a2b395bfee98a60349c6a7193e8d3059f}{random\+\_\+jaco\+\_\+finger\+\_\+positions} (n\+\_\+positions=1)
+\item 
+def \hyperlink{namespacegoal__generators_a6ab109de507bd107dedc7801ca7c5381}{random\+\_\+joint\+\_\+angles\+\_\+generator} (n\+\_\+poses=1)
+\item 
+def \hyperlink{namespacegoal__generators_a092d3fe84232b5b0ead199e6d5a822eb}{random\+\_\+mico\+\_\+finger\+\_\+positions} (n\+\_\+positions=1)
+\item 
+def \hyperlink{namespacegoal__generators_acc20fd60c84b4f30491d22bf16139668}{random\+\_\+pose\+\_\+generator} (n\+\_\+poses=1)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{namespacegoal__generators_a8ffcfd842ed393511c7ee860baa70446}{n\+\_\+fingers}
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{goal\+\_\+generators@{goal\+\_\+generators}!joint\+\_\+angles\+\_\+from\+\_\+file@{joint\+\_\+angles\+\_\+from\+\_\+file}}
+\index{joint\+\_\+angles\+\_\+from\+\_\+file@{joint\+\_\+angles\+\_\+from\+\_\+file}!goal\+\_\+generators@{goal\+\_\+generators}}
+\subsubsection[{\texorpdfstring{joint\+\_\+angles\+\_\+from\+\_\+file(filepath)}{joint_angles_from_file(filepath)}}]{\setlength{\rightskip}{0pt plus 5cm}def goal\+\_\+generators.\+joint\+\_\+angles\+\_\+from\+\_\+file (
+\begin{DoxyParamCaption}
+\item[{}]{filepath}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacegoal__generators_a39b5582c84cdf5891bf92b77ab9c0b3b}{}\label{namespacegoal__generators_a39b5582c84cdf5891bf92b77ab9c0b3b}
+\begin{DoxyVerb}A generator that yields joint angles from file.\end{DoxyVerb}
+ 
+\begin{DoxyCode}
+35 \textcolor{keyword}{def }\hyperlink{namespacegoal__generators_a39b5582c84cdf5891bf92b77ab9c0b3b}{joint\_angles\_from\_file}(filepath):
+36     \textcolor{stringliteral}{"""A generator that yields joint angles from file."""}
+37     with open(filepath) \textcolor{keyword}{as} f:
+38         \textcolor{keywordflow}{for} line \textcolor{keywordflow}{in} f.readlines():
+39             \textcolor{keywordflow}{if} len(line) > 10:
+40                 \textcolor{keywordflow}{yield} [float(n) \textcolor{keywordflow}{for} n \textcolor{keywordflow}{in} line.strip(\textcolor{stringliteral}{'\(\backslash\)n'}).split()[:6]]
+41 
+42 
+\end{DoxyCode}
+\index{goal\+\_\+generators@{goal\+\_\+generators}!poses\+\_\+from\+\_\+file@{poses\+\_\+from\+\_\+file}}
+\index{poses\+\_\+from\+\_\+file@{poses\+\_\+from\+\_\+file}!goal\+\_\+generators@{goal\+\_\+generators}}
+\subsubsection[{\texorpdfstring{poses\+\_\+from\+\_\+file(filepath)}{poses_from_file(filepath)}}]{\setlength{\rightskip}{0pt plus 5cm}def goal\+\_\+generators.\+poses\+\_\+from\+\_\+file (
+\begin{DoxyParamCaption}
+\item[{}]{filepath}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacegoal__generators_a565aa27b68e73f1f3b2d1a9da1332051}{}\label{namespacegoal__generators_a565aa27b68e73f1f3b2d1a9da1332051}
+\begin{DoxyVerb}A generator that yields poses from file, position: [x,y,z] orientation: [x,y,z,w].\end{DoxyVerb}
+ 
+\begin{DoxyCode}
+12 \textcolor{keyword}{def }\hyperlink{namespacegoal__generators_a565aa27b68e73f1f3b2d1a9da1332051}{poses\_from\_file}(filepath):
+13     \textcolor{stringliteral}{"""A generator that yields poses from file, position: [x,y,z] orientation: [x,y,z,w]."""}
+14     with open(filepath) \textcolor{keyword}{as} f:
+15         \textcolor{keywordflow}{for} line \textcolor{keywordflow}{in} f.readlines():
+16             \textcolor{keywordflow}{if} len(line) > 10:
+17                 vals = [float(n) \textcolor{keywordflow}{for} n \textcolor{keywordflow}{in} line.strip(\textcolor{stringliteral}{'\(\backslash\)n'}).split()[:7]]
+18                 mag = np.sqrt(sum(np.power(vals[3:], 2)))
+19                 \textcolor{keywordflow}{yield} vals[:3], vals[3:] / mag
+20 
+21 
+\end{DoxyCode}
+\index{goal\+\_\+generators@{goal\+\_\+generators}!random\+\_\+jaco\+\_\+finger\+\_\+positions@{random\+\_\+jaco\+\_\+finger\+\_\+positions}}
+\index{random\+\_\+jaco\+\_\+finger\+\_\+positions@{random\+\_\+jaco\+\_\+finger\+\_\+positions}!goal\+\_\+generators@{goal\+\_\+generators}}
+\subsubsection[{\texorpdfstring{random\+\_\+jaco\+\_\+finger\+\_\+positions(n\+\_\+positions=1)}{random_jaco_finger_positions(n_positions=1)}}]{\setlength{\rightskip}{0pt plus 5cm}def goal\+\_\+generators.\+random\+\_\+jaco\+\_\+finger\+\_\+positions (
+\begin{DoxyParamCaption}
+\item[{}]{n\+\_\+positions = {\ttfamily 1}}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacegoal__generators_a2b395bfee98a60349c6a7193e8d3059f}{}\label{namespacegoal__generators_a2b395bfee98a60349c6a7193e8d3059f}
+\begin{DoxyVerb}\end{DoxyVerb}
+ 
+\begin{DoxyCode}
+43 \textcolor{keyword}{def }\hyperlink{namespacegoal__generators_a2b395bfee98a60349c6a7193e8d3059f}{random\_jaco\_finger\_positions}(n\_positions=1):
+44     \textcolor{stringliteral}{""" """}
+45     \textcolor{keywordflow}{for} i \textcolor{keywordflow}{in} xrange(n\_positions):
+46         \textcolor{comment}{# finger min/max range: [0.25 to 56]?}
+47         \textcolor{keywordflow}{yield} np.random.random(3) * 55.75 + 0.25
+48 
+49 
+\end{DoxyCode}
+\index{goal\+\_\+generators@{goal\+\_\+generators}!random\+\_\+joint\+\_\+angles\+\_\+generator@{random\+\_\+joint\+\_\+angles\+\_\+generator}}
+\index{random\+\_\+joint\+\_\+angles\+\_\+generator@{random\+\_\+joint\+\_\+angles\+\_\+generator}!goal\+\_\+generators@{goal\+\_\+generators}}
+\subsubsection[{\texorpdfstring{random\+\_\+joint\+\_\+angles\+\_\+generator(n\+\_\+poses=1)}{random_joint_angles_generator(n_poses=1)}}]{\setlength{\rightskip}{0pt plus 5cm}def goal\+\_\+generators.\+random\+\_\+joint\+\_\+angles\+\_\+generator (
+\begin{DoxyParamCaption}
+\item[{}]{n\+\_\+poses = {\ttfamily 1}}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacegoal__generators_a6ab109de507bd107dedc7801ca7c5381}{}\label{namespacegoal__generators_a6ab109de507bd107dedc7801ca7c5381}
+\begin{DoxyVerb}A generator that yields random joint angles.\end{DoxyVerb}
+ 
+\begin{DoxyCode}
+22 \textcolor{keyword}{def }\hyperlink{namespacegoal__generators_a6ab109de507bd107dedc7801ca7c5381}{random\_joint\_angles\_generator}(n\_poses=1):
+23     \textcolor{stringliteral}{"""A generator that yields random joint angles."""}
+24     \textcolor{keywordflow}{for} i \textcolor{keywordflow}{in} xrange(n\_poses):
+25         \textcolor{comment}{# TODO: Check that the angles are valid}
+26         \textcolor{comment}{# 1: anything}
+27         \textcolor{comment}{# 2: -1.571 +/- 1}
+28         \textcolor{comment}{# 3: -1.571 +/- 1}
+29         \textcolor{comment}{# 4-6: anything}
+30         offset = np.array([0.0, -0.5 * np.pi, -0.5 * np.pi, 0.0, 0.0, 0.0])
+31         scale = np.array([2 * np.pi, 2.1, 3.2, 2 * np.pi, 2 * np.pi, 2 * np.pi])
+32         \textcolor{keywordflow}{yield} (np.random.random(6) - 0.5) * scale + offset
+33 
+34 
+\end{DoxyCode}
+\index{goal\+\_\+generators@{goal\+\_\+generators}!random\+\_\+mico\+\_\+finger\+\_\+positions@{random\+\_\+mico\+\_\+finger\+\_\+positions}}
+\index{random\+\_\+mico\+\_\+finger\+\_\+positions@{random\+\_\+mico\+\_\+finger\+\_\+positions}!goal\+\_\+generators@{goal\+\_\+generators}}
+\subsubsection[{\texorpdfstring{random\+\_\+mico\+\_\+finger\+\_\+positions(n\+\_\+positions=1)}{random_mico_finger_positions(n_positions=1)}}]{\setlength{\rightskip}{0pt plus 5cm}def goal\+\_\+generators.\+random\+\_\+mico\+\_\+finger\+\_\+positions (
+\begin{DoxyParamCaption}
+\item[{}]{n\+\_\+positions = {\ttfamily 1}}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacegoal__generators_a092d3fe84232b5b0ead199e6d5a822eb}{}\label{namespacegoal__generators_a092d3fe84232b5b0ead199e6d5a822eb}
+\begin{DoxyVerb}\end{DoxyVerb}
+ 
+\begin{DoxyCode}
+50 \textcolor{keyword}{def }\hyperlink{namespacegoal__generators_a092d3fe84232b5b0ead199e6d5a822eb}{random\_mico\_finger\_positions}(n\_positions=1):
+51     \textcolor{stringliteral}{""" """}
+52     \textcolor{keywordflow}{for} i \textcolor{keywordflow}{in} xrange(n\_positions):
+53         \textcolor{comment}{# finger min/max range: [12 to 6450]?}
+54         \textcolor{keywordflow}{yield} np.random.random(2) * 6300.0 + 12.0
+55 
+56 
+\end{DoxyCode}
+\index{goal\+\_\+generators@{goal\+\_\+generators}!random\+\_\+pose\+\_\+generator@{random\+\_\+pose\+\_\+generator}}
+\index{random\+\_\+pose\+\_\+generator@{random\+\_\+pose\+\_\+generator}!goal\+\_\+generators@{goal\+\_\+generators}}
+\subsubsection[{\texorpdfstring{random\+\_\+pose\+\_\+generator(n\+\_\+poses=1)}{random_pose_generator(n_poses=1)}}]{\setlength{\rightskip}{0pt plus 5cm}def goal\+\_\+generators.\+random\+\_\+pose\+\_\+generator (
+\begin{DoxyParamCaption}
+\item[{}]{n\+\_\+poses = {\ttfamily 1}}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacegoal__generators_acc20fd60c84b4f30491d22bf16139668}{}\label{namespacegoal__generators_acc20fd60c84b4f30491d22bf16139668}
+\begin{DoxyVerb}A generator that yields random poses, position: [x,y,z] orientation: [x,y,z,w].\end{DoxyVerb}
+ 
+\begin{DoxyCode}
+4 \textcolor{keyword}{def }\hyperlink{namespacegoal__generators_acc20fd60c84b4f30491d22bf16139668}{random\_pose\_generator}(n\_poses=1):
+5     \textcolor{stringliteral}{"""A generator that yields random poses, position: [x,y,z] orientation: [x,y,z,w]."""}
+6     \textcolor{keywordflow}{for} i \textcolor{keywordflow}{in} xrange(n\_poses):
+7         orient = np.random.random(4)
+8         mag = np.sqrt(sum(np.power(orient, 2)))
+9         \textcolor{keywordflow}{yield} np.random.random(3), orient / mag
+10 
+11 
+\end{DoxyCode}
+
+
+\subsection{Variable Documentation}
+\index{goal\+\_\+generators@{goal\+\_\+generators}!n\+\_\+fingers@{n\+\_\+fingers}}
+\index{n\+\_\+fingers@{n\+\_\+fingers}!goal\+\_\+generators@{goal\+\_\+generators}}
+\subsubsection[{\texorpdfstring{n\+\_\+fingers}{n_fingers}}]{\setlength{\rightskip}{0pt plus 5cm}goal\+\_\+generators.\+n\+\_\+fingers}\hypertarget{namespacegoal__generators_a8ffcfd842ed393511c7ee860baa70446}{}\label{namespacegoal__generators_a8ffcfd842ed393511c7ee860baa70446}

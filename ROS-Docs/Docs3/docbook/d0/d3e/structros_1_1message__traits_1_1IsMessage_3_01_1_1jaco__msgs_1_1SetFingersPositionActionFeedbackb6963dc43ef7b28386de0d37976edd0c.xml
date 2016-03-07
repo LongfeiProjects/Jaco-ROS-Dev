@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="d0/d3e/structros_1_1message__traits_1_1IsMessage_3_01_1_1jaco__msgs_1_1SetFingersPositionActionFeedbackb6963dc43ef7b28386de0d37976edd0c">
+<title>ros::message_traits::IsMessage&lt; ::jaco_msgs::SetFingersPositionActionFeedback_&lt; ContainerAllocator &gt; const  &gt; struct Reference</title>
+<para>
+    <programlisting>#include <link linkend="dc/d68/SetFingersPositionActionFeedback_8h">&quot;SetFingersPositionActionFeedback.h&quot;</link></programlisting>
+</para>
+<para>Inheritance diagram for ros::message_traits::IsMessage&lt; ::jaco_msgs::SetFingersPositionActionFeedback_&lt; ContainerAllocator &gt; const  &gt;</para>
+<para>
+    <figure>
+        <title>Inheritance graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../df/d08/structros_1_1message__traits_1_1IsMessage_3_01_1_1jaco__msgs_1_1SetFingersPositionActionFeedback0742b68f0bbb587066483184e6c54d6b.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Collaboration diagram for ros::message_traits::IsMessage&lt; ::jaco_msgs::SetFingersPositionActionFeedback_&lt; ContainerAllocator &gt; const  &gt;</para>
+<para>
+    <figure>
+        <title>Collaboration graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../dc/d73/structros_1_1message__traits_1_1IsMessage_3_01_1_1jaco__msgs_1_1SetFingersPositionActionFeedbackff0773f5008ce887f46b95b4bd8d1b11.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+    <templateparamlist>
+      <param>
+        <type>class ContainerAllocator</type>
+      </param>
+    </templateparamlist>
+</section>

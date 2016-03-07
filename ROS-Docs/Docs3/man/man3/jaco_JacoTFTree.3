@@ -1,0 +1,133 @@
+.TH "jaco::JacoTFTree" 3 "Thu Mar 3 2016" "Version 1.0.1" "Kinova-ROS" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+jaco::JacoTFTree \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include 'jaco_tf_updater\&.h'\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBJacoTFTree\fP (ros::NodeHandle nh)"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBcalculatePostion\fP (void)"
+.br
+.ti -1c
+.RI "void \fBjointAnglesMsgHandler\fP (const \fBjaco_msgs::JointAnglesConstPtr\fP &joint_angles)"
+.br
+.ti -1c
+.RI "void \fBtfUpdateHandler\fP (const ros::TimerEvent &)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBjaco_msgs::JointAngles\fP \fBcurrent_angles_\fP"
+.br
+.ti -1c
+.RI "ros::Subscriber \fBjoint_angles_subscriber_\fP"
+.br
+.ti -1c
+.RI "\fBjaco::JacoKinematics\fP \fBkinematics_\fP"
+.br
+.ti -1c
+.RI "ros::Time \fBlast_angle_update_\fP"
+.br
+.ti -1c
+.RI "ros::Timer \fBtf_update_timer_\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "jaco::JacoTFTree::JacoTFTree (ros::NodeHandle nh)\fC [explicit]\fP"
+
+.PP
+.nf
+16     : kinematics_(node_handle)
+17 {
+18     joint_angles_subscriber_ = node_handle\&.subscribe("in/joint_angles", 1,
+19                                                      &JacoTFTree::jointAnglesMsgHandler, this);
+20     current_angles_\&.joint1 = 0;
+21     current_angles_\&.joint2 = 0;
+22     current_angles_\&.joint3 = 0;
+23     current_angles_\&.joint4 = 0;
+24     current_angles_\&.joint5 = 0;
+25     current_angles_\&.joint6 = 0;
+26     last_angle_update_ = ros::Time()\&.now();
+27     tf_update_timer_ = node_handle\&.createTimer(ros::Duration(0\&.01),
+28                                                &JacoTFTree::tfUpdateHandler, this);
+29     tf_update_timer_\&.stop();
+30 }
+.fi
+.SH "Member Function Documentation"
+.PP 
+.SS "void jaco::JacoTFTree::calculatePostion (void)\fC [private]\fP"
+
+.PP
+.nf
+47 {
+48     // Update the forward Kinematics
+49     kinematics_\&.updateForward(kinematics_\&.degToRad(current_angles_\&.joint1),
+50                               kinematics_\&.degToRad(current_angles_\&.joint2),
+51                               kinematics_\&.degToRad(current_angles_\&.joint3),
+52                               kinematics_\&.degToRad(current_angles_\&.joint4),
+53                               kinematics_\&.degToRad(current_angles_\&.joint5),
+54                               kinematics_\&.degToRad(current_angles_\&.joint6));
+55 }
+.fi
+.SS "void jaco::JacoTFTree::jointAnglesMsgHandler (const \fBjaco_msgs::JointAnglesConstPtr\fP & joint_angles)\fC [private]\fP"
+
+.PP
+.nf
+34 {
+35     current_angles_\&.joint1 = joint_angles->joint1;
+36     current_angles_\&.joint2 = joint_angles->joint2;
+37     current_angles_\&.joint3 = joint_angles->joint3;
+38     current_angles_\&.joint4 = joint_angles->joint4;
+39     current_angles_\&.joint5 = joint_angles->joint5;
+40     current_angles_\&.joint6 = joint_angles->joint6;
+41     last_angle_update_ = ros::Time()\&.now();
+42     tf_update_timer_\&.start();
+43 }
+.fi
+.SS "void jaco::JacoTFTree::tfUpdateHandler (const ros::TimerEvent &)\fC [private]\fP"
+
+.PP
+.nf
+59 {
+60     this->calculatePostion();  // Update TF Tree
+61 
+62     if ((ros::Time()\&.now()\&.toSec() - last_angle_update_\&.toSec()) > 1)
+63     {
+64         tf_update_timer_\&.stop();
+65     }
+66 }
+.fi
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBjaco_msgs::JointAngles\fP jaco::JacoTFTree::current_angles_\fC [private]\fP"
+
+.SS "ros::Subscriber jaco::JacoTFTree::joint_angles_subscriber_\fC [private]\fP"
+
+.SS "\fBjaco::JacoKinematics\fP jaco::JacoTFTree::kinematics_\fC [private]\fP"
+
+.SS "ros::Time jaco::JacoTFTree::last_angle_update_\fC [private]\fP"
+
+.SS "ros::Timer jaco::JacoTFTree::tf_update_timer_\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Kinova-ROS from the source code\&.

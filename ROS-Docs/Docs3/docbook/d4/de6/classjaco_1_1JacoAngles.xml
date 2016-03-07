@@ -1,0 +1,202 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="d4/de6/classjaco_1_1JacoAngles">
+<title>jaco::JacoAngles class Reference</title>
+<para>
+    <programlisting>#include <link linkend="d7/d98/jaco__types_8h">&quot;jaco_types.h&quot;</link></programlisting>
+</para>
+<para>Inheritance diagram for jaco::JacoAngles</para>
+<para>
+    <figure>
+        <title>Inheritance graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../d9/d99/classjaco_1_1JacoAngles__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Collaboration diagram for jaco::JacoAngles</para>
+<para>
+    <figure>
+        <title>Collaboration graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../dd/db2/classjaco_1_1JacoAngles__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="d7/dba/namespacejaco__msgs_1ae38be3f0cdaac5905b3df022403d6ef4">jaco_msgs::JointAngles</link> <link linkend="d4/de6/classjaco_1_1JacoAngles_1a29e69c52bf777084006965f9edcdcd9d">constructAnglesMsg</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="d0/df5/structAngularInfo_1a092156b3e0e6cb657ed4bb2f6b15a9f0">InitStruct</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>bool <link linkend="d4/de6/classjaco_1_1JacoAngles_1aff68997afe0dac41e4c777b649c2b5d4">isCloseToOther</link> (
+const <link linkend="d4/de6/classjaco_1_1JacoAngles">JacoAngles</link> &amp; , float tolerance)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="d4/de6/classjaco_1_1JacoAngles_1aaaec2ebb1538fb3c43322e578ae93100">JacoAngles</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="d4/de6/classjaco_1_1JacoAngles_1a9afa66c0853e88b74d29bff433213843">JacoAngles</link> (
+const <link linkend="d7/dba/namespacejaco__msgs_1ae38be3f0cdaac5905b3df022403d6ef4">jaco_msgs::JointAngles</link> &amp; angles)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="d4/de6/classjaco_1_1JacoAngles_1add15d69fbabfd97c175b4d897425379a">JacoAngles</link> (
+const <link linkend="d0/df5/structAngularInfo">AngularInfo</link> &amp; angles)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Public Attributes</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>float Actuator1<para><emphasis>This is the value related to the first actuator. Unit depends on the context it&apos;s been used.</emphasis></para></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>float Actuator2<para><emphasis>This is the value related to the second actuator. Unit depends on the context it&apos;s been used.</emphasis></para></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>float Actuator3<para><emphasis>This is the value related to the third actuator. Unit depends on the context it&apos;s been used.</emphasis></para></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>float Actuator4<para><emphasis>This is the value related to the actuator #4. Unit depends on the context it&apos;s been used.</emphasis></para></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>float Actuator5<para><emphasis>This is the value related to the actuator #5. Unit depends on the context it&apos;s been used.</emphasis></para></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>float Actuator6<para><emphasis>This is the value related to the actuator #6. Unit depends on the context it&apos;s been used.</emphasis></para></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+            <section xml:id="d4/de6/classjaco_1_1JacoAngles_1a29e69c52bf777084006965f9edcdcd9d">
+                <title>jaco_msgs::JointAngles jaco::JacoAngles::constructAnglesMsg ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="d0/df5/structAngularInfo_1a092156b3e0e6cb657ed4bb2f6b15a9f0">
+                <title>void AngularInfo::InitStruct ()</title> <emphasis></emphasis>
+                
+<para>This method will initialises all the values to 0 </para>
+
+            </section>
+            <section xml:id="d4/de6/classjaco_1_1JacoAngles_1aff68997afe0dac41e4c777b649c2b5d4">
+                <title>bool jaco::JacoAngles::isCloseToOther (const JacoAngles &amp;, float tolerance) const </title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="d4/de6/classjaco_1_1JacoAngles_1aaaec2ebb1538fb3c43322e578ae93100">
+                <title>jaco::JacoAngles::JacoAngles ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="d4/de6/classjaco_1_1JacoAngles_1a9afa66c0853e88b74d29bff433213843">
+                <title>jaco::JacoAngles::JacoAngles (const jaco_msgs::JointAngles &amp;angles)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="d4/de6/classjaco_1_1JacoAngles_1add15d69fbabfd97c175b4d897425379a">
+                <title>jaco::JacoAngles::JacoAngles (const AngularInfo &amp;angles)</title> <emphasis></emphasis>
+                
+            </section>
+        <section>
+            <title>Member Data Documentation</title>
+            <simplesect>
+                <title>float AngularInfo::Actuator1</title>                
+<para>As an example if the current control mode is angular position the unit will be degree but if the control mode is angular velocity then the unit will be degree per second. </para>
+
+                <para>Definition at line 294 of file KinovaTypes.h</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>KinovaTypes.h</para></listitem></itemizedlist></para>
+            </simplesect>
+            <simplesect>
+                <title>float AngularInfo::Actuator2</title>                
+<para>As an example if the current control mode is angular position the unit will be degree but if the control mode is angular velocity then the unit will be degree per second. </para>
+
+                <para>Definition at line 301 of file KinovaTypes.h</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>KinovaTypes.h</para></listitem></itemizedlist></para>
+            </simplesect>
+            <simplesect>
+                <title>float AngularInfo::Actuator3</title>                
+<para>As an example if the current control mode is angular position the unit will be degree but if the control mode is angular velocity then the unit will be degree per second. </para>
+
+                <para>Definition at line 308 of file KinovaTypes.h</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>KinovaTypes.h</para></listitem></itemizedlist></para>
+            </simplesect>
+            <simplesect>
+                <title>float AngularInfo::Actuator4</title>                
+<para>As an example if the current control mode is angular position the unit will be degree but if the control mode is angular velocity then the unit will be degree per second. </para>
+
+                <para>Definition at line 315 of file KinovaTypes.h</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>KinovaTypes.h</para></listitem></itemizedlist></para>
+            </simplesect>
+            <simplesect>
+                <title>float AngularInfo::Actuator5</title>                
+<para>As an example if the current control mode is angular position the unit will be degree but if the control mode is angular velocity then the unit will be degree per second. </para>
+
+                <para>Definition at line 322 of file KinovaTypes.h</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>KinovaTypes.h</para></listitem></itemizedlist></para>
+            </simplesect>
+            <simplesect>
+                <title>float AngularInfo::Actuator6</title>                
+<para>As an example if the current control mode is angular position the unit will be degree but if the control mode is angular velocity then the unit will be degree per second. </para>
+
+                <para>Definition at line 329 of file KinovaTypes.h</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>KinovaTypes.h</para></listitem></itemizedlist></para>
+            </simplesect>
+        </section>
+</section>

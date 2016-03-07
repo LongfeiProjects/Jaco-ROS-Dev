@@ -1,0 +1,78 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="d7/db9/structros_1_1message__traits_1_1MD5Sum_3_01_1_1jaco__msgs_1_1ArmPoseGoal___3_01ContainerAllocator_01_4_01_4">
+<title>ros::message_traits::MD5Sum&lt; ::jaco_msgs::ArmPoseGoal_&lt; ContainerAllocator &gt; &gt; struct Reference</title>
+<para>
+    <programlisting>#include <link linkend="dc/dd4/ArmPoseGoal_8h">&quot;ArmPoseGoal.h&quot;</link></programlisting>
+</para>
+<para>Inheritance diagram for ros::message_traits::MD5Sum&lt; ::jaco_msgs::ArmPoseGoal_&lt; ContainerAllocator &gt; &gt;</para>
+<para>
+    <figure>
+        <title>Inheritance graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../da/d45/structros_1_1message__traits_1_1MD5Sum_3_01_1_1jaco__msgs_1_1ArmPoseGoal___3_01ContainerAllocator_01_4_01_4__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Collaboration diagram for ros::message_traits::MD5Sum&lt; ::jaco_msgs::ArmPoseGoal_&lt; ContainerAllocator &gt; &gt;</para>
+<para>
+    <figure>
+        <title>Collaboration graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../df/d63/structros_1_1message__traits_1_1MD5Sum_3_01_1_1jaco__msgs_1_1ArmPoseGoal___3_01ContainerAllocator_01_4_01_4__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+    <templateparamlist>
+      <param>
+        <type>class ContainerAllocator</type>
+      </param>
+    </templateparamlist>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static const uint64_t static_value1</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static const uint64_t static_value2</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static const char * <link linkend="d7/db9/structros_1_1message__traits_1_1MD5Sum_3_01_1_1jaco__msgs_1_1ArmPoseGoal___3_01ContainerAllocator_01_4_01_4_1af5c3bc4fa9ed228e2f0f874d42150cc3">value</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static const char * <link linkend="d7/db9/structros_1_1message__traits_1_1MD5Sum_3_01_1_1jaco__msgs_1_1ArmPoseGoal___3_01ContainerAllocator_01_4_01_4_1a7813b56e7af68415a3f5199119c8de62">value</link> (
+const ::<link linkend="d6/de2/structjaco__msgs_1_1ArmPoseGoal__">jaco_msgs::ArmPoseGoal_</link>&lt; ContainerAllocator &gt; &amp; )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+            <section xml:id="d7/db9/structros_1_1message__traits_1_1MD5Sum_3_01_1_1jaco__msgs_1_1ArmPoseGoal___3_01ContainerAllocator_01_4_01_4_1af5c3bc4fa9ed228e2f0f874d42150cc3">
+                <title>static const char* ros::message_traits::MD5Sum&lt; ::jaco_msgs::ArmPoseGoal_&lt; ContainerAllocator &gt; &gt;::value ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="d7/db9/structros_1_1message__traits_1_1MD5Sum_3_01_1_1jaco__msgs_1_1ArmPoseGoal___3_01ContainerAllocator_01_4_01_4_1a7813b56e7af68415a3f5199119c8de62">
+                <title>static const char* ros::message_traits::MD5Sum&lt; ::jaco_msgs::ArmPoseGoal_&lt; ContainerAllocator &gt; &gt;::value (const ::jaco_msgs::ArmPoseGoal_&lt; ContainerAllocator &gt; &amp;)</title> <emphasis></emphasis>
+                
+            </section>
+</section>

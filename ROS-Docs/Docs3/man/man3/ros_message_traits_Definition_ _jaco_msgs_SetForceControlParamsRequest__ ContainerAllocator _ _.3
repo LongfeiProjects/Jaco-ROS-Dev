@@ -1,0 +1,64 @@
+.TH "ros::message_traits::Definition< ::jaco_msgs::SetForceControlParamsRequest_< ContainerAllocator > >" 3 "Thu Mar 3 2016" "Version 1.0.1" "Kinova-ROS" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ros::message_traits::Definition< ::jaco_msgs::SetForceControlParamsRequest_< ContainerAllocator > > \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include 'SetForceControlParamsRequest\&.h'\fP
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static const char * \fBvalue\fP ()"
+.br
+.ti -1c
+.RI "static const char * \fBvalue\fP (const ::\fBjaco_msgs::SetForceControlParamsRequest_\fP< ContainerAllocator > &)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.SS "template<class ContainerAllocator>
+.br
+struct ros::message_traits::Definition< ::jaco_msgs::SetForceControlParamsRequest_< ContainerAllocator > >"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "template<class ContainerAllocator > static const char* ros::message_traits::Definition< ::\fBjaco_msgs::SetForceControlParamsRequest_\fP< ContainerAllocator > >::value ()\fC [inline]\fP, \fC [static]\fP"
+
+.PP
+.nf
+215   {
+216     return "geometry_msgs/Vector3 inertia_linear\n\
+217 geometry_msgs/Vector3 inertia_angular\n\
+218 geometry_msgs/Vector3 damping_linear\n\
+219 geometry_msgs/Vector3 damping_angular\n\
+220 geometry_msgs/Vector3 force_min_linear\n\
+221 geometry_msgs/Vector3 force_min_angular\n\
+222 geometry_msgs/Vector3 force_max_linear\n\
+223 geometry_msgs/Vector3 force_max_angular\n\
+224 \n\
+225 ================================================================================\n\
+226 MSG: geometry_msgs/Vector3\n\
+227 # This represents a vector in free space\&. \n\
+228 \n\
+229 float64 x\n\
+230 float64 y\n\
+231 float64 z\n\
+232 ";
+233   }
+.fi
+.SS "template<class ContainerAllocator > static const char* ros::message_traits::Definition< ::\fBjaco_msgs::SetForceControlParamsRequest_\fP< ContainerAllocator > >::value (const ::\fBjaco_msgs::SetForceControlParamsRequest_\fP< ContainerAllocator > &)\fC [inline]\fP, \fC [static]\fP"
+
+.PP
+.nf
+235 { return value(); }
+.fi
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Kinova-ROS from the source code\&.

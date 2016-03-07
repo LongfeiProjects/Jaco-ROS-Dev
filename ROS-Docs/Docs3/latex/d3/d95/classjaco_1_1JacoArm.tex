@@ -1,0 +1,836 @@
+\hypertarget{classjaco_1_1JacoArm}{}\section{jaco\+:\+:Jaco\+Arm Class Reference}
+\label{classjaco_1_1JacoArm}\index{jaco\+::\+Jaco\+Arm@{jaco\+::\+Jaco\+Arm}}
+
+
+{\ttfamily \#include \char`\"{}jaco\+\_\+arm.\+h\char`\"{}}
+
+
+
+Collaboration diagram for jaco\+:\+:Jaco\+Arm\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{da/d76/classjaco_1_1JacoArm__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classjaco_1_1JacoArm_a091f2eaffef84362f69e3b49482982db}{cartesian\+Velocity\+Callback} (const geometry\+\_\+msgs\+::\+Twist\+Stamped\+Const\+Ptr \&cartesian\+\_\+vel)
+\item 
+bool \hyperlink{classjaco_1_1JacoArm_a0296802ee4994977c35532077dd28a44}{home\+Arm\+Service\+Callback} (\hyperlink{namespacejaco__msgs_a9ec1a0126f783da04c0c07f2142c54e8}{jaco\+\_\+msgs\+::\+Home\+Arm\+::\+Request} \&req, \hyperlink{namespacejaco__msgs_a73b7d664d9eb1b07a5e5eebf08b4b444}{jaco\+\_\+msgs\+::\+Home\+Arm\+::\+Response} \&res)
+\item 
+\hyperlink{classjaco_1_1JacoArm_ab29d25cb3b4bafdc523cbe271c801681}{Jaco\+Arm} (\hyperlink{classjaco_1_1JacoComm}{Jaco\+Comm} \&arm, const ros\+::\+Node\+Handle \&node\+\_\+handle)
+\item 
+void \hyperlink{classjaco_1_1JacoArm_a2c2cfc44e480845bbf7e78c6bfe454b6}{joint\+Velocity\+Callback} (const \hyperlink{namespacejaco__msgs_aab606d270e36965850c5e08ce8073242}{jaco\+\_\+msgs\+::\+Joint\+Velocity\+Const\+Ptr} \&joint\+\_\+vel)
+\item 
+bool \hyperlink{classjaco_1_1JacoArm_a7a5b8120d770ed6ab0bd4593213de712}{set\+Force\+Control\+Params\+Callback} (\hyperlink{namespacejaco__msgs_a9960faf4239c20b2de273631be129dc2}{jaco\+\_\+msgs\+::\+Set\+Force\+Control\+Params\+::\+Request} \&req, \hyperlink{namespacejaco__msgs_a06150f3690c6e365126010e9874be430}{jaco\+\_\+msgs\+::\+Set\+Force\+Control\+Params\+::\+Response} \&res)
+\item 
+bool \hyperlink{classjaco_1_1JacoArm_a6c96a5dcf017d0b054048e7765cd3f38}{start\+Force\+Control\+Callback} (\hyperlink{namespacejaco__msgs_a90e69ae86033a05c547300c6c7759df5}{jaco\+\_\+msgs\+::\+Start\+::\+Request} \&req, \hyperlink{namespacejaco__msgs_a6efcf3689af0dcd0ac318ef8ffdc1f79}{jaco\+\_\+msgs\+::\+Start\+::\+Response} \&res)
+\item 
+bool \hyperlink{classjaco_1_1JacoArm_a0b59f245a5ca363c52dcbc211f20fa64}{start\+Service\+Callback} (\hyperlink{namespacejaco__msgs_a90e69ae86033a05c547300c6c7759df5}{jaco\+\_\+msgs\+::\+Start\+::\+Request} \&req, \hyperlink{namespacejaco__msgs_a6efcf3689af0dcd0ac318ef8ffdc1f79}{jaco\+\_\+msgs\+::\+Start\+::\+Response} \&res)
+\begin{DoxyCompactList}\small\item\em Handler for \char`\"{}start\char`\"{} service. \end{DoxyCompactList}\item 
+bool \hyperlink{classjaco_1_1JacoArm_a0ddc9f2458a2c5e17e095b03b72699dc}{stop\+Force\+Control\+Callback} (\hyperlink{namespacejaco__msgs_a5c2942c9b9b1fe5330e2b79bfaef2847}{jaco\+\_\+msgs\+::\+Stop\+::\+Request} \&req, \hyperlink{namespacejaco__msgs_aad03f8a7d16be1d6f6a0c1b2faf9cef2}{jaco\+\_\+msgs\+::\+Stop\+::\+Response} \&res)
+\item 
+bool \hyperlink{classjaco_1_1JacoArm_a14ddcea579804fbbd3fb11643bc91e78}{stop\+Service\+Callback} (\hyperlink{namespacejaco__msgs_a5c2942c9b9b1fe5330e2b79bfaef2847}{jaco\+\_\+msgs\+::\+Stop\+::\+Request} \&req, \hyperlink{namespacejaco__msgs_aad03f8a7d16be1d6f6a0c1b2faf9cef2}{jaco\+\_\+msgs\+::\+Stop\+::\+Response} \&res)
+\begin{DoxyCompactList}\small\item\em Handler for \char`\"{}stop\char`\"{} service. \end{DoxyCompactList}\item 
+\hyperlink{classjaco_1_1JacoArm_a77535c062ca1d8e11b11e691bb1ee0da}{$\sim$\+Jaco\+Arm} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classjaco_1_1JacoArm_a0effe31602b4af803cff1566a358fdfb}{cartesian\+Velocity\+Timer} (const ros\+::\+Timer\+Event \&)
+\item 
+void \hyperlink{classjaco_1_1JacoArm_a0897025ed2834e5802e504b64d67a88b}{joint\+Velocity\+Timer} (const ros\+::\+Timer\+Event \&)
+\item 
+void \hyperlink{classjaco_1_1JacoArm_ac9feee593db40584276b22f7db03206e}{position\+Timer} (const ros\+::\+Timer\+Event \&)
+\item 
+void \hyperlink{classjaco_1_1JacoArm_a978feb8b29f9ef7d6d42596984e1962a}{publish\+Finger\+Position} (void)
+\begin{DoxyCompactList}\small\item\em Publishes the current finger positions. \end{DoxyCompactList}\item 
+void \hyperlink{classjaco_1_1JacoArm_a238a888aa46e98fcae569bf942d61e32}{publish\+Joint\+Angles} (void)
+\begin{DoxyCompactList}\small\item\em Publishes the current joint angles. \end{DoxyCompactList}\item 
+void \hyperlink{classjaco_1_1JacoArm_a91106f68edeff4b26d02a6d7a8528df6}{publish\+Tool\+Position} (void)
+\begin{DoxyCompactList}\small\item\em Publishes the current cartesian coordinates. \end{DoxyCompactList}\item 
+void \hyperlink{classjaco_1_1JacoArm_a91d14ff9734d5941167ba0ec13ec3e36}{publish\+Tool\+Wrench} (void)
+\begin{DoxyCompactList}\small\item\em Publishes the current cartesian forces at the end effector. \end{DoxyCompactList}\item 
+void \hyperlink{classjaco_1_1JacoArm_a3a04586ffe92b995c58c9fa94a030bf8}{status\+Timer} (const ros\+::\+Timer\+Event \&)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+double \hyperlink{classjaco_1_1JacoArm_aa111ac63977d9a50b7e707b4a9e75e20}{cartesian\+\_\+vel\+\_\+interval\+\_\+seconds\+\_\+}
+\item 
+double \hyperlink{classjaco_1_1JacoArm_a822ad8d6fcc8719c5a090456998e832a}{cartesian\+\_\+vel\+\_\+timeout\+\_\+seconds\+\_\+}
+\item 
+ros\+::\+Timer \hyperlink{classjaco_1_1JacoArm_a11e0ed71d6c21e5df7e88fd6ab61df95}{cartesian\+\_\+vel\+\_\+timer\+\_\+}
+\item 
+bool \hyperlink{classjaco_1_1JacoArm_a17701f668a0b3ea2accf6c5fb420e012}{cartesian\+\_\+vel\+\_\+timer\+\_\+flag\+\_\+}
+\item 
+\hyperlink{structCartesianInfo}{Cartesian\+Info} \hyperlink{classjaco_1_1JacoArm_a804e6400a10726f2ec0af9ec718bd0cf}{cartesian\+\_\+velocities\+\_\+}
+\item 
+ros\+::\+Subscriber \hyperlink{classjaco_1_1JacoArm_a7598c2dfaa6677241e490eb42f175a3b}{cartesian\+\_\+velocity\+\_\+subscriber\+\_\+}
+\item 
+bool \hyperlink{classjaco_1_1JacoArm_a20deb1358ca2385fcf9dca3f0f771409}{convert\+\_\+joint\+\_\+velocities\+\_\+}
+\item 
+double \hyperlink{classjaco_1_1JacoArm_a45f8b1fbeec4d1abfcad6d3f9e65b6ca}{finger\+\_\+conv\+\_\+ratio\+\_\+}
+\item 
+ros\+::\+Publisher \hyperlink{classjaco_1_1JacoArm_a323990f9bd26de33240df3f107e29a49}{finger\+\_\+position\+\_\+publisher\+\_\+}
+\item 
+ros\+::\+Service\+Server \hyperlink{classjaco_1_1JacoArm_af025f6af7b63a3dd5ce18a31b082eec3}{homing\+\_\+service\+\_\+}
+\item 
+\hyperlink{classjaco_1_1JacoComm}{Jaco\+Comm} \& \hyperlink{classjaco_1_1JacoArm_a2f9cbba855994058b82c0f4628349286}{jaco\+\_\+comm\+\_\+}
+\item 
+ros\+::\+Publisher \hyperlink{classjaco_1_1JacoArm_a074f24a17f50b88921a9bc9d8e52c09b}{joint\+\_\+angles\+\_\+publisher\+\_\+}
+\item 
+std\+::vector$<$ std\+::string $>$ \hyperlink{classjaco_1_1JacoArm_a9a6611a10119b2651aa96eb21ecd10ad}{joint\+\_\+names\+\_\+}
+\item 
+ros\+::\+Publisher \hyperlink{classjaco_1_1JacoArm_a914eb71a6de747a2e63b880b2a0ac0b4}{joint\+\_\+state\+\_\+publisher\+\_\+}
+\item 
+double \hyperlink{classjaco_1_1JacoArm_a832938e80c91ce57ec241a1429133926}{joint\+\_\+vel\+\_\+interval\+\_\+seconds\+\_\+}
+\item 
+double \hyperlink{classjaco_1_1JacoArm_ac27941dace9da942beeff70926cc736e}{joint\+\_\+vel\+\_\+timeout\+\_\+seconds\+\_\+}
+\item 
+ros\+::\+Timer \hyperlink{classjaco_1_1JacoArm_ac4ad9c07f3a173e89d6767ec7a2dba12}{joint\+\_\+vel\+\_\+timer\+\_\+}
+\item 
+bool \hyperlink{classjaco_1_1JacoArm_a27effbbd66cd47378b49995cf80b8ffb}{joint\+\_\+vel\+\_\+timer\+\_\+flag\+\_\+}
+\item 
+\hyperlink{structAngularInfo}{Angular\+Info} \hyperlink{classjaco_1_1JacoArm_a640c8142aa9ab07ea9c2a3d7c5eb74cb}{joint\+\_\+velocities\+\_\+}
+\item 
+ros\+::\+Subscriber \hyperlink{classjaco_1_1JacoArm_a531289127704e9ffb5055cc58d3f90f8}{joint\+\_\+velocity\+\_\+subscriber\+\_\+}
+\item 
+ros\+::\+Time \hyperlink{classjaco_1_1JacoArm_a2ad620e8551ca62db4077135597b6618}{last\+\_\+cartesian\+\_\+vel\+\_\+cmd\+\_\+time\+\_\+}
+\item 
+ros\+::\+Time \hyperlink{classjaco_1_1JacoArm_a36758d949907e58807d6d4c3792a01df}{last\+\_\+joint\+\_\+vel\+\_\+cmd\+\_\+time\+\_\+}
+\item 
+ros\+::\+Node\+Handle \hyperlink{classjaco_1_1JacoArm_aa8b6a99580f2ccf8a5c509cc0f3b3c8e}{node\+\_\+handle\+\_\+}
+\item 
+ros\+::\+Service\+Server \hyperlink{classjaco_1_1JacoArm_a65f6584b95beb04af852cba7d953fdc3}{set\+\_\+force\+\_\+control\+\_\+params\+\_\+service\+\_\+}
+\item 
+ros\+::\+Service\+Server \hyperlink{classjaco_1_1JacoArm_aaf2a407b08e3982c463bbcf364be2dfa}{start\+\_\+force\+\_\+control\+\_\+service\+\_\+}
+\item 
+ros\+::\+Service\+Server \hyperlink{classjaco_1_1JacoArm_a7003937a11db04de838d05de05d29481}{start\+\_\+service\+\_\+}
+\item 
+double \hyperlink{classjaco_1_1JacoArm_aa44e18590ad8352a058df6abbd4a3c3b}{status\+\_\+interval\+\_\+seconds\+\_\+}
+\item 
+ros\+::\+Timer \hyperlink{classjaco_1_1JacoArm_ac11bbbecb7bebfef8b77d31b0294017a}{status\+\_\+timer\+\_\+}
+\item 
+ros\+::\+Service\+Server \hyperlink{classjaco_1_1JacoArm_af20526f276fc6708aacec52ca08ad189}{stop\+\_\+force\+\_\+control\+\_\+service\+\_\+}
+\item 
+ros\+::\+Service\+Server \hyperlink{classjaco_1_1JacoArm_a43eca41486bfa5f012085d3bb02ac7ca}{stop\+\_\+service\+\_\+}
+\item 
+tf\+::\+Transform\+Listener \hyperlink{classjaco_1_1JacoArm_a110ba0f607ab1c4c903e8fb59fe79c3b}{tf\+\_\+listener\+\_\+}
+\item 
+std\+::string \hyperlink{classjaco_1_1JacoArm_a4f7d75d1cfcf82b4221e6bd6e4412cf9}{tf\+\_\+prefix\+\_\+}
+\item 
+ros\+::\+Publisher \hyperlink{classjaco_1_1JacoArm_a9d6b0687a753f44ecdb2e93aeeddd288}{tool\+\_\+position\+\_\+publisher\+\_\+}
+\item 
+ros\+::\+Publisher \hyperlink{classjaco_1_1JacoArm_abff4dc1bbe63e0be7cd20ac7c4d37be4}{tool\+\_\+wrench\+\_\+publisher\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{jaco\+::\+Jaco\+Arm@{jaco\+::\+Jaco\+Arm}!Jaco\+Arm@{Jaco\+Arm}}
+\index{Jaco\+Arm@{Jaco\+Arm}!jaco\+::\+Jaco\+Arm@{jaco\+::\+Jaco\+Arm}}
+\subsubsection[{\texorpdfstring{Jaco\+Arm(\+Jaco\+Comm \&arm, const ros\+::\+Node\+Handle \&node\+\_\+handle)}{JacoArm(JacoComm &arm, const ros::NodeHandle &node_handle)}}]{\setlength{\rightskip}{0pt plus 5cm}jaco\+::\+Jaco\+Arm\+::\+Jaco\+Arm (
+\begin{DoxyParamCaption}
+\item[{{\bf Jaco\+Comm} \&}]{arm, }
+\item[{const ros\+::\+Node\+Handle \&}]{node\+\_\+handle}
+\end{DoxyParamCaption}
+)}\hypertarget{classjaco_1_1JacoArm_ab29d25cb3b4bafdc523cbe271c801681}{}\label{classjaco_1_1JacoArm_ab29d25cb3b4bafdc523cbe271c801681}
+
+\begin{DoxyCode}
+52     : \hyperlink{classjaco_1_1JacoArm_a2f9cbba855994058b82c0f4628349286}{jaco\_comm\_}(arm), \hyperlink{classjaco_1_1JacoArm_aa8b6a99580f2ccf8a5c509cc0f3b3c8e}{node\_handle\_}(nodeHandle)
+53 \{
+54     \textcolor{comment}{/* Set up Services */}
+55     \hyperlink{classjaco_1_1JacoArm_a43eca41486bfa5f012085d3bb02ac7ca}{stop\_service\_} = \hyperlink{classjaco_1_1JacoArm_aa8b6a99580f2ccf8a5c509cc0f3b3c8e}{node\_handle\_}.advertiseService(\textcolor{stringliteral}{"in/stop"}, &
+      \hyperlink{classjaco_1_1JacoArm_a14ddcea579804fbbd3fb11643bc91e78}{JacoArm::stopServiceCallback}, \textcolor{keyword}{this});
+56     \hyperlink{classjaco_1_1JacoArm_a7003937a11db04de838d05de05d29481}{start\_service\_} = \hyperlink{classjaco_1_1JacoArm_aa8b6a99580f2ccf8a5c509cc0f3b3c8e}{node\_handle\_}.advertiseService(\textcolor{stringliteral}{"in/start"}, &
+      \hyperlink{classjaco_1_1JacoArm_a0b59f245a5ca363c52dcbc211f20fa64}{JacoArm::startServiceCallback}, \textcolor{keyword}{this});
+57     \hyperlink{classjaco_1_1JacoArm_af025f6af7b63a3dd5ce18a31b082eec3}{homing\_service\_} = \hyperlink{classjaco_1_1JacoArm_aa8b6a99580f2ccf8a5c509cc0f3b3c8e}{node\_handle\_}.advertiseService(\textcolor{stringliteral}{"in/home\_arm"}, &
+      \hyperlink{classjaco_1_1JacoArm_a0296802ee4994977c35532077dd28a44}{JacoArm::homeArmServiceCallback}, \textcolor{keyword}{this});
+58 
+59     \hyperlink{classjaco_1_1JacoArm_a65f6584b95beb04af852cba7d953fdc3}{set\_force\_control\_params\_service\_} = 
+      \hyperlink{classjaco_1_1JacoArm_aa8b6a99580f2ccf8a5c509cc0f3b3c8e}{node\_handle\_}.advertiseService(\textcolor{stringliteral}{"in/set\_force\_control\_params"}, &
+      \hyperlink{classjaco_1_1JacoArm_a7a5b8120d770ed6ab0bd4593213de712}{JacoArm::setForceControlParamsCallback}, \textcolor{keyword}{this});
+60     \hyperlink{classjaco_1_1JacoArm_aaf2a407b08e3982c463bbcf364be2dfa}{start\_force\_control\_service\_} = \hyperlink{classjaco_1_1JacoArm_aa8b6a99580f2ccf8a5c509cc0f3b3c8e}{node\_handle\_}.advertiseService(\textcolor{stringliteral}{"
+      in/start\_force\_control"}, &\hyperlink{classjaco_1_1JacoArm_a6c96a5dcf017d0b054048e7765cd3f38}{JacoArm::startForceControlCallback}, \textcolor{keyword}{this});
+61     \hyperlink{classjaco_1_1JacoArm_af20526f276fc6708aacec52ca08ad189}{stop\_force\_control\_service\_} = \hyperlink{classjaco_1_1JacoArm_aa8b6a99580f2ccf8a5c509cc0f3b3c8e}{node\_handle\_}.advertiseService(\textcolor{stringliteral}{"
+      in/stop\_force\_control"}, &\hyperlink{classjaco_1_1JacoArm_a0ddc9f2458a2c5e17e095b03b72699dc}{JacoArm::stopForceControlCallback}, \textcolor{keyword}{this});
+62     
+63     \textcolor{comment}{/* Set up Publishers */}
+64     \hyperlink{classjaco_1_1JacoArm_a074f24a17f50b88921a9bc9d8e52c09b}{joint\_angles\_publisher\_} = \hyperlink{classjaco_1_1JacoArm_aa8b6a99580f2ccf8a5c509cc0f3b3c8e}{node\_handle\_}.advertise<
+      \hyperlink{structjaco__msgs_1_1JointAngles__}{jaco\_msgs::JointAngles}>(\textcolor{stringliteral}{"out/joint\_angles"}, 2);
+65     \hyperlink{classjaco_1_1JacoArm_a914eb71a6de747a2e63b880b2a0ac0b4}{joint\_state\_publisher\_} = \hyperlink{classjaco_1_1JacoArm_aa8b6a99580f2ccf8a5c509cc0f3b3c8e}{node\_handle\_}.advertise<
+      sensor\_msgs::JointState>(\textcolor{stringliteral}{"out/joint\_state"}, 2);
+66     \hyperlink{classjaco_1_1JacoArm_a9d6b0687a753f44ecdb2e93aeeddd288}{tool\_position\_publisher\_} = \hyperlink{classjaco_1_1JacoArm_aa8b6a99580f2ccf8a5c509cc0f3b3c8e}{node\_handle\_}.advertise<
+      geometry\_msgs::PoseStamped>(\textcolor{stringliteral}{"out/tool\_position"}, 2);
+67     \hyperlink{classjaco_1_1JacoArm_abff4dc1bbe63e0be7cd20ac7c4d37be4}{tool\_wrench\_publisher\_} = \hyperlink{classjaco_1_1JacoArm_aa8b6a99580f2ccf8a5c509cc0f3b3c8e}{node\_handle\_}.advertise<
+      geometry\_msgs::WrenchStamped>(\textcolor{stringliteral}{"out/tool\_wrench"}, 2);
+68     \hyperlink{classjaco_1_1JacoArm_a323990f9bd26de33240df3f107e29a49}{finger\_position\_publisher\_} = \hyperlink{classjaco_1_1JacoArm_aa8b6a99580f2ccf8a5c509cc0f3b3c8e}{node\_handle\_}.advertise<
+      \hyperlink{structjaco__msgs_1_1FingerPosition__}{jaco\_msgs::FingerPosition}>(\textcolor{stringliteral}{"out/finger\_position"}, 2);
+69 
+70     \textcolor{comment}{/* Set up Subscribers*/}
+71     \hyperlink{classjaco_1_1JacoArm_a531289127704e9ffb5055cc58d3f90f8}{joint\_velocity\_subscriber\_} = \hyperlink{classjaco_1_1JacoArm_aa8b6a99580f2ccf8a5c509cc0f3b3c8e}{node\_handle\_}.subscribe(\textcolor{stringliteral}{"
+      in/joint\_velocity"}, 1,
+72                                                       &
+      \hyperlink{classjaco_1_1JacoArm_a2c2cfc44e480845bbf7e78c6bfe454b6}{JacoArm::jointVelocityCallback}, \textcolor{keyword}{this});
+73     \hyperlink{classjaco_1_1JacoArm_a7598c2dfaa6677241e490eb42f175a3b}{cartesian\_velocity\_subscriber\_} = \hyperlink{classjaco_1_1JacoArm_aa8b6a99580f2ccf8a5c509cc0f3b3c8e}{node\_handle\_}.subscribe(\textcolor{stringliteral}{"
+      in/cartesian\_velocity"}, 1,
+74                                                           &
+      \hyperlink{classjaco_1_1JacoArm_a091f2eaffef84362f69e3b49482982db}{JacoArm::cartesianVelocityCallback}, \textcolor{keyword}{this});
+75 
+76     \hyperlink{classjaco_1_1JacoArm_aa8b6a99580f2ccf8a5c509cc0f3b3c8e}{node\_handle\_}.param<\textcolor{keywordtype}{double}>(\textcolor{stringliteral}{"status\_interval\_seconds"}, 
+      \hyperlink{classjaco_1_1JacoArm_aa44e18590ad8352a058df6abbd4a3c3b}{status\_interval\_seconds\_}, 0.1);
+77     \hyperlink{classjaco_1_1JacoArm_aa8b6a99580f2ccf8a5c509cc0f3b3c8e}{node\_handle\_}.param<\textcolor{keywordtype}{double}>(\textcolor{stringliteral}{"joint\_angular\_vel\_timeout"}, 
+      \hyperlink{classjaco_1_1JacoArm_ac27941dace9da942beeff70926cc736e}{joint\_vel\_timeout\_seconds\_}, 0.25);
+78     \hyperlink{classjaco_1_1JacoArm_aa8b6a99580f2ccf8a5c509cc0f3b3c8e}{node\_handle\_}.param<\textcolor{keywordtype}{double}>(\textcolor{stringliteral}{"cartesian\_vel\_timeout"}, 
+      \hyperlink{classjaco_1_1JacoArm_a822ad8d6fcc8719c5a090456998e832a}{cartesian\_vel\_timeout\_seconds\_}, 0.25);
+79     \hyperlink{classjaco_1_1JacoArm_aa8b6a99580f2ccf8a5c509cc0f3b3c8e}{node\_handle\_}.param<\textcolor{keywordtype}{double}>(\textcolor{stringliteral}{"joint\_angular\_vel\_timeout"}, 
+      \hyperlink{classjaco_1_1JacoArm_a832938e80c91ce57ec241a1429133926}{joint\_vel\_interval\_seconds\_}, 0.1);
+80     \hyperlink{classjaco_1_1JacoArm_aa8b6a99580f2ccf8a5c509cc0f3b3c8e}{node\_handle\_}.param<\textcolor{keywordtype}{double}>(\textcolor{stringliteral}{"cartesian\_vel\_timeout"}, 
+      \hyperlink{classjaco_1_1JacoArm_aa111ac63977d9a50b7e707b4a9e75e20}{cartesian\_vel\_interval\_seconds\_}, 0.01);
+81 
+82     \hyperlink{classjaco_1_1JacoArm_aa8b6a99580f2ccf8a5c509cc0f3b3c8e}{node\_handle\_}.param<std::string>(\textcolor{stringliteral}{"tf\_prefix"}, \hyperlink{classjaco_1_1JacoArm_a4f7d75d1cfcf82b4221e6bd6e4412cf9}{tf\_prefix\_}, \textcolor{stringliteral}{"jaco\_"});
+83 
+84     \textcolor{comment}{// Approximative conversion ratio from finger position (0..6000) to joint angle }
+85     \textcolor{comment}{// in radians (0..0.7).}
+86     \hyperlink{classjaco_1_1JacoArm_aa8b6a99580f2ccf8a5c509cc0f3b3c8e}{node\_handle\_}.param(\textcolor{stringliteral}{"finger\_angle\_conv\_ratio"}, \hyperlink{classjaco_1_1JacoArm_a45f8b1fbeec4d1abfcad6d3f9e65b6ca}{finger\_conv\_ratio\_}, 0.7 / 5
+      000.0);
+87 
+88     \textcolor{comment}{// Depending on the API version, the arm might return velocities in the}
+89     \textcolor{comment}{// 0..360 range (0..180 for positive values, 181..360 for negative ones).}
+90     \textcolor{comment}{// This indicates that the ROS node should convert them first before}
+91     \textcolor{comment}{// updating the joint\_state topic.}
+92     \hyperlink{classjaco_1_1JacoArm_aa8b6a99580f2ccf8a5c509cc0f3b3c8e}{node\_handle\_}.param(\textcolor{stringliteral}{"convert\_joint\_velocities"}, 
+      \hyperlink{classjaco_1_1JacoArm_a20deb1358ca2385fcf9dca3f0f771409}{convert\_joint\_velocities\_}, \textcolor{keyword}{true});
+93 
+94     \hyperlink{classjaco_1_1JacoArm_a9a6611a10119b2651aa96eb21ecd10ad}{joint\_names\_}.resize(\hyperlink{namespacejaco_a842fe600d7cc8aba974c8e39e0d88399}{JACO\_JOINTS\_COUNT});
+95     \hyperlink{classjaco_1_1JacoArm_a9a6611a10119b2651aa96eb21ecd10ad}{joint\_names\_}[0] = tf\_prefix\_ + \textcolor{stringliteral}{"joint\_1"};
+96     \hyperlink{classjaco_1_1JacoArm_a9a6611a10119b2651aa96eb21ecd10ad}{joint\_names\_}[1] = tf\_prefix\_ + \textcolor{stringliteral}{"joint\_2"};
+97     \hyperlink{classjaco_1_1JacoArm_a9a6611a10119b2651aa96eb21ecd10ad}{joint\_names\_}[2] = tf\_prefix\_ + \textcolor{stringliteral}{"joint\_3"};
+98     \hyperlink{classjaco_1_1JacoArm_a9a6611a10119b2651aa96eb21ecd10ad}{joint\_names\_}[3] = tf\_prefix\_ + \textcolor{stringliteral}{"joint\_4"};
+99     \hyperlink{classjaco_1_1JacoArm_a9a6611a10119b2651aa96eb21ecd10ad}{joint\_names\_}[4] = tf\_prefix\_ + \textcolor{stringliteral}{"joint\_5"};
+100     \hyperlink{classjaco_1_1JacoArm_a9a6611a10119b2651aa96eb21ecd10ad}{joint\_names\_}[5] = tf\_prefix\_ + \textcolor{stringliteral}{"joint\_6"};
+101     \hyperlink{classjaco_1_1JacoArm_a9a6611a10119b2651aa96eb21ecd10ad}{joint\_names\_}[6] = tf\_prefix\_ + \textcolor{stringliteral}{"joint\_finger\_1"};
+102     \hyperlink{classjaco_1_1JacoArm_a9a6611a10119b2651aa96eb21ecd10ad}{joint\_names\_}[7] = tf\_prefix\_ + \textcolor{stringliteral}{"joint\_finger\_2"};
+103     \hyperlink{classjaco_1_1JacoArm_a9a6611a10119b2651aa96eb21ecd10ad}{joint\_names\_}[8] = tf\_prefix\_ + \textcolor{stringliteral}{"joint\_finger\_3"};
+104 
+105     \hyperlink{classjaco_1_1JacoArm_ac11bbbecb7bebfef8b77d31b0294017a}{status\_timer\_} = \hyperlink{classjaco_1_1JacoArm_aa8b6a99580f2ccf8a5c509cc0f3b3c8e}{node\_handle\_}.createTimer(ros::Duration(
+      \hyperlink{classjaco_1_1JacoArm_aa44e18590ad8352a058df6abbd4a3c3b}{status\_interval\_seconds\_}),
+106                                            &\hyperlink{classjaco_1_1JacoArm_a3a04586ffe92b995c58c9fa94a030bf8}{JacoArm::statusTimer}, \textcolor{keyword}{this});
+107 
+108     \hyperlink{classjaco_1_1JacoArm_ac4ad9c07f3a173e89d6767ec7a2dba12}{joint\_vel\_timer\_} = \hyperlink{classjaco_1_1JacoArm_aa8b6a99580f2ccf8a5c509cc0f3b3c8e}{node\_handle\_}.createTimer(ros::Duration(
+      \hyperlink{classjaco_1_1JacoArm_a832938e80c91ce57ec241a1429133926}{joint\_vel\_interval\_seconds\_}),
+109                                               &\hyperlink{classjaco_1_1JacoArm_a0897025ed2834e5802e504b64d67a88b}{JacoArm::jointVelocityTimer}, \textcolor{keyword}{this}
+      );
+110     \hyperlink{classjaco_1_1JacoArm_ac4ad9c07f3a173e89d6767ec7a2dba12}{joint\_vel\_timer\_}.stop();
+111     \hyperlink{classjaco_1_1JacoArm_a27effbbd66cd47378b49995cf80b8ffb}{joint\_vel\_timer\_flag\_} = \textcolor{keyword}{false};
+112 
+113     \hyperlink{classjaco_1_1JacoArm_a11e0ed71d6c21e5df7e88fd6ab61df95}{cartesian\_vel\_timer\_} = \hyperlink{classjaco_1_1JacoArm_aa8b6a99580f2ccf8a5c509cc0f3b3c8e}{node\_handle\_}.createTimer(ros::Duration(
+      \hyperlink{classjaco_1_1JacoArm_aa111ac63977d9a50b7e707b4a9e75e20}{cartesian\_vel\_interval\_seconds\_}),
+114                                                   &
+      \hyperlink{classjaco_1_1JacoArm_a0effe31602b4af803cff1566a358fdfb}{JacoArm::cartesianVelocityTimer}, \textcolor{keyword}{this});
+115     \hyperlink{classjaco_1_1JacoArm_a11e0ed71d6c21e5df7e88fd6ab61df95}{cartesian\_vel\_timer\_}.stop();
+116     \hyperlink{classjaco_1_1JacoArm_a17701f668a0b3ea2accf6c5fb420e012}{cartesian\_vel\_timer\_flag\_} = \textcolor{keyword}{false};
+117 
+118     ROS\_INFO(\textcolor{stringliteral}{"The arm is ready to use."});
+119 
+120 
+121 \}
+\end{DoxyCode}
+\index{jaco\+::\+Jaco\+Arm@{jaco\+::\+Jaco\+Arm}!````~Jaco\+Arm@{$\sim$\+Jaco\+Arm}}
+\index{````~Jaco\+Arm@{$\sim$\+Jaco\+Arm}!jaco\+::\+Jaco\+Arm@{jaco\+::\+Jaco\+Arm}}
+\subsubsection[{\texorpdfstring{$\sim$\+Jaco\+Arm()}{~JacoArm()}}]{\setlength{\rightskip}{0pt plus 5cm}jaco\+::\+Jaco\+Arm\+::$\sim$\+Jaco\+Arm (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classjaco_1_1JacoArm_a77535c062ca1d8e11b11e691bb1ee0da}{}\label{classjaco_1_1JacoArm_a77535c062ca1d8e11b11e691bb1ee0da}
+
+\begin{DoxyCode}
+125 \{
+126 \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{jaco\+::\+Jaco\+Arm@{jaco\+::\+Jaco\+Arm}!cartesian\+Velocity\+Callback@{cartesian\+Velocity\+Callback}}
+\index{cartesian\+Velocity\+Callback@{cartesian\+Velocity\+Callback}!jaco\+::\+Jaco\+Arm@{jaco\+::\+Jaco\+Arm}}
+\subsubsection[{\texorpdfstring{cartesian\+Velocity\+Callback(const geometry\+\_\+msgs\+::\+Twist\+Stamped\+Const\+Ptr \&cartesian\+\_\+vel)}{cartesianVelocityCallback(const geometry_msgs::TwistStampedConstPtr &cartesian_vel)}}]{\setlength{\rightskip}{0pt plus 5cm}void jaco\+::\+Jaco\+Arm\+::cartesian\+Velocity\+Callback (
+\begin{DoxyParamCaption}
+\item[{const geometry\+\_\+msgs\+::\+Twist\+Stamped\+Const\+Ptr \&}]{cartesian\+\_\+vel}
+\end{DoxyParamCaption}
+)}\hypertarget{classjaco_1_1JacoArm_a091f2eaffef84362f69e3b49482982db}{}\label{classjaco_1_1JacoArm_a091f2eaffef84362f69e3b49482982db}
+
+\begin{DoxyCode}
+238 \{
+239     \textcolor{keywordflow}{if} (!\hyperlink{classjaco_1_1JacoArm_a2f9cbba855994058b82c0f4628349286}{jaco\_comm\_}.\hyperlink{classjaco_1_1JacoComm_a872b8033cda5a9fe4ccdca2e89aa03d1}{isStopped}())
+240     \{
+241         \hyperlink{classjaco_1_1JacoArm_a804e6400a10726f2ec0af9ec718bd0cf}{cartesian\_velocities\_}.\hyperlink{structCartesianInfo_a212cc2dcae1697132fc31fa2f5d17269}{X} = cartesian\_vel->twist.linear.x;
+242         \hyperlink{classjaco_1_1JacoArm_a804e6400a10726f2ec0af9ec718bd0cf}{cartesian\_velocities\_}.\hyperlink{structCartesianInfo_a12c2611c89445419b336e58815d87c7c}{Y} = cartesian\_vel->twist.linear.y;
+243         \hyperlink{classjaco_1_1JacoArm_a804e6400a10726f2ec0af9ec718bd0cf}{cartesian\_velocities\_}.\hyperlink{structCartesianInfo_a14e196e4cb38c0ae7f4658b9b070b7fe}{Z} = cartesian\_vel->twist.linear.z;
+244         \hyperlink{classjaco_1_1JacoArm_a804e6400a10726f2ec0af9ec718bd0cf}{cartesian\_velocities\_}.\hyperlink{structCartesianInfo_a39135e53155aa4025c40eeefbfd3b17c}{ThetaX} = cartesian\_vel->twist.angular.x;
+245         \hyperlink{classjaco_1_1JacoArm_a804e6400a10726f2ec0af9ec718bd0cf}{cartesian\_velocities\_}.\hyperlink{structCartesianInfo_a4aef5897f4cdcf7ecc9df6804f844d46}{ThetaY} = cartesian\_vel->twist.angular.y;
+246         \hyperlink{classjaco_1_1JacoArm_a804e6400a10726f2ec0af9ec718bd0cf}{cartesian\_velocities\_}.\hyperlink{structCartesianInfo_a2890c501f3b7b9479e12ad51f04f0a7f}{ThetaZ} = cartesian\_vel->twist.angular.z;
+247 
+248         \hyperlink{classjaco_1_1JacoArm_a2ad620e8551ca62db4077135597b6618}{last\_cartesian\_vel\_cmd\_time\_} = ros::Time().now();
+249 
+250         \textcolor{keywordflow}{if} (\hyperlink{classjaco_1_1JacoArm_a17701f668a0b3ea2accf6c5fb420e012}{cartesian\_vel\_timer\_flag\_} == \textcolor{keyword}{false})
+251         \{
+252             \hyperlink{classjaco_1_1JacoArm_a11e0ed71d6c21e5df7e88fd6ab61df95}{cartesian\_vel\_timer\_}.start();
+253             \hyperlink{classjaco_1_1JacoArm_a17701f668a0b3ea2accf6c5fb420e012}{cartesian\_vel\_timer\_flag\_} = \textcolor{keyword}{true};
+254         \}
+255     \}
+256 \}
+\end{DoxyCode}
+\index{jaco\+::\+Jaco\+Arm@{jaco\+::\+Jaco\+Arm}!cartesian\+Velocity\+Timer@{cartesian\+Velocity\+Timer}}
+\index{cartesian\+Velocity\+Timer@{cartesian\+Velocity\+Timer}!jaco\+::\+Jaco\+Arm@{jaco\+::\+Jaco\+Arm}}
+\subsubsection[{\texorpdfstring{cartesian\+Velocity\+Timer(const ros\+::\+Timer\+Event \&)}{cartesianVelocityTimer(const ros::TimerEvent &)}}]{\setlength{\rightskip}{0pt plus 5cm}void jaco\+::\+Jaco\+Arm\+::cartesian\+Velocity\+Timer (
+\begin{DoxyParamCaption}
+\item[{const ros\+::\+Timer\+Event \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classjaco_1_1JacoArm_a0effe31602b4af803cff1566a358fdfb}{}\label{classjaco_1_1JacoArm_a0effe31602b4af803cff1566a358fdfb}
+
+\begin{DoxyCode}
+260 \{
+261     \textcolor{keywordtype}{double} elapsed\_time\_seconds = ros::Time().now().toSec() - 
+      \hyperlink{classjaco_1_1JacoArm_a2ad620e8551ca62db4077135597b6618}{last\_cartesian\_vel\_cmd\_time\_}.toSec();
+262 
+263     \textcolor{keywordflow}{if} (elapsed\_time\_seconds > \hyperlink{classjaco_1_1JacoArm_a822ad8d6fcc8719c5a090456998e832a}{cartesian\_vel\_timeout\_seconds\_})
+264     \{
+265         ROS\_DEBUG(\textcolor{stringliteral}{"Cartesian vel timed out: %f"}, elapsed\_time\_seconds);
+266         \hyperlink{classjaco_1_1JacoArm_a11e0ed71d6c21e5df7e88fd6ab61df95}{cartesian\_vel\_timer\_}.stop();
+267         \hyperlink{classjaco_1_1JacoArm_a17701f668a0b3ea2accf6c5fb420e012}{cartesian\_vel\_timer\_flag\_} = \textcolor{keyword}{false};
+268     \}
+269     \textcolor{keywordflow}{else}
+270     \{
+271         ROS\_DEBUG(\textcolor{stringliteral}{"Cart vel timer (%f): %f, %f, %f, %f, %f, %f"}, elapsed\_time\_seconds,
+272                   \hyperlink{classjaco_1_1JacoArm_a804e6400a10726f2ec0af9ec718bd0cf}{cartesian\_velocities\_}.\hyperlink{structCartesianInfo_a212cc2dcae1697132fc31fa2f5d17269}{X}, 
+      \hyperlink{classjaco_1_1JacoArm_a804e6400a10726f2ec0af9ec718bd0cf}{cartesian\_velocities\_}.\hyperlink{structCartesianInfo_a12c2611c89445419b336e58815d87c7c}{Y}, \hyperlink{classjaco_1_1JacoArm_a804e6400a10726f2ec0af9ec718bd0cf}{cartesian\_velocities\_}.
+      \hyperlink{structCartesianInfo_a14e196e4cb38c0ae7f4658b9b070b7fe}{Z},
+273                   \hyperlink{classjaco_1_1JacoArm_a804e6400a10726f2ec0af9ec718bd0cf}{cartesian\_velocities\_}.\hyperlink{structCartesianInfo_a39135e53155aa4025c40eeefbfd3b17c}{ThetaX}, 
+      \hyperlink{classjaco_1_1JacoArm_a804e6400a10726f2ec0af9ec718bd0cf}{cartesian\_velocities\_}.\hyperlink{structCartesianInfo_a4aef5897f4cdcf7ecc9df6804f844d46}{ThetaY}, \hyperlink{classjaco_1_1JacoArm_a804e6400a10726f2ec0af9ec718bd0cf}{cartesian\_velocities\_}.
+      \hyperlink{structCartesianInfo_a2890c501f3b7b9479e12ad51f04f0a7f}{ThetaZ});
+274         \hyperlink{classjaco_1_1JacoArm_a2f9cbba855994058b82c0f4628349286}{jaco\_comm\_}.\hyperlink{classjaco_1_1JacoComm_a468352480a437cc2144c8d4d289815a5}{setCartesianVelocities}(
+      \hyperlink{classjaco_1_1JacoArm_a804e6400a10726f2ec0af9ec718bd0cf}{cartesian\_velocities\_});
+275     \}
+276 \}
+\end{DoxyCode}
+\index{jaco\+::\+Jaco\+Arm@{jaco\+::\+Jaco\+Arm}!home\+Arm\+Service\+Callback@{home\+Arm\+Service\+Callback}}
+\index{home\+Arm\+Service\+Callback@{home\+Arm\+Service\+Callback}!jaco\+::\+Jaco\+Arm@{jaco\+::\+Jaco\+Arm}}
+\subsubsection[{\texorpdfstring{home\+Arm\+Service\+Callback(jaco\+\_\+msgs\+::\+Home\+Arm\+::\+Request \&req, jaco\+\_\+msgs\+::\+Home\+Arm\+::\+Response \&res)}{homeArmServiceCallback(jaco_msgs::HomeArm::Request &req, jaco_msgs::HomeArm::Response &res)}}]{\setlength{\rightskip}{0pt plus 5cm}bool jaco\+::\+Jaco\+Arm\+::home\+Arm\+Service\+Callback (
+\begin{DoxyParamCaption}
+\item[{{\bf jaco\+\_\+msgs\+::\+Home\+Arm\+::\+Request} \&}]{req, }
+\item[{{\bf jaco\+\_\+msgs\+::\+Home\+Arm\+::\+Response} \&}]{res}
+\end{DoxyParamCaption}
+)}\hypertarget{classjaco_1_1JacoArm_a0296802ee4994977c35532077dd28a44}{}\label{classjaco_1_1JacoArm_a0296802ee4994977c35532077dd28a44}
+
+\begin{DoxyCode}
+130 \{
+131     \hyperlink{classjaco_1_1JacoArm_a2f9cbba855994058b82c0f4628349286}{jaco\_comm\_}.\hyperlink{classjaco_1_1JacoComm_a38c69b22bc293afd3f27eff9179dec4c}{homeArm}();
+132     \hyperlink{classjaco_1_1JacoArm_a2f9cbba855994058b82c0f4628349286}{jaco\_comm\_}.\hyperlink{classjaco_1_1JacoComm_a787f049f83d8f5fa5a7c86ee6a1d0a11}{initFingers}();
+133     res.\hyperlink{structjaco__msgs_1_1HomeArmResponse___a2efd00ce949c689141e24a0c2feac589}{homearm\_result} = \textcolor{stringliteral}{"JACO ARM HAS BEEN RETURNED HOME"};
+134     \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+135 \}
+\end{DoxyCode}
+\index{jaco\+::\+Jaco\+Arm@{jaco\+::\+Jaco\+Arm}!joint\+Velocity\+Callback@{joint\+Velocity\+Callback}}
+\index{joint\+Velocity\+Callback@{joint\+Velocity\+Callback}!jaco\+::\+Jaco\+Arm@{jaco\+::\+Jaco\+Arm}}
+\subsubsection[{\texorpdfstring{joint\+Velocity\+Callback(const jaco\+\_\+msgs\+::\+Joint\+Velocity\+Const\+Ptr \&joint\+\_\+vel)}{jointVelocityCallback(const jaco_msgs::JointVelocityConstPtr &joint_vel)}}]{\setlength{\rightskip}{0pt plus 5cm}void jaco\+::\+Jaco\+Arm\+::joint\+Velocity\+Callback (
+\begin{DoxyParamCaption}
+\item[{const {\bf jaco\+\_\+msgs\+::\+Joint\+Velocity\+Const\+Ptr} \&}]{joint\+\_\+vel}
+\end{DoxyParamCaption}
+)}\hypertarget{classjaco_1_1JacoArm_a2c2cfc44e480845bbf7e78c6bfe454b6}{}\label{classjaco_1_1JacoArm_a2c2cfc44e480845bbf7e78c6bfe454b6}
+
+\begin{DoxyCode}
+139 \{
+140     \textcolor{keywordflow}{if} (!\hyperlink{classjaco_1_1JacoArm_a2f9cbba855994058b82c0f4628349286}{jaco\_comm\_}.\hyperlink{classjaco_1_1JacoComm_a872b8033cda5a9fe4ccdca2e89aa03d1}{isStopped}())
+141     \{
+142         \hyperlink{classjaco_1_1JacoArm_a640c8142aa9ab07ea9c2a3d7c5eb74cb}{joint\_velocities\_}.\hyperlink{structAngularInfo_a5fc555c085bddc82c33a3039fbc40932}{Actuator1} = joint\_vel->joint1;
+143         \hyperlink{classjaco_1_1JacoArm_a640c8142aa9ab07ea9c2a3d7c5eb74cb}{joint\_velocities\_}.\hyperlink{structAngularInfo_ab7b9349eef239f9741d9c28a795e4c35}{Actuator2} = joint\_vel->joint2;
+144         \hyperlink{classjaco_1_1JacoArm_a640c8142aa9ab07ea9c2a3d7c5eb74cb}{joint\_velocities\_}.\hyperlink{structAngularInfo_a30426eab94c82cfd3d697bbc8c506c2a}{Actuator3} = joint\_vel->joint3;
+145         \hyperlink{classjaco_1_1JacoArm_a640c8142aa9ab07ea9c2a3d7c5eb74cb}{joint\_velocities\_}.\hyperlink{structAngularInfo_a46a1314c4846de6a495310b44fe5e0c3}{Actuator4} = joint\_vel->joint4;
+146         \hyperlink{classjaco_1_1JacoArm_a640c8142aa9ab07ea9c2a3d7c5eb74cb}{joint\_velocities\_}.\hyperlink{structAngularInfo_a953c29d2481eb1c42c84e9c992d34dde}{Actuator5} = joint\_vel->joint5;
+147         \hyperlink{classjaco_1_1JacoArm_a640c8142aa9ab07ea9c2a3d7c5eb74cb}{joint\_velocities\_}.\hyperlink{structAngularInfo_ab54771129d8a9e451c27942dd349340d}{Actuator6} = joint\_vel->joint6;
+148         \hyperlink{classjaco_1_1JacoArm_a36758d949907e58807d6d4c3792a01df}{last\_joint\_vel\_cmd\_time\_} = ros::Time().now();
+149 
+150         \textcolor{keywordflow}{if} (\hyperlink{classjaco_1_1JacoArm_a27effbbd66cd47378b49995cf80b8ffb}{joint\_vel\_timer\_flag\_} == \textcolor{keyword}{false})
+151         \{
+152             \hyperlink{classjaco_1_1JacoArm_ac4ad9c07f3a173e89d6767ec7a2dba12}{joint\_vel\_timer\_}.start();
+153             \hyperlink{classjaco_1_1JacoArm_a27effbbd66cd47378b49995cf80b8ffb}{joint\_vel\_timer\_flag\_} = \textcolor{keyword}{true};
+154         \}
+155     \}
+156 \}
+\end{DoxyCode}
+\index{jaco\+::\+Jaco\+Arm@{jaco\+::\+Jaco\+Arm}!joint\+Velocity\+Timer@{joint\+Velocity\+Timer}}
+\index{joint\+Velocity\+Timer@{joint\+Velocity\+Timer}!jaco\+::\+Jaco\+Arm@{jaco\+::\+Jaco\+Arm}}
+\subsubsection[{\texorpdfstring{joint\+Velocity\+Timer(const ros\+::\+Timer\+Event \&)}{jointVelocityTimer(const ros::TimerEvent &)}}]{\setlength{\rightskip}{0pt plus 5cm}void jaco\+::\+Jaco\+Arm\+::joint\+Velocity\+Timer (
+\begin{DoxyParamCaption}
+\item[{const ros\+::\+Timer\+Event \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classjaco_1_1JacoArm_a0897025ed2834e5802e504b64d67a88b}{}\label{classjaco_1_1JacoArm_a0897025ed2834e5802e504b64d67a88b}
+
+\begin{DoxyCode}
+280 \{
+281     \textcolor{keywordtype}{double} elapsed\_time\_seconds = ros::Time().now().toSec() - 
+      \hyperlink{classjaco_1_1JacoArm_a36758d949907e58807d6d4c3792a01df}{last\_joint\_vel\_cmd\_time\_}.toSec();
+282 
+283     \textcolor{keywordflow}{if} (elapsed\_time\_seconds > \hyperlink{classjaco_1_1JacoArm_ac27941dace9da942beeff70926cc736e}{joint\_vel\_timeout\_seconds\_})
+284     \{
+285         ROS\_DEBUG(\textcolor{stringliteral}{"Joint vel timed out: %f"}, elapsed\_time\_seconds);
+286         \hyperlink{classjaco_1_1JacoArm_ac4ad9c07f3a173e89d6767ec7a2dba12}{joint\_vel\_timer\_}.stop();
+287         \hyperlink{classjaco_1_1JacoArm_a27effbbd66cd47378b49995cf80b8ffb}{joint\_vel\_timer\_flag\_} = \textcolor{keyword}{false};
+288     \}
+289     \textcolor{keywordflow}{else}
+290     \{
+291         ROS\_DEBUG(\textcolor{stringliteral}{"Joint vel timer (%f): %f, %f, %f, %f, %f, %f"}, elapsed\_time\_seconds,
+292                   \hyperlink{classjaco_1_1JacoArm_a640c8142aa9ab07ea9c2a3d7c5eb74cb}{joint\_velocities\_}.\hyperlink{structAngularInfo_a5fc555c085bddc82c33a3039fbc40932}{Actuator1}, 
+      \hyperlink{classjaco_1_1JacoArm_a640c8142aa9ab07ea9c2a3d7c5eb74cb}{joint\_velocities\_}.\hyperlink{structAngularInfo_ab7b9349eef239f9741d9c28a795e4c35}{Actuator2}, \hyperlink{classjaco_1_1JacoArm_a640c8142aa9ab07ea9c2a3d7c5eb74cb}{joint\_velocities\_}.
+      \hyperlink{structAngularInfo_a30426eab94c82cfd3d697bbc8c506c2a}{Actuator3},
+293                   \hyperlink{classjaco_1_1JacoArm_a640c8142aa9ab07ea9c2a3d7c5eb74cb}{joint\_velocities\_}.\hyperlink{structAngularInfo_a46a1314c4846de6a495310b44fe5e0c3}{Actuator4}, 
+      \hyperlink{classjaco_1_1JacoArm_a640c8142aa9ab07ea9c2a3d7c5eb74cb}{joint\_velocities\_}.\hyperlink{structAngularInfo_a953c29d2481eb1c42c84e9c992d34dde}{Actuator5}, \hyperlink{classjaco_1_1JacoArm_a640c8142aa9ab07ea9c2a3d7c5eb74cb}{joint\_velocities\_}.
+      \hyperlink{structAngularInfo_ab54771129d8a9e451c27942dd349340d}{Actuator6});
+294         \hyperlink{classjaco_1_1JacoArm_a2f9cbba855994058b82c0f4628349286}{jaco\_comm\_}.\hyperlink{classjaco_1_1JacoComm_af269b1c8d8b1f32c1003ca2e464252f0}{setJointVelocities}(
+      \hyperlink{classjaco_1_1JacoArm_a640c8142aa9ab07ea9c2a3d7c5eb74cb}{joint\_velocities\_});
+295     \}
+296 \}
+\end{DoxyCode}
+\index{jaco\+::\+Jaco\+Arm@{jaco\+::\+Jaco\+Arm}!position\+Timer@{position\+Timer}}
+\index{position\+Timer@{position\+Timer}!jaco\+::\+Jaco\+Arm@{jaco\+::\+Jaco\+Arm}}
+\subsubsection[{\texorpdfstring{position\+Timer(const ros\+::\+Timer\+Event \&)}{positionTimer(const ros::TimerEvent &)}}]{\setlength{\rightskip}{0pt plus 5cm}void jaco\+::\+Jaco\+Arm\+::position\+Timer (
+\begin{DoxyParamCaption}
+\item[{const ros\+::\+Timer\+Event \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classjaco_1_1JacoArm_ac9feee593db40584276b22f7db03206e}{}\label{classjaco_1_1JacoArm_ac9feee593db40584276b22f7db03206e}
+\index{jaco\+::\+Jaco\+Arm@{jaco\+::\+Jaco\+Arm}!publish\+Finger\+Position@{publish\+Finger\+Position}}
+\index{publish\+Finger\+Position@{publish\+Finger\+Position}!jaco\+::\+Jaco\+Arm@{jaco\+::\+Jaco\+Arm}}
+\subsubsection[{\texorpdfstring{publish\+Finger\+Position(void)}{publishFingerPosition(void)}}]{\setlength{\rightskip}{0pt plus 5cm}void jaco\+::\+Jaco\+Arm\+::publish\+Finger\+Position (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classjaco_1_1JacoArm_a978feb8b29f9ef7d6d42596984e1962a}{}\label{classjaco_1_1JacoArm_a978feb8b29f9ef7d6d42596984e1962a}
+
+
+Publishes the current finger positions. 
+
+
+\begin{DoxyCode}
+448 \{
+449     FingerAngles fingers;
+450     \hyperlink{classjaco_1_1JacoArm_a2f9cbba855994058b82c0f4628349286}{jaco\_comm\_}.\hyperlink{classjaco_1_1JacoComm_a7644bf1154b59bf4d8b97c200284e3fb}{getFingerPositions}(fingers);
+451     \hyperlink{classjaco_1_1JacoArm_a323990f9bd26de33240df3f107e29a49}{finger\_position\_publisher\_}.publish(fingers.constructFingersMsg());
+452 \}
+\end{DoxyCode}
+\index{jaco\+::\+Jaco\+Arm@{jaco\+::\+Jaco\+Arm}!publish\+Joint\+Angles@{publish\+Joint\+Angles}}
+\index{publish\+Joint\+Angles@{publish\+Joint\+Angles}!jaco\+::\+Jaco\+Arm@{jaco\+::\+Jaco\+Arm}}
+\subsubsection[{\texorpdfstring{publish\+Joint\+Angles(void)}{publishJointAngles(void)}}]{\setlength{\rightskip}{0pt plus 5cm}void jaco\+::\+Jaco\+Arm\+::publish\+Joint\+Angles (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classjaco_1_1JacoArm_a238a888aa46e98fcae569bf942d61e32}{}\label{classjaco_1_1JacoArm_a238a888aa46e98fcae569bf942d61e32}
+
+
+Publishes the current joint angles. 
+
+Joint angles are published in both their raw state as obtained from the arm (Joint\+Angles), and transformed \& converted to radians (joint\+\_\+state) as per the Jaco Kinematics P\+DF.
+
+Velocities and torques (effort) are only published in the Joint\+States message, only for the first 6 joints as these values are not available for the fingers. 
+\begin{DoxyCode}
+311 \{
+312     FingerAngles fingers;
+313     \hyperlink{classjaco_1_1JacoArm_a2f9cbba855994058b82c0f4628349286}{jaco\_comm\_}.\hyperlink{classjaco_1_1JacoComm_a7644bf1154b59bf4d8b97c200284e3fb}{getFingerPositions}(fingers);
+314 
+315     \textcolor{comment}{// Query arm for current joint angles}
+316     JacoAngles current\_angles;
+317     \hyperlink{classjaco_1_1JacoArm_a2f9cbba855994058b82c0f4628349286}{jaco\_comm\_}.\hyperlink{classjaco_1_1JacoComm_a5fcb23bf6925a82f2ab5e42460ea3834}{getJointAngles}(current\_angles);
+318     \hyperlink{structjaco__msgs_1_1JointAngles__}{jaco\_msgs::JointAngles} jaco\_angles = current\_angles.constructAnglesMsg();
+319 
+320     jaco\_angles.\hyperlink{structjaco__msgs_1_1JointAngles___a5ebadd874f74af99d452dc42787489b7}{joint1} = current\_angles.Actuator1;
+321     jaco\_angles.\hyperlink{structjaco__msgs_1_1JointAngles___ad7bfb312caeafc6b2cb1fc02c6a3e116}{joint2} = current\_angles.Actuator2;
+322     jaco\_angles.\hyperlink{structjaco__msgs_1_1JointAngles___ae8e5d407b34f0a6acd368ec1a28df526}{joint3} = current\_angles.Actuator3;
+323     jaco\_angles.\hyperlink{structjaco__msgs_1_1JointAngles___accb31f45f3a313794a9cab57b8a9b952}{joint4} = current\_angles.Actuator4;
+324     jaco\_angles.\hyperlink{structjaco__msgs_1_1JointAngles___ad02e456e0b382b2bf59b4eeb93318921}{joint5} = current\_angles.Actuator5;
+325     jaco\_angles.\hyperlink{structjaco__msgs_1_1JointAngles___a474d9f2a0e329ba6bd08c8fa265e9a50}{joint6} = current\_angles.Actuator6;
+326 
+327     sensor\_msgs::JointState joint\_state;
+328     joint\_state.name = \hyperlink{classjaco_1_1JacoArm_a9a6611a10119b2651aa96eb21ecd10ad}{joint\_names\_};
+329     joint\_state.header.stamp = ros::Time::now();
+330 
+331     \textcolor{comment}{// Transform from Kinova DH algorithm to physical angles in radians, then place into vector array}
+332     joint\_state.position.resize(9);
+333 
+334     \textcolor{keywordtype}{double} j6o = \hyperlink{classjaco_1_1JacoArm_a2f9cbba855994058b82c0f4628349286}{jaco\_comm\_}.\hyperlink{classjaco_1_1JacoComm_af20323ed50f73b59bac3e18ebd8559fa}{robotType}() == 2 ? 270.0 : 260.0;
+335     joint\_state.position[0] = (180- jaco\_angles.\hyperlink{structjaco__msgs_1_1JointAngles___a5ebadd874f74af99d452dc42787489b7}{joint1}) * (\hyperlink{jaco__arm_8cpp_a598a3330b3c21701223ee0ca14316eca}{PI} / 180);
+336     joint\_state.position[1] = (jaco\_angles.\hyperlink{structjaco__msgs_1_1JointAngles___ad7bfb312caeafc6b2cb1fc02c6a3e116}{joint2} - j6o) * (\hyperlink{jaco__arm_8cpp_a598a3330b3c21701223ee0ca14316eca}{PI} / 180);
+337     joint\_state.position[2] = (90-jaco\_angles.\hyperlink{structjaco__msgs_1_1JointAngles___ae8e5d407b34f0a6acd368ec1a28df526}{joint3}) * (\hyperlink{jaco__arm_8cpp_a598a3330b3c21701223ee0ca14316eca}{PI} / 180);
+338     joint\_state.position[3] = (180-jaco\_angles.\hyperlink{structjaco__msgs_1_1JointAngles___accb31f45f3a313794a9cab57b8a9b952}{joint4}) * (\hyperlink{jaco__arm_8cpp_a598a3330b3c21701223ee0ca14316eca}{PI} / 180);
+339     joint\_state.position[4] = (180-jaco\_angles.\hyperlink{structjaco__msgs_1_1JointAngles___ad02e456e0b382b2bf59b4eeb93318921}{joint5}) * (\hyperlink{jaco__arm_8cpp_a598a3330b3c21701223ee0ca14316eca}{PI} / 180);
+340     joint\_state.position[5] = (270-jaco\_angles.\hyperlink{structjaco__msgs_1_1JointAngles___a474d9f2a0e329ba6bd08c8fa265e9a50}{joint6}) * (\hyperlink{jaco__arm_8cpp_a598a3330b3c21701223ee0ca14316eca}{PI} / 180);
+341     joint\_state.position[6] = \hyperlink{classjaco_1_1JacoArm_a45f8b1fbeec4d1abfcad6d3f9e65b6ca}{finger\_conv\_ratio\_} * fingers.Finger1;
+342     joint\_state.position[7] = \hyperlink{classjaco_1_1JacoArm_a45f8b1fbeec4d1abfcad6d3f9e65b6ca}{finger\_conv\_ratio\_} * fingers.Finger2;
+343     joint\_state.position[8] = \hyperlink{classjaco_1_1JacoArm_a45f8b1fbeec4d1abfcad6d3f9e65b6ca}{finger\_conv\_ratio\_} * fingers.Finger3;
+344 
+345     \textcolor{comment}{// Joint velocities}
+346     JacoAngles current\_vels;
+347     \hyperlink{classjaco_1_1JacoArm_a2f9cbba855994058b82c0f4628349286}{jaco\_comm\_}.\hyperlink{classjaco_1_1JacoComm_aa81b5cdf89bd2c7259be3638fdb4f75a}{getJointVelocities}(current\_vels);
+348     joint\_state.velocity.resize(9);
+349     joint\_state.velocity[0] = current\_vels.Actuator1;
+350     joint\_state.velocity[1] = current\_vels.Actuator2;
+351     joint\_state.velocity[2] = current\_vels.Actuator3;
+352     joint\_state.velocity[3] = current\_vels.Actuator4;
+353     joint\_state.velocity[4] = current\_vels.Actuator5;
+354     joint\_state.velocity[5] = current\_vels.Actuator6;
+355 
+356     ROS\_DEBUG\_THROTTLE(0.1,
+357                        \textcolor{stringliteral}{"Raw joint velocities: %f %f %f %f %f %f"},
+358                        joint\_state.velocity[0],
+359                        joint\_state.velocity[1],
+360                        joint\_state.velocity[2],
+361                        joint\_state.velocity[3],
+362                        joint\_state.velocity[4],
+363                        joint\_state.velocity[5]);
+364 
+365     \textcolor{keywordflow}{if} (\hyperlink{classjaco_1_1JacoArm_a20deb1358ca2385fcf9dca3f0f771409}{convert\_joint\_velocities\_}) \{
+366         \hyperlink{namespaceanonymous__namespace_02jaco__arm_8cpp_03_a048a0e37d623243283fd93360d041e2b}{convertKinDeg}(joint\_state.velocity);
+367     \}
+368 
+369     \textcolor{comment}{// No velocity for the fingers:}
+370     joint\_state.velocity[6] = 0.0;
+371     joint\_state.velocity[7] = 0.0;
+372     joint\_state.velocity[8] = 0.0;
+373 
+374     \textcolor{comment}{// Joint torques (effort)}
+375     \textcolor{comment}{// NOTE: Currently invalid.}
+376     JacoAngles joint\_tqs;
+377     joint\_state.effort.resize(9);
+378     joint\_state.effort[0] = joint\_tqs.Actuator1;
+379     joint\_state.effort[1] = joint\_tqs.Actuator2;
+380     joint\_state.effort[2] = joint\_tqs.Actuator3;
+381     joint\_state.effort[3] = joint\_tqs.Actuator4;
+382     joint\_state.effort[4] = joint\_tqs.Actuator5;
+383     joint\_state.effort[5] = joint\_tqs.Actuator6;
+384     joint\_state.effort[6] = 0.0;
+385     joint\_state.effort[7] = 0.0;
+386     joint\_state.effort[8] = 0.0;
+387 
+388     ROS\_DEBUG\_THROTTLE(0.1,
+389                        \textcolor{stringliteral}{"Raw joint torques: %f %f %f %f %f %f"},
+390                        joint\_state.effort[0],
+391                        joint\_state.effort[1],
+392                        joint\_state.effort[2],
+393                        joint\_state.effort[3],
+394                        joint\_state.effort[4],
+395                        joint\_state.effort[5]);
+396 
+397     \hyperlink{classjaco_1_1JacoArm_a074f24a17f50b88921a9bc9d8e52c09b}{joint\_angles\_publisher\_}.publish(jaco\_angles);
+398     \hyperlink{classjaco_1_1JacoArm_a914eb71a6de747a2e63b880b2a0ac0b4}{joint\_state\_publisher\_}.publish(joint\_state);
+399 \}
+\end{DoxyCode}
+\index{jaco\+::\+Jaco\+Arm@{jaco\+::\+Jaco\+Arm}!publish\+Tool\+Position@{publish\+Tool\+Position}}
+\index{publish\+Tool\+Position@{publish\+Tool\+Position}!jaco\+::\+Jaco\+Arm@{jaco\+::\+Jaco\+Arm}}
+\subsubsection[{\texorpdfstring{publish\+Tool\+Position(void)}{publishToolPosition(void)}}]{\setlength{\rightskip}{0pt plus 5cm}void jaco\+::\+Jaco\+Arm\+::publish\+Tool\+Position (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classjaco_1_1JacoArm_a91106f68edeff4b26d02a6d7a8528df6}{}\label{classjaco_1_1JacoArm_a91106f68edeff4b26d02a6d7a8528df6}
+
+
+Publishes the current cartesian coordinates. 
+
+
+\begin{DoxyCode}
+406 \{
+407     JacoPose pose;
+408     geometry\_msgs::PoseStamped current\_position;
+409 
+410     \hyperlink{classjaco_1_1JacoArm_a2f9cbba855994058b82c0f4628349286}{jaco\_comm\_}.\hyperlink{classjaco_1_1JacoComm_a855bbefed2093d0d0cc7763eb7306a0b}{getCartesianPosition}(pose);
+411 
+412     current\_position.pose            = pose.constructPoseMsg();
+413     current\_position.header.stamp    = ros::Time::now();
+414     current\_position.header.frame\_id = \hyperlink{classjaco_1_1JacoArm_a4f7d75d1cfcf82b4221e6bd6e4412cf9}{tf\_prefix\_} + \textcolor{stringliteral}{"link\_base"};
+415 
+416     \hyperlink{classjaco_1_1JacoArm_a9d6b0687a753f44ecdb2e93aeeddd288}{tool\_position\_publisher\_}.publish(current\_position);
+417 \}
+\end{DoxyCode}
+\index{jaco\+::\+Jaco\+Arm@{jaco\+::\+Jaco\+Arm}!publish\+Tool\+Wrench@{publish\+Tool\+Wrench}}
+\index{publish\+Tool\+Wrench@{publish\+Tool\+Wrench}!jaco\+::\+Jaco\+Arm@{jaco\+::\+Jaco\+Arm}}
+\subsubsection[{\texorpdfstring{publish\+Tool\+Wrench(void)}{publishToolWrench(void)}}]{\setlength{\rightskip}{0pt plus 5cm}void jaco\+::\+Jaco\+Arm\+::publish\+Tool\+Wrench (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classjaco_1_1JacoArm_a91d14ff9734d5941167ba0ec13ec3e36}{}\label{classjaco_1_1JacoArm_a91d14ff9734d5941167ba0ec13ec3e36}
+
+
+Publishes the current cartesian forces at the end effector. 
+
+
+\begin{DoxyCode}
+423 \{
+424     JacoPose wrench;
+425     geometry\_msgs::WrenchStamped current\_wrench;
+426 
+427     \hyperlink{classjaco_1_1JacoArm_a2f9cbba855994058b82c0f4628349286}{jaco\_comm\_}.\hyperlink{classjaco_1_1JacoComm_af181d7ddd7baeff6e46720648e7e1f31}{getCartesianForce}(wrench);
+428 
+429     current\_wrench.wrench          = wrench.constructWrenchMsg();
+430     current\_wrench.header.stamp    = ros::Time::now();
+431     \textcolor{comment}{// TODO: Rotate wrench to fit the end effector frame.}
+432     \textcolor{comment}{// Right now, the orientation of the wrench is in the API's (base) frame.}
+433     current\_wrench.header.frame\_id = \hyperlink{classjaco_1_1JacoArm_a4f7d75d1cfcf82b4221e6bd6e4412cf9}{tf\_prefix\_} + \textcolor{stringliteral}{"api\_origin"};
+434 
+435 
+436     \textcolor{comment}{// Same conversion issue as with velocities:}
+437     \textcolor{keywordflow}{if} (\hyperlink{classjaco_1_1JacoArm_a20deb1358ca2385fcf9dca3f0f771409}{convert\_joint\_velocities\_}) \{
+438         \hyperlink{namespaceanonymous__namespace_02jaco__arm_8cpp_03_a048a0e37d623243283fd93360d041e2b}{convertKinDeg}(current\_wrench.wrench.torque);
+439     \}
+440 
+441     \hyperlink{classjaco_1_1JacoArm_abff4dc1bbe63e0be7cd20ac7c4d37be4}{tool\_wrench\_publisher\_}.publish(current\_wrench);
+442 \}
+\end{DoxyCode}
+\index{jaco\+::\+Jaco\+Arm@{jaco\+::\+Jaco\+Arm}!set\+Force\+Control\+Params\+Callback@{set\+Force\+Control\+Params\+Callback}}
+\index{set\+Force\+Control\+Params\+Callback@{set\+Force\+Control\+Params\+Callback}!jaco\+::\+Jaco\+Arm@{jaco\+::\+Jaco\+Arm}}
+\subsubsection[{\texorpdfstring{set\+Force\+Control\+Params\+Callback(jaco\+\_\+msgs\+::\+Set\+Force\+Control\+Params\+::\+Request \&req, jaco\+\_\+msgs\+::\+Set\+Force\+Control\+Params\+::\+Response \&res)}{setForceControlParamsCallback(jaco_msgs::SetForceControlParams::Request &req, jaco_msgs::SetForceControlParams::Response &res)}}]{\setlength{\rightskip}{0pt plus 5cm}bool jaco\+::\+Jaco\+Arm\+::set\+Force\+Control\+Params\+Callback (
+\begin{DoxyParamCaption}
+\item[{{\bf jaco\+\_\+msgs\+::\+Set\+Force\+Control\+Params\+::\+Request} \&}]{req, }
+\item[{{\bf jaco\+\_\+msgs\+::\+Set\+Force\+Control\+Params\+::\+Response} \&}]{res}
+\end{DoxyParamCaption}
+)}\hypertarget{classjaco_1_1JacoArm_a7a5b8120d770ed6ab0bd4593213de712}{}\label{classjaco_1_1JacoArm_a7a5b8120d770ed6ab0bd4593213de712}
+
+\begin{DoxyCode}
+188 \{
+189     \hyperlink{structCartesianInfo}{CartesianInfo} inertia, damping, force\_min, force\_max;
+190     inertia.\hyperlink{structCartesianInfo_a212cc2dcae1697132fc31fa2f5d17269}{X}      = req.\hyperlink{structjaco__msgs_1_1SetForceControlParamsRequest___a1163bd5470638964c3bd0f3146617695}{inertia\_linear}.x;
+191     inertia.\hyperlink{structCartesianInfo_a12c2611c89445419b336e58815d87c7c}{Y}      = req.\hyperlink{structjaco__msgs_1_1SetForceControlParamsRequest___a1163bd5470638964c3bd0f3146617695}{inertia\_linear}.y;
+192     inertia.\hyperlink{structCartesianInfo_a14e196e4cb38c0ae7f4658b9b070b7fe}{Z}      = req.\hyperlink{structjaco__msgs_1_1SetForceControlParamsRequest___a1163bd5470638964c3bd0f3146617695}{inertia\_linear}.z;
+193     inertia.\hyperlink{structCartesianInfo_a39135e53155aa4025c40eeefbfd3b17c}{ThetaX} = req.\hyperlink{structjaco__msgs_1_1SetForceControlParamsRequest___aee7ba36455fcb2b5ea168a5bf6331b7b}{inertia\_angular}.x;
+194     inertia.\hyperlink{structCartesianInfo_a4aef5897f4cdcf7ecc9df6804f844d46}{ThetaY} = req.\hyperlink{structjaco__msgs_1_1SetForceControlParamsRequest___aee7ba36455fcb2b5ea168a5bf6331b7b}{inertia\_angular}.y;
+195     inertia.\hyperlink{structCartesianInfo_a2890c501f3b7b9479e12ad51f04f0a7f}{ThetaZ} = req.\hyperlink{structjaco__msgs_1_1SetForceControlParamsRequest___aee7ba36455fcb2b5ea168a5bf6331b7b}{inertia\_angular}.z;
+196     damping.\hyperlink{structCartesianInfo_a212cc2dcae1697132fc31fa2f5d17269}{X}      = req.\hyperlink{structjaco__msgs_1_1SetForceControlParamsRequest___a8512d209d48fdb9db5ada5584e41033b}{damping\_linear}.x;
+197     damping.\hyperlink{structCartesianInfo_a12c2611c89445419b336e58815d87c7c}{Y}      = req.\hyperlink{structjaco__msgs_1_1SetForceControlParamsRequest___a8512d209d48fdb9db5ada5584e41033b}{damping\_linear}.y;
+198     damping.\hyperlink{structCartesianInfo_a14e196e4cb38c0ae7f4658b9b070b7fe}{Z}      = req.\hyperlink{structjaco__msgs_1_1SetForceControlParamsRequest___a8512d209d48fdb9db5ada5584e41033b}{damping\_linear}.z;
+199     damping.\hyperlink{structCartesianInfo_a39135e53155aa4025c40eeefbfd3b17c}{ThetaX} = req.\hyperlink{structjaco__msgs_1_1SetForceControlParamsRequest___aad2dc5a6c218abdb8723023e6ea7aa40}{damping\_angular}.x;
+200     damping.\hyperlink{structCartesianInfo_a4aef5897f4cdcf7ecc9df6804f844d46}{ThetaY} = req.\hyperlink{structjaco__msgs_1_1SetForceControlParamsRequest___aad2dc5a6c218abdb8723023e6ea7aa40}{damping\_angular}.y;
+201     damping.\hyperlink{structCartesianInfo_a2890c501f3b7b9479e12ad51f04f0a7f}{ThetaZ} = req.\hyperlink{structjaco__msgs_1_1SetForceControlParamsRequest___aad2dc5a6c218abdb8723023e6ea7aa40}{damping\_angular}.z;
+202 
+203     \hyperlink{classjaco_1_1JacoArm_a2f9cbba855994058b82c0f4628349286}{jaco\_comm\_}.\hyperlink{classjaco_1_1JacoComm_afbb443b8e3fe71ef58b0013fdb3d5674}{setCartesianInertiaDamping}(inertia, damping);
+204 
+205     force\_min.\hyperlink{structCartesianInfo_a212cc2dcae1697132fc31fa2f5d17269}{X}      = req.\hyperlink{structjaco__msgs_1_1SetForceControlParamsRequest___a6acec93f53a7132d740aa0335a05a36d}{force\_min\_linear}.x;
+206     force\_min.\hyperlink{structCartesianInfo_a12c2611c89445419b336e58815d87c7c}{Y}      = req.\hyperlink{structjaco__msgs_1_1SetForceControlParamsRequest___a6acec93f53a7132d740aa0335a05a36d}{force\_min\_linear}.y;
+207     force\_min.\hyperlink{structCartesianInfo_a14e196e4cb38c0ae7f4658b9b070b7fe}{Z}      = req.\hyperlink{structjaco__msgs_1_1SetForceControlParamsRequest___a6acec93f53a7132d740aa0335a05a36d}{force\_min\_linear}.z;
+208     force\_min.\hyperlink{structCartesianInfo_a39135e53155aa4025c40eeefbfd3b17c}{ThetaX} = req.\hyperlink{structjaco__msgs_1_1SetForceControlParamsRequest___ab84d0d8b19f11eca2319c4ef903caafd}{force\_min\_angular}.x;
+209     force\_min.\hyperlink{structCartesianInfo_a4aef5897f4cdcf7ecc9df6804f844d46}{ThetaY} = req.\hyperlink{structjaco__msgs_1_1SetForceControlParamsRequest___ab84d0d8b19f11eca2319c4ef903caafd}{force\_min\_angular}.y;
+210     force\_min.\hyperlink{structCartesianInfo_a2890c501f3b7b9479e12ad51f04f0a7f}{ThetaZ} = req.\hyperlink{structjaco__msgs_1_1SetForceControlParamsRequest___ab84d0d8b19f11eca2319c4ef903caafd}{force\_min\_angular}.z;
+211     force\_max.\hyperlink{structCartesianInfo_a212cc2dcae1697132fc31fa2f5d17269}{X}      = req.\hyperlink{structjaco__msgs_1_1SetForceControlParamsRequest___a89805bac05f838a5bc70a641539715f0}{force\_max\_linear}.x;
+212     force\_max.\hyperlink{structCartesianInfo_a12c2611c89445419b336e58815d87c7c}{Y}      = req.\hyperlink{structjaco__msgs_1_1SetForceControlParamsRequest___a89805bac05f838a5bc70a641539715f0}{force\_max\_linear}.y;
+213     force\_max.\hyperlink{structCartesianInfo_a14e196e4cb38c0ae7f4658b9b070b7fe}{Z}      = req.\hyperlink{structjaco__msgs_1_1SetForceControlParamsRequest___a89805bac05f838a5bc70a641539715f0}{force\_max\_linear}.z;
+214     force\_max.\hyperlink{structCartesianInfo_a39135e53155aa4025c40eeefbfd3b17c}{ThetaX} = req.\hyperlink{structjaco__msgs_1_1SetForceControlParamsRequest___afa6dc239b7bd0cd6b43b4ccea1ec92af}{force\_max\_angular}.x;
+215     force\_max.\hyperlink{structCartesianInfo_a4aef5897f4cdcf7ecc9df6804f844d46}{ThetaY} = req.\hyperlink{structjaco__msgs_1_1SetForceControlParamsRequest___afa6dc239b7bd0cd6b43b4ccea1ec92af}{force\_max\_angular}.y;
+216     force\_max.\hyperlink{structCartesianInfo_a2890c501f3b7b9479e12ad51f04f0a7f}{ThetaZ} = req.\hyperlink{structjaco__msgs_1_1SetForceControlParamsRequest___afa6dc239b7bd0cd6b43b4ccea1ec92af}{force\_max\_angular}.z;
+217 
+218     \hyperlink{classjaco_1_1JacoArm_a2f9cbba855994058b82c0f4628349286}{jaco\_comm\_}.\hyperlink{classjaco_1_1JacoComm_a39faaf774115561ea1857349db182145}{setCartesianForceMinMax}(force\_min, force\_max);
+219 
+220     \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+221 \}
+\end{DoxyCode}
+\index{jaco\+::\+Jaco\+Arm@{jaco\+::\+Jaco\+Arm}!start\+Force\+Control\+Callback@{start\+Force\+Control\+Callback}}
+\index{start\+Force\+Control\+Callback@{start\+Force\+Control\+Callback}!jaco\+::\+Jaco\+Arm@{jaco\+::\+Jaco\+Arm}}
+\subsubsection[{\texorpdfstring{start\+Force\+Control\+Callback(jaco\+\_\+msgs\+::\+Start\+::\+Request \&req, jaco\+\_\+msgs\+::\+Start\+::\+Response \&res)}{startForceControlCallback(jaco_msgs::Start::Request &req, jaco_msgs::Start::Response &res)}}]{\setlength{\rightskip}{0pt plus 5cm}bool jaco\+::\+Jaco\+Arm\+::start\+Force\+Control\+Callback (
+\begin{DoxyParamCaption}
+\item[{{\bf jaco\+\_\+msgs\+::\+Start\+::\+Request} \&}]{req, }
+\item[{{\bf jaco\+\_\+msgs\+::\+Start\+::\+Response} \&}]{res}
+\end{DoxyParamCaption}
+)}\hypertarget{classjaco_1_1JacoArm_a6c96a5dcf017d0b054048e7765cd3f38}{}\label{classjaco_1_1JacoArm_a6c96a5dcf017d0b054048e7765cd3f38}
+
+\begin{DoxyCode}
+224 \{
+225     \hyperlink{classjaco_1_1JacoArm_a2f9cbba855994058b82c0f4628349286}{jaco\_comm\_}.\hyperlink{classjaco_1_1JacoComm_a00e5493dfbdcaab6c1a9bd388d3b839d}{startForceControl}();
+226     res.\hyperlink{structjaco__msgs_1_1StartResponse___ada6cfbcf90a2ab058b01adf0b079515c}{start\_result} = \textcolor{stringliteral}{"Start force control requested."};
+227     \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+228 \}
+\end{DoxyCode}
+\index{jaco\+::\+Jaco\+Arm@{jaco\+::\+Jaco\+Arm}!start\+Service\+Callback@{start\+Service\+Callback}}
+\index{start\+Service\+Callback@{start\+Service\+Callback}!jaco\+::\+Jaco\+Arm@{jaco\+::\+Jaco\+Arm}}
+\subsubsection[{\texorpdfstring{start\+Service\+Callback(jaco\+\_\+msgs\+::\+Start\+::\+Request \&req, jaco\+\_\+msgs\+::\+Start\+::\+Response \&res)}{startServiceCallback(jaco_msgs::Start::Request &req, jaco_msgs::Start::Response &res)}}]{\setlength{\rightskip}{0pt plus 5cm}bool jaco\+::\+Jaco\+Arm\+::start\+Service\+Callback (
+\begin{DoxyParamCaption}
+\item[{{\bf jaco\+\_\+msgs\+::\+Start\+::\+Request} \&}]{req, }
+\item[{{\bf jaco\+\_\+msgs\+::\+Start\+::\+Response} \&}]{res}
+\end{DoxyParamCaption}
+)}\hypertarget{classjaco_1_1JacoArm_a0b59f245a5ca363c52dcbc211f20fa64}{}\label{classjaco_1_1JacoArm_a0b59f245a5ca363c52dcbc211f20fa64}
+
+
+Handler for \char`\"{}start\char`\"{} service. 
+
+Re-\/enables control of the arm after a stop. 
+\begin{DoxyCode}
+180 \{
+181     \hyperlink{classjaco_1_1JacoArm_a2f9cbba855994058b82c0f4628349286}{jaco\_comm\_}.\hyperlink{classjaco_1_1JacoComm_a6b2a1fabc4e6c30da42c9a5e26757398}{startAPI}();
+182     res.\hyperlink{structjaco__msgs_1_1StartResponse___ada6cfbcf90a2ab058b01adf0b079515c}{start\_result} = \textcolor{stringliteral}{"Arm started"};
+183     ROS\_DEBUG(\textcolor{stringliteral}{"Arm start requested"});
+184     \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+185 \}
+\end{DoxyCode}
+\index{jaco\+::\+Jaco\+Arm@{jaco\+::\+Jaco\+Arm}!status\+Timer@{status\+Timer}}
+\index{status\+Timer@{status\+Timer}!jaco\+::\+Jaco\+Arm@{jaco\+::\+Jaco\+Arm}}
+\subsubsection[{\texorpdfstring{status\+Timer(const ros\+::\+Timer\+Event \&)}{statusTimer(const ros::TimerEvent &)}}]{\setlength{\rightskip}{0pt plus 5cm}void jaco\+::\+Jaco\+Arm\+::status\+Timer (
+\begin{DoxyParamCaption}
+\item[{const ros\+::\+Timer\+Event \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classjaco_1_1JacoArm_a3a04586ffe92b995c58c9fa94a030bf8}{}\label{classjaco_1_1JacoArm_a3a04586ffe92b995c58c9fa94a030bf8}
+
+\begin{DoxyCode}
+456 \{
+457     \hyperlink{classjaco_1_1JacoArm_a238a888aa46e98fcae569bf942d61e32}{publishJointAngles}();
+458     \hyperlink{classjaco_1_1JacoArm_a91106f68edeff4b26d02a6d7a8528df6}{publishToolPosition}();
+459     \hyperlink{classjaco_1_1JacoArm_a91d14ff9734d5941167ba0ec13ec3e36}{publishToolWrench}();
+460     \hyperlink{classjaco_1_1JacoArm_a978feb8b29f9ef7d6d42596984e1962a}{publishFingerPosition}();
+461 \}
+\end{DoxyCode}
+\index{jaco\+::\+Jaco\+Arm@{jaco\+::\+Jaco\+Arm}!stop\+Force\+Control\+Callback@{stop\+Force\+Control\+Callback}}
+\index{stop\+Force\+Control\+Callback@{stop\+Force\+Control\+Callback}!jaco\+::\+Jaco\+Arm@{jaco\+::\+Jaco\+Arm}}
+\subsubsection[{\texorpdfstring{stop\+Force\+Control\+Callback(jaco\+\_\+msgs\+::\+Stop\+::\+Request \&req, jaco\+\_\+msgs\+::\+Stop\+::\+Response \&res)}{stopForceControlCallback(jaco_msgs::Stop::Request &req, jaco_msgs::Stop::Response &res)}}]{\setlength{\rightskip}{0pt plus 5cm}bool jaco\+::\+Jaco\+Arm\+::stop\+Force\+Control\+Callback (
+\begin{DoxyParamCaption}
+\item[{{\bf jaco\+\_\+msgs\+::\+Stop\+::\+Request} \&}]{req, }
+\item[{{\bf jaco\+\_\+msgs\+::\+Stop\+::\+Response} \&}]{res}
+\end{DoxyParamCaption}
+)}\hypertarget{classjaco_1_1JacoArm_a0ddc9f2458a2c5e17e095b03b72699dc}{}\label{classjaco_1_1JacoArm_a0ddc9f2458a2c5e17e095b03b72699dc}
+
+\begin{DoxyCode}
+231 \{
+232     \hyperlink{classjaco_1_1JacoArm_a2f9cbba855994058b82c0f4628349286}{jaco\_comm\_}.\hyperlink{classjaco_1_1JacoComm_a339cf31d88fdef6409340c82a35ecb53}{stopForceControl}();
+233     res.\hyperlink{structjaco__msgs_1_1StopResponse___a9dc418ecf2ecbae176732d3fdf6e7b66}{stop\_result} = \textcolor{stringliteral}{"Stop force control requested."};
+234     \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+235 \}
+\end{DoxyCode}
+\index{jaco\+::\+Jaco\+Arm@{jaco\+::\+Jaco\+Arm}!stop\+Service\+Callback@{stop\+Service\+Callback}}
+\index{stop\+Service\+Callback@{stop\+Service\+Callback}!jaco\+::\+Jaco\+Arm@{jaco\+::\+Jaco\+Arm}}
+\subsubsection[{\texorpdfstring{stop\+Service\+Callback(jaco\+\_\+msgs\+::\+Stop\+::\+Request \&req, jaco\+\_\+msgs\+::\+Stop\+::\+Response \&res)}{stopServiceCallback(jaco_msgs::Stop::Request &req, jaco_msgs::Stop::Response &res)}}]{\setlength{\rightskip}{0pt plus 5cm}bool jaco\+::\+Jaco\+Arm\+::stop\+Service\+Callback (
+\begin{DoxyParamCaption}
+\item[{{\bf jaco\+\_\+msgs\+::\+Stop\+::\+Request} \&}]{req, }
+\item[{{\bf jaco\+\_\+msgs\+::\+Stop\+::\+Response} \&}]{res}
+\end{DoxyParamCaption}
+)}\hypertarget{classjaco_1_1JacoArm_a14ddcea579804fbbd3fb11643bc91e78}{}\label{classjaco_1_1JacoArm_a14ddcea579804fbbd3fb11643bc91e78}
+
+
+Handler for \char`\"{}stop\char`\"{} service. 
+
+Instantly stops the arm and prevents further movement until start service is invoked. 
+\begin{DoxyCode}
+166 \{
+167     \hyperlink{classjaco_1_1JacoArm_a2f9cbba855994058b82c0f4628349286}{jaco\_comm\_}.\hyperlink{classjaco_1_1JacoComm_a54862830cd6414ae3ae48e46e54bf798}{stopAPI}();
+168     res.\hyperlink{structjaco__msgs_1_1StopResponse___a9dc418ecf2ecbae176732d3fdf6e7b66}{stop\_result} = \textcolor{stringliteral}{"Arm stopped"};
+169     ROS\_DEBUG(\textcolor{stringliteral}{"Arm stop requested"});
+170     \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+171 \}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\index{jaco\+::\+Jaco\+Arm@{jaco\+::\+Jaco\+Arm}!cartesian\+\_\+vel\+\_\+interval\+\_\+seconds\+\_\+@{cartesian\+\_\+vel\+\_\+interval\+\_\+seconds\+\_\+}}
+\index{cartesian\+\_\+vel\+\_\+interval\+\_\+seconds\+\_\+@{cartesian\+\_\+vel\+\_\+interval\+\_\+seconds\+\_\+}!jaco\+::\+Jaco\+Arm@{jaco\+::\+Jaco\+Arm}}
+\subsubsection[{\texorpdfstring{cartesian\+\_\+vel\+\_\+interval\+\_\+seconds\+\_\+}{cartesian_vel_interval_seconds_}}]{\setlength{\rightskip}{0pt plus 5cm}double jaco\+::\+Jaco\+Arm\+::cartesian\+\_\+vel\+\_\+interval\+\_\+seconds\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classjaco_1_1JacoArm_aa111ac63977d9a50b7e707b4a9e75e20}{}\label{classjaco_1_1JacoArm_aa111ac63977d9a50b7e707b4a9e75e20}
+\index{jaco\+::\+Jaco\+Arm@{jaco\+::\+Jaco\+Arm}!cartesian\+\_\+vel\+\_\+timeout\+\_\+seconds\+\_\+@{cartesian\+\_\+vel\+\_\+timeout\+\_\+seconds\+\_\+}}
+\index{cartesian\+\_\+vel\+\_\+timeout\+\_\+seconds\+\_\+@{cartesian\+\_\+vel\+\_\+timeout\+\_\+seconds\+\_\+}!jaco\+::\+Jaco\+Arm@{jaco\+::\+Jaco\+Arm}}
+\subsubsection[{\texorpdfstring{cartesian\+\_\+vel\+\_\+timeout\+\_\+seconds\+\_\+}{cartesian_vel_timeout_seconds_}}]{\setlength{\rightskip}{0pt plus 5cm}double jaco\+::\+Jaco\+Arm\+::cartesian\+\_\+vel\+\_\+timeout\+\_\+seconds\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classjaco_1_1JacoArm_a822ad8d6fcc8719c5a090456998e832a}{}\label{classjaco_1_1JacoArm_a822ad8d6fcc8719c5a090456998e832a}
+\index{jaco\+::\+Jaco\+Arm@{jaco\+::\+Jaco\+Arm}!cartesian\+\_\+vel\+\_\+timer\+\_\+@{cartesian\+\_\+vel\+\_\+timer\+\_\+}}
+\index{cartesian\+\_\+vel\+\_\+timer\+\_\+@{cartesian\+\_\+vel\+\_\+timer\+\_\+}!jaco\+::\+Jaco\+Arm@{jaco\+::\+Jaco\+Arm}}
+\subsubsection[{\texorpdfstring{cartesian\+\_\+vel\+\_\+timer\+\_\+}{cartesian_vel_timer_}}]{\setlength{\rightskip}{0pt plus 5cm}ros\+::\+Timer jaco\+::\+Jaco\+Arm\+::cartesian\+\_\+vel\+\_\+timer\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classjaco_1_1JacoArm_a11e0ed71d6c21e5df7e88fd6ab61df95}{}\label{classjaco_1_1JacoArm_a11e0ed71d6c21e5df7e88fd6ab61df95}
+\index{jaco\+::\+Jaco\+Arm@{jaco\+::\+Jaco\+Arm}!cartesian\+\_\+vel\+\_\+timer\+\_\+flag\+\_\+@{cartesian\+\_\+vel\+\_\+timer\+\_\+flag\+\_\+}}
+\index{cartesian\+\_\+vel\+\_\+timer\+\_\+flag\+\_\+@{cartesian\+\_\+vel\+\_\+timer\+\_\+flag\+\_\+}!jaco\+::\+Jaco\+Arm@{jaco\+::\+Jaco\+Arm}}
+\subsubsection[{\texorpdfstring{cartesian\+\_\+vel\+\_\+timer\+\_\+flag\+\_\+}{cartesian_vel_timer_flag_}}]{\setlength{\rightskip}{0pt plus 5cm}bool jaco\+::\+Jaco\+Arm\+::cartesian\+\_\+vel\+\_\+timer\+\_\+flag\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classjaco_1_1JacoArm_a17701f668a0b3ea2accf6c5fb420e012}{}\label{classjaco_1_1JacoArm_a17701f668a0b3ea2accf6c5fb420e012}
+\index{jaco\+::\+Jaco\+Arm@{jaco\+::\+Jaco\+Arm}!cartesian\+\_\+velocities\+\_\+@{cartesian\+\_\+velocities\+\_\+}}
+\index{cartesian\+\_\+velocities\+\_\+@{cartesian\+\_\+velocities\+\_\+}!jaco\+::\+Jaco\+Arm@{jaco\+::\+Jaco\+Arm}}
+\subsubsection[{\texorpdfstring{cartesian\+\_\+velocities\+\_\+}{cartesian_velocities_}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Cartesian\+Info} jaco\+::\+Jaco\+Arm\+::cartesian\+\_\+velocities\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classjaco_1_1JacoArm_a804e6400a10726f2ec0af9ec718bd0cf}{}\label{classjaco_1_1JacoArm_a804e6400a10726f2ec0af9ec718bd0cf}
+\index{jaco\+::\+Jaco\+Arm@{jaco\+::\+Jaco\+Arm}!cartesian\+\_\+velocity\+\_\+subscriber\+\_\+@{cartesian\+\_\+velocity\+\_\+subscriber\+\_\+}}
+\index{cartesian\+\_\+velocity\+\_\+subscriber\+\_\+@{cartesian\+\_\+velocity\+\_\+subscriber\+\_\+}!jaco\+::\+Jaco\+Arm@{jaco\+::\+Jaco\+Arm}}
+\subsubsection[{\texorpdfstring{cartesian\+\_\+velocity\+\_\+subscriber\+\_\+}{cartesian_velocity_subscriber_}}]{\setlength{\rightskip}{0pt plus 5cm}ros\+::\+Subscriber jaco\+::\+Jaco\+Arm\+::cartesian\+\_\+velocity\+\_\+subscriber\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classjaco_1_1JacoArm_a7598c2dfaa6677241e490eb42f175a3b}{}\label{classjaco_1_1JacoArm_a7598c2dfaa6677241e490eb42f175a3b}
+\index{jaco\+::\+Jaco\+Arm@{jaco\+::\+Jaco\+Arm}!convert\+\_\+joint\+\_\+velocities\+\_\+@{convert\+\_\+joint\+\_\+velocities\+\_\+}}
+\index{convert\+\_\+joint\+\_\+velocities\+\_\+@{convert\+\_\+joint\+\_\+velocities\+\_\+}!jaco\+::\+Jaco\+Arm@{jaco\+::\+Jaco\+Arm}}
+\subsubsection[{\texorpdfstring{convert\+\_\+joint\+\_\+velocities\+\_\+}{convert_joint_velocities_}}]{\setlength{\rightskip}{0pt plus 5cm}bool jaco\+::\+Jaco\+Arm\+::convert\+\_\+joint\+\_\+velocities\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classjaco_1_1JacoArm_a20deb1358ca2385fcf9dca3f0f771409}{}\label{classjaco_1_1JacoArm_a20deb1358ca2385fcf9dca3f0f771409}
+\index{jaco\+::\+Jaco\+Arm@{jaco\+::\+Jaco\+Arm}!finger\+\_\+conv\+\_\+ratio\+\_\+@{finger\+\_\+conv\+\_\+ratio\+\_\+}}
+\index{finger\+\_\+conv\+\_\+ratio\+\_\+@{finger\+\_\+conv\+\_\+ratio\+\_\+}!jaco\+::\+Jaco\+Arm@{jaco\+::\+Jaco\+Arm}}
+\subsubsection[{\texorpdfstring{finger\+\_\+conv\+\_\+ratio\+\_\+}{finger_conv_ratio_}}]{\setlength{\rightskip}{0pt plus 5cm}double jaco\+::\+Jaco\+Arm\+::finger\+\_\+conv\+\_\+ratio\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classjaco_1_1JacoArm_a45f8b1fbeec4d1abfcad6d3f9e65b6ca}{}\label{classjaco_1_1JacoArm_a45f8b1fbeec4d1abfcad6d3f9e65b6ca}
+\index{jaco\+::\+Jaco\+Arm@{jaco\+::\+Jaco\+Arm}!finger\+\_\+position\+\_\+publisher\+\_\+@{finger\+\_\+position\+\_\+publisher\+\_\+}}
+\index{finger\+\_\+position\+\_\+publisher\+\_\+@{finger\+\_\+position\+\_\+publisher\+\_\+}!jaco\+::\+Jaco\+Arm@{jaco\+::\+Jaco\+Arm}}
+\subsubsection[{\texorpdfstring{finger\+\_\+position\+\_\+publisher\+\_\+}{finger_position_publisher_}}]{\setlength{\rightskip}{0pt plus 5cm}ros\+::\+Publisher jaco\+::\+Jaco\+Arm\+::finger\+\_\+position\+\_\+publisher\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classjaco_1_1JacoArm_a323990f9bd26de33240df3f107e29a49}{}\label{classjaco_1_1JacoArm_a323990f9bd26de33240df3f107e29a49}
+\index{jaco\+::\+Jaco\+Arm@{jaco\+::\+Jaco\+Arm}!homing\+\_\+service\+\_\+@{homing\+\_\+service\+\_\+}}
+\index{homing\+\_\+service\+\_\+@{homing\+\_\+service\+\_\+}!jaco\+::\+Jaco\+Arm@{jaco\+::\+Jaco\+Arm}}
+\subsubsection[{\texorpdfstring{homing\+\_\+service\+\_\+}{homing_service_}}]{\setlength{\rightskip}{0pt plus 5cm}ros\+::\+Service\+Server jaco\+::\+Jaco\+Arm\+::homing\+\_\+service\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classjaco_1_1JacoArm_af025f6af7b63a3dd5ce18a31b082eec3}{}\label{classjaco_1_1JacoArm_af025f6af7b63a3dd5ce18a31b082eec3}
+\index{jaco\+::\+Jaco\+Arm@{jaco\+::\+Jaco\+Arm}!jaco\+\_\+comm\+\_\+@{jaco\+\_\+comm\+\_\+}}
+\index{jaco\+\_\+comm\+\_\+@{jaco\+\_\+comm\+\_\+}!jaco\+::\+Jaco\+Arm@{jaco\+::\+Jaco\+Arm}}
+\subsubsection[{\texorpdfstring{jaco\+\_\+comm\+\_\+}{jaco_comm_}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Jaco\+Comm}\& jaco\+::\+Jaco\+Arm\+::jaco\+\_\+comm\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classjaco_1_1JacoArm_a2f9cbba855994058b82c0f4628349286}{}\label{classjaco_1_1JacoArm_a2f9cbba855994058b82c0f4628349286}
+\index{jaco\+::\+Jaco\+Arm@{jaco\+::\+Jaco\+Arm}!joint\+\_\+angles\+\_\+publisher\+\_\+@{joint\+\_\+angles\+\_\+publisher\+\_\+}}
+\index{joint\+\_\+angles\+\_\+publisher\+\_\+@{joint\+\_\+angles\+\_\+publisher\+\_\+}!jaco\+::\+Jaco\+Arm@{jaco\+::\+Jaco\+Arm}}
+\subsubsection[{\texorpdfstring{joint\+\_\+angles\+\_\+publisher\+\_\+}{joint_angles_publisher_}}]{\setlength{\rightskip}{0pt plus 5cm}ros\+::\+Publisher jaco\+::\+Jaco\+Arm\+::joint\+\_\+angles\+\_\+publisher\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classjaco_1_1JacoArm_a074f24a17f50b88921a9bc9d8e52c09b}{}\label{classjaco_1_1JacoArm_a074f24a17f50b88921a9bc9d8e52c09b}
+\index{jaco\+::\+Jaco\+Arm@{jaco\+::\+Jaco\+Arm}!joint\+\_\+names\+\_\+@{joint\+\_\+names\+\_\+}}
+\index{joint\+\_\+names\+\_\+@{joint\+\_\+names\+\_\+}!jaco\+::\+Jaco\+Arm@{jaco\+::\+Jaco\+Arm}}
+\subsubsection[{\texorpdfstring{joint\+\_\+names\+\_\+}{joint_names_}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$ std\+::string $>$ jaco\+::\+Jaco\+Arm\+::joint\+\_\+names\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classjaco_1_1JacoArm_a9a6611a10119b2651aa96eb21ecd10ad}{}\label{classjaco_1_1JacoArm_a9a6611a10119b2651aa96eb21ecd10ad}
+\index{jaco\+::\+Jaco\+Arm@{jaco\+::\+Jaco\+Arm}!joint\+\_\+state\+\_\+publisher\+\_\+@{joint\+\_\+state\+\_\+publisher\+\_\+}}
+\index{joint\+\_\+state\+\_\+publisher\+\_\+@{joint\+\_\+state\+\_\+publisher\+\_\+}!jaco\+::\+Jaco\+Arm@{jaco\+::\+Jaco\+Arm}}
+\subsubsection[{\texorpdfstring{joint\+\_\+state\+\_\+publisher\+\_\+}{joint_state_publisher_}}]{\setlength{\rightskip}{0pt plus 5cm}ros\+::\+Publisher jaco\+::\+Jaco\+Arm\+::joint\+\_\+state\+\_\+publisher\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classjaco_1_1JacoArm_a914eb71a6de747a2e63b880b2a0ac0b4}{}\label{classjaco_1_1JacoArm_a914eb71a6de747a2e63b880b2a0ac0b4}
+\index{jaco\+::\+Jaco\+Arm@{jaco\+::\+Jaco\+Arm}!joint\+\_\+vel\+\_\+interval\+\_\+seconds\+\_\+@{joint\+\_\+vel\+\_\+interval\+\_\+seconds\+\_\+}}
+\index{joint\+\_\+vel\+\_\+interval\+\_\+seconds\+\_\+@{joint\+\_\+vel\+\_\+interval\+\_\+seconds\+\_\+}!jaco\+::\+Jaco\+Arm@{jaco\+::\+Jaco\+Arm}}
+\subsubsection[{\texorpdfstring{joint\+\_\+vel\+\_\+interval\+\_\+seconds\+\_\+}{joint_vel_interval_seconds_}}]{\setlength{\rightskip}{0pt plus 5cm}double jaco\+::\+Jaco\+Arm\+::joint\+\_\+vel\+\_\+interval\+\_\+seconds\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classjaco_1_1JacoArm_a832938e80c91ce57ec241a1429133926}{}\label{classjaco_1_1JacoArm_a832938e80c91ce57ec241a1429133926}
+\index{jaco\+::\+Jaco\+Arm@{jaco\+::\+Jaco\+Arm}!joint\+\_\+vel\+\_\+timeout\+\_\+seconds\+\_\+@{joint\+\_\+vel\+\_\+timeout\+\_\+seconds\+\_\+}}
+\index{joint\+\_\+vel\+\_\+timeout\+\_\+seconds\+\_\+@{joint\+\_\+vel\+\_\+timeout\+\_\+seconds\+\_\+}!jaco\+::\+Jaco\+Arm@{jaco\+::\+Jaco\+Arm}}
+\subsubsection[{\texorpdfstring{joint\+\_\+vel\+\_\+timeout\+\_\+seconds\+\_\+}{joint_vel_timeout_seconds_}}]{\setlength{\rightskip}{0pt plus 5cm}double jaco\+::\+Jaco\+Arm\+::joint\+\_\+vel\+\_\+timeout\+\_\+seconds\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classjaco_1_1JacoArm_ac27941dace9da942beeff70926cc736e}{}\label{classjaco_1_1JacoArm_ac27941dace9da942beeff70926cc736e}
+\index{jaco\+::\+Jaco\+Arm@{jaco\+::\+Jaco\+Arm}!joint\+\_\+vel\+\_\+timer\+\_\+@{joint\+\_\+vel\+\_\+timer\+\_\+}}
+\index{joint\+\_\+vel\+\_\+timer\+\_\+@{joint\+\_\+vel\+\_\+timer\+\_\+}!jaco\+::\+Jaco\+Arm@{jaco\+::\+Jaco\+Arm}}
+\subsubsection[{\texorpdfstring{joint\+\_\+vel\+\_\+timer\+\_\+}{joint_vel_timer_}}]{\setlength{\rightskip}{0pt plus 5cm}ros\+::\+Timer jaco\+::\+Jaco\+Arm\+::joint\+\_\+vel\+\_\+timer\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classjaco_1_1JacoArm_ac4ad9c07f3a173e89d6767ec7a2dba12}{}\label{classjaco_1_1JacoArm_ac4ad9c07f3a173e89d6767ec7a2dba12}
+\index{jaco\+::\+Jaco\+Arm@{jaco\+::\+Jaco\+Arm}!joint\+\_\+vel\+\_\+timer\+\_\+flag\+\_\+@{joint\+\_\+vel\+\_\+timer\+\_\+flag\+\_\+}}
+\index{joint\+\_\+vel\+\_\+timer\+\_\+flag\+\_\+@{joint\+\_\+vel\+\_\+timer\+\_\+flag\+\_\+}!jaco\+::\+Jaco\+Arm@{jaco\+::\+Jaco\+Arm}}
+\subsubsection[{\texorpdfstring{joint\+\_\+vel\+\_\+timer\+\_\+flag\+\_\+}{joint_vel_timer_flag_}}]{\setlength{\rightskip}{0pt plus 5cm}bool jaco\+::\+Jaco\+Arm\+::joint\+\_\+vel\+\_\+timer\+\_\+flag\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classjaco_1_1JacoArm_a27effbbd66cd47378b49995cf80b8ffb}{}\label{classjaco_1_1JacoArm_a27effbbd66cd47378b49995cf80b8ffb}
+\index{jaco\+::\+Jaco\+Arm@{jaco\+::\+Jaco\+Arm}!joint\+\_\+velocities\+\_\+@{joint\+\_\+velocities\+\_\+}}
+\index{joint\+\_\+velocities\+\_\+@{joint\+\_\+velocities\+\_\+}!jaco\+::\+Jaco\+Arm@{jaco\+::\+Jaco\+Arm}}
+\subsubsection[{\texorpdfstring{joint\+\_\+velocities\+\_\+}{joint_velocities_}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Angular\+Info} jaco\+::\+Jaco\+Arm\+::joint\+\_\+velocities\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classjaco_1_1JacoArm_a640c8142aa9ab07ea9c2a3d7c5eb74cb}{}\label{classjaco_1_1JacoArm_a640c8142aa9ab07ea9c2a3d7c5eb74cb}
+\index{jaco\+::\+Jaco\+Arm@{jaco\+::\+Jaco\+Arm}!joint\+\_\+velocity\+\_\+subscriber\+\_\+@{joint\+\_\+velocity\+\_\+subscriber\+\_\+}}
+\index{joint\+\_\+velocity\+\_\+subscriber\+\_\+@{joint\+\_\+velocity\+\_\+subscriber\+\_\+}!jaco\+::\+Jaco\+Arm@{jaco\+::\+Jaco\+Arm}}
+\subsubsection[{\texorpdfstring{joint\+\_\+velocity\+\_\+subscriber\+\_\+}{joint_velocity_subscriber_}}]{\setlength{\rightskip}{0pt plus 5cm}ros\+::\+Subscriber jaco\+::\+Jaco\+Arm\+::joint\+\_\+velocity\+\_\+subscriber\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classjaco_1_1JacoArm_a531289127704e9ffb5055cc58d3f90f8}{}\label{classjaco_1_1JacoArm_a531289127704e9ffb5055cc58d3f90f8}
+\index{jaco\+::\+Jaco\+Arm@{jaco\+::\+Jaco\+Arm}!last\+\_\+cartesian\+\_\+vel\+\_\+cmd\+\_\+time\+\_\+@{last\+\_\+cartesian\+\_\+vel\+\_\+cmd\+\_\+time\+\_\+}}
+\index{last\+\_\+cartesian\+\_\+vel\+\_\+cmd\+\_\+time\+\_\+@{last\+\_\+cartesian\+\_\+vel\+\_\+cmd\+\_\+time\+\_\+}!jaco\+::\+Jaco\+Arm@{jaco\+::\+Jaco\+Arm}}
+\subsubsection[{\texorpdfstring{last\+\_\+cartesian\+\_\+vel\+\_\+cmd\+\_\+time\+\_\+}{last_cartesian_vel_cmd_time_}}]{\setlength{\rightskip}{0pt plus 5cm}ros\+::\+Time jaco\+::\+Jaco\+Arm\+::last\+\_\+cartesian\+\_\+vel\+\_\+cmd\+\_\+time\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classjaco_1_1JacoArm_a2ad620e8551ca62db4077135597b6618}{}\label{classjaco_1_1JacoArm_a2ad620e8551ca62db4077135597b6618}
+\index{jaco\+::\+Jaco\+Arm@{jaco\+::\+Jaco\+Arm}!last\+\_\+joint\+\_\+vel\+\_\+cmd\+\_\+time\+\_\+@{last\+\_\+joint\+\_\+vel\+\_\+cmd\+\_\+time\+\_\+}}
+\index{last\+\_\+joint\+\_\+vel\+\_\+cmd\+\_\+time\+\_\+@{last\+\_\+joint\+\_\+vel\+\_\+cmd\+\_\+time\+\_\+}!jaco\+::\+Jaco\+Arm@{jaco\+::\+Jaco\+Arm}}
+\subsubsection[{\texorpdfstring{last\+\_\+joint\+\_\+vel\+\_\+cmd\+\_\+time\+\_\+}{last_joint_vel_cmd_time_}}]{\setlength{\rightskip}{0pt plus 5cm}ros\+::\+Time jaco\+::\+Jaco\+Arm\+::last\+\_\+joint\+\_\+vel\+\_\+cmd\+\_\+time\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classjaco_1_1JacoArm_a36758d949907e58807d6d4c3792a01df}{}\label{classjaco_1_1JacoArm_a36758d949907e58807d6d4c3792a01df}
+\index{jaco\+::\+Jaco\+Arm@{jaco\+::\+Jaco\+Arm}!node\+\_\+handle\+\_\+@{node\+\_\+handle\+\_\+}}
+\index{node\+\_\+handle\+\_\+@{node\+\_\+handle\+\_\+}!jaco\+::\+Jaco\+Arm@{jaco\+::\+Jaco\+Arm}}
+\subsubsection[{\texorpdfstring{node\+\_\+handle\+\_\+}{node_handle_}}]{\setlength{\rightskip}{0pt plus 5cm}ros\+::\+Node\+Handle jaco\+::\+Jaco\+Arm\+::node\+\_\+handle\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classjaco_1_1JacoArm_aa8b6a99580f2ccf8a5c509cc0f3b3c8e}{}\label{classjaco_1_1JacoArm_aa8b6a99580f2ccf8a5c509cc0f3b3c8e}
+\index{jaco\+::\+Jaco\+Arm@{jaco\+::\+Jaco\+Arm}!set\+\_\+force\+\_\+control\+\_\+params\+\_\+service\+\_\+@{set\+\_\+force\+\_\+control\+\_\+params\+\_\+service\+\_\+}}
+\index{set\+\_\+force\+\_\+control\+\_\+params\+\_\+service\+\_\+@{set\+\_\+force\+\_\+control\+\_\+params\+\_\+service\+\_\+}!jaco\+::\+Jaco\+Arm@{jaco\+::\+Jaco\+Arm}}
+\subsubsection[{\texorpdfstring{set\+\_\+force\+\_\+control\+\_\+params\+\_\+service\+\_\+}{set_force_control_params_service_}}]{\setlength{\rightskip}{0pt plus 5cm}ros\+::\+Service\+Server jaco\+::\+Jaco\+Arm\+::set\+\_\+force\+\_\+control\+\_\+params\+\_\+service\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classjaco_1_1JacoArm_a65f6584b95beb04af852cba7d953fdc3}{}\label{classjaco_1_1JacoArm_a65f6584b95beb04af852cba7d953fdc3}
+\index{jaco\+::\+Jaco\+Arm@{jaco\+::\+Jaco\+Arm}!start\+\_\+force\+\_\+control\+\_\+service\+\_\+@{start\+\_\+force\+\_\+control\+\_\+service\+\_\+}}
+\index{start\+\_\+force\+\_\+control\+\_\+service\+\_\+@{start\+\_\+force\+\_\+control\+\_\+service\+\_\+}!jaco\+::\+Jaco\+Arm@{jaco\+::\+Jaco\+Arm}}
+\subsubsection[{\texorpdfstring{start\+\_\+force\+\_\+control\+\_\+service\+\_\+}{start_force_control_service_}}]{\setlength{\rightskip}{0pt plus 5cm}ros\+::\+Service\+Server jaco\+::\+Jaco\+Arm\+::start\+\_\+force\+\_\+control\+\_\+service\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classjaco_1_1JacoArm_aaf2a407b08e3982c463bbcf364be2dfa}{}\label{classjaco_1_1JacoArm_aaf2a407b08e3982c463bbcf364be2dfa}
+\index{jaco\+::\+Jaco\+Arm@{jaco\+::\+Jaco\+Arm}!start\+\_\+service\+\_\+@{start\+\_\+service\+\_\+}}
+\index{start\+\_\+service\+\_\+@{start\+\_\+service\+\_\+}!jaco\+::\+Jaco\+Arm@{jaco\+::\+Jaco\+Arm}}
+\subsubsection[{\texorpdfstring{start\+\_\+service\+\_\+}{start_service_}}]{\setlength{\rightskip}{0pt plus 5cm}ros\+::\+Service\+Server jaco\+::\+Jaco\+Arm\+::start\+\_\+service\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classjaco_1_1JacoArm_a7003937a11db04de838d05de05d29481}{}\label{classjaco_1_1JacoArm_a7003937a11db04de838d05de05d29481}
+\index{jaco\+::\+Jaco\+Arm@{jaco\+::\+Jaco\+Arm}!status\+\_\+interval\+\_\+seconds\+\_\+@{status\+\_\+interval\+\_\+seconds\+\_\+}}
+\index{status\+\_\+interval\+\_\+seconds\+\_\+@{status\+\_\+interval\+\_\+seconds\+\_\+}!jaco\+::\+Jaco\+Arm@{jaco\+::\+Jaco\+Arm}}
+\subsubsection[{\texorpdfstring{status\+\_\+interval\+\_\+seconds\+\_\+}{status_interval_seconds_}}]{\setlength{\rightskip}{0pt plus 5cm}double jaco\+::\+Jaco\+Arm\+::status\+\_\+interval\+\_\+seconds\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classjaco_1_1JacoArm_aa44e18590ad8352a058df6abbd4a3c3b}{}\label{classjaco_1_1JacoArm_aa44e18590ad8352a058df6abbd4a3c3b}
+\index{jaco\+::\+Jaco\+Arm@{jaco\+::\+Jaco\+Arm}!status\+\_\+timer\+\_\+@{status\+\_\+timer\+\_\+}}
+\index{status\+\_\+timer\+\_\+@{status\+\_\+timer\+\_\+}!jaco\+::\+Jaco\+Arm@{jaco\+::\+Jaco\+Arm}}
+\subsubsection[{\texorpdfstring{status\+\_\+timer\+\_\+}{status_timer_}}]{\setlength{\rightskip}{0pt plus 5cm}ros\+::\+Timer jaco\+::\+Jaco\+Arm\+::status\+\_\+timer\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classjaco_1_1JacoArm_ac11bbbecb7bebfef8b77d31b0294017a}{}\label{classjaco_1_1JacoArm_ac11bbbecb7bebfef8b77d31b0294017a}
+\index{jaco\+::\+Jaco\+Arm@{jaco\+::\+Jaco\+Arm}!stop\+\_\+force\+\_\+control\+\_\+service\+\_\+@{stop\+\_\+force\+\_\+control\+\_\+service\+\_\+}}
+\index{stop\+\_\+force\+\_\+control\+\_\+service\+\_\+@{stop\+\_\+force\+\_\+control\+\_\+service\+\_\+}!jaco\+::\+Jaco\+Arm@{jaco\+::\+Jaco\+Arm}}
+\subsubsection[{\texorpdfstring{stop\+\_\+force\+\_\+control\+\_\+service\+\_\+}{stop_force_control_service_}}]{\setlength{\rightskip}{0pt plus 5cm}ros\+::\+Service\+Server jaco\+::\+Jaco\+Arm\+::stop\+\_\+force\+\_\+control\+\_\+service\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classjaco_1_1JacoArm_af20526f276fc6708aacec52ca08ad189}{}\label{classjaco_1_1JacoArm_af20526f276fc6708aacec52ca08ad189}
+\index{jaco\+::\+Jaco\+Arm@{jaco\+::\+Jaco\+Arm}!stop\+\_\+service\+\_\+@{stop\+\_\+service\+\_\+}}
+\index{stop\+\_\+service\+\_\+@{stop\+\_\+service\+\_\+}!jaco\+::\+Jaco\+Arm@{jaco\+::\+Jaco\+Arm}}
+\subsubsection[{\texorpdfstring{stop\+\_\+service\+\_\+}{stop_service_}}]{\setlength{\rightskip}{0pt plus 5cm}ros\+::\+Service\+Server jaco\+::\+Jaco\+Arm\+::stop\+\_\+service\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classjaco_1_1JacoArm_a43eca41486bfa5f012085d3bb02ac7ca}{}\label{classjaco_1_1JacoArm_a43eca41486bfa5f012085d3bb02ac7ca}
+\index{jaco\+::\+Jaco\+Arm@{jaco\+::\+Jaco\+Arm}!tf\+\_\+listener\+\_\+@{tf\+\_\+listener\+\_\+}}
+\index{tf\+\_\+listener\+\_\+@{tf\+\_\+listener\+\_\+}!jaco\+::\+Jaco\+Arm@{jaco\+::\+Jaco\+Arm}}
+\subsubsection[{\texorpdfstring{tf\+\_\+listener\+\_\+}{tf_listener_}}]{\setlength{\rightskip}{0pt plus 5cm}tf\+::\+Transform\+Listener jaco\+::\+Jaco\+Arm\+::tf\+\_\+listener\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classjaco_1_1JacoArm_a110ba0f607ab1c4c903e8fb59fe79c3b}{}\label{classjaco_1_1JacoArm_a110ba0f607ab1c4c903e8fb59fe79c3b}
+\index{jaco\+::\+Jaco\+Arm@{jaco\+::\+Jaco\+Arm}!tf\+\_\+prefix\+\_\+@{tf\+\_\+prefix\+\_\+}}
+\index{tf\+\_\+prefix\+\_\+@{tf\+\_\+prefix\+\_\+}!jaco\+::\+Jaco\+Arm@{jaco\+::\+Jaco\+Arm}}
+\subsubsection[{\texorpdfstring{tf\+\_\+prefix\+\_\+}{tf_prefix_}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string jaco\+::\+Jaco\+Arm\+::tf\+\_\+prefix\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classjaco_1_1JacoArm_a4f7d75d1cfcf82b4221e6bd6e4412cf9}{}\label{classjaco_1_1JacoArm_a4f7d75d1cfcf82b4221e6bd6e4412cf9}
+\index{jaco\+::\+Jaco\+Arm@{jaco\+::\+Jaco\+Arm}!tool\+\_\+position\+\_\+publisher\+\_\+@{tool\+\_\+position\+\_\+publisher\+\_\+}}
+\index{tool\+\_\+position\+\_\+publisher\+\_\+@{tool\+\_\+position\+\_\+publisher\+\_\+}!jaco\+::\+Jaco\+Arm@{jaco\+::\+Jaco\+Arm}}
+\subsubsection[{\texorpdfstring{tool\+\_\+position\+\_\+publisher\+\_\+}{tool_position_publisher_}}]{\setlength{\rightskip}{0pt plus 5cm}ros\+::\+Publisher jaco\+::\+Jaco\+Arm\+::tool\+\_\+position\+\_\+publisher\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classjaco_1_1JacoArm_a9d6b0687a753f44ecdb2e93aeeddd288}{}\label{classjaco_1_1JacoArm_a9d6b0687a753f44ecdb2e93aeeddd288}
+\index{jaco\+::\+Jaco\+Arm@{jaco\+::\+Jaco\+Arm}!tool\+\_\+wrench\+\_\+publisher\+\_\+@{tool\+\_\+wrench\+\_\+publisher\+\_\+}}
+\index{tool\+\_\+wrench\+\_\+publisher\+\_\+@{tool\+\_\+wrench\+\_\+publisher\+\_\+}!jaco\+::\+Jaco\+Arm@{jaco\+::\+Jaco\+Arm}}
+\subsubsection[{\texorpdfstring{tool\+\_\+wrench\+\_\+publisher\+\_\+}{tool_wrench_publisher_}}]{\setlength{\rightskip}{0pt plus 5cm}ros\+::\+Publisher jaco\+::\+Jaco\+Arm\+::tool\+\_\+wrench\+\_\+publisher\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classjaco_1_1JacoArm_abff4dc1bbe63e0be7cd20ac7c4d37be4}{}\label{classjaco_1_1JacoArm_abff4dc1bbe63e0be7cd20ac7c4d37be4}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Longfei/\+Desktop/catkin\+\_\+\+Kinova\+R\+O\+S/src/jaco-\/ros/jaco\+\_\+driver/include/jaco\+\_\+driver/\hyperlink{jaco__arm_8h}{jaco\+\_\+arm.\+h}\item 
+D\+:/\+Longfei/\+Desktop/catkin\+\_\+\+Kinova\+R\+O\+S/src/jaco-\/ros/jaco\+\_\+driver/src/\hyperlink{jaco__arm_8cpp}{jaco\+\_\+arm.\+cpp}\end{DoxyCompactItemize}

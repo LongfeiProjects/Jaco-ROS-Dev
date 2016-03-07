@@ -1,0 +1,264 @@
+\hypertarget{classjaco_1_1JacoPoseActionServer}{}\section{jaco\+:\+:Jaco\+Pose\+Action\+Server Class Reference}
+\label{classjaco_1_1JacoPoseActionServer}\index{jaco\+::\+Jaco\+Pose\+Action\+Server@{jaco\+::\+Jaco\+Pose\+Action\+Server}}
+
+
+{\ttfamily \#include \char`\"{}jaco\+\_\+pose\+\_\+action.\+h\char`\"{}}
+
+
+
+Collaboration diagram for jaco\+:\+:Jaco\+Pose\+Action\+Server\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d9/de2/classjaco_1_1JacoPoseActionServer__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classjaco_1_1JacoPoseActionServer_a82396bb5f219f54518a80493bfd38f26}{action\+Callback} (const \hyperlink{namespacejaco__msgs_ab8464776109924758c47fab6ce179567}{jaco\+\_\+msgs\+::\+Arm\+Pose\+Goal\+Const\+Ptr} \&)
+\item 
+\hyperlink{classjaco_1_1JacoPoseActionServer_aadc62df5a70d28ec54c90ceeec00fbe3}{Jaco\+Pose\+Action\+Server} (\hyperlink{classjaco_1_1JacoComm}{Jaco\+Comm} \&, const ros\+::\+Node\+Handle \&n)
+\item 
+\hyperlink{classjaco_1_1JacoPoseActionServer_ab1c488f56f4759f917c46406230e6c84}{$\sim$\+Jaco\+Pose\+Action\+Server} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+actionlib\+::\+Simple\+Action\+Server$<$ \hyperlink{namespacejaco__msgs_a4c602e87a73fa73e367226c6d5547ebd}{jaco\+\_\+msgs\+::\+Arm\+Pose\+Action} $>$ \hyperlink{classjaco_1_1JacoPoseActionServer_ac5ecd6a61bf824052ff744aad8bf886a}{action\+\_\+server\+\_\+}
+\item 
+std\+::string \hyperlink{classjaco_1_1JacoPoseActionServer_a5f90297e166e0113362ad14abc78f13f}{api\+\_\+origin\+\_\+frame\+\_\+}
+\item 
+\hyperlink{classjaco_1_1JacoComm}{Jaco\+Comm} \& \hyperlink{classjaco_1_1JacoPoseActionServer_ad849b8d5a2bb31a65ab24b586a86c9a1}{arm\+\_\+comm\+\_\+}
+\item 
+\hyperlink{classjaco_1_1JacoPose}{jaco\+::\+Jaco\+Pose} \hyperlink{classjaco_1_1JacoPoseActionServer_aa7e288732479301e6f63762f91b08580}{last\+\_\+nonstall\+\_\+pose\+\_\+}
+\item 
+ros\+::\+Time \hyperlink{classjaco_1_1JacoPoseActionServer_a6b5b38efebafd4426afd01368bcf6f87}{last\+\_\+nonstall\+\_\+time\+\_\+}
+\item 
+tf\+::\+Transform\+Listener \hyperlink{classjaco_1_1JacoPoseActionServer_a43c58cdc664caaa1471792c672aea7c1}{listener}
+\item 
+ros\+::\+Node\+Handle \hyperlink{classjaco_1_1JacoPoseActionServer_ae5c09c6924a4eeccd4d32ca59ed6465d}{node\+\_\+handle\+\_\+}
+\item 
+double \hyperlink{classjaco_1_1JacoPoseActionServer_a3512d3517f7d55ad0b481081a7000b06}{rate\+\_\+hz\+\_\+}
+\item 
+double \hyperlink{classjaco_1_1JacoPoseActionServer_a48c5866f584f192be487934d3fbf5ebc}{stall\+\_\+interval\+\_\+seconds\+\_\+}
+\item 
+double \hyperlink{classjaco_1_1JacoPoseActionServer_a71248453a7bb76ba012040b1b9d67924}{stall\+\_\+threshold\+\_\+}
+\item 
+std\+::string \hyperlink{classjaco_1_1JacoPoseActionServer_ae846600150f2139d117f9994bf19747f}{tf\+\_\+prefix\+\_\+}
+\item 
+float \hyperlink{classjaco_1_1JacoPoseActionServer_a086630400cbfd3e75414a620f8220038}{tolerance\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{jaco\+::\+Jaco\+Pose\+Action\+Server@{jaco\+::\+Jaco\+Pose\+Action\+Server}!Jaco\+Pose\+Action\+Server@{Jaco\+Pose\+Action\+Server}}
+\index{Jaco\+Pose\+Action\+Server@{Jaco\+Pose\+Action\+Server}!jaco\+::\+Jaco\+Pose\+Action\+Server@{jaco\+::\+Jaco\+Pose\+Action\+Server}}
+\subsubsection[{\texorpdfstring{Jaco\+Pose\+Action\+Server(\+Jaco\+Comm \&, const ros\+::\+Node\+Handle \&n)}{JacoPoseActionServer(JacoComm &, const ros::NodeHandle &n)}}]{\setlength{\rightskip}{0pt plus 5cm}jaco\+::\+Jaco\+Pose\+Action\+Server\+::\+Jaco\+Pose\+Action\+Server (
+\begin{DoxyParamCaption}
+\item[{{\bf Jaco\+Comm} \&}]{arm\+\_\+comm, }
+\item[{const ros\+::\+Node\+Handle \&}]{n}
+\end{DoxyParamCaption}
+)}\hypertarget{classjaco_1_1JacoPoseActionServer_aadc62df5a70d28ec54c90ceeec00fbe3}{}\label{classjaco_1_1JacoPoseActionServer_aadc62df5a70d28ec54c90ceeec00fbe3}
+
+\begin{DoxyCode}
+56     : \hyperlink{classjaco_1_1JacoPoseActionServer_ad849b8d5a2bb31a65ab24b586a86c9a1}{arm\_comm\_}(arm\_comm),
+57       \hyperlink{classjaco_1_1JacoPoseActionServer_ae5c09c6924a4eeccd4d32ca59ed6465d}{node\_handle\_}(nh, \textcolor{stringliteral}{"arm\_pose"}),
+58       \hyperlink{classjaco_1_1JacoPoseActionServer_ac5ecd6a61bf824052ff744aad8bf886a}{action\_server\_}(\hyperlink{classjaco_1_1JacoPoseActionServer_ae5c09c6924a4eeccd4d32ca59ed6465d}{node\_handle\_}, \textcolor{stringliteral}{"arm\_pose"},
+59                      boost::bind(&\hyperlink{classjaco_1_1JacoPoseActionServer_a82396bb5f219f54518a80493bfd38f26}{JacoPoseActionServer::actionCallback},
+       \textcolor{keyword}{this}, \_1), \textcolor{keyword}{false})
+60 \{
+61     \textcolor{keywordtype}{double} tolerance;
+62     \hyperlink{classjaco_1_1JacoPoseActionServer_ae5c09c6924a4eeccd4d32ca59ed6465d}{node\_handle\_}.param<\textcolor{keywordtype}{double}>(\textcolor{stringliteral}{"stall\_interval\_seconds"}, 
+      \hyperlink{classjaco_1_1JacoPoseActionServer_a48c5866f584f192be487934d3fbf5ebc}{stall\_interval\_seconds\_}, 1.0);
+63     \hyperlink{classjaco_1_1JacoPoseActionServer_ae5c09c6924a4eeccd4d32ca59ed6465d}{node\_handle\_}.param<\textcolor{keywordtype}{double}>(\textcolor{stringliteral}{"stall\_threshold"}, \hyperlink{classjaco_1_1JacoPoseActionServer_a71248453a7bb76ba012040b1b9d67924}{stall\_threshold\_}, 0.005);
+64     \hyperlink{classjaco_1_1JacoPoseActionServer_ae5c09c6924a4eeccd4d32ca59ed6465d}{node\_handle\_}.param<\textcolor{keywordtype}{double}>(\textcolor{stringliteral}{"rate\_hz"}, \hyperlink{classjaco_1_1JacoPoseActionServer_a3512d3517f7d55ad0b481081a7000b06}{rate\_hz\_}, 10.0);
+65     \hyperlink{classjaco_1_1JacoPoseActionServer_ae5c09c6924a4eeccd4d32ca59ed6465d}{node\_handle\_}.param<\textcolor{keywordtype}{double}>(\textcolor{stringliteral}{"tolerance"}, tolerance, 0.01);
+66     \hyperlink{classjaco_1_1JacoPoseActionServer_ae5c09c6924a4eeccd4d32ca59ed6465d}{node\_handle\_}.param<std::string>(\textcolor{stringliteral}{"tf\_prefix"}, \hyperlink{classjaco_1_1JacoPoseActionServer_ae846600150f2139d117f9994bf19747f}{tf\_prefix\_}, \textcolor{stringliteral}{"jaco\_"});
+67 
+68     \hyperlink{classjaco_1_1JacoPoseActionServer_a086630400cbfd3e75414a620f8220038}{tolerance\_} = \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{float}\textcolor{keyword}{>}(tolerance);
+69     std::stringstream ss;
+70     ss << \hyperlink{classjaco_1_1JacoPoseActionServer_ae846600150f2139d117f9994bf19747f}{tf\_prefix\_} << \textcolor{stringliteral}{"api\_origin"};
+71     \hyperlink{classjaco_1_1JacoPoseActionServer_a5f90297e166e0113362ad14abc78f13f}{api\_origin\_frame\_} = ss.str();
+72 
+73     \hyperlink{classjaco_1_1JacoPoseActionServer_ac5ecd6a61bf824052ff744aad8bf886a}{action\_server\_}.start();
+74 \}
+\end{DoxyCode}
+\index{jaco\+::\+Jaco\+Pose\+Action\+Server@{jaco\+::\+Jaco\+Pose\+Action\+Server}!````~Jaco\+Pose\+Action\+Server@{$\sim$\+Jaco\+Pose\+Action\+Server}}
+\index{````~Jaco\+Pose\+Action\+Server@{$\sim$\+Jaco\+Pose\+Action\+Server}!jaco\+::\+Jaco\+Pose\+Action\+Server@{jaco\+::\+Jaco\+Pose\+Action\+Server}}
+\subsubsection[{\texorpdfstring{$\sim$\+Jaco\+Pose\+Action\+Server()}{~JacoPoseActionServer()}}]{\setlength{\rightskip}{0pt plus 5cm}jaco\+::\+Jaco\+Pose\+Action\+Server\+::$\sim$\+Jaco\+Pose\+Action\+Server (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classjaco_1_1JacoPoseActionServer_ab1c488f56f4759f917c46406230e6c84}{}\label{classjaco_1_1JacoPoseActionServer_ab1c488f56f4759f917c46406230e6c84}
+
+\begin{DoxyCode}
+78 \{
+79 \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{jaco\+::\+Jaco\+Pose\+Action\+Server@{jaco\+::\+Jaco\+Pose\+Action\+Server}!action\+Callback@{action\+Callback}}
+\index{action\+Callback@{action\+Callback}!jaco\+::\+Jaco\+Pose\+Action\+Server@{jaco\+::\+Jaco\+Pose\+Action\+Server}}
+\subsubsection[{\texorpdfstring{action\+Callback(const jaco\+\_\+msgs\+::\+Arm\+Pose\+Goal\+Const\+Ptr \&)}{actionCallback(const jaco_msgs::ArmPoseGoalConstPtr &)}}]{\setlength{\rightskip}{0pt plus 5cm}void jaco\+::\+Jaco\+Pose\+Action\+Server\+::action\+Callback (
+\begin{DoxyParamCaption}
+\item[{const {\bf jaco\+\_\+msgs\+::\+Arm\+Pose\+Goal\+Const\+Ptr} \&}]{goal}
+\end{DoxyParamCaption}
+)}\hypertarget{classjaco_1_1JacoPoseActionServer_a82396bb5f219f54518a80493bfd38f26}{}\label{classjaco_1_1JacoPoseActionServer_a82396bb5f219f54518a80493bfd38f26}
+
+\begin{DoxyCode}
+83 \{
+84     \hyperlink{structjaco__msgs_1_1ArmPoseFeedback__}{jaco\_msgs::ArmPoseFeedback} feedback;
+85     \hyperlink{structjaco__msgs_1_1ArmPoseResult__}{jaco\_msgs::ArmPoseResult} \hyperlink{Kinova_8API_8CommLayerUbuntu_8h_a900dac90961bada00f57c207562a6a9a}{result};
+86     feedback.\hyperlink{structjaco__msgs_1_1ArmPoseFeedback___a4a015f6a23c7830eff5fcb0036c1d98a}{pose}.header.frame\_id = goal->pose.header.frame\_id;
+87     result.\hyperlink{structjaco__msgs_1_1ArmPoseResult___a35fabbce17a2d3c3c0e9bcd97985053b}{pose}.header.frame\_id = goal->pose.header.frame\_id;
+88 
+89     ros::Time current\_time = ros::Time::now();
+90     JacoPose current\_pose;
+91     geometry\_msgs::PoseStamped local\_pose;
+92     local\_pose.header.frame\_id = \hyperlink{classjaco_1_1JacoPoseActionServer_a5f90297e166e0113362ad14abc78f13f}{api\_origin\_frame\_};
+93 
+94     \textcolor{keywordflow}{try}
+95     \{
+96         \textcolor{comment}{// Put the goal pose into the frame used by the arm}
+97         \textcolor{keywordflow}{if} (ros::ok()
+98                 && !\hyperlink{classjaco_1_1JacoPoseActionServer_a43c58cdc664caaa1471792c672aea7c1}{listener}.canTransform(\hyperlink{classjaco_1_1JacoPoseActionServer_a5f90297e166e0113362ad14abc78f13f}{api\_origin\_frame\_}, goal->pose.header.
+      frame\_id,
+99                                           goal->pose.header.stamp))
+100         \{
+101             ROS\_ERROR(\textcolor{stringliteral}{"Could not get transfrom from %s to %s, aborting cartesian movement"},
+102                       \hyperlink{classjaco_1_1JacoPoseActionServer_a5f90297e166e0113362ad14abc78f13f}{api\_origin\_frame\_}.c\_str(), goal->pose.header.frame\_id.c\_str());
+103             \hyperlink{classjaco_1_1JacoPoseActionServer_ac5ecd6a61bf824052ff744aad8bf886a}{action\_server\_}.setAborted(result);
+104             \textcolor{keywordflow}{return};
+105         \}
+106 
+107         \hyperlink{classjaco_1_1JacoPoseActionServer_a43c58cdc664caaa1471792c672aea7c1}{listener}.transformPose(local\_pose.header.frame\_id, goal->pose, local\_pose);
+108         \hyperlink{classjaco_1_1JacoPoseActionServer_ad849b8d5a2bb31a65ab24b586a86c9a1}{arm\_comm\_}.\hyperlink{classjaco_1_1JacoComm_a855bbefed2093d0d0cc7763eb7306a0b}{getCartesianPosition}(current\_pose);
+109 
+110         \textcolor{keywordflow}{if} (\hyperlink{classjaco_1_1JacoPoseActionServer_ad849b8d5a2bb31a65ab24b586a86c9a1}{arm\_comm\_}.\hyperlink{classjaco_1_1JacoComm_a872b8033cda5a9fe4ccdca2e89aa03d1}{isStopped}())
+111         \{
+112             ROS\_INFO(\textcolor{stringliteral}{"Could not complete cartesian action because the arm is 'stopped'."});
+113             local\_pose.pose = current\_pose.constructPoseMsg();
+114             \hyperlink{classjaco_1_1JacoPoseActionServer_a43c58cdc664caaa1471792c672aea7c1}{listener}.transformPose(result.\hyperlink{structjaco__msgs_1_1ArmPoseResult___a35fabbce17a2d3c3c0e9bcd97985053b}{pose}.header.frame\_id, local\_pose, result.
+      \hyperlink{structjaco__msgs_1_1ArmPoseResult___a35fabbce17a2d3c3c0e9bcd97985053b}{pose});
+115             \hyperlink{classjaco_1_1JacoPoseActionServer_ac5ecd6a61bf824052ff744aad8bf886a}{action\_server\_}.setAborted(result);
+116             \textcolor{keywordflow}{return};
+117         \}
+118 
+119         \hyperlink{classjaco_1_1JacoPoseActionServer_a6b5b38efebafd4426afd01368bcf6f87}{last\_nonstall\_time\_} = current\_time;
+120         \hyperlink{classjaco_1_1JacoPoseActionServer_aa7e288732479301e6f63762f91b08580}{last\_nonstall\_pose\_} = current\_pose;
+121 
+122         JacoPose target(local\_pose.pose);
+123         \hyperlink{classjaco_1_1JacoPoseActionServer_ad849b8d5a2bb31a65ab24b586a86c9a1}{arm\_comm\_}.\hyperlink{classjaco_1_1JacoComm_a7a7375d2609c81f0a03974b06ca07be0}{setCartesianPosition}(target);
+124 
+125         \textcolor{keywordflow}{while} (\textcolor{keyword}{true})
+126         \{
+127             ros::spinOnce();
+128 
+129             \textcolor{keywordflow}{if} (\hyperlink{classjaco_1_1JacoPoseActionServer_ac5ecd6a61bf824052ff744aad8bf886a}{action\_server\_}.isPreemptRequested() || !ros::ok())
+130             \{
+131                 result.\hyperlink{structjaco__msgs_1_1ArmPoseResult___a35fabbce17a2d3c3c0e9bcd97985053b}{pose} = feedback.\hyperlink{structjaco__msgs_1_1ArmPoseFeedback___a4a015f6a23c7830eff5fcb0036c1d98a}{pose};
+132                 \hyperlink{classjaco_1_1JacoPoseActionServer_ad849b8d5a2bb31a65ab24b586a86c9a1}{arm\_comm\_}.\hyperlink{classjaco_1_1JacoComm_a54862830cd6414ae3ae48e46e54bf798}{stopAPI}();
+133                 \hyperlink{classjaco_1_1JacoPoseActionServer_ad849b8d5a2bb31a65ab24b586a86c9a1}{arm\_comm\_}.\hyperlink{classjaco_1_1JacoComm_a6b2a1fabc4e6c30da42c9a5e26757398}{startAPI}();
+134                 \hyperlink{classjaco_1_1JacoPoseActionServer_ac5ecd6a61bf824052ff744aad8bf886a}{action\_server\_}.setPreempted(result);
+135                 \textcolor{keywordflow}{return};
+136             \}
+137             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\hyperlink{classjaco_1_1JacoPoseActionServer_ad849b8d5a2bb31a65ab24b586a86c9a1}{arm\_comm\_}.\hyperlink{classjaco_1_1JacoComm_a872b8033cda5a9fe4ccdca2e89aa03d1}{isStopped}())
+138             \{
+139                 result.\hyperlink{structjaco__msgs_1_1ArmPoseResult___a35fabbce17a2d3c3c0e9bcd97985053b}{pose} = feedback.\hyperlink{structjaco__msgs_1_1ArmPoseFeedback___a4a015f6a23c7830eff5fcb0036c1d98a}{pose};
+140                 \hyperlink{classjaco_1_1JacoPoseActionServer_ac5ecd6a61bf824052ff744aad8bf886a}{action\_server\_}.setAborted(result);
+141                 \textcolor{keywordflow}{return};
+142             \}
+143 
+144             \hyperlink{classjaco_1_1JacoPoseActionServer_ad849b8d5a2bb31a65ab24b586a86c9a1}{arm\_comm\_}.\hyperlink{classjaco_1_1JacoComm_a855bbefed2093d0d0cc7763eb7306a0b}{getCartesianPosition}(current\_pose);
+145             current\_time = ros::Time::now();
+146             local\_pose.pose = current\_pose.constructPoseMsg();
+147             \hyperlink{classjaco_1_1JacoPoseActionServer_a43c58cdc664caaa1471792c672aea7c1}{listener}.transformPose(feedback.\hyperlink{structjaco__msgs_1_1ArmPoseFeedback___a4a015f6a23c7830eff5fcb0036c1d98a}{pose}.header.frame\_id, local\_pose, feedback.
+      \hyperlink{structjaco__msgs_1_1ArmPoseFeedback___a4a015f6a23c7830eff5fcb0036c1d98a}{pose});
+148             \hyperlink{classjaco_1_1JacoPoseActionServer_ac5ecd6a61bf824052ff744aad8bf886a}{action\_server\_}.publishFeedback(feedback);
+149 
+150             \textcolor{keywordflow}{if} (target.isCloseToOther(current\_pose, \hyperlink{classjaco_1_1JacoPoseActionServer_a086630400cbfd3e75414a620f8220038}{tolerance\_}))
+151             \{
+152                 result.\hyperlink{structjaco__msgs_1_1ArmPoseResult___a35fabbce17a2d3c3c0e9bcd97985053b}{pose} = feedback.\hyperlink{structjaco__msgs_1_1ArmPoseFeedback___a4a015f6a23c7830eff5fcb0036c1d98a}{pose};
+153                 \hyperlink{classjaco_1_1JacoPoseActionServer_ac5ecd6a61bf824052ff744aad8bf886a}{action\_server\_}.setSucceeded(result);
+154                 \textcolor{keywordflow}{return};
+155             \}
+156             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (!\hyperlink{classjaco_1_1JacoPoseActionServer_aa7e288732479301e6f63762f91b08580}{last\_nonstall\_pose\_}.\hyperlink{classjaco_1_1JacoPose_aed0e2dcb5cc3bc8315a2988bba51d513}{isCloseToOther}(current\_pose, 
+      \hyperlink{classjaco_1_1JacoPoseActionServer_a71248453a7bb76ba012040b1b9d67924}{stall\_threshold\_}))
+157             \{
+158                 \textcolor{comment}{// Check if we are outside of a potential stall condition}
+159                 \hyperlink{classjaco_1_1JacoPoseActionServer_a6b5b38efebafd4426afd01368bcf6f87}{last\_nonstall\_time\_} = current\_time;
+160                 \hyperlink{classjaco_1_1JacoPoseActionServer_aa7e288732479301e6f63762f91b08580}{last\_nonstall\_pose\_} = current\_pose;
+161             \}
+162             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} ((current\_time - \hyperlink{classjaco_1_1JacoPoseActionServer_a6b5b38efebafd4426afd01368bcf6f87}{last\_nonstall\_time\_}).toSec() > 
+      \hyperlink{classjaco_1_1JacoPoseActionServer_a48c5866f584f192be487934d3fbf5ebc}{stall\_interval\_seconds\_})
+163             \{
+164                 \textcolor{comment}{// Check if the full stall condition has been meet}
+165                 result.\hyperlink{structjaco__msgs_1_1ArmPoseResult___a35fabbce17a2d3c3c0e9bcd97985053b}{pose} = feedback.\hyperlink{structjaco__msgs_1_1ArmPoseFeedback___a4a015f6a23c7830eff5fcb0036c1d98a}{pose};
+166                 \hyperlink{classjaco_1_1JacoPoseActionServer_ad849b8d5a2bb31a65ab24b586a86c9a1}{arm\_comm\_}.\hyperlink{classjaco_1_1JacoComm_a54862830cd6414ae3ae48e46e54bf798}{stopAPI}();
+167                 \hyperlink{classjaco_1_1JacoPoseActionServer_ad849b8d5a2bb31a65ab24b586a86c9a1}{arm\_comm\_}.\hyperlink{classjaco_1_1JacoComm_a6b2a1fabc4e6c30da42c9a5e26757398}{startAPI}();
+168                 \hyperlink{classjaco_1_1JacoPoseActionServer_ac5ecd6a61bf824052ff744aad8bf886a}{action\_server\_}.setPreempted(result);
+169                 \textcolor{keywordflow}{return};
+170             \}
+171 
+172             ros::Rate(\hyperlink{classjaco_1_1JacoPoseActionServer_a3512d3517f7d55ad0b481081a7000b06}{rate\_hz\_}).sleep();
+173         \}
+174     \}
+175     \textcolor{keywordflow}{catch}(\textcolor{keyword}{const} std::exception& \hyperlink{namespace__setup__util_acdce690b925de33d6249bbbfa1109d61}{e})
+176     \{
+177         result.\hyperlink{structjaco__msgs_1_1ArmPoseResult___a35fabbce17a2d3c3c0e9bcd97985053b}{pose} = feedback.\hyperlink{structjaco__msgs_1_1ArmPoseFeedback___a4a015f6a23c7830eff5fcb0036c1d98a}{pose};
+178         ROS\_ERROR\_STREAM(e.what());
+179         \hyperlink{classjaco_1_1JacoPoseActionServer_ac5ecd6a61bf824052ff744aad8bf886a}{action\_server\_}.setAborted(result);
+180     \}
+181 \}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\index{jaco\+::\+Jaco\+Pose\+Action\+Server@{jaco\+::\+Jaco\+Pose\+Action\+Server}!action\+\_\+server\+\_\+@{action\+\_\+server\+\_\+}}
+\index{action\+\_\+server\+\_\+@{action\+\_\+server\+\_\+}!jaco\+::\+Jaco\+Pose\+Action\+Server@{jaco\+::\+Jaco\+Pose\+Action\+Server}}
+\subsubsection[{\texorpdfstring{action\+\_\+server\+\_\+}{action_server_}}]{\setlength{\rightskip}{0pt plus 5cm}actionlib\+::\+Simple\+Action\+Server$<${\bf jaco\+\_\+msgs\+::\+Arm\+Pose\+Action}$>$ jaco\+::\+Jaco\+Pose\+Action\+Server\+::action\+\_\+server\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classjaco_1_1JacoPoseActionServer_ac5ecd6a61bf824052ff744aad8bf886a}{}\label{classjaco_1_1JacoPoseActionServer_ac5ecd6a61bf824052ff744aad8bf886a}
+\index{jaco\+::\+Jaco\+Pose\+Action\+Server@{jaco\+::\+Jaco\+Pose\+Action\+Server}!api\+\_\+origin\+\_\+frame\+\_\+@{api\+\_\+origin\+\_\+frame\+\_\+}}
+\index{api\+\_\+origin\+\_\+frame\+\_\+@{api\+\_\+origin\+\_\+frame\+\_\+}!jaco\+::\+Jaco\+Pose\+Action\+Server@{jaco\+::\+Jaco\+Pose\+Action\+Server}}
+\subsubsection[{\texorpdfstring{api\+\_\+origin\+\_\+frame\+\_\+}{api_origin_frame_}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string jaco\+::\+Jaco\+Pose\+Action\+Server\+::api\+\_\+origin\+\_\+frame\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classjaco_1_1JacoPoseActionServer_a5f90297e166e0113362ad14abc78f13f}{}\label{classjaco_1_1JacoPoseActionServer_a5f90297e166e0113362ad14abc78f13f}
+\index{jaco\+::\+Jaco\+Pose\+Action\+Server@{jaco\+::\+Jaco\+Pose\+Action\+Server}!arm\+\_\+comm\+\_\+@{arm\+\_\+comm\+\_\+}}
+\index{arm\+\_\+comm\+\_\+@{arm\+\_\+comm\+\_\+}!jaco\+::\+Jaco\+Pose\+Action\+Server@{jaco\+::\+Jaco\+Pose\+Action\+Server}}
+\subsubsection[{\texorpdfstring{arm\+\_\+comm\+\_\+}{arm_comm_}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Jaco\+Comm}\& jaco\+::\+Jaco\+Pose\+Action\+Server\+::arm\+\_\+comm\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classjaco_1_1JacoPoseActionServer_ad849b8d5a2bb31a65ab24b586a86c9a1}{}\label{classjaco_1_1JacoPoseActionServer_ad849b8d5a2bb31a65ab24b586a86c9a1}
+\index{jaco\+::\+Jaco\+Pose\+Action\+Server@{jaco\+::\+Jaco\+Pose\+Action\+Server}!last\+\_\+nonstall\+\_\+pose\+\_\+@{last\+\_\+nonstall\+\_\+pose\+\_\+}}
+\index{last\+\_\+nonstall\+\_\+pose\+\_\+@{last\+\_\+nonstall\+\_\+pose\+\_\+}!jaco\+::\+Jaco\+Pose\+Action\+Server@{jaco\+::\+Jaco\+Pose\+Action\+Server}}
+\subsubsection[{\texorpdfstring{last\+\_\+nonstall\+\_\+pose\+\_\+}{last_nonstall_pose_}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf jaco\+::\+Jaco\+Pose} jaco\+::\+Jaco\+Pose\+Action\+Server\+::last\+\_\+nonstall\+\_\+pose\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classjaco_1_1JacoPoseActionServer_aa7e288732479301e6f63762f91b08580}{}\label{classjaco_1_1JacoPoseActionServer_aa7e288732479301e6f63762f91b08580}
+\index{jaco\+::\+Jaco\+Pose\+Action\+Server@{jaco\+::\+Jaco\+Pose\+Action\+Server}!last\+\_\+nonstall\+\_\+time\+\_\+@{last\+\_\+nonstall\+\_\+time\+\_\+}}
+\index{last\+\_\+nonstall\+\_\+time\+\_\+@{last\+\_\+nonstall\+\_\+time\+\_\+}!jaco\+::\+Jaco\+Pose\+Action\+Server@{jaco\+::\+Jaco\+Pose\+Action\+Server}}
+\subsubsection[{\texorpdfstring{last\+\_\+nonstall\+\_\+time\+\_\+}{last_nonstall_time_}}]{\setlength{\rightskip}{0pt plus 5cm}ros\+::\+Time jaco\+::\+Jaco\+Pose\+Action\+Server\+::last\+\_\+nonstall\+\_\+time\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classjaco_1_1JacoPoseActionServer_a6b5b38efebafd4426afd01368bcf6f87}{}\label{classjaco_1_1JacoPoseActionServer_a6b5b38efebafd4426afd01368bcf6f87}
+\index{jaco\+::\+Jaco\+Pose\+Action\+Server@{jaco\+::\+Jaco\+Pose\+Action\+Server}!listener@{listener}}
+\index{listener@{listener}!jaco\+::\+Jaco\+Pose\+Action\+Server@{jaco\+::\+Jaco\+Pose\+Action\+Server}}
+\subsubsection[{\texorpdfstring{listener}{listener}}]{\setlength{\rightskip}{0pt plus 5cm}tf\+::\+Transform\+Listener jaco\+::\+Jaco\+Pose\+Action\+Server\+::listener\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classjaco_1_1JacoPoseActionServer_a43c58cdc664caaa1471792c672aea7c1}{}\label{classjaco_1_1JacoPoseActionServer_a43c58cdc664caaa1471792c672aea7c1}
+\index{jaco\+::\+Jaco\+Pose\+Action\+Server@{jaco\+::\+Jaco\+Pose\+Action\+Server}!node\+\_\+handle\+\_\+@{node\+\_\+handle\+\_\+}}
+\index{node\+\_\+handle\+\_\+@{node\+\_\+handle\+\_\+}!jaco\+::\+Jaco\+Pose\+Action\+Server@{jaco\+::\+Jaco\+Pose\+Action\+Server}}
+\subsubsection[{\texorpdfstring{node\+\_\+handle\+\_\+}{node_handle_}}]{\setlength{\rightskip}{0pt plus 5cm}ros\+::\+Node\+Handle jaco\+::\+Jaco\+Pose\+Action\+Server\+::node\+\_\+handle\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classjaco_1_1JacoPoseActionServer_ae5c09c6924a4eeccd4d32ca59ed6465d}{}\label{classjaco_1_1JacoPoseActionServer_ae5c09c6924a4eeccd4d32ca59ed6465d}
+\index{jaco\+::\+Jaco\+Pose\+Action\+Server@{jaco\+::\+Jaco\+Pose\+Action\+Server}!rate\+\_\+hz\+\_\+@{rate\+\_\+hz\+\_\+}}
+\index{rate\+\_\+hz\+\_\+@{rate\+\_\+hz\+\_\+}!jaco\+::\+Jaco\+Pose\+Action\+Server@{jaco\+::\+Jaco\+Pose\+Action\+Server}}
+\subsubsection[{\texorpdfstring{rate\+\_\+hz\+\_\+}{rate_hz_}}]{\setlength{\rightskip}{0pt plus 5cm}double jaco\+::\+Jaco\+Pose\+Action\+Server\+::rate\+\_\+hz\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classjaco_1_1JacoPoseActionServer_a3512d3517f7d55ad0b481081a7000b06}{}\label{classjaco_1_1JacoPoseActionServer_a3512d3517f7d55ad0b481081a7000b06}
+\index{jaco\+::\+Jaco\+Pose\+Action\+Server@{jaco\+::\+Jaco\+Pose\+Action\+Server}!stall\+\_\+interval\+\_\+seconds\+\_\+@{stall\+\_\+interval\+\_\+seconds\+\_\+}}
+\index{stall\+\_\+interval\+\_\+seconds\+\_\+@{stall\+\_\+interval\+\_\+seconds\+\_\+}!jaco\+::\+Jaco\+Pose\+Action\+Server@{jaco\+::\+Jaco\+Pose\+Action\+Server}}
+\subsubsection[{\texorpdfstring{stall\+\_\+interval\+\_\+seconds\+\_\+}{stall_interval_seconds_}}]{\setlength{\rightskip}{0pt plus 5cm}double jaco\+::\+Jaco\+Pose\+Action\+Server\+::stall\+\_\+interval\+\_\+seconds\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classjaco_1_1JacoPoseActionServer_a48c5866f584f192be487934d3fbf5ebc}{}\label{classjaco_1_1JacoPoseActionServer_a48c5866f584f192be487934d3fbf5ebc}
+\index{jaco\+::\+Jaco\+Pose\+Action\+Server@{jaco\+::\+Jaco\+Pose\+Action\+Server}!stall\+\_\+threshold\+\_\+@{stall\+\_\+threshold\+\_\+}}
+\index{stall\+\_\+threshold\+\_\+@{stall\+\_\+threshold\+\_\+}!jaco\+::\+Jaco\+Pose\+Action\+Server@{jaco\+::\+Jaco\+Pose\+Action\+Server}}
+\subsubsection[{\texorpdfstring{stall\+\_\+threshold\+\_\+}{stall_threshold_}}]{\setlength{\rightskip}{0pt plus 5cm}double jaco\+::\+Jaco\+Pose\+Action\+Server\+::stall\+\_\+threshold\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classjaco_1_1JacoPoseActionServer_a71248453a7bb76ba012040b1b9d67924}{}\label{classjaco_1_1JacoPoseActionServer_a71248453a7bb76ba012040b1b9d67924}
+\index{jaco\+::\+Jaco\+Pose\+Action\+Server@{jaco\+::\+Jaco\+Pose\+Action\+Server}!tf\+\_\+prefix\+\_\+@{tf\+\_\+prefix\+\_\+}}
+\index{tf\+\_\+prefix\+\_\+@{tf\+\_\+prefix\+\_\+}!jaco\+::\+Jaco\+Pose\+Action\+Server@{jaco\+::\+Jaco\+Pose\+Action\+Server}}
+\subsubsection[{\texorpdfstring{tf\+\_\+prefix\+\_\+}{tf_prefix_}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string jaco\+::\+Jaco\+Pose\+Action\+Server\+::tf\+\_\+prefix\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classjaco_1_1JacoPoseActionServer_ae846600150f2139d117f9994bf19747f}{}\label{classjaco_1_1JacoPoseActionServer_ae846600150f2139d117f9994bf19747f}
+\index{jaco\+::\+Jaco\+Pose\+Action\+Server@{jaco\+::\+Jaco\+Pose\+Action\+Server}!tolerance\+\_\+@{tolerance\+\_\+}}
+\index{tolerance\+\_\+@{tolerance\+\_\+}!jaco\+::\+Jaco\+Pose\+Action\+Server@{jaco\+::\+Jaco\+Pose\+Action\+Server}}
+\subsubsection[{\texorpdfstring{tolerance\+\_\+}{tolerance_}}]{\setlength{\rightskip}{0pt plus 5cm}float jaco\+::\+Jaco\+Pose\+Action\+Server\+::tolerance\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classjaco_1_1JacoPoseActionServer_a086630400cbfd3e75414a620f8220038}{}\label{classjaco_1_1JacoPoseActionServer_a086630400cbfd3e75414a620f8220038}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Longfei/\+Desktop/catkin\+\_\+\+Kinova\+R\+O\+S/src/jaco-\/ros/jaco\+\_\+driver/include/jaco\+\_\+driver/\hyperlink{jaco__pose__action_8h}{jaco\+\_\+pose\+\_\+action.\+h}\item 
+D\+:/\+Longfei/\+Desktop/catkin\+\_\+\+Kinova\+R\+O\+S/src/jaco-\/ros/jaco\+\_\+driver/src/\hyperlink{jaco__pose__action_8cpp}{jaco\+\_\+pose\+\_\+action.\+cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,702 @@
+.TH "jaco::JacoArm" 3 "Thu Mar 3 2016" "Version 1.0.1" "Kinova-ROS" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+jaco::JacoArm \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include 'jaco_arm\&.h'\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBcartesianVelocityCallback\fP (const geometry_msgs::TwistStampedConstPtr &cartesian_vel)"
+.br
+.ti -1c
+.RI "bool \fBhomeArmServiceCallback\fP (\fBjaco_msgs::HomeArm::Request\fP &req, \fBjaco_msgs::HomeArm::Response\fP &res)"
+.br
+.ti -1c
+.RI "\fBJacoArm\fP (\fBJacoComm\fP &arm, const ros::NodeHandle &node_handle)"
+.br
+.ti -1c
+.RI "void \fBjointVelocityCallback\fP (const \fBjaco_msgs::JointVelocityConstPtr\fP &joint_vel)"
+.br
+.ti -1c
+.RI "bool \fBsetForceControlParamsCallback\fP (\fBjaco_msgs::SetForceControlParams::Request\fP &req, \fBjaco_msgs::SetForceControlParams::Response\fP &res)"
+.br
+.ti -1c
+.RI "bool \fBstartForceControlCallback\fP (\fBjaco_msgs::Start::Request\fP &req, \fBjaco_msgs::Start::Response\fP &res)"
+.br
+.ti -1c
+.RI "bool \fBstartServiceCallback\fP (\fBjaco_msgs::Start::Request\fP &req, \fBjaco_msgs::Start::Response\fP &res)"
+.br
+.RI "\fIHandler for 'start' service\&. \fP"
+.ti -1c
+.RI "bool \fBstopForceControlCallback\fP (\fBjaco_msgs::Stop::Request\fP &req, \fBjaco_msgs::Stop::Response\fP &res)"
+.br
+.ti -1c
+.RI "bool \fBstopServiceCallback\fP (\fBjaco_msgs::Stop::Request\fP &req, \fBjaco_msgs::Stop::Response\fP &res)"
+.br
+.RI "\fIHandler for 'stop' service\&. \fP"
+.ti -1c
+.RI "\fB~JacoArm\fP ()"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBcartesianVelocityTimer\fP (const ros::TimerEvent &)"
+.br
+.ti -1c
+.RI "void \fBjointVelocityTimer\fP (const ros::TimerEvent &)"
+.br
+.ti -1c
+.RI "void \fBpositionTimer\fP (const ros::TimerEvent &)"
+.br
+.ti -1c
+.RI "void \fBpublishFingerPosition\fP (void)"
+.br
+.RI "\fIPublishes the current finger positions\&. \fP"
+.ti -1c
+.RI "void \fBpublishJointAngles\fP (void)"
+.br
+.RI "\fIPublishes the current joint angles\&. \fP"
+.ti -1c
+.RI "void \fBpublishToolPosition\fP (void)"
+.br
+.RI "\fIPublishes the current cartesian coordinates\&. \fP"
+.ti -1c
+.RI "void \fBpublishToolWrench\fP (void)"
+.br
+.RI "\fIPublishes the current cartesian forces at the end effector\&. \fP"
+.ti -1c
+.RI "void \fBstatusTimer\fP (const ros::TimerEvent &)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "double \fBcartesian_vel_interval_seconds_\fP"
+.br
+.ti -1c
+.RI "double \fBcartesian_vel_timeout_seconds_\fP"
+.br
+.ti -1c
+.RI "ros::Timer \fBcartesian_vel_timer_\fP"
+.br
+.ti -1c
+.RI "bool \fBcartesian_vel_timer_flag_\fP"
+.br
+.ti -1c
+.RI "\fBCartesianInfo\fP \fBcartesian_velocities_\fP"
+.br
+.ti -1c
+.RI "ros::Subscriber \fBcartesian_velocity_subscriber_\fP"
+.br
+.ti -1c
+.RI "bool \fBconvert_joint_velocities_\fP"
+.br
+.ti -1c
+.RI "double \fBfinger_conv_ratio_\fP"
+.br
+.ti -1c
+.RI "ros::Publisher \fBfinger_position_publisher_\fP"
+.br
+.ti -1c
+.RI "ros::ServiceServer \fBhoming_service_\fP"
+.br
+.ti -1c
+.RI "\fBJacoComm\fP & \fBjaco_comm_\fP"
+.br
+.ti -1c
+.RI "ros::Publisher \fBjoint_angles_publisher_\fP"
+.br
+.ti -1c
+.RI "std::vector< std::string > \fBjoint_names_\fP"
+.br
+.ti -1c
+.RI "ros::Publisher \fBjoint_state_publisher_\fP"
+.br
+.ti -1c
+.RI "double \fBjoint_vel_interval_seconds_\fP"
+.br
+.ti -1c
+.RI "double \fBjoint_vel_timeout_seconds_\fP"
+.br
+.ti -1c
+.RI "ros::Timer \fBjoint_vel_timer_\fP"
+.br
+.ti -1c
+.RI "bool \fBjoint_vel_timer_flag_\fP"
+.br
+.ti -1c
+.RI "\fBAngularInfo\fP \fBjoint_velocities_\fP"
+.br
+.ti -1c
+.RI "ros::Subscriber \fBjoint_velocity_subscriber_\fP"
+.br
+.ti -1c
+.RI "ros::Time \fBlast_cartesian_vel_cmd_time_\fP"
+.br
+.ti -1c
+.RI "ros::Time \fBlast_joint_vel_cmd_time_\fP"
+.br
+.ti -1c
+.RI "ros::NodeHandle \fBnode_handle_\fP"
+.br
+.ti -1c
+.RI "ros::ServiceServer \fBset_force_control_params_service_\fP"
+.br
+.ti -1c
+.RI "ros::ServiceServer \fBstart_force_control_service_\fP"
+.br
+.ti -1c
+.RI "ros::ServiceServer \fBstart_service_\fP"
+.br
+.ti -1c
+.RI "double \fBstatus_interval_seconds_\fP"
+.br
+.ti -1c
+.RI "ros::Timer \fBstatus_timer_\fP"
+.br
+.ti -1c
+.RI "ros::ServiceServer \fBstop_force_control_service_\fP"
+.br
+.ti -1c
+.RI "ros::ServiceServer \fBstop_service_\fP"
+.br
+.ti -1c
+.RI "tf::TransformListener \fBtf_listener_\fP"
+.br
+.ti -1c
+.RI "std::string \fBtf_prefix_\fP"
+.br
+.ti -1c
+.RI "ros::Publisher \fBtool_position_publisher_\fP"
+.br
+.ti -1c
+.RI "ros::Publisher \fBtool_wrench_publisher_\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "jaco::JacoArm::JacoArm (\fBJacoComm\fP & arm, const ros::NodeHandle & node_handle)"
+
+.PP
+.nf
+52     : jaco_comm_(arm), node_handle_(nodeHandle)
+53 {
+54     /* Set up Services */
+55     stop_service_ = node_handle_\&.advertiseService("in/stop", &JacoArm::stopServiceCallback, this);
+56     start_service_ = node_handle_\&.advertiseService("in/start", &JacoArm::startServiceCallback, this);
+57     homing_service_ = node_handle_\&.advertiseService("in/home_arm", &JacoArm::homeArmServiceCallback, this);
+58 
+59     set_force_control_params_service_ = node_handle_\&.advertiseService("in/set_force_control_params", &JacoArm::setForceControlParamsCallback, this);
+60     start_force_control_service_ = node_handle_\&.advertiseService("in/start_force_control", &JacoArm::startForceControlCallback, this);
+61     stop_force_control_service_ = node_handle_\&.advertiseService("in/stop_force_control", &JacoArm::stopForceControlCallback, this);
+62     
+63     /* Set up Publishers */
+64     joint_angles_publisher_ = node_handle_\&.advertise<jaco_msgs::JointAngles>("out/joint_angles", 2);
+65     joint_state_publisher_ = node_handle_\&.advertise<sensor_msgs::JointState>("out/joint_state", 2);
+66     tool_position_publisher_ = node_handle_\&.advertise<geometry_msgs::PoseStamped>("out/tool_position", 2);
+67     tool_wrench_publisher_ = node_handle_\&.advertise<geometry_msgs::WrenchStamped>("out/tool_wrench", 2);
+68     finger_position_publisher_ = node_handle_\&.advertise<jaco_msgs::FingerPosition>("out/finger_position", 2);
+69 
+70     /* Set up Subscribers*/
+71     joint_velocity_subscriber_ = node_handle_\&.subscribe("in/joint_velocity", 1,
+72                                                       &JacoArm::jointVelocityCallback, this);
+73     cartesian_velocity_subscriber_ = node_handle_\&.subscribe("in/cartesian_velocity", 1,
+74                                                           &JacoArm::cartesianVelocityCallback, this);
+75 
+76     node_handle_\&.param<double>("status_interval_seconds", status_interval_seconds_, 0\&.1);
+77     node_handle_\&.param<double>("joint_angular_vel_timeout", joint_vel_timeout_seconds_, 0\&.25);
+78     node_handle_\&.param<double>("cartesian_vel_timeout", cartesian_vel_timeout_seconds_, 0\&.25);
+79     node_handle_\&.param<double>("joint_angular_vel_timeout", joint_vel_interval_seconds_, 0\&.1);
+80     node_handle_\&.param<double>("cartesian_vel_timeout", cartesian_vel_interval_seconds_, 0\&.01);
+81 
+82     node_handle_\&.param<std::string>("tf_prefix", tf_prefix_, "jaco_");
+83 
+84     // Approximative conversion ratio from finger position (0\&.\&.6000) to joint angle 
+85     // in radians (0\&.\&.0\&.7)\&.
+86     node_handle_\&.param("finger_angle_conv_ratio", finger_conv_ratio_, 0\&.7 / 5000\&.0);
+87 
+88     // Depending on the API version, the arm might return velocities in the
+89     // 0\&.\&.360 range (0\&.\&.180 for positive values, 181\&.\&.360 for negative ones)\&.
+90     // This indicates that the ROS node should convert them first before
+91     // updating the joint_state topic\&.
+92     node_handle_\&.param("convert_joint_velocities", convert_joint_velocities_, true);
+93 
+94     joint_names_\&.resize(JACO_JOINTS_COUNT);
+95     joint_names_[0] = tf_prefix_ + "joint_1";
+96     joint_names_[1] = tf_prefix_ + "joint_2";
+97     joint_names_[2] = tf_prefix_ + "joint_3";
+98     joint_names_[3] = tf_prefix_ + "joint_4";
+99     joint_names_[4] = tf_prefix_ + "joint_5";
+100     joint_names_[5] = tf_prefix_ + "joint_6";
+101     joint_names_[6] = tf_prefix_ + "joint_finger_1";
+102     joint_names_[7] = tf_prefix_ + "joint_finger_2";
+103     joint_names_[8] = tf_prefix_ + "joint_finger_3";
+104 
+105     status_timer_ = node_handle_\&.createTimer(ros::Duration(status_interval_seconds_),
+106                                            &JacoArm::statusTimer, this);
+107 
+108     joint_vel_timer_ = node_handle_\&.createTimer(ros::Duration(joint_vel_interval_seconds_),
+109                                               &JacoArm::jointVelocityTimer, this);
+110     joint_vel_timer_\&.stop();
+111     joint_vel_timer_flag_ = false;
+112 
+113     cartesian_vel_timer_ = node_handle_\&.createTimer(ros::Duration(cartesian_vel_interval_seconds_),
+114                                                   &JacoArm::cartesianVelocityTimer, this);
+115     cartesian_vel_timer_\&.stop();
+116     cartesian_vel_timer_flag_ = false;
+117 
+118     ROS_INFO("The arm is ready to use\&.");
+119 
+120 
+121 }
+.fi
+.SS "jaco::JacoArm::~JacoArm ()"
+
+.PP
+.nf
+125 {
+126 }
+.fi
+.SH "Member Function Documentation"
+.PP 
+.SS "void jaco::JacoArm::cartesianVelocityCallback (const geometry_msgs::TwistStampedConstPtr & cartesian_vel)"
+
+.PP
+.nf
+238 {
+239     if (!jaco_comm_\&.isStopped())
+240     {
+241         cartesian_velocities_\&.X = cartesian_vel->twist\&.linear\&.x;
+242         cartesian_velocities_\&.Y = cartesian_vel->twist\&.linear\&.y;
+243         cartesian_velocities_\&.Z = cartesian_vel->twist\&.linear\&.z;
+244         cartesian_velocities_\&.ThetaX = cartesian_vel->twist\&.angular\&.x;
+245         cartesian_velocities_\&.ThetaY = cartesian_vel->twist\&.angular\&.y;
+246         cartesian_velocities_\&.ThetaZ = cartesian_vel->twist\&.angular\&.z;
+247 
+248         last_cartesian_vel_cmd_time_ = ros::Time()\&.now();
+249 
+250         if (cartesian_vel_timer_flag_ == false)
+251         {
+252             cartesian_vel_timer_\&.start();
+253             cartesian_vel_timer_flag_ = true;
+254         }
+255     }
+256 }
+.fi
+.SS "void jaco::JacoArm::cartesianVelocityTimer (const ros::TimerEvent &)\fC [private]\fP"
+
+.PP
+.nf
+260 {
+261     double elapsed_time_seconds = ros::Time()\&.now()\&.toSec() - last_cartesian_vel_cmd_time_\&.toSec();
+262 
+263     if (elapsed_time_seconds > cartesian_vel_timeout_seconds_)
+264     {
+265         ROS_DEBUG("Cartesian vel timed out: %f", elapsed_time_seconds);
+266         cartesian_vel_timer_\&.stop();
+267         cartesian_vel_timer_flag_ = false;
+268     }
+269     else
+270     {
+271         ROS_DEBUG("Cart vel timer (%f): %f, %f, %f, %f, %f, %f", elapsed_time_seconds,
+272                   cartesian_velocities_\&.X, cartesian_velocities_\&.Y, cartesian_velocities_\&.Z,
+273                   cartesian_velocities_\&.ThetaX, cartesian_velocities_\&.ThetaY, cartesian_velocities_\&.ThetaZ);
+274         jaco_comm_\&.setCartesianVelocities(cartesian_velocities_);
+275     }
+276 }
+.fi
+.SS "bool jaco::JacoArm::homeArmServiceCallback (\fBjaco_msgs::HomeArm::Request\fP & req, \fBjaco_msgs::HomeArm::Response\fP & res)"
+
+.PP
+.nf
+130 {
+131     jaco_comm_\&.homeArm();
+132     jaco_comm_\&.initFingers();
+133     res\&.homearm_result = "JACO ARM HAS BEEN RETURNED HOME";
+134     return true;
+135 }
+.fi
+.SS "void jaco::JacoArm::jointVelocityCallback (const \fBjaco_msgs::JointVelocityConstPtr\fP & joint_vel)"
+
+.PP
+.nf
+139 {
+140     if (!jaco_comm_\&.isStopped())
+141     {
+142         joint_velocities_\&.Actuator1 = joint_vel->joint1;
+143         joint_velocities_\&.Actuator2 = joint_vel->joint2;
+144         joint_velocities_\&.Actuator3 = joint_vel->joint3;
+145         joint_velocities_\&.Actuator4 = joint_vel->joint4;
+146         joint_velocities_\&.Actuator5 = joint_vel->joint5;
+147         joint_velocities_\&.Actuator6 = joint_vel->joint6;
+148         last_joint_vel_cmd_time_ = ros::Time()\&.now();
+149 
+150         if (joint_vel_timer_flag_ == false)
+151         {
+152             joint_vel_timer_\&.start();
+153             joint_vel_timer_flag_ = true;
+154         }
+155     }
+156 }
+.fi
+.SS "void jaco::JacoArm::jointVelocityTimer (const ros::TimerEvent &)\fC [private]\fP"
+
+.PP
+.nf
+280 {
+281     double elapsed_time_seconds = ros::Time()\&.now()\&.toSec() - last_joint_vel_cmd_time_\&.toSec();
+282 
+283     if (elapsed_time_seconds > joint_vel_timeout_seconds_)
+284     {
+285         ROS_DEBUG("Joint vel timed out: %f", elapsed_time_seconds);
+286         joint_vel_timer_\&.stop();
+287         joint_vel_timer_flag_ = false;
+288     }
+289     else
+290     {
+291         ROS_DEBUG("Joint vel timer (%f): %f, %f, %f, %f, %f, %f", elapsed_time_seconds,
+292                   joint_velocities_\&.Actuator1, joint_velocities_\&.Actuator2, joint_velocities_\&.Actuator3,
+293                   joint_velocities_\&.Actuator4, joint_velocities_\&.Actuator5, joint_velocities_\&.Actuator6);
+294         jaco_comm_\&.setJointVelocities(joint_velocities_);
+295     }
+296 }
+.fi
+.SS "void jaco::JacoArm::positionTimer (const ros::TimerEvent &)\fC [private]\fP"
+
+.SS "void jaco::JacoArm::publishFingerPosition (void)\fC [private]\fP"
+
+.PP
+Publishes the current finger positions\&. 
+.PP
+.nf
+448 {
+449     FingerAngles fingers;
+450     jaco_comm_\&.getFingerPositions(fingers);
+451     finger_position_publisher_\&.publish(fingers\&.constructFingersMsg());
+452 }
+.fi
+.SS "void jaco::JacoArm::publishJointAngles (void)\fC [private]\fP"
+
+.PP
+Publishes the current joint angles\&. Joint angles are published in both their raw state as obtained from the arm (JointAngles), and transformed & converted to radians (joint_state) as per the Jaco Kinematics PDF\&.
+.PP
+Velocities and torques (effort) are only published in the JointStates message, only for the first 6 joints as these values are not available for the fingers\&. 
+.PP
+.nf
+311 {
+312     FingerAngles fingers;
+313     jaco_comm_\&.getFingerPositions(fingers);
+314 
+315     // Query arm for current joint angles
+316     JacoAngles current_angles;
+317     jaco_comm_\&.getJointAngles(current_angles);
+318     jaco_msgs::JointAngles jaco_angles = current_angles\&.constructAnglesMsg();
+319 
+320     jaco_angles\&.joint1 = current_angles\&.Actuator1;
+321     jaco_angles\&.joint2 = current_angles\&.Actuator2;
+322     jaco_angles\&.joint3 = current_angles\&.Actuator3;
+323     jaco_angles\&.joint4 = current_angles\&.Actuator4;
+324     jaco_angles\&.joint5 = current_angles\&.Actuator5;
+325     jaco_angles\&.joint6 = current_angles\&.Actuator6;
+326 
+327     sensor_msgs::JointState joint_state;
+328     joint_state\&.name = joint_names_;
+329     joint_state\&.header\&.stamp = ros::Time::now();
+330 
+331     // Transform from Kinova DH algorithm to physical angles in radians, then place into vector array
+332     joint_state\&.position\&.resize(9);
+333 
+334     double j6o = jaco_comm_\&.robotType() == 2 ? 270\&.0 : 260\&.0;
+335     joint_state\&.position[0] = (180- jaco_angles\&.joint1) * (PI / 180);
+336     joint_state\&.position[1] = (jaco_angles\&.joint2 - j6o) * (PI / 180);
+337     joint_state\&.position[2] = (90-jaco_angles\&.joint3) * (PI / 180);
+338     joint_state\&.position[3] = (180-jaco_angles\&.joint4) * (PI / 180);
+339     joint_state\&.position[4] = (180-jaco_angles\&.joint5) * (PI / 180);
+340     joint_state\&.position[5] = (270-jaco_angles\&.joint6) * (PI / 180);
+341     joint_state\&.position[6] = finger_conv_ratio_ * fingers\&.Finger1;
+342     joint_state\&.position[7] = finger_conv_ratio_ * fingers\&.Finger2;
+343     joint_state\&.position[8] = finger_conv_ratio_ * fingers\&.Finger3;
+344 
+345     // Joint velocities
+346     JacoAngles current_vels;
+347     jaco_comm_\&.getJointVelocities(current_vels);
+348     joint_state\&.velocity\&.resize(9);
+349     joint_state\&.velocity[0] = current_vels\&.Actuator1;
+350     joint_state\&.velocity[1] = current_vels\&.Actuator2;
+351     joint_state\&.velocity[2] = current_vels\&.Actuator3;
+352     joint_state\&.velocity[3] = current_vels\&.Actuator4;
+353     joint_state\&.velocity[4] = current_vels\&.Actuator5;
+354     joint_state\&.velocity[5] = current_vels\&.Actuator6;
+355 
+356     ROS_DEBUG_THROTTLE(0\&.1,
+357                        "Raw joint velocities: %f %f %f %f %f %f",
+358                        joint_state\&.velocity[0],
+359                        joint_state\&.velocity[1],
+360                        joint_state\&.velocity[2],
+361                        joint_state\&.velocity[3],
+362                        joint_state\&.velocity[4],
+363                        joint_state\&.velocity[5]);
+364 
+365     if (convert_joint_velocities_) {
+366         convertKinDeg(joint_state\&.velocity);
+367     }
+368 
+369     // No velocity for the fingers:
+370     joint_state\&.velocity[6] = 0\&.0;
+371     joint_state\&.velocity[7] = 0\&.0;
+372     joint_state\&.velocity[8] = 0\&.0;
+373 
+374     // Joint torques (effort)
+375     // NOTE: Currently invalid\&.
+376     JacoAngles joint_tqs;
+377     joint_state\&.effort\&.resize(9);
+378     joint_state\&.effort[0] = joint_tqs\&.Actuator1;
+379     joint_state\&.effort[1] = joint_tqs\&.Actuator2;
+380     joint_state\&.effort[2] = joint_tqs\&.Actuator3;
+381     joint_state\&.effort[3] = joint_tqs\&.Actuator4;
+382     joint_state\&.effort[4] = joint_tqs\&.Actuator5;
+383     joint_state\&.effort[5] = joint_tqs\&.Actuator6;
+384     joint_state\&.effort[6] = 0\&.0;
+385     joint_state\&.effort[7] = 0\&.0;
+386     joint_state\&.effort[8] = 0\&.0;
+387 
+388     ROS_DEBUG_THROTTLE(0\&.1,
+389                        "Raw joint torques: %f %f %f %f %f %f",
+390                        joint_state\&.effort[0],
+391                        joint_state\&.effort[1],
+392                        joint_state\&.effort[2],
+393                        joint_state\&.effort[3],
+394                        joint_state\&.effort[4],
+395                        joint_state\&.effort[5]);
+396 
+397     joint_angles_publisher_\&.publish(jaco_angles);
+398     joint_state_publisher_\&.publish(joint_state);
+399 }
+.fi
+.SS "void jaco::JacoArm::publishToolPosition (void)\fC [private]\fP"
+
+.PP
+Publishes the current cartesian coordinates\&. 
+.PP
+.nf
+406 {
+407     JacoPose pose;
+408     geometry_msgs::PoseStamped current_position;
+409 
+410     jaco_comm_\&.getCartesianPosition(pose);
+411 
+412     current_position\&.pose            = pose\&.constructPoseMsg();
+413     current_position\&.header\&.stamp    = ros::Time::now();
+414     current_position\&.header\&.frame_id = tf_prefix_ + "link_base";
+415 
+416     tool_position_publisher_\&.publish(current_position);
+417 }
+.fi
+.SS "void jaco::JacoArm::publishToolWrench (void)\fC [private]\fP"
+
+.PP
+Publishes the current cartesian forces at the end effector\&. 
+.PP
+.nf
+423 {
+424     JacoPose wrench;
+425     geometry_msgs::WrenchStamped current_wrench;
+426 
+427     jaco_comm_\&.getCartesianForce(wrench);
+428 
+429     current_wrench\&.wrench          = wrench\&.constructWrenchMsg();
+430     current_wrench\&.header\&.stamp    = ros::Time::now();
+431     // TODO: Rotate wrench to fit the end effector frame\&.
+432     // Right now, the orientation of the wrench is in the API's (base) frame\&.
+433     current_wrench\&.header\&.frame_id = tf_prefix_ + "api_origin";
+434 
+435 
+436     // Same conversion issue as with velocities:
+437     if (convert_joint_velocities_) {
+438         convertKinDeg(current_wrench\&.wrench\&.torque);
+439     }
+440 
+441     tool_wrench_publisher_\&.publish(current_wrench);
+442 }
+.fi
+.SS "bool jaco::JacoArm::setForceControlParamsCallback (\fBjaco_msgs::SetForceControlParams::Request\fP & req, \fBjaco_msgs::SetForceControlParams::Response\fP & res)"
+
+.PP
+.nf
+188 {
+189     CartesianInfo inertia, damping, force_min, force_max;
+190     inertia\&.X      = req\&.inertia_linear\&.x;
+191     inertia\&.Y      = req\&.inertia_linear\&.y;
+192     inertia\&.Z      = req\&.inertia_linear\&.z;
+193     inertia\&.ThetaX = req\&.inertia_angular\&.x;
+194     inertia\&.ThetaY = req\&.inertia_angular\&.y;
+195     inertia\&.ThetaZ = req\&.inertia_angular\&.z;
+196     damping\&.X      = req\&.damping_linear\&.x;
+197     damping\&.Y      = req\&.damping_linear\&.y;
+198     damping\&.Z      = req\&.damping_linear\&.z;
+199     damping\&.ThetaX = req\&.damping_angular\&.x;
+200     damping\&.ThetaY = req\&.damping_angular\&.y;
+201     damping\&.ThetaZ = req\&.damping_angular\&.z;
+202 
+203     jaco_comm_\&.setCartesianInertiaDamping(inertia, damping);
+204 
+205     force_min\&.X      = req\&.force_min_linear\&.x;
+206     force_min\&.Y      = req\&.force_min_linear\&.y;
+207     force_min\&.Z      = req\&.force_min_linear\&.z;
+208     force_min\&.ThetaX = req\&.force_min_angular\&.x;
+209     force_min\&.ThetaY = req\&.force_min_angular\&.y;
+210     force_min\&.ThetaZ = req\&.force_min_angular\&.z;
+211     force_max\&.X      = req\&.force_max_linear\&.x;
+212     force_max\&.Y      = req\&.force_max_linear\&.y;
+213     force_max\&.Z      = req\&.force_max_linear\&.z;
+214     force_max\&.ThetaX = req\&.force_max_angular\&.x;
+215     force_max\&.ThetaY = req\&.force_max_angular\&.y;
+216     force_max\&.ThetaZ = req\&.force_max_angular\&.z;
+217 
+218     jaco_comm_\&.setCartesianForceMinMax(force_min, force_max);
+219 
+220     return true;
+221 }
+.fi
+.SS "bool jaco::JacoArm::startForceControlCallback (\fBjaco_msgs::Start::Request\fP & req, \fBjaco_msgs::Start::Response\fP & res)"
+
+.PP
+.nf
+224 {
+225     jaco_comm_\&.startForceControl();
+226     res\&.start_result = "Start force control requested\&.";
+227     return true;
+228 }
+.fi
+.SS "bool jaco::JacoArm::startServiceCallback (\fBjaco_msgs::Start::Request\fP & req, \fBjaco_msgs::Start::Response\fP & res)"
+
+.PP
+Handler for 'start' service\&. Re-enables control of the arm after a stop\&. 
+.PP
+.nf
+180 {
+181     jaco_comm_\&.startAPI();
+182     res\&.start_result = "Arm started";
+183     ROS_DEBUG("Arm start requested");
+184     return true;
+185 }
+.fi
+.SS "void jaco::JacoArm::statusTimer (const ros::TimerEvent &)\fC [private]\fP"
+
+.PP
+.nf
+456 {
+457     publishJointAngles();
+458     publishToolPosition();
+459     publishToolWrench();
+460     publishFingerPosition();
+461 }
+.fi
+.SS "bool jaco::JacoArm::stopForceControlCallback (\fBjaco_msgs::Stop::Request\fP & req, \fBjaco_msgs::Stop::Response\fP & res)"
+
+.PP
+.nf
+231 {
+232     jaco_comm_\&.stopForceControl();
+233     res\&.stop_result = "Stop force control requested\&.";
+234     return true;
+235 }
+.fi
+.SS "bool jaco::JacoArm::stopServiceCallback (\fBjaco_msgs::Stop::Request\fP & req, \fBjaco_msgs::Stop::Response\fP & res)"
+
+.PP
+Handler for 'stop' service\&. Instantly stops the arm and prevents further movement until start service is invoked\&. 
+.PP
+.nf
+166 {
+167     jaco_comm_\&.stopAPI();
+168     res\&.stop_result = "Arm stopped";
+169     ROS_DEBUG("Arm stop requested");
+170     return true;
+171 }
+.fi
+.SH "Member Data Documentation"
+.PP 
+.SS "double jaco::JacoArm::cartesian_vel_interval_seconds_\fC [private]\fP"
+
+.SS "double jaco::JacoArm::cartesian_vel_timeout_seconds_\fC [private]\fP"
+
+.SS "ros::Timer jaco::JacoArm::cartesian_vel_timer_\fC [private]\fP"
+
+.SS "bool jaco::JacoArm::cartesian_vel_timer_flag_\fC [private]\fP"
+
+.SS "\fBCartesianInfo\fP jaco::JacoArm::cartesian_velocities_\fC [private]\fP"
+
+.SS "ros::Subscriber jaco::JacoArm::cartesian_velocity_subscriber_\fC [private]\fP"
+
+.SS "bool jaco::JacoArm::convert_joint_velocities_\fC [private]\fP"
+
+.SS "double jaco::JacoArm::finger_conv_ratio_\fC [private]\fP"
+
+.SS "ros::Publisher jaco::JacoArm::finger_position_publisher_\fC [private]\fP"
+
+.SS "ros::ServiceServer jaco::JacoArm::homing_service_\fC [private]\fP"
+
+.SS "\fBJacoComm\fP& jaco::JacoArm::jaco_comm_\fC [private]\fP"
+
+.SS "ros::Publisher jaco::JacoArm::joint_angles_publisher_\fC [private]\fP"
+
+.SS "std::vector< std::string > jaco::JacoArm::joint_names_\fC [private]\fP"
+
+.SS "ros::Publisher jaco::JacoArm::joint_state_publisher_\fC [private]\fP"
+
+.SS "double jaco::JacoArm::joint_vel_interval_seconds_\fC [private]\fP"
+
+.SS "double jaco::JacoArm::joint_vel_timeout_seconds_\fC [private]\fP"
+
+.SS "ros::Timer jaco::JacoArm::joint_vel_timer_\fC [private]\fP"
+
+.SS "bool jaco::JacoArm::joint_vel_timer_flag_\fC [private]\fP"
+
+.SS "\fBAngularInfo\fP jaco::JacoArm::joint_velocities_\fC [private]\fP"
+
+.SS "ros::Subscriber jaco::JacoArm::joint_velocity_subscriber_\fC [private]\fP"
+
+.SS "ros::Time jaco::JacoArm::last_cartesian_vel_cmd_time_\fC [private]\fP"
+
+.SS "ros::Time jaco::JacoArm::last_joint_vel_cmd_time_\fC [private]\fP"
+
+.SS "ros::NodeHandle jaco::JacoArm::node_handle_\fC [private]\fP"
+
+.SS "ros::ServiceServer jaco::JacoArm::set_force_control_params_service_\fC [private]\fP"
+
+.SS "ros::ServiceServer jaco::JacoArm::start_force_control_service_\fC [private]\fP"
+
+.SS "ros::ServiceServer jaco::JacoArm::start_service_\fC [private]\fP"
+
+.SS "double jaco::JacoArm::status_interval_seconds_\fC [private]\fP"
+
+.SS "ros::Timer jaco::JacoArm::status_timer_\fC [private]\fP"
+
+.SS "ros::ServiceServer jaco::JacoArm::stop_force_control_service_\fC [private]\fP"
+
+.SS "ros::ServiceServer jaco::JacoArm::stop_service_\fC [private]\fP"
+
+.SS "tf::TransformListener jaco::JacoArm::tf_listener_\fC [private]\fP"
+
+.SS "std::string jaco::JacoArm::tf_prefix_\fC [private]\fP"
+
+.SS "ros::Publisher jaco::JacoArm::tool_position_publisher_\fC [private]\fP"
+
+.SS "ros::Publisher jaco::JacoArm::tool_wrench_publisher_\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Kinova-ROS from the source code\&.

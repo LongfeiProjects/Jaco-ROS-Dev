@@ -1,0 +1,6 @@
+<map id="jaco::JacoFingersActionServer" name="jaco::JacoFingersActionServer">
+<area shape="rect" id="node2" href="$d5/d2b/classjaco_1_1JacoComm.html" title="{jaco::JacoComm\n|&#45; api_mutex_\l&#45; is_software_stop_\l&#45; num_fingers_\l&#45; robot_type_\l|+ getCartesianForce()\l+ getCartesianPosition()\l+ getConfig()\l+ getFingerPositions()\l+ getJointAngles()\l+ getJointTorques()\l+ getJointVelocities()\l+ getQuickStatus()\l+ homeArm()\l+ initFingers()\land 22 more...\l}" alt="" coords="7,292,170,560"/>
+<area shape="rect" id="node3" href="$d5/d3c/classjaco_1_1JacoAPI.html" title="{jaco::JacoAPI\n|+ closeAPI\l+ eraseAllTrajectories\l+ getActualTrajectoryInfo\l+ getAngularCurrent\l+ getAngularForce\l+ getAngularPosition\l+ getAngularVelocity\l+ getAPIVersion\l+ getCartesianForce\l+ getCartesianPosition\land 27 more...\l|+ JacoAPI()\l}" alt="" coords="5,5,172,229"/>
+<area shape="rect" id="node4" href="$dd/d28/classjaco_1_1FingerAngles.html" title="{jaco::FingerAngles\n||+ constructFingersMsg()\l+ FingerAngles()\l+ FingerAngles()\l+ FingerAngles()\l+ isCloseToOther()\l}" alt="" coords="195,358,359,494"/>
+<area shape="rect" id="node5" href="$df/d1b/structFingersPosition.html" title="This data structure holds the values of the robot&#39;s fingers. " alt="" coords="221,64,333,171"/>
+</map>

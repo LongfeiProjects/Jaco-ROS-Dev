@@ -1,0 +1,210 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="d1/d02/classjaco__msgs_1_1msg_1_1__FingerPosition_1_1FingerPosition">
+<title>jaco_msgs::msg::_FingerPosition::FingerPosition class Reference</title>
+<para>Inheritance diagram for jaco_msgs::msg::_FingerPosition::FingerPosition</para>
+<para>
+    <figure>
+        <title>Inheritance graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../da/df7/classjaco__msgs_1_1msg_1_1__FingerPosition_1_1FingerPosition__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Collaboration diagram for jaco_msgs::msg::_FingerPosition::FingerPosition</para>
+<para>
+    <figure>
+        <title>Collaboration graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../d2/d0d/classjaco__msgs_1_1msg_1_1__FingerPosition_1_1FingerPosition__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>list __slots__</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>string _full_text</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>bool _has_header</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>string _md5sum</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>list _slot_types</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>string _type</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Public Attributes</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>finger1</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>finger2</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>finger3</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>def <link linkend="d1/d02/classjaco__msgs_1_1msg_1_1__FingerPosition_1_1FingerPosition_1aefef1701d4fe5d7d2c463db912f37350">__init__</link> (
+self , args , kwds )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>def <link linkend="d1/d02/classjaco__msgs_1_1msg_1_1__FingerPosition_1_1FingerPosition_1ac679007cbbc24035110ff952aa71ce9f">deserialize</link> (
+self , str )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>def <link linkend="d1/d02/classjaco__msgs_1_1msg_1_1__FingerPosition_1_1FingerPosition_1a22f4cbf9d8fb5578c157bc5b168acfe0">deserialize_numpy</link> (
+self , str , numpy )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>def <link linkend="d1/d02/classjaco__msgs_1_1msg_1_1__FingerPosition_1_1FingerPosition_1ac25585ac03021af96ad3812d038ed23b">serialize</link> (
+self , buff )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>def <link linkend="d1/d02/classjaco__msgs_1_1msg_1_1__FingerPosition_1_1FingerPosition_1a99a941f632f7b177e47056d9b447473d">serialize_numpy</link> (
+self , buff , numpy )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>def <link linkend="d1/d02/classjaco__msgs_1_1msg_1_1__FingerPosition_1_1FingerPosition_1a98283be4a3cec4807383b51d051fc0c5">_get_types</link> (
+self )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Member Data Documentation</title>
+        </section>
+            <section xml:id="d1/d02/classjaco__msgs_1_1msg_1_1__FingerPosition_1_1FingerPosition_1aefef1701d4fe5d7d2c463db912f37350">
+                <title>def jaco_msgs.msg._FingerPosition.FingerPosition.__init__ (self, args, kwds)</title> <emphasis></emphasis>
+                
+<para><literallayout>Constructor. Any message fields that are implicitly/explicitly
+set to None will be assigned a default value. The recommend
+use is keyword arguments as this is more robust to future message
+changes.  You cannot mix in-order arguments and keyword arguments.
+
+The available fields are:
+   finger1,finger2,finger3
+
+:param args: complete set of field values, in .msg order
+:param kwds: use keyword arguments corresponding to message field names
+to set specific fields.
+</literallayout> </para>
+
+            </section>
+            <section xml:id="d1/d02/classjaco__msgs_1_1msg_1_1__FingerPosition_1_1FingerPosition_1ac679007cbbc24035110ff952aa71ce9f">
+                <title>def jaco_msgs.msg._FingerPosition.FingerPosition.deserialize (self, str)</title> <emphasis></emphasis>
+                
+<para><literallayout>unpack serialized message in str into this message instance
+:param str: byte array of serialized message, ``str``
+</literallayout> </para>
+
+            </section>
+            <section xml:id="d1/d02/classjaco__msgs_1_1msg_1_1__FingerPosition_1_1FingerPosition_1a22f4cbf9d8fb5578c157bc5b168acfe0">
+                <title>def jaco_msgs.msg._FingerPosition.FingerPosition.deserialize_numpy (self, str, numpy)</title> <emphasis></emphasis>
+                
+<para><literallayout>unpack serialized message in str into this message instance using numpy for array types
+:param str: byte array of serialized message, ``str``
+:param numpy: numpy python module
+</literallayout> </para>
+
+            </section>
+            <section xml:id="d1/d02/classjaco__msgs_1_1msg_1_1__FingerPosition_1_1FingerPosition_1ac25585ac03021af96ad3812d038ed23b">
+                <title>def jaco_msgs.msg._FingerPosition.FingerPosition.serialize (self, buff)</title> <emphasis></emphasis>
+                
+<para><literallayout>serialize message into buffer
+:param buff: buffer, ``StringIO``
+</literallayout> </para>
+
+            </section>
+            <section xml:id="d1/d02/classjaco__msgs_1_1msg_1_1__FingerPosition_1_1FingerPosition_1a99a941f632f7b177e47056d9b447473d">
+                <title>def jaco_msgs.msg._FingerPosition.FingerPosition.serialize_numpy (self, buff, numpy)</title> <emphasis></emphasis>
+                
+<para><literallayout>serialize message with numpy array types into buffer
+:param buff: buffer, ``StringIO``
+:param numpy: numpy python module
+</literallayout> </para>
+
+            </section>
+            <section xml:id="d1/d02/classjaco__msgs_1_1msg_1_1__FingerPosition_1_1FingerPosition_1a98283be4a3cec4807383b51d051fc0c5">
+                <title>def jaco_msgs.msg._FingerPosition.FingerPosition._get_types (self)</title> <emphasis></emphasis>
+                
+<para><literallayout>internal API method
+</literallayout> </para>
+
+            </section>
+</section>

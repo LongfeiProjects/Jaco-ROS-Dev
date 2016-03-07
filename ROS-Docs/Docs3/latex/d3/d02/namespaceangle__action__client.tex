@@ -1,0 +1,68 @@
+\hypertarget{namespaceangle__action__client}{}\section{angle\+\_\+action\+\_\+client Namespace Reference}
+\label{namespaceangle__action__client}\index{angle\+\_\+action\+\_\+client@{angle\+\_\+action\+\_\+client}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{namespaceangle__action__client_a536654e415d43c20ff7be40b5b60f4e5}{pose\+\_\+client} ()
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{namespaceangle__action__client_ae4489551abd88fa0cd5250b9db7fd50e}{result} = \hyperlink{namespaceangle__action__client_a536654e415d43c20ff7be40b5b60f4e5}{pose\+\_\+client}()
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{angle\+\_\+action\+\_\+client@{angle\+\_\+action\+\_\+client}!pose\+\_\+client@{pose\+\_\+client}}
+\index{pose\+\_\+client@{pose\+\_\+client}!angle\+\_\+action\+\_\+client@{angle\+\_\+action\+\_\+client}}
+\subsubsection[{\texorpdfstring{pose\+\_\+client()}{pose_client()}}]{\setlength{\rightskip}{0pt plus 5cm}def angle\+\_\+action\+\_\+client.\+pose\+\_\+client (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{namespaceangle__action__client_a536654e415d43c20ff7be40b5b60f4e5}{}\label{namespaceangle__action__client_a536654e415d43c20ff7be40b5b60f4e5}
+
+\begin{DoxyCode}
+13 \textcolor{keyword}{def }\hyperlink{namespaceangle__action__client_a536654e415d43c20ff7be40b5b60f4e5}{pose\_client}():
+14     client = actionlib.SimpleActionClient(\textcolor{stringliteral}{'/jaco/arm\_joint\_angles'}, 
+      \hyperlink{classjaco__msgs_1_1msg_1_1__ArmJointAnglesAction_1_1ArmJointAnglesAction}{jaco\_msgs.msg.ArmJointAnglesAction})
+15 
+16     goal = \hyperlink{classjaco__msgs_1_1msg_1_1__ArmJointAnglesGoal_1_1ArmJointAnglesGoal}{jaco\_msgs.msg.ArmJointAnglesGoal}()
+17 
+18     \textcolor{keywordflow}{if} len(sys.argv) < 7:
+19         goal.angles.joint1 = 1.5285271406173706 
+20         goal.angles.joint2 = -1.3800612688064575
+21         goal.angles.joint3 = -0.1439174860715866
+22         goal.angles.joint4 = 0.15510250627994537
+23         goal.angles.joint5 = 0.6960597634315491
+24         goal.angles.joint6 = 3.3098342418670654
+25 
+26         rospy.logwarn(\textcolor{stringliteral}{"Using test goal: \(\backslash\)n%s"}, goal)
+27     \textcolor{keywordflow}{else}:
+28         goal.angles.joint1 = float(sys.argv[1])
+29         goal.angles.joint2 = float(sys.argv[2])
+30         goal.angles.joint3 = float(sys.argv[3])
+31         goal.angles.joint4 = float(sys.argv[4])
+32         goal.angles.joint5 = float(sys.argv[5])
+33         goal.angles.joint6 = float(sys.argv[6])
+34 
+35 
+36     client.wait\_for\_server()
+37     rospy.loginfo(\textcolor{stringliteral}{"Connected to Pose server"})
+38 
+39     client.send\_goal(goal)
+40 
+41     \textcolor{keywordflow}{try}:
+42         client.wait\_for\_result()
+43     \textcolor{keywordflow}{except} KeyboardInterrupt:
+44         rospy.loginfo(\textcolor{stringliteral}{"Program interrupted, pre-empting goal"})
+45         client.cancel\_all\_goals()
+46 
+47     \textcolor{keywordflow}{return} client.get\_result()
+48 
+\end{DoxyCode}
+
+
+\subsection{Variable Documentation}
+\index{angle\+\_\+action\+\_\+client@{angle\+\_\+action\+\_\+client}!result@{result}}
+\index{result@{result}!angle\+\_\+action\+\_\+client@{angle\+\_\+action\+\_\+client}}
+\subsubsection[{\texorpdfstring{result}{result}}]{\setlength{\rightskip}{0pt plus 5cm}angle\+\_\+action\+\_\+client.\+result = {\bf pose\+\_\+client}()}\hypertarget{namespaceangle__action__client_ae4489551abd88fa0cd5250b9db7fd50e}{}\label{namespaceangle__action__client_ae4489551abd88fa0cd5250b9db7fd50e}

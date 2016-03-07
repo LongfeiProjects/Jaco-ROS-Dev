@@ -1,0 +1,118 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="d0/d98/test__jaco__arm__vel_8cpp">
+    <title>test_jaco_arm_vel.cpp File Reference</title>
+    <programlisting>#include &lt;geometry_msgs/PoseStamped.h&gt;</programlisting>
+    <programlisting>#include &lt;geometry_msgs/TwistStamped.h&gt;</programlisting>
+    <programlisting>#include &lt;tf/tf.h&gt;</programlisting>
+    <programlisting>#include &lt;ros/ros.h&gt;</programlisting>
+    <programlisting>#include &lt;jaco_msgs/cartesian_velocity.h&gt;</programlisting>
+<para>Include dependency diagram for test_jaco_arm_vel.cpp</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../db/dda/test__jaco__arm__vel_8cpp__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Included by dependency diagram for test_jaco_arm_vel.cpp</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../db/df9/test__jaco__arm__vel_8cpp__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+        <section>
+            <title>Variables</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>ros::Publisher <link linkend="d0/d98/test__jaco__arm__vel_8cpp_1a350594df3e8f6948c8462edfd41ce086">pub</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Functions</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="d0/d98/test__jaco__arm__vel_8cpp_1a3c04138a5bfe5d72780bb7e82a18e627">main</link> (
+int argc, char ** argv)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="d0/d98/test__jaco__arm__vel_8cpp_1acaaff023b0d196868429ae4d95cced23">TimerCallback</link> (
+const ros::TimerEvent &amp; )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+    <simplesect>
+        <title>Detailed Description</title>
+    <para>Definition in file D:/Longfei/Desktop/catkin_KinovaROS/src/jaco-ros/jaco_driver/src/testers/test_jaco_arm_vel.cpp</para>
+    </simplesect>
+    <literallayout><computeroutput>
+1 <emphasis class="comment">//============================================================================</emphasis>
+2 <emphasis class="comment">//&#32;Name&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;:&#32;Jaco.cpp</emphasis>
+3 <emphasis class="comment">//&#32;Author&#32;&#32;&#32;&#32;&#32;&#32;:&#32;</emphasis>
+4 <emphasis class="comment">//&#32;Version&#32;&#32;&#32;&#32;&#32;:</emphasis>
+5 <emphasis class="comment">//&#32;Copyright&#32;&#32;&#32;:&#32;Your&#32;copyright&#32;notice</emphasis>
+6 <emphasis class="comment">//&#32;Description&#32;:&#32;Hello&#32;World&#32;in&#32;C++,&#32;Ansi-style</emphasis>
+7 <emphasis class="comment">//============================================================================</emphasis>
+8 
+17 <emphasis class="comment">//License&#32;File</emphasis>
+18 <emphasis class="preprocessor">#include&#32;&lt;geometry_msgs/PoseStamped.h&gt;</emphasis>
+19 <emphasis class="preprocessor">#include&#32;&lt;geometry_msgs/TwistStamped.h&gt;</emphasis>
+20 <emphasis class="preprocessor">#include&#32;&lt;tf/tf.h&gt;</emphasis>
+21 <emphasis class="preprocessor">#include&#32;&lt;ros/ros.h&gt;</emphasis>
+22 <emphasis class="preprocessor">#include&#32;&lt;jaco_msgs/cartesian_velocity.h&gt;</emphasis>
+23 
+24 <emphasis class="keyword">using&#32;namespace&#32;</emphasis><link linkend="d8/dcc/namespacestd">std</link>;
+<link linkend="d0/d98/test__jaco__arm__vel_8cpp_1a350594df3e8f6948c8462edfd41ce086">25 </link>ros::Publisher&#32;<link linkend="d0/d98/test__jaco__arm__vel_8cpp_1a350594df3e8f6948c8462edfd41ce086">pub</link>;
+<link linkend="d0/d98/test__jaco__arm__vel_8cpp_1acaaff023b0d196868429ae4d95cced23">26 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="d0/d98/test__jaco__arm__vel_8cpp_1acaaff023b0d196868429ae4d95cced23">TimerCallback</link>(<emphasis class="keyword">const</emphasis>&#32;ros::TimerEvent&amp;)
+27 {
+28 &#32;&#32;&#32;&#32;jaco_msgs::cartesian_velocity&#32;test_msg;
+29 
+30 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;test_msg.Velocity_X&#32;=&#32;0.0;
+31 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;test_msg.Velocity_Y&#32;=&#32;10;
+32 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;test_msg.Velocity_Z&#32;=&#32;0;
+33 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;test_msg.Velocity_TX&#32;=&#32;0;
+34 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;test_msg.Velocity_TY&#32;=&#32;0;
+35 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;test_msg.Velocity_TZ&#32;=&#32;0;
+36 
+37 
+38 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="d0/d98/test__jaco__arm__vel_8cpp_1a350594df3e8f6948c8462edfd41ce086">pub</link>.publish(test_msg);
+39 
+40 
+41 }
+42 
+<link linkend="d0/d98/test__jaco__arm__vel_8cpp_1a3c04138a5bfe5d72780bb7e82a18e627">43 </link><emphasis class="keywordtype">int</emphasis>&#32;<link linkend="d0/d98/test__jaco__arm__vel_8cpp_1a3c04138a5bfe5d72780bb7e82a18e627">main</link>(<emphasis class="keywordtype">int</emphasis>&#32;argc,&#32;<emphasis class="keywordtype">char</emphasis>&#32;**argv)&#32;{
+44 
+45 &#32;&#32;&#32;&#32;<emphasis class="comment">/*&#32;Set&#32;up&#32;ROS&#32;*/</emphasis>
+46 &#32;&#32;&#32;&#32;ros::init(argc,&#32;argv,&#32;<emphasis class="stringliteral">&quot;test_jaco_arm_vel&quot;</emphasis>);
+47 &#32;&#32;&#32;&#32;ros::NodeHandle&#32;nh;
+48 &#32;&#32;&#32;&#32;ros::NodeHandle&#32;param_nh(<emphasis class="stringliteral">&quot;~&quot;</emphasis>);
+49 
+50 &#32;&#32;&#32;&#32;std::string&#32;<link linkend="d7/dba/namespacejaco__msgs_1a3885bcb43e15bd44e269141fd88ae604">JointVelocity</link>(<emphasis class="stringliteral">&quot;CartesianVelocity&quot;</emphasis>);&#32;
+51 
+52 &#32;&#32;&#32;&#32;&#32;<link linkend="d0/d98/test__jaco__arm__vel_8cpp_1a350594df3e8f6948c8462edfd41ce086">pub</link>&#32;=&#32;nh.advertise&lt;jaco_msgs::cartesian_velocity&gt;(<link linkend="d7/dba/namespacejaco__msgs_1a3885bcb43e15bd44e269141fd88ae604">JointVelocity</link>,
+53 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;2);
+54 
+55 &#32;&#32;&#32;&#32;ros::Timer&#32;timer&#32;=&#32;nh.createTimer(ros::Duration(0.01),<link linkend="d0/d98/test__jaco__arm__vel_8cpp_1acaaff023b0d196868429ae4d95cced23">TimerCallback</link>);
+56 
+57 
+58 &#32;&#32;&#32;&#32;ros::spin();
+59 }
+60 
+    </computeroutput></literallayout>
+</section>

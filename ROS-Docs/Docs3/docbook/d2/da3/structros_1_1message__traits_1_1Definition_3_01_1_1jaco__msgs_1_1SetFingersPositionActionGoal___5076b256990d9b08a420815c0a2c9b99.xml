@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="d2/da3/structros_1_1message__traits_1_1Definition_3_01_1_1jaco__msgs_1_1SetFingersPositionActionGoal___5076b256990d9b08a420815c0a2c9b99">
+<title>ros::message_traits::Definition&lt; ::jaco_msgs::SetFingersPositionActionGoal_&lt; ContainerAllocator &gt; &gt; struct Reference</title>
+<para>
+    <programlisting>#include <link linkend="d4/d0d/SetFingersPositionActionGoal_8h">&quot;SetFingersPositionActionGoal.h&quot;</link></programlisting>
+</para>
+<para>Inheritance diagram for ros::message_traits::Definition&lt; ::jaco_msgs::SetFingersPositionActionGoal_&lt; ContainerAllocator &gt; &gt;</para>
+<para>
+    <figure>
+        <title>Inheritance graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../d3/dee/structros_1_1message__traits_1_1Definition_3_01_1_1jaco__msgs_1_1SetFingersPositionActionGoal___8c758928afb489945bbcf493cff1eaa3.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Collaboration diagram for ros::message_traits::Definition&lt; ::jaco_msgs::SetFingersPositionActionGoal_&lt; ContainerAllocator &gt; &gt;</para>
+<para>
+    <figure>
+        <title>Collaboration graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../d5/d0b/structros_1_1message__traits_1_1Definition_3_01_1_1jaco__msgs_1_1SetFingersPositionActionGoal___ef1fdd4475179f80fff9057c4ba7299a.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+    <templateparamlist>
+      <param>
+        <type>class ContainerAllocator</type>
+      </param>
+    </templateparamlist>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static const char * <link linkend="d2/da3/structros_1_1message__traits_1_1Definition_3_01_1_1jaco__msgs_1_1SetFingersPositionActionGoal___5076b256990d9b08a420815c0a2c9b99_1adb59926ddd2c4db8857dd25d65d9e349">value</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static const char * <link linkend="d2/da3/structros_1_1message__traits_1_1Definition_3_01_1_1jaco__msgs_1_1SetFingersPositionActionGoal___5076b256990d9b08a420815c0a2c9b99_1a6279fce4e8c9e98ac3417bff9d7ead2a">value</link> (
+const ::<link linkend="d1/ded/structjaco__msgs_1_1SetFingersPositionActionGoal__">jaco_msgs::SetFingersPositionActionGoal_</link>&lt; ContainerAllocator &gt; &amp; )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+            <section xml:id="d2/da3/structros_1_1message__traits_1_1Definition_3_01_1_1jaco__msgs_1_1SetFingersPositionActionGoal___5076b256990d9b08a420815c0a2c9b99_1adb59926ddd2c4db8857dd25d65d9e349">
+                <title>static const char* ros::message_traits::Definition&lt; ::jaco_msgs::SetFingersPositionActionGoal_&lt; ContainerAllocator &gt; &gt;::value ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="d2/da3/structros_1_1message__traits_1_1Definition_3_01_1_1jaco__msgs_1_1SetFingersPositionActionGoal___5076b256990d9b08a420815c0a2c9b99_1a6279fce4e8c9e98ac3417bff9d7ead2a">
+                <title>static const char* ros::message_traits::Definition&lt; ::jaco_msgs::SetFingersPositionActionGoal_&lt; ContainerAllocator &gt; &gt;::value (const ::jaco_msgs::SetFingersPositionActionGoal_&lt; ContainerAllocator &gt; &amp;)</title> <emphasis></emphasis>
+                
+            </section>
+</section>

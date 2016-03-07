@@ -1,0 +1,5 @@
+<map id="ControlMapping" name="ControlMapping">
+<area shape="rect" id="node2" href="$df/d36/KinovaTypes_8h.html#dc/d71/structControlsModeMap" title="Represents one mode map of a control mapping. Each control mapping has 2 list of mode map..." alt="" coords="60,233,193,325"/>
+<area shape="rect" id="node3" href="$df/d36/KinovaTypes_8h.html#d1/d5a/structButtonEvents" title="This is an event from a controller&#39;s button. Each variable of the struct can be mapped with a Control..." alt="" coords="5,5,120,171"/>
+<area shape="rect" id="node4" href="$df/d36/KinovaTypes_8h.html#de/da6/structStickEvents" title="This is an event from a controller&#39;s stick. Each variable of the struct can be mapped with a ControlF..." alt="" coords="147,42,237,134"/>
+</map>

@@ -1,0 +1,952 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h">
+    <title>Kinova.API.UsbCommandLayerUbuntu.h File Reference</title>
+    <programlisting>#include &lt;vector&gt;</programlisting>
+    <programlisting>#include &quot;KinovaTypes.h&quot;</programlisting>
+    <programlisting>#include &quot;Kinova.API.CommLayerUbuntu.h&quot;</programlisting>
+    <programlisting>#include &lt;stdio.h&gt;</programlisting>
+<para>Include dependency diagram for Kinova.API.UsbCommandLayerUbuntu.h</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../de/dbc/Kinova_8API_8UsbCommandLayerUbuntu_8h__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Included by dependency diagram for Kinova.API.UsbCommandLayerUbuntu.h</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../d8/db1/Kinova_8API_8UsbCommandLayerUbuntu_8h__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+        <section>
+            <title>Macros</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1a12c8325343efa4c6e8ae136a72254878">COMM_LAYER_PATH</link> &quot;Kinova.API.CommLayerUbuntu.so&quot;</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1aaeb890c653dc6657b1238afe3ce1a0f9">COMMAND_LAYER_VERSION</link> 50101</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1a0eb31c1b663a821f8dc3a8bfabb66c68">ERROR_API_NOT_INITIALIZED</link> 2101</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1a890a3525205b751506feb93582863fea">ERROR_CLOSE_METHOD</link> 2007</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1a26d8ccb476c581bf24eaccd200530a91">ERROR_GET_DEVICE_COUNT_METHOD</link> 2008</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1a50e55249141822b3841afc7bdfdc9a7e">ERROR_GET_DEVICES_LIST_METHOD</link> 2011</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1ad9c707fcd3b8b900a267bb3112251768">ERROR_INIT_API</link> 2001</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1a33306e3b3c61996ac84a24cfd8a8ae95">ERROR_INIT_COMM_METHOD</link> 2006</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1a46991f9bc9447e7029136ea73ce8d373">ERROR_INVALID_PARAM</link> 2100</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1a695917dd27731b8875a1ccf2cb370b61">ERROR_LOAD_COMM_DLL</link> 2002</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1a8c5b24069ba1427e15a2a2dcbe004ba4">ERROR_SEMAPHORE_FAILED</link> 2012</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1afc952da53a52165715ceb34aea197e34">ERROR_SEND_PACKET_METHOD</link> 2009</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1a241fc8c34c641a3fbdfc9a0298dcf757">ERROR_SET_ACTIVE_DEVICE_METHOD</link> 2010</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1a50277f315c115b1fc66870c649ea526b">JACO_COMM_FAILED</link> 2004</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1aaf06cf2cdd21e707734113d20e0a167c">JACO_NACK_FIRST</link> 2003</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1afe14542a6cbdafc59256248a7305fb00">JACO_NACK_NORMAL</link> 2005</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1a31327a2439c3f77d7d3774e7d49710de">KINOVA_</link> 1</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1abe06f11f1aa8abc575ebd4474e559d25">KINOVAAPIUSBCOMMANDLAYER_API</link> <link linkend="db/dfe/Kinova_8API_8CommLayerUbuntu_8h_1a1d3678de7e45bc92e4c8ee7ece40c833">__attribute__</link> ((visibility (&quot;default&quot;)))</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1aa90cac659d18e8ef6294c7ae337f6b58">SUCCESS</link> 1</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Functions</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1abe06f11f1aa8abc575ebd4474e559d25">KINOVAAPIUSBCOMMANDLAYER_API</link> int <link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1aeb08aa5439be6a60a197a01f3aae8e1e">ClearErrorLog</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1abe06f11f1aa8abc575ebd4474e559d25">KINOVAAPIUSBCOMMANDLAYER_API</link> int <link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1a8c68cfab1fd05edea45717967cd35170">CloseAPI</link> (
+void )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1abe06f11f1aa8abc575ebd4474e559d25">KINOVAAPIUSBCOMMANDLAYER_API</link> int <link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1a47f39fdf7e52e914e979d822c9209366">EraseAllProtectionZones</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1abe06f11f1aa8abc575ebd4474e559d25">KINOVAAPIUSBCOMMANDLAYER_API</link> int <link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1a408913e7a3a1ba879f4575320bfeda14">EraseAllTrajectories</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1abe06f11f1aa8abc575ebd4474e559d25">KINOVAAPIUSBCOMMANDLAYER_API</link> int <link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1a7e00e6d93a9d897037cfa627507647ef">GetActualTrajectoryInfo</link> (
+<link linkend="d4/d8e/structTrajectoryPoint">TrajectoryPoint</link> &amp; Response)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1abe06f11f1aa8abc575ebd4474e559d25">KINOVAAPIUSBCOMMANDLAYER_API</link> int <link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1abf41a716f69e403c4585a0b6ba4a50e8">GetActuatorAcceleration</link> (
+<link linkend="dd/d18/structAngularAcceleration">AngularAcceleration</link> &amp; Response)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1abe06f11f1aa8abc575ebd4474e559d25">KINOVAAPIUSBCOMMANDLAYER_API</link> int <link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1a5c289720f8a7af28a84e7dec66211f33">GetAngularCommand</link> (
+<link linkend="df/d36/KinovaTypes_8h_1de/de7/structAngularPosition">AngularPosition</link> &amp; Response)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1abe06f11f1aa8abc575ebd4474e559d25">KINOVAAPIUSBCOMMANDLAYER_API</link> int <link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1ad9a6f5444a8fa6df2cc324e54118f54f">GetAngularCurrent</link> (
+<link linkend="df/d36/KinovaTypes_8h_1de/de7/structAngularPosition">AngularPosition</link> &amp; Response)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1abe06f11f1aa8abc575ebd4474e559d25">KINOVAAPIUSBCOMMANDLAYER_API</link> int <link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1afd4e6c87647569b8cf24a2678dc9ef25">GetAngularCurrentMotor</link> (
+<link linkend="df/d36/KinovaTypes_8h_1de/de7/structAngularPosition">AngularPosition</link> &amp; Response)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1abe06f11f1aa8abc575ebd4474e559d25">KINOVAAPIUSBCOMMANDLAYER_API</link> int <link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1a7ae41c6db88958582f8598f71f664c89">GetAngularForce</link> (
+<link linkend="df/d36/KinovaTypes_8h_1de/de7/structAngularPosition">AngularPosition</link> &amp; Response)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1abe06f11f1aa8abc575ebd4474e559d25">KINOVAAPIUSBCOMMANDLAYER_API</link> int <link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1a26652852e510b5d4048da7818cc2e143">GetAngularForceGravityFree</link> (
+<link linkend="df/d36/KinovaTypes_8h_1de/de7/structAngularPosition">AngularPosition</link> &amp; Response)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1abe06f11f1aa8abc575ebd4474e559d25">KINOVAAPIUSBCOMMANDLAYER_API</link> int <link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1a58ef9ea1c1ae0bc3905d9f72faee18dc">GetAngularPosition</link> (
+<link linkend="df/d36/KinovaTypes_8h_1de/de7/structAngularPosition">AngularPosition</link> &amp; Response)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1abe06f11f1aa8abc575ebd4474e559d25">KINOVAAPIUSBCOMMANDLAYER_API</link> int <link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1ad85d567f13629d5a8a20604c0c97ae22">GetAngularVelocity</link> (
+<link linkend="df/d36/KinovaTypes_8h_1de/de7/structAngularPosition">AngularPosition</link> &amp; Response)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1abe06f11f1aa8abc575ebd4474e559d25">KINOVAAPIUSBCOMMANDLAYER_API</link> int <link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1ac1c28038b14ca7d6af85387b0af343d2">GetAPIVersion</link> (
+std::vector&lt; int &gt; &amp; Response)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1abe06f11f1aa8abc575ebd4474e559d25">KINOVAAPIUSBCOMMANDLAYER_API</link> int <link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1aa112acb5e0a9d6657616377a90d1d3b1">GetCartesianCommand</link> (
+<link linkend="d4/d67/structCartesianPosition">CartesianPosition</link> &amp; Response)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1abe06f11f1aa8abc575ebd4474e559d25">KINOVAAPIUSBCOMMANDLAYER_API</link> int <link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1ae9ed9be44d89f54aa3c268186be4e4f4">GetCartesianForce</link> (
+<link linkend="d4/d67/structCartesianPosition">CartesianPosition</link> &amp; Response)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1abe06f11f1aa8abc575ebd4474e559d25">KINOVAAPIUSBCOMMANDLAYER_API</link> int <link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1a6be8b4e54409ac8fa2c890f1e1e8e0a1">GetCartesianPosition</link> (
+<link linkend="d4/d67/structCartesianPosition">CartesianPosition</link> &amp; Response)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1abe06f11f1aa8abc575ebd4474e559d25">KINOVAAPIUSBCOMMANDLAYER_API</link> int <link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1aadfff8ea657c2e2e16510b3f3b886468">GetClientConfigurations</link> (
+<link linkend="df/d36/KinovaTypes_8h_1d1/d2e/structClientConfigurations">ClientConfigurations</link> &amp; config)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1abe06f11f1aa8abc575ebd4474e559d25">KINOVAAPIUSBCOMMANDLAYER_API</link> int <link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1a60bd2b839aca973c134a7de0b988f164">GetCodeVersion</link> (
+std::vector&lt; int &gt; &amp; Response)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1abe06f11f1aa8abc575ebd4474e559d25">KINOVAAPIUSBCOMMANDLAYER_API</link> int <link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1a40ae13976ddf7d5a88d43999387e4ca0">GetControlMapping</link> (
+<link linkend="df/d36/KinovaTypes_8h_1d4/d71/structControlMappingCharts">ControlMappingCharts</link> &amp; Response)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1abe06f11f1aa8abc575ebd4474e559d25">KINOVAAPIUSBCOMMANDLAYER_API</link> int <link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1a406331a1b6df3d0f3b3b8fecbc51d5b8">GetControlType</link> (
+int &amp; Response)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1abe06f11f1aa8abc575ebd4474e559d25">KINOVAAPIUSBCOMMANDLAYER_API</link> int <link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1a5814f5c47fb3f439269f12c310f287a4">GetDevices</link> (
+std::vector&lt; <link linkend="db/dfe/Kinova_8API_8CommLayerUbuntu_8h_1da/dd6/structKinovaDevice">KinovaDevice</link> &gt; &amp; devices, int &amp; result)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1abe06f11f1aa8abc575ebd4474e559d25">KINOVAAPIUSBCOMMANDLAYER_API</link> int <link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1a960b173a33b5c9179859e76b98476278">GetDevValue</link> (
+std::vector&lt; float &gt; &amp; Response)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1abe06f11f1aa8abc575ebd4474e559d25">KINOVAAPIUSBCOMMANDLAYER_API</link> int <link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1a763871c1e32b0a08bba0e9c550de3a8e">GetForcesInfo</link> (
+<link linkend="df/d36/KinovaTypes_8h_1d7/dff/structForcesInfo">ForcesInfo</link> &amp; Response)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1abe06f11f1aa8abc575ebd4474e559d25">KINOVAAPIUSBCOMMANDLAYER_API</link> int <link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1ab7d8661a7309e8cb4df1aa17b658169b">GetGeneralInformations</link> (
+<link linkend="df/d36/KinovaTypes_8h_1d2/d0f/structGeneralInformations">GeneralInformations</link> &amp; Response)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1abe06f11f1aa8abc575ebd4474e559d25">KINOVAAPIUSBCOMMANDLAYER_API</link> int <link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1a28d5f53daeda2497dbceeb5e8ed635eb">GetGlobalTrajectoryInfo</link> (
+<link linkend="df/d36/KinovaTypes_8h_1d7/ddf/structTrajectoryFIFO">TrajectoryFIFO</link> &amp; Response)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1abe06f11f1aa8abc575ebd4474e559d25">KINOVAAPIUSBCOMMANDLAYER_API</link> int <link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1a94382130b0796558826d6044e5249c09">GetGripperStatus</link> (
+<link linkend="df/d36/KinovaTypes_8h_1d8/d2c/structGripper">Gripper</link> &amp; Response)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1abe06f11f1aa8abc575ebd4474e559d25">KINOVAAPIUSBCOMMANDLAYER_API</link> int <link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1a1fb82d6b0d534dd3b2acbd4f9a82e815">GetPeripheralInventory</link> (
+std::vector&lt; <link linkend="df/d36/KinovaTypes_8h_1d3/d19/structPeripheralInfo">PeripheralInfo</link> &gt; &amp; )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1abe06f11f1aa8abc575ebd4474e559d25">KINOVAAPIUSBCOMMANDLAYER_API</link> int <link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1a157b0c582c67825d220cb0e7464a298c">GetPositionCurrentActuators</link> (
+std::vector&lt; float &gt; &amp; Response)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1abe06f11f1aa8abc575ebd4474e559d25">KINOVAAPIUSBCOMMANDLAYER_API</link> int <link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1af6845bf7d390ade74b68c7c7e7d74139">GetProtectionZone</link> (
+<link linkend="df/d36/KinovaTypes_8h_1dd/d29/structZoneList">ZoneList</link> &amp; Response)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1abe06f11f1aa8abc575ebd4474e559d25">KINOVAAPIUSBCOMMANDLAYER_API</link> int <link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1af7bd69e27ac64fe2b6117442a285cd53">GetQuickStatus</link> (
+<link linkend="df/d36/KinovaTypes_8h_1df/d9d/structQuickStatus">QuickStatus</link> &amp; Response)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1abe06f11f1aa8abc575ebd4474e559d25">KINOVAAPIUSBCOMMANDLAYER_API</link> int <link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1a467668c1ccb6eea2d89521c8cbe94ebf">GetSensorsInfo</link> (
+<link linkend="d7/d40/structSensorsInfo">SensorsInfo</link> &amp; Response)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1abe06f11f1aa8abc575ebd4474e559d25">KINOVAAPIUSBCOMMANDLAYER_API</link> int <link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1ae50cc84dceabf5404c62c30e39ae6df4">GetSingularityVector</link> (
+<link linkend="df/d36/KinovaTypes_8h_1d5/d78/structSingularityVector">SingularityVector</link> &amp; Response)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1abe06f11f1aa8abc575ebd4474e559d25">KINOVAAPIUSBCOMMANDLAYER_API</link> int <link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1a3cf1188af06395c8ff8ec00d32e5ae1a">GetSpasmFilterValues</link> (
+std::vector&lt; float &gt; &amp; Response, int &amp; activationStatus)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1abe06f11f1aa8abc575ebd4474e559d25">KINOVAAPIUSBCOMMANDLAYER_API</link> int <link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1a02072cf8aba4054cf63631615a256b3a">GetSystemError</link> (
+unsigned int indexError, <link linkend="df/d36/KinovaTypes_8h_1d0/de3/structSystemError">SystemError</link> &amp; Response)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1abe06f11f1aa8abc575ebd4474e559d25">KINOVAAPIUSBCOMMANDLAYER_API</link> int <link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1a4f5f1d1c45a10e3b2ed2461ad127c7db">GetSystemErrorCount</link> (
+unsigned int &amp; Response)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1abe06f11f1aa8abc575ebd4474e559d25">KINOVAAPIUSBCOMMANDLAYER_API</link> int <link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1ab1e7523fba35c20a8569e99bcdf63a5e">InitAPI</link> (
+void )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1abe06f11f1aa8abc575ebd4474e559d25">KINOVAAPIUSBCOMMANDLAYER_API</link> int <link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1a9898b3a0c07aa2844ab9d2dee7e21f18">InitFingers</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1abe06f11f1aa8abc575ebd4474e559d25">KINOVAAPIUSBCOMMANDLAYER_API</link> int <link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1a3e2040173821c0a1f86713f04bd03cea">MoveHome</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1abe06f11f1aa8abc575ebd4474e559d25">KINOVAAPIUSBCOMMANDLAYER_API</link> int <link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1a7428b825bdc649a02cb39a5002f96228">ProgramFlash</link> (
+char * filename)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1abe06f11f1aa8abc575ebd4474e559d25">KINOVAAPIUSBCOMMANDLAYER_API</link> int <link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1a316a307f9da5315ea0af6bf9ea153eb5">RestoreFactoryDefault</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1abe06f11f1aa8abc575ebd4474e559d25">KINOVAAPIUSBCOMMANDLAYER_API</link> int <link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1ac802915b7390eb6ffd8e1206b52f557f">SendAdvanceTrajectory</link> (
+<link linkend="d4/d8e/structTrajectoryPoint">TrajectoryPoint</link> trajectory)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1abe06f11f1aa8abc575ebd4474e559d25">KINOVAAPIUSBCOMMANDLAYER_API</link> int <link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1a9f21d4375c78210dea0d33316e23fcb8">SendBasicTrajectory</link> (
+<link linkend="d4/d8e/structTrajectoryPoint">TrajectoryPoint</link> trajectory)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1abe06f11f1aa8abc575ebd4474e559d25">KINOVAAPIUSBCOMMANDLAYER_API</link> int <link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1ab52677c163193c4f160981a7503ec79a">SendJoystickCommand</link> (
+<link linkend="db/d40/structJoystickCommand">JoystickCommand</link> joystickCommand)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1abe06f11f1aa8abc575ebd4474e559d25">KINOVAAPIUSBCOMMANDLAYER_API</link> int <link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1a4506116c4053d8c12c13d6ef974699c2">SetActiveDevice</link> (
+<link linkend="db/dfe/Kinova_8API_8CommLayerUbuntu_8h_1da/dd6/structKinovaDevice">KinovaDevice</link> device)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1abe06f11f1aa8abc575ebd4474e559d25">KINOVAAPIUSBCOMMANDLAYER_API</link> int <link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1a5366b9fa9d7c3bb00118a1cb8caf470e">SetActuatorAddress</link> (
+int ActuatorAdress, int newAddress)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1abe06f11f1aa8abc575ebd4474e559d25">KINOVAAPIUSBCOMMANDLAYER_API</link> int <link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1a5ac8a37b983294d15f6cccb7a6f1a414">SetActuatorPID</link> (
+unsigned int address, float P, float I, float D)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1abe06f11f1aa8abc575ebd4474e559d25">KINOVAAPIUSBCOMMANDLAYER_API</link> int <link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1a4201734c8a9fefbf14d78f03195d7b71">SetActuatorPIDFilter</link> (
+int ActuatorAdress, float filterP, float filterI, float filterD)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1abe06f11f1aa8abc575ebd4474e559d25">KINOVAAPIUSBCOMMANDLAYER_API</link> int <link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1a2a3d8fbff1add975bfff283ac3b8a3c6">SetAngularControl</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1abe06f11f1aa8abc575ebd4474e559d25">KINOVAAPIUSBCOMMANDLAYER_API</link> int <link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1a8a1de40ded42bb1c9ad599218506a7ba">SetAngularInertiaDamping</link> (
+<link linkend="d0/df5/structAngularInfo">AngularInfo</link> inertia, <link linkend="d0/df5/structAngularInfo">AngularInfo</link> damping)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1abe06f11f1aa8abc575ebd4474e559d25">KINOVAAPIUSBCOMMANDLAYER_API</link> int <link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1a28c19286fba497565c34d2a45e29372d">SetAngularTorqueMinMax</link> (
+<link linkend="d0/df5/structAngularInfo">AngularInfo</link> min, <link linkend="d0/df5/structAngularInfo">AngularInfo</link> max)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1abe06f11f1aa8abc575ebd4474e559d25">KINOVAAPIUSBCOMMANDLAYER_API</link> int <link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1a9396131c243aa476db3e7a26b797e076">SetCartesianControl</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1abe06f11f1aa8abc575ebd4474e559d25">KINOVAAPIUSBCOMMANDLAYER_API</link> int <link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1afdf4f71175b5208063a002818201ea76">SetCartesianForceMinMax</link> (
+<link linkend="dd/d00/structCartesianInfo">CartesianInfo</link> min, <link linkend="dd/d00/structCartesianInfo">CartesianInfo</link> max)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1abe06f11f1aa8abc575ebd4474e559d25">KINOVAAPIUSBCOMMANDLAYER_API</link> int <link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1a6ad9b3474de09442a05f336cb7df7973">SetCartesianInertiaDamping</link> (
+<link linkend="dd/d00/structCartesianInfo">CartesianInfo</link> inertia, <link linkend="dd/d00/structCartesianInfo">CartesianInfo</link> damping)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1abe06f11f1aa8abc575ebd4474e559d25">KINOVAAPIUSBCOMMANDLAYER_API</link> int <link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1aaaf906c81f0dbdc53101d61c7838eae8">SetClientConfigurations</link> (
+<link linkend="df/d36/KinovaTypes_8h_1d1/d2e/structClientConfigurations">ClientConfigurations</link> config)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1abe06f11f1aa8abc575ebd4474e559d25">KINOVAAPIUSBCOMMANDLAYER_API</link> int <link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1a01a084c40c33a629ee44b5fac0ca40fb">SetControlMapping</link> (
+<link linkend="df/d36/KinovaTypes_8h_1d4/d71/structControlMappingCharts">ControlMappingCharts</link> Command)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1abe06f11f1aa8abc575ebd4474e559d25">KINOVAAPIUSBCOMMANDLAYER_API</link> int <link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1a6340417b9bf8f549e249278fc6d33d00">SetDevValue</link> (
+std::vector&lt; float &gt; command)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1abe06f11f1aa8abc575ebd4474e559d25">KINOVAAPIUSBCOMMANDLAYER_API</link> int <link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1af3bd0e6780c8c6238d2de8d3da69f200">SetFrameType</link> (
+int frameType)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1abe06f11f1aa8abc575ebd4474e559d25">KINOVAAPIUSBCOMMANDLAYER_API</link> int <link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1aa40b9a922065a45723d1ece7be9a02ca">SetJointZero</link> (
+int ActuatorAdress)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1abe06f11f1aa8abc575ebd4474e559d25">KINOVAAPIUSBCOMMANDLAYER_API</link> int <link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1a46ab65b2af403fe511fd557b21c49cc1">SetModel</link> (
+char Command, char temp)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1abe06f11f1aa8abc575ebd4474e559d25">KINOVAAPIUSBCOMMANDLAYER_API</link> int <link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1a6e9daa16713f652199be76db68140f48">SetProtectionZone</link> (
+<link linkend="df/d36/KinovaTypes_8h_1dd/d29/structZoneList">ZoneList</link> Command)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1abe06f11f1aa8abc575ebd4474e559d25">KINOVAAPIUSBCOMMANDLAYER_API</link> int <link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1af49466c5a2dbdb5cb0cffd4b2eeb732d">SetSerialNumber</link> (
+char Command, char temp)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1abe06f11f1aa8abc575ebd4474e559d25">KINOVAAPIUSBCOMMANDLAYER_API</link> int <link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1a9b9e4d368ec162a7078d66c175d39e2c">SetSpasmFilterValues</link> (
+std::vector&lt; float &gt; Response, int activationStatus)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1abe06f11f1aa8abc575ebd4474e559d25">KINOVAAPIUSBCOMMANDLAYER_API</link> int <link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1aef23b672396482a72c9ba81bb9756d9e">SetTorqueGain</link> (
+int ActuatorAdress, int Gain)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1abe06f11f1aa8abc575ebd4474e559d25">KINOVAAPIUSBCOMMANDLAYER_API</link> int <link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1a552f60a7ef6fb7e19a8d9ac06fdbd189">SetTorqueZero</link> (
+int ActuatorAdress)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1abe06f11f1aa8abc575ebd4474e559d25">KINOVAAPIUSBCOMMANDLAYER_API</link> int <link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1ac58735ec0d693b62919ed6b647207c44">StartControlAPI</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1abe06f11f1aa8abc575ebd4474e559d25">KINOVAAPIUSBCOMMANDLAYER_API</link> int <link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1a42a30576593f705ec5de78d6e7f6b1c0">StartCurrentLimitation</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1abe06f11f1aa8abc575ebd4474e559d25">KINOVAAPIUSBCOMMANDLAYER_API</link> int <link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1aedea2cbf905878c9b24d998e0fa3e06e">StartForceControl</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1abe06f11f1aa8abc575ebd4474e559d25">KINOVAAPIUSBCOMMANDLAYER_API</link> int <link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1ac3cb6e6a16838716235d935c92aa0a82">StopControlAPI</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1abe06f11f1aa8abc575ebd4474e559d25">KINOVAAPIUSBCOMMANDLAYER_API</link> int <link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1a556dc384ffef31cb88648db2985d70b4">StopCurrentLimitation</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1abe06f11f1aa8abc575ebd4474e559d25">KINOVAAPIUSBCOMMANDLAYER_API</link> int <link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1a040a5a1f4f5725c9f6832aa9650c62f8">StopForceControl</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+    <simplesect>
+        <title>Detailed Description</title>
+
+<para>This file contains header of all available functions of this API. </para>
+    <para>Definition in file D:/Longfei/Desktop/catkin_KinovaROS/src/jaco-ros/jaco_driver/include/kinova/Kinova.API.UsbCommandLayerUbuntu.h</para>
+    </simplesect>
+    <literallayout><computeroutput>
+1 <emphasis class="preprocessor">#ifdef&#32;KINOVAAPIUSBCOMMANDLAYER_EXPORTS</emphasis>
+2 <emphasis class="preprocessor">#define&#32;KINOVAAPIUSBCOMMANDLAYER_API&#32;__attribute__&#32;((visibility&#32;(&quot;default&quot;)))</emphasis>
+3 <emphasis class="preprocessor">#else</emphasis>
+<link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1abe06f11f1aa8abc575ebd4474e559d25">4 </link><emphasis class="preprocessor">#define&#32;KINOVAAPIUSBCOMMANDLAYER_API&#32;__attribute__&#32;((visibility&#32;(&quot;default&quot;)))</emphasis>
+5 <emphasis class="preprocessor">#endif</emphasis>
+6 
+12 <emphasis class="preprocessor">#include&#32;&lt;vector&gt;</emphasis>
+13 <emphasis class="preprocessor">#include&#32;&quot;<link linkend="df/d36/KinovaTypes_8h">KinovaTypes.h</link>&quot;</emphasis>
+14 <emphasis class="preprocessor">#include&#32;&quot;<link linkend="db/dfe/Kinova_8API_8CommLayerUbuntu_8h">Kinova.API.CommLayerUbuntu.h</link>&quot;</emphasis>
+15 <emphasis class="preprocessor">#include&#32;&lt;stdio.h&gt;</emphasis>
+16 
+17 <emphasis class="comment">//This&#32;defines&#32;the&#32;the&#32;location&#32;of&#32;the&#32;communication&#32;layer.(Kinova.DLL.CommLayer.dll)</emphasis>
+<link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1a12c8325343efa4c6e8ae136a72254878">18 </link><emphasis class="preprocessor">#define&#32;COMM_LAYER_PATH&#32;&quot;Kinova.API.CommLayerUbuntu.so&quot;</emphasis>
+19 
+20 <emphasis class="comment">//This&#32;indicates&#32;the&#32;success&#32;of&#32;the&#32;current&#32;operation</emphasis>
+<link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1aa90cac659d18e8ef6294c7ae337f6b58">21 </link><emphasis class="preprocessor">#define&#32;SUCCESS&#32;1</emphasis>
+<link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1a31327a2439c3f77d7d3774e7d49710de">22 </link><emphasis class="preprocessor">#define&#32;KINOVA_&#32;1</emphasis>
+23 
+24 <emphasis class="comment">//&#32;*****&#32;E&#32;R&#32;R&#32;O&#32;R&#32;&#32;&#32;C&#32;O&#32;D&#32;E&#32;S&#32;******</emphasis>
+<link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1ad9c707fcd3b8b900a267bb3112251768">25 </link><emphasis class="preprocessor">#define&#32;ERROR_INIT_API&#32;2001&#32;&#32;&#32;&#32;&#32;&#32;//&#32;Error&#32;while&#32;initializing&#32;the&#32;API</emphasis>
+<link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1a695917dd27731b8875a1ccf2cb370b61">26 </link><emphasis class="preprocessor">#define&#32;ERROR_LOAD_COMM_DLL&#32;2002&#32;//&#32;Error&#32;while&#32;loading&#32;the&#32;communication&#32;layer</emphasis>
+27 
+28 <emphasis class="comment">//Those&#32;3&#32;codes&#32;are&#32;mostly&#32;for&#32;internal&#32;use</emphasis>
+<link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1aaf06cf2cdd21e707734113d20e0a167c">29 </link><emphasis class="preprocessor">#define&#32;JACO_NACK_FIRST&#32;2003</emphasis>
+<link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1a50277f315c115b1fc66870c649ea526b">30 </link><emphasis class="preprocessor">#define&#32;JACO_COMM_FAILED&#32;2004</emphasis>
+<link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1afe14542a6cbdafc59256248a7305fb00">31 </link><emphasis class="preprocessor">#define&#32;JACO_NACK_NORMAL&#32;2005</emphasis>
+32 
+33 <emphasis class="comment">//Unable&#32;to&#32;initialize&#32;the&#32;communication&#32;layer.</emphasis>
+<link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1a33306e3b3c61996ac84a24cfd8a8ae95">34 </link><emphasis class="preprocessor">#define&#32;ERROR_INIT_COMM_METHOD&#32;&#32;2006</emphasis>
+35 
+36 <emphasis class="comment">//Unable&#32;to&#32;load&#32;the&#32;Close()&#32;function&#32;from&#32;the&#32;communication&#32;layer.</emphasis>
+<link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1a890a3525205b751506feb93582863fea">37 </link><emphasis class="preprocessor">#define&#32;ERROR_CLOSE_METHOD&#32;&#32;2007</emphasis>
+38 
+39 <emphasis class="comment">//Unable&#32;to&#32;load&#32;the&#32;GetDeviceCount()&#32;function&#32;from&#32;the&#32;communication&#32;layer.</emphasis>
+<link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1a26d8ccb476c581bf24eaccd200530a91">40 </link><emphasis class="preprocessor">#define&#32;ERROR_GET_DEVICE_COUNT_METHOD&#32;&#32;2008</emphasis>
+41 
+42 <emphasis class="comment">//Unable&#32;to&#32;load&#32;the&#32;SendPacket()&#32;function&#32;from&#32;the&#32;communication&#32;layer.</emphasis>
+<link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1afc952da53a52165715ceb34aea197e34">43 </link><emphasis class="preprocessor">#define&#32;ERROR_SEND_PACKET_METHOD&#32;&#32;2009</emphasis>
+44 
+45 <emphasis class="comment">//Unable&#32;to&#32;load&#32;the&#32;SetActiveDevice()&#32;function&#32;from&#32;the&#32;communication&#32;layer.</emphasis>
+<link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1a241fc8c34c641a3fbdfc9a0298dcf757">46 </link><emphasis class="preprocessor">#define&#32;ERROR_SET_ACTIVE_DEVICE_METHOD&#32;2010</emphasis>
+47 
+48 <emphasis class="comment">//Unable&#32;to&#32;load&#32;the&#32;GetDeviceList()&#32;function&#32;from&#32;the&#32;communication&#32;layer.</emphasis>
+<link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1a50e55249141822b3841afc7bdfdc9a7e">49 </link><emphasis class="preprocessor">#define&#32;ERROR_GET_DEVICES_LIST_METHOD&#32;2011</emphasis>
+50 
+51 <emphasis class="comment">//Unable&#32;to&#32;initialized&#32;the&#32;system&#32;semaphore.</emphasis>
+<link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1a8c5b24069ba1427e15a2a2dcbe004ba4">52 </link><emphasis class="preprocessor">#define&#32;ERROR_SEMAPHORE_FAILED&#32;2012</emphasis>
+53 
+54 <emphasis class="comment">//A&#32;function&apos;s&#32;parameter&#32;is&#32;not&#32;valid.</emphasis>
+<link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1a46991f9bc9447e7029136ea73ce8d373">55 </link><emphasis class="preprocessor">#define&#32;ERROR_INVALID_PARAM&#32;2100</emphasis>
+56 
+57 <emphasis class="comment">//The&#32;API&#32;is&#32;not&#32;initialized.</emphasis>
+<link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1a0eb31c1b663a821f8dc3a8bfabb66c68">58 </link><emphasis class="preprocessor">#define&#32;ERROR_API_NOT_INITIALIZED&#32;2101</emphasis>
+59 
+60 <emphasis class="comment">//&#32;*****&#32;E&#32;N&#32;D&#32;&#32;O&#32;F&#32;&#32;E&#32;R&#32;R&#32;O&#32;R&#32;&#32;&#32;C&#32;O&#32;D&#32;E&#32;S&#32;******</emphasis>
+61 
+62 <emphasis class="comment">//Version&#32;of&#32;the&#32;API&#32;5.01.01</emphasis>
+<link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1aaeb890c653dc6657b1238afe3ce1a0f9">63 </link><emphasis class="preprocessor">#define&#32;COMMAND_LAYER_VERSION&#32;50101</emphasis>
+64 
+65 <emphasis class="comment">//&#32;*****&#32;API&apos;S&#32;FUNCTIONAL&#32;CORE&#32;*****</emphasis>
+66 
+67 <emphasis class="keyword">extern</emphasis>&#32;<emphasis class="stringliteral">&quot;C&quot;</emphasis>&#32;<link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1abe06f11f1aa8abc575ebd4474e559d25">KINOVAAPIUSBCOMMANDLAYER_API</link>&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1a5814f5c47fb3f439269f12c310f287a4">GetDevices</link>(std::vector&lt;KinovaDevice&gt;&#32;&amp;devices,&#32;<emphasis class="keywordtype">int</emphasis>&#32;&amp;<link linkend="db/dfe/Kinova_8API_8CommLayerUbuntu_8h_1a900dac90961bada00f57c207562a6a9a">result</link>);
+68 
+69 <emphasis class="keyword">extern</emphasis>&#32;<emphasis class="stringliteral">&quot;C&quot;</emphasis>&#32;<link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1abe06f11f1aa8abc575ebd4474e559d25">KINOVAAPIUSBCOMMANDLAYER_API</link>&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1a4506116c4053d8c12c13d6ef974699c2">SetActiveDevice</link>(<link linkend="db/dfe/Kinova_8API_8CommLayerUbuntu_8h_1da/dd6/structKinovaDevice">KinovaDevice</link>&#32;device);
+70 
+71 <emphasis class="keyword">extern</emphasis>&#32;<emphasis class="stringliteral">&quot;C&quot;</emphasis>&#32;<link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1abe06f11f1aa8abc575ebd4474e559d25">KINOVAAPIUSBCOMMANDLAYER_API</link>&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1ab1e7523fba35c20a8569e99bcdf63a5e">InitAPI</link>(<emphasis class="keywordtype">void</emphasis>);
+72 
+73 <emphasis class="keyword">extern</emphasis>&#32;<emphasis class="stringliteral">&quot;C&quot;</emphasis>&#32;<link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1abe06f11f1aa8abc575ebd4474e559d25">KINOVAAPIUSBCOMMANDLAYER_API</link>&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1a8c68cfab1fd05edea45717967cd35170">CloseAPI</link>(<emphasis class="keywordtype">void</emphasis>);
+74 
+75 <emphasis class="keyword">extern</emphasis>&#32;<emphasis class="stringliteral">&quot;C&quot;</emphasis>&#32;<link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1abe06f11f1aa8abc575ebd4474e559d25">KINOVAAPIUSBCOMMANDLAYER_API</link>&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1a60bd2b839aca973c134a7de0b988f164">GetCodeVersion</link>(std::vector&lt;int&gt;&#32;&amp;Response);
+76 
+77 <emphasis class="keyword">extern</emphasis>&#32;<emphasis class="stringliteral">&quot;C&quot;</emphasis>&#32;<link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1abe06f11f1aa8abc575ebd4474e559d25">KINOVAAPIUSBCOMMANDLAYER_API</link>&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1ac1c28038b14ca7d6af85387b0af343d2">GetAPIVersion</link>(std::vector&lt;int&gt;&#32;&amp;Response);
+78 
+79 <emphasis class="keyword">extern</emphasis>&#32;<emphasis class="stringliteral">&quot;C&quot;</emphasis>&#32;<link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1abe06f11f1aa8abc575ebd4474e559d25">KINOVAAPIUSBCOMMANDLAYER_API</link>&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1a6be8b4e54409ac8fa2c890f1e1e8e0a1">GetCartesianPosition</link>(<link linkend="d4/d67/structCartesianPosition">CartesianPosition</link>&#32;&amp;Response);
+80 
+81 <emphasis class="keyword">extern</emphasis>&#32;<emphasis class="stringliteral">&quot;C&quot;</emphasis>&#32;<link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1abe06f11f1aa8abc575ebd4474e559d25">KINOVAAPIUSBCOMMANDLAYER_API</link>&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1a58ef9ea1c1ae0bc3905d9f72faee18dc">GetAngularPosition</link>(<link linkend="df/d36/KinovaTypes_8h_1de/de7/structAngularPosition">AngularPosition</link>&#32;&amp;Response);
+82 
+83 <emphasis class="keyword">extern</emphasis>&#32;<emphasis class="stringliteral">&quot;C&quot;</emphasis>&#32;<link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1abe06f11f1aa8abc575ebd4474e559d25">KINOVAAPIUSBCOMMANDLAYER_API</link>&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1ae9ed9be44d89f54aa3c268186be4e4f4">GetCartesianForce</link>(<link linkend="d4/d67/structCartesianPosition">CartesianPosition</link>&#32;&amp;Response);
+84 
+85 <emphasis class="keyword">extern</emphasis>&#32;<emphasis class="stringliteral">&quot;C&quot;</emphasis>&#32;<link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1abe06f11f1aa8abc575ebd4474e559d25">KINOVAAPIUSBCOMMANDLAYER_API</link>&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1a7ae41c6db88958582f8598f71f664c89">GetAngularForce</link>(<link linkend="df/d36/KinovaTypes_8h_1de/de7/structAngularPosition">AngularPosition</link>&#32;&amp;Response);
+86 
+87 <emphasis class="keyword">extern</emphasis>&#32;<emphasis class="stringliteral">&quot;C&quot;</emphasis>&#32;<link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1abe06f11f1aa8abc575ebd4474e559d25">KINOVAAPIUSBCOMMANDLAYER_API</link>&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1ad9a6f5444a8fa6df2cc324e54118f54f">GetAngularCurrent</link>(<link linkend="df/d36/KinovaTypes_8h_1de/de7/structAngularPosition">AngularPosition</link>&#32;&amp;Response);
+88 
+89 <emphasis class="keyword">extern</emphasis>&#32;<emphasis class="stringliteral">&quot;C&quot;</emphasis>&#32;<link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1abe06f11f1aa8abc575ebd4474e559d25">KINOVAAPIUSBCOMMANDLAYER_API</link>&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1a7e00e6d93a9d897037cfa627507647ef">GetActualTrajectoryInfo</link>(<link linkend="d4/d8e/structTrajectoryPoint">TrajectoryPoint</link>&#32;&amp;Response);
+90 
+91 <emphasis class="keyword">extern</emphasis>&#32;<emphasis class="stringliteral">&quot;C&quot;</emphasis>&#32;<link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1abe06f11f1aa8abc575ebd4474e559d25">KINOVAAPIUSBCOMMANDLAYER_API</link>&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1a28d5f53daeda2497dbceeb5e8ed635eb">GetGlobalTrajectoryInfo</link>(<link linkend="df/d36/KinovaTypes_8h_1d7/ddf/structTrajectoryFIFO">TrajectoryFIFO</link>&#32;&amp;Response);
+92 
+93 <emphasis class="keyword">extern</emphasis>&#32;<emphasis class="stringliteral">&quot;C&quot;</emphasis>&#32;<link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1abe06f11f1aa8abc575ebd4474e559d25">KINOVAAPIUSBCOMMANDLAYER_API</link>&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1a467668c1ccb6eea2d89521c8cbe94ebf">GetSensorsInfo</link>(<link linkend="d7/d40/structSensorsInfo">SensorsInfo</link>&#32;&amp;Response);
+94 
+95 <emphasis class="keyword">extern</emphasis>&#32;<emphasis class="stringliteral">&quot;C&quot;</emphasis>&#32;<link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1abe06f11f1aa8abc575ebd4474e559d25">KINOVAAPIUSBCOMMANDLAYER_API</link>&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1ae50cc84dceabf5404c62c30e39ae6df4">GetSingularityVector</link>(<link linkend="df/d36/KinovaTypes_8h_1d5/d78/structSingularityVector">SingularityVector</link>&#32;&amp;Response);
+96 
+97 <emphasis class="keyword">extern</emphasis>&#32;<emphasis class="stringliteral">&quot;C&quot;</emphasis>&#32;<link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1abe06f11f1aa8abc575ebd4474e559d25">KINOVAAPIUSBCOMMANDLAYER_API</link>&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1a2a3d8fbff1add975bfff283ac3b8a3c6">SetAngularControl</link>();
+98 
+99 <emphasis class="keyword">extern</emphasis>&#32;<emphasis class="stringliteral">&quot;C&quot;</emphasis>&#32;<link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1abe06f11f1aa8abc575ebd4474e559d25">KINOVAAPIUSBCOMMANDLAYER_API</link>&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1a9396131c243aa476db3e7a26b797e076">SetCartesianControl</link>();
+100 
+101 <emphasis class="keyword">extern</emphasis>&#32;<emphasis class="stringliteral">&quot;C&quot;</emphasis>&#32;<link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1abe06f11f1aa8abc575ebd4474e559d25">KINOVAAPIUSBCOMMANDLAYER_API</link>&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1ac58735ec0d693b62919ed6b647207c44">StartControlAPI</link>();
+102 
+103 <emphasis class="keyword">extern</emphasis>&#32;<emphasis class="stringliteral">&quot;C&quot;</emphasis>&#32;<link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1abe06f11f1aa8abc575ebd4474e559d25">KINOVAAPIUSBCOMMANDLAYER_API</link>&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1ac3cb6e6a16838716235d935c92aa0a82">StopControlAPI</link>();
+104 
+105 <emphasis class="keyword">extern</emphasis>&#32;<emphasis class="stringliteral">&quot;C&quot;</emphasis>&#32;<link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1abe06f11f1aa8abc575ebd4474e559d25">KINOVAAPIUSBCOMMANDLAYER_API</link>&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1a316a307f9da5315ea0af6bf9ea153eb5">RestoreFactoryDefault</link>();
+106 
+107 <emphasis class="keyword">extern</emphasis>&#32;<emphasis class="stringliteral">&quot;C&quot;</emphasis>&#32;<link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1abe06f11f1aa8abc575ebd4474e559d25">KINOVAAPIUSBCOMMANDLAYER_API</link>&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1ab52677c163193c4f160981a7503ec79a">SendJoystickCommand</link>(<link linkend="db/d40/structJoystickCommand">JoystickCommand</link>&#32;joystickCommand);
+108 
+109 <emphasis class="keyword">extern</emphasis>&#32;<emphasis class="stringliteral">&quot;C&quot;</emphasis>&#32;<link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1abe06f11f1aa8abc575ebd4474e559d25">KINOVAAPIUSBCOMMANDLAYER_API</link>&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1ac802915b7390eb6ffd8e1206b52f557f">SendAdvanceTrajectory</link>(<link linkend="d4/d8e/structTrajectoryPoint">TrajectoryPoint</link>&#32;trajectory);
+110 
+111 <emphasis class="keyword">extern</emphasis>&#32;<emphasis class="stringliteral">&quot;C&quot;</emphasis>&#32;<link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1abe06f11f1aa8abc575ebd4474e559d25">KINOVAAPIUSBCOMMANDLAYER_API</link>&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1a9f21d4375c78210dea0d33316e23fcb8">SendBasicTrajectory</link>(<link linkend="d4/d8e/structTrajectoryPoint">TrajectoryPoint</link>&#32;trajectory);
+112 
+113 <emphasis class="keyword">extern</emphasis>&#32;<emphasis class="stringliteral">&quot;C&quot;</emphasis>&#32;<link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1abe06f11f1aa8abc575ebd4474e559d25">KINOVAAPIUSBCOMMANDLAYER_API</link>&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1aadfff8ea657c2e2e16510b3f3b886468">GetClientConfigurations</link>(<link linkend="df/d36/KinovaTypes_8h_1d1/d2e/structClientConfigurations">ClientConfigurations</link>&#32;&amp;config);
+114 
+115 <emphasis class="keyword">extern</emphasis>&#32;<emphasis class="stringliteral">&quot;C&quot;</emphasis>&#32;<link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1abe06f11f1aa8abc575ebd4474e559d25">KINOVAAPIUSBCOMMANDLAYER_API</link>&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1aaaf906c81f0dbdc53101d61c7838eae8">SetClientConfigurations</link>(<link linkend="df/d36/KinovaTypes_8h_1d1/d2e/structClientConfigurations">ClientConfigurations</link>&#32;config);
+116 
+117 <emphasis class="keyword">extern</emphasis>&#32;<emphasis class="stringliteral">&quot;C&quot;</emphasis>&#32;<link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1abe06f11f1aa8abc575ebd4474e559d25">KINOVAAPIUSBCOMMANDLAYER_API</link>&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1a408913e7a3a1ba879f4575320bfeda14">EraseAllTrajectories</link>();
+118 
+119 <emphasis class="keyword">extern</emphasis>&#32;<emphasis class="stringliteral">&quot;C&quot;</emphasis>&#32;<link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1abe06f11f1aa8abc575ebd4474e559d25">KINOVAAPIUSBCOMMANDLAYER_API</link>&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1a157b0c582c67825d220cb0e7464a298c">GetPositionCurrentActuators</link>(std::vector&lt;float&gt;&#32;&amp;Response);
+120 
+121 <emphasis class="keyword">extern</emphasis>&#32;<emphasis class="stringliteral">&quot;C&quot;</emphasis>&#32;<link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1abe06f11f1aa8abc575ebd4474e559d25">KINOVAAPIUSBCOMMANDLAYER_API</link>&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1a5ac8a37b983294d15f6cccb7a6f1a414">SetActuatorPID</link>(<emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">int</emphasis>&#32;address,&#32;<emphasis class="keywordtype">float</emphasis>&#32;P,&#32;<emphasis class="keywordtype">float</emphasis>&#32;I,&#32;<emphasis class="keywordtype">float</emphasis>&#32;D);
+122 
+123 <emphasis class="keyword">extern</emphasis>&#32;<emphasis class="stringliteral">&quot;C&quot;</emphasis>&#32;<link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1abe06f11f1aa8abc575ebd4474e559d25">KINOVAAPIUSBCOMMANDLAYER_API</link>&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1a5c289720f8a7af28a84e7dec66211f33">GetAngularCommand</link>(<link linkend="df/d36/KinovaTypes_8h_1de/de7/structAngularPosition">AngularPosition</link>&#32;&amp;Response);
+124 
+125 <emphasis class="keyword">extern</emphasis>&#32;<emphasis class="stringliteral">&quot;C&quot;</emphasis>&#32;<link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1abe06f11f1aa8abc575ebd4474e559d25">KINOVAAPIUSBCOMMANDLAYER_API</link>&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1aa112acb5e0a9d6657616377a90d1d3b1">GetCartesianCommand</link>(<link linkend="d4/d67/structCartesianPosition">CartesianPosition</link>&#32;&amp;Response);
+126 
+127 <emphasis class="keyword">extern</emphasis>&#32;<emphasis class="stringliteral">&quot;C&quot;</emphasis>&#32;<link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1abe06f11f1aa8abc575ebd4474e559d25">KINOVAAPIUSBCOMMANDLAYER_API</link>&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1afd4e6c87647569b8cf24a2678dc9ef25">GetAngularCurrentMotor</link>(<link linkend="df/d36/KinovaTypes_8h_1de/de7/structAngularPosition">AngularPosition</link>&#32;&amp;Response);
+128 
+129 <emphasis class="keyword">extern</emphasis>&#32;<emphasis class="stringliteral">&quot;C&quot;</emphasis>&#32;<link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1abe06f11f1aa8abc575ebd4474e559d25">KINOVAAPIUSBCOMMANDLAYER_API</link>&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1ad85d567f13629d5a8a20604c0c97ae22">GetAngularVelocity</link>(<link linkend="df/d36/KinovaTypes_8h_1de/de7/structAngularPosition">AngularPosition</link>&#32;&amp;Response);
+130 
+131 <emphasis class="keyword">extern</emphasis>&#32;<emphasis class="stringliteral">&quot;C&quot;</emphasis>&#32;<link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1abe06f11f1aa8abc575ebd4474e559d25">KINOVAAPIUSBCOMMANDLAYER_API</link>&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1a406331a1b6df3d0f3b3b8fecbc51d5b8">GetControlType</link>(<emphasis class="keywordtype">int</emphasis>&#32;&amp;Response);
+132 
+133 <emphasis class="keyword">extern</emphasis>&#32;<emphasis class="stringliteral">&quot;C&quot;</emphasis>&#32;<link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1abe06f11f1aa8abc575ebd4474e559d25">KINOVAAPIUSBCOMMANDLAYER_API</link>&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1aedea2cbf905878c9b24d998e0fa3e06e">StartForceControl</link>();
+134 
+135 <emphasis class="keyword">extern</emphasis>&#32;<emphasis class="stringliteral">&quot;C&quot;</emphasis>&#32;<link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1abe06f11f1aa8abc575ebd4474e559d25">KINOVAAPIUSBCOMMANDLAYER_API</link>&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1a040a5a1f4f5725c9f6832aa9650c62f8">StopForceControl</link>();
+136 
+137 <emphasis class="keyword">extern</emphasis>&#32;<emphasis class="stringliteral">&quot;C&quot;</emphasis>&#32;<link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1abe06f11f1aa8abc575ebd4474e559d25">KINOVAAPIUSBCOMMANDLAYER_API</link>&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1a42a30576593f705ec5de78d6e7f6b1c0">StartCurrentLimitation</link>();
+138 
+139 <emphasis class="keyword">extern</emphasis>&#32;<emphasis class="stringliteral">&quot;C&quot;</emphasis>&#32;<link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1abe06f11f1aa8abc575ebd4474e559d25">KINOVAAPIUSBCOMMANDLAYER_API</link>&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1a556dc384ffef31cb88648db2985d70b4">StopCurrentLimitation</link>();
+140 
+141 <emphasis class="keyword">extern</emphasis>&#32;<emphasis class="stringliteral">&quot;C&quot;</emphasis>&#32;<link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1abe06f11f1aa8abc575ebd4474e559d25">KINOVAAPIUSBCOMMANDLAYER_API</link>&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1a4f5f1d1c45a10e3b2ed2461ad127c7db">GetSystemErrorCount</link>(<emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">int</emphasis>&#32;&amp;Response);
+142 
+143 <emphasis class="keyword">extern</emphasis>&#32;<emphasis class="stringliteral">&quot;C&quot;</emphasis>&#32;<link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1abe06f11f1aa8abc575ebd4474e559d25">KINOVAAPIUSBCOMMANDLAYER_API</link>&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1a02072cf8aba4054cf63631615a256b3a">GetSystemError</link>(<emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">int</emphasis>&#32;indexError,&#32;<link linkend="df/d36/KinovaTypes_8h_1d0/de3/structSystemError">SystemError</link>&#32;&amp;Response);
+144 
+145 <emphasis class="keyword">extern</emphasis>&#32;<emphasis class="stringliteral">&quot;C&quot;</emphasis>&#32;<link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1abe06f11f1aa8abc575ebd4474e559d25">KINOVAAPIUSBCOMMANDLAYER_API</link>&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1aeb08aa5439be6a60a197a01f3aae8e1e">ClearErrorLog</link>();
+146 
+147 <emphasis class="keyword">extern</emphasis>&#32;<emphasis class="stringliteral">&quot;C&quot;</emphasis>&#32;<link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1abe06f11f1aa8abc575ebd4474e559d25">KINOVAAPIUSBCOMMANDLAYER_API</link>&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1a47f39fdf7e52e914e979d822c9209366">EraseAllProtectionZones</link>();
+148 
+149 <emphasis class="comment">//Internal&#32;use&#32;only</emphasis>
+150 <emphasis class="keyword">extern</emphasis>&#32;<emphasis class="stringliteral">&quot;C&quot;</emphasis>&#32;<link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1abe06f11f1aa8abc575ebd4474e559d25">KINOVAAPIUSBCOMMANDLAYER_API</link>&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1af49466c5a2dbdb5cb0cffd4b2eeb732d">SetSerialNumber</link>(<emphasis class="keywordtype">char</emphasis>&#32;Command[<link linkend="df/d36/KinovaTypes_8h_1ac829415013d8120cedee928452ae0f55">STRING_LENGTH</link>],&#32;<emphasis class="keywordtype">char</emphasis>&#32;temp[STRING_LENGTH]);
+151 
+152 <emphasis class="keyword">extern</emphasis>&#32;<emphasis class="stringliteral">&quot;C&quot;</emphasis>&#32;<link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1abe06f11f1aa8abc575ebd4474e559d25">KINOVAAPIUSBCOMMANDLAYER_API</link>&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1a40ae13976ddf7d5a88d43999387e4ca0">GetControlMapping</link>(<link linkend="df/d36/KinovaTypes_8h_1d4/d71/structControlMappingCharts">ControlMappingCharts</link>&#32;&amp;Response);
+153 
+154 <emphasis class="keyword">extern</emphasis>&#32;<emphasis class="stringliteral">&quot;C&quot;</emphasis>&#32;<link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1abe06f11f1aa8abc575ebd4474e559d25">KINOVAAPIUSBCOMMANDLAYER_API</link>&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1af6845bf7d390ade74b68c7c7e7d74139">GetProtectionZone</link>(<link linkend="df/d36/KinovaTypes_8h_1dd/d29/structZoneList">ZoneList</link>&#32;&amp;Response);
+155 
+156 <emphasis class="keyword">extern</emphasis>&#32;<emphasis class="stringliteral">&quot;C&quot;</emphasis>&#32;<link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1abe06f11f1aa8abc575ebd4474e559d25">KINOVAAPIUSBCOMMANDLAYER_API</link>&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1a6e9daa16713f652199be76db68140f48">SetProtectionZone</link>(<link linkend="df/d36/KinovaTypes_8h_1dd/d29/structZoneList">ZoneList</link>&#32;Command);
+157 
+158 <emphasis class="keyword">extern</emphasis>&#32;<emphasis class="stringliteral">&quot;C&quot;</emphasis>&#32;<link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1abe06f11f1aa8abc575ebd4474e559d25">KINOVAAPIUSBCOMMANDLAYER_API</link>&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1a94382130b0796558826d6044e5249c09">GetGripperStatus</link>(<link linkend="df/d36/KinovaTypes_8h_1d8/d2c/structGripper">Gripper</link>&#32;&amp;Response);
+159 
+160 <emphasis class="keyword">extern</emphasis>&#32;<emphasis class="stringliteral">&quot;C&quot;</emphasis>&#32;<link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1abe06f11f1aa8abc575ebd4474e559d25">KINOVAAPIUSBCOMMANDLAYER_API</link>&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1af7bd69e27ac64fe2b6117442a285cd53">GetQuickStatus</link>(<link linkend="df/d36/KinovaTypes_8h_1df/d9d/structQuickStatus">QuickStatus</link>&#32;&amp;Response);
+161 
+162 <emphasis class="keyword">extern</emphasis>&#32;<emphasis class="stringliteral">&quot;C&quot;</emphasis>&#32;<link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1abe06f11f1aa8abc575ebd4474e559d25">KINOVAAPIUSBCOMMANDLAYER_API</link>&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1a763871c1e32b0a08bba0e9c550de3a8e">GetForcesInfo</link>(<link linkend="df/d36/KinovaTypes_8h_1d7/dff/structForcesInfo">ForcesInfo</link>&#32;&amp;Response);
+163 
+164 <emphasis class="keyword">extern</emphasis>&#32;<emphasis class="stringliteral">&quot;C&quot;</emphasis>&#32;<link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1abe06f11f1aa8abc575ebd4474e559d25">KINOVAAPIUSBCOMMANDLAYER_API</link>&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1a01a084c40c33a629ee44b5fac0ca40fb">SetControlMapping</link>(<link linkend="df/d36/KinovaTypes_8h_1d4/d71/structControlMappingCharts">ControlMappingCharts</link>&#32;Command);
+165 
+166 <emphasis class="keyword">extern</emphasis>&#32;<emphasis class="stringliteral">&quot;C&quot;</emphasis>&#32;<link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1abe06f11f1aa8abc575ebd4474e559d25">KINOVAAPIUSBCOMMANDLAYER_API</link>&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1a7428b825bdc649a02cb39a5002f96228">ProgramFlash</link>(<emphasis class="keywordtype">char</emphasis>&#32;*&#32;filename);
+167 
+168 <emphasis class="keyword">extern</emphasis>&#32;<emphasis class="stringliteral">&quot;C&quot;</emphasis>&#32;<link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1abe06f11f1aa8abc575ebd4474e559d25">KINOVAAPIUSBCOMMANDLAYER_API</link>&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1aa40b9a922065a45723d1ece7be9a02ca">SetJointZero</link>(<emphasis class="keywordtype">int</emphasis>&#32;ActuatorAdress);
+169 
+170 <emphasis class="keyword">extern</emphasis>&#32;<emphasis class="stringliteral">&quot;C&quot;</emphasis>&#32;<link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1abe06f11f1aa8abc575ebd4474e559d25">KINOVAAPIUSBCOMMANDLAYER_API</link>&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1a552f60a7ef6fb7e19a8d9ac06fdbd189">SetTorqueZero</link>(<emphasis class="keywordtype">int</emphasis>&#32;ActuatorAdress);
+171 
+172 <emphasis class="keyword">extern</emphasis>&#32;<emphasis class="stringliteral">&quot;C&quot;</emphasis>&#32;<link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1abe06f11f1aa8abc575ebd4474e559d25">KINOVAAPIUSBCOMMANDLAYER_API</link>&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1aef23b672396482a72c9ba81bb9756d9e">SetTorqueGain</link>(<emphasis class="keywordtype">int</emphasis>&#32;ActuatorAdress,&#32;<emphasis class="keywordtype">int</emphasis>&#32;Gain);
+173 
+174 <emphasis class="keyword">extern</emphasis>&#32;<emphasis class="stringliteral">&quot;C&quot;</emphasis>&#32;<link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1abe06f11f1aa8abc575ebd4474e559d25">KINOVAAPIUSBCOMMANDLAYER_API</link>&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1a4201734c8a9fefbf14d78f03195d7b71">SetActuatorPIDFilter</link>(<emphasis class="keywordtype">int</emphasis>&#32;ActuatorAdress,&#32;<emphasis class="keywordtype">float</emphasis>&#32;filterP,&#32;<emphasis class="keywordtype">float</emphasis>&#32;filterI,&#32;<emphasis class="keywordtype">float</emphasis>&#32;filterD);
+175 
+176 <emphasis class="keyword">extern</emphasis>&#32;<emphasis class="stringliteral">&quot;C&quot;</emphasis>&#32;<link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1abe06f11f1aa8abc575ebd4474e559d25">KINOVAAPIUSBCOMMANDLAYER_API</link>&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1a5366b9fa9d7c3bb00118a1cb8caf470e">SetActuatorAddress</link>(<emphasis class="keywordtype">int</emphasis>&#32;ActuatorAdress,&#32;<emphasis class="keywordtype">int</emphasis>&#32;newAddress);
+177 
+178 <emphasis class="keyword">extern</emphasis>&#32;<emphasis class="stringliteral">&quot;C&quot;</emphasis>&#32;<link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1abe06f11f1aa8abc575ebd4474e559d25">KINOVAAPIUSBCOMMANDLAYER_API</link>&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1ab7d8661a7309e8cb4df1aa17b658169b">GetGeneralInformations</link>(<link linkend="df/d36/KinovaTypes_8h_1d2/d0f/structGeneralInformations">GeneralInformations</link>&#32;&amp;Response);
+179 
+180 <emphasis class="keyword">extern</emphasis>&#32;<emphasis class="stringliteral">&quot;C&quot;</emphasis>&#32;<link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1abe06f11f1aa8abc575ebd4474e559d25">KINOVAAPIUSBCOMMANDLAYER_API</link>&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1af3bd0e6780c8c6238d2de8d3da69f200">SetFrameType</link>(<emphasis class="keywordtype">int</emphasis>&#32;frameType);
+181 
+182 <emphasis class="keyword">extern</emphasis>&#32;<emphasis class="stringliteral">&quot;C&quot;</emphasis>&#32;<link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1abe06f11f1aa8abc575ebd4474e559d25">KINOVAAPIUSBCOMMANDLAYER_API</link>&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1afdf4f71175b5208063a002818201ea76">SetCartesianForceMinMax</link>(<link linkend="dd/d00/structCartesianInfo">CartesianInfo</link>&#32;min,&#32;<link linkend="dd/d00/structCartesianInfo">CartesianInfo</link>&#32;<link linkend="d7/d70/JacoPositionConfig_8dox_1a55c9de72d9f3630abdf51bfe39c191dd">max</link>);
+183 
+184 <emphasis class="keyword">extern</emphasis>&#32;<emphasis class="stringliteral">&quot;C&quot;</emphasis>&#32;<link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1abe06f11f1aa8abc575ebd4474e559d25">KINOVAAPIUSBCOMMANDLAYER_API</link>&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1a6ad9b3474de09442a05f336cb7df7973">SetCartesianInertiaDamping</link>(<link linkend="dd/d00/structCartesianInfo">CartesianInfo</link>&#32;inertia,&#32;<link linkend="dd/d00/structCartesianInfo">CartesianInfo</link>&#32;damping);
+185 
+186 <emphasis class="keyword">extern</emphasis>&#32;<emphasis class="stringliteral">&quot;C&quot;</emphasis>&#32;<link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1abe06f11f1aa8abc575ebd4474e559d25">KINOVAAPIUSBCOMMANDLAYER_API</link>&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1a28c19286fba497565c34d2a45e29372d">SetAngularTorqueMinMax</link>(<link linkend="d0/df5/structAngularInfo">AngularInfo</link>&#32;min,&#32;<link linkend="d0/df5/structAngularInfo">AngularInfo</link>&#32;<link linkend="d7/d70/JacoPositionConfig_8dox_1a55c9de72d9f3630abdf51bfe39c191dd">max</link>);
+187 
+188 <emphasis class="keyword">extern</emphasis>&#32;<emphasis class="stringliteral">&quot;C&quot;</emphasis>&#32;<link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1abe06f11f1aa8abc575ebd4474e559d25">KINOVAAPIUSBCOMMANDLAYER_API</link>&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1a8a1de40ded42bb1c9ad599218506a7ba">SetAngularInertiaDamping</link>(<link linkend="d0/df5/structAngularInfo">AngularInfo</link>&#32;inertia,&#32;<link linkend="d0/df5/structAngularInfo">AngularInfo</link>&#32;damping);
+189 
+190 <emphasis class="comment">//Internal&#32;use&#32;only</emphasis>
+191 <emphasis class="keyword">extern</emphasis>&#32;<emphasis class="stringliteral">&quot;C&quot;</emphasis>&#32;<link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1abe06f11f1aa8abc575ebd4474e559d25">KINOVAAPIUSBCOMMANDLAYER_API</link>&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1a6340417b9bf8f549e249278fc6d33d00">SetDevValue</link>(std::vector&lt;float&gt;&#32;command);
+192 
+193 <emphasis class="comment">//Internal&#32;use&#32;only</emphasis>
+194 <emphasis class="keyword">extern</emphasis>&#32;<emphasis class="stringliteral">&quot;C&quot;</emphasis>&#32;<link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1abe06f11f1aa8abc575ebd4474e559d25">KINOVAAPIUSBCOMMANDLAYER_API</link>&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1a960b173a33b5c9179859e76b98476278">GetDevValue</link>(std::vector&lt;float&gt;&#32;&amp;Response);
+195 
+196 <emphasis class="keyword">extern</emphasis>&#32;<emphasis class="stringliteral">&quot;C&quot;</emphasis>&#32;<link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1abe06f11f1aa8abc575ebd4474e559d25">KINOVAAPIUSBCOMMANDLAYER_API</link>&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1a9b9e4d368ec162a7078d66c175d39e2c">SetSpasmFilterValues</link>(std::vector&lt;float&gt;&#32;Response,&#32;<emphasis class="keywordtype">int</emphasis>&#32;activationStatus);
+197 
+198 <emphasis class="keyword">extern</emphasis>&#32;<emphasis class="stringliteral">&quot;C&quot;</emphasis>&#32;<link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1abe06f11f1aa8abc575ebd4474e559d25">KINOVAAPIUSBCOMMANDLAYER_API</link>&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1a3cf1188af06395c8ff8ec00d32e5ae1a">GetSpasmFilterValues</link>(std::vector&lt;float&gt;&#32;&amp;Response,&#32;<emphasis class="keywordtype">int</emphasis>&#32;&amp;activationStatus);
+199 
+200 <emphasis class="keyword">extern</emphasis>&#32;<emphasis class="stringliteral">&quot;C&quot;</emphasis>&#32;<link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1abe06f11f1aa8abc575ebd4474e559d25">KINOVAAPIUSBCOMMANDLAYER_API</link>&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1a3e2040173821c0a1f86713f04bd03cea">MoveHome</link>();
+201 
+202 <emphasis class="keyword">extern</emphasis>&#32;<emphasis class="stringliteral">&quot;C&quot;</emphasis>&#32;<link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1abe06f11f1aa8abc575ebd4474e559d25">KINOVAAPIUSBCOMMANDLAYER_API</link>&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1a26652852e510b5d4048da7818cc2e143">GetAngularForceGravityFree</link>(<link linkend="df/d36/KinovaTypes_8h_1de/de7/structAngularPosition">AngularPosition</link>&#32;&amp;Response);
+203 
+204 <emphasis class="keyword">extern</emphasis>&#32;<emphasis class="stringliteral">&quot;C&quot;</emphasis>&#32;<link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1abe06f11f1aa8abc575ebd4474e559d25">KINOVAAPIUSBCOMMANDLAYER_API</link>&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1abf41a716f69e403c4585a0b6ba4a50e8">GetActuatorAcceleration</link>(<link linkend="dd/d18/structAngularAcceleration">AngularAcceleration</link>&#32;&amp;Response);
+205 
+206 <emphasis class="keyword">extern</emphasis>&#32;<emphasis class="stringliteral">&quot;C&quot;</emphasis>&#32;<link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1abe06f11f1aa8abc575ebd4474e559d25">KINOVAAPIUSBCOMMANDLAYER_API</link>&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1a9898b3a0c07aa2844ab9d2dee7e21f18">InitFingers</link>();
+207 
+208 <emphasis class="keyword">extern</emphasis>&#32;<emphasis class="stringliteral">&quot;C&quot;</emphasis>&#32;<link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1abe06f11f1aa8abc575ebd4474e559d25">KINOVAAPIUSBCOMMANDLAYER_API</link>&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1a1fb82d6b0d534dd3b2acbd4f9a82e815">GetPeripheralInventory</link>(std::vector&lt;PeripheralInfo&gt;&#32;&amp;);
+209 
+210 <emphasis class="comment">//Internal&#32;use&#32;only</emphasis>
+211 <emphasis class="keyword">extern</emphasis>&#32;<emphasis class="stringliteral">&quot;C&quot;</emphasis>&#32;<link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1abe06f11f1aa8abc575ebd4474e559d25">KINOVAAPIUSBCOMMANDLAYER_API</link>&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="d4/d19/Kinova_8API_8UsbCommandLayerUbuntu_8h_1a46ab65b2af403fe511fd557b21c49cc1">SetModel</link>(<emphasis class="keywordtype">char</emphasis>&#32;Command[<link linkend="df/d36/KinovaTypes_8h_1ac829415013d8120cedee928452ae0f55">STRING_LENGTH</link>],&#32;<emphasis class="keywordtype">char</emphasis>&#32;temp[STRING_LENGTH]);
+212 
+    </computeroutput></literallayout>
+</section>

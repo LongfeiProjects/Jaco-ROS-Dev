@@ -1,0 +1,96 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="dc/d0a/jaco__fingers__action_8h">
+    <title>jaco_fingers_action.h File Reference</title>
+    <programlisting>#include &lt;ros/ros.h&gt;</programlisting>
+    <programlisting>#include &lt;actionlib/server/simple_action_server.h&gt;</programlisting>
+    <programlisting>#include &lt;jaco_msgs/SetFingersPositionAction.h&gt;</programlisting>
+    <programlisting>#include &quot;jaco_driver/jaco_comm.h&quot;</programlisting>
+<para>Include dependency diagram for jaco_fingers_action.h</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../d2/d39/jaco__fingers__action_8h__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Included by dependency diagram for jaco_fingers_action.h</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../d5/dbb/jaco__fingers__action_8h__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+        <section>
+            <title> Classes </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d7/de0/classjaco_1_1JacoFingersActionServer">jaco::JacoFingersActionServer</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <simplesect>
+            <title> Namespaces </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d4/d3c/namespacejaco">jaco</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+    <simplesect>
+        <title>Detailed Description</title>
+    <para>Definition in file D:/Longfei/Desktop/catkin_KinovaROS/src/jaco-ros/jaco_driver/include/jaco_driver/jaco_fingers_action.h</para>
+    </simplesect>
+    <literallayout><computeroutput>
+1 
+46 <emphasis class="preprocessor">#ifndef&#32;JACO_DRIVER_JACO_FINGERS_ACTION_H</emphasis>
+47 <emphasis class="preprocessor">#define&#32;JACO_DRIVER_JACO_FINGERS_ACTION_H</emphasis>
+48 
+49 <emphasis class="preprocessor">#include&#32;&lt;ros/ros.h&gt;</emphasis>
+50 <emphasis class="preprocessor">#include&#32;&lt;actionlib/server/simple_action_server.h&gt;</emphasis>
+51 
+52 <emphasis class="preprocessor">#include&#32;&lt;<link linkend="d2/d9d/SetFingersPositionAction_8h">jaco_msgs/SetFingersPositionAction.h</link>&gt;</emphasis>
+53 
+54 <emphasis class="preprocessor">#include&#32;&quot;<link linkend="d8/de6/jaco__comm_8h">jaco_driver/jaco_comm.h</link>&quot;</emphasis>
+55 
+56 
+57 <emphasis class="keyword">namespace&#32;</emphasis><link linkend="d4/d3c/namespacejaco">jaco</link>
+58 {
+59 
+<link linkend="d7/de0/classjaco_1_1JacoFingersActionServer">60 </link><emphasis class="keyword">class&#32;</emphasis><link linkend="d7/de0/classjaco_1_1JacoFingersActionServer">JacoFingersActionServer</link>
+61 {
+62 &#32;<emphasis class="keyword">public</emphasis>:
+63 &#32;&#32;&#32;&#32;<link linkend="d7/de0/classjaco_1_1JacoFingersActionServer_1aae225d4ab0745de98795cf7af2132d0c">JacoFingersActionServer</link>(<link linkend="d5/d2b/classjaco_1_1JacoComm">JacoComm</link>&#32;&amp;,&#32;<emphasis class="keyword">const</emphasis>&#32;ros::NodeHandle&#32;&amp;n);
+64 &#32;&#32;&#32;&#32;<link linkend="d7/de0/classjaco_1_1JacoFingersActionServer_1a0497dec496f6224031096e5f6735e9c8">~JacoFingersActionServer</link>();
+65 
+66 &#32;&#32;&#32;&#32;<emphasis class="keywordtype">void</emphasis>&#32;<link linkend="d7/de0/classjaco_1_1JacoFingersActionServer_1a642f494b27d513457e9f29de7a4b31b6">actionCallback</link>(<emphasis class="keyword">const</emphasis>&#32;<link linkend="d7/dba/namespacejaco__msgs_1a4432ef01b2858fafbc445a38e7c6dcba">jaco_msgs::SetFingersPositionGoalConstPtr</link>&#32;&amp;);
+67 
+68 &#32;<emphasis class="keyword">private</emphasis>:
+<link linkend="d7/de0/classjaco_1_1JacoFingersActionServer_1a7cdaaf5a70f820aeef87a18fe24ff5ec">69 </link>&#32;&#32;&#32;&#32;ros::NodeHandle&#32;<link linkend="d7/de0/classjaco_1_1JacoFingersActionServer_1a7cdaaf5a70f820aeef87a18fe24ff5ec">node_handle_</link>;
+<link linkend="d7/de0/classjaco_1_1JacoFingersActionServer_1afbddf1665a5e66b79cc79cae0b2badeb">70 </link>&#32;&#32;&#32;&#32;<link linkend="d5/d2b/classjaco_1_1JacoComm">JacoComm</link>&#32;&amp;<link linkend="d7/de0/classjaco_1_1JacoFingersActionServer_1afbddf1665a5e66b79cc79cae0b2badeb">arm_comm_</link>;
+<link linkend="d7/de0/classjaco_1_1JacoFingersActionServer_1a34f6a67ccd8fe1ad2bc75873d20da0f1">71 </link>&#32;&#32;&#32;&#32;actionlib::SimpleActionServer&lt;jaco_msgs::SetFingersPositionAction&gt;&#32;<link linkend="d7/de0/classjaco_1_1JacoFingersActionServer_1a34f6a67ccd8fe1ad2bc75873d20da0f1">action_server_</link>;
+72 
+<link linkend="d7/de0/classjaco_1_1JacoFingersActionServer_1ad9ee1e4c978970bdfac066f6dc9c4316">73 </link>&#32;&#32;&#32;&#32;ros::Time&#32;<link linkend="d7/de0/classjaco_1_1JacoFingersActionServer_1ad9ee1e4c978970bdfac066f6dc9c4316">last_nonstall_time_</link>;
+<link linkend="d7/de0/classjaco_1_1JacoFingersActionServer_1a77586bea5c075f6439f6dc3858513e46">74 </link>&#32;&#32;&#32;&#32;<link linkend="dd/d28/classjaco_1_1FingerAngles">jaco::FingerAngles</link>&#32;<link linkend="d7/de0/classjaco_1_1JacoFingersActionServer_1a77586bea5c075f6439f6dc3858513e46">last_nonstall_finger_positions_</link>;
+75 
+76 &#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;Parameters</emphasis>
+<link linkend="d7/de0/classjaco_1_1JacoFingersActionServer_1abd1f212225ef99b5880753f5c9261976">77 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">double</emphasis>&#32;<link linkend="d7/de0/classjaco_1_1JacoFingersActionServer_1abd1f212225ef99b5880753f5c9261976">stall_interval_seconds_</link>;
+<link linkend="d7/de0/classjaco_1_1JacoFingersActionServer_1a809ce35a92032be0b9e768fc29fd2cbf">78 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">double</emphasis>&#32;<link linkend="d7/de0/classjaco_1_1JacoFingersActionServer_1a809ce35a92032be0b9e768fc29fd2cbf">stall_threshold_</link>;
+<link linkend="d7/de0/classjaco_1_1JacoFingersActionServer_1a402a46cdd8ce3ac114cdd9f6e048f0e2">79 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">double</emphasis>&#32;<link linkend="d7/de0/classjaco_1_1JacoFingersActionServer_1a402a46cdd8ce3ac114cdd9f6e048f0e2">rate_hz_</link>;
+<link linkend="d7/de0/classjaco_1_1JacoFingersActionServer_1ad02d71429e1d137cb9fbd47cef703737">80 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">float</emphasis>&#32;<link linkend="d7/de0/classjaco_1_1JacoFingersActionServer_1ad02d71429e1d137cb9fbd47cef703737">tolerance_</link>;
+81 };
+82 
+83 }&#32;&#32;<emphasis class="comment">//&#32;namespace&#32;jaco</emphasis>
+84 <emphasis class="preprocessor">#endif&#32;&#32;//&#32;JACO_DRIVER_JACO_FINGERS_ACTION_H</emphasis>
+    </computeroutput></literallayout>
+</section>

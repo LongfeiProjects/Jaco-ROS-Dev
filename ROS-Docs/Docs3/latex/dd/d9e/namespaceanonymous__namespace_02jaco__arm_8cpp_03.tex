@@ -1,0 +1,69 @@
+\hypertarget{namespaceanonymous__namespace_02jaco__arm_8cpp_03}{}\section{anonymous\+\_\+namespace\{jaco\+\_\+arm.\+cpp\} Namespace Reference}
+\label{namespaceanonymous__namespace_02jaco__arm_8cpp_03}\index{anonymous\+\_\+namespace\lcurly{}jaco\+\_\+arm.\+cpp\rcurly{}@{anonymous\+\_\+namespace\lcurly{}jaco\+\_\+arm.\+cpp\rcurly{}}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{namespaceanonymous__namespace_02jaco__arm_8cpp_03_a9f7f76b13899f576139e087e1c98e7e8}{convert\+Kin\+Deg} (double \&qd)
+\begin{DoxyCompactList}\small\item\em Convert Kinova-\/specific angle degree variations (0..180, 360-\/181) to a more regular representation (0..180, -\/180..0). \end{DoxyCompactList}\item 
+void \hyperlink{namespaceanonymous__namespace_02jaco__arm_8cpp_03_aea041ba3dd96c1c67a3bcaf95fe8f6f9}{convert\+Kin\+Deg} (std\+::vector$<$ double $>$ \&qds)
+\item 
+void \hyperlink{namespaceanonymous__namespace_02jaco__arm_8cpp_03_a048a0e37d623243283fd93360d041e2b}{convert\+Kin\+Deg} (geometry\+\_\+msgs\+::\+Vector3 \&qds)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{anonymous\+\_\+namespace\lcurly{}jaco\+\_\+arm.\+cpp\rcurly{}@{anonymous\+\_\+namespace\lcurly{}jaco\+\_\+arm.\+cpp\rcurly{}}!convert\+Kin\+Deg@{convert\+Kin\+Deg}}
+\index{convert\+Kin\+Deg@{convert\+Kin\+Deg}!anonymous\+\_\+namespace\lcurly{}jaco\+\_\+arm.\+cpp\rcurly{}@{anonymous\+\_\+namespace\lcurly{}jaco\+\_\+arm.\+cpp\rcurly{}}}
+\subsubsection[{\texorpdfstring{convert\+Kin\+Deg(double \&qd)}{convertKinDeg(double &qd)}}]{\setlength{\rightskip}{0pt plus 5cm}void anonymous\+\_\+namespace\{jaco\+\_\+arm.\+cpp\}\+::convert\+Kin\+Deg (
+\begin{DoxyParamCaption}
+\item[{double \&}]{qd}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{namespaceanonymous__namespace_02jaco__arm_8cpp_03_a9f7f76b13899f576139e087e1c98e7e8}{}\label{namespaceanonymous__namespace_02jaco__arm_8cpp_03_a9f7f76b13899f576139e087e1c98e7e8}
+
+
+Convert Kinova-\/specific angle degree variations (0..180, 360-\/181) to a more regular representation (0..180, -\/180..0). 
+
+
+\begin{DoxyCode}
+21     \{
+22         \textcolor{keyword}{static} \textcolor{keyword}{const} \textcolor{keywordtype}{double} PI\_180 = (\hyperlink{jaco__arm_8cpp_a598a3330b3c21701223ee0ca14316eca}{PI} / 180.0);
+23 
+24         \textcolor{comment}{// Angle velocities from the API are 0..180 for positive values,}
+25         \textcolor{comment}{// and 360..181 for negative ones, in a kind of 2-complement setup.}
+26         \textcolor{keywordflow}{if} (qd > 180.0) \{
+27             qd -= 360.0;
+28         \}
+29         qd *= PI\_180;
+30     \}
+\end{DoxyCode}
+\index{anonymous\+\_\+namespace\lcurly{}jaco\+\_\+arm.\+cpp\rcurly{}@{anonymous\+\_\+namespace\lcurly{}jaco\+\_\+arm.\+cpp\rcurly{}}!convert\+Kin\+Deg@{convert\+Kin\+Deg}}
+\index{convert\+Kin\+Deg@{convert\+Kin\+Deg}!anonymous\+\_\+namespace\lcurly{}jaco\+\_\+arm.\+cpp\rcurly{}@{anonymous\+\_\+namespace\lcurly{}jaco\+\_\+arm.\+cpp\rcurly{}}}
+\subsubsection[{\texorpdfstring{convert\+Kin\+Deg(std\+::vector$<$ double $>$ \&qds)}{convertKinDeg(std::vector< double > &qds)}}]{\setlength{\rightskip}{0pt plus 5cm}void anonymous\+\_\+namespace\{jaco\+\_\+arm.\+cpp\}\+::convert\+Kin\+Deg (
+\begin{DoxyParamCaption}
+\item[{std\+::vector$<$ double $>$ \&}]{qds}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{namespaceanonymous__namespace_02jaco__arm_8cpp_03_aea041ba3dd96c1c67a3bcaf95fe8f6f9}{}\label{namespaceanonymous__namespace_02jaco__arm_8cpp_03_aea041ba3dd96c1c67a3bcaf95fe8f6f9}
+
+\begin{DoxyCode}
+33     \{
+34         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < qds.size(); ++i) \{
+35             \textcolor{keywordtype}{double}& qd = qds[i];
+36             \hyperlink{namespaceanonymous__namespace_02jaco__arm_8cpp_03_a048a0e37d623243283fd93360d041e2b}{convertKinDeg}(qd);
+37         \}
+38     \}
+\end{DoxyCode}
+\index{anonymous\+\_\+namespace\lcurly{}jaco\+\_\+arm.\+cpp\rcurly{}@{anonymous\+\_\+namespace\lcurly{}jaco\+\_\+arm.\+cpp\rcurly{}}!convert\+Kin\+Deg@{convert\+Kin\+Deg}}
+\index{convert\+Kin\+Deg@{convert\+Kin\+Deg}!anonymous\+\_\+namespace\lcurly{}jaco\+\_\+arm.\+cpp\rcurly{}@{anonymous\+\_\+namespace\lcurly{}jaco\+\_\+arm.\+cpp\rcurly{}}}
+\subsubsection[{\texorpdfstring{convert\+Kin\+Deg(geometry\+\_\+msgs\+::\+Vector3 \&qds)}{convertKinDeg(geometry_msgs::Vector3 &qds)}}]{\setlength{\rightskip}{0pt plus 5cm}void anonymous\+\_\+namespace\{jaco\+\_\+arm.\+cpp\}\+::convert\+Kin\+Deg (
+\begin{DoxyParamCaption}
+\item[{geometry\+\_\+msgs\+::\+Vector3 \&}]{qds}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{namespaceanonymous__namespace_02jaco__arm_8cpp_03_a048a0e37d623243283fd93360d041e2b}{}\label{namespaceanonymous__namespace_02jaco__arm_8cpp_03_a048a0e37d623243283fd93360d041e2b}
+
+\begin{DoxyCode}
+41     \{
+42         \hyperlink{namespaceanonymous__namespace_02jaco__arm_8cpp_03_a048a0e37d623243283fd93360d041e2b}{convertKinDeg}(qds.x);
+43         \hyperlink{namespaceanonymous__namespace_02jaco__arm_8cpp_03_a048a0e37d623243283fd93360d041e2b}{convertKinDeg}(qds.y);
+44         \hyperlink{namespaceanonymous__namespace_02jaco__arm_8cpp_03_a048a0e37d623243283fd93360d041e2b}{convertKinDeg}(qds.z);
+45     \}
+\end{DoxyCode}

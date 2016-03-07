@@ -1,0 +1,165 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="d5/dd2/jaco__angles__action_8cpp">
+    <title>jaco_angles_action.cpp File Reference</title>
+    <programlisting>#include &lt;kinova/KinovaTypes.h&gt;</programlisting>
+    <programlisting>#include &quot;jaco_driver/jaco_angles_action.h&quot;</programlisting>
+    <programlisting>#include &quot;jaco_driver/jaco_types.h&quot;</programlisting>
+<para>Include dependency diagram for jaco_angles_action.cpp</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../d9/d85/jaco__angles__action_8cpp__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Included by dependency diagram for jaco_angles_action.cpp</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../da/d1c/jaco__angles__action_8cpp__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+        <simplesect>
+            <title> Namespaces </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d4/d3c/namespacejaco">jaco</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+    <simplesect>
+        <title>Detailed Description</title>
+    <para>Definition in file D:/Longfei/Desktop/catkin_KinovaROS/src/jaco-ros/jaco_driver/src/jaco_angles_action.cpp</para>
+    </simplesect>
+    <literallayout><computeroutput>
+1 
+47 <emphasis class="preprocessor">#include&#32;&lt;<link linkend="df/d36/KinovaTypes_8h">kinova/KinovaTypes.h</link>&gt;</emphasis>
+48 
+49 <emphasis class="preprocessor">#include&#32;&quot;<link linkend="d2/d16/jaco__angles__action_8h">jaco_driver/jaco_angles_action.h</link>&quot;</emphasis>
+50 
+51 <emphasis class="preprocessor">#include&#32;&quot;<link linkend="d7/d98/jaco__types_8h">jaco_driver/jaco_types.h</link>&quot;</emphasis>
+52 
+53 
+<link linkend="d4/d3c/namespacejaco">54 </link><emphasis class="keyword">namespace&#32;</emphasis><link linkend="d4/d3c/namespacejaco">jaco</link>
+55 {
+56 
+<link linkend="d8/d82/classjaco_1_1JacoAnglesActionServer_1a53ddba342c38bb3d9cf34ad773d7189f">57 </link><link linkend="d8/d82/classjaco_1_1JacoAnglesActionServer_1a53ddba342c38bb3d9cf34ad773d7189f">JacoAnglesActionServer::JacoAnglesActionServer</link>(<link linkend="d5/d2b/classjaco_1_1JacoComm">JacoComm</link>&#32;&amp;arm_comm,&#32;<emphasis class="keyword">const</emphasis>&#32;ros::NodeHandle&#32;&amp;nh)
+58 &#32;&#32;&#32;&#32;:&#32;arm_comm_(arm_comm),
+59 &#32;&#32;&#32;&#32;&#32;&#32;node_handle_(nh,&#32;<emphasis class="stringliteral">&quot;joint_angles&quot;</emphasis>),
+60 &#32;&#32;&#32;&#32;&#32;&#32;action_server_(node_handle_,&#32;<emphasis class="stringliteral">&quot;arm_joint_angles&quot;</emphasis>,
+61 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;boost::bind(&amp;<link linkend="d8/d82/classjaco_1_1JacoAnglesActionServer">JacoAnglesActionServer</link>::actionCallback,&#32;this,&#32;_1),&#32;false)
+62 {
+63 &#32;&#32;&#32;&#32;<emphasis class="keywordtype">double</emphasis>&#32;tolerance;
+64 &#32;&#32;&#32;&#32;<link linkend="d8/d82/classjaco_1_1JacoAnglesActionServer_1a9d3d8137fef5e34ffb99c8cc1c6e9e17">node_handle_</link>.param&lt;<emphasis class="keywordtype">double</emphasis>&gt;(<emphasis class="stringliteral">&quot;stall_interval_seconds&quot;</emphasis>,&#32;<link linkend="d8/d82/classjaco_1_1JacoAnglesActionServer_1a2bf773e52f5d3751001415e8121fe276">stall_interval_seconds_</link>,&#32;0.5);
+65 &#32;&#32;&#32;&#32;<link linkend="d8/d82/classjaco_1_1JacoAnglesActionServer_1a9d3d8137fef5e34ffb99c8cc1c6e9e17">node_handle_</link>.param&lt;<emphasis class="keywordtype">double</emphasis>&gt;(<emphasis class="stringliteral">&quot;stall_threshold&quot;</emphasis>,&#32;<link linkend="d8/d82/classjaco_1_1JacoAnglesActionServer_1a7372c88107de61bb149cea6a60932f71">stall_threshold_</link>,&#32;1.0);
+66 &#32;&#32;&#32;&#32;<link linkend="d8/d82/classjaco_1_1JacoAnglesActionServer_1a9d3d8137fef5e34ffb99c8cc1c6e9e17">node_handle_</link>.param&lt;<emphasis class="keywordtype">double</emphasis>&gt;(<emphasis class="stringliteral">&quot;rate_hz&quot;</emphasis>,&#32;<link linkend="d8/d82/classjaco_1_1JacoAnglesActionServer_1aba435023cc4e95378e8c77333bef1ccf">rate_hz_</link>,&#32;10.0);
+67 &#32;&#32;&#32;&#32;<link linkend="d8/d82/classjaco_1_1JacoAnglesActionServer_1a9d3d8137fef5e34ffb99c8cc1c6e9e17">node_handle_</link>.param&lt;<emphasis class="keywordtype">double</emphasis>&gt;(<emphasis class="stringliteral">&quot;tolerance&quot;</emphasis>,&#32;tolerance,&#32;2.0);
+68 &#32;&#32;&#32;&#32;<link linkend="d8/d82/classjaco_1_1JacoAnglesActionServer_1acc1edd1f538d1bf9c05c91c94a4abfa1">tolerance_</link>&#32;=&#32;(float)tolerance;
+69 
+70 &#32;&#32;&#32;&#32;<link linkend="d8/d82/classjaco_1_1JacoAnglesActionServer_1a29d204d1bff466987e69761085a3c532">action_server_</link>.start();
+71 }
+72 
+73 
+<link linkend="d8/d82/classjaco_1_1JacoAnglesActionServer_1a6d6ed0c99c45e1eebab14bba3233580e">74 </link><link linkend="d8/d82/classjaco_1_1JacoAnglesActionServer_1a6d6ed0c99c45e1eebab14bba3233580e">JacoAnglesActionServer::~JacoAnglesActionServer</link>()
+75 {
+76 }
+77 
+78 
+<link linkend="d8/d82/classjaco_1_1JacoAnglesActionServer_1a3a3da8fd412f2311534246d2287a5b90">79 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="d8/d82/classjaco_1_1JacoAnglesActionServer_1a3a3da8fd412f2311534246d2287a5b90">JacoAnglesActionServer::actionCallback</link>(<emphasis class="keyword">const</emphasis>&#32;<link linkend="d7/dba/namespacejaco__msgs_1a9056d2fb29e6973f6db43a60138ffc7c">jaco_msgs::ArmJointAnglesGoalConstPtr</link>&#32;&amp;goal)
+80 {
+81 &#32;&#32;&#32;&#32;<link linkend="d8/dcc/structjaco__msgs_1_1ArmJointAnglesFeedback__">jaco_msgs::ArmJointAnglesFeedback</link>&#32;feedback;
+82 &#32;&#32;&#32;&#32;<link linkend="d1/db5/structjaco__msgs_1_1ArmJointAnglesResult__">jaco_msgs::ArmJointAnglesResult</link>&#32;<link linkend="db/dfe/Kinova_8API_8CommLayerUbuntu_8h_1a900dac90961bada00f57c207562a6a9a">result</link>;
+83 &#32;&#32;&#32;&#32;<link linkend="d4/de6/classjaco_1_1JacoAngles">JacoAngles</link>&#32;current_joint_angles;
+84 &#32;&#32;&#32;&#32;ros::Time&#32;current_time&#32;=&#32;ros::Time::now();
+85 
+86 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">try</emphasis>
+87 &#32;&#32;&#32;&#32;{
+88 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="d8/d82/classjaco_1_1JacoAnglesActionServer_1a72ed0ccae4532199d387cc3bfe278cb0">arm_comm_</link>.<link linkend="d5/d2b/classjaco_1_1JacoComm_1a5fcb23bf6925a82f2ab5e42460ea3834">getJointAngles</link>(current_joint_angles);
+89 
+90 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(<link linkend="d8/d82/classjaco_1_1JacoAnglesActionServer_1a72ed0ccae4532199d387cc3bfe278cb0">arm_comm_</link>.<link linkend="d5/d2b/classjaco_1_1JacoComm_1a872b8033cda5a9fe4ccdca2e89aa03d1">isStopped</link>())
+91 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+92 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ROS_INFO(<emphasis class="stringliteral">&quot;Could&#32;not&#32;complete&#32;joint&#32;angle&#32;action&#32;because&#32;the&#32;arm&#32;is&#32;&apos;stopped&apos;.&quot;</emphasis>);
+93 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;result.<link linkend="d1/db5/structjaco__msgs_1_1ArmJointAnglesResult___1a5b6fe64a0d822194474af38863a9f8a2">angles</link>&#32;=&#32;current_joint_angles.<link linkend="d4/de6/classjaco_1_1JacoAngles_1a29e69c52bf777084006965f9edcdcd9d">constructAnglesMsg</link>();
+94 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="d8/d82/classjaco_1_1JacoAnglesActionServer_1a29d204d1bff466987e69761085a3c532">action_server_</link>.setAborted(result);
+95 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">return</emphasis>;
+96 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+97 
+98 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="d8/d82/classjaco_1_1JacoAnglesActionServer_1afca8c9e29d0249737632a232e149400d">last_nonstall_time_</link>&#32;=&#32;current_time;
+99 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="d8/d82/classjaco_1_1JacoAnglesActionServer_1adb99422d834b8a2fa5f26ddd3ac95e52">last_nonstall_angles_</link>&#32;=&#32;current_joint_angles;
+100 
+101 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="d4/de6/classjaco_1_1JacoAngles">JacoAngles</link>&#32;target(goal-&gt;angles);
+102 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="d8/d82/classjaco_1_1JacoAnglesActionServer_1a72ed0ccae4532199d387cc3bfe278cb0">arm_comm_</link>.<link linkend="d5/d2b/classjaco_1_1JacoComm_1ad53fa0c190d41da8430de2e9bf997f05">setJointAngles</link>(target);
+103 
+104 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;Loop&#32;until&#32;the&#32;action&#32;completed,&#32;is&#32;preempted,&#32;or&#32;fails&#32;in&#32;some&#32;way.</emphasis>
+105 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;timeout&#32;is&#32;left&#32;to&#32;the&#32;caller&#32;since&#32;the&#32;timeout&#32;may&#32;greatly&#32;depend&#32;on</emphasis>
+106 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;the&#32;context&#32;of&#32;the&#32;movement.</emphasis>
+107 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">while</emphasis>&#32;(<emphasis class="keyword">true</emphasis>)
+108 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+109 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ros::spinOnce();
+110 
+111 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(<link linkend="d8/d82/classjaco_1_1JacoAnglesActionServer_1a29d204d1bff466987e69761085a3c532">action_server_</link>.isPreemptRequested()&#32;||&#32;!ros::ok())
+112 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+113 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;result.<link linkend="d1/db5/structjaco__msgs_1_1ArmJointAnglesResult___1a5b6fe64a0d822194474af38863a9f8a2">angles</link>&#32;=&#32;current_joint_angles.<link linkend="d4/de6/classjaco_1_1JacoAngles_1a29e69c52bf777084006965f9edcdcd9d">constructAnglesMsg</link>();
+114 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="d8/d82/classjaco_1_1JacoAnglesActionServer_1a72ed0ccae4532199d387cc3bfe278cb0">arm_comm_</link>.<link linkend="d5/d2b/classjaco_1_1JacoComm_1a54862830cd6414ae3ae48e46e54bf798">stopAPI</link>();
+115 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="d8/d82/classjaco_1_1JacoAnglesActionServer_1a72ed0ccae4532199d387cc3bfe278cb0">arm_comm_</link>.<link linkend="d5/d2b/classjaco_1_1JacoComm_1a6b2a1fabc4e6c30da42c9a5e26757398">startAPI</link>();
+116 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="d8/d82/classjaco_1_1JacoAnglesActionServer_1a29d204d1bff466987e69761085a3c532">action_server_</link>.setPreempted(result);
+117 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">return</emphasis>;
+118 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+119 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">else</emphasis>&#32;<emphasis class="keywordflow">if</emphasis>&#32;(<link linkend="d8/d82/classjaco_1_1JacoAnglesActionServer_1a72ed0ccae4532199d387cc3bfe278cb0">arm_comm_</link>.<link linkend="d5/d2b/classjaco_1_1JacoComm_1a872b8033cda5a9fe4ccdca2e89aa03d1">isStopped</link>())
+120 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+121 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;result.<link linkend="d1/db5/structjaco__msgs_1_1ArmJointAnglesResult___1a5b6fe64a0d822194474af38863a9f8a2">angles</link>&#32;=&#32;current_joint_angles.<link linkend="d4/de6/classjaco_1_1JacoAngles_1a29e69c52bf777084006965f9edcdcd9d">constructAnglesMsg</link>();
+122 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="d8/d82/classjaco_1_1JacoAnglesActionServer_1a29d204d1bff466987e69761085a3c532">action_server_</link>.setAborted(result);
+123 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">return</emphasis>;
+124 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+125 
+126 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="d8/d82/classjaco_1_1JacoAnglesActionServer_1a72ed0ccae4532199d387cc3bfe278cb0">arm_comm_</link>.<link linkend="d5/d2b/classjaco_1_1JacoComm_1a5fcb23bf6925a82f2ab5e42460ea3834">getJointAngles</link>(current_joint_angles);
+127 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;current_time&#32;=&#32;ros::Time::now();
+128 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;feedback.<link linkend="d8/dcc/structjaco__msgs_1_1ArmJointAnglesFeedback___1a5b3d327fd594aa0715666bf1c95359e4">angles</link>&#32;=&#32;current_joint_angles.<link linkend="d4/de6/classjaco_1_1JacoAngles_1a29e69c52bf777084006965f9edcdcd9d">constructAnglesMsg</link>();
+129 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="d8/d82/classjaco_1_1JacoAnglesActionServer_1a29d204d1bff466987e69761085a3c532">action_server_</link>.publishFeedback(feedback);
+130 
+131 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(target.<link linkend="d4/de6/classjaco_1_1JacoAngles_1aff68997afe0dac41e4c777b649c2b5d4">isCloseToOther</link>(current_joint_angles,&#32;<link linkend="d8/d82/classjaco_1_1JacoAnglesActionServer_1acc1edd1f538d1bf9c05c91c94a4abfa1">tolerance_</link>))
+132 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+133 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;Check&#32;if&#32;the&#32;action&#32;has&#32;succeeeded</emphasis>
+134 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;result.<link linkend="d1/db5/structjaco__msgs_1_1ArmJointAnglesResult___1a5b6fe64a0d822194474af38863a9f8a2">angles</link>&#32;=&#32;current_joint_angles.<link linkend="d4/de6/classjaco_1_1JacoAngles_1a29e69c52bf777084006965f9edcdcd9d">constructAnglesMsg</link>();
+135 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="d8/d82/classjaco_1_1JacoAnglesActionServer_1a29d204d1bff466987e69761085a3c532">action_server_</link>.setSucceeded(result);
+136 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">return</emphasis>;
+137 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+138 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">else</emphasis>&#32;<emphasis class="keywordflow">if</emphasis>&#32;(!<link linkend="d8/d82/classjaco_1_1JacoAnglesActionServer_1adb99422d834b8a2fa5f26ddd3ac95e52">last_nonstall_angles_</link>.<link linkend="d4/de6/classjaco_1_1JacoAngles_1aff68997afe0dac41e4c777b649c2b5d4">isCloseToOther</link>(current_joint_angles,&#32;<link linkend="d8/d82/classjaco_1_1JacoAnglesActionServer_1a7372c88107de61bb149cea6a60932f71">stall_threshold_</link>))
+139 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+140 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;Check&#32;if&#32;we&#32;are&#32;outside&#32;of&#32;a&#32;potential&#32;stall&#32;condition</emphasis>
+141 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="d8/d82/classjaco_1_1JacoAnglesActionServer_1afca8c9e29d0249737632a232e149400d">last_nonstall_time_</link>&#32;=&#32;current_time;
+142 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="d8/d82/classjaco_1_1JacoAnglesActionServer_1adb99422d834b8a2fa5f26ddd3ac95e52">last_nonstall_angles_</link>&#32;=&#32;current_joint_angles;
+143 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+144 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">else</emphasis>&#32;<emphasis class="keywordflow">if</emphasis>&#32;((current_time&#32;-&#32;<link linkend="d8/d82/classjaco_1_1JacoAnglesActionServer_1afca8c9e29d0249737632a232e149400d">last_nonstall_time_</link>).toSec()&#32;&gt;&#32;<link linkend="d8/d82/classjaco_1_1JacoAnglesActionServer_1a2bf773e52f5d3751001415e8121fe276">stall_interval_seconds_</link>)
+145 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+146 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;Check&#32;if&#32;the&#32;full&#32;stall&#32;condition&#32;has&#32;been&#32;meet</emphasis>
+147 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;result.<link linkend="d1/db5/structjaco__msgs_1_1ArmJointAnglesResult___1a5b6fe64a0d822194474af38863a9f8a2">angles</link>&#32;=&#32;current_joint_angles.<link linkend="d4/de6/classjaco_1_1JacoAngles_1a29e69c52bf777084006965f9edcdcd9d">constructAnglesMsg</link>();
+148 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="d8/d82/classjaco_1_1JacoAnglesActionServer_1a72ed0ccae4532199d387cc3bfe278cb0">arm_comm_</link>.<link linkend="d5/d2b/classjaco_1_1JacoComm_1a54862830cd6414ae3ae48e46e54bf798">stopAPI</link>();
+149 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="d8/d82/classjaco_1_1JacoAnglesActionServer_1a72ed0ccae4532199d387cc3bfe278cb0">arm_comm_</link>.<link linkend="d5/d2b/classjaco_1_1JacoComm_1a6b2a1fabc4e6c30da42c9a5e26757398">startAPI</link>();
+150 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="d8/d82/classjaco_1_1JacoAnglesActionServer_1a29d204d1bff466987e69761085a3c532">action_server_</link>.setPreempted(result);
+151 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">return</emphasis>;
+152 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+153 
+154 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ros::Rate(<link linkend="d8/d82/classjaco_1_1JacoAnglesActionServer_1aba435023cc4e95378e8c77333bef1ccf">rate_hz_</link>).sleep();
+155 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+156 &#32;&#32;&#32;&#32;}
+157 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">catch</emphasis>(<emphasis class="keyword">const</emphasis>&#32;std::exception&amp;&#32;<link linkend="df/dc0/namespace__setup__util_1acdce690b925de33d6249bbbfa1109d61">e</link>)
+158 &#32;&#32;&#32;&#32;{
+159 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;result.<link linkend="d1/db5/structjaco__msgs_1_1ArmJointAnglesResult___1a5b6fe64a0d822194474af38863a9f8a2">angles</link>&#32;=&#32;current_joint_angles.<link linkend="d4/de6/classjaco_1_1JacoAngles_1a29e69c52bf777084006965f9edcdcd9d">constructAnglesMsg</link>();
+160 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ROS_ERROR_STREAM(e.what());
+161 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="d8/d82/classjaco_1_1JacoAnglesActionServer_1a29d204d1bff466987e69761085a3c532">action_server_</link>.setAborted(result);
+162 &#32;&#32;&#32;&#32;}
+163 }
+164 
+165 }&#32;&#32;<emphasis class="comment">//&#32;namespace&#32;jaco</emphasis>
+    </computeroutput></literallayout>
+</section>

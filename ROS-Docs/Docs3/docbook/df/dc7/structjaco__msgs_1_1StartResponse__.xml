@@ -1,0 +1,130 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="df/dc7/structjaco__msgs_1_1StartResponse__">
+<title>jaco_msgs::StartResponse_ struct Reference</title>
+<para>
+    <programlisting>#include <link linkend="d2/d22/StartResponse_8h">&quot;StartResponse.h&quot;</link></programlisting>
+</para>
+<para>Inheritance diagram for jaco_msgs::StartResponse_</para>
+<para>
+    <figure>
+        <title>Inheritance graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../d1/dd1/structjaco__msgs_1_1StartResponse____inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Collaboration diagram for jaco_msgs::StartResponse_</para>
+<para>
+    <figure>
+        <title>Collaboration graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../d8/df3/structjaco__msgs_1_1StartResponse____coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+    <templateparamlist>
+      <param>
+        <type>class</type>
+        <declname>ContainerAllocator</declname>
+        <defname>ContainerAllocator</defname>
+      </param>
+    </templateparamlist>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef std::basic_string&lt; char, std::char_traits&lt; char &gt;, typename ContainerAllocator::template rebind&lt; char &gt;::other &gt;  <link linkend="df/dc7/structjaco__msgs_1_1StartResponse___1a0aea3a55e33359c555d94d894579ea99">_start_result_type</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef boost::shared_ptr&lt; ::<link linkend="df/dc7/structjaco__msgs_1_1StartResponse__">jaco_msgs::StartResponse_</link>&lt; ContainerAllocator &gt; const  &gt;  <link linkend="df/dc7/structjaco__msgs_1_1StartResponse___1a2ad4ef5f394857ba9b607c778511026a">ConstPtr</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef boost::shared_ptr&lt; ::<link linkend="df/dc7/structjaco__msgs_1_1StartResponse__">jaco_msgs::StartResponse_</link>&lt; ContainerAllocator &gt; &gt;  <link linkend="df/dc7/structjaco__msgs_1_1StartResponse___1a43be1a318899d176a0b268c636d8069f">Ptr</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef <link linkend="df/dc7/structjaco__msgs_1_1StartResponse__">StartResponse_</link>&lt; ContainerAllocator &gt;  <link linkend="df/dc7/structjaco__msgs_1_1StartResponse___1a6b7e90130860f2df1fb0f6591bae9653">Type</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Public Attributes</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>boost::shared_ptr&lt; std::map&lt; std::string, std::string &gt; &gt; __connection_header</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>_start_result_type start_result</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="df/dc7/structjaco__msgs_1_1StartResponse___1aa3ae477565e8fa6190bc9b17b8fe6f0e">StartResponse_</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="df/dc7/structjaco__msgs_1_1StartResponse___1a85e1cbb91e89e66d8aab412172ebc4bc">StartResponse_</link> (
+const ContainerAllocator &amp; _alloc)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+            <section xml:id="df/dc7/structjaco__msgs_1_1StartResponse___1a0aea3a55e33359c555d94d894579ea99">
+                <title>typedef std::basic_string&lt;char, std::char_traits&lt;char&gt;, typename ContainerAllocator::template rebind&lt;char&gt;::other &gt; jaco_msgs::StartResponse_&lt; ContainerAllocator &gt;::_start_result_type</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="df/dc7/structjaco__msgs_1_1StartResponse___1a2ad4ef5f394857ba9b607c778511026a">
+                <title>typedef boost::shared_ptr&lt; ::jaco_msgs::StartResponse_&lt;ContainerAllocator&gt; const&gt; jaco_msgs::StartResponse_&lt; ContainerAllocator &gt;::ConstPtr</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="df/dc7/structjaco__msgs_1_1StartResponse___1a43be1a318899d176a0b268c636d8069f">
+                <title>typedef boost::shared_ptr&lt; ::jaco_msgs::StartResponse_&lt;ContainerAllocator&gt; &gt; jaco_msgs::StartResponse_&lt; ContainerAllocator &gt;::Ptr</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="df/dc7/structjaco__msgs_1_1StartResponse___1a6b7e90130860f2df1fb0f6591bae9653">
+                <title>typedef StartResponse_&lt;ContainerAllocator&gt; jaco_msgs::StartResponse_&lt; ContainerAllocator &gt;::Type</title> <emphasis></emphasis>
+                
+            </section>
+        <section>
+            <title>Member Data Documentation</title>
+        </section>
+            <section xml:id="df/dc7/structjaco__msgs_1_1StartResponse___1aa3ae477565e8fa6190bc9b17b8fe6f0e">
+                <title>jaco_msgs::StartResponse_&lt; ContainerAllocator &gt;::StartResponse_ ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="df/dc7/structjaco__msgs_1_1StartResponse___1a85e1cbb91e89e66d8aab412172ebc4bc">
+                <title>jaco_msgs::StartResponse_&lt; ContainerAllocator &gt;::StartResponse_ (const ContainerAllocator &amp;_alloc)</title> <emphasis></emphasis>
+                
+            </section>
+</section>

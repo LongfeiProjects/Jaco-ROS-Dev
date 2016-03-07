@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="db/d52/structros_1_1service__traits_1_1MD5Sum_3_01_1_1jaco__msgs_1_1StopRequest_01_4">
+<title>ros::service_traits::MD5Sum&lt; ::jaco_msgs::StopRequest &gt; struct Reference</title>
+<para>
+    <programlisting>#include <link linkend="d2/dae/Stop_8h">&quot;Stop.h&quot;</link></programlisting>
+</para>
+<para>Inheritance diagram for ros::service_traits::MD5Sum&lt; ::jaco_msgs::StopRequest &gt;</para>
+<para>
+    <figure>
+        <title>Inheritance graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../d3/d17/structros_1_1service__traits_1_1MD5Sum_3_01_1_1jaco__msgs_1_1StopRequest_01_4__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Collaboration diagram for ros::service_traits::MD5Sum&lt; ::jaco_msgs::StopRequest &gt;</para>
+<para>
+    <figure>
+        <title>Collaboration graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../db/d7f/structros_1_1service__traits_1_1MD5Sum_3_01_1_1jaco__msgs_1_1StopRequest_01_4__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+    <templateparamlist>
+    </templateparamlist>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static const char * <link linkend="db/d52/structros_1_1service__traits_1_1MD5Sum_3_01_1_1jaco__msgs_1_1StopRequest_01_4_1afbcc60409675ae14fb45125891fb0dbb">value</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static const char * <link linkend="db/d52/structros_1_1service__traits_1_1MD5Sum_3_01_1_1jaco__msgs_1_1StopRequest_01_4_1aa84058be2592bfb224625a00753f966b">value</link> (
+const ::<link linkend="d7/dba/namespacejaco__msgs_1a7f71a39d70d57c48cf1d0e67cb41d127">jaco_msgs::StopRequest</link> &amp; )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+            <section xml:id="db/d52/structros_1_1service__traits_1_1MD5Sum_3_01_1_1jaco__msgs_1_1StopRequest_01_4_1afbcc60409675ae14fb45125891fb0dbb">
+                <title>static const char* ros::service_traits::MD5Sum&lt; ::jaco_msgs::StopRequest &gt;::value ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="db/d52/structros_1_1service__traits_1_1MD5Sum_3_01_1_1jaco__msgs_1_1StopRequest_01_4_1aa84058be2592bfb224625a00753f966b">
+                <title>static const char* ros::service_traits::MD5Sum&lt; ::jaco_msgs::StopRequest &gt;::value (const ::jaco_msgs::StopRequest &amp;)</title> <emphasis></emphasis>
+                
+            </section>
+</section>

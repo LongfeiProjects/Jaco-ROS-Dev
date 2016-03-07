@@ -1,0 +1,626 @@
+.TH "jaco_msgs.msg._SetFingersPositionAction.SetFingersPositionAction" 3 "Thu Mar 3 2016" "Version 1.0.1" "Kinova-ROS" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+jaco_msgs.msg._SetFingersPositionAction.SetFingersPositionAction \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits Message\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "def \fB__init__\fP (self, args, kwds)"
+.br
+.ti -1c
+.RI "def \fBdeserialize\fP (self, str)"
+.br
+.ti -1c
+.RI "def \fBdeserialize_numpy\fP (self, str, numpy)"
+.br
+.ti -1c
+.RI "def \fBserialize\fP (self, buff)"
+.br
+.ti -1c
+.RI "def \fBserialize_numpy\fP (self, buff, numpy)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBaction_feedback\fP"
+.br
+.ti -1c
+.RI "\fBaction_goal\fP"
+.br
+.ti -1c
+.RI "\fBaction_result\fP"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "def \fB_get_types\fP (self)"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "list \fB__slots__\fP = ['\fBaction_goal\fP','\fBaction_result\fP','\fBaction_feedback\fP']"
+.br
+.ti -1c
+.RI "string \fB_full_text\fP"
+.br
+.ti -1c
+.RI "bool \fB_has_header\fP = False"
+.br
+.ti -1c
+.RI "string \fB_md5sum\fP = '81d84b11233a19b356267455d91f68ba'"
+.br
+.ti -1c
+.RI "list \fB_slot_types\fP = ['jaco_msgs/\fBSetFingersPositionActionGoal\fP','jaco_msgs/\fBSetFingersPositionActionResult\fP','jaco_msgs/\fBSetFingersPositionActionFeedback\fP']"
+.br
+.ti -1c
+.RI "string \fB_type\fP = 'jaco_msgs/\fBSetFingersPositionAction\fP'"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "def jaco_msgs\&.msg\&._SetFingersPositionAction\&.SetFingersPositionAction\&.__init__ ( self,  args,  kwds)"
+
+.PP
+.nf
+Constructor. Any message fields that are implicitly/explicitly
+set to None will be assigned a default value. The recommend
+use is keyword arguments as this is more robust to future message
+changes.  You cannot mix in-order arguments and keyword arguments.
+
+The available fields are:
+   action_goal,action_result,action_feedback
+
+:param args: complete set of field values, in .msg order
+:param kwds: use keyword arguments corresponding to message field names
+to set specific fields.
+
+.fi
+.PP
+ 
+.PP
+.nf
+132   def __init__(self, *args, **kwds):
+133     """
+134     Constructor\&. Any message fields that are implicitly/explicitly
+135     set to None will be assigned a default value\&. The recommend
+136     use is keyword arguments as this is more robust to future message
+137     changes\&.  You cannot mix in-order arguments and keyword arguments\&.
+138 
+139     The available fields are:
+140        action_goal,action_result,action_feedback
+141 
+142     :param args: complete set of field values, in \&.msg order
+143     :param kwds: use keyword arguments corresponding to message field names
+144     to set specific fields\&.
+145     """
+146     if args or kwds:
+147       super(SetFingersPositionAction, self)\&.__init__(*args, **kwds)
+148       #message fields cannot be None, assign default values for those that are
+149       if self\&.action_goal is None:
+150         self\&.action_goal = jaco_msgs\&.msg\&.SetFingersPositionActionGoal()
+151       if self\&.action_result is None:
+152         self\&.action_result = jaco_msgs\&.msg\&.SetFingersPositionActionResult()
+153       if self\&.action_feedback is None:
+154         self\&.action_feedback = jaco_msgs\&.msg\&.SetFingersPositionActionFeedback()
+155     else:
+156       self\&.action_goal = jaco_msgs\&.msg\&.SetFingersPositionActionGoal()
+157       self\&.action_result = jaco_msgs\&.msg\&.SetFingersPositionActionResult()
+158       self\&.action_feedback = jaco_msgs\&.msg\&.SetFingersPositionActionFeedback()
+159 
+.fi
+.SH "Member Function Documentation"
+.PP 
+.SS "def jaco_msgs\&.msg\&._SetFingersPositionAction\&.SetFingersPositionAction\&._get_types ( self)\fC [private]\fP"
+
+.PP
+.nf
+internal API method
+
+.fi
+.PP
+ 
+.PP
+.nf
+160   def _get_types(self):
+161     """
+162     internal API method
+163     """
+164     return self\&._slot_types
+165 
+.fi
+.SS "def jaco_msgs\&.msg\&._SetFingersPositionAction\&.SetFingersPositionAction\&.deserialize ( self,  str)"
+
+.PP
+.nf
+unpack serialized message in str into this message instance
+:param str: byte array of serialized message, ``str``
+
+.fi
+.PP
+ 
+.PP
+.nf
+239   def deserialize(self, str):
+240     """
+241     unpack serialized message in str into this message instance
+242     :param str: byte array of serialized message, ``str``
+243     """
+244     try:
+245       if self\&.action_goal is None:
+246         self\&.action_goal = jaco_msgs\&.msg\&.SetFingersPositionActionGoal()
+247       if self\&.action_result is None:
+248         self\&.action_result = jaco_msgs\&.msg\&.SetFingersPositionActionResult()
+249       if self\&.action_feedback is None:
+250         self\&.action_feedback = jaco_msgs\&.msg\&.SetFingersPositionActionFeedback()
+251       end = 0
+252       _x = self
+253       start = end
+254       end += 12
+255       (_x\&.action_goal\&.header\&.seq, _x\&.action_goal\&.header\&.stamp\&.secs, _x\&.action_goal\&.header\&.stamp\&.nsecs,) = _struct_3I\&.unpack(str[start:end])
+256       start = end
+257       end += 4
+258       (length,) = _struct_I\&.unpack(str[start:end])
+259       start = end
+260       end += length
+261       if python3:
+262         self\&.action_goal\&.header\&.frame_id = str[start:end]\&.decode('utf-8')
+263       else:
+264         self\&.action_goal\&.header\&.frame_id = str[start:end]
+265       _x = self
+266       start = end
+267       end += 8
+268       (_x\&.action_goal\&.goal_id\&.stamp\&.secs, _x\&.action_goal\&.goal_id\&.stamp\&.nsecs,) = _struct_2I\&.unpack(str[start:end])
+269       start = end
+270       end += 4
+271       (length,) = _struct_I\&.unpack(str[start:end])
+272       start = end
+273       end += length
+274       if python3:
+275         self\&.action_goal\&.goal_id\&.id = str[start:end]\&.decode('utf-8')
+276       else:
+277         self\&.action_goal\&.goal_id\&.id = str[start:end]
+278       _x = self
+279       start = end
+280       end += 24
+281       (_x\&.action_goal\&.goal\&.fingers\&.finger1, _x\&.action_goal\&.goal\&.fingers\&.finger2, _x\&.action_goal\&.goal\&.fingers\&.finger3, _x\&.action_result\&.header\&.seq, _x\&.action_result\&.header\&.stamp\&.secs, _x\&.action_result\&.header\&.stamp\&.nsecs,) = _struct_3f3I\&.unpack(str[start:end])
+282       start = end
+283       end += 4
+284       (length,) = _struct_I\&.unpack(str[start:end])
+285       start = end
+286       end += length
+287       if python3:
+288         self\&.action_result\&.header\&.frame_id = str[start:end]\&.decode('utf-8')
+289       else:
+290         self\&.action_result\&.header\&.frame_id = str[start:end]
+291       _x = self
+292       start = end
+293       end += 8
+294       (_x\&.action_result\&.status\&.goal_id\&.stamp\&.secs, _x\&.action_result\&.status\&.goal_id\&.stamp\&.nsecs,) = _struct_2I\&.unpack(str[start:end])
+295       start = end
+296       end += 4
+297       (length,) = _struct_I\&.unpack(str[start:end])
+298       start = end
+299       end += length
+300       if python3:
+301         self\&.action_result\&.status\&.goal_id\&.id = str[start:end]\&.decode('utf-8')
+302       else:
+303         self\&.action_result\&.status\&.goal_id\&.id = str[start:end]
+304       start = end
+305       end += 1
+306       (self\&.action_result\&.status\&.status,) = _struct_B\&.unpack(str[start:end])
+307       start = end
+308       end += 4
+309       (length,) = _struct_I\&.unpack(str[start:end])
+310       start = end
+311       end += length
+312       if python3:
+313         self\&.action_result\&.status\&.text = str[start:end]\&.decode('utf-8')
+314       else:
+315         self\&.action_result\&.status\&.text = str[start:end]
+316       _x = self
+317       start = end
+318       end += 24
+319       (_x\&.action_result\&.result\&.fingers\&.finger1, _x\&.action_result\&.result\&.fingers\&.finger2, _x\&.action_result\&.result\&.fingers\&.finger3, _x\&.action_feedback\&.header\&.seq, _x\&.action_feedback\&.header\&.stamp\&.secs, _x\&.action_feedback\&.header\&.stamp\&.nsecs,) = _struct_3f3I\&.unpack(str[start:end])
+320       start = end
+321       end += 4
+322       (length,) = _struct_I\&.unpack(str[start:end])
+323       start = end
+324       end += length
+325       if python3:
+326         self\&.action_feedback\&.header\&.frame_id = str[start:end]\&.decode('utf-8')
+327       else:
+328         self\&.action_feedback\&.header\&.frame_id = str[start:end]
+329       _x = self
+330       start = end
+331       end += 8
+332       (_x\&.action_feedback\&.status\&.goal_id\&.stamp\&.secs, _x\&.action_feedback\&.status\&.goal_id\&.stamp\&.nsecs,) = _struct_2I\&.unpack(str[start:end])
+333       start = end
+334       end += 4
+335       (length,) = _struct_I\&.unpack(str[start:end])
+336       start = end
+337       end += length
+338       if python3:
+339         self\&.action_feedback\&.status\&.goal_id\&.id = str[start:end]\&.decode('utf-8')
+340       else:
+341         self\&.action_feedback\&.status\&.goal_id\&.id = str[start:end]
+342       start = end
+343       end += 1
+344       (self\&.action_feedback\&.status\&.status,) = _struct_B\&.unpack(str[start:end])
+345       start = end
+346       end += 4
+347       (length,) = _struct_I\&.unpack(str[start:end])
+348       start = end
+349       end += length
+350       if python3:
+351         self\&.action_feedback\&.status\&.text = str[start:end]\&.decode('utf-8')
+352       else:
+353         self\&.action_feedback\&.status\&.text = str[start:end]
+354       _x = self
+355       start = end
+356       end += 12
+357       (_x\&.action_feedback\&.feedback\&.fingers\&.finger1, _x\&.action_feedback\&.feedback\&.fingers\&.finger2, _x\&.action_feedback\&.feedback\&.fingers\&.finger3,) = _struct_3f\&.unpack(str[start:end])
+358       return self
+359     except struct\&.error as e:
+360       raise genpy\&.DeserializationError(e) #most likely buffer underfill
+361 
+362 
+.fi
+.SS "def jaco_msgs\&.msg\&._SetFingersPositionAction\&.SetFingersPositionAction\&.deserialize_numpy ( self,  str,  numpy)"
+
+.PP
+.nf
+unpack serialized message in str into this message instance using numpy for array types
+:param str: byte array of serialized message, ``str``
+:param numpy: numpy python module
+
+.fi
+.PP
+ 
+.PP
+.nf
+437   def deserialize_numpy(self, str, numpy):
+438     """
+439     unpack serialized message in str into this message instance using numpy for array types
+440     :param str: byte array of serialized message, ``str``
+441     :param numpy: numpy python module
+442     """
+443     try:
+444       if self\&.action_goal is None:
+445         self\&.action_goal = jaco_msgs\&.msg\&.SetFingersPositionActionGoal()
+446       if self\&.action_result is None:
+447         self\&.action_result = jaco_msgs\&.msg\&.SetFingersPositionActionResult()
+448       if self\&.action_feedback is None:
+449         self\&.action_feedback = jaco_msgs\&.msg\&.SetFingersPositionActionFeedback()
+450       end = 0
+451       _x = self
+452       start = end
+453       end += 12
+454       (_x\&.action_goal\&.header\&.seq, _x\&.action_goal\&.header\&.stamp\&.secs, _x\&.action_goal\&.header\&.stamp\&.nsecs,) = _struct_3I\&.unpack(str[start:end])
+455       start = end
+456       end += 4
+457       (length,) = _struct_I\&.unpack(str[start:end])
+458       start = end
+459       end += length
+460       if python3:
+461         self\&.action_goal\&.header\&.frame_id = str[start:end]\&.decode('utf-8')
+462       else:
+463         self\&.action_goal\&.header\&.frame_id = str[start:end]
+464       _x = self
+465       start = end
+466       end += 8
+467       (_x\&.action_goal\&.goal_id\&.stamp\&.secs, _x\&.action_goal\&.goal_id\&.stamp\&.nsecs,) = _struct_2I\&.unpack(str[start:end])
+468       start = end
+469       end += 4
+470       (length,) = _struct_I\&.unpack(str[start:end])
+471       start = end
+472       end += length
+473       if python3:
+474         self\&.action_goal\&.goal_id\&.id = str[start:end]\&.decode('utf-8')
+475       else:
+476         self\&.action_goal\&.goal_id\&.id = str[start:end]
+477       _x = self
+478       start = end
+479       end += 24
+480       (_x\&.action_goal\&.goal\&.fingers\&.finger1, _x\&.action_goal\&.goal\&.fingers\&.finger2, _x\&.action_goal\&.goal\&.fingers\&.finger3, _x\&.action_result\&.header\&.seq, _x\&.action_result\&.header\&.stamp\&.secs, _x\&.action_result\&.header\&.stamp\&.nsecs,) = _struct_3f3I\&.unpack(str[start:end])
+481       start = end
+482       end += 4
+483       (length,) = _struct_I\&.unpack(str[start:end])
+484       start = end
+485       end += length
+486       if python3:
+487         self\&.action_result\&.header\&.frame_id = str[start:end]\&.decode('utf-8')
+488       else:
+489         self\&.action_result\&.header\&.frame_id = str[start:end]
+490       _x = self
+491       start = end
+492       end += 8
+493       (_x\&.action_result\&.status\&.goal_id\&.stamp\&.secs, _x\&.action_result\&.status\&.goal_id\&.stamp\&.nsecs,) = _struct_2I\&.unpack(str[start:end])
+494       start = end
+495       end += 4
+496       (length,) = _struct_I\&.unpack(str[start:end])
+497       start = end
+498       end += length
+499       if python3:
+500         self\&.action_result\&.status\&.goal_id\&.id = str[start:end]\&.decode('utf-8')
+501       else:
+502         self\&.action_result\&.status\&.goal_id\&.id = str[start:end]
+503       start = end
+504       end += 1
+505       (self\&.action_result\&.status\&.status,) = _struct_B\&.unpack(str[start:end])
+506       start = end
+507       end += 4
+508       (length,) = _struct_I\&.unpack(str[start:end])
+509       start = end
+510       end += length
+511       if python3:
+512         self\&.action_result\&.status\&.text = str[start:end]\&.decode('utf-8')
+513       else:
+514         self\&.action_result\&.status\&.text = str[start:end]
+515       _x = self
+516       start = end
+517       end += 24
+518       (_x\&.action_result\&.result\&.fingers\&.finger1, _x\&.action_result\&.result\&.fingers\&.finger2, _x\&.action_result\&.result\&.fingers\&.finger3, _x\&.action_feedback\&.header\&.seq, _x\&.action_feedback\&.header\&.stamp\&.secs, _x\&.action_feedback\&.header\&.stamp\&.nsecs,) = _struct_3f3I\&.unpack(str[start:end])
+519       start = end
+520       end += 4
+521       (length,) = _struct_I\&.unpack(str[start:end])
+522       start = end
+523       end += length
+524       if python3:
+525         self\&.action_feedback\&.header\&.frame_id = str[start:end]\&.decode('utf-8')
+526       else:
+527         self\&.action_feedback\&.header\&.frame_id = str[start:end]
+528       _x = self
+529       start = end
+530       end += 8
+531       (_x\&.action_feedback\&.status\&.goal_id\&.stamp\&.secs, _x\&.action_feedback\&.status\&.goal_id\&.stamp\&.nsecs,) = _struct_2I\&.unpack(str[start:end])
+532       start = end
+533       end += 4
+534       (length,) = _struct_I\&.unpack(str[start:end])
+535       start = end
+536       end += length
+537       if python3:
+538         self\&.action_feedback\&.status\&.goal_id\&.id = str[start:end]\&.decode('utf-8')
+539       else:
+540         self\&.action_feedback\&.status\&.goal_id\&.id = str[start:end]
+541       start = end
+542       end += 1
+543       (self\&.action_feedback\&.status\&.status,) = _struct_B\&.unpack(str[start:end])
+544       start = end
+545       end += 4
+546       (length,) = _struct_I\&.unpack(str[start:end])
+547       start = end
+548       end += length
+549       if python3:
+550         self\&.action_feedback\&.status\&.text = str[start:end]\&.decode('utf-8')
+551       else:
+552         self\&.action_feedback\&.status\&.text = str[start:end]
+553       _x = self
+554       start = end
+555       end += 12
+556       (_x\&.action_feedback\&.feedback\&.fingers\&.finger1, _x\&.action_feedback\&.feedback\&.fingers\&.finger2, _x\&.action_feedback\&.feedback\&.fingers\&.finger3,) = _struct_3f\&.unpack(str[start:end])
+557       return self
+558     except struct\&.error as e:
+559       raise genpy\&.DeserializationError(e) #most likely buffer underfill
+560 
+.fi
+.SS "def jaco_msgs\&.msg\&._SetFingersPositionAction\&.SetFingersPositionAction\&.serialize ( self,  buff)"
+
+.PP
+.nf
+serialize message into buffer
+:param buff: buffer, ``StringIO``
+
+.fi
+.PP
+ 
+.PP
+.nf
+166   def serialize(self, buff):
+167     """
+168     serialize message into buffer
+169     :param buff: buffer, ``StringIO``
+170     """
+171     try:
+172       _x = self
+173       buff\&.write(_struct_3I\&.pack(_x\&.action_goal\&.header\&.seq, _x\&.action_goal\&.header\&.stamp\&.secs, _x\&.action_goal\&.header\&.stamp\&.nsecs))
+174       _x = self\&.action_goal\&.header\&.frame_id
+175       length = len(_x)
+176       if python3 or type(_x) == unicode:
+177         _x = _x\&.encode('utf-8')
+178         length = len(_x)
+179       buff\&.write(struct\&.pack('<I%ss'%length, length, _x))
+180       _x = self
+181       buff\&.write(_struct_2I\&.pack(_x\&.action_goal\&.goal_id\&.stamp\&.secs, _x\&.action_goal\&.goal_id\&.stamp\&.nsecs))
+182       _x = self\&.action_goal\&.goal_id\&.id
+183       length = len(_x)
+184       if python3 or type(_x) == unicode:
+185         _x = _x\&.encode('utf-8')
+186         length = len(_x)
+187       buff\&.write(struct\&.pack('<I%ss'%length, length, _x))
+188       _x = self
+189       buff\&.write(_struct_3f3I\&.pack(_x\&.action_goal\&.goal\&.fingers\&.finger1, _x\&.action_goal\&.goal\&.fingers\&.finger2, _x\&.action_goal\&.goal\&.fingers\&.finger3, _x\&.action_result\&.header\&.seq, _x\&.action_result\&.header\&.stamp\&.secs, _x\&.action_result\&.header\&.stamp\&.nsecs))
+190       _x = self\&.action_result\&.header\&.frame_id
+191       length = len(_x)
+192       if python3 or type(_x) == unicode:
+193         _x = _x\&.encode('utf-8')
+194         length = len(_x)
+195       buff\&.write(struct\&.pack('<I%ss'%length, length, _x))
+196       _x = self
+197       buff\&.write(_struct_2I\&.pack(_x\&.action_result\&.status\&.goal_id\&.stamp\&.secs, _x\&.action_result\&.status\&.goal_id\&.stamp\&.nsecs))
+198       _x = self\&.action_result\&.status\&.goal_id\&.id
+199       length = len(_x)
+200       if python3 or type(_x) == unicode:
+201         _x = _x\&.encode('utf-8')
+202         length = len(_x)
+203       buff\&.write(struct\&.pack('<I%ss'%length, length, _x))
+204       buff\&.write(_struct_B\&.pack(self\&.action_result\&.status\&.status))
+205       _x = self\&.action_result\&.status\&.text
+206       length = len(_x)
+207       if python3 or type(_x) == unicode:
+208         _x = _x\&.encode('utf-8')
+209         length = len(_x)
+210       buff\&.write(struct\&.pack('<I%ss'%length, length, _x))
+211       _x = self
+212       buff\&.write(_struct_3f3I\&.pack(_x\&.action_result\&.result\&.fingers\&.finger1, _x\&.action_result\&.result\&.fingers\&.finger2, _x\&.action_result\&.result\&.fingers\&.finger3, _x\&.action_feedback\&.header\&.seq, _x\&.action_feedback\&.header\&.stamp\&.secs, _x\&.action_feedback\&.header\&.stamp\&.nsecs))
+213       _x = self\&.action_feedback\&.header\&.frame_id
+214       length = len(_x)
+215       if python3 or type(_x) == unicode:
+216         _x = _x\&.encode('utf-8')
+217         length = len(_x)
+218       buff\&.write(struct\&.pack('<I%ss'%length, length, _x))
+219       _x = self
+220       buff\&.write(_struct_2I\&.pack(_x\&.action_feedback\&.status\&.goal_id\&.stamp\&.secs, _x\&.action_feedback\&.status\&.goal_id\&.stamp\&.nsecs))
+221       _x = self\&.action_feedback\&.status\&.goal_id\&.id
+222       length = len(_x)
+223       if python3 or type(_x) == unicode:
+224         _x = _x\&.encode('utf-8')
+225         length = len(_x)
+226       buff\&.write(struct\&.pack('<I%ss'%length, length, _x))
+227       buff\&.write(_struct_B\&.pack(self\&.action_feedback\&.status\&.status))
+228       _x = self\&.action_feedback\&.status\&.text
+229       length = len(_x)
+230       if python3 or type(_x) == unicode:
+231         _x = _x\&.encode('utf-8')
+232         length = len(_x)
+233       buff\&.write(struct\&.pack('<I%ss'%length, length, _x))
+234       _x = self
+235       buff\&.write(_struct_3f\&.pack(_x\&.action_feedback\&.feedback\&.fingers\&.finger1, _x\&.action_feedback\&.feedback\&.fingers\&.finger2, _x\&.action_feedback\&.feedback\&.fingers\&.finger3))
+236     except struct\&.error as se: self\&._check_types(struct\&.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(_x))))
+237     except TypeError as te: self\&._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(_x))))
+238 
+.fi
+.SS "def jaco_msgs\&.msg\&._SetFingersPositionAction\&.SetFingersPositionAction\&.serialize_numpy ( self,  buff,  numpy)"
+
+.PP
+.nf
+serialize message with numpy array types into buffer
+:param buff: buffer, ``StringIO``
+:param numpy: numpy python module
+
+.fi
+.PP
+ 
+.PP
+.nf
+363   def serialize_numpy(self, buff, numpy):
+364     """
+365     serialize message with numpy array types into buffer
+366     :param buff: buffer, ``StringIO``
+367     :param numpy: numpy python module
+368     """
+369     try:
+370       _x = self
+371       buff\&.write(_struct_3I\&.pack(_x\&.action_goal\&.header\&.seq, _x\&.action_goal\&.header\&.stamp\&.secs, _x\&.action_goal\&.header\&.stamp\&.nsecs))
+372       _x = self\&.action_goal\&.header\&.frame_id
+373       length = len(_x)
+374       if python3 or type(_x) == unicode:
+375         _x = _x\&.encode('utf-8')
+376         length = len(_x)
+377       buff\&.write(struct\&.pack('<I%ss'%length, length, _x))
+378       _x = self
+379       buff\&.write(_struct_2I\&.pack(_x\&.action_goal\&.goal_id\&.stamp\&.secs, _x\&.action_goal\&.goal_id\&.stamp\&.nsecs))
+380       _x = self\&.action_goal\&.goal_id\&.id
+381       length = len(_x)
+382       if python3 or type(_x) == unicode:
+383         _x = _x\&.encode('utf-8')
+384         length = len(_x)
+385       buff\&.write(struct\&.pack('<I%ss'%length, length, _x))
+386       _x = self
+387       buff\&.write(_struct_3f3I\&.pack(_x\&.action_goal\&.goal\&.fingers\&.finger1, _x\&.action_goal\&.goal\&.fingers\&.finger2, _x\&.action_goal\&.goal\&.fingers\&.finger3, _x\&.action_result\&.header\&.seq, _x\&.action_result\&.header\&.stamp\&.secs, _x\&.action_result\&.header\&.stamp\&.nsecs))
+388       _x = self\&.action_result\&.header\&.frame_id
+389       length = len(_x)
+390       if python3 or type(_x) == unicode:
+391         _x = _x\&.encode('utf-8')
+392         length = len(_x)
+393       buff\&.write(struct\&.pack('<I%ss'%length, length, _x))
+394       _x = self
+395       buff\&.write(_struct_2I\&.pack(_x\&.action_result\&.status\&.goal_id\&.stamp\&.secs, _x\&.action_result\&.status\&.goal_id\&.stamp\&.nsecs))
+396       _x = self\&.action_result\&.status\&.goal_id\&.id
+397       length = len(_x)
+398       if python3 or type(_x) == unicode:
+399         _x = _x\&.encode('utf-8')
+400         length = len(_x)
+401       buff\&.write(struct\&.pack('<I%ss'%length, length, _x))
+402       buff\&.write(_struct_B\&.pack(self\&.action_result\&.status\&.status))
+403       _x = self\&.action_result\&.status\&.text
+404       length = len(_x)
+405       if python3 or type(_x) == unicode:
+406         _x = _x\&.encode('utf-8')
+407         length = len(_x)
+408       buff\&.write(struct\&.pack('<I%ss'%length, length, _x))
+409       _x = self
+410       buff\&.write(_struct_3f3I\&.pack(_x\&.action_result\&.result\&.fingers\&.finger1, _x\&.action_result\&.result\&.fingers\&.finger2, _x\&.action_result\&.result\&.fingers\&.finger3, _x\&.action_feedback\&.header\&.seq, _x\&.action_feedback\&.header\&.stamp\&.secs, _x\&.action_feedback\&.header\&.stamp\&.nsecs))
+411       _x = self\&.action_feedback\&.header\&.frame_id
+412       length = len(_x)
+413       if python3 or type(_x) == unicode:
+414         _x = _x\&.encode('utf-8')
+415         length = len(_x)
+416       buff\&.write(struct\&.pack('<I%ss'%length, length, _x))
+417       _x = self
+418       buff\&.write(_struct_2I\&.pack(_x\&.action_feedback\&.status\&.goal_id\&.stamp\&.secs, _x\&.action_feedback\&.status\&.goal_id\&.stamp\&.nsecs))
+419       _x = self\&.action_feedback\&.status\&.goal_id\&.id
+420       length = len(_x)
+421       if python3 or type(_x) == unicode:
+422         _x = _x\&.encode('utf-8')
+423         length = len(_x)
+424       buff\&.write(struct\&.pack('<I%ss'%length, length, _x))
+425       buff\&.write(_struct_B\&.pack(self\&.action_feedback\&.status\&.status))
+426       _x = self\&.action_feedback\&.status\&.text
+427       length = len(_x)
+428       if python3 or type(_x) == unicode:
+429         _x = _x\&.encode('utf-8')
+430         length = len(_x)
+431       buff\&.write(struct\&.pack('<I%ss'%length, length, _x))
+432       _x = self
+433       buff\&.write(_struct_3f\&.pack(_x\&.action_feedback\&.feedback\&.fingers\&.finger1, _x\&.action_feedback\&.feedback\&.fingers\&.finger2, _x\&.action_feedback\&.feedback\&.fingers\&.finger3))
+434     except struct\&.error as se: self\&._check_types(struct\&.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(_x))))
+435     except TypeError as te: self\&._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(_x))))
+436 
+.fi
+.SH "Member Data Documentation"
+.PP 
+.SS "list jaco_msgs\&.msg\&._SetFingersPositionAction\&.SetFingersPositionAction\&.__slots__ = ['\fBaction_goal\fP','\fBaction_result\fP','\fBaction_feedback\fP']\fC [static]\fP, \fC [private]\fP"
+
+.SS "string jaco_msgs\&.msg\&._SetFingersPositionAction\&.SetFingersPositionAction\&._full_text\fC [static]\fP, \fC [private]\fP"
+
+.SS "bool jaco_msgs\&.msg\&._SetFingersPositionAction\&.SetFingersPositionAction\&._has_header = False\fC [static]\fP, \fC [private]\fP"
+
+.SS "string jaco_msgs\&.msg\&._SetFingersPositionAction\&.SetFingersPositionAction\&._md5sum = '81d84b11233a19b356267455d91f68ba'\fC [static]\fP, \fC [private]\fP"
+
+.SS "list jaco_msgs\&.msg\&._SetFingersPositionAction\&.SetFingersPositionAction\&._slot_types = ['jaco_msgs/\fBSetFingersPositionActionGoal\fP','jaco_msgs/\fBSetFingersPositionActionResult\fP','jaco_msgs/\fBSetFingersPositionActionFeedback\fP']\fC [static]\fP, \fC [private]\fP"
+
+.PP
+Referenced by jaco_msgs\&.msg\&._SetFingersPositionAction\&.SetFingersPositionAction\&._get_types()\&.
+.SS "string jaco_msgs\&.msg\&._SetFingersPositionAction\&.SetFingersPositionAction\&._type = 'jaco_msgs/\fBSetFingersPositionAction\fP'\fC [static]\fP, \fC [private]\fP"
+
+.SS "jaco_msgs\&.msg\&._SetFingersPositionAction\&.SetFingersPositionAction\&.action_feedback"
+
+.PP
+Referenced by jaco_msgs\&.msg\&._SetFingersPositionAction\&.SetFingersPositionAction\&.deserialize(), and jaco_msgs\&.msg\&._SetFingersPositionAction\&.SetFingersPositionAction\&.deserialize_numpy()\&.
+.SS "jaco_msgs\&.msg\&._SetFingersPositionAction\&.SetFingersPositionAction\&.action_goal"
+
+.PP
+Referenced by jaco_msgs\&.msg\&._SetFingersPositionAction\&.SetFingersPositionAction\&.__init__(), jaco_msgs\&.msg\&._SetFingersPositionAction\&.SetFingersPositionAction\&.deserialize(), and jaco_msgs\&.msg\&._SetFingersPositionAction\&.SetFingersPositionAction\&.deserialize_numpy()\&.
+.SS "jaco_msgs\&.msg\&._SetFingersPositionAction\&.SetFingersPositionAction\&.action_result"
+
+.PP
+Referenced by jaco_msgs\&.msg\&._SetFingersPositionAction\&.SetFingersPositionAction\&.deserialize(), and jaco_msgs\&.msg\&._SetFingersPositionAction\&.SetFingersPositionAction\&.deserialize_numpy()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Kinova-ROS from the source code\&.

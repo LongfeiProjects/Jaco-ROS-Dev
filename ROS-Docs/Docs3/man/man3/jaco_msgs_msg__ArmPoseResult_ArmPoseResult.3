@@ -1,0 +1,312 @@
+.TH "jaco_msgs.msg._ArmPoseResult.ArmPoseResult" 3 "Thu Mar 3 2016" "Version 1.0.1" "Kinova-ROS" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+jaco_msgs.msg._ArmPoseResult.ArmPoseResult \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits Message\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "def \fB__init__\fP (self, args, kwds)"
+.br
+.ti -1c
+.RI "def \fBdeserialize\fP (self, str)"
+.br
+.ti -1c
+.RI "def \fBdeserialize_numpy\fP (self, str, numpy)"
+.br
+.ti -1c
+.RI "def \fBserialize\fP (self, buff)"
+.br
+.ti -1c
+.RI "def \fBserialize_numpy\fP (self, buff, numpy)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBpose\fP"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "def \fB_get_types\fP (self)"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "list \fB__slots__\fP = ['\fBpose\fP']"
+.br
+.ti -1c
+.RI "string \fB_full_text\fP"
+.br
+.ti -1c
+.RI "bool \fB_has_header\fP = False"
+.br
+.ti -1c
+.RI "string \fB_md5sum\fP = '3f8930d968a3e84d471dff917bb1cdae'"
+.br
+.ti -1c
+.RI "list \fB_slot_types\fP = ['geometry_msgs/PoseStamped']"
+.br
+.ti -1c
+.RI "string \fB_type\fP = 'jaco_msgs/\fBArmPoseResult\fP'"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "def jaco_msgs\&.msg\&._ArmPoseResult\&.ArmPoseResult\&.__init__ ( self,  args,  kwds)"
+
+.PP
+.nf
+Constructor. Any message fields that are implicitly/explicitly
+set to None will be assigned a default value. The recommend
+use is keyword arguments as this is more robust to future message
+changes.  You cannot mix in-order arguments and keyword arguments.
+
+The available fields are:
+   pose
+
+:param args: complete set of field values, in .msg order
+:param kwds: use keyword arguments corresponding to message field names
+to set specific fields.
+
+.fi
+.PP
+ 
+.PP
+.nf
+68   def __init__(self, *args, **kwds):
+69     """
+70     Constructor\&. Any message fields that are implicitly/explicitly
+71     set to None will be assigned a default value\&. The recommend
+72     use is keyword arguments as this is more robust to future message
+73     changes\&.  You cannot mix in-order arguments and keyword arguments\&.
+74 
+75     The available fields are:
+76        pose
+77 
+78     :param args: complete set of field values, in \&.msg order
+79     :param kwds: use keyword arguments corresponding to message field names
+80     to set specific fields\&.
+81     """
+82     if args or kwds:
+83       super(ArmPoseResult, self)\&.__init__(*args, **kwds)
+84       #message fields cannot be None, assign default values for those that are
+85       if self\&.pose is None:
+86         self\&.pose = geometry_msgs\&.msg\&.PoseStamped()
+87     else:
+88       self\&.pose = geometry_msgs\&.msg\&.PoseStamped()
+89 
+.fi
+.SH "Member Function Documentation"
+.PP 
+.SS "def jaco_msgs\&.msg\&._ArmPoseResult\&.ArmPoseResult\&._get_types ( self)\fC [private]\fP"
+
+.PP
+.nf
+internal API method
+
+.fi
+.PP
+ 
+.PP
+.nf
+90   def _get_types(self):
+91     """
+92     internal API method
+93     """
+94     return self\&._slot_types
+95 
+.fi
+.SS "def jaco_msgs\&.msg\&._ArmPoseResult\&.ArmPoseResult\&.deserialize ( self,  str)"
+
+.PP
+.nf
+unpack serialized message in str into this message instance
+:param str: byte array of serialized message, ``str``
+
+.fi
+.PP
+ 
+.PP
+.nf
+115   def deserialize(self, str):
+116     """
+117     unpack serialized message in str into this message instance
+118     :param str: byte array of serialized message, ``str``
+119     """
+120     try:
+121       if self\&.pose is None:
+122         self\&.pose = geometry_msgs\&.msg\&.PoseStamped()
+123       end = 0
+124       _x = self
+125       start = end
+126       end += 12
+127       (_x\&.pose\&.header\&.seq, _x\&.pose\&.header\&.stamp\&.secs, _x\&.pose\&.header\&.stamp\&.nsecs,) = _struct_3I\&.unpack(str[start:end])
+128       start = end
+129       end += 4
+130       (length,) = _struct_I\&.unpack(str[start:end])
+131       start = end
+132       end += length
+133       if python3:
+134         self\&.pose\&.header\&.frame_id = str[start:end]\&.decode('utf-8')
+135       else:
+136         self\&.pose\&.header\&.frame_id = str[start:end]
+137       _x = self
+138       start = end
+139       end += 56
+140       (_x\&.pose\&.pose\&.position\&.x, _x\&.pose\&.pose\&.position\&.y, _x\&.pose\&.pose\&.position\&.z, _x\&.pose\&.pose\&.orientation\&.x, _x\&.pose\&.pose\&.orientation\&.y, _x\&.pose\&.pose\&.orientation\&.z, _x\&.pose\&.pose\&.orientation\&.w,) = _struct_7d\&.unpack(str[start:end])
+141       return self
+142     except struct\&.error as e:
+143       raise genpy\&.DeserializationError(e) #most likely buffer underfill
+144 
+145 
+.fi
+.SS "def jaco_msgs\&.msg\&._ArmPoseResult\&.ArmPoseResult\&.deserialize_numpy ( self,  str,  numpy)"
+
+.PP
+.nf
+unpack serialized message in str into this message instance using numpy for array types
+:param str: byte array of serialized message, ``str``
+:param numpy: numpy python module
+
+.fi
+.PP
+ 
+.PP
+.nf
+166   def deserialize_numpy(self, str, numpy):
+167     """
+168     unpack serialized message in str into this message instance using numpy for array types
+169     :param str: byte array of serialized message, ``str``
+170     :param numpy: numpy python module
+171     """
+172     try:
+173       if self\&.pose is None:
+174         self\&.pose = geometry_msgs\&.msg\&.PoseStamped()
+175       end = 0
+176       _x = self
+177       start = end
+178       end += 12
+179       (_x\&.pose\&.header\&.seq, _x\&.pose\&.header\&.stamp\&.secs, _x\&.pose\&.header\&.stamp\&.nsecs,) = _struct_3I\&.unpack(str[start:end])
+180       start = end
+181       end += 4
+182       (length,) = _struct_I\&.unpack(str[start:end])
+183       start = end
+184       end += length
+185       if python3:
+186         self\&.pose\&.header\&.frame_id = str[start:end]\&.decode('utf-8')
+187       else:
+188         self\&.pose\&.header\&.frame_id = str[start:end]
+189       _x = self
+190       start = end
+191       end += 56
+192       (_x\&.pose\&.pose\&.position\&.x, _x\&.pose\&.pose\&.position\&.y, _x\&.pose\&.pose\&.position\&.z, _x\&.pose\&.pose\&.orientation\&.x, _x\&.pose\&.pose\&.orientation\&.y, _x\&.pose\&.pose\&.orientation\&.z, _x\&.pose\&.pose\&.orientation\&.w,) = _struct_7d\&.unpack(str[start:end])
+193       return self
+194     except struct\&.error as e:
+195       raise genpy\&.DeserializationError(e) #most likely buffer underfill
+196 
+.fi
+.SS "def jaco_msgs\&.msg\&._ArmPoseResult\&.ArmPoseResult\&.serialize ( self,  buff)"
+
+.PP
+.nf
+serialize message into buffer
+:param buff: buffer, ``StringIO``
+
+.fi
+.PP
+ 
+.PP
+.nf
+96   def serialize(self, buff):
+97     """
+98     serialize message into buffer
+99     :param buff: buffer, ``StringIO``
+100     """
+101     try:
+102       _x = self
+103       buff\&.write(_struct_3I\&.pack(_x\&.pose\&.header\&.seq, _x\&.pose\&.header\&.stamp\&.secs, _x\&.pose\&.header\&.stamp\&.nsecs))
+104       _x = self\&.pose\&.header\&.frame_id
+105       length = len(_x)
+106       if python3 or type(_x) == unicode:
+107         _x = _x\&.encode('utf-8')
+108         length = len(_x)
+109       buff\&.write(struct\&.pack('<I%ss'%length, length, _x))
+110       _x = self
+111       buff\&.write(_struct_7d\&.pack(_x\&.pose\&.pose\&.position\&.x, _x\&.pose\&.pose\&.position\&.y, _x\&.pose\&.pose\&.position\&.z, _x\&.pose\&.pose\&.orientation\&.x, _x\&.pose\&.pose\&.orientation\&.y, _x\&.pose\&.pose\&.orientation\&.z, _x\&.pose\&.pose\&.orientation\&.w))
+112     except struct\&.error as se: self\&._check_types(struct\&.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(_x))))
+113     except TypeError as te: self\&._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(_x))))
+114 
+.fi
+.SS "def jaco_msgs\&.msg\&._ArmPoseResult\&.ArmPoseResult\&.serialize_numpy ( self,  buff,  numpy)"
+
+.PP
+.nf
+serialize message with numpy array types into buffer
+:param buff: buffer, ``StringIO``
+:param numpy: numpy python module
+
+.fi
+.PP
+ 
+.PP
+.nf
+146   def serialize_numpy(self, buff, numpy):
+147     """
+148     serialize message with numpy array types into buffer
+149     :param buff: buffer, ``StringIO``
+150     :param numpy: numpy python module
+151     """
+152     try:
+153       _x = self
+154       buff\&.write(_struct_3I\&.pack(_x\&.pose\&.header\&.seq, _x\&.pose\&.header\&.stamp\&.secs, _x\&.pose\&.header\&.stamp\&.nsecs))
+155       _x = self\&.pose\&.header\&.frame_id
+156       length = len(_x)
+157       if python3 or type(_x) == unicode:
+158         _x = _x\&.encode('utf-8')
+159         length = len(_x)
+160       buff\&.write(struct\&.pack('<I%ss'%length, length, _x))
+161       _x = self
+162       buff\&.write(_struct_7d\&.pack(_x\&.pose\&.pose\&.position\&.x, _x\&.pose\&.pose\&.position\&.y, _x\&.pose\&.pose\&.position\&.z, _x\&.pose\&.pose\&.orientation\&.x, _x\&.pose\&.pose\&.orientation\&.y, _x\&.pose\&.pose\&.orientation\&.z, _x\&.pose\&.pose\&.orientation\&.w))
+163     except struct\&.error as se: self\&._check_types(struct\&.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(_x))))
+164     except TypeError as te: self\&._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(_x))))
+165 
+.fi
+.SH "Member Data Documentation"
+.PP 
+.SS "list jaco_msgs\&.msg\&._ArmPoseResult\&.ArmPoseResult\&.__slots__ = ['\fBpose\fP']\fC [static]\fP, \fC [private]\fP"
+
+.SS "string jaco_msgs\&.msg\&._ArmPoseResult\&.ArmPoseResult\&._full_text\fC [static]\fP, \fC [private]\fP"
+
+.SS "bool jaco_msgs\&.msg\&._ArmPoseResult\&.ArmPoseResult\&._has_header = False\fC [static]\fP, \fC [private]\fP"
+
+.SS "string jaco_msgs\&.msg\&._ArmPoseResult\&.ArmPoseResult\&._md5sum = '3f8930d968a3e84d471dff917bb1cdae'\fC [static]\fP, \fC [private]\fP"
+
+.SS "list jaco_msgs\&.msg\&._ArmPoseResult\&.ArmPoseResult\&._slot_types = ['geometry_msgs/PoseStamped']\fC [static]\fP, \fC [private]\fP"
+
+.PP
+Referenced by jaco_msgs\&.msg\&._ArmPoseResult\&.ArmPoseResult\&._get_types()\&.
+.SS "string jaco_msgs\&.msg\&._ArmPoseResult\&.ArmPoseResult\&._type = 'jaco_msgs/\fBArmPoseResult\fP'\fC [static]\fP, \fC [private]\fP"
+
+.SS "jaco_msgs\&.msg\&._ArmPoseResult\&.ArmPoseResult\&.pose"
+
+.PP
+Referenced by jaco_msgs\&.msg\&._ArmPoseResult\&.ArmPoseResult\&.__init__(), jaco_msgs\&.msg\&._ArmPoseResult\&.ArmPoseResult\&.deserialize(), and jaco_msgs\&.msg\&._ArmPoseResult\&.ArmPoseResult\&.deserialize_numpy()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Kinova-ROS from the source code\&.

@@ -1,0 +1,135 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="db/d7e/jaco__tf__updater_8cpp">
+    <title>jaco_tf_updater.cpp File Reference</title>
+    <programlisting>#include &lt;jaco_driver/jaco_tf_updater.h&gt;</programlisting>
+<para>Include dependency diagram for jaco_tf_updater.cpp</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../d7/df7/jaco__tf__updater_8cpp__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Included by dependency diagram for jaco_tf_updater.cpp</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../d2/dfc/jaco__tf__updater_8cpp__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+        <simplesect>
+            <title> Namespaces </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d4/d3c/namespacejaco">jaco</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <section>
+            <title>Functions</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="db/d7e/jaco__tf__updater_8cpp_1a3c04138a5bfe5d72780bb7e82a18e627">main</link> (
+int argc, char ** argv)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+    <simplesect>
+        <title>Detailed Description</title>
+    <para>Definition in file D:/Longfei/Desktop/catkin_KinovaROS/src/jaco-ros/jaco_driver/src/nodes/jaco_tf_updater.cpp</para>
+    </simplesect>
+    <literallayout><computeroutput>
+1 <emphasis class="comment">/*</emphasis>
+2 <emphasis class="comment">&#32;*&#32;jaco_tf_updater.cpp</emphasis>
+3 <emphasis class="comment"></emphasis>
+4 <emphasis class="comment">&#32;*</emphasis>
+5 <emphasis class="comment">&#32;*&#32;&#32;Created&#32;on:&#32;Apr&#32;16,&#32;2013</emphasis>
+6 <emphasis class="comment">&#32;*&#32;&#32;&#32;&#32;&#32;&#32;Author:&#32;mdedonato</emphasis>
+7 <emphasis class="comment">&#32;*/</emphasis>
+8 
+9 <emphasis class="preprocessor">#include&#32;&lt;<link linkend="d6/de4/jaco__tf__updater_8h">jaco_driver/jaco_tf_updater.h</link>&gt;</emphasis>
+10 
+11 
+12 <emphasis class="keyword">namespace&#32;</emphasis><link linkend="d4/d3c/namespacejaco">jaco</link>
+13 {
+14 
+<link linkend="dc/d23/classjaco_1_1JacoTFTree_1aff3a20fea72ff3089968609d7a32ce53">15 </link><link linkend="dc/d23/classjaco_1_1JacoTFTree_1aff3a20fea72ff3089968609d7a32ce53">JacoTFTree::JacoTFTree</link>(ros::NodeHandle&#32;node_handle)
+16 &#32;&#32;&#32;&#32;:&#32;kinematics_(node_handle)
+17 {
+18 &#32;&#32;&#32;&#32;<link linkend="dc/d23/classjaco_1_1JacoTFTree_1a5908642f0eee94b14d4b4ef649e4ad0f">joint_angles_subscriber_</link>&#32;=&#32;node_handle.subscribe(<emphasis class="stringliteral">&quot;in/joint_angles&quot;</emphasis>,&#32;1,
+19 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&amp;<link linkend="dc/d23/classjaco_1_1JacoTFTree_1ad3cc49dbb3058895d32aa825f386d9d5">JacoTFTree::jointAnglesMsgHandler</link>,&#32;<emphasis class="keyword">this</emphasis>);
+20 &#32;&#32;&#32;&#32;<link linkend="dc/d23/classjaco_1_1JacoTFTree_1a352b7d128f76d3a4f01e01ec8b416e22">current_angles_</link>.<link linkend="d7/dda/structjaco__msgs_1_1JointAngles___1a5ebadd874f74af99d452dc42787489b7">joint1</link>&#32;=&#32;0;
+21 &#32;&#32;&#32;&#32;<link linkend="dc/d23/classjaco_1_1JacoTFTree_1a352b7d128f76d3a4f01e01ec8b416e22">current_angles_</link>.<link linkend="d7/dda/structjaco__msgs_1_1JointAngles___1ad7bfb312caeafc6b2cb1fc02c6a3e116">joint2</link>&#32;=&#32;0;
+22 &#32;&#32;&#32;&#32;<link linkend="dc/d23/classjaco_1_1JacoTFTree_1a352b7d128f76d3a4f01e01ec8b416e22">current_angles_</link>.<link linkend="d7/dda/structjaco__msgs_1_1JointAngles___1ae8e5d407b34f0a6acd368ec1a28df526">joint3</link>&#32;=&#32;0;
+23 &#32;&#32;&#32;&#32;<link linkend="dc/d23/classjaco_1_1JacoTFTree_1a352b7d128f76d3a4f01e01ec8b416e22">current_angles_</link>.<link linkend="d7/dda/structjaco__msgs_1_1JointAngles___1accb31f45f3a313794a9cab57b8a9b952">joint4</link>&#32;=&#32;0;
+24 &#32;&#32;&#32;&#32;<link linkend="dc/d23/classjaco_1_1JacoTFTree_1a352b7d128f76d3a4f01e01ec8b416e22">current_angles_</link>.<link linkend="d7/dda/structjaco__msgs_1_1JointAngles___1ad02e456e0b382b2bf59b4eeb93318921">joint5</link>&#32;=&#32;0;
+25 &#32;&#32;&#32;&#32;<link linkend="dc/d23/classjaco_1_1JacoTFTree_1a352b7d128f76d3a4f01e01ec8b416e22">current_angles_</link>.<link linkend="d7/dda/structjaco__msgs_1_1JointAngles___1a474d9f2a0e329ba6bd08c8fa265e9a50">joint6</link>&#32;=&#32;0;
+26 &#32;&#32;&#32;&#32;<link linkend="dc/d23/classjaco_1_1JacoTFTree_1a20869124ed9dd0b936d79d5d8a60b6db">last_angle_update_</link>&#32;=&#32;ros::Time().now();
+27 &#32;&#32;&#32;&#32;<link linkend="dc/d23/classjaco_1_1JacoTFTree_1a1470ccde41ff4213c92b4e7ecbcad3e3">tf_update_timer_</link>&#32;=&#32;node_handle.createTimer(ros::Duration(0.01),
+28 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&amp;<link linkend="dc/d23/classjaco_1_1JacoTFTree_1a6c1129c477dfc9e17cd2185924033ad5">JacoTFTree::tfUpdateHandler</link>,&#32;<emphasis class="keyword">this</emphasis>);
+29 &#32;&#32;&#32;&#32;<link linkend="dc/d23/classjaco_1_1JacoTFTree_1a1470ccde41ff4213c92b4e7ecbcad3e3">tf_update_timer_</link>.stop();
+30 }
+31 
+32 
+<link linkend="dc/d23/classjaco_1_1JacoTFTree_1ad3cc49dbb3058895d32aa825f386d9d5">33 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="dc/d23/classjaco_1_1JacoTFTree_1ad3cc49dbb3058895d32aa825f386d9d5">JacoTFTree::jointAnglesMsgHandler</link>(<emphasis class="keyword">const</emphasis>&#32;<link linkend="d7/dba/namespacejaco__msgs_1a32b25235cc3066080b29ddfde0640ae9">jaco_msgs::JointAnglesConstPtr</link>&amp;&#32;joint_angles)
+34 {
+35 &#32;&#32;&#32;&#32;<link linkend="dc/d23/classjaco_1_1JacoTFTree_1a352b7d128f76d3a4f01e01ec8b416e22">current_angles_</link>.<link linkend="d7/dda/structjaco__msgs_1_1JointAngles___1a5ebadd874f74af99d452dc42787489b7">joint1</link>&#32;=&#32;joint_angles-&gt;joint1;
+36 &#32;&#32;&#32;&#32;<link linkend="dc/d23/classjaco_1_1JacoTFTree_1a352b7d128f76d3a4f01e01ec8b416e22">current_angles_</link>.<link linkend="d7/dda/structjaco__msgs_1_1JointAngles___1ad7bfb312caeafc6b2cb1fc02c6a3e116">joint2</link>&#32;=&#32;joint_angles-&gt;joint2;
+37 &#32;&#32;&#32;&#32;<link linkend="dc/d23/classjaco_1_1JacoTFTree_1a352b7d128f76d3a4f01e01ec8b416e22">current_angles_</link>.<link linkend="d7/dda/structjaco__msgs_1_1JointAngles___1ae8e5d407b34f0a6acd368ec1a28df526">joint3</link>&#32;=&#32;joint_angles-&gt;joint3;
+38 &#32;&#32;&#32;&#32;<link linkend="dc/d23/classjaco_1_1JacoTFTree_1a352b7d128f76d3a4f01e01ec8b416e22">current_angles_</link>.<link linkend="d7/dda/structjaco__msgs_1_1JointAngles___1accb31f45f3a313794a9cab57b8a9b952">joint4</link>&#32;=&#32;joint_angles-&gt;joint4;
+39 &#32;&#32;&#32;&#32;<link linkend="dc/d23/classjaco_1_1JacoTFTree_1a352b7d128f76d3a4f01e01ec8b416e22">current_angles_</link>.<link linkend="d7/dda/structjaco__msgs_1_1JointAngles___1ad02e456e0b382b2bf59b4eeb93318921">joint5</link>&#32;=&#32;joint_angles-&gt;joint5;
+40 &#32;&#32;&#32;&#32;<link linkend="dc/d23/classjaco_1_1JacoTFTree_1a352b7d128f76d3a4f01e01ec8b416e22">current_angles_</link>.<link linkend="d7/dda/structjaco__msgs_1_1JointAngles___1a474d9f2a0e329ba6bd08c8fa265e9a50">joint6</link>&#32;=&#32;joint_angles-&gt;joint6;
+41 &#32;&#32;&#32;&#32;<link linkend="dc/d23/classjaco_1_1JacoTFTree_1a20869124ed9dd0b936d79d5d8a60b6db">last_angle_update_</link>&#32;=&#32;ros::Time().now();
+42 &#32;&#32;&#32;&#32;<link linkend="dc/d23/classjaco_1_1JacoTFTree_1a1470ccde41ff4213c92b4e7ecbcad3e3">tf_update_timer_</link>.start();
+43 }
+44 
+45 
+<link linkend="dc/d23/classjaco_1_1JacoTFTree_1a9d27ae1569454f687fdb3efc3c2718cf">46 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="dc/d23/classjaco_1_1JacoTFTree_1a9d27ae1569454f687fdb3efc3c2718cf">JacoTFTree::calculatePostion</link>(<emphasis class="keywordtype">void</emphasis>)
+47 {
+48 &#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;Update&#32;the&#32;forward&#32;Kinematics</emphasis>
+49 &#32;&#32;&#32;&#32;<link linkend="dc/d23/classjaco_1_1JacoTFTree_1aacb83b30f56868891d78852834ef0532">kinematics_</link>.<link linkend="d8/da9/classjaco_1_1JacoKinematics_1a605302243138ca469a7a416be25a6804">updateForward</link>(<link linkend="dc/d23/classjaco_1_1JacoTFTree_1aacb83b30f56868891d78852834ef0532">kinematics_</link>.<link linkend="d8/da9/classjaco_1_1JacoKinematics_1a340eda126d97aa3700cc5dc8be89aa39">degToRad</link>(<link linkend="dc/d23/classjaco_1_1JacoTFTree_1a352b7d128f76d3a4f01e01ec8b416e22">current_angles_</link>.<link linkend="d7/dda/structjaco__msgs_1_1JointAngles___1a5ebadd874f74af99d452dc42787489b7">joint1</link>),
+50 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="dc/d23/classjaco_1_1JacoTFTree_1aacb83b30f56868891d78852834ef0532">kinematics_</link>.<link linkend="d8/da9/classjaco_1_1JacoKinematics_1a340eda126d97aa3700cc5dc8be89aa39">degToRad</link>(<link linkend="dc/d23/classjaco_1_1JacoTFTree_1a352b7d128f76d3a4f01e01ec8b416e22">current_angles_</link>.<link linkend="d7/dda/structjaco__msgs_1_1JointAngles___1ad7bfb312caeafc6b2cb1fc02c6a3e116">joint2</link>),
+51 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="dc/d23/classjaco_1_1JacoTFTree_1aacb83b30f56868891d78852834ef0532">kinematics_</link>.<link linkend="d8/da9/classjaco_1_1JacoKinematics_1a340eda126d97aa3700cc5dc8be89aa39">degToRad</link>(<link linkend="dc/d23/classjaco_1_1JacoTFTree_1a352b7d128f76d3a4f01e01ec8b416e22">current_angles_</link>.<link linkend="d7/dda/structjaco__msgs_1_1JointAngles___1ae8e5d407b34f0a6acd368ec1a28df526">joint3</link>),
+52 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="dc/d23/classjaco_1_1JacoTFTree_1aacb83b30f56868891d78852834ef0532">kinematics_</link>.<link linkend="d8/da9/classjaco_1_1JacoKinematics_1a340eda126d97aa3700cc5dc8be89aa39">degToRad</link>(<link linkend="dc/d23/classjaco_1_1JacoTFTree_1a352b7d128f76d3a4f01e01ec8b416e22">current_angles_</link>.<link linkend="d7/dda/structjaco__msgs_1_1JointAngles___1accb31f45f3a313794a9cab57b8a9b952">joint4</link>),
+53 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="dc/d23/classjaco_1_1JacoTFTree_1aacb83b30f56868891d78852834ef0532">kinematics_</link>.<link linkend="d8/da9/classjaco_1_1JacoKinematics_1a340eda126d97aa3700cc5dc8be89aa39">degToRad</link>(<link linkend="dc/d23/classjaco_1_1JacoTFTree_1a352b7d128f76d3a4f01e01ec8b416e22">current_angles_</link>.<link linkend="d7/dda/structjaco__msgs_1_1JointAngles___1ad02e456e0b382b2bf59b4eeb93318921">joint5</link>),
+54 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="dc/d23/classjaco_1_1JacoTFTree_1aacb83b30f56868891d78852834ef0532">kinematics_</link>.<link linkend="d8/da9/classjaco_1_1JacoKinematics_1a340eda126d97aa3700cc5dc8be89aa39">degToRad</link>(<link linkend="dc/d23/classjaco_1_1JacoTFTree_1a352b7d128f76d3a4f01e01ec8b416e22">current_angles_</link>.<link linkend="d7/dda/structjaco__msgs_1_1JointAngles___1a474d9f2a0e329ba6bd08c8fa265e9a50">joint6</link>));
+55 }
+56 
+57 
+<link linkend="dc/d23/classjaco_1_1JacoTFTree_1a6c1129c477dfc9e17cd2185924033ad5">58 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="dc/d23/classjaco_1_1JacoTFTree_1a6c1129c477dfc9e17cd2185924033ad5">JacoTFTree::tfUpdateHandler</link>(<emphasis class="keyword">const</emphasis>&#32;ros::TimerEvent&amp;)
+59 {
+60 &#32;&#32;&#32;&#32;this-&gt;<link linkend="dc/d23/classjaco_1_1JacoTFTree_1a9d27ae1569454f687fdb3efc3c2718cf">calculatePostion</link>();&#32;&#32;<emphasis class="comment">//&#32;Update&#32;TF&#32;Tree</emphasis>
+61 
+62 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;((ros::Time().now().toSec()&#32;-&#32;<link linkend="dc/d23/classjaco_1_1JacoTFTree_1a20869124ed9dd0b936d79d5d8a60b6db">last_angle_update_</link>.toSec())&#32;&gt;&#32;1)
+63 &#32;&#32;&#32;&#32;{
+64 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="dc/d23/classjaco_1_1JacoTFTree_1a1470ccde41ff4213c92b4e7ecbcad3e3">tf_update_timer_</link>.stop();
+65 &#32;&#32;&#32;&#32;}
+66 }
+67 
+68 }&#32;&#32;<emphasis class="comment">//&#32;namespace&#32;jaco</emphasis>
+69 
+70 
+<link linkend="db/d7e/jaco__tf__updater_8cpp_1a3c04138a5bfe5d72780bb7e82a18e627">71 </link><emphasis class="keywordtype">int</emphasis>&#32;<link linkend="db/d7e/jaco__tf__updater_8cpp_1a3c04138a5bfe5d72780bb7e82a18e627">main</link>(<emphasis class="keywordtype">int</emphasis>&#32;argc,&#32;<emphasis class="keywordtype">char</emphasis>&#32;**argv)
+72 {
+73 &#32;&#32;&#32;&#32;<emphasis class="comment">/*&#32;Set&#32;up&#32;ROS&#32;*/</emphasis>
+74 &#32;&#32;&#32;&#32;ros::init(argc,&#32;argv,&#32;<emphasis class="stringliteral">&quot;jaco_tf_updater&quot;</emphasis>);
+75 &#32;&#32;&#32;&#32;ros::NodeHandle&#32;nh(<emphasis class="stringliteral">&quot;~&quot;</emphasis>);
+76 
+77 &#32;&#32;&#32;&#32;<link linkend="dc/d23/classjaco_1_1JacoTFTree">jaco::JacoTFTree</link>&#32;JacoTF(nh);
+78 &#32;&#32;&#32;&#32;ros::spin();
+79 
+80 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;0;
+81 }
+    </computeroutput></literallayout>
+</section>

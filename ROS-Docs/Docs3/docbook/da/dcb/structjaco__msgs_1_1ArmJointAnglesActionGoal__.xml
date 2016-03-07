@@ -1,0 +1,166 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="da/dcb/structjaco__msgs_1_1ArmJointAnglesActionGoal__">
+<title>jaco_msgs::ArmJointAnglesActionGoal_ struct Reference</title>
+<para>
+    <programlisting>#include <link linkend="dd/d23/ArmJointAnglesActionGoal_8h">&quot;ArmJointAnglesActionGoal.h&quot;</link></programlisting>
+</para>
+<para>Inheritance diagram for jaco_msgs::ArmJointAnglesActionGoal_</para>
+<para>
+    <figure>
+        <title>Inheritance graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../d2/d49/structjaco__msgs_1_1ArmJointAnglesActionGoal____inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Collaboration diagram for jaco_msgs::ArmJointAnglesActionGoal_</para>
+<para>
+    <figure>
+        <title>Collaboration graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../df/d7d/structjaco__msgs_1_1ArmJointAnglesActionGoal____coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+    <templateparamlist>
+      <param>
+        <type>class</type>
+        <declname>ContainerAllocator</declname>
+        <defname>ContainerAllocator</defname>
+      </param>
+    </templateparamlist>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef ::actionlib_msgs::GoalID_&lt; ContainerAllocator &gt;  <link linkend="da/dcb/structjaco__msgs_1_1ArmJointAnglesActionGoal___1aa65aa60f77df79b587a07808da34d260">_goal_id_type</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef ::<link linkend="d2/d11/structjaco__msgs_1_1ArmJointAnglesGoal__">jaco_msgs::ArmJointAnglesGoal_</link>&lt; ContainerAllocator &gt;  <link linkend="da/dcb/structjaco__msgs_1_1ArmJointAnglesActionGoal___1a9db4408e5eda0965ab7c3334e53a7a24">_goal_type</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef ::std_msgs::Header_&lt; ContainerAllocator &gt;  <link linkend="da/dcb/structjaco__msgs_1_1ArmJointAnglesActionGoal___1a43ebc2f136a276a4506784e53fd194ae">_header_type</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef boost::shared_ptr&lt; ::<link linkend="da/dcb/structjaco__msgs_1_1ArmJointAnglesActionGoal__">jaco_msgs::ArmJointAnglesActionGoal_</link>&lt; ContainerAllocator &gt; const  &gt;  <link linkend="da/dcb/structjaco__msgs_1_1ArmJointAnglesActionGoal___1affcfb0c481ae59a0e5248baa9eeb732c">ConstPtr</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef boost::shared_ptr&lt; ::<link linkend="da/dcb/structjaco__msgs_1_1ArmJointAnglesActionGoal__">jaco_msgs::ArmJointAnglesActionGoal_</link>&lt; ContainerAllocator &gt; &gt;  <link linkend="da/dcb/structjaco__msgs_1_1ArmJointAnglesActionGoal___1addabada996cc8b4897c127b45dfe0ea3">Ptr</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef <link linkend="da/dcb/structjaco__msgs_1_1ArmJointAnglesActionGoal__">ArmJointAnglesActionGoal_</link>&lt; ContainerAllocator &gt;  <link linkend="da/dcb/structjaco__msgs_1_1ArmJointAnglesActionGoal___1abf48ee58a18a9c1669c62c0701f3cce3">Type</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Public Attributes</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>boost::shared_ptr&lt; std::map&lt; std::string, std::string &gt; &gt; __connection_header</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>_goal_type goal</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>_goal_id_type goal_id</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>_header_type header</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="da/dcb/structjaco__msgs_1_1ArmJointAnglesActionGoal___1a5c5ea048b3faddb2cf1346a1f85e7877">ArmJointAnglesActionGoal_</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="da/dcb/structjaco__msgs_1_1ArmJointAnglesActionGoal___1ad945d8d5f0e44334ae8f877c2ed98522">ArmJointAnglesActionGoal_</link> (
+const ContainerAllocator &amp; _alloc)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+            <section xml:id="da/dcb/structjaco__msgs_1_1ArmJointAnglesActionGoal___1aa65aa60f77df79b587a07808da34d260">
+                <title>typedef ::actionlib_msgs::GoalID_&lt;ContainerAllocator&gt; jaco_msgs::ArmJointAnglesActionGoal_&lt; ContainerAllocator &gt;::_goal_id_type</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="da/dcb/structjaco__msgs_1_1ArmJointAnglesActionGoal___1a9db4408e5eda0965ab7c3334e53a7a24">
+                <title>typedef ::jaco_msgs::ArmJointAnglesGoal_&lt;ContainerAllocator&gt; jaco_msgs::ArmJointAnglesActionGoal_&lt; ContainerAllocator &gt;::_goal_type</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="da/dcb/structjaco__msgs_1_1ArmJointAnglesActionGoal___1a43ebc2f136a276a4506784e53fd194ae">
+                <title>typedef ::std_msgs::Header_&lt;ContainerAllocator&gt; jaco_msgs::ArmJointAnglesActionGoal_&lt; ContainerAllocator &gt;::_header_type</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="da/dcb/structjaco__msgs_1_1ArmJointAnglesActionGoal___1affcfb0c481ae59a0e5248baa9eeb732c">
+                <title>typedef boost::shared_ptr&lt; ::jaco_msgs::ArmJointAnglesActionGoal_&lt;ContainerAllocator&gt; const&gt; jaco_msgs::ArmJointAnglesActionGoal_&lt; ContainerAllocator &gt;::ConstPtr</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="da/dcb/structjaco__msgs_1_1ArmJointAnglesActionGoal___1addabada996cc8b4897c127b45dfe0ea3">
+                <title>typedef boost::shared_ptr&lt; ::jaco_msgs::ArmJointAnglesActionGoal_&lt;ContainerAllocator&gt; &gt; jaco_msgs::ArmJointAnglesActionGoal_&lt; ContainerAllocator &gt;::Ptr</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="da/dcb/structjaco__msgs_1_1ArmJointAnglesActionGoal___1abf48ee58a18a9c1669c62c0701f3cce3">
+                <title>typedef ArmJointAnglesActionGoal_&lt;ContainerAllocator&gt; jaco_msgs::ArmJointAnglesActionGoal_&lt; ContainerAllocator &gt;::Type</title> <emphasis></emphasis>
+                
+            </section>
+        <section>
+            <title>Member Data Documentation</title>
+        </section>
+            <section xml:id="da/dcb/structjaco__msgs_1_1ArmJointAnglesActionGoal___1a5c5ea048b3faddb2cf1346a1f85e7877">
+                <title>jaco_msgs::ArmJointAnglesActionGoal_&lt; ContainerAllocator &gt;::ArmJointAnglesActionGoal_ ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="da/dcb/structjaco__msgs_1_1ArmJointAnglesActionGoal___1ad945d8d5f0e44334ae8f877c2ed98522">
+                <title>jaco_msgs::ArmJointAnglesActionGoal_&lt; ContainerAllocator &gt;::ArmJointAnglesActionGoal_ (const ContainerAllocator &amp;_alloc)</title> <emphasis></emphasis>
+                
+            </section>
+</section>

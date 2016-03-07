@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="d6/d01/structros_1_1message__operations_1_1Printer_3_01_1_1jaco__msgs_1_1SetFingersPositionActionFeedbae13e05216e53f9116f074ec65036b29d">
+<title>ros::message_operations::Printer&lt; ::jaco_msgs::SetFingersPositionActionFeedback_&lt; ContainerAllocator &gt; &gt; struct Reference</title>
+<para>
+    <programlisting>#include <link linkend="dc/d68/SetFingersPositionActionFeedback_8h">&quot;SetFingersPositionActionFeedback.h&quot;</link></programlisting>
+</para>
+<para>Inheritance diagram for ros::message_operations::Printer&lt; ::jaco_msgs::SetFingersPositionActionFeedback_&lt; ContainerAllocator &gt; &gt;</para>
+<para>
+    <figure>
+        <title>Inheritance graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../d5/ddb/structros_1_1message__operations_1_1Printer_3_01_1_1jaco__msgs_1_1SetFingersPositionActionFeedba833f38b02186a9e3249ab75e888b30d7.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Collaboration diagram for ros::message_operations::Printer&lt; ::jaco_msgs::SetFingersPositionActionFeedback_&lt; ContainerAllocator &gt; &gt;</para>
+<para>
+    <figure>
+        <title>Collaboration graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../d5/dd6/structros_1_1message__operations_1_1Printer_3_01_1_1jaco__msgs_1_1SetFingersPositionActionFeedba2f3e936c70ee7f75b8b8b31f2ccfb296.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+    <templateparamlist>
+      <param>
+        <type>class ContainerAllocator</type>
+      </param>
+    </templateparamlist>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static void <link linkend="d6/d01/structros_1_1message__operations_1_1Printer_3_01_1_1jaco__msgs_1_1SetFingersPositionActionFeedbae13e05216e53f9116f074ec65036b29d_1a96850af8444a36a39e34d1da71d282e2">stream</link> (
+Stream &amp; s, const std::string &amp; indent, const ::<link linkend="d9/dec/structjaco__msgs_1_1SetFingersPositionActionFeedback__">jaco_msgs::SetFingersPositionActionFeedback_</link>&lt; ContainerAllocator &gt; &amp; v)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+            <section xml:id="d6/d01/structros_1_1message__operations_1_1Printer_3_01_1_1jaco__msgs_1_1SetFingersPositionActionFeedbae13e05216e53f9116f074ec65036b29d_1a96850af8444a36a39e34d1da71d282e2">
+                <title>static void ros::message_operations::Printer&lt; ::jaco_msgs::SetFingersPositionActionFeedback_&lt; ContainerAllocator &gt; &gt;::stream (Stream &amp;s, const std::string &amp;indent, const ::jaco_msgs::SetFingersPositionActionFeedback_&lt; ContainerAllocator &gt; &amp;v)</title> <emphasis></emphasis>
+                
+            </section>
+</section>

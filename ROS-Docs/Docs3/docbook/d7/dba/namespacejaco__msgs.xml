@@ -1,0 +1,96 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="d7/dba/namespacejaco__msgs">
+<title>jaco_msgs::Stop struct Reference</title>
+<para>
+    <programlisting>#include <link linkend="d2/dae/Stop_8h">&quot;Stop.h&quot;</link></programlisting>
+</para>
+<para>Inheritance diagram for jaco_msgs::Stop</para>
+<para>
+    <figure>
+        <title>Inheritance graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../d1/d12/structjaco__msgs_1_1Stop__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Collaboration diagram for jaco_msgs::Stop</para>
+<para>
+    <figure>
+        <title>Collaboration graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../da/d03/structjaco__msgs_1_1Stop__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef <link linkend="d7/dba/namespacejaco__msgs_1a7f71a39d70d57c48cf1d0e67cb41d127">StopRequest</link>  <link linkend="d7/dba/namespacejaco__msgs_1a5c2942c9b9b1fe5330e2b79bfaef2847">Request</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef <link linkend="d7/dba/namespacejaco__msgs_1a5c2942c9b9b1fe5330e2b79bfaef2847">Request</link>  <link linkend="d7/dba/namespacejaco__msgs_1ae68e41bf3bbdaca9284bb07f757267e8">RequestType</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef <link linkend="d7/dba/namespacejaco__msgs_1a2694506badd782d8dc5474717333e374">StopResponse</link>  <link linkend="d7/dba/namespacejaco__msgs_1aad03f8a7d16be1d6f6a0c1b2faf9cef2">Response</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef <link linkend="d7/dba/namespacejaco__msgs_1aad03f8a7d16be1d6f6a0c1b2faf9cef2">Response</link>  <link linkend="d7/dba/namespacejaco__msgs_1a9a83d4f1b663627f00fc8da36fe18139">ResponseType</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Public Attributes</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>Request request</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>Response response</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+            <section xml:id="d7/dba/namespacejaco__msgs_1a5c2942c9b9b1fe5330e2b79bfaef2847">
+                <title>typedef StopRequest jaco_msgs::Stop::Request</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="d7/dba/namespacejaco__msgs_1ae68e41bf3bbdaca9284bb07f757267e8">
+                <title>typedef Request jaco_msgs::Stop::RequestType</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="d7/dba/namespacejaco__msgs_1aad03f8a7d16be1d6f6a0c1b2faf9cef2">
+                <title>typedef StopResponse jaco_msgs::Stop::Response</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="d7/dba/namespacejaco__msgs_1a9a83d4f1b663627f00fc8da36fe18139">
+                <title>typedef Response jaco_msgs::Stop::ResponseType</title> <emphasis></emphasis>
+                
+            </section>
+        <section>
+            <title>Member Data Documentation</title>
+        </section>
+</section>

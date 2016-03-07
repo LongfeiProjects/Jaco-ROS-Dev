@@ -1,0 +1,443 @@
+.TH "jaco::JacoKinematics" 3 "Thu Mar 3 2016" "Version 1.0.1" "Kinova-ROS" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+jaco::JacoKinematics \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include 'jaco_arm_kinematics\&.h'\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "float \fBdegToRad\fP (float degrees)"
+.br
+.ti -1c
+.RI "\fBJacoKinematics\fP (const ros::NodeHandle &node_handle)"
+.br
+.ti -1c
+.RI "void \fBupdateForward\fP (float q1, float q2, float q3, float q4, float q5, float q6)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "double \fBbase_to_api_\fP"
+.br
+.ti -1c
+.RI "double \fBbase_to_j1_\fP"
+.br
+.ti -1c
+.RI "tf::TransformBroadcaster \fBbroadcaster_\fP"
+.br
+.ti -1c
+.RI "double \fBj1_to_j2_\fP"
+.br
+.ti -1c
+.RI "double \fBj2_to_j3_\fP"
+.br
+.ti -1c
+.RI "double \fBj3_offset_\fP"
+.br
+.ti -1c
+.RI "double \fBj3_to_j4_\fP"
+.br
+.ti -1c
+.RI "double \fBj4_to_j5_\fP"
+.br
+.ti -1c
+.RI "double \fBj5_bend_degrees_\fP"
+.br
+.ti -1c
+.RI "double \fBj5_to_j6_\fP"
+.br
+.ti -1c
+.RI "double \fBj6_bend_degrees_\fP"
+.br
+.ti -1c
+.RI "double \fBj6_to_end_\fP"
+.br
+.ti -1c
+.RI "std::string \fBtf_prefix_\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "jaco::JacoKinematics::JacoKinematics (const ros::NodeHandle & node_handle)\fC [explicit]\fP"
+
+.PP
+.nf
+24 {
+25     node_handle\&.param<std::string>("tf_prefix", tf_prefix_, "jaco_");
+26 
+27     node_handle\&.param<double>("base_to_api", base_to_api_, 0\&.028);
+28     node_handle\&.param<double>("base_to_j1", base_to_j1_, 0\&.1544);
+29     node_handle\&.param<double>("j1_to_j2", j1_to_j2_, -0\&.1181);
+30     node_handle\&.param<double>("j2_to_j3", j2_to_j3_, 0\&.4100);
+31     node_handle\&.param<double>("j3_offset", j3_offset_, -0\&.0098);
+32     node_handle\&.param<double>("j3_to_j4", j3_to_j4_, 0\&.2073);
+33     node_handle\&.param<double>("j4_to_j5", j4_to_j5_, 0\&.0743);
+34     node_handle\&.param<double>("j5_to_j6", j5_to_j6_, 0\&.0743);
+35     node_handle\&.param<double>("j6_to_end", j6_to_end_, 0\&.1687);
+36     node_handle\&.param<double>("j5_bend_degrees", j5_bend_degrees_, -55\&.0);
+37     node_handle\&.param<double>("j6_bend_degrees", j6_bend_degrees_, 55\&.0);
+38 }
+.fi
+.SH "Member Function Documentation"
+.PP 
+.SS "float jaco::JacoKinematics::degToRad (float degrees)\fC [inline]\fP"
+
+.PP
+.nf
+44     {
+45         return (degrees * (M_PI / 180));
+46     }
+.fi
+.SS "void jaco::JacoKinematics::updateForward (float q1, float q2, float q3, float q4, float q5, float q6)"
+
+.PP
+.nf
+42 {
+43     tf::Transform transform;
+44     tf::Quaternion rotation_q(0, 0, 0, 1);
+45     tf::Matrix3x3 rot_matrix(1, 0, 0, 0, 1, 0, 0, 0, 1);
+46     tf::Vector3 translation_v(0, 0, 0);
+47 
+48     /**********************Base**********************/
+49     /* Rotation Matrix */
+50     /*******               *******
+51     * cos(PI/2)  -sin(PI/2)    0 *
+52     * sin(PI/2)   cos(PI/2)    0 *
+53     * 0              0         1 *
+54     *******               *******/
+55     rot_matrix\&.setValue(cos(M_PI_2), -sin(M_PI_2), 0,
+56                         sin(M_PI_2), cos(M_PI_2), 0,
+57                         0, 0, 1);
+58     rot_matrix\&.getRotation(rotation_q);
+59     transform\&.setRotation(rotation_q);
+60 
+61     /* Translation Vector */
+62     translation_v\&.setValue(0, 0, 0);
+63     transform\&.setOrigin(translation_v);
+64 
+65     broadcaster_\&.sendTransform(tf::StampedTransform(transform, ros::Time::now(),
+66                                                     concatTfName(tf_prefix_, "arm_base"),
+67                                                     concatTfName(tf_prefix_, "base")));
+68 
+69 #ifdef PRINT_DEBUG_INFO
+70     ROS_INFO("API Rotation: X = %f, Y = %f, Z = %f, W = %f", rotation
+71              _q\&.getX(), rotation_q\&.getY(), rotation_q\&.getZ(), rotation_q\&.getW());
+72 #endif
+73 
+74     /**********************API**********************/
+75     /* Rotation Matrix */
+76     rot_matrix\&.setValue(1, 0, 0,
+77                         0, 1, 0,
+78                         0, 0, 1);
+79     rot_matrix\&.getRotation(rotation_q);
+80     transform\&.setRotation(rotation_q);
+81 
+82     /* API Translation Vector */
+83     translation_v\&.setValue(0, 0, base_to_api_);
+84     transform\&.setOrigin(translation_v);
+85 
+86     broadcaster_\&.sendTransform(tf::StampedTransform(transform, ros::Time::now(),
+87                                                     concatTfName(tf_prefix_, "base"),
+88                                                     concatTfName(tf_prefix_, "api_origin")));
+89 
+90 #ifdef PRINT_DEBUG_INFO
+91     ROS_INFO("API Translation: X = %f, Y = %f, Z = %f",
+92              translation_v\&.getX(), translation_v\&.getY(), translation_v\&.getZ());
+93 #endif
+94 
+95     /**********************Joint_1**********************/
+96     /* Joint 1 Rotation Matrix */
+97     /*******                 *******
+98      * cos(q1)    -sin(q1)      0  *
+99      * -sin(q1)   -cos(q1)      0  *
+100      * 0            0          -1  *
+101      *******                *******/
+102     rot_matrix\&.setValue(cos(q1), -sin(q1), 0,
+103                         -sin(q1), -cos(q1), 0,
+104                         0, 0, -1);
+105     rot_matrix\&.getRotation(rotation_q);
+106     transform\&.setRotation(rotation_q);
+107 
+108     /* Joint 1 Translation Vector */
+109     translation_v\&.setValue(0, 0, base_to_j1_);
+110     transform\&.setOrigin(translation_v);
+111 
+112     broadcaster_\&.sendTransform(tf::StampedTransform(transform, ros::Time::now(),
+113                                                     concatTfName(tf_prefix_, "link_base"),
+114                                                     concatTfName(tf_prefix_, "link_1")));
+115 
+116 #ifdef PRINT_DEBUG_INFO
+117     ROS_INFO("Joint 1 Rotation: X = %f, Y = %f, Z = %f, W = %f",
+118              rotation_q\&.getX(), rotation_q\&.getY(), rotation_q\&.getZ(), rotation_q\&.getW());
+119     ROS_INFO("Joint 1 Translation: X = %f, Y = %f, Z = %f",
+120              translation_v\&.getX(), translation_v\&.getY(), translation_v\&.getZ());
+121 #endif
+122 
+123     /**********************Joint_2**********************/
+124     /* Joint 2 Rotation Matrix */
+125     /*******               *******
+126      * sin(q2)    cos(q2)     0  *
+127      * 0            0         1  *
+128      * cos(q2)   -sin(q2)     0  *
+129      *******              *******/
+130     rot_matrix\&.setValue(sin(q2), cos(q2), 0,
+131                         0, 0, 1,
+132                         cos(q2), -sin(q2), 0);
+133     rot_matrix\&.getRotation(rotation_q);
+134     transform\&.setRotation(rotation_q);
+135 
+136     /* Joint 2 Translation Vector */
+137     translation_v\&.setValue(0, 0 , j1_to_j2_);
+138     transform\&.setOrigin(translation_v);
+139 
+140     broadcaster_\&.sendTransform(tf::StampedTransform(transform, ros::Time::now(),
+141                                                     concatTfName(tf_prefix_, "link_1"),
+142                                                     concatTfName(tf_prefix_, "link_2")));
+143 
+144 #ifdef PRINT_DEBUG_INFO
+145     ROS_INFO("Joint 2 Rotation: X = %f, Y = %f, Z = %f, W = %f",
+146              rotation_q\&.getX(), rotation_q\&.getY(), rotation_q\&.getZ(), rotation_q\&.getW());
+147     ROS_INFO("Joint 2 Translation: X = %f, Y = %f, Z = %f",
+148              translation_v\&.getX(), translation_v\&.getY(), translation_v\&.getZ());
+149 #endif
+150 
+151     /**********************Joint_3**********************/
+152     /* Joint 3 Rotation Matrix */
+153     /*******                   *******
+154      * -cos(q3)     sin(q3)        0 *
+155      *  sin(q2)     cos(q3)        0 *
+156      *    0           0           -1 *
+157      *******                  *******/
+158     rot_matrix\&.setValue(-cos(q3), sin(q3), 0,
+159                         sin(q3), cos(q3), 0,
+160                         0, 0, -1);
+161     rot_matrix\&.getRotation(rotation_q);
+162     transform\&.setRotation(rotation_q);
+163 
+164     /* Joint 3 Translation Vector */
+165     translation_v\&.setValue(j2_to_j3_, 0, 0);
+166     transform\&.setOrigin(translation_v);
+167 
+168     broadcaster_\&.sendTransform(tf::StampedTransform(transform, ros::Time::now(),
+169                                                     concatTfName(tf_prefix_, "link_2"),
+170                                                     concatTfName(tf_prefix_, "link_3")));
+171 
+172 #ifdef PRINT_DEBUG_INFO
+173     ROS_INFO("Joint 3 Rotation: X = %f, Y = %f, Z = %f, W = %f",
+174              rotation_q\&.getX(), rotation_q\&.getY(), rotation_q\&.getZ(), rotation_q\&.getW());
+175     ROS_INFO("Joint 3 Translation: X = %f, Y = %f, Z = %f",
+176              translation_v\&.getX(), translation_v\&.getY(), translation_v\&.getZ());
+177 #endif
+178 
+179     /**********************Joint_3 Offset**********************/
+180     /* Joint 3 offset Rotation Matrix */
+181     rot_matrix\&.setValue(1, 0, 0, 0, 1, 0, 0, 0, 1);
+182     rot_matrix\&.getRotation(rotation_q);
+183     transform\&.setRotation(rotation_q);
+184 
+185     /* Joint 3 offset translation vector */
+186     translation_v\&.setValue(0, 0, j3_offset_);
+187     transform\&.setOrigin(translation_v);
+188 
+189     broadcaster_\&.sendTransform(tf::StampedTransform(transform, ros::Time::now(),
+190                                                     concatTfName(tf_prefix_, "link_3"),
+191                                                     concatTfName(tf_prefix_, "link_3_offset")));
+192 
+193 #ifdef PRINT_DEBUG_INFO
+194     ROS_INFO("Joint 3 Offset Rotation: X = %f, Y = %f, Z = %f, W = %f",
+195              rotation_q\&.getX(), rotation_q\&.getY(), rotation_q\&.getZ(), rotation_q\&.getW());
+196     ROS_INFO("Joint 3 Offset Translation: X = %f, Y = %f, Z = %f",
+197              translation_v\&.getX(), translation_v\&.getY(), translation_v\&.getZ());
+198 #endif
+199 
+200     /**********************Joint_4**********************/
+201     /* Joint 4 Rotation Matrix */
+202     /*******                 *******
+203      *    0          0          -1 *
+204      * sin(q4)     cos(q4)       0 *
+205      * cos(q4)    -sin(q4)       0 *
+206      *******                *******/
+207     rot_matrix\&.setValue(0, 0, -1,
+208                         sin(q4), cos(q4), 0,
+209                         cos(q4), -sin(q4), 0);
+210     rot_matrix\&.getRotation(rotation_q);
+211     transform\&.setRotation(rotation_q);
+212 
+213     /* Joint 4 Translation Vector */
+214     translation_v\&.setValue(j3_to_j4_, 0, 0);
+215     transform\&.setOrigin(translation_v);
+216 
+217     broadcaster_\&.sendTransform(tf::StampedTransform(transform, ros::Time::now(),
+218                                                     concatTfName(tf_prefix_, "link_3_offset"),
+219                                                     concatTfName(tf_prefix_, "link_4")));
+220 
+221 #ifdef PRINT_DEBUG_INFO
+222     ROS_INFO("Joint 4 Rotation: X = %f, Y = %f, Z = %f, W = %f",
+223              rotation_q\&.getX(), rotation_q\&.getY(), rotation_q\&.getZ(), rotation_q\&.getW());
+224     ROS_INFO("Joint 4 Translation: X = %f, Y = %f, Z = %f",
+225              translation_v\&.getX(), translation_v\&.getY(), translation_v\&.getZ());
+226 #endif
+227 
+228     /**********************Joint_5**********************/
+229     /* Joint 5 Rotation Matrix */
+230     /*******                                         *******
+231      * cos(-55))*cos(q5)    cos(-55)*-sin(q5)     sin(-55) *
+232      * sin(q5)                   cos(q5)             0     *
+233      * -sin(-55)*cos(q5)    sin(-55)*sin(q5)      cos(-55) *
+234      *******                                        *******/
+235     rot_matrix\&.setValue(cos((degToRad(j5_bend_degrees_)))*cos(q5),
+236                         cos((degToRad(j5_bend_degrees_)))*-sin(q5),
+237                         sin((degToRad(j5_bend_degrees_))),
+238                         sin(q5),
+239                         cos(q5),
+240                         0,
+241                         -sin((degToRad(j5_bend_degrees_)))*cos(q5),
+242                         sin((degToRad(j5_bend_degrees_)))*sin(q5),
+243                         cos((degToRad(j5_bend_degrees_))));
+244     rot_matrix\&.getRotation(rotation_q);
+245     transform\&.setRotation(rotation_q);
+246 
+247     /* Joint 5 Translation Vector */
+248     /****        ****
+249      * cos(55)*D4   *
+250      *       0      *
+251      * -sin(55)*D4  *
+252      ****       ****/
+253     translation_v\&.setValue(cos(degToRad(-j5_bend_degrees_)) * j4_to_j5_,
+254                            0,
+255                            -sin(degToRad(-j5_bend_degrees_)) * j4_to_j5_);
+256     transform\&.setOrigin(translation_v);
+257 
+258     broadcaster_\&.sendTransform(tf::StampedTransform(transform, ros::Time::now(),
+259                                                     concatTfName(tf_prefix_, "link_4"),
+260                                                     concatTfName(tf_prefix_, "link_5")));
+261 
+262 #ifdef PRINT_DEBUG_INFO
+263     ROS_INFO("Joint 5 Rotation: X = %f, Y = %f, Z = %f, W = %f",
+264              rotation_q\&.getX(), rotation_q\&.getY(), rotation_q\&.getZ(), rotation_q\&.getW());
+265     ROS_INFO("Joint 5 Translation: X = %f, Y = %f, Z = %f",
+266              translation_v\&.getX(), translation_v\&.getY(), translation_v\&.getZ());
+267 #endif
+268 
+269     /**********************Joint_6**********************/
+270     /* Joint 6 Rotation Matrix */
+271     /*******                                       *******
+272      * cos(-35))*cos(q6)   cos(-35)*-sin(q6)    sin(-35) *
+273      *     sin(q6)              cos(q6)            0     *
+274      * -sin(-35)*cos(q6)   sin(-35)*sin(q6)     cos(-35) *
+275      *******                                       *******/
+276     rot_matrix\&.setValue(cos((degToRad(j6_bend_degrees_))) * cos(q6),
+277                         cos((degToRad(j6_bend_degrees_))) * -sin(q6),
+278                         sin((degToRad(j6_bend_degrees_))),
+279                         sin(q6),
+280                         cos(q6),
+281                         0,
+282                         -sin((degToRad(j6_bend_degrees_))) * cos(q6),
+283                         sin((degToRad(j6_bend_degrees_))) * sin(q6),
+284                         cos((degToRad(j6_bend_degrees_))));
+285     rot_matrix\&.getRotation(rotation_q);
+286     transform\&.setRotation(rotation_q);
+287     /* Joint 6 Translation Vector */
+288     /****        ****
+289      * -cos(55)*D5  *
+290      *       0      *
+291      * -sin(55)*D5  *
+292      ****       ****/
+293     translation_v\&.setValue(-cos(degToRad(j6_bend_degrees_)) * j5_to_j6_,
+294                            0,
+295                            -sin(degToRad(j6_bend_degrees_)) * j5_to_j6_);
+296     transform\&.setOrigin(translation_v);
+297 
+298     broadcaster_\&.sendTransform(tf::StampedTransform(transform, ros::Time::now(),
+299                                                     concatTfName(tf_prefix_, "link_5"),
+300                                                     concatTfName(tf_prefix_, "link_hand")));
+301 
+302 #ifdef PRINT_DEBUG_INFO
+303     ROS_INFO("Joint 6 Rotation: X = %f, Y = %f, Z = %f, W = %f",
+304              rotation_q\&.getX(), rotation_q\&.getY(), rotation_q\&.getZ(), rotation_q\&.getW());
+305     ROS_INFO("Joint 6 Translation: X = %f, Y = %f, Z = %f",
+306              translation_v\&.getX(), translation_v\&.getY(), translation_v\&.getZ());
+307 #endif
+308 
+309 
+310     /**********************finger_1**********************/
+311     rot_matrix\&.setRPY(-1\&.7983, 1\&.117, 3\&.1416);
+312     rot_matrix\&.getRotation(rotation_q);
+313     transform\&.setRotation(rotation_q);
+314 
+315     translation_v\&.setValue(-0\&.03978, 0, -0\&.10071);
+316     transform\&.setOrigin(translation_v);
+317 
+318     broadcaster_\&.sendTransform(tf::StampedTransform(transform, ros::Time::now(),
+319                                                     concatTfName(tf_prefix_, "link_hand"),
+320                                                     concatTfName(tf_prefix_, "link_finger_1")));
+321 
+322 
+323     /**********************finger_2**********************/
+324     rot_matrix\&.setRPY(-1\&.6222, 1\&.117, -0\&.23615);
+325     rot_matrix\&.getRotation(rotation_q);
+326     transform\&.setRotation(rotation_q);
+327 
+328     translation_v\&.setValue(0\&.03569, -0\&.0216, -0\&.10071);
+329     transform\&.setOrigin(translation_v);
+330 
+331     broadcaster_\&.sendTransform(tf::StampedTransform(transform, ros::Time::now(),
+332                                                     concatTfName(tf_prefix_, "link_hand"),
+333                                                     concatTfName(tf_prefix_, "link_finger_2")));
+334 
+335 
+336     /**********************finger_3**********************/
+337     rot_matrix\&.setRPY(-1\&.5161, 1\&.1459, 0\&.23978);
+338     rot_matrix\&.getRotation(rotation_q);
+339     transform\&.setRotation(rotation_q);
+340 
+341     translation_v\&.setValue(0\&.03569, 0\&.0216, -0\&.10071);
+342     transform\&.setOrigin(translation_v);
+343 
+344     broadcaster_\&.sendTransform(tf::StampedTransform(transform, ros::Time::now(),
+345                                                     concatTfName(tf_prefix_, "link_hand"),
+346                                                     concatTfName(tf_prefix_, "link_finger_3")));
+347 }
+.fi
+.SH "Member Data Documentation"
+.PP 
+.SS "double jaco::JacoKinematics::base_to_api_\fC [private]\fP"
+
+.SS "double jaco::JacoKinematics::base_to_j1_\fC [private]\fP"
+
+.SS "tf::TransformBroadcaster jaco::JacoKinematics::broadcaster_\fC [private]\fP"
+
+.SS "double jaco::JacoKinematics::j1_to_j2_\fC [private]\fP"
+
+.SS "double jaco::JacoKinematics::j2_to_j3_\fC [private]\fP"
+
+.SS "double jaco::JacoKinematics::j3_offset_\fC [private]\fP"
+
+.SS "double jaco::JacoKinematics::j3_to_j4_\fC [private]\fP"
+
+.SS "double jaco::JacoKinematics::j4_to_j5_\fC [private]\fP"
+
+.SS "double jaco::JacoKinematics::j5_bend_degrees_\fC [private]\fP"
+
+.SS "double jaco::JacoKinematics::j5_to_j6_\fC [private]\fP"
+
+.SS "double jaco::JacoKinematics::j6_bend_degrees_\fC [private]\fP"
+
+.SS "double jaco::JacoKinematics::j6_to_end_\fC [private]\fP"
+
+.SS "std::string jaco::JacoKinematics::tf_prefix_\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Kinova-ROS from the source code\&.

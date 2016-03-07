@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="dir_535fd19d8a6d5404302a2ff0f033befb">
+    <title>D:/Longfei/Desktop/catkin_KinovaROS/devel/lib/python2.7/dist-packages/jaco_msgs Directory Reference</title>
+<para>Directory dependency diagram for D:/Longfei/Desktop/catkin_KinovaROS/devel/lib/python2.7/dist-packages/jaco_msgs</para>
+<para>
+    <figure>
+        <title>Directory Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../dir_535fd19d8a6d5404302a2ff0f033befb_dep.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+        <simplesect>
+            <title> Directories </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>dir <link linkend="dir_c3d12834e3748fa37eebb3cbde1be6d6">D:/Longfei/Desktop/catkin_KinovaROS/devel/lib/python2.7/dist-packages/jaco_msgs/msg</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>dir <link linkend="dir_cf034e50d7d948e3bc1f7e1034f26269">D:/Longfei/Desktop/catkin_KinovaROS/devel/lib/python2.7/dist-packages/jaco_msgs/srv</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title> File </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>file <link linkend="d7/dc5/jaco__msgs_2____init_____8py">__init__.py</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+    <simplesect>
+        <title>Detailed Description</title>
+    <para>Directory location is D:/Longfei/Desktop/catkin_KinovaROS/devel/lib/python2.7/dist-packages/jaco_msgs/</para>
+    </simplesect>
+</section>

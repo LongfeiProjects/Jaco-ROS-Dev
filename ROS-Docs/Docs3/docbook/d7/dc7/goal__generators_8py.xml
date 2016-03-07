@@ -1,0 +1,128 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="d7/dc7/goal__generators_8py">
+    <title>goal_generators.py File Reference</title>
+<para>Include dependency diagram for goal_generators.py</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../d4/d26/goal__generators_8py__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Included by dependency diagram for goal_generators.py</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../d3/d9e/goal__generators_8py__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+        <simplesect>
+            <title> Namespaces </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="df/da8/namespacegoal__generators">goal_generators</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+    <simplesect>
+        <title>Detailed Description</title>
+    <para>Definition in file D:/Longfei/Desktop/catkin_KinovaROS/src/jaco-ros/jaco_demo/nodes/jaco_demo/goal_generators.py</para>
+    </simplesect>
+    <literallayout><computeroutput>
+<link linkend="df/da8/namespacegoal__generators">1 </link><emphasis class="keyword">import</emphasis>&#32;numpy&#32;<emphasis class="keyword">as</emphasis>&#32;np
+2 
+3 
+<link linkend="df/da8/namespacegoal__generators_1acc20fd60c84b4f30491d22bf16139668">4 </link><emphasis class="keyword">def&#32;</emphasis><link linkend="df/da8/namespacegoal__generators_1acc20fd60c84b4f30491d22bf16139668">random_pose_generator</link>(n_poses=1):
+5 &#32;&#32;&#32;&#32;<emphasis class="stringliteral">&quot;&quot;&quot;A&#32;generator&#32;that&#32;yields&#32;random&#32;poses,&#32;position:&#32;[x,y,z]&#32;orientation:&#32;[x,y,z,w].&quot;&quot;&quot;</emphasis>
+6 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">for</emphasis>&#32;i&#32;<emphasis class="keywordflow">in</emphasis>&#32;xrange(n_poses):
+7 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;orient&#32;=&#32;np.random.random(4)
+8 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;mag&#32;=&#32;np.sqrt(sum(np.power(orient,&#32;2)))
+9 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">yield</emphasis>&#32;np.random.random(3),&#32;orient&#32;/&#32;mag
+10 
+11 
+<link linkend="df/da8/namespacegoal__generators_1a565aa27b68e73f1f3b2d1a9da1332051">12 </link><emphasis class="keyword">def&#32;</emphasis><link linkend="df/da8/namespacegoal__generators_1a565aa27b68e73f1f3b2d1a9da1332051">poses_from_file</link>(filepath):
+13 &#32;&#32;&#32;&#32;<emphasis class="stringliteral">&quot;&quot;&quot;A&#32;generator&#32;that&#32;yields&#32;poses&#32;from&#32;file,&#32;position:&#32;[x,y,z]&#32;orientation:&#32;[x,y,z,w].&quot;&quot;&quot;</emphasis>
+14 &#32;&#32;&#32;&#32;with&#32;open(filepath)&#32;<emphasis class="keyword">as</emphasis>&#32;f:
+15 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">for</emphasis>&#32;line&#32;<emphasis class="keywordflow">in</emphasis>&#32;f.readlines():
+16 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;len(line)&#32;&gt;&#32;10:
+17 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;vals&#32;=&#32;[float(n)&#32;<emphasis class="keywordflow">for</emphasis>&#32;n&#32;<emphasis class="keywordflow">in</emphasis>&#32;line.strip(<emphasis class="stringliteral">&apos;\n&apos;</emphasis>).split()[:7]]
+18 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;mag&#32;=&#32;np.sqrt(sum(np.power(vals[3:],&#32;2)))
+19 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">yield</emphasis>&#32;vals[:3],&#32;vals[3:]&#32;/&#32;mag
+20 
+21 
+<link linkend="df/da8/namespacegoal__generators_1a6ab109de507bd107dedc7801ca7c5381">22 </link><emphasis class="keyword">def&#32;</emphasis><link linkend="df/da8/namespacegoal__generators_1a6ab109de507bd107dedc7801ca7c5381">random_joint_angles_generator</link>(n_poses=1):
+23 &#32;&#32;&#32;&#32;<emphasis class="stringliteral">&quot;&quot;&quot;A&#32;generator&#32;that&#32;yields&#32;random&#32;joint&#32;angles.&quot;&quot;&quot;</emphasis>
+24 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">for</emphasis>&#32;i&#32;<emphasis class="keywordflow">in</emphasis>&#32;xrange(n_poses):
+25 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">#&#32;TODO:&#32;Check&#32;that&#32;the&#32;angles&#32;are&#32;valid</emphasis>
+26 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">#&#32;1:&#32;anything</emphasis>
+27 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">#&#32;2:&#32;-1.571&#32;+/-&#32;1</emphasis>
+28 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">#&#32;3:&#32;-1.571&#32;+/-&#32;1</emphasis>
+29 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">#&#32;4-6:&#32;anything</emphasis>
+30 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;offset&#32;=&#32;np.array([0.0,&#32;-0.5&#32;*&#32;np.pi,&#32;-0.5&#32;*&#32;np.pi,&#32;0.0,&#32;0.0,&#32;0.0])
+31 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;scale&#32;=&#32;np.array([2&#32;*&#32;np.pi,&#32;2.1,&#32;3.2,&#32;2&#32;*&#32;np.pi,&#32;2&#32;*&#32;np.pi,&#32;2&#32;*&#32;np.pi])
+32 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">yield</emphasis>&#32;(np.random.random(6)&#32;-&#32;0.5)&#32;*&#32;scale&#32;+&#32;offset
+33 
+34 
+<link linkend="df/da8/namespacegoal__generators_1a39b5582c84cdf5891bf92b77ab9c0b3b">35 </link><emphasis class="keyword">def&#32;</emphasis><link linkend="df/da8/namespacegoal__generators_1a39b5582c84cdf5891bf92b77ab9c0b3b">joint_angles_from_file</link>(filepath):
+36 &#32;&#32;&#32;&#32;<emphasis class="stringliteral">&quot;&quot;&quot;A&#32;generator&#32;that&#32;yields&#32;joint&#32;angles&#32;from&#32;file.&quot;&quot;&quot;</emphasis>
+37 &#32;&#32;&#32;&#32;with&#32;open(filepath)&#32;<emphasis class="keyword">as</emphasis>&#32;f:
+38 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">for</emphasis>&#32;line&#32;<emphasis class="keywordflow">in</emphasis>&#32;f.readlines():
+39 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;len(line)&#32;&gt;&#32;10:
+40 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">yield</emphasis>&#32;[float(n)&#32;<emphasis class="keywordflow">for</emphasis>&#32;n&#32;<emphasis class="keywordflow">in</emphasis>&#32;line.strip(<emphasis class="stringliteral">&apos;\n&apos;</emphasis>).split()[:6]]
+41 
+42 
+<link linkend="df/da8/namespacegoal__generators_1a2b395bfee98a60349c6a7193e8d3059f">43 </link><emphasis class="keyword">def&#32;</emphasis><link linkend="df/da8/namespacegoal__generators_1a2b395bfee98a60349c6a7193e8d3059f">random_jaco_finger_positions</link>(n_positions=1):
+44 &#32;&#32;&#32;&#32;<emphasis class="stringliteral">&quot;&quot;&quot;&#32;&quot;&quot;&quot;</emphasis>
+45 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">for</emphasis>&#32;i&#32;<emphasis class="keywordflow">in</emphasis>&#32;xrange(n_positions):
+46 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">#&#32;finger&#32;min/max&#32;range:&#32;[0.25&#32;to&#32;56]?</emphasis>
+47 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">yield</emphasis>&#32;np.random.random(3)&#32;*&#32;55.75&#32;+&#32;0.25
+48 
+49 
+<link linkend="df/da8/namespacegoal__generators_1a092d3fe84232b5b0ead199e6d5a822eb">50 </link><emphasis class="keyword">def&#32;</emphasis><link linkend="df/da8/namespacegoal__generators_1a092d3fe84232b5b0ead199e6d5a822eb">random_mico_finger_positions</link>(n_positions=1):
+51 &#32;&#32;&#32;&#32;<emphasis class="stringliteral">&quot;&quot;&quot;&#32;&quot;&quot;&quot;</emphasis>
+52 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">for</emphasis>&#32;i&#32;<emphasis class="keywordflow">in</emphasis>&#32;xrange(n_positions):
+53 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">#&#32;finger&#32;min/max&#32;range:&#32;[12&#32;to&#32;6450]?</emphasis>
+54 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">yield</emphasis>&#32;np.random.random(2)&#32;*&#32;6300.0&#32;+&#32;12.0
+55 
+56 
+57 <emphasis class="keywordflow">if</emphasis>&#32;__name__&#32;==&#32;<emphasis class="stringliteral">&apos;__main__&apos;</emphasis>:
+58 
+59 &#32;&#32;&#32;&#32;print(<emphasis class="stringliteral">&apos;You&#32;probably&#32;want&#32;to&#32;include&#32;these&#32;functions&#32;in&#32;a&#32;larger&#32;project&apos;</emphasis>)
+60 &#32;&#32;&#32;&#32;print(<emphasis class="stringliteral">&apos;rather&#32;than&#32;executing&#32;this&#32;file&#32;on&#32;its&#32;own,&#32;but&#32;here&#32;are&#32;some&#32;&apos;</emphasis>)
+61 &#32;&#32;&#32;&#32;print(<emphasis class="stringliteral">&apos;things&#32;these&#32;functions&#32;can&#32;do!\n&apos;</emphasis>)
+62 
+63 &#32;&#32;&#32;&#32;print(<emphasis class="stringliteral">&apos;Use&#32;random_pose_generator()&#32;to&#32;generate&#32;five&#32;random&#32;poses:&apos;</emphasis>)
+64 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">for</emphasis>&#32;position,&#32;orientation&#32;<emphasis class="keywordflow">in</emphasis>&#32;<link linkend="df/da8/namespacegoal__generators_1acc20fd60c84b4f30491d22bf16139668">random_pose_generator</link>(5):
+65 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;print(<emphasis class="stringliteral">&apos;&#32;&#32;&#32;&#32;position:&#32;{},&#32;orientation:&#32;{}&apos;</emphasis>.format(position,&#32;orientation))
+66 &#32;&#32;&#32;&#32;print(<emphasis class="stringliteral">&apos;&apos;</emphasis>)
+67 
+68 &#32;&#32;&#32;&#32;print(<emphasis class="stringliteral">&apos;Use&#32;poses_from_file()&#32;to&#32;load&#32;a&#32;predefined&#32;sequence&#32;of&#32;poses:&apos;</emphasis>)
+69 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">for</emphasis>&#32;position,&#32;orientation&#32;<emphasis class="keywordflow">in</emphasis>&#32;<link linkend="df/da8/namespacegoal__generators_1a565aa27b68e73f1f3b2d1a9da1332051">poses_from_file</link>(<emphasis class="stringliteral">&apos;pose_sequences/demo_pose_sequence.txt&apos;</emphasis>):
+70 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;print(<emphasis class="stringliteral">&apos;&#32;&#32;&#32;&#32;position:&#32;{},&#32;orientation:&#32;{}&apos;</emphasis>.format(position,&#32;orientation))
+71 &#32;&#32;&#32;&#32;print(<emphasis class="stringliteral">&apos;&apos;</emphasis>)
+72 
+73 &#32;&#32;&#32;&#32;print(<emphasis class="stringliteral">&apos;Use&#32;random_joint_angles_generator()&#32;to&#32;generate&#32;five&#32;random&#32;sets&#32;of&#32;joint&#32;angles:&apos;</emphasis>)
+74 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">for</emphasis>&#32;angle_set&#32;<emphasis class="keywordflow">in</emphasis>&#32;<link linkend="df/da8/namespacegoal__generators_1a6ab109de507bd107dedc7801ca7c5381">random_joint_angles_generator</link>(5):
+75 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;print(<emphasis class="stringliteral">&apos;&#32;&#32;&#32;&#32;angles:&#32;{}&apos;</emphasis>.format(angle_set))
+76 &#32;&#32;&#32;&#32;print(<emphasis class="stringliteral">&apos;&apos;</emphasis>)
+77 
+78 &#32;&#32;&#32;&#32;print(<emphasis class="stringliteral">&apos;Use&#32;joint_angles_from_file()&#32;to&#32;load&#32;a&#32;predefined&#32;sequence&#32;of&#32;poses:&apos;</emphasis>)
+79 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">for</emphasis>&#32;angle_set&#32;<emphasis class="keywordflow">in</emphasis>&#32;<link linkend="df/da8/namespacegoal__generators_1a39b5582c84cdf5891bf92b77ab9c0b3b">joint_angles_from_file</link>(<emphasis class="stringliteral">&apos;joint_sequences/demo_joint_sequence.txt&apos;</emphasis>):
+80 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;print(<emphasis class="stringliteral">&apos;&#32;&#32;&#32;&#32;angles:&#32;{}&apos;</emphasis>.format(angle_set))
+81 &#32;&#32;&#32;&#32;print(<emphasis class="stringliteral">&apos;&apos;</emphasis>)
+82 
+83 &#32;&#32;&#32;&#32;print(<emphasis class="stringliteral">&apos;Use&#32;random_finger_positions()&#32;to&#32;generate&#32;five&#32;random&#32;sets&#32;of&#32;finger&#32;positions:&apos;</emphasis>)
+<link linkend="df/da8/namespacegoal__generators_1a8ffcfd842ed393511c7ee860baa70446">84 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordflow">for</emphasis>&#32;positions&#32;<emphasis class="keywordflow">in</emphasis>&#32;<link linkend="df/da8/namespacegoal__generators_1a2b395bfee98a60349c6a7193e8d3059f">random_jaco_finger_positions</link>(5,&#32;n_fingers=3):
+85 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;print(<emphasis class="stringliteral">&apos;&#32;&#32;&#32;&#32;positions:&#32;{}&apos;</emphasis>.format(positions))
+86 &#32;&#32;&#32;&#32;print(<emphasis class="stringliteral">&apos;&apos;</emphasis>)
+    </computeroutput></literallayout>
+</section>

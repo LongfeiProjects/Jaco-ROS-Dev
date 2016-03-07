@@ -1,0 +1,78 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="d6/db5/structros_1_1message__traits_1_1MD5Sum_3_01_1_1jaco__msgs_1_1StopResponse___3_01ContainerAllocator_01_4_01_4">
+<title>ros::message_traits::MD5Sum&lt; ::jaco_msgs::StopResponse_&lt; ContainerAllocator &gt; &gt; struct Reference</title>
+<para>
+    <programlisting>#include <link linkend="d5/d58/StopResponse_8h">&quot;StopResponse.h&quot;</link></programlisting>
+</para>
+<para>Inheritance diagram for ros::message_traits::MD5Sum&lt; ::jaco_msgs::StopResponse_&lt; ContainerAllocator &gt; &gt;</para>
+<para>
+    <figure>
+        <title>Inheritance graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../dd/d21/structros_1_1message__traits_1_1MD5Sum_3_01_1_1jaco__msgs_1_1StopResponse___3_01ContainerAllocator_01_4_01_4__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Collaboration diagram for ros::message_traits::MD5Sum&lt; ::jaco_msgs::StopResponse_&lt; ContainerAllocator &gt; &gt;</para>
+<para>
+    <figure>
+        <title>Collaboration graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../dd/d63/structros_1_1message__traits_1_1MD5Sum_3_01_1_1jaco__msgs_1_1StopResponse___3_01ContainerAllocator_01_4_01_4__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+    <templateparamlist>
+      <param>
+        <type>class ContainerAllocator</type>
+      </param>
+    </templateparamlist>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static const uint64_t static_value1</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static const uint64_t static_value2</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static const char * <link linkend="d6/db5/structros_1_1message__traits_1_1MD5Sum_3_01_1_1jaco__msgs_1_1StopResponse___3_01ContainerAllocator_01_4_01_4_1aff645184aa7379e78621fb45aa8eff2d">value</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static const char * <link linkend="d6/db5/structros_1_1message__traits_1_1MD5Sum_3_01_1_1jaco__msgs_1_1StopResponse___3_01ContainerAllocator_01_4_01_4_1a6c415c37642d272cc6acc563479ee0f6">value</link> (
+const ::<link linkend="d3/d1d/structjaco__msgs_1_1StopResponse__">jaco_msgs::StopResponse_</link>&lt; ContainerAllocator &gt; &amp; )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+            <section xml:id="d6/db5/structros_1_1message__traits_1_1MD5Sum_3_01_1_1jaco__msgs_1_1StopResponse___3_01ContainerAllocator_01_4_01_4_1aff645184aa7379e78621fb45aa8eff2d">
+                <title>static const char* ros::message_traits::MD5Sum&lt; ::jaco_msgs::StopResponse_&lt; ContainerAllocator &gt; &gt;::value ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="d6/db5/structros_1_1message__traits_1_1MD5Sum_3_01_1_1jaco__msgs_1_1StopResponse___3_01ContainerAllocator_01_4_01_4_1a6c415c37642d272cc6acc563479ee0f6">
+                <title>static const char* ros::message_traits::MD5Sum&lt; ::jaco_msgs::StopResponse_&lt; ContainerAllocator &gt; &gt;::value (const ::jaco_msgs::StopResponse_&lt; ContainerAllocator &gt; &amp;)</title> <emphasis></emphasis>
+                
+            </section>
+</section>

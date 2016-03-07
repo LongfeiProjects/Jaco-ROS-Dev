@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="d7/d70/JacoPositionConfig_8dox">
+    <title>JacoPositionConfig.dox File Reference</title>
+<para>Include dependency diagram for JacoPositionConfig.dox</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../d0/d0d/JacoPositionConfig_8dox__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Included by dependency diagram for JacoPositionConfig.dox</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../d0/d5e/JacoPositionConfig_8dox__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+        <section>
+            <title>Variables</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>subsubsection parameters ROS parameters Reads and maintains the following parameters on the ROS server b <link linkend="d7/d70/JacoPositionConfig_8dox_1a94d02332ecf13e7845f06fe8c343e101">default</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>subsubsection parameters ROS parameters Reads and maintains the following parameters on the ROS server b <link linkend="d7/d70/JacoPositionConfig_8dox_1a55c9de72d9f3630abdf51bfe39c191dd">max</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>subsubsection parameters ROS parameters Reads and maintains the following parameters on the ROS server b <link linkend="d7/d70/JacoPositionConfig_8dox_1a9fff660751927d01485c1718209052c8">~X_Pose</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+    <simplesect>
+        <title>Detailed Description</title>
+    <para>Definition in file D:/Longfei/Desktop/catkin_KinovaROS/src/jaco-ros/jaco_driver/docs/JacoPositionConfig.dox</para>
+    </simplesect>
+    <literallayout><computeroutput>
+1 \subsubsection&#32;parameters&#32;ROS&#32;parameters
+2 
+3 Reads&#32;and&#32;maintains&#32;the&#32;following&#32;parameters&#32;on&#32;the&#32;ROS&#32;server
+4 
+<link linkend="d7/d70/JacoPositionConfig_8dox_1a9fff660751927d01485c1718209052c8">5 </link>-&#32;\b&#32;<emphasis class="stringliteral">&quot;~X_Pose&quot;</emphasis>&#32;:&#32;\b&#32;[double]&#32;X&#32;Pose&#32;min:&#32;-1.0,&#32;<emphasis class="keywordflow">default</emphasis>:&#32;0.0,&#32;<link linkend="d7/d70/JacoPositionConfig_8dox_1a55c9de72d9f3630abdf51bfe39c191dd">max</link>:&#32;1.0
+6 -&#32;\b&#32;<emphasis class="stringliteral">&quot;~Y_Pose&quot;</emphasis>&#32;:&#32;\b&#32;[double]&#32;Y&#32;Pose&#32;min:&#32;-1.0,&#32;<emphasis class="keywordflow">default</emphasis>:&#32;0.0,&#32;<link linkend="d7/d70/JacoPositionConfig_8dox_1a55c9de72d9f3630abdf51bfe39c191dd">max</link>:&#32;1.0
+7 -&#32;\b&#32;<emphasis class="stringliteral">&quot;~Z_Pose&quot;</emphasis>&#32;:&#32;\b&#32;[double]&#32;Z&#32;Pose&#32;min:&#32;-1.0,&#32;<emphasis class="keywordflow">default</emphasis>:&#32;0.0,&#32;<link linkend="d7/d70/JacoPositionConfig_8dox_1a55c9de72d9f3630abdf51bfe39c191dd">max</link>:&#32;1.0
+8 -&#32;\b&#32;<emphasis class="stringliteral">&quot;~RX_Pose&quot;</emphasis>&#32;:&#32;\b&#32;[double]&#32;RX&#32;Pose&#32;min:&#32;-5.0,&#32;<emphasis class="keywordflow">default</emphasis>:&#32;0.0,&#32;<link linkend="d7/d70/JacoPositionConfig_8dox_1a55c9de72d9f3630abdf51bfe39c191dd">max</link>:&#32;5.0
+9 -&#32;\b&#32;<emphasis class="stringliteral">&quot;~RY_Pose&quot;</emphasis>&#32;:&#32;\b&#32;[double]&#32;RY&#32;Pose&#32;min:&#32;-5.0,&#32;<emphasis class="keywordflow">default</emphasis>:&#32;0.0,&#32;<link linkend="d7/d70/JacoPositionConfig_8dox_1a55c9de72d9f3630abdf51bfe39c191dd">max</link>:&#32;5.0
+10 -&#32;\b&#32;<emphasis class="stringliteral">&quot;~RZ_Pose&quot;</emphasis>&#32;:&#32;\b&#32;[double]&#32;RZ&#32;Pose&#32;min:&#32;-5.0,&#32;<emphasis class="keywordflow">default</emphasis>:&#32;0.0,&#32;<link linkend="d7/d70/JacoPositionConfig_8dox_1a55c9de72d9f3630abdf51bfe39c191dd">max</link>:&#32;5.0
+11 
+    </computeroutput></literallayout>
+</section>

@@ -1,0 +1,202 @@
+.TH "AngularAcceleration" 3 "Thu Mar 3 2016" "Version 1.0.1" "Kinova-ROS" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+AngularAcceleration \- This data structure holds acceleration values(X, Y, Z) in an angular(joint by joint) control context\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include 'Definition'\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBInitStruct\fP ()"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "float \fBActuator1_X\fP"
+.br
+.RI "\fIAcceleration on X axis of the joint #1\&. Unit is G\&. \fP"
+.ti -1c
+.RI "float \fBActuator1_Y\fP"
+.br
+.RI "\fIAcceleration on Y axis of the joint #1\&. Unit is G\&. \fP"
+.ti -1c
+.RI "float \fBActuator1_Z\fP"
+.br
+.RI "\fIAcceleration on Z axis of the joint #1\&. Unit is G\&. \fP"
+.ti -1c
+.RI "float \fBActuator2_X\fP"
+.br
+.RI "\fIAcceleration on X axis of the joint #2\&. Unit is G\&. \fP"
+.ti -1c
+.RI "float \fBActuator2_Y\fP"
+.br
+.RI "\fIAcceleration on Y axis of the joint #2\&. Unit is G\&. \fP"
+.ti -1c
+.RI "float \fBActuator2_Z\fP"
+.br
+.RI "\fIAcceleration on Z axis of the joint #2\&. Unit is G\&. \fP"
+.ti -1c
+.RI "float \fBActuator3_X\fP"
+.br
+.RI "\fIAcceleration on X axis of the joint #3\&. Unit is G\&. \fP"
+.ti -1c
+.RI "float \fBActuator3_Y\fP"
+.br
+.RI "\fIAcceleration on Y axis of the joint #3\&. Unit is G\&. \fP"
+.ti -1c
+.RI "float \fBActuator3_Z\fP"
+.br
+.RI "\fIAcceleration on Z axis of the joint #3\&. Unit is G\&. \fP"
+.ti -1c
+.RI "float \fBActuator4_X\fP"
+.br
+.RI "\fIAcceleration on X axis of the joint #4\&. Unit is G\&. \fP"
+.ti -1c
+.RI "float \fBActuator4_Y\fP"
+.br
+.RI "\fIAcceleration on Y axis of the joint #4\&. Unit is G\&. \fP"
+.ti -1c
+.RI "float \fBActuator4_Z\fP"
+.br
+.RI "\fIAcceleration on Z axis of the joint #4\&. Unit is G\&. \fP"
+.ti -1c
+.RI "float \fBActuator5_X\fP"
+.br
+.RI "\fIAcceleration on X axis of the joint #5\&. Unit is G\&. \fP"
+.ti -1c
+.RI "float \fBActuator5_Y\fP"
+.br
+.RI "\fIAcceleration on Y axis of the joint #5\&. Unit is G\&. \fP"
+.ti -1c
+.RI "float \fBActuator5_Z\fP"
+.br
+.RI "\fIAcceleration on Z axis of the joint #5\&. Unit is G\&. \fP"
+.ti -1c
+.RI "float \fBActuator6_X\fP"
+.br
+.RI "\fIAcceleration on X axis of the joint #6\&. Unit is G\&. \fP"
+.ti -1c
+.RI "float \fBActuator6_Y\fP"
+.br
+.RI "\fIAcceleration on Y axis of the joint #6\&. Unit is G\&. \fP"
+.ti -1c
+.RI "float \fBActuator6_Z\fP"
+.br
+.RI "\fIAcceleration on Z axis of the joint #6\&. Unit is G\&. \fP"
+.in -1c
+.SH "Detailed Description"
+.PP 
+This data structure holds acceleration values(X, Y, Z) in an angular(joint by joint) control context\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "void AngularAcceleration::InitStruct ()\fC [inline]\fP"
+This method will initialises all the values to 0 
+.PP
+.nf
+2435     {
+2436         Actuator1_X = 0\&.0f;
+2437         Actuator1_Y = 0\&.0f;
+2438         Actuator1_Z = 0\&.0f;
+2439         Actuator2_X = 0\&.0f;
+2440         Actuator2_Y = 0\&.0f;
+2441         Actuator2_Z = 0\&.0f;
+2442         Actuator3_X = 0\&.0f;
+2443         Actuator3_Y = 0\&.0f;
+2444         Actuator3_Z = 0\&.0f;
+2445         Actuator4_X = 0\&.0f;
+2446         Actuator4_Y = 0\&.0f;
+2447         Actuator4_Z = 0\&.0f;
+2448         Actuator5_X = 0\&.0f;
+2449         Actuator5_Y = 0\&.0f;
+2450         Actuator5_Z = 0\&.0f;
+2451         Actuator6_X = 0\&.0f;
+2452         Actuator6_Y = 0\&.0f;
+2453         Actuator6_Z = 0\&.0f;
+2454     }
+.fi
+.SH "Member Data Documentation"
+.PP 
+.SS "float AngularAcceleration::Actuator1_X"
+
+.PP
+Acceleration on X axis of the joint #1\&. Unit is G\&. Acceleration on X axis of the joint #1\&. Unit is G\&. 
+.SS "float AngularAcceleration::Actuator1_Y"
+
+.PP
+Acceleration on Y axis of the joint #1\&. Unit is G\&. Acceleration on Y axis of the joint #1\&. Unit is G\&. 
+.SS "float AngularAcceleration::Actuator1_Z"
+
+.PP
+Acceleration on Z axis of the joint #1\&. Unit is G\&. Acceleration on Z axis of the joint #1\&. Unit is G\&. 
+.SS "float AngularAcceleration::Actuator2_X"
+
+.PP
+Acceleration on X axis of the joint #2\&. Unit is G\&. Acceleration on X axis of the joint #2\&. Unit is G\&. 
+.SS "float AngularAcceleration::Actuator2_Y"
+
+.PP
+Acceleration on Y axis of the joint #2\&. Unit is G\&. Acceleration on Y axis of the joint #2\&. Unit is G\&. 
+.SS "float AngularAcceleration::Actuator2_Z"
+
+.PP
+Acceleration on Z axis of the joint #2\&. Unit is G\&. Acceleration on Z axis of the joint #2\&. Unit is G\&. 
+.SS "float AngularAcceleration::Actuator3_X"
+
+.PP
+Acceleration on X axis of the joint #3\&. Unit is G\&. Acceleration on X axis of the joint #3\&. Unit is G\&. 
+.SS "float AngularAcceleration::Actuator3_Y"
+
+.PP
+Acceleration on Y axis of the joint #3\&. Unit is G\&. Acceleration on Y axis of the joint #3\&. Unit is G\&. 
+.SS "float AngularAcceleration::Actuator3_Z"
+
+.PP
+Acceleration on Z axis of the joint #3\&. Unit is G\&. Acceleration on Z axis of the joint #3\&. Unit is G\&. 
+.SS "float AngularAcceleration::Actuator4_X"
+
+.PP
+Acceleration on X axis of the joint #4\&. Unit is G\&. Acceleration on X axis of the joint #4\&. Unit is G\&. 
+.SS "float AngularAcceleration::Actuator4_Y"
+
+.PP
+Acceleration on Y axis of the joint #4\&. Unit is G\&. Acceleration on Y axis of the joint #4\&. Unit is G\&. 
+.SS "float AngularAcceleration::Actuator4_Z"
+
+.PP
+Acceleration on Z axis of the joint #4\&. Unit is G\&. Acceleration on Z axis of the joint #4\&. Unit is G\&. 
+.SS "float AngularAcceleration::Actuator5_X"
+
+.PP
+Acceleration on X axis of the joint #5\&. Unit is G\&. Acceleration on X axis of the joint #5\&. Unit is G\&. 
+.SS "float AngularAcceleration::Actuator5_Y"
+
+.PP
+Acceleration on Y axis of the joint #5\&. Unit is G\&. Acceleration on Y axis of the joint #5\&. Unit is G\&. 
+.SS "float AngularAcceleration::Actuator5_Z"
+
+.PP
+Acceleration on Z axis of the joint #5\&. Unit is G\&. Acceleration on Z axis of the joint #5\&. Unit is G\&. 
+.SS "float AngularAcceleration::Actuator6_X"
+
+.PP
+Acceleration on X axis of the joint #6\&. Unit is G\&. Acceleration on X axis of the joint #6\&. Unit is G\&. 
+.SS "float AngularAcceleration::Actuator6_Y"
+
+.PP
+Acceleration on Y axis of the joint #6\&. Unit is G\&. Acceleration on Y axis of the joint #6\&. Unit is G\&. 
+.SS "float AngularAcceleration::Actuator6_Z"
+
+.PP
+Acceleration on Z axis of the joint #6\&. Unit is G\&. Acceleration on Z axis of the joint #6\&. Unit is G\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Kinova-ROS from the source code\&.

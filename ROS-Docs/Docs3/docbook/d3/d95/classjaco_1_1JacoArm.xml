@@ -1,0 +1,509 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="d3/d95/classjaco_1_1JacoArm">
+<title>jaco::JacoArm class Reference</title>
+<para>
+    <programlisting>#include <link linkend="d8/d35/jaco__arm_8h">&quot;jaco_arm.h&quot;</link></programlisting>
+</para>
+<para>Inheritance diagram for jaco::JacoArm</para>
+<para>
+    <figure>
+        <title>Inheritance graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../dd/d65/classjaco_1_1JacoArm__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Collaboration diagram for jaco::JacoArm</para>
+<para>
+    <figure>
+        <title>Collaboration graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../da/d76/classjaco_1_1JacoArm__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+        <section>
+            <title>Private Attributes</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>double cartesian_vel_interval_seconds_</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>double cartesian_vel_timeout_seconds_</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>ros::Timer cartesian_vel_timer_</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>bool cartesian_vel_timer_flag_</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>CartesianInfo cartesian_velocities_</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>ros::Subscriber cartesian_velocity_subscriber_</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>bool convert_joint_velocities_</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>double finger_conv_ratio_</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>ros::Publisher finger_position_publisher_</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>ros::ServiceServer homing_service_</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>JacoComm &amp; jaco_comm_</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>ros::Publisher joint_angles_publisher_</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>std::vector&lt; std::string &gt; joint_names_</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>ros::Publisher joint_state_publisher_</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>double joint_vel_interval_seconds_</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>double joint_vel_timeout_seconds_</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>ros::Timer joint_vel_timer_</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>bool joint_vel_timer_flag_</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>AngularInfo joint_velocities_</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>ros::Subscriber joint_velocity_subscriber_</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>ros::Time last_cartesian_vel_cmd_time_</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>ros::Time last_joint_vel_cmd_time_</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>ros::NodeHandle node_handle_</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>ros::ServiceServer set_force_control_params_service_</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>ros::ServiceServer start_force_control_service_</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>ros::ServiceServer start_service_</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>double status_interval_seconds_</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>ros::Timer status_timer_</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>ros::ServiceServer stop_force_control_service_</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>ros::ServiceServer stop_service_</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>tf::TransformListener tf_listener_</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>std::string tf_prefix_</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>ros::Publisher tool_position_publisher_</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>ros::Publisher tool_wrench_publisher_</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="d3/d95/classjaco_1_1JacoArm_1a091f2eaffef84362f69e3b49482982db">cartesianVelocityCallback</link> (
+const geometry_msgs::TwistStampedConstPtr &amp; cartesian_vel)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>bool <link linkend="d3/d95/classjaco_1_1JacoArm_1a0296802ee4994977c35532077dd28a44">homeArmServiceCallback</link> (
+<link linkend="d7/dba/namespacejaco__msgs_1a9ec1a0126f783da04c0c07f2142c54e8">jaco_msgs::HomeArm::Request</link> &amp; req, <link linkend="d7/dba/namespacejaco__msgs_1a73b7d664d9eb1b07a5e5eebf08b4b444">jaco_msgs::HomeArm::Response</link> &amp; res)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="d3/d95/classjaco_1_1JacoArm_1ab29d25cb3b4bafdc523cbe271c801681">JacoArm</link> (
+<link linkend="d5/d2b/classjaco_1_1JacoComm">JacoComm</link> &amp; arm, const ros::NodeHandle &amp; node_handle)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="d3/d95/classjaco_1_1JacoArm_1a2c2cfc44e480845bbf7e78c6bfe454b6">jointVelocityCallback</link> (
+const <link linkend="d7/dba/namespacejaco__msgs_1aab606d270e36965850c5e08ce8073242">jaco_msgs::JointVelocityConstPtr</link> &amp; joint_vel)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>bool <link linkend="d3/d95/classjaco_1_1JacoArm_1a7a5b8120d770ed6ab0bd4593213de712">setForceControlParamsCallback</link> (
+<link linkend="d7/dba/namespacejaco__msgs_1a9960faf4239c20b2de273631be129dc2">jaco_msgs::SetForceControlParams::Request</link> &amp; req, <link linkend="d7/dba/namespacejaco__msgs_1a06150f3690c6e365126010e9874be430">jaco_msgs::SetForceControlParams::Response</link> &amp; res)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>bool <link linkend="d3/d95/classjaco_1_1JacoArm_1a6c96a5dcf017d0b054048e7765cd3f38">startForceControlCallback</link> (
+<link linkend="d7/dba/namespacejaco__msgs_1a90e69ae86033a05c547300c6c7759df5">jaco_msgs::Start::Request</link> &amp; req, <link linkend="d7/dba/namespacejaco__msgs_1a6efcf3689af0dcd0ac318ef8ffdc1f79">jaco_msgs::Start::Response</link> &amp; res)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>bool <link linkend="d3/d95/classjaco_1_1JacoArm_1a0b59f245a5ca363c52dcbc211f20fa64">startServiceCallback</link> (
+<link linkend="d7/dba/namespacejaco__msgs_1a90e69ae86033a05c547300c6c7759df5">jaco_msgs::Start::Request</link> &amp; req, <link linkend="d7/dba/namespacejaco__msgs_1a6efcf3689af0dcd0ac318ef8ffdc1f79">jaco_msgs::Start::Response</link> &amp; res)<para><emphasis>Handler for &quot;start&quot; service.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>bool <link linkend="d3/d95/classjaco_1_1JacoArm_1a0ddc9f2458a2c5e17e095b03b72699dc">stopForceControlCallback</link> (
+<link linkend="d7/dba/namespacejaco__msgs_1a5c2942c9b9b1fe5330e2b79bfaef2847">jaco_msgs::Stop::Request</link> &amp; req, <link linkend="d7/dba/namespacejaco__msgs_1aad03f8a7d16be1d6f6a0c1b2faf9cef2">jaco_msgs::Stop::Response</link> &amp; res)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>bool <link linkend="d3/d95/classjaco_1_1JacoArm_1a14ddcea579804fbbd3fb11643bc91e78">stopServiceCallback</link> (
+<link linkend="d7/dba/namespacejaco__msgs_1a5c2942c9b9b1fe5330e2b79bfaef2847">jaco_msgs::Stop::Request</link> &amp; req, <link linkend="d7/dba/namespacejaco__msgs_1aad03f8a7d16be1d6f6a0c1b2faf9cef2">jaco_msgs::Stop::Response</link> &amp; res)<para><emphasis>Handler for &quot;stop&quot; service.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="d3/d95/classjaco_1_1JacoArm_1a77535c062ca1d8e11b11e691bb1ee0da">~JacoArm</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="d3/d95/classjaco_1_1JacoArm_1a0effe31602b4af803cff1566a358fdfb">cartesianVelocityTimer</link> (
+const ros::TimerEvent &amp; )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="d3/d95/classjaco_1_1JacoArm_1a0897025ed2834e5802e504b64d67a88b">jointVelocityTimer</link> (
+const ros::TimerEvent &amp; )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="d3/d95/classjaco_1_1JacoArm_1ac9feee593db40584276b22f7db03206e">positionTimer</link> (
+const ros::TimerEvent &amp; )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="d3/d95/classjaco_1_1JacoArm_1a978feb8b29f9ef7d6d42596984e1962a">publishFingerPosition</link> (
+void )<para><emphasis>Publishes the current finger positions.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="d3/d95/classjaco_1_1JacoArm_1a238a888aa46e98fcae569bf942d61e32">publishJointAngles</link> (
+void )<para><emphasis>Publishes the current joint angles.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="d3/d95/classjaco_1_1JacoArm_1a91106f68edeff4b26d02a6d7a8528df6">publishToolPosition</link> (
+void )<para><emphasis>Publishes the current cartesian coordinates.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="d3/d95/classjaco_1_1JacoArm_1a91d14ff9734d5941167ba0ec13ec3e36">publishToolWrench</link> (
+void )<para><emphasis>Publishes the current cartesian forces at the end effector.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="d3/d95/classjaco_1_1JacoArm_1a3a04586ffe92b995c58c9fa94a030bf8">statusTimer</link> (
+const ros::TimerEvent &amp; )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Member Data Documentation</title>
+        </section>
+            <section xml:id="d3/d95/classjaco_1_1JacoArm_1a091f2eaffef84362f69e3b49482982db">
+                <title>void jaco::JacoArm::cartesianVelocityCallback (const geometry_msgs::TwistStampedConstPtr &amp;cartesian_vel)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="d3/d95/classjaco_1_1JacoArm_1a0296802ee4994977c35532077dd28a44">
+                <title>bool jaco::JacoArm::homeArmServiceCallback (jaco_msgs::HomeArm::Request &amp;req, jaco_msgs::HomeArm::Response &amp;res)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="d3/d95/classjaco_1_1JacoArm_1ab29d25cb3b4bafdc523cbe271c801681">
+                <title>jaco::JacoArm::JacoArm (JacoComm &amp;arm, const ros::NodeHandle &amp;node_handle)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="d3/d95/classjaco_1_1JacoArm_1a2c2cfc44e480845bbf7e78c6bfe454b6">
+                <title>void jaco::JacoArm::jointVelocityCallback (const jaco_msgs::JointVelocityConstPtr &amp;joint_vel)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="d3/d95/classjaco_1_1JacoArm_1a7a5b8120d770ed6ab0bd4593213de712">
+                <title>bool jaco::JacoArm::setForceControlParamsCallback (jaco_msgs::SetForceControlParams::Request &amp;req, jaco_msgs::SetForceControlParams::Response &amp;res)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="d3/d95/classjaco_1_1JacoArm_1a6c96a5dcf017d0b054048e7765cd3f38">
+                <title>bool jaco::JacoArm::startForceControlCallback (jaco_msgs::Start::Request &amp;req, jaco_msgs::Start::Response &amp;res)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="d3/d95/classjaco_1_1JacoArm_1a0b59f245a5ca363c52dcbc211f20fa64">
+                <title>bool jaco::JacoArm::startServiceCallback (jaco_msgs::Start::Request &amp;req, jaco_msgs::Start::Response &amp;res)</title> <emphasis>Handler for &quot;start&quot; service.</emphasis>
+                
+<para>Re-enables control of the arm after a stop. </para>
+
+            </section>
+            <section xml:id="d3/d95/classjaco_1_1JacoArm_1a0ddc9f2458a2c5e17e095b03b72699dc">
+                <title>bool jaco::JacoArm::stopForceControlCallback (jaco_msgs::Stop::Request &amp;req, jaco_msgs::Stop::Response &amp;res)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="d3/d95/classjaco_1_1JacoArm_1a14ddcea579804fbbd3fb11643bc91e78">
+                <title>bool jaco::JacoArm::stopServiceCallback (jaco_msgs::Stop::Request &amp;req, jaco_msgs::Stop::Response &amp;res)</title> <emphasis>Handler for &quot;stop&quot; service.</emphasis>
+                
+<para>Instantly stops the arm and prevents further movement until start service is invoked. </para>
+
+            </section>
+            <section xml:id="d3/d95/classjaco_1_1JacoArm_1a77535c062ca1d8e11b11e691bb1ee0da">
+                <title>jaco::JacoArm::~JacoArm ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="d3/d95/classjaco_1_1JacoArm_1a0effe31602b4af803cff1566a358fdfb">
+                <title>void jaco::JacoArm::cartesianVelocityTimer (const ros::TimerEvent &amp;)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="d3/d95/classjaco_1_1JacoArm_1a0897025ed2834e5802e504b64d67a88b">
+                <title>void jaco::JacoArm::jointVelocityTimer (const ros::TimerEvent &amp;)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="d3/d95/classjaco_1_1JacoArm_1ac9feee593db40584276b22f7db03206e">
+                <title>void jaco::JacoArm::positionTimer (const ros::TimerEvent &amp;)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="d3/d95/classjaco_1_1JacoArm_1a978feb8b29f9ef7d6d42596984e1962a">
+                <title>void jaco::JacoArm::publishFingerPosition (void)</title> <emphasis>Publishes the current finger positions.</emphasis>
+                
+            </section>
+            <section xml:id="d3/d95/classjaco_1_1JacoArm_1a238a888aa46e98fcae569bf942d61e32">
+                <title>void jaco::JacoArm::publishJointAngles (void)</title> <emphasis>Publishes the current joint angles.</emphasis>
+                
+<para>Joint angles are published in both their raw state as obtained from the arm (JointAngles), and transformed &amp; converted to radians (joint_state) as per the Jaco Kinematics PDF.</para>
+
+<para>Velocities and torques (effort) are only published in the JointStates message, only for the first 6 joints as these values are not available for the fingers. </para>
+
+            </section>
+            <section xml:id="d3/d95/classjaco_1_1JacoArm_1a91106f68edeff4b26d02a6d7a8528df6">
+                <title>void jaco::JacoArm::publishToolPosition (void)</title> <emphasis>Publishes the current cartesian coordinates.</emphasis>
+                
+            </section>
+            <section xml:id="d3/d95/classjaco_1_1JacoArm_1a91d14ff9734d5941167ba0ec13ec3e36">
+                <title>void jaco::JacoArm::publishToolWrench (void)</title> <emphasis>Publishes the current cartesian forces at the end effector.</emphasis>
+                
+            </section>
+            <section xml:id="d3/d95/classjaco_1_1JacoArm_1a3a04586ffe92b995c58c9fa94a030bf8">
+                <title>void jaco::JacoArm::statusTimer (const ros::TimerEvent &amp;)</title> <emphasis></emphasis>
+                
+            </section>
+</section>

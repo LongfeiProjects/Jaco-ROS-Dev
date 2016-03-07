@@ -1,0 +1,6 @@
+<map id="ClientConfigurations" name="ClientConfigurations">
+<area shape="rect" id="node2" href="$db/dfb/structUserPosition.html" title="This data structure represents an abstract position built by a user. Depending on the control type th..." alt="" coords="125,219,221,325"/>
+<area shape="rect" id="node3" href="$d0/df5/structAngularInfo.html" title="This data structure holds values in an angular(joint by joint) control context. As an example struct ..." alt="" coords="5,5,100,156"/>
+<area shape="rect" id="node4" href="$dd/d00/structCartesianInfo.html" title="This data structure holds values in an cartesian control context. " alt="" coords="124,5,221,156"/>
+<area shape="rect" id="node5" href="$df/d1b/structFingersPosition.html" title="This data structure holds the values of the robot&#39;s fingers. " alt="" coords="262,27,374,134"/>
+</map>

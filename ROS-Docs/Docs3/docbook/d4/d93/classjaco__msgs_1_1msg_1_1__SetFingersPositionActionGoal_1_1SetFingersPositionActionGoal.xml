@@ -1,0 +1,210 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="d4/d93/classjaco__msgs_1_1msg_1_1__SetFingersPositionActionGoal_1_1SetFingersPositionActionGoal">
+<title>jaco_msgs::msg::_SetFingersPositionActionGoal::SetFingersPositionActionGoal class Reference</title>
+<para>Inheritance diagram for jaco_msgs::msg::_SetFingersPositionActionGoal::SetFingersPositionActionGoal</para>
+<para>
+    <figure>
+        <title>Inheritance graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../d1/d3b/classjaco__msgs_1_1msg_1_1__SetFingersPositionActionGoal_1_1SetFingersPositionActionGoal__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Collaboration diagram for jaco_msgs::msg::_SetFingersPositionActionGoal::SetFingersPositionActionGoal</para>
+<para>
+    <figure>
+        <title>Collaboration graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../d4/d23/classjaco__msgs_1_1msg_1_1__SetFingersPositionActionGoal_1_1SetFingersPositionActionGoal__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>list __slots__</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>string _full_text</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>bool _has_header</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>string _md5sum</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>list _slot_types</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>string _type</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Public Attributes</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>goal</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>goal_id</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>header</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>def <link linkend="d4/d93/classjaco__msgs_1_1msg_1_1__SetFingersPositionActionGoal_1_1SetFingersPositionActionGoal_1a6dc1abbd155d714564086f270d8abb01">__init__</link> (
+self , args , kwds )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>def <link linkend="d4/d93/classjaco__msgs_1_1msg_1_1__SetFingersPositionActionGoal_1_1SetFingersPositionActionGoal_1a00ce8a4089881c2874855c061913c9b4">deserialize</link> (
+self , str )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>def <link linkend="d4/d93/classjaco__msgs_1_1msg_1_1__SetFingersPositionActionGoal_1_1SetFingersPositionActionGoal_1a2a8a0107fdcda71b66c61187de99612a">deserialize_numpy</link> (
+self , str , numpy )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>def <link linkend="d4/d93/classjaco__msgs_1_1msg_1_1__SetFingersPositionActionGoal_1_1SetFingersPositionActionGoal_1a2fcf3ad33310011f88e6f076938498eb">serialize</link> (
+self , buff )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>def <link linkend="d4/d93/classjaco__msgs_1_1msg_1_1__SetFingersPositionActionGoal_1_1SetFingersPositionActionGoal_1ab64f98f291f53c3c9055bbc8a5f26153">serialize_numpy</link> (
+self , buff , numpy )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>def <link linkend="d4/d93/classjaco__msgs_1_1msg_1_1__SetFingersPositionActionGoal_1_1SetFingersPositionActionGoal_1a7579a54558907846888174c23c275e10">_get_types</link> (
+self )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Member Data Documentation</title>
+        </section>
+            <section xml:id="d4/d93/classjaco__msgs_1_1msg_1_1__SetFingersPositionActionGoal_1_1SetFingersPositionActionGoal_1a6dc1abbd155d714564086f270d8abb01">
+                <title>def jaco_msgs.msg._SetFingersPositionActionGoal.SetFingersPositionActionGoal.__init__ (self, args, kwds)</title> <emphasis></emphasis>
+                
+<para><literallayout>Constructor. Any message fields that are implicitly/explicitly
+set to None will be assigned a default value. The recommend
+use is keyword arguments as this is more robust to future message
+changes.  You cannot mix in-order arguments and keyword arguments.
+
+The available fields are:
+   header,goal_id,goal
+
+:param args: complete set of field values, in .msg order
+:param kwds: use keyword arguments corresponding to message field names
+to set specific fields.
+</literallayout> </para>
+
+            </section>
+            <section xml:id="d4/d93/classjaco__msgs_1_1msg_1_1__SetFingersPositionActionGoal_1_1SetFingersPositionActionGoal_1a00ce8a4089881c2874855c061913c9b4">
+                <title>def jaco_msgs.msg._SetFingersPositionActionGoal.SetFingersPositionActionGoal.deserialize (self, str)</title> <emphasis></emphasis>
+                
+<para><literallayout>unpack serialized message in str into this message instance
+:param str: byte array of serialized message, ``str``
+</literallayout> </para>
+
+            </section>
+            <section xml:id="d4/d93/classjaco__msgs_1_1msg_1_1__SetFingersPositionActionGoal_1_1SetFingersPositionActionGoal_1a2a8a0107fdcda71b66c61187de99612a">
+                <title>def jaco_msgs.msg._SetFingersPositionActionGoal.SetFingersPositionActionGoal.deserialize_numpy (self, str, numpy)</title> <emphasis></emphasis>
+                
+<para><literallayout>unpack serialized message in str into this message instance using numpy for array types
+:param str: byte array of serialized message, ``str``
+:param numpy: numpy python module
+</literallayout> </para>
+
+            </section>
+            <section xml:id="d4/d93/classjaco__msgs_1_1msg_1_1__SetFingersPositionActionGoal_1_1SetFingersPositionActionGoal_1a2fcf3ad33310011f88e6f076938498eb">
+                <title>def jaco_msgs.msg._SetFingersPositionActionGoal.SetFingersPositionActionGoal.serialize (self, buff)</title> <emphasis></emphasis>
+                
+<para><literallayout>serialize message into buffer
+:param buff: buffer, ``StringIO``
+</literallayout> </para>
+
+            </section>
+            <section xml:id="d4/d93/classjaco__msgs_1_1msg_1_1__SetFingersPositionActionGoal_1_1SetFingersPositionActionGoal_1ab64f98f291f53c3c9055bbc8a5f26153">
+                <title>def jaco_msgs.msg._SetFingersPositionActionGoal.SetFingersPositionActionGoal.serialize_numpy (self, buff, numpy)</title> <emphasis></emphasis>
+                
+<para><literallayout>serialize message with numpy array types into buffer
+:param buff: buffer, ``StringIO``
+:param numpy: numpy python module
+</literallayout> </para>
+
+            </section>
+            <section xml:id="d4/d93/classjaco__msgs_1_1msg_1_1__SetFingersPositionActionGoal_1_1SetFingersPositionActionGoal_1a7579a54558907846888174c23c275e10">
+                <title>def jaco_msgs.msg._SetFingersPositionActionGoal.SetFingersPositionActionGoal._get_types (self)</title> <emphasis></emphasis>
+                
+<para><literallayout>internal API method
+</literallayout> </para>
+
+            </section>
+</section>

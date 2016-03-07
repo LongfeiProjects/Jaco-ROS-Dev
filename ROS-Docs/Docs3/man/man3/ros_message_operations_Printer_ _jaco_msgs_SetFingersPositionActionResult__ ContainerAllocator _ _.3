@@ -1,0 +1,47 @@
+.TH "ros::message_operations::Printer< ::jaco_msgs::SetFingersPositionActionResult_< ContainerAllocator > >" 3 "Thu Mar 3 2016" "Version 1.0.1" "Kinova-ROS" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ros::message_operations::Printer< ::jaco_msgs::SetFingersPositionActionResult_< ContainerAllocator > > \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include 'SetFingersPositionActionResult\&.h'\fP
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "template<typename Stream > static void \fBstream\fP (Stream &s, const std::string &indent, const ::\fBjaco_msgs::SetFingersPositionActionResult_\fP< ContainerAllocator > &v)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.SS "template<class ContainerAllocator>
+.br
+struct ros::message_operations::Printer< ::jaco_msgs::SetFingersPositionActionResult_< ContainerAllocator > >"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "template<class ContainerAllocator > template<typename Stream > static void ros::message_operations::Printer< ::\fBjaco_msgs::SetFingersPositionActionResult_\fP< ContainerAllocator > >::stream (Stream & s, const std::string & indent, const ::\fBjaco_msgs::SetFingersPositionActionResult_\fP< ContainerAllocator > & v)\fC [inline]\fP, \fC [static]\fP"
+
+.PP
+.nf
+298   {
+299     s << indent << "header: ";
+300     s << std::endl;
+301     Printer< ::std_msgs::Header_<ContainerAllocator> >::stream(s, indent + "  ", v\&.header);
+302     s << indent << "status: ";
+303     s << std::endl;
+304     Printer< ::actionlib_msgs::GoalStatus_<ContainerAllocator> >::stream(s, indent + "  ", v\&.status);
+305     s << indent << "result: ";
+306     s << std::endl;
+307     Printer< ::jaco_msgs::SetFingersPositionResult_<ContainerAllocator> >::stream(s, indent + "  ", v\&.result);
+308   }
+.fi
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Kinova-ROS from the source code\&.

@@ -1,0 +1,1168 @@
+\hypertarget{classjaco_1_1JacoComm}{}\section{jaco\+:\+:Jaco\+Comm Class Reference}
+\label{classjaco_1_1JacoComm}\index{jaco\+::\+Jaco\+Comm@{jaco\+::\+Jaco\+Comm}}
+
+
+{\ttfamily \#include \char`\"{}jaco\+\_\+comm.\+h\char`\"{}}
+
+
+
+Collaboration diagram for jaco\+:\+:Jaco\+Comm\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=205pt]{dc/dca/classjaco_1_1JacoComm__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classjaco_1_1JacoComm_af181d7ddd7baeff6e46720648e7e1f31}{get\+Cartesian\+Force} (\hyperlink{classjaco_1_1JacoPose}{Jaco\+Pose} \&position)
+\begin{DoxyCompactList}\small\item\em A\+PI call to obtain the current cartesian force of the arm. \end{DoxyCompactList}\item 
+void \hyperlink{classjaco_1_1JacoComm_a855bbefed2093d0d0cc7763eb7306a0b}{get\+Cartesian\+Position} (\hyperlink{classjaco_1_1JacoPose}{Jaco\+Pose} \&position)
+\begin{DoxyCompactList}\small\item\em A\+PI call to obtain the current cartesian position of the arm. \end{DoxyCompactList}\item 
+void \hyperlink{classjaco_1_1JacoComm_a47a3557e9b5576bc83df936caa043270}{get\+Config} (\hyperlink{KinovaTypes_8h_d1/d2e/structClientConfigurations}{Client\+Configurations} \&config)
+\begin{DoxyCompactList}\small\item\em A\+PI call to obtain the current client configuration. \end{DoxyCompactList}\item 
+void \hyperlink{classjaco_1_1JacoComm_a7644bf1154b59bf4d8b97c200284e3fb}{get\+Finger\+Positions} (\hyperlink{classjaco_1_1FingerAngles}{Finger\+Angles} \&fingers)
+\begin{DoxyCompactList}\small\item\em A\+PI call to obtain the current finger positions. \end{DoxyCompactList}\item 
+void \hyperlink{classjaco_1_1JacoComm_a5fcb23bf6925a82f2ab5e42460ea3834}{get\+Joint\+Angles} (\hyperlink{classjaco_1_1JacoAngles}{Jaco\+Angles} \&angles)
+\begin{DoxyCompactList}\small\item\em A\+PI call to obtain the current angular position of all the joints. \end{DoxyCompactList}\item 
+void \hyperlink{classjaco_1_1JacoComm_af2ba4b35149e292fa5279768d47216cb}{get\+Joint\+Torques} (\hyperlink{classjaco_1_1JacoAngles}{Jaco\+Angles} \&tqs)
+\begin{DoxyCompactList}\small\item\em A\+PI call to obtain the current torque of all the joints. \end{DoxyCompactList}\item 
+void \hyperlink{classjaco_1_1JacoComm_aa81b5cdf89bd2c7259be3638fdb4f75a}{get\+Joint\+Velocities} (\hyperlink{classjaco_1_1JacoAngles}{Jaco\+Angles} \&vels)
+\begin{DoxyCompactList}\small\item\em A\+PI call to obtain the current angular velocities of all the joints. \end{DoxyCompactList}\item 
+void \hyperlink{classjaco_1_1JacoComm_a29384597e710d4cbb4e1f2ae6b7d7e50}{get\+Quick\+Status} (\hyperlink{KinovaTypes_8h_df/d9d/structQuickStatus}{Quick\+Status} \&quick\+\_\+status)
+\begin{DoxyCompactList}\small\item\em A\+PI call to obtain the current \char`\"{}quick status\char`\"{}. \end{DoxyCompactList}\item 
+void \hyperlink{classjaco_1_1JacoComm_a38c69b22bc293afd3f27eff9179dec4c}{home\+Arm} (void)
+\begin{DoxyCompactList}\small\item\em Send the arm to the \char`\"{}home\char`\"{} position. \end{DoxyCompactList}\item 
+void \hyperlink{classjaco_1_1JacoComm_a787f049f83d8f5fa5a7c86ee6a1d0a11}{init\+Fingers} (void)
+\begin{DoxyCompactList}\small\item\em Initialize finger actuators. \end{DoxyCompactList}\item 
+bool \hyperlink{classjaco_1_1JacoComm_a0e7d5984a2c6ed956da7e07e6c97ba5f}{is\+Homed} (void)
+\begin{DoxyCompactList}\small\item\em Determines whether the arm has returned to its \char`\"{}\+Home\char`\"{} state. \end{DoxyCompactList}\item 
+bool \hyperlink{classjaco_1_1JacoComm_a872b8033cda5a9fe4ccdca2e89aa03d1}{is\+Stopped} ()
+\item 
+\hyperlink{classjaco_1_1JacoComm_acdf234ee7f30cf5ead4f41beb3481521}{Jaco\+Comm} (const ros\+::\+Node\+Handle \&node\+\_\+handle, boost\+::recursive\+\_\+mutex \&api\+\_\+mutex, const bool is\+\_\+movement\+\_\+on\+\_\+start)
+\item 
+int \hyperlink{classjaco_1_1JacoComm_a42e11ee165ee8f2b1af7e7060f488ce1}{num\+Fingers} ()
+\item 
+void \hyperlink{classjaco_1_1JacoComm_a0524faa99cdc1361d50c3c6a53d5cfe0}{print\+Angles} (const \hyperlink{classjaco_1_1JacoAngles}{Jaco\+Angles} \&angles)
+\begin{DoxyCompactList}\small\item\em Dumps the current joint angles onto the screen. \end{DoxyCompactList}\item 
+void \hyperlink{classjaco_1_1JacoComm_a54661eeda2fc5324843a230bdcfe8b67}{print\+Config} (const \hyperlink{KinovaTypes_8h_d1/d2e/structClientConfigurations}{Client\+Configurations} \&config)
+\begin{DoxyCompactList}\small\item\em Dumps the client configuration onto the screen. \end{DoxyCompactList}\item 
+void \hyperlink{classjaco_1_1JacoComm_ab34f7cbb2978e76644927b9031e06b4f}{print\+Fingers} (const \hyperlink{structFingersPosition}{Fingers\+Position} \&fingers)
+\begin{DoxyCompactList}\small\item\em Dumps the current finger positions onto the screen. \end{DoxyCompactList}\item 
+void \hyperlink{classjaco_1_1JacoComm_ac1abf65387fa9adba237802bc97f15b1}{print\+Position} (const \hyperlink{classjaco_1_1JacoPose}{Jaco\+Pose} \&position)
+\begin{DoxyCompactList}\small\item\em Dumps the current cartesian positions onto the screen. \end{DoxyCompactList}\item 
+int \hyperlink{classjaco_1_1JacoComm_af20323ed50f73b59bac3e18ebd8559fa}{robot\+Type} ()
+\item 
+void \hyperlink{classjaco_1_1JacoComm_a39faaf774115561ea1857349db182145}{set\+Cartesian\+Force\+Min\+Max} (const \hyperlink{structCartesianInfo}{Cartesian\+Info} \&min, const \hyperlink{structCartesianInfo}{Cartesian\+Info} \&\hyperlink{JacoPositionConfig_8dox_a55c9de72d9f3630abdf51bfe39c191dd}{max})
+\begin{DoxyCompactList}\small\item\em Set the cartesian min and max force parameters for force control. \end{DoxyCompactList}\item 
+void \hyperlink{classjaco_1_1JacoComm_afbb443b8e3fe71ef58b0013fdb3d5674}{set\+Cartesian\+Inertia\+Damping} (const \hyperlink{structCartesianInfo}{Cartesian\+Info} \&inertia, const \hyperlink{structCartesianInfo}{Cartesian\+Info} \&damping)
+\begin{DoxyCompactList}\small\item\em Set the cartesian inertia and damping parameters for force control. \end{DoxyCompactList}\item 
+void \hyperlink{classjaco_1_1JacoComm_a7a7375d2609c81f0a03974b06ca07be0}{set\+Cartesian\+Position} (const \hyperlink{classjaco_1_1JacoPose}{Jaco\+Pose} \&position, int timeout=0, bool push=true)
+\begin{DoxyCompactList}\small\item\em Sends a cartesian coordinate trajectory to the Jaco arm. \end{DoxyCompactList}\item 
+void \hyperlink{classjaco_1_1JacoComm_a468352480a437cc2144c8d4d289815a5}{set\+Cartesian\+Velocities} (const \hyperlink{structCartesianInfo}{Cartesian\+Info} \&velocities)
+\begin{DoxyCompactList}\small\item\em Set the cartesian velocity of the tool tip. \end{DoxyCompactList}\item 
+void \hyperlink{classjaco_1_1JacoComm_ae7901b1dff2e84eb89256f46a7c65b62}{set\+Config} (const \hyperlink{KinovaTypes_8h_d1/d2e/structClientConfigurations}{Client\+Configurations} \&config)
+\begin{DoxyCompactList}\small\item\em Obtains the current arm configuration. \end{DoxyCompactList}\item 
+void \hyperlink{classjaco_1_1JacoComm_a5cdc217373b923f7de2ed468150281fa}{set\+Finger\+Positions} (const \hyperlink{classjaco_1_1FingerAngles}{Finger\+Angles} \&fingers, int timeout=0, bool push=true)
+\begin{DoxyCompactList}\small\item\em Sets the finger positions. \end{DoxyCompactList}\item 
+void \hyperlink{classjaco_1_1JacoComm_ad53fa0c190d41da8430de2e9bf997f05}{set\+Joint\+Angles} (const \hyperlink{classjaco_1_1JacoAngles}{Jaco\+Angles} \&angles, int timeout=0, bool push=true)
+\begin{DoxyCompactList}\small\item\em Sends a joint angle command to the Jaco arm. \end{DoxyCompactList}\item 
+void \hyperlink{classjaco_1_1JacoComm_af269b1c8d8b1f32c1003ca2e464252f0}{set\+Joint\+Velocities} (const \hyperlink{structAngularInfo}{Angular\+Info} \&joint\+\_\+vel)
+\begin{DoxyCompactList}\small\item\em Set the angular velocity of the joints. \end{DoxyCompactList}\item 
+void \hyperlink{classjaco_1_1JacoComm_a6b2a1fabc4e6c30da42c9a5e26757398}{start\+A\+PI} ()
+\item 
+void \hyperlink{classjaco_1_1JacoComm_a00e5493dfbdcaab6c1a9bd388d3b839d}{start\+Force\+Control} ()
+\begin{DoxyCompactList}\small\item\em Start cartesian force control. \end{DoxyCompactList}\item 
+void \hyperlink{classjaco_1_1JacoComm_a54862830cd6414ae3ae48e46e54bf798}{stop\+A\+PI} ()
+\item 
+void \hyperlink{classjaco_1_1JacoComm_a339cf31d88fdef6409340c82a35ecb53}{stop\+Force\+Control} ()
+\begin{DoxyCompactList}\small\item\em Stop cartesian force control. \end{DoxyCompactList}\item 
+\hyperlink{classjaco_1_1JacoComm_a94db89ce398a131d5dd6985a7725f495}{$\sim$\+Jaco\+Comm} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+boost\+::recursive\+\_\+mutex \& \hyperlink{classjaco_1_1JacoComm_ac6ef2a6b3c51877fc4237d834c35908a}{api\+\_\+mutex\+\_\+}
+\item 
+bool \hyperlink{classjaco_1_1JacoComm_a9607500fac99c4dbc5acc98dd513eec3}{is\+\_\+software\+\_\+stop\+\_\+}
+\item 
+\hyperlink{classjaco_1_1JacoAPI}{jaco\+::\+Jaco\+A\+PI} \hyperlink{classjaco_1_1JacoComm_a8d1510c941f28a4e8f921691d4fd2248}{jaco\+\_\+api\+\_\+}
+\item 
+int \hyperlink{classjaco_1_1JacoComm_a5812c7504d90ec6016c40cba097ba1bb}{num\+\_\+fingers\+\_\+}
+\item 
+int \hyperlink{classjaco_1_1JacoComm_afb603f289e6ed8855cbeb0d0b1400829}{robot\+\_\+type\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{jaco\+::\+Jaco\+Comm@{jaco\+::\+Jaco\+Comm}!Jaco\+Comm@{Jaco\+Comm}}
+\index{Jaco\+Comm@{Jaco\+Comm}!jaco\+::\+Jaco\+Comm@{jaco\+::\+Jaco\+Comm}}
+\subsubsection[{\texorpdfstring{Jaco\+Comm(const ros\+::\+Node\+Handle \&node\+\_\+handle, boost\+::recursive\+\_\+mutex \&api\+\_\+mutex, const bool is\+\_\+movement\+\_\+on\+\_\+start)}{JacoComm(const ros::NodeHandle &node_handle, boost::recursive_mutex &api_mutex, const bool is_movement_on_start)}}]{\setlength{\rightskip}{0pt plus 5cm}jaco\+::\+Jaco\+Comm\+::\+Jaco\+Comm (
+\begin{DoxyParamCaption}
+\item[{const ros\+::\+Node\+Handle \&}]{node\+\_\+handle, }
+\item[{boost\+::recursive\+\_\+mutex \&}]{api\+\_\+mutex, }
+\item[{const bool}]{is\+\_\+movement\+\_\+on\+\_\+start}
+\end{DoxyParamCaption}
+)}\hypertarget{classjaco_1_1JacoComm_acdf234ee7f30cf5ead4f41beb3481521}{}\label{classjaco_1_1JacoComm_acdf234ee7f30cf5ead4f41beb3481521}
+
+\begin{DoxyCode}
+58     : \hyperlink{classjaco_1_1JacoComm_a9607500fac99c4dbc5acc98dd513eec3}{is\_software\_stop\_}(\textcolor{keyword}{false}), \hyperlink{classjaco_1_1JacoComm_ac6ef2a6b3c51877fc4237d834c35908a}{api\_mutex\_}(api\_mutex)
+59 \{
+60     boost::recursive\_mutex::scoped\_lock lock(\hyperlink{classjaco_1_1JacoComm_ac6ef2a6b3c51877fc4237d834c35908a}{api\_mutex\_});
+61 
+62     \textcolor{comment}{// Get the serial number parameter for the arm we wish to connec to}
+63     std::string serial\_number = \textcolor{stringliteral}{""};
+64     node\_handle.getParam(\textcolor{stringliteral}{"serial\_number"}, serial\_number);
+65 
+66     std::vector<int> api\_version;
+67     \textcolor{keywordtype}{int} \hyperlink{Kinova_8API_8CommLayerUbuntu_8h_a900dac90961bada00f57c207562a6a9a}{result} = \hyperlink{classjaco_1_1JacoComm_a8d1510c941f28a4e8f921691d4fd2248}{jaco\_api\_}.\hyperlink{classjaco_1_1JacoAPI_a90f1033a1174ea7f97d48186b7ca867a}{getAPIVersion}(api\_version);
+68     \textcolor{keywordflow}{if} (result != \hyperlink{Kinova_8API_8CommLayerUbuntu_8h_a510f2320a2a31d2d225adc0da7bef595}{NO\_ERROR\_KINOVA})
+69     \{
+70         \textcolor{keywordflow}{throw} JacoCommException(\textcolor{stringliteral}{"Could not get the Kinova API version"}, result);
+71     \}
+72 
+73     ROS\_INFO\_STREAM(\textcolor{stringliteral}{"Initializing Kinova API (header version: "} << 
+      \hyperlink{Kinova_8API_8UsbCommandLayerUbuntu_8h_aaeb890c653dc6657b1238afe3ce1a0f9}{COMMAND\_LAYER\_VERSION} << \textcolor{stringliteral}{", library version: "}
+74                     << api\_version[0] << \textcolor{stringliteral}{"."} << api\_version[1] << \textcolor{stringliteral}{"."} << api\_version[2] << \textcolor{stringliteral}{")"});
+75 
+76     result = \hyperlink{classjaco_1_1JacoComm_a8d1510c941f28a4e8f921691d4fd2248}{jaco\_api\_}.\hyperlink{classjaco_1_1JacoAPI_a06eae62c9dd3e144cc4275048c3129e6}{initAPI}();
+77     \textcolor{keywordflow}{if} (result != \hyperlink{Kinova_8API_8CommLayerUbuntu_8h_a510f2320a2a31d2d225adc0da7bef595}{NO\_ERROR\_KINOVA})
+78     \{
+79         \textcolor{keywordflow}{throw} JacoCommException(\textcolor{stringliteral}{"Could not initialize Kinova API"}, result);
+80     \}
+81 
+82     std::vector<KinovaDevice> devices\_list;
+83     result = \hyperlink{Kinova_8API_8CommLayerUbuntu_8h_a510f2320a2a31d2d225adc0da7bef595}{NO\_ERROR\_KINOVA};
+84     \hyperlink{classjaco_1_1JacoComm_a8d1510c941f28a4e8f921691d4fd2248}{jaco\_api\_}.\hyperlink{classjaco_1_1JacoAPI_a6f80ab16b2518ecb0ddefcd7183027c1}{getDevices}(devices\_list, result);
+85     \textcolor{keywordflow}{if} (result != \hyperlink{Kinova_8API_8CommLayerUbuntu_8h_a510f2320a2a31d2d225adc0da7bef595}{NO\_ERROR\_KINOVA})
+86     \{
+87         \textcolor{keywordflow}{throw} JacoCommException(\textcolor{stringliteral}{"Could not get devices list"}, result);
+88     \}
+89 
+90     \textcolor{keywordtype}{bool} found\_arm = \textcolor{keyword}{false};
+91     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} device\_i = 0; device\_i < devices\_list.size(); device\_i++)
+92     \{
+93         \textcolor{comment}{// If no device is specified, just use the first available device}
+94         \textcolor{keywordflow}{if} ((serial\_number == \textcolor{stringliteral}{""})
+95             || (std::strcmp(serial\_number.c\_str(), devices\_list[device\_i].SerialNumber) == 0))
+96         \{
+97             result = \hyperlink{classjaco_1_1JacoComm_a8d1510c941f28a4e8f921691d4fd2248}{jaco\_api\_}.\hyperlink{classjaco_1_1JacoAPI_a4e0c8fc007f20e985545b59abf571ea0}{setActiveDevice}(devices\_list[device\_i]);
+98             \textcolor{keywordflow}{if} (result != \hyperlink{Kinova_8API_8CommLayerUbuntu_8h_a510f2320a2a31d2d225adc0da7bef595}{NO\_ERROR\_KINOVA})
+99             \{
+100                 \textcolor{keywordflow}{throw} JacoCommException(\textcolor{stringliteral}{"Could not set the active device"}, result);
+101             \}
+102 
+103             \hyperlink{KinovaTypes_8h_d2/d0f/structGeneralInformations}{GeneralInformations} general\_info;
+104             result = \hyperlink{classjaco_1_1JacoComm_a8d1510c941f28a4e8f921691d4fd2248}{jaco\_api\_}.\hyperlink{classjaco_1_1JacoAPI_ae1e29dcccd26e66e34271beff3a52f8c}{getGeneralInformations}(general\_info);
+105             \textcolor{keywordflow}{if} (result != \hyperlink{Kinova_8API_8CommLayerUbuntu_8h_a510f2320a2a31d2d225adc0da7bef595}{NO\_ERROR\_KINOVA})
+106             \{
+107                 \textcolor{keywordflow}{throw} JacoCommException(\textcolor{stringliteral}{"Could not get general information about the device"}, result);
+108             \}
+109 
+110             \hyperlink{KinovaTypes_8h_d1/d2e/structClientConfigurations}{ClientConfigurations} configuration;
+111             \hyperlink{classjaco_1_1JacoComm_a47a3557e9b5576bc83df936caa043270}{getConfig}(configuration);
+112 
+113             \hyperlink{KinovaTypes_8h_df/d9d/structQuickStatus}{QuickStatus} quick\_status;
+114             \hyperlink{classjaco_1_1JacoComm_a29384597e710d4cbb4e1f2ae6b7d7e50}{getQuickStatus}(quick\_status);
+115 
+116             \hyperlink{classjaco_1_1JacoComm_afb603f289e6ed8855cbeb0d0b1400829}{robot\_type\_} = quick\_status.\hyperlink{KinovaTypes_8h_a74b2c900b935a07df18fbea12c3f4d68}{RobotType};
+117             \textcolor{keywordflow}{if} ((\hyperlink{classjaco_1_1JacoComm_afb603f289e6ed8855cbeb0d0b1400829}{robot\_type\_} != 0) && (\hyperlink{classjaco_1_1JacoComm_afb603f289e6ed8855cbeb0d0b1400829}{robot\_type\_} != 1) && (
+      \hyperlink{classjaco_1_1JacoComm_afb603f289e6ed8855cbeb0d0b1400829}{robot\_type\_} != 3))
+118             \{
+119                 ROS\_ERROR(\textcolor{stringliteral}{"Could not get the type of the arm from the quick status, expected "}
+120                           \textcolor{stringliteral}{"either type 0 (JACO), or type 1 (MICO), got %d"}, quick\_status.
+      \hyperlink{KinovaTypes_8h_a74b2c900b935a07df18fbea12c3f4d68}{RobotType});
+121                 \textcolor{keywordflow}{throw} JacoCommException(\textcolor{stringliteral}{"Could not get the type of the arm"}, quick\_status.
+      \hyperlink{KinovaTypes_8h_a74b2c900b935a07df18fbea12c3f4d68}{RobotType});
+122             \}
+123 
+124             \textcolor{keywordflow}{switch} (\hyperlink{classjaco_1_1JacoComm_afb603f289e6ed8855cbeb0d0b1400829}{robot\_type\_}) \{
+125                 \textcolor{keywordflow}{case} 0:
+126                 \textcolor{keywordflow}{case} 3:
+127                     \hyperlink{classjaco_1_1JacoComm_a5812c7504d90ec6016c40cba097ba1bb}{num\_fingers\_} = 3;
+128                     \textcolor{keywordflow}{break};
+129                 \textcolor{keywordflow}{case} 1:
+130                     \hyperlink{classjaco_1_1JacoComm_a5812c7504d90ec6016c40cba097ba1bb}{num\_fingers\_} = 2;
+131                     \textcolor{keywordflow}{break};
+132                 \textcolor{keywordflow}{default}:
+133                     \textcolor{keywordflow}{break};
+134             \}
+135 
+136             ROS\_INFO\_STREAM(\textcolor{stringliteral}{"Found "} << devices\_list.size() << \textcolor{stringliteral}{" device(s), using device at index "} << 
+      device\_i
+137                             << \textcolor{stringliteral}{" (model: "} << configuration.\hyperlink{KinovaTypes_8h_a5bb86440679384635d0d0f41ca431249}{Model}
+138                             << \textcolor{stringliteral}{", serial number: "} << devices\_list[device\_i].SerialNumber
+139                             << \textcolor{stringliteral}{", code version: "} << general\_info.\hyperlink{KinovaTypes_8h_ac71288477c2e447e7dd298ca707bcec3}{CodeVersion}
+140                             << \textcolor{stringliteral}{", code revision: "} << general\_info.\hyperlink{KinovaTypes_8h_a56f6f5dc8067f0ea4deb4b0c5cc3f971}{CodeRevision} << \textcolor{stringliteral}{")"});
+141 
+142             found\_arm = \textcolor{keyword}{true};
+143             \textcolor{keywordflow}{break};
+144         \}
+145     \}
+146 
+147     \textcolor{keywordflow}{if} (!found\_arm)
+148     \{
+149         ROS\_ERROR(\textcolor{stringliteral}{"Could not find the specified arm (serial: %s) among the %d attached devices"},
+150                   serial\_number.c\_str(), \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{int}\textcolor{keyword}{>}(devices\_list.size()));
+151         \textcolor{keywordflow}{throw} JacoCommException(\textcolor{stringliteral}{"Could not find the specified arm"}, 0);
+152     \}
+153 
+154     \textcolor{comment}{// On a cold boot the arm may not respond to commands from the API right away.}
+155     \textcolor{comment}{// This kick-starts the Control API so that it's ready to go.}
+156     \hyperlink{classjaco_1_1JacoComm_a6b2a1fabc4e6c30da42c9a5e26757398}{startAPI}();
+157     \hyperlink{classjaco_1_1JacoComm_a54862830cd6414ae3ae48e46e54bf798}{stopAPI}();
+158     \hyperlink{classjaco_1_1JacoComm_a6b2a1fabc4e6c30da42c9a5e26757398}{startAPI}();
+159 
+160     \textcolor{comment}{// Set the angular velocity of each of the joints to zero}
+161     \hyperlink{structTrajectoryPoint}{TrajectoryPoint} jaco\_velocity;
+162     memset(&jaco\_velocity, 0, \textcolor{keyword}{sizeof}(jaco\_velocity));
+163     \hyperlink{classjaco_1_1JacoComm_a468352480a437cc2144c8d4d289815a5}{setCartesianVelocities}(jaco\_velocity.\hyperlink{structTrajectoryPoint_aa24430dc273e9d7968a6c44e3bcee259}{Position}.
+      \hyperlink{structUserPosition_ab363c40971853637f728978e604c438f}{CartesianPosition});
+164 
+165     \textcolor{keywordflow}{if} (is\_movement\_on\_start)
+166     \{
+167         \hyperlink{classjaco_1_1JacoComm_a787f049f83d8f5fa5a7c86ee6a1d0a11}{initFingers}();
+168     \}
+169     \textcolor{keywordflow}{else}
+170     \{
+171         ROS\_WARN(\textcolor{stringliteral}{"Movement on connection to the arm has been suppressed on initialization. You may "}
+172                  \textcolor{stringliteral}{"have to home the arm (through the home service) before movement is possible"});
+173     \}
+174 \}
+\end{DoxyCode}
+\index{jaco\+::\+Jaco\+Comm@{jaco\+::\+Jaco\+Comm}!````~Jaco\+Comm@{$\sim$\+Jaco\+Comm}}
+\index{````~Jaco\+Comm@{$\sim$\+Jaco\+Comm}!jaco\+::\+Jaco\+Comm@{jaco\+::\+Jaco\+Comm}}
+\subsubsection[{\texorpdfstring{$\sim$\+Jaco\+Comm()}{~JacoComm()}}]{\setlength{\rightskip}{0pt plus 5cm}jaco\+::\+Jaco\+Comm\+::$\sim$\+Jaco\+Comm (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classjaco_1_1JacoComm_a94db89ce398a131d5dd6985a7725f495}{}\label{classjaco_1_1JacoComm_a94db89ce398a131d5dd6985a7725f495}
+
+\begin{DoxyCode}
+178 \{
+179     boost::recursive\_mutex::scoped\_lock lock(\hyperlink{classjaco_1_1JacoComm_ac6ef2a6b3c51877fc4237d834c35908a}{api\_mutex\_});
+180     \hyperlink{classjaco_1_1JacoComm_a8d1510c941f28a4e8f921691d4fd2248}{jaco\_api\_}.\hyperlink{classjaco_1_1JacoAPI_a941453ebf5242c5adad823c0636f930f}{closeAPI}();
+181 \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{jaco\+::\+Jaco\+Comm@{jaco\+::\+Jaco\+Comm}!get\+Cartesian\+Force@{get\+Cartesian\+Force}}
+\index{get\+Cartesian\+Force@{get\+Cartesian\+Force}!jaco\+::\+Jaco\+Comm@{jaco\+::\+Jaco\+Comm}}
+\subsubsection[{\texorpdfstring{get\+Cartesian\+Force(\+Jaco\+Pose \&position)}{getCartesianForce(JacoPose &position)}}]{\setlength{\rightskip}{0pt plus 5cm}void jaco\+::\+Jaco\+Comm\+::get\+Cartesian\+Force (
+\begin{DoxyParamCaption}
+\item[{{\bf Jaco\+Pose} \&}]{position}
+\end{DoxyParamCaption}
+)}\hypertarget{classjaco_1_1JacoComm_af181d7ddd7baeff6e46720648e7e1f31}{}\label{classjaco_1_1JacoComm_af181d7ddd7baeff6e46720648e7e1f31}
+
+
+A\+PI call to obtain the current cartesian force of the arm. 
+
+
+\begin{DoxyCode}
+596 \{
+597     boost::recursive\_mutex::scoped\_lock lock(\hyperlink{classjaco_1_1JacoComm_ac6ef2a6b3c51877fc4237d834c35908a}{api\_mutex\_});
+598     \hyperlink{structCartesianPosition}{CartesianPosition} jaco\_cartesian\_force;
+599     memset(&jaco\_cartesian\_force, 0, \textcolor{keyword}{sizeof}(jaco\_cartesian\_force));  \textcolor{comment}{// zero structure}
+600 
+601     \textcolor{keywordtype}{int} \hyperlink{Kinova_8API_8CommLayerUbuntu_8h_a900dac90961bada00f57c207562a6a9a}{result} = \hyperlink{classjaco_1_1JacoComm_a8d1510c941f28a4e8f921691d4fd2248}{jaco\_api\_}.\hyperlink{classjaco_1_1JacoAPI_af82e531abda1dd3e87ab33f1f5474ca5}{getCartesianForce}(jaco\_cartesian\_force);
+602     \textcolor{keywordflow}{if} (result != \hyperlink{Kinova_8API_8CommLayerUbuntu_8h_a510f2320a2a31d2d225adc0da7bef595}{NO\_ERROR\_KINOVA})
+603     \{
+604         \textcolor{keywordflow}{throw} JacoCommException(\textcolor{stringliteral}{"Could not get the Cartesian force"}, result);
+605     \}
+606 
+607     cart\_force = JacoPose(jaco\_cartesian\_force.\hyperlink{structCartesianPosition_aa1e120e383c650f4c4bf88ba8c780ab1}{Coordinates});
+608 \}
+\end{DoxyCode}
+\index{jaco\+::\+Jaco\+Comm@{jaco\+::\+Jaco\+Comm}!get\+Cartesian\+Position@{get\+Cartesian\+Position}}
+\index{get\+Cartesian\+Position@{get\+Cartesian\+Position}!jaco\+::\+Jaco\+Comm@{jaco\+::\+Jaco\+Comm}}
+\subsubsection[{\texorpdfstring{get\+Cartesian\+Position(\+Jaco\+Pose \&position)}{getCartesianPosition(JacoPose &position)}}]{\setlength{\rightskip}{0pt plus 5cm}void jaco\+::\+Jaco\+Comm\+::get\+Cartesian\+Position (
+\begin{DoxyParamCaption}
+\item[{{\bf Jaco\+Pose} \&}]{position}
+\end{DoxyParamCaption}
+)}\hypertarget{classjaco_1_1JacoComm_a855bbefed2093d0d0cc7763eb7306a0b}{}\label{classjaco_1_1JacoComm_a855bbefed2093d0d0cc7763eb7306a0b}
+
+
+A\+PI call to obtain the current cartesian position of the arm. 
+
+
+\begin{DoxyCode}
+578 \{
+579     boost::recursive\_mutex::scoped\_lock lock(\hyperlink{classjaco_1_1JacoComm_ac6ef2a6b3c51877fc4237d834c35908a}{api\_mutex\_});
+580     \hyperlink{structCartesianPosition}{CartesianPosition} jaco\_cartesian\_position;
+581     memset(&jaco\_cartesian\_position, 0, \textcolor{keyword}{sizeof}(jaco\_cartesian\_position));  \textcolor{comment}{// zero structure}
+582 
+583     \textcolor{keywordtype}{int} \hyperlink{Kinova_8API_8CommLayerUbuntu_8h_a900dac90961bada00f57c207562a6a9a}{result} = \hyperlink{classjaco_1_1JacoComm_a8d1510c941f28a4e8f921691d4fd2248}{jaco\_api\_}.\hyperlink{classjaco_1_1JacoAPI_a6c3640d554617754a9ed2e875b1a2cd0}{getCartesianPosition}(jaco\_cartesian\_position)
+      ;
+584     \textcolor{keywordflow}{if} (result != \hyperlink{Kinova_8API_8CommLayerUbuntu_8h_a510f2320a2a31d2d225adc0da7bef595}{NO\_ERROR\_KINOVA})
+585     \{
+586         \textcolor{keywordflow}{throw} JacoCommException(\textcolor{stringliteral}{"Could not get the Cartesian position"}, result);
+587     \}
+588 
+589     position = JacoPose(jaco\_cartesian\_position.\hyperlink{structCartesianPosition_aa1e120e383c650f4c4bf88ba8c780ab1}{Coordinates});
+590 \}
+\end{DoxyCode}
+\index{jaco\+::\+Jaco\+Comm@{jaco\+::\+Jaco\+Comm}!get\+Config@{get\+Config}}
+\index{get\+Config@{get\+Config}!jaco\+::\+Jaco\+Comm@{jaco\+::\+Jaco\+Comm}}
+\subsubsection[{\texorpdfstring{get\+Config(\+Client\+Configurations \&config)}{getConfig(ClientConfigurations &config)}}]{\setlength{\rightskip}{0pt plus 5cm}void jaco\+::\+Jaco\+Comm\+::get\+Config (
+\begin{DoxyParamCaption}
+\item[{{\bf Client\+Configurations} \&}]{config}
+\end{DoxyParamCaption}
+)}\hypertarget{classjaco_1_1JacoComm_a47a3557e9b5576bc83df936caa043270}{}\label{classjaco_1_1JacoComm_a47a3557e9b5576bc83df936caa043270}
+
+
+A\+PI call to obtain the current client configuration. 
+
+
+\begin{DoxyCode}
+689 \{
+690     boost::recursive\_mutex::scoped\_lock lock(\hyperlink{classjaco_1_1JacoComm_ac6ef2a6b3c51877fc4237d834c35908a}{api\_mutex\_});
+691     memset(&config, 0, \textcolor{keyword}{sizeof}(config));  \textcolor{comment}{// zero structure}
+692 
+693     \textcolor{keywordtype}{int} \hyperlink{Kinova_8API_8CommLayerUbuntu_8h_a900dac90961bada00f57c207562a6a9a}{result} = \hyperlink{classjaco_1_1JacoComm_a8d1510c941f28a4e8f921691d4fd2248}{jaco\_api\_}.\hyperlink{classjaco_1_1JacoAPI_a215a64d2dee8b2555d317da41e25ae16}{getClientConfigurations}(config);
+694     \textcolor{keywordflow}{if} (result != \hyperlink{Kinova_8API_8CommLayerUbuntu_8h_a510f2320a2a31d2d225adc0da7bef595}{NO\_ERROR\_KINOVA})
+695     \{
+696         \textcolor{keywordflow}{throw} JacoCommException(\textcolor{stringliteral}{"Could not get client configuration"}, result);
+697     \}
+698 \}
+\end{DoxyCode}
+\index{jaco\+::\+Jaco\+Comm@{jaco\+::\+Jaco\+Comm}!get\+Finger\+Positions@{get\+Finger\+Positions}}
+\index{get\+Finger\+Positions@{get\+Finger\+Positions}!jaco\+::\+Jaco\+Comm@{jaco\+::\+Jaco\+Comm}}
+\subsubsection[{\texorpdfstring{get\+Finger\+Positions(\+Finger\+Angles \&fingers)}{getFingerPositions(FingerAngles &fingers)}}]{\setlength{\rightskip}{0pt plus 5cm}void jaco\+::\+Jaco\+Comm\+::get\+Finger\+Positions (
+\begin{DoxyParamCaption}
+\item[{{\bf Finger\+Angles} \&}]{fingers}
+\end{DoxyParamCaption}
+)}\hypertarget{classjaco_1_1JacoComm_a7644bf1154b59bf4d8b97c200284e3fb}{}\label{classjaco_1_1JacoComm_a7644bf1154b59bf4d8b97c200284e3fb}
+
+
+A\+PI call to obtain the current finger positions. 
+
+
+\begin{DoxyCode}
+614 \{
+615     boost::recursive\_mutex::scoped\_lock lock(\hyperlink{classjaco_1_1JacoComm_ac6ef2a6b3c51877fc4237d834c35908a}{api\_mutex\_});
+616     \hyperlink{structCartesianPosition}{CartesianPosition} jaco\_cartesian\_position;
+617     memset(&jaco\_cartesian\_position, 0, \textcolor{keyword}{sizeof}(jaco\_cartesian\_position));  \textcolor{comment}{// zero structure}
+618 
+619     \textcolor{keywordtype}{int} \hyperlink{Kinova_8API_8CommLayerUbuntu_8h_a900dac90961bada00f57c207562a6a9a}{result} = \hyperlink{classjaco_1_1JacoComm_a8d1510c941f28a4e8f921691d4fd2248}{jaco\_api\_}.\hyperlink{classjaco_1_1JacoAPI_a6c3640d554617754a9ed2e875b1a2cd0}{getCartesianPosition}(jaco\_cartesian\_position)
+      ;
+620     \textcolor{keywordflow}{if} (result != \hyperlink{Kinova_8API_8CommLayerUbuntu_8h_a510f2320a2a31d2d225adc0da7bef595}{NO\_ERROR\_KINOVA})
+621     \{
+622         \textcolor{keywordflow}{throw} JacoCommException(\textcolor{stringliteral}{"Could not get Cartesian finger position"}, result);
+623     \}
+624 
+625     \textcolor{keywordflow}{if} (\hyperlink{classjaco_1_1JacoComm_a5812c7504d90ec6016c40cba097ba1bb}{num\_fingers\_} == 2)
+626     \{
+627         jaco\_cartesian\_position.\hyperlink{structCartesianPosition_ad0d8710c54bb2f63dfc98d809eaeb3a4}{Fingers}.\hyperlink{structFingersPosition_a03c819e4c20367e36e62a864bf829160}{Finger3} = 0.0;
+628     \}
+629 
+630     fingers = FingerAngles(jaco\_cartesian\_position.\hyperlink{structCartesianPosition_ad0d8710c54bb2f63dfc98d809eaeb3a4}{Fingers});
+631 \}
+\end{DoxyCode}
+\index{jaco\+::\+Jaco\+Comm@{jaco\+::\+Jaco\+Comm}!get\+Joint\+Angles@{get\+Joint\+Angles}}
+\index{get\+Joint\+Angles@{get\+Joint\+Angles}!jaco\+::\+Jaco\+Comm@{jaco\+::\+Jaco\+Comm}}
+\subsubsection[{\texorpdfstring{get\+Joint\+Angles(\+Jaco\+Angles \&angles)}{getJointAngles(JacoAngles &angles)}}]{\setlength{\rightskip}{0pt plus 5cm}void jaco\+::\+Jaco\+Comm\+::get\+Joint\+Angles (
+\begin{DoxyParamCaption}
+\item[{{\bf Jaco\+Angles} \&}]{angles}
+\end{DoxyParamCaption}
+)}\hypertarget{classjaco_1_1JacoComm_a5fcb23bf6925a82f2ab5e42460ea3834}{}\label{classjaco_1_1JacoComm_a5fcb23bf6925a82f2ab5e42460ea3834}
+
+
+A\+PI call to obtain the current angular position of all the joints. 
+
+
+\begin{DoxyCode}
+525 \{
+526     boost::recursive\_mutex::scoped\_lock lock(\hyperlink{classjaco_1_1JacoComm_ac6ef2a6b3c51877fc4237d834c35908a}{api\_mutex\_});
+527     \hyperlink{KinovaTypes_8h_de/de7/structAngularPosition}{AngularPosition} jaco\_angles;
+528     memset(&jaco\_angles, 0, \textcolor{keyword}{sizeof}(jaco\_angles));  \textcolor{comment}{// zero structure}
+529 
+530     \textcolor{keywordtype}{int} \hyperlink{Kinova_8API_8CommLayerUbuntu_8h_a900dac90961bada00f57c207562a6a9a}{result} = \hyperlink{classjaco_1_1JacoComm_a8d1510c941f28a4e8f921691d4fd2248}{jaco\_api\_}.\hyperlink{classjaco_1_1JacoAPI_a8d2e9b00c5953e3fc024f86e128f01df}{getAngularPosition}(jaco\_angles);
+531     \textcolor{keywordflow}{if} (result != \hyperlink{Kinova_8API_8CommLayerUbuntu_8h_a510f2320a2a31d2d225adc0da7bef595}{NO\_ERROR\_KINOVA})
+532     \{
+533         \textcolor{keywordflow}{throw} JacoCommException(\textcolor{stringliteral}{"Could not get the angular position"}, result);
+534     \}
+535 
+536     \hyperlink{namespacejoint__angle__workout_a44cb6da34666d45961b26233ed5264bf}{angles} = JacoAngles(jaco\_angles.\hyperlink{KinovaTypes_8h_a860d625d47a8a6eaae53f43903beb80b}{Actuators});
+537 \}
+\end{DoxyCode}
+\index{jaco\+::\+Jaco\+Comm@{jaco\+::\+Jaco\+Comm}!get\+Joint\+Torques@{get\+Joint\+Torques}}
+\index{get\+Joint\+Torques@{get\+Joint\+Torques}!jaco\+::\+Jaco\+Comm@{jaco\+::\+Jaco\+Comm}}
+\subsubsection[{\texorpdfstring{get\+Joint\+Torques(\+Jaco\+Angles \&tqs)}{getJointTorques(JacoAngles &tqs)}}]{\setlength{\rightskip}{0pt plus 5cm}void jaco\+::\+Jaco\+Comm\+::get\+Joint\+Torques (
+\begin{DoxyParamCaption}
+\item[{{\bf Jaco\+Angles} \&}]{tqs}
+\end{DoxyParamCaption}
+)}\hypertarget{classjaco_1_1JacoComm_af2ba4b35149e292fa5279768d47216cb}{}\label{classjaco_1_1JacoComm_af2ba4b35149e292fa5279768d47216cb}
+
+
+A\+PI call to obtain the current torque of all the joints. 
+
+
+\begin{DoxyCode}
+561 \{
+562     boost::recursive\_mutex::scoped\_lock lock(\hyperlink{classjaco_1_1JacoComm_ac6ef2a6b3c51877fc4237d834c35908a}{api\_mutex\_});
+563     \hyperlink{KinovaTypes_8h_de/de7/structAngularPosition}{AngularPosition} jaco\_tqs;
+564     memset(&jaco\_tqs, 0, \textcolor{keyword}{sizeof}(jaco\_tqs));  \textcolor{comment}{// zero structure}
+565 
+566     \textcolor{keywordtype}{int} \hyperlink{Kinova_8API_8CommLayerUbuntu_8h_a900dac90961bada00f57c207562a6a9a}{result} = \hyperlink{classjaco_1_1JacoComm_a8d1510c941f28a4e8f921691d4fd2248}{jaco\_api\_}.\hyperlink{classjaco_1_1JacoAPI_aea22577840f066fb2d5da409e50f9760}{getAngularForce}(jaco\_tqs);
+567     \textcolor{keywordflow}{if} (result != \hyperlink{Kinova_8API_8CommLayerUbuntu_8h_a510f2320a2a31d2d225adc0da7bef595}{NO\_ERROR\_KINOVA})
+568     \{
+569         \textcolor{keywordflow}{throw} JacoCommException(\textcolor{stringliteral}{"Could not get the joint torques"}, result);
+570     \}
+571 
+572     tqs = JacoAngles(jaco\_tqs.\hyperlink{KinovaTypes_8h_a860d625d47a8a6eaae53f43903beb80b}{Actuators});
+573 \}
+\end{DoxyCode}
+\index{jaco\+::\+Jaco\+Comm@{jaco\+::\+Jaco\+Comm}!get\+Joint\+Velocities@{get\+Joint\+Velocities}}
+\index{get\+Joint\+Velocities@{get\+Joint\+Velocities}!jaco\+::\+Jaco\+Comm@{jaco\+::\+Jaco\+Comm}}
+\subsubsection[{\texorpdfstring{get\+Joint\+Velocities(\+Jaco\+Angles \&vels)}{getJointVelocities(JacoAngles &vels)}}]{\setlength{\rightskip}{0pt plus 5cm}void jaco\+::\+Jaco\+Comm\+::get\+Joint\+Velocities (
+\begin{DoxyParamCaption}
+\item[{{\bf Jaco\+Angles} \&}]{vels}
+\end{DoxyParamCaption}
+)}\hypertarget{classjaco_1_1JacoComm_aa81b5cdf89bd2c7259be3638fdb4f75a}{}\label{classjaco_1_1JacoComm_aa81b5cdf89bd2c7259be3638fdb4f75a}
+
+
+A\+PI call to obtain the current angular velocities of all the joints. 
+
+
+\begin{DoxyCode}
+543 \{
+544     boost::recursive\_mutex::scoped\_lock lock(\hyperlink{classjaco_1_1JacoComm_ac6ef2a6b3c51877fc4237d834c35908a}{api\_mutex\_});
+545     \hyperlink{KinovaTypes_8h_de/de7/structAngularPosition}{AngularPosition} jaco\_vels;
+546     memset(&jaco\_vels, 0, \textcolor{keyword}{sizeof}(jaco\_vels));  \textcolor{comment}{// zero structure}
+547 
+548     \textcolor{keywordtype}{int} \hyperlink{Kinova_8API_8CommLayerUbuntu_8h_a900dac90961bada00f57c207562a6a9a}{result} = \hyperlink{classjaco_1_1JacoComm_a8d1510c941f28a4e8f921691d4fd2248}{jaco\_api\_}.\hyperlink{classjaco_1_1JacoAPI_af50f11de8f7c2b661f53d76f576eb3ae}{getAngularVelocity}(jaco\_vels);
+549     \textcolor{keywordflow}{if} (result != \hyperlink{Kinova_8API_8CommLayerUbuntu_8h_a510f2320a2a31d2d225adc0da7bef595}{NO\_ERROR\_KINOVA})
+550     \{
+551         \textcolor{keywordflow}{throw} JacoCommException(\textcolor{stringliteral}{"Could not get the angular velocity"}, result);
+552     \}
+553 
+554     vels = JacoAngles(jaco\_vels.\hyperlink{KinovaTypes_8h_a860d625d47a8a6eaae53f43903beb80b}{Actuators});
+555 \}
+\end{DoxyCode}
+\index{jaco\+::\+Jaco\+Comm@{jaco\+::\+Jaco\+Comm}!get\+Quick\+Status@{get\+Quick\+Status}}
+\index{get\+Quick\+Status@{get\+Quick\+Status}!jaco\+::\+Jaco\+Comm@{jaco\+::\+Jaco\+Comm}}
+\subsubsection[{\texorpdfstring{get\+Quick\+Status(\+Quick\+Status \&quick\+\_\+status)}{getQuickStatus(QuickStatus &quick_status)}}]{\setlength{\rightskip}{0pt plus 5cm}void jaco\+::\+Jaco\+Comm\+::get\+Quick\+Status (
+\begin{DoxyParamCaption}
+\item[{{\bf Quick\+Status} \&}]{quick\+\_\+status}
+\end{DoxyParamCaption}
+)}\hypertarget{classjaco_1_1JacoComm_a29384597e710d4cbb4e1f2ae6b7d7e50}{}\label{classjaco_1_1JacoComm_a29384597e710d4cbb4e1f2ae6b7d7e50}
+
+
+A\+PI call to obtain the current \char`\"{}quick status\char`\"{}. 
+
+
+\begin{DoxyCode}
+705 \{
+706     boost::recursive\_mutex::scoped\_lock lock(\hyperlink{classjaco_1_1JacoComm_ac6ef2a6b3c51877fc4237d834c35908a}{api\_mutex\_});
+707     memset(&quick\_status, 0, \textcolor{keyword}{sizeof}(quick\_status));  \textcolor{comment}{// zero structure}
+708     \textcolor{keywordtype}{int} \hyperlink{Kinova_8API_8CommLayerUbuntu_8h_a900dac90961bada00f57c207562a6a9a}{result} = \hyperlink{classjaco_1_1JacoComm_a8d1510c941f28a4e8f921691d4fd2248}{jaco\_api\_}.\hyperlink{classjaco_1_1JacoAPI_ae4297fe364b296252a1c91efb9024b03}{getQuickStatus}(quick\_status);
+709     \textcolor{keywordflow}{if} (result != \hyperlink{Kinova_8API_8CommLayerUbuntu_8h_a510f2320a2a31d2d225adc0da7bef595}{NO\_ERROR\_KINOVA})
+710     \{
+711         \textcolor{keywordflow}{throw} JacoCommException(\textcolor{stringliteral}{"Could not get quick status"}, result);
+712     \}
+713 \}
+\end{DoxyCode}
+\index{jaco\+::\+Jaco\+Comm@{jaco\+::\+Jaco\+Comm}!home\+Arm@{home\+Arm}}
+\index{home\+Arm@{home\+Arm}!jaco\+::\+Jaco\+Comm@{jaco\+::\+Jaco\+Comm}}
+\subsubsection[{\texorpdfstring{home\+Arm(void)}{homeArm(void)}}]{\setlength{\rightskip}{0pt plus 5cm}void jaco\+::\+Jaco\+Comm\+::home\+Arm (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{classjaco_1_1JacoComm_a38c69b22bc293afd3f27eff9179dec4c}{}\label{classjaco_1_1JacoComm_a38c69b22bc293afd3f27eff9179dec4c}
+
+
+Send the arm to the \char`\"{}home\char`\"{} position. 
+
+The code replicates the function of the \char`\"{}home\char`\"{} button on the user controller by \char`\"{}pressing\char`\"{} the home button long enough for the arm to return to the home position.
+
+Fingers are homed by manually opening them fully, then returning them to a half-\/open position. 
+\begin{DoxyCode}
+217 \{
+218     boost::recursive\_mutex::scoped\_lock lock(\hyperlink{classjaco_1_1JacoComm_ac6ef2a6b3c51877fc4237d834c35908a}{api\_mutex\_});
+219 
+220     \textcolor{keywordflow}{if} (\hyperlink{classjaco_1_1JacoComm_a872b8033cda5a9fe4ccdca2e89aa03d1}{isStopped}())
+221     \{
+222         ROS\_INFO(\textcolor{stringliteral}{"Arm is stopped, cannot home"});
+223         \textcolor{keywordflow}{return};
+224     \}
+225     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\hyperlink{classjaco_1_1JacoComm_a0e7d5984a2c6ed956da7e07e6c97ba5f}{isHomed}())
+226     \{
+227         ROS\_INFO(\textcolor{stringliteral}{"Arm is already in \(\backslash\)"home\(\backslash\)" position"});
+228         \textcolor{keywordflow}{return};
+229     \}
+230 
+231     \hyperlink{classjaco_1_1JacoComm_a54862830cd6414ae3ae48e46e54bf798}{stopAPI}();
+232     ros::Duration(1.0).sleep();
+233     \hyperlink{classjaco_1_1JacoComm_a6b2a1fabc4e6c30da42c9a5e26757398}{startAPI}();
+234 
+235     ROS\_INFO(\textcolor{stringliteral}{"Homing the arm"});
+236     \textcolor{keywordtype}{int} \hyperlink{Kinova_8API_8CommLayerUbuntu_8h_a900dac90961bada00f57c207562a6a9a}{result} = \hyperlink{classjaco_1_1JacoComm_a8d1510c941f28a4e8f921691d4fd2248}{jaco\_api\_}.\hyperlink{classjaco_1_1JacoAPI_a3f3b46efd241e60665a70505fe1853af}{moveHome}();
+237     \textcolor{keywordflow}{if} (result != \hyperlink{Kinova_8API_8CommLayerUbuntu_8h_a510f2320a2a31d2d225adc0da7bef595}{NO\_ERROR\_KINOVA})
+238     \{
+239         \textcolor{keywordflow}{throw} JacoCommException(\textcolor{stringliteral}{"Move home failed"}, result);
+240     \}
+241 \}
+\end{DoxyCode}
+\index{jaco\+::\+Jaco\+Comm@{jaco\+::\+Jaco\+Comm}!init\+Fingers@{init\+Fingers}}
+\index{init\+Fingers@{init\+Fingers}!jaco\+::\+Jaco\+Comm@{jaco\+::\+Jaco\+Comm}}
+\subsubsection[{\texorpdfstring{init\+Fingers(void)}{initFingers(void)}}]{\setlength{\rightskip}{0pt plus 5cm}void jaco\+::\+Jaco\+Comm\+::init\+Fingers (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{classjaco_1_1JacoComm_a787f049f83d8f5fa5a7c86ee6a1d0a11}{}\label{classjaco_1_1JacoComm_a787f049f83d8f5fa5a7c86ee6a1d0a11}
+
+
+Initialize finger actuators. 
+
+Move fingers to the full-\/open position to initialize them for use. Note, The this routine requires firmware version 5.\+05.\+x (or higher?). 
+\begin{DoxyCode}
+251 \{
+252     ROS\_INFO(\textcolor{stringliteral}{"Initializing fingers...this will take a few seconds and the fingers should open completely"});
+253     boost::recursive\_mutex::scoped\_lock lock(\hyperlink{classjaco_1_1JacoComm_ac6ef2a6b3c51877fc4237d834c35908a}{api\_mutex\_});
+254     \textcolor{keywordtype}{int} \hyperlink{Kinova_8API_8CommLayerUbuntu_8h_a900dac90961bada00f57c207562a6a9a}{result} = \hyperlink{classjaco_1_1JacoComm_a8d1510c941f28a4e8f921691d4fd2248}{jaco\_api\_}.\hyperlink{classjaco_1_1JacoAPI_a2e57f45393bda81a7c7c91373a6c6359}{initFingers}();
+255     \textcolor{keywordflow}{if} (result != \hyperlink{Kinova_8API_8CommLayerUbuntu_8h_a510f2320a2a31d2d225adc0da7bef595}{NO\_ERROR\_KINOVA})
+256     \{
+257         \textcolor{keywordflow}{throw} JacoCommException(\textcolor{stringliteral}{"Could not init fingers"}, result);
+258     \}
+259     \textcolor{keywordflow}{return};
+260 \}
+\end{DoxyCode}
+\index{jaco\+::\+Jaco\+Comm@{jaco\+::\+Jaco\+Comm}!is\+Homed@{is\+Homed}}
+\index{is\+Homed@{is\+Homed}!jaco\+::\+Jaco\+Comm@{jaco\+::\+Jaco\+Comm}}
+\subsubsection[{\texorpdfstring{is\+Homed(void)}{isHomed(void)}}]{\setlength{\rightskip}{0pt plus 5cm}bool jaco\+::\+Jaco\+Comm\+::is\+Homed (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{classjaco_1_1JacoComm_a0e7d5984a2c6ed956da7e07e6c97ba5f}{}\label{classjaco_1_1JacoComm_a0e7d5984a2c6ed956da7e07e6c97ba5f}
+
+
+Determines whether the arm has returned to its \char`\"{}\+Home\char`\"{} state. 
+
+Checks the current joint angles, then compares them to the known \char`\"{}\+Home\char`\"{} joint angles. 
+\begin{DoxyCode}
+191 \{
+192     \hyperlink{KinovaTypes_8h_df/d9d/structQuickStatus}{QuickStatus} quick\_status;
+193     \hyperlink{classjaco_1_1JacoComm_a29384597e710d4cbb4e1f2ae6b7d7e50}{getQuickStatus}(quick\_status);
+194 
+195     \textcolor{keywordflow}{if} (quick\_status.\hyperlink{KinovaTypes_8h_a720df4ba846103ada466a72dd8d28142}{RetractType} == 1)
+196     \{
+197         \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+198     \}
+199     \textcolor{keywordflow}{else}
+200     \{
+201         \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+202     \}
+203 \}
+\end{DoxyCode}
+\index{jaco\+::\+Jaco\+Comm@{jaco\+::\+Jaco\+Comm}!is\+Stopped@{is\+Stopped}}
+\index{is\+Stopped@{is\+Stopped}!jaco\+::\+Jaco\+Comm@{jaco\+::\+Jaco\+Comm}}
+\subsubsection[{\texorpdfstring{is\+Stopped()}{isStopped()}}]{\setlength{\rightskip}{0pt plus 5cm}bool jaco\+::\+Jaco\+Comm\+::is\+Stopped (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classjaco_1_1JacoComm_a872b8033cda5a9fe4ccdca2e89aa03d1}{}\label{classjaco_1_1JacoComm_a872b8033cda5a9fe4ccdca2e89aa03d1}
+
+\begin{DoxyCode}
+825 \{
+826     \textcolor{keywordflow}{return} \hyperlink{classjaco_1_1JacoComm_a9607500fac99c4dbc5acc98dd513eec3}{is\_software\_stop\_};
+827 \}
+\end{DoxyCode}
+\index{jaco\+::\+Jaco\+Comm@{jaco\+::\+Jaco\+Comm}!num\+Fingers@{num\+Fingers}}
+\index{num\+Fingers@{num\+Fingers}!jaco\+::\+Jaco\+Comm@{jaco\+::\+Jaco\+Comm}}
+\subsubsection[{\texorpdfstring{num\+Fingers()}{numFingers()}}]{\setlength{\rightskip}{0pt plus 5cm}int jaco\+::\+Jaco\+Comm\+::num\+Fingers (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classjaco_1_1JacoComm_a42e11ee165ee8f2b1af7e7060f488ce1}{}\label{classjaco_1_1JacoComm_a42e11ee165ee8f2b1af7e7060f488ce1}
+
+\begin{DoxyCode}
+754 \{
+755     \textcolor{keywordflow}{return} \hyperlink{classjaco_1_1JacoComm_a5812c7504d90ec6016c40cba097ba1bb}{num\_fingers\_};
+756 \}
+\end{DoxyCode}
+\index{jaco\+::\+Jaco\+Comm@{jaco\+::\+Jaco\+Comm}!print\+Angles@{print\+Angles}}
+\index{print\+Angles@{print\+Angles}!jaco\+::\+Jaco\+Comm@{jaco\+::\+Jaco\+Comm}}
+\subsubsection[{\texorpdfstring{print\+Angles(const Jaco\+Angles \&angles)}{printAngles(const JacoAngles &angles)}}]{\setlength{\rightskip}{0pt plus 5cm}void jaco\+::\+Jaco\+Comm\+::print\+Angles (
+\begin{DoxyParamCaption}
+\item[{const {\bf Jaco\+Angles} \&}]{angles}
+\end{DoxyParamCaption}
+)}\hypertarget{classjaco_1_1JacoComm_a0524faa99cdc1361d50c3c6a53d5cfe0}{}\label{classjaco_1_1JacoComm_a0524faa99cdc1361d50c3c6a53d5cfe0}
+
+
+Dumps the current joint angles onto the screen. 
+
+
+\begin{DoxyCode}
+767 \{
+768     ROS\_INFO(\textcolor{stringliteral}{"Joint angles (deg) -- J1: %f, J2: %f J3: %f, J4: %f, J5: %f, J6: %f"},
+769              \hyperlink{namespacejoint__angle__workout_a44cb6da34666d45961b26233ed5264bf}{angles}.Actuator1, \hyperlink{namespacejoint__angle__workout_a44cb6da34666d45961b26233ed5264bf}{angles}.Actuator2, \hyperlink{namespacejoint__angle__workout_a44cb6da34666d45961b26233ed5264bf}{angles}.Actuator3,
+770              \hyperlink{namespacejoint__angle__workout_a44cb6da34666d45961b26233ed5264bf}{angles}.Actuator4, \hyperlink{namespacejoint__angle__workout_a44cb6da34666d45961b26233ed5264bf}{angles}.Actuator5, \hyperlink{namespacejoint__angle__workout_a44cb6da34666d45961b26233ed5264bf}{angles}.Actuator6);
+771 \}
+\end{DoxyCode}
+\index{jaco\+::\+Jaco\+Comm@{jaco\+::\+Jaco\+Comm}!print\+Config@{print\+Config}}
+\index{print\+Config@{print\+Config}!jaco\+::\+Jaco\+Comm@{jaco\+::\+Jaco\+Comm}}
+\subsubsection[{\texorpdfstring{print\+Config(const Client\+Configurations \&config)}{printConfig(const ClientConfigurations &config)}}]{\setlength{\rightskip}{0pt plus 5cm}void jaco\+::\+Jaco\+Comm\+::print\+Config (
+\begin{DoxyParamCaption}
+\item[{const {\bf Client\+Configurations} \&}]{config}
+\end{DoxyParamCaption}
+)}\hypertarget{classjaco_1_1JacoComm_a54661eeda2fc5324843a230bdcfe8b67}{}\label{classjaco_1_1JacoComm_a54661eeda2fc5324843a230bdcfe8b67}
+
+
+Dumps the client configuration onto the screen. 
+
+
+\begin{DoxyCode}
+801 \{
+802     ROS\_INFO\_STREAM(\textcolor{stringliteral}{"Arm configuration:\(\backslash\)n"}
+803                     \textcolor{stringliteral}{"\(\backslash\)tClientID: "} << config.\hyperlink{KinovaTypes_8h_a2adccda7d27c7731ab0fe1160005e6ac}{ClientID} <<
+804                     \textcolor{stringliteral}{"\(\backslash\)n\(\backslash\)tClientName: "} << config.\hyperlink{KinovaTypes_8h_a6ec42489c6a1e74a654809f5f39ca6f8}{ClientName} <<
+805                     \textcolor{stringliteral}{"\(\backslash\)n\(\backslash\)tOrganization: "} << config.\hyperlink{KinovaTypes_8h_a55c82eb4163582b31c6d720766057767}{Organization} <<
+806                     \textcolor{stringliteral}{"\(\backslash\)n\(\backslash\)tSerial:"} << config.\hyperlink{KinovaTypes_8h_adb0902769a42d7eaf9cce979d0779723}{Serial} <<
+807                     \textcolor{stringliteral}{"\(\backslash\)n\(\backslash\)tModel: "} << config.\hyperlink{KinovaTypes_8h_a5bb86440679384635d0d0f41ca431249}{Model} <<
+808                     \textcolor{stringliteral}{"\(\backslash\)n\(\backslash\)tMaxForce: "} << config.\hyperlink{KinovaTypes_8h_a9c68b6f56291d1be104928f7db071579}{MaxForce} <<
+809                     \textcolor{stringliteral}{"\(\backslash\)n\(\backslash\)tSensibility: "} <<  config.\hyperlink{KinovaTypes_8h_a64e61dc032b95f127cd798a9759818d8}{Sensibility} <<
+810                     \textcolor{stringliteral}{"\(\backslash\)n\(\backslash\)tDrinkingHeight: "} << config.\hyperlink{KinovaTypes_8h_a05043c8fe2f31f3c216a97edc2411664}{DrinkingHeight} <<
+811                     \textcolor{stringliteral}{"\(\backslash\)n\(\backslash\)tComplexRetractActive: "} << config.\hyperlink{KinovaTypes_8h_aa41bf35ba1a1dd92f54a30814d42f795}{ComplexRetractActive} <<
+812                     \textcolor{stringliteral}{"\(\backslash\)n\(\backslash\)tRetractedPositionAngle: "} << config.
+      \hyperlink{KinovaTypes_8h_ad7d6245d4683b6e31d0438466ea6bb80}{RetractedPositionAngle} <<
+813                     \textcolor{stringliteral}{"\(\backslash\)n\(\backslash\)tRetractedPositionCount: "} << config.
+      \hyperlink{KinovaTypes_8h_a4058c290c5bac0504e511f0f50e5914b}{RetractedPositionCount} <<
+814                     \textcolor{stringliteral}{"\(\backslash\)n\(\backslash\)tDrinkingDistance: "} << config.\hyperlink{KinovaTypes_8h_a494c5a866ae44191aafdc66ab69033c3}{DrinkingDistance} <<
+815                     \textcolor{stringliteral}{"\(\backslash\)n\(\backslash\)tFingers2and3Inverted: "} << config.\hyperlink{KinovaTypes_8h_a55cb748c864cd65d8136da316b46df61}{Fingers2and3Inverted} <<
+816                     \textcolor{stringliteral}{"\(\backslash\)n\(\backslash\)tDrinkingLength: "} << config.\hyperlink{KinovaTypes_8h_a1029013b8d5d2d9ea902ab628c98a7e0}{DrinkingLenght} <<
+817                     \textcolor{stringliteral}{"\(\backslash\)n\(\backslash\)tDeletePreProgrammedPositionsAtRetract: "} <<
+818                     config.\hyperlink{KinovaTypes_8h_ab0dca6d6259625fafd1c725533337460}{DeletePreProgrammedPositionsAtRetract} <<
+819                     \textcolor{stringliteral}{"\(\backslash\)n\(\backslash\)tEnableFlashErrorLog: "} << config.\hyperlink{KinovaTypes_8h_a16b087061d560a4f185e779352d6e2e3}{EnableFlashErrorLog} <<
+820                     \textcolor{stringliteral}{"\(\backslash\)n\(\backslash\)tEnableFlashPositionLog: "} << config.
+      \hyperlink{KinovaTypes_8h_ae0c7b4d0a3f91271e8138985807be8c6}{EnableFlashPositionLog});
+821 \}
+\end{DoxyCode}
+\index{jaco\+::\+Jaco\+Comm@{jaco\+::\+Jaco\+Comm}!print\+Fingers@{print\+Fingers}}
+\index{print\+Fingers@{print\+Fingers}!jaco\+::\+Jaco\+Comm@{jaco\+::\+Jaco\+Comm}}
+\subsubsection[{\texorpdfstring{print\+Fingers(const Fingers\+Position \&fingers)}{printFingers(const FingersPosition &fingers)}}]{\setlength{\rightskip}{0pt plus 5cm}void jaco\+::\+Jaco\+Comm\+::print\+Fingers (
+\begin{DoxyParamCaption}
+\item[{const {\bf Fingers\+Position} \&}]{fingers}
+\end{DoxyParamCaption}
+)}\hypertarget{classjaco_1_1JacoComm_ab34f7cbb2978e76644927b9031e06b4f}{}\label{classjaco_1_1JacoComm_ab34f7cbb2978e76644927b9031e06b4f}
+
+
+Dumps the current finger positions onto the screen. 
+
+
+\begin{DoxyCode}
+791 \{
+792     ROS\_INFO(\textcolor{stringliteral}{"Finger positions -- F1: %f, F2: %f, F3: %f"},
+793              fingers.\hyperlink{structFingersPosition_a216f8d64e6a9c7aab84e4269ccb27e66}{Finger1}, fingers.\hyperlink{structFingersPosition_a0ec9675672721d61fb13bbc2db3d3ef9}{Finger2}, fingers.\hyperlink{structFingersPosition_a03c819e4c20367e36e62a864bf829160}{Finger3});
+794 \}
+\end{DoxyCode}
+\index{jaco\+::\+Jaco\+Comm@{jaco\+::\+Jaco\+Comm}!print\+Position@{print\+Position}}
+\index{print\+Position@{print\+Position}!jaco\+::\+Jaco\+Comm@{jaco\+::\+Jaco\+Comm}}
+\subsubsection[{\texorpdfstring{print\+Position(const Jaco\+Pose \&position)}{printPosition(const JacoPose &position)}}]{\setlength{\rightskip}{0pt plus 5cm}void jaco\+::\+Jaco\+Comm\+::print\+Position (
+\begin{DoxyParamCaption}
+\item[{const {\bf Jaco\+Pose} \&}]{position}
+\end{DoxyParamCaption}
+)}\hypertarget{classjaco_1_1JacoComm_ac1abf65387fa9adba237802bc97f15b1}{}\label{classjaco_1_1JacoComm_ac1abf65387fa9adba237802bc97f15b1}
+
+
+Dumps the current cartesian positions onto the screen. 
+
+
+\begin{DoxyCode}
+778 \{
+779     ROS\_INFO(\textcolor{stringliteral}{"Arm position\(\backslash\)n"}
+780              \textcolor{stringliteral}{"\(\backslash\)tposition (m) -- x: %f, y: %f z: %f\(\backslash\)n"}
+781              \textcolor{stringliteral}{"\(\backslash\)trotation (rad) -- theta\_x: %f, theta\_y: %f, theta\_z: %f"},
+782              position.X, position.Y, position.Z,
+783              position.ThetaX, position.ThetaY, position.ThetaZ);
+784 \}
+\end{DoxyCode}
+\index{jaco\+::\+Jaco\+Comm@{jaco\+::\+Jaco\+Comm}!robot\+Type@{robot\+Type}}
+\index{robot\+Type@{robot\+Type}!jaco\+::\+Jaco\+Comm@{jaco\+::\+Jaco\+Comm}}
+\subsubsection[{\texorpdfstring{robot\+Type()}{robotType()}}]{\setlength{\rightskip}{0pt plus 5cm}int jaco\+::\+Jaco\+Comm\+::robot\+Type (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classjaco_1_1JacoComm_af20323ed50f73b59bac3e18ebd8559fa}{}\label{classjaco_1_1JacoComm_af20323ed50f73b59bac3e18ebd8559fa}
+
+\begin{DoxyCode}
+759 \{
+760     \textcolor{keywordflow}{return} \hyperlink{classjaco_1_1JacoComm_afb603f289e6ed8855cbeb0d0b1400829}{robot\_type\_};
+761 \}
+\end{DoxyCode}
+\index{jaco\+::\+Jaco\+Comm@{jaco\+::\+Jaco\+Comm}!set\+Cartesian\+Force\+Min\+Max@{set\+Cartesian\+Force\+Min\+Max}}
+\index{set\+Cartesian\+Force\+Min\+Max@{set\+Cartesian\+Force\+Min\+Max}!jaco\+::\+Jaco\+Comm@{jaco\+::\+Jaco\+Comm}}
+\subsubsection[{\texorpdfstring{set\+Cartesian\+Force\+Min\+Max(const Cartesian\+Info \&min, const Cartesian\+Info \&max)}{setCartesianForceMinMax(const CartesianInfo &min, const CartesianInfo &max)}}]{\setlength{\rightskip}{0pt plus 5cm}void jaco\+::\+Jaco\+Comm\+::set\+Cartesian\+Force\+Min\+Max (
+\begin{DoxyParamCaption}
+\item[{const {\bf Cartesian\+Info} \&}]{min, }
+\item[{const {\bf Cartesian\+Info} \&}]{max}
+\end{DoxyParamCaption}
+)}\hypertarget{classjaco_1_1JacoComm_a39faaf774115561ea1857349db182145}{}\label{classjaco_1_1JacoComm_a39faaf774115561ea1857349db182145}
+
+
+Set the cartesian min and max force parameters for force control. 
+
+
+\begin{DoxyCode}
+650 \{
+651     boost::recursive\_mutex::scoped\_lock lock(\hyperlink{classjaco_1_1JacoComm_ac6ef2a6b3c51877fc4237d834c35908a}{api\_mutex\_});
+652     \textcolor{keywordtype}{int} \hyperlink{Kinova_8API_8CommLayerUbuntu_8h_a900dac90961bada00f57c207562a6a9a}{result} = \hyperlink{classjaco_1_1JacoComm_a8d1510c941f28a4e8f921691d4fd2248}{jaco\_api\_}.\hyperlink{classjaco_1_1JacoAPI_aa592360dc8cc3d2a2343621d8ec8dac5}{setCartesianForceMinMax}(min, max);
+653     \textcolor{keywordflow}{if} (result != \hyperlink{Kinova_8API_8CommLayerUbuntu_8h_a510f2320a2a31d2d225adc0da7bef595}{NO\_ERROR\_KINOVA})
+654     \{
+655         \textcolor{keywordflow}{throw} JacoCommException(\textcolor{stringliteral}{"Could not set cartesian min/max force."}, result);
+656     \}
+657 \}
+\end{DoxyCode}
+\index{jaco\+::\+Jaco\+Comm@{jaco\+::\+Jaco\+Comm}!set\+Cartesian\+Inertia\+Damping@{set\+Cartesian\+Inertia\+Damping}}
+\index{set\+Cartesian\+Inertia\+Damping@{set\+Cartesian\+Inertia\+Damping}!jaco\+::\+Jaco\+Comm@{jaco\+::\+Jaco\+Comm}}
+\subsubsection[{\texorpdfstring{set\+Cartesian\+Inertia\+Damping(const Cartesian\+Info \&inertia, const Cartesian\+Info \&damping)}{setCartesianInertiaDamping(const CartesianInfo &inertia, const CartesianInfo &damping)}}]{\setlength{\rightskip}{0pt plus 5cm}void jaco\+::\+Jaco\+Comm\+::set\+Cartesian\+Inertia\+Damping (
+\begin{DoxyParamCaption}
+\item[{const {\bf Cartesian\+Info} \&}]{inertia, }
+\item[{const {\bf Cartesian\+Info} \&}]{damping}
+\end{DoxyParamCaption}
+)}\hypertarget{classjaco_1_1JacoComm_afbb443b8e3fe71ef58b0013fdb3d5674}{}\label{classjaco_1_1JacoComm_afbb443b8e3fe71ef58b0013fdb3d5674}
+
+
+Set the cartesian inertia and damping parameters for force control. 
+
+
+\begin{DoxyCode}
+637 \{
+638     boost::recursive\_mutex::scoped\_lock lock(\hyperlink{classjaco_1_1JacoComm_ac6ef2a6b3c51877fc4237d834c35908a}{api\_mutex\_});
+639     \textcolor{keywordtype}{int} \hyperlink{Kinova_8API_8CommLayerUbuntu_8h_a900dac90961bada00f57c207562a6a9a}{result} = \hyperlink{classjaco_1_1JacoComm_a8d1510c941f28a4e8f921691d4fd2248}{jaco\_api\_}.\hyperlink{classjaco_1_1JacoAPI_a24709f5e768c7aab4a9b1de1308d65ea}{setCartesianInertiaDamping}(inertia, 
+      damping);
+640     \textcolor{keywordflow}{if} (result != \hyperlink{Kinova_8API_8CommLayerUbuntu_8h_a510f2320a2a31d2d225adc0da7bef595}{NO\_ERROR\_KINOVA})
+641     \{
+642         \textcolor{keywordflow}{throw} JacoCommException(\textcolor{stringliteral}{"Could not set cartesian inertia and damping"}, result);
+643     \}
+644 \}
+\end{DoxyCode}
+\index{jaco\+::\+Jaco\+Comm@{jaco\+::\+Jaco\+Comm}!set\+Cartesian\+Position@{set\+Cartesian\+Position}}
+\index{set\+Cartesian\+Position@{set\+Cartesian\+Position}!jaco\+::\+Jaco\+Comm@{jaco\+::\+Jaco\+Comm}}
+\subsubsection[{\texorpdfstring{set\+Cartesian\+Position(const Jaco\+Pose \&position, int timeout=0, bool push=true)}{setCartesianPosition(const JacoPose &position, int timeout=0, bool push=true)}}]{\setlength{\rightskip}{0pt plus 5cm}void jaco\+::\+Jaco\+Comm\+::set\+Cartesian\+Position (
+\begin{DoxyParamCaption}
+\item[{const {\bf Jaco\+Pose} \&}]{position, }
+\item[{int}]{timeout = {\ttfamily 0}, }
+\item[{bool}]{push = {\ttfamily true}}
+\end{DoxyParamCaption}
+)}\hypertarget{classjaco_1_1JacoComm_a7a7375d2609c81f0a03974b06ca07be0}{}\label{classjaco_1_1JacoComm_a7a7375d2609c81f0a03974b06ca07be0}
+
+
+Sends a cartesian coordinate trajectory to the Jaco arm. 
+
+Waits until the arm has stopped moving before releasing control of the A\+PI. 
+\begin{DoxyCode}
+318 \{
+319     boost::recursive\_mutex::scoped\_lock lock(\hyperlink{classjaco_1_1JacoComm_ac6ef2a6b3c51877fc4237d834c35908a}{api\_mutex\_});
+320 
+321     \textcolor{keywordflow}{if} (\hyperlink{classjaco_1_1JacoComm_a872b8033cda5a9fe4ccdca2e89aa03d1}{isStopped}())
+322     \{
+323         ROS\_INFO(\textcolor{stringliteral}{"The position could not be set because the arm is stopped"});
+324         \textcolor{keywordflow}{return};
+325     \}
+326 
+327     \textcolor{keywordtype}{int} \hyperlink{Kinova_8API_8CommLayerUbuntu_8h_a900dac90961bada00f57c207562a6a9a}{result} = \hyperlink{Kinova_8API_8CommLayerUbuntu_8h_a510f2320a2a31d2d225adc0da7bef595}{NO\_ERROR\_KINOVA};
+328     \hyperlink{structTrajectoryPoint}{TrajectoryPoint} jaco\_position;
+329     jaco\_position.\hyperlink{structTrajectoryPoint_a1a9f12ad88f5011c6a4644792fa67f99}{InitStruct}();
+330     memset(&jaco\_position, 0, \textcolor{keyword}{sizeof}(jaco\_position));  \textcolor{comment}{// zero structure}
+331 
+332     \textcolor{keywordflow}{if} (push)
+333     \{
+334         result = \hyperlink{classjaco_1_1JacoComm_a8d1510c941f28a4e8f921691d4fd2248}{jaco\_api\_}.\hyperlink{classjaco_1_1JacoAPI_a97db09d91923328b1780bb50a0e2548d}{eraseAllTrajectories}();
+335         \textcolor{keywordflow}{if} (result != \hyperlink{Kinova_8API_8CommLayerUbuntu_8h_a510f2320a2a31d2d225adc0da7bef595}{NO\_ERROR\_KINOVA})
+336         \{
+337             \textcolor{keywordflow}{throw} JacoCommException(\textcolor{stringliteral}{"Could not erase trajectories"}, result);
+338         \}
+339     \}
+340 
+341     \textcolor{comment}{//startAPI();}
+342 
+343     result = \hyperlink{classjaco_1_1JacoComm_a8d1510c941f28a4e8f921691d4fd2248}{jaco\_api\_}.\hyperlink{classjaco_1_1JacoAPI_a24b6c14f08d97bea2a5562c8c2f10877}{setCartesianControl}();
+344     \textcolor{keywordflow}{if} (result != \hyperlink{Kinova_8API_8CommLayerUbuntu_8h_a510f2320a2a31d2d225adc0da7bef595}{NO\_ERROR\_KINOVA})
+345     \{
+346         \textcolor{keywordflow}{throw} JacoCommException(\textcolor{stringliteral}{"Could not set Cartesian control"}, result);
+347     \}
+348 
+349     jaco\_position.\hyperlink{structTrajectoryPoint_aa24430dc273e9d7968a6c44e3bcee259}{Position}.\hyperlink{structUserPosition_aa18896c1238a50c8ad81c66dfd76ac5e}{Delay} = 0.0;
+350     jaco\_position.\hyperlink{structTrajectoryPoint_aa24430dc273e9d7968a6c44e3bcee259}{Position}.\hyperlink{structUserPosition_a93c748d4ee51239fcbcd487d88e52ffa}{Type} = \hyperlink{KinovaTypes_8h_a0a1c22d235ef1b13cfcd1419d10babc9aa98b51871329200ef579781620a475ad}{CARTESIAN\_POSITION};
+351     jaco\_position.\hyperlink{structTrajectoryPoint_aa24430dc273e9d7968a6c44e3bcee259}{Position}.\hyperlink{structUserPosition_a83779902810d0e5e16d533e0f964c0df}{HandMode} = \hyperlink{KinovaTypes_8h_ad7050e4cfb6e844e9be962fba8eeb817aacf6cc4ccee2594b38453e9918708e47}{HAND\_NOMOVEMENT};
+352 
+353     \textcolor{comment}{// These values will not be used but are initialized anyway.}
+354     jaco\_position.\hyperlink{structTrajectoryPoint_aa24430dc273e9d7968a6c44e3bcee259}{Position}.\hyperlink{structUserPosition_ab0c5b71622c1e0d3033572578e947cf3}{Actuators}.\hyperlink{structAngularInfo_a5fc555c085bddc82c33a3039fbc40932}{Actuator1} = 0.0f;
+355     jaco\_position.\hyperlink{structTrajectoryPoint_aa24430dc273e9d7968a6c44e3bcee259}{Position}.\hyperlink{structUserPosition_ab0c5b71622c1e0d3033572578e947cf3}{Actuators}.\hyperlink{structAngularInfo_ab7b9349eef239f9741d9c28a795e4c35}{Actuator2} = 0.0f;
+356     jaco\_position.\hyperlink{structTrajectoryPoint_aa24430dc273e9d7968a6c44e3bcee259}{Position}.\hyperlink{structUserPosition_ab0c5b71622c1e0d3033572578e947cf3}{Actuators}.\hyperlink{structAngularInfo_a30426eab94c82cfd3d697bbc8c506c2a}{Actuator3} = 0.0f;
+357     jaco\_position.\hyperlink{structTrajectoryPoint_aa24430dc273e9d7968a6c44e3bcee259}{Position}.\hyperlink{structUserPosition_ab0c5b71622c1e0d3033572578e947cf3}{Actuators}.\hyperlink{structAngularInfo_a46a1314c4846de6a495310b44fe5e0c3}{Actuator4} = 0.0f;
+358     jaco\_position.\hyperlink{structTrajectoryPoint_aa24430dc273e9d7968a6c44e3bcee259}{Position}.\hyperlink{structUserPosition_ab0c5b71622c1e0d3033572578e947cf3}{Actuators}.\hyperlink{structAngularInfo_a953c29d2481eb1c42c84e9c992d34dde}{Actuator5} = 0.0f;
+359     jaco\_position.\hyperlink{structTrajectoryPoint_aa24430dc273e9d7968a6c44e3bcee259}{Position}.\hyperlink{structUserPosition_ab0c5b71622c1e0d3033572578e947cf3}{Actuators}.\hyperlink{structAngularInfo_ab54771129d8a9e451c27942dd349340d}{Actuator6} = 0.0f;
+360 
+361     jaco\_position.\hyperlink{structTrajectoryPoint_aa24430dc273e9d7968a6c44e3bcee259}{Position}.\hyperlink{structUserPosition_ab363c40971853637f728978e604c438f}{CartesianPosition} = position;
+362 
+363     result = \hyperlink{classjaco_1_1JacoComm_a8d1510c941f28a4e8f921691d4fd2248}{jaco\_api\_}.\hyperlink{classjaco_1_1JacoAPI_acbaea3e47825b270d85d783c9f29d472}{sendBasicTrajectory}(jaco\_position);
+364     \textcolor{keywordflow}{if} (result != \hyperlink{Kinova_8API_8CommLayerUbuntu_8h_a510f2320a2a31d2d225adc0da7bef595}{NO\_ERROR\_KINOVA})
+365     \{
+366         \textcolor{keywordflow}{throw} JacoCommException(\textcolor{stringliteral}{"Could not send basic trajectory"}, result);
+367     \}
+368 \}
+\end{DoxyCode}
+\index{jaco\+::\+Jaco\+Comm@{jaco\+::\+Jaco\+Comm}!set\+Cartesian\+Velocities@{set\+Cartesian\+Velocities}}
+\index{set\+Cartesian\+Velocities@{set\+Cartesian\+Velocities}!jaco\+::\+Jaco\+Comm@{jaco\+::\+Jaco\+Comm}}
+\subsubsection[{\texorpdfstring{set\+Cartesian\+Velocities(const Cartesian\+Info \&velocities)}{setCartesianVelocities(const CartesianInfo &velocities)}}]{\setlength{\rightskip}{0pt plus 5cm}void jaco\+::\+Jaco\+Comm\+::set\+Cartesian\+Velocities (
+\begin{DoxyParamCaption}
+\item[{const {\bf Cartesian\+Info} \&}]{velocities}
+\end{DoxyParamCaption}
+)}\hypertarget{classjaco_1_1JacoComm_a468352480a437cc2144c8d4d289815a5}{}\label{classjaco_1_1JacoComm_a468352480a437cc2144c8d4d289815a5}
+
+
+Set the cartesian velocity of the tool tip. 
+
+
+\begin{DoxyCode}
+475 \{
+476     boost::recursive\_mutex::scoped\_lock lock(\hyperlink{classjaco_1_1JacoComm_ac6ef2a6b3c51877fc4237d834c35908a}{api\_mutex\_});
+477 
+478     \textcolor{keywordflow}{if} (\hyperlink{classjaco_1_1JacoComm_a872b8033cda5a9fe4ccdca2e89aa03d1}{isStopped}())
+479     \{
+480         ROS\_INFO(\textcolor{stringliteral}{"The cartesian velocities could not be set because the arm is stopped"});
+481         \hyperlink{classjaco_1_1JacoComm_a8d1510c941f28a4e8f921691d4fd2248}{jaco\_api\_}.\hyperlink{classjaco_1_1JacoAPI_a97db09d91923328b1780bb50a0e2548d}{eraseAllTrajectories}();
+482         \textcolor{keywordflow}{return};
+483     \}
+484 
+485     \hyperlink{structTrajectoryPoint}{TrajectoryPoint} jaco\_velocity;
+486     jaco\_velocity.\hyperlink{structTrajectoryPoint_a1a9f12ad88f5011c6a4644792fa67f99}{InitStruct}();
+487 
+488     memset(&jaco\_velocity, 0, \textcolor{keyword}{sizeof}(jaco\_velocity));  \textcolor{comment}{// zero structure}
+489 
+490     \textcolor{comment}{//startAPI();}
+491     jaco\_velocity.\hyperlink{structTrajectoryPoint_aa24430dc273e9d7968a6c44e3bcee259}{Position}.\hyperlink{structUserPosition_a93c748d4ee51239fcbcd487d88e52ffa}{Type} = \hyperlink{KinovaTypes_8h_a0a1c22d235ef1b13cfcd1419d10babc9abeb6b2df651053c52240164cc205757c}{CARTESIAN\_VELOCITY};
+492 
+493     \textcolor{comment}{// confusingly, velocity is passed in the position struct}
+494     jaco\_velocity.\hyperlink{structTrajectoryPoint_aa24430dc273e9d7968a6c44e3bcee259}{Position}.\hyperlink{structUserPosition_ab363c40971853637f728978e604c438f}{CartesianPosition} = velocities;
+495 
+496     \textcolor{keywordtype}{int} \hyperlink{Kinova_8API_8CommLayerUbuntu_8h_a900dac90961bada00f57c207562a6a9a}{result} = \hyperlink{classjaco_1_1JacoComm_a8d1510c941f28a4e8f921691d4fd2248}{jaco\_api\_}.\hyperlink{classjaco_1_1JacoAPI_a30abd0123d85582b684fbd86437d403c}{sendAdvanceTrajectory}(jaco\_velocity);
+497     \textcolor{keywordflow}{if} (result != \hyperlink{Kinova_8API_8CommLayerUbuntu_8h_a510f2320a2a31d2d225adc0da7bef595}{NO\_ERROR\_KINOVA})
+498     \{
+499         \textcolor{keywordflow}{throw} JacoCommException(\textcolor{stringliteral}{"Could not send advanced Cartesian velocity trajectory"}, result);
+500     \}
+501 \}
+\end{DoxyCode}
+\index{jaco\+::\+Jaco\+Comm@{jaco\+::\+Jaco\+Comm}!set\+Config@{set\+Config}}
+\index{set\+Config@{set\+Config}!jaco\+::\+Jaco\+Comm@{jaco\+::\+Jaco\+Comm}}
+\subsubsection[{\texorpdfstring{set\+Config(const Client\+Configurations \&config)}{setConfig(const ClientConfigurations &config)}}]{\setlength{\rightskip}{0pt plus 5cm}void jaco\+::\+Jaco\+Comm\+::set\+Config (
+\begin{DoxyParamCaption}
+\item[{const {\bf Client\+Configurations} \&}]{config}
+\end{DoxyParamCaption}
+)}\hypertarget{classjaco_1_1JacoComm_ae7901b1dff2e84eb89256f46a7c65b62}{}\label{classjaco_1_1JacoComm_ae7901b1dff2e84eb89256f46a7c65b62}
+
+
+Obtains the current arm configuration. 
+
+This is the configuration which are stored on the arm itself. Many of these configurations may be set using the Windows interface. 
+\begin{DoxyCode}
+511 \{
+512     boost::recursive\_mutex::scoped\_lock lock(\hyperlink{classjaco_1_1JacoComm_ac6ef2a6b3c51877fc4237d834c35908a}{api\_mutex\_});
+513     \textcolor{keywordtype}{int} \hyperlink{Kinova_8API_8CommLayerUbuntu_8h_a900dac90961bada00f57c207562a6a9a}{result} = \hyperlink{classjaco_1_1JacoComm_a8d1510c941f28a4e8f921691d4fd2248}{jaco\_api\_}.\hyperlink{classjaco_1_1JacoAPI_ad6b85298e2502e6888ce6b7a1e494e49}{setClientConfigurations}(config);
+514     \textcolor{keywordflow}{if} (result != \hyperlink{Kinova_8API_8CommLayerUbuntu_8h_a510f2320a2a31d2d225adc0da7bef595}{NO\_ERROR\_KINOVA})
+515     \{
+516         \textcolor{keywordflow}{throw} JacoCommException(\textcolor{stringliteral}{"Could not set the client configuration"}, result);
+517     \}
+518 \}
+\end{DoxyCode}
+\index{jaco\+::\+Jaco\+Comm@{jaco\+::\+Jaco\+Comm}!set\+Finger\+Positions@{set\+Finger\+Positions}}
+\index{set\+Finger\+Positions@{set\+Finger\+Positions}!jaco\+::\+Jaco\+Comm@{jaco\+::\+Jaco\+Comm}}
+\subsubsection[{\texorpdfstring{set\+Finger\+Positions(const Finger\+Angles \&fingers, int timeout=0, bool push=true)}{setFingerPositions(const FingerAngles &fingers, int timeout=0, bool push=true)}}]{\setlength{\rightskip}{0pt plus 5cm}void jaco\+::\+Jaco\+Comm\+::set\+Finger\+Positions (
+\begin{DoxyParamCaption}
+\item[{const {\bf Finger\+Angles} \&}]{fingers, }
+\item[{int}]{timeout = {\ttfamily 0}, }
+\item[{bool}]{push = {\ttfamily true}}
+\end{DoxyParamCaption}
+)}\hypertarget{classjaco_1_1JacoComm_a5cdc217373b923f7de2ed468150281fa}{}\label{classjaco_1_1JacoComm_a5cdc217373b923f7de2ed468150281fa}
+
+
+Sets the finger positions. 
+
+
+\begin{DoxyCode}
+375 \{
+376     boost::recursive\_mutex::scoped\_lock lock(\hyperlink{classjaco_1_1JacoComm_ac6ef2a6b3c51877fc4237d834c35908a}{api\_mutex\_});
+377 
+378     \textcolor{keywordflow}{if} (\hyperlink{classjaco_1_1JacoComm_a872b8033cda5a9fe4ccdca2e89aa03d1}{isStopped}())
+379     \{
+380         ROS\_INFO(\textcolor{stringliteral}{"The fingers could not be set because the arm is stopped"});
+381         \textcolor{keywordflow}{return};
+382     \}
+383 
+384     \textcolor{keywordtype}{int} \hyperlink{Kinova_8API_8CommLayerUbuntu_8h_a900dac90961bada00f57c207562a6a9a}{result} = \hyperlink{Kinova_8API_8CommLayerUbuntu_8h_a510f2320a2a31d2d225adc0da7bef595}{NO\_ERROR\_KINOVA};
+385     \hyperlink{structTrajectoryPoint}{TrajectoryPoint} jaco\_position;
+386     jaco\_position.\hyperlink{structTrajectoryPoint_a1a9f12ad88f5011c6a4644792fa67f99}{InitStruct}();
+387     memset(&jaco\_position, 0, \textcolor{keyword}{sizeof}(jaco\_position));  \textcolor{comment}{// zero structure}
+388 
+389     \textcolor{keywordflow}{if} (push)
+390     \{
+391         result = \hyperlink{classjaco_1_1JacoComm_a8d1510c941f28a4e8f921691d4fd2248}{jaco\_api\_}.\hyperlink{classjaco_1_1JacoAPI_a97db09d91923328b1780bb50a0e2548d}{eraseAllTrajectories}();
+392         \textcolor{keywordflow}{if} (result != \hyperlink{Kinova_8API_8CommLayerUbuntu_8h_a510f2320a2a31d2d225adc0da7bef595}{NO\_ERROR\_KINOVA})
+393         \{
+394             \textcolor{keywordflow}{throw} JacoCommException(\textcolor{stringliteral}{"Could not erase trajectories"}, result);
+395         \}
+396     \}
+397 
+398     \textcolor{comment}{//startAPI();}
+399 
+400     result = \hyperlink{classjaco_1_1JacoComm_a8d1510c941f28a4e8f921691d4fd2248}{jaco\_api\_}.\hyperlink{classjaco_1_1JacoAPI_a4ce9340d50866cf102722ad6c370bdfd}{setAngularControl}();
+401     \textcolor{keywordflow}{if} (result != \hyperlink{Kinova_8API_8CommLayerUbuntu_8h_a510f2320a2a31d2d225adc0da7bef595}{NO\_ERROR\_KINOVA})
+402     \{
+403         \textcolor{keywordflow}{throw} JacoCommException(\textcolor{stringliteral}{"Could not set Cartesian control"}, result);
+404     \}
+405 
+406     \textcolor{comment}{// Initialize Cartesian control of the fingers}
+407     jaco\_position.\hyperlink{structTrajectoryPoint_aa24430dc273e9d7968a6c44e3bcee259}{Position}.\hyperlink{structUserPosition_a83779902810d0e5e16d533e0f964c0df}{HandMode} = \hyperlink{KinovaTypes_8h_ad7050e4cfb6e844e9be962fba8eeb817a21de3478520bbc47e9c35e3e651a06bf}{POSITION\_MODE};
+408     jaco\_position.\hyperlink{structTrajectoryPoint_aa24430dc273e9d7968a6c44e3bcee259}{Position}.\hyperlink{structUserPosition_a93c748d4ee51239fcbcd487d88e52ffa}{Type} = \hyperlink{KinovaTypes_8h_a0a1c22d235ef1b13cfcd1419d10babc9acec3b882918c5c90a239fd07290d6031}{ANGULAR\_POSITION};
+409     jaco\_position.\hyperlink{structTrajectoryPoint_aa24430dc273e9d7968a6c44e3bcee259}{Position}.\hyperlink{structUserPosition_a727907bb6a98b0f3d10aaa8011b67927}{Fingers} = fingers;
+410     jaco\_position.\hyperlink{structTrajectoryPoint_aa24430dc273e9d7968a6c44e3bcee259}{Position}.\hyperlink{structUserPosition_aa18896c1238a50c8ad81c66dfd76ac5e}{Delay} = 0.0;
+411     jaco\_position.\hyperlink{structTrajectoryPoint_acec47b76503d6f202e78bd00ec8fa02d}{LimitationsActive} = 0;
+412 
+413     \hyperlink{KinovaTypes_8h_de/de7/structAngularPosition}{AngularPosition} jaco\_angles;
+414     memset(&jaco\_angles, 0, \textcolor{keyword}{sizeof}(jaco\_angles));  \textcolor{comment}{// zero structure}
+415 
+416     result = \hyperlink{classjaco_1_1JacoComm_a8d1510c941f28a4e8f921691d4fd2248}{jaco\_api\_}.\hyperlink{classjaco_1_1JacoAPI_a8d2e9b00c5953e3fc024f86e128f01df}{getAngularPosition}(jaco\_angles);
+417     \textcolor{keywordflow}{if} (result != \hyperlink{Kinova_8API_8CommLayerUbuntu_8h_a510f2320a2a31d2d225adc0da7bef595}{NO\_ERROR\_KINOVA})
+418     \{
+419         \textcolor{keywordflow}{throw} JacoCommException(\textcolor{stringliteral}{"Could not get the angular position"}, result);
+420     \}
+421 
+422 
+423     jaco\_position.\hyperlink{structTrajectoryPoint_aa24430dc273e9d7968a6c44e3bcee259}{Position}.\hyperlink{structUserPosition_ab0c5b71622c1e0d3033572578e947cf3}{Actuators} = jaco\_angles.\hyperlink{KinovaTypes_8h_a860d625d47a8a6eaae53f43903beb80b}{Actuators};
+424 
+425     \textcolor{comment}{// When loading a cartesian position for the fingers, values are required for the arm joints}
+426     \textcolor{comment}{// as well or the arm goes nuts.  Grab the current position and feed it back to the arm.}
+427     JacoPose pose;
+428     \hyperlink{classjaco_1_1JacoComm_a855bbefed2093d0d0cc7763eb7306a0b}{getCartesianPosition}(pose);
+429     jaco\_position.\hyperlink{structTrajectoryPoint_aa24430dc273e9d7968a6c44e3bcee259}{Position}.\hyperlink{structUserPosition_ab363c40971853637f728978e604c438f}{CartesianPosition} = pose;
+430 
+431     result = \hyperlink{classjaco_1_1JacoComm_a8d1510c941f28a4e8f921691d4fd2248}{jaco\_api\_}.\hyperlink{classjaco_1_1JacoAPI_a30abd0123d85582b684fbd86437d403c}{sendAdvanceTrajectory}(jaco\_position);
+432     \textcolor{keywordflow}{if} (result != \hyperlink{Kinova_8API_8CommLayerUbuntu_8h_a510f2320a2a31d2d225adc0da7bef595}{NO\_ERROR\_KINOVA})
+433     \{
+434         \textcolor{keywordflow}{throw} JacoCommException(\textcolor{stringliteral}{"Could not send advanced finger trajectory"}, result);
+435     \}
+436 \}
+\end{DoxyCode}
+\index{jaco\+::\+Jaco\+Comm@{jaco\+::\+Jaco\+Comm}!set\+Joint\+Angles@{set\+Joint\+Angles}}
+\index{set\+Joint\+Angles@{set\+Joint\+Angles}!jaco\+::\+Jaco\+Comm@{jaco\+::\+Jaco\+Comm}}
+\subsubsection[{\texorpdfstring{set\+Joint\+Angles(const Jaco\+Angles \&angles, int timeout=0, bool push=true)}{setJointAngles(const JacoAngles &angles, int timeout=0, bool push=true)}}]{\setlength{\rightskip}{0pt plus 5cm}void jaco\+::\+Jaco\+Comm\+::set\+Joint\+Angles (
+\begin{DoxyParamCaption}
+\item[{const {\bf Jaco\+Angles} \&}]{angles, }
+\item[{int}]{timeout = {\ttfamily 0}, }
+\item[{bool}]{push = {\ttfamily true}}
+\end{DoxyParamCaption}
+)}\hypertarget{classjaco_1_1JacoComm_ad53fa0c190d41da8430de2e9bf997f05}{}\label{classjaco_1_1JacoComm_ad53fa0c190d41da8430de2e9bf997f05}
+
+
+Sends a joint angle command to the Jaco arm. 
+
+Waits until the arm has stopped moving before releasing control of the A\+PI. 
+\begin{DoxyCode}
+269 \{
+270     boost::recursive\_mutex::scoped\_lock lock(\hyperlink{classjaco_1_1JacoComm_ac6ef2a6b3c51877fc4237d834c35908a}{api\_mutex\_});
+271 
+272     \textcolor{keywordflow}{if} (\hyperlink{classjaco_1_1JacoComm_a872b8033cda5a9fe4ccdca2e89aa03d1}{isStopped}())
+273     \{
+274         ROS\_INFO(\textcolor{stringliteral}{"The angles could not be set because the arm is stopped"});
+275         \textcolor{keywordflow}{return};
+276     \}
+277 
+278     \textcolor{keywordtype}{int} \hyperlink{Kinova_8API_8CommLayerUbuntu_8h_a900dac90961bada00f57c207562a6a9a}{result} = \hyperlink{Kinova_8API_8CommLayerUbuntu_8h_a510f2320a2a31d2d225adc0da7bef595}{NO\_ERROR\_KINOVA};
+279     \hyperlink{structTrajectoryPoint}{TrajectoryPoint} jaco\_position;
+280     jaco\_position.\hyperlink{structTrajectoryPoint_a1a9f12ad88f5011c6a4644792fa67f99}{InitStruct}();
+281     memset(&jaco\_position, 0, \textcolor{keyword}{sizeof}(jaco\_position));  \textcolor{comment}{// zero structure}
+282 
+283     \textcolor{keywordflow}{if} (push)
+284     \{
+285         result = \hyperlink{classjaco_1_1JacoComm_a8d1510c941f28a4e8f921691d4fd2248}{jaco\_api\_}.\hyperlink{classjaco_1_1JacoAPI_a97db09d91923328b1780bb50a0e2548d}{eraseAllTrajectories}();
+286         \textcolor{keywordflow}{if} (result != \hyperlink{Kinova_8API_8CommLayerUbuntu_8h_a510f2320a2a31d2d225adc0da7bef595}{NO\_ERROR\_KINOVA})
+287         \{
+288             \textcolor{keywordflow}{throw} JacoCommException(\textcolor{stringliteral}{"Could not erase trajectories"}, result);
+289         \}
+290     \}
+291 
+292     \textcolor{comment}{//startAPI();}
+293 
+294     result = \hyperlink{classjaco_1_1JacoComm_a8d1510c941f28a4e8f921691d4fd2248}{jaco\_api\_}.\hyperlink{classjaco_1_1JacoAPI_a4ce9340d50866cf102722ad6c370bdfd}{setAngularControl}();
+295     \textcolor{keywordflow}{if} (result != \hyperlink{Kinova_8API_8CommLayerUbuntu_8h_a510f2320a2a31d2d225adc0da7bef595}{NO\_ERROR\_KINOVA})
+296     \{
+297         \textcolor{keywordflow}{throw} JacoCommException(\textcolor{stringliteral}{"Could not set angular control"}, result);
+298     \}
+299 
+300     jaco\_position.\hyperlink{structTrajectoryPoint_aa24430dc273e9d7968a6c44e3bcee259}{Position}.\hyperlink{structUserPosition_aa18896c1238a50c8ad81c66dfd76ac5e}{Delay} = 0.0;
+301     jaco\_position.\hyperlink{structTrajectoryPoint_aa24430dc273e9d7968a6c44e3bcee259}{Position}.\hyperlink{structUserPosition_a93c748d4ee51239fcbcd487d88e52ffa}{Type} = \hyperlink{KinovaTypes_8h_a0a1c22d235ef1b13cfcd1419d10babc9acec3b882918c5c90a239fd07290d6031}{ANGULAR\_POSITION};
+302     jaco\_position.\hyperlink{structTrajectoryPoint_aa24430dc273e9d7968a6c44e3bcee259}{Position}.\hyperlink{structUserPosition_ab0c5b71622c1e0d3033572578e947cf3}{Actuators} = \hyperlink{namespacejoint__angle__workout_a44cb6da34666d45961b26233ed5264bf}{angles};
+303 
+304     result = \hyperlink{classjaco_1_1JacoComm_a8d1510c941f28a4e8f921691d4fd2248}{jaco\_api\_}.\hyperlink{classjaco_1_1JacoAPI_a30abd0123d85582b684fbd86437d403c}{sendAdvanceTrajectory}(jaco\_position);
+305     \textcolor{keywordflow}{if} (result != \hyperlink{Kinova_8API_8CommLayerUbuntu_8h_a510f2320a2a31d2d225adc0da7bef595}{NO\_ERROR\_KINOVA})
+306     \{
+307         \textcolor{keywordflow}{throw} JacoCommException(\textcolor{stringliteral}{"Could not send advanced joint angle trajectory"}, result);
+308     \}
+309 \}
+\end{DoxyCode}
+\index{jaco\+::\+Jaco\+Comm@{jaco\+::\+Jaco\+Comm}!set\+Joint\+Velocities@{set\+Joint\+Velocities}}
+\index{set\+Joint\+Velocities@{set\+Joint\+Velocities}!jaco\+::\+Jaco\+Comm@{jaco\+::\+Jaco\+Comm}}
+\subsubsection[{\texorpdfstring{set\+Joint\+Velocities(const Angular\+Info \&joint\+\_\+vel)}{setJointVelocities(const AngularInfo &joint_vel)}}]{\setlength{\rightskip}{0pt plus 5cm}void jaco\+::\+Jaco\+Comm\+::set\+Joint\+Velocities (
+\begin{DoxyParamCaption}
+\item[{const {\bf Angular\+Info} \&}]{joint\+\_\+vel}
+\end{DoxyParamCaption}
+)}\hypertarget{classjaco_1_1JacoComm_af269b1c8d8b1f32c1003ca2e464252f0}{}\label{classjaco_1_1JacoComm_af269b1c8d8b1f32c1003ca2e464252f0}
+
+
+Set the angular velocity of the joints. 
+
+
+\begin{DoxyCode}
+443 \{
+444     boost::recursive\_mutex::scoped\_lock lock(\hyperlink{classjaco_1_1JacoComm_ac6ef2a6b3c51877fc4237d834c35908a}{api\_mutex\_});
+445 
+446     \textcolor{keywordflow}{if} (\hyperlink{classjaco_1_1JacoComm_a872b8033cda5a9fe4ccdca2e89aa03d1}{isStopped}())
+447     \{
+448         ROS\_INFO(\textcolor{stringliteral}{"The velocities could not be set because the arm is stopped"});
+449         \textcolor{keywordflow}{return};
+450     \}
+451 
+452     \hyperlink{structTrajectoryPoint}{TrajectoryPoint} jaco\_velocity;
+453     jaco\_velocity.\hyperlink{structTrajectoryPoint_a1a9f12ad88f5011c6a4644792fa67f99}{InitStruct}();
+454 
+455     memset(&jaco\_velocity, 0, \textcolor{keyword}{sizeof}(jaco\_velocity));  \textcolor{comment}{// zero structure}
+456 
+457     \textcolor{comment}{//startAPI();}
+458     jaco\_velocity.\hyperlink{structTrajectoryPoint_aa24430dc273e9d7968a6c44e3bcee259}{Position}.\hyperlink{structUserPosition_a93c748d4ee51239fcbcd487d88e52ffa}{Type} = \hyperlink{KinovaTypes_8h_a0a1c22d235ef1b13cfcd1419d10babc9ae4d95686a349611affcf1ebfeab077f1}{ANGULAR\_VELOCITY};
+459 
+460     \textcolor{comment}{// confusingly, velocity is passed in the position struct}
+461     jaco\_velocity.\hyperlink{structTrajectoryPoint_aa24430dc273e9d7968a6c44e3bcee259}{Position}.\hyperlink{structUserPosition_ab0c5b71622c1e0d3033572578e947cf3}{Actuators} = joint\_vel;
+462 
+463     \textcolor{keywordtype}{int} \hyperlink{Kinova_8API_8CommLayerUbuntu_8h_a900dac90961bada00f57c207562a6a9a}{result} = \hyperlink{classjaco_1_1JacoComm_a8d1510c941f28a4e8f921691d4fd2248}{jaco\_api\_}.\hyperlink{classjaco_1_1JacoAPI_a30abd0123d85582b684fbd86437d403c}{sendAdvanceTrajectory}(jaco\_velocity);
+464     \textcolor{keywordflow}{if} (result != \hyperlink{Kinova_8API_8CommLayerUbuntu_8h_a510f2320a2a31d2d225adc0da7bef595}{NO\_ERROR\_KINOVA})
+465     \{
+466         \textcolor{keywordflow}{throw} JacoCommException(\textcolor{stringliteral}{"Could not send advanced joint velocity trajectory"}, result);
+467     \}
+468 \}
+\end{DoxyCode}
+\index{jaco\+::\+Jaco\+Comm@{jaco\+::\+Jaco\+Comm}!start\+A\+PI@{start\+A\+PI}}
+\index{start\+A\+PI@{start\+A\+PI}!jaco\+::\+Jaco\+Comm@{jaco\+::\+Jaco\+Comm}}
+\subsubsection[{\texorpdfstring{start\+A\+P\+I()}{startAPI()}}]{\setlength{\rightskip}{0pt plus 5cm}void jaco\+::\+Jaco\+Comm\+::start\+A\+PI (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classjaco_1_1JacoComm_a6b2a1fabc4e6c30da42c9a5e26757398}{}\label{classjaco_1_1JacoComm_a6b2a1fabc4e6c30da42c9a5e26757398}
+
+\begin{DoxyCode}
+736 \{
+737     boost::recursive\_mutex::scoped\_lock lock(\hyperlink{classjaco_1_1JacoComm_ac6ef2a6b3c51877fc4237d834c35908a}{api\_mutex\_});
+738     \textcolor{keywordflow}{if} (\hyperlink{classjaco_1_1JacoComm_a9607500fac99c4dbc5acc98dd513eec3}{is\_software\_stop\_})
+739     \{
+740         \hyperlink{classjaco_1_1JacoComm_a9607500fac99c4dbc5acc98dd513eec3}{is\_software\_stop\_} = \textcolor{keyword}{false};
+741         \hyperlink{classjaco_1_1JacoComm_a8d1510c941f28a4e8f921691d4fd2248}{jaco\_api\_}.\hyperlink{classjaco_1_1JacoAPI_a41fefb13b76fc591cde461d1a9b91bb2}{stopControlAPI}();
+742         ros::Duration(0.05).sleep();
+743     \}
+744 
+745     \textcolor{keywordtype}{int} \hyperlink{Kinova_8API_8CommLayerUbuntu_8h_a900dac90961bada00f57c207562a6a9a}{result} = \hyperlink{classjaco_1_1JacoComm_a8d1510c941f28a4e8f921691d4fd2248}{jaco\_api\_}.\hyperlink{classjaco_1_1JacoAPI_a75d269278bf284a368f42ce1f8a3eb2e}{startControlAPI}();
+746     \textcolor{keywordflow}{if} (result != \hyperlink{Kinova_8API_8CommLayerUbuntu_8h_a510f2320a2a31d2d225adc0da7bef595}{NO\_ERROR\_KINOVA})
+747     \{
+748         \textcolor{keywordflow}{throw} JacoCommException(\textcolor{stringliteral}{"Could not start the control API"}, result);
+749     \}
+750 \}
+\end{DoxyCode}
+\index{jaco\+::\+Jaco\+Comm@{jaco\+::\+Jaco\+Comm}!start\+Force\+Control@{start\+Force\+Control}}
+\index{start\+Force\+Control@{start\+Force\+Control}!jaco\+::\+Jaco\+Comm@{jaco\+::\+Jaco\+Comm}}
+\subsubsection[{\texorpdfstring{start\+Force\+Control()}{startForceControl()}}]{\setlength{\rightskip}{0pt plus 5cm}void jaco\+::\+Jaco\+Comm\+::start\+Force\+Control (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classjaco_1_1JacoComm_a00e5493dfbdcaab6c1a9bd388d3b839d}{}\label{classjaco_1_1JacoComm_a00e5493dfbdcaab6c1a9bd388d3b839d}
+
+
+Start cartesian force control. 
+
+
+\begin{DoxyCode}
+663 \{
+664     boost::recursive\_mutex::scoped\_lock lock(\hyperlink{classjaco_1_1JacoComm_ac6ef2a6b3c51877fc4237d834c35908a}{api\_mutex\_});
+665     \textcolor{keywordtype}{int} \hyperlink{Kinova_8API_8CommLayerUbuntu_8h_a900dac90961bada00f57c207562a6a9a}{result} = \hyperlink{classjaco_1_1JacoComm_a8d1510c941f28a4e8f921691d4fd2248}{jaco\_api\_}.\hyperlink{classjaco_1_1JacoAPI_a548f1d6251582bb4fe9cb5cb69f08b2d}{startForceControl}();
+666     \textcolor{keywordflow}{if} (result != \hyperlink{Kinova_8API_8CommLayerUbuntu_8h_a510f2320a2a31d2d225adc0da7bef595}{NO\_ERROR\_KINOVA})
+667     \{
+668         \textcolor{keywordflow}{throw} JacoCommException(\textcolor{stringliteral}{"Could not start force control."}, result);
+669     \}
+670 \}
+\end{DoxyCode}
+\index{jaco\+::\+Jaco\+Comm@{jaco\+::\+Jaco\+Comm}!stop\+A\+PI@{stop\+A\+PI}}
+\index{stop\+A\+PI@{stop\+A\+PI}!jaco\+::\+Jaco\+Comm@{jaco\+::\+Jaco\+Comm}}
+\subsubsection[{\texorpdfstring{stop\+A\+P\+I()}{stopAPI()}}]{\setlength{\rightskip}{0pt plus 5cm}void jaco\+::\+Jaco\+Comm\+::stop\+A\+PI (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classjaco_1_1JacoComm_a54862830cd6414ae3ae48e46e54bf798}{}\label{classjaco_1_1JacoComm_a54862830cd6414ae3ae48e46e54bf798}
+
+\begin{DoxyCode}
+717 \{
+718     boost::recursive\_mutex::scoped\_lock lock(\hyperlink{classjaco_1_1JacoComm_ac6ef2a6b3c51877fc4237d834c35908a}{api\_mutex\_});
+719     \hyperlink{classjaco_1_1JacoComm_a9607500fac99c4dbc5acc98dd513eec3}{is\_software\_stop\_} = \textcolor{keyword}{true};
+720 
+721     \textcolor{keywordtype}{int} \hyperlink{Kinova_8API_8CommLayerUbuntu_8h_a900dac90961bada00f57c207562a6a9a}{result} = \hyperlink{classjaco_1_1JacoComm_a8d1510c941f28a4e8f921691d4fd2248}{jaco\_api\_}.\hyperlink{classjaco_1_1JacoAPI_a41fefb13b76fc591cde461d1a9b91bb2}{stopControlAPI}();
+722     \textcolor{keywordflow}{if} (result != \hyperlink{Kinova_8API_8CommLayerUbuntu_8h_a510f2320a2a31d2d225adc0da7bef595}{NO\_ERROR\_KINOVA})
+723     \{
+724         \textcolor{keywordflow}{throw} JacoCommException(\textcolor{stringliteral}{"Could not stop the control API"}, result);
+725     \}
+726 
+727     result = \hyperlink{classjaco_1_1JacoComm_a8d1510c941f28a4e8f921691d4fd2248}{jaco\_api\_}.\hyperlink{classjaco_1_1JacoAPI_a97db09d91923328b1780bb50a0e2548d}{eraseAllTrajectories}();
+728     \textcolor{keywordflow}{if} (result != \hyperlink{Kinova_8API_8CommLayerUbuntu_8h_a510f2320a2a31d2d225adc0da7bef595}{NO\_ERROR\_KINOVA})
+729     \{
+730         \textcolor{keywordflow}{throw} JacoCommException(\textcolor{stringliteral}{"Could not erase all trajectories"}, result);
+731     \}
+732 \}
+\end{DoxyCode}
+\index{jaco\+::\+Jaco\+Comm@{jaco\+::\+Jaco\+Comm}!stop\+Force\+Control@{stop\+Force\+Control}}
+\index{stop\+Force\+Control@{stop\+Force\+Control}!jaco\+::\+Jaco\+Comm@{jaco\+::\+Jaco\+Comm}}
+\subsubsection[{\texorpdfstring{stop\+Force\+Control()}{stopForceControl()}}]{\setlength{\rightskip}{0pt plus 5cm}void jaco\+::\+Jaco\+Comm\+::stop\+Force\+Control (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classjaco_1_1JacoComm_a339cf31d88fdef6409340c82a35ecb53}{}\label{classjaco_1_1JacoComm_a339cf31d88fdef6409340c82a35ecb53}
+
+
+Stop cartesian force control. 
+
+
+\begin{DoxyCode}
+676 \{
+677     boost::recursive\_mutex::scoped\_lock lock(\hyperlink{classjaco_1_1JacoComm_ac6ef2a6b3c51877fc4237d834c35908a}{api\_mutex\_});
+678     \textcolor{keywordtype}{int} \hyperlink{Kinova_8API_8CommLayerUbuntu_8h_a900dac90961bada00f57c207562a6a9a}{result} = \hyperlink{classjaco_1_1JacoComm_a8d1510c941f28a4e8f921691d4fd2248}{jaco\_api\_}.\hyperlink{classjaco_1_1JacoAPI_ac3881ef354400b32a4d71796dba66d67}{stopForceControl}();
+679     \textcolor{keywordflow}{if} (result != \hyperlink{Kinova_8API_8CommLayerUbuntu_8h_a510f2320a2a31d2d225adc0da7bef595}{NO\_ERROR\_KINOVA})
+680     \{
+681         \textcolor{keywordflow}{throw} JacoCommException(\textcolor{stringliteral}{"Could not stop force control."}, result);
+682     \}
+683 \}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\index{jaco\+::\+Jaco\+Comm@{jaco\+::\+Jaco\+Comm}!api\+\_\+mutex\+\_\+@{api\+\_\+mutex\+\_\+}}
+\index{api\+\_\+mutex\+\_\+@{api\+\_\+mutex\+\_\+}!jaco\+::\+Jaco\+Comm@{jaco\+::\+Jaco\+Comm}}
+\subsubsection[{\texorpdfstring{api\+\_\+mutex\+\_\+}{api_mutex_}}]{\setlength{\rightskip}{0pt plus 5cm}boost\+::recursive\+\_\+mutex\& jaco\+::\+Jaco\+Comm\+::api\+\_\+mutex\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classjaco_1_1JacoComm_ac6ef2a6b3c51877fc4237d834c35908a}{}\label{classjaco_1_1JacoComm_ac6ef2a6b3c51877fc4237d834c35908a}
+\index{jaco\+::\+Jaco\+Comm@{jaco\+::\+Jaco\+Comm}!is\+\_\+software\+\_\+stop\+\_\+@{is\+\_\+software\+\_\+stop\+\_\+}}
+\index{is\+\_\+software\+\_\+stop\+\_\+@{is\+\_\+software\+\_\+stop\+\_\+}!jaco\+::\+Jaco\+Comm@{jaco\+::\+Jaco\+Comm}}
+\subsubsection[{\texorpdfstring{is\+\_\+software\+\_\+stop\+\_\+}{is_software_stop_}}]{\setlength{\rightskip}{0pt plus 5cm}bool jaco\+::\+Jaco\+Comm\+::is\+\_\+software\+\_\+stop\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classjaco_1_1JacoComm_a9607500fac99c4dbc5acc98dd513eec3}{}\label{classjaco_1_1JacoComm_a9607500fac99c4dbc5acc98dd513eec3}
+\index{jaco\+::\+Jaco\+Comm@{jaco\+::\+Jaco\+Comm}!jaco\+\_\+api\+\_\+@{jaco\+\_\+api\+\_\+}}
+\index{jaco\+\_\+api\+\_\+@{jaco\+\_\+api\+\_\+}!jaco\+::\+Jaco\+Comm@{jaco\+::\+Jaco\+Comm}}
+\subsubsection[{\texorpdfstring{jaco\+\_\+api\+\_\+}{jaco_api_}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf jaco\+::\+Jaco\+A\+PI} jaco\+::\+Jaco\+Comm\+::jaco\+\_\+api\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classjaco_1_1JacoComm_a8d1510c941f28a4e8f921691d4fd2248}{}\label{classjaco_1_1JacoComm_a8d1510c941f28a4e8f921691d4fd2248}
+\index{jaco\+::\+Jaco\+Comm@{jaco\+::\+Jaco\+Comm}!num\+\_\+fingers\+\_\+@{num\+\_\+fingers\+\_\+}}
+\index{num\+\_\+fingers\+\_\+@{num\+\_\+fingers\+\_\+}!jaco\+::\+Jaco\+Comm@{jaco\+::\+Jaco\+Comm}}
+\subsubsection[{\texorpdfstring{num\+\_\+fingers\+\_\+}{num_fingers_}}]{\setlength{\rightskip}{0pt plus 5cm}int jaco\+::\+Jaco\+Comm\+::num\+\_\+fingers\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classjaco_1_1JacoComm_a5812c7504d90ec6016c40cba097ba1bb}{}\label{classjaco_1_1JacoComm_a5812c7504d90ec6016c40cba097ba1bb}
+\index{jaco\+::\+Jaco\+Comm@{jaco\+::\+Jaco\+Comm}!robot\+\_\+type\+\_\+@{robot\+\_\+type\+\_\+}}
+\index{robot\+\_\+type\+\_\+@{robot\+\_\+type\+\_\+}!jaco\+::\+Jaco\+Comm@{jaco\+::\+Jaco\+Comm}}
+\subsubsection[{\texorpdfstring{robot\+\_\+type\+\_\+}{robot_type_}}]{\setlength{\rightskip}{0pt plus 5cm}int jaco\+::\+Jaco\+Comm\+::robot\+\_\+type\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classjaco_1_1JacoComm_afb603f289e6ed8855cbeb0d0b1400829}{}\label{classjaco_1_1JacoComm_afb603f289e6ed8855cbeb0d0b1400829}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Longfei/\+Desktop/catkin\+\_\+\+Kinova\+R\+O\+S/src/jaco-\/ros/jaco\+\_\+driver/include/jaco\+\_\+driver/\hyperlink{jaco__comm_8h}{jaco\+\_\+comm.\+h}\item 
+D\+:/\+Longfei/\+Desktop/catkin\+\_\+\+Kinova\+R\+O\+S/src/jaco-\/ros/jaco\+\_\+driver/src/\hyperlink{jaco__comm_8cpp}{jaco\+\_\+comm.\+cpp}\end{DoxyCompactItemize}

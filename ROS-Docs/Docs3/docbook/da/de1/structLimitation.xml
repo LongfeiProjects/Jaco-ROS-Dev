@@ -1,0 +1,181 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="da/de1/structLimitation">
+<title>Limitation struct Reference</title>
+<para>
+    <programlisting>#include <link linkend="df/d36/KinovaTypes_8h">&quot;Definition&quot;</link></programlisting>
+</para>
+<para>Inheritance diagram for Limitation</para>
+<para>
+    <figure>
+        <title>Inheritance graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../d5/d9e/structLimitation__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Collaboration diagram for Limitation</para>
+<para>
+    <figure>
+        <title>Collaboration graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../db/d9f/structLimitation__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+        <section>
+            <title>Public Attributes</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>float accelerationParameter1</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>float accelerationParameter2</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>float accelerationParameter3</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>float forceParameter1</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>float forceParameter2</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>float forceParameter3</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>float speedParameter1<para><emphasis>In a cartesian context, this represents the translation velocity but in an angular context, this represents the velocity of the actuators 1, 2 and 3.</emphasis></para></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>float speedParameter2<para><emphasis>In a cartesian context, this represents the orientation velocity but in an angular context, this represents the velocity of the actuators 4, 5 and 6.</emphasis></para></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>float speedParameter3</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="da/de1/structLimitation_1a098f4ee5d0eb6baf844ff3164f1a20f6">InitStruct</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+    <simplesect>
+
+<para>This data structure represents all limitation that can be applied to a control context. </para>
+    </simplesect>
+        <simplesect>
+            <title>Detailed Description</title>
+
+<para>Depending on the context, units and behaviour can change. See each parameter for more informations. </para>
+                <para>Definition at line 594 of file KinovaTypes.h</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>KinovaTypes.h</para></listitem></itemizedlist></para>
+        </simplesect>
+        <section>
+            <title>Member Data Documentation</title>
+            <simplesect>
+                <title>float Limitation::accelerationParameter1</title>                
+<para>Not used for now. </para>
+
+                <para>Definition at line 608 of file KinovaTypes.h</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>KinovaTypes.h</para></listitem></itemizedlist></para>
+            </simplesect>
+            <simplesect>
+                <title>float Limitation::accelerationParameter2</title>                
+<para>Not used for now. </para>
+
+                <para>Definition at line 609 of file KinovaTypes.h</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>KinovaTypes.h</para></listitem></itemizedlist></para>
+            </simplesect>
+            <simplesect>
+                <title>float Limitation::accelerationParameter3</title>                
+<para>Not used for now. </para>
+
+                <para>Definition at line 610 of file KinovaTypes.h</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>KinovaTypes.h</para></listitem></itemizedlist></para>
+            </simplesect>
+            <simplesect>
+                <title>float Limitation::forceParameter1</title>                
+<para>Not used for now. </para>
+
+                <para>Definition at line 605 of file KinovaTypes.h</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>KinovaTypes.h</para></listitem></itemizedlist></para>
+            </simplesect>
+            <simplesect>
+                <title>float Limitation::forceParameter2</title>                
+<para>Not used for now. </para>
+
+                <para>Definition at line 606 of file KinovaTypes.h</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>KinovaTypes.h</para></listitem></itemizedlist></para>
+            </simplesect>
+            <simplesect>
+                <title>float Limitation::forceParameter3</title>                
+<para>Not used for now. </para>
+
+                <para>Definition at line 607 of file KinovaTypes.h</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>KinovaTypes.h</para></listitem></itemizedlist></para>
+            </simplesect>
+            <simplesect>
+                <title>float Limitation::speedParameter3</title>                
+<para>Not used for now. </para>
+
+                <para>Definition at line 604 of file KinovaTypes.h</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>KinovaTypes.h</para></listitem></itemizedlist></para>
+            </simplesect>
+        </section>
+            <section xml:id="da/de1/structLimitation_1a098f4ee5d0eb6baf844ff3164f1a20f6">
+                <title>void Limitation::InitStruct ()</title> <emphasis></emphasis>
+                
+            </section>
+</section>

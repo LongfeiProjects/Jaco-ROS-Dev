@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="db/dbd/structros_1_1message__traits_1_1HasHeader_3_01_1_1jaco__msgs_1_1SetForceControlParamsResponse___1966c7230658ad242a89337f70355e33">
+<title>ros::message_traits::HasHeader&lt; ::jaco_msgs::SetForceControlParamsResponse_&lt; ContainerAllocator &gt; const  &gt; struct Reference</title>
+<para>
+    <programlisting>#include <link linkend="d4/df9/SetForceControlParamsResponse_8h">&quot;SetForceControlParamsResponse.h&quot;</link></programlisting>
+</para>
+<para>Inheritance diagram for ros::message_traits::HasHeader&lt; ::jaco_msgs::SetForceControlParamsResponse_&lt; ContainerAllocator &gt; const  &gt;</para>
+<para>
+    <figure>
+        <title>Inheritance graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../d5/d4c/structros_1_1message__traits_1_1HasHeader_3_01_1_1jaco__msgs_1_1SetForceControlParamsResponse___1b37329f144381c037c56611393f1a8e.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Collaboration diagram for ros::message_traits::HasHeader&lt; ::jaco_msgs::SetForceControlParamsResponse_&lt; ContainerAllocator &gt; const  &gt;</para>
+<para>
+    <figure>
+        <title>Collaboration graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../d9/d64/structros_1_1message__traits_1_1HasHeader_3_01_1_1jaco__msgs_1_1SetForceControlParamsResponse___baa0e852d531134a4164f0d044ed15e0.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+    <templateparamlist>
+      <param>
+        <type>class ContainerAllocator</type>
+      </param>
+    </templateparamlist>
+</section>

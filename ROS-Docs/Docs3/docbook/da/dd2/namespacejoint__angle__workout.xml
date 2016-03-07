@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="da/dd2/namespacejoint__angle__workout">
+<title>joint_angle_workout</title>
+        <section>
+            <title>Variables</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="da/dd2/namespacejoint__angle__workout_1a44cb6da34666d45961b26233ed5264bf">angles</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>list <link linkend="da/dd2/namespacejoint__angle__workout_1a2c310c9dff3a6e145dc3474b7c751546">raw_angles</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="da/dd2/namespacejoint__angle__workout_1ad8129235290985797e7512a9f73bdaf4">result</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Functions</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>def <link linkend="da/dd2/namespacejoint__angle__workout_1a8574a355a0a9e85d1767e15c49cb052e">joint_angle_client</link> (
+angle_set )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <simplesect>
+            <title>Detailed Description</title>
+
+<para><literallayout>A helper program to test cartesian goals for the JACO and MICO arms.</literallayout> </para>
+                <para>Definition at line 1 of file joint_angle_workout.py</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>joint_angle_workout.py</para></listitem></itemizedlist></para>
+        </simplesect>
+</section>

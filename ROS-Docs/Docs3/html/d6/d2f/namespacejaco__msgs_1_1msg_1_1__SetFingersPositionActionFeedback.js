@@ -1,0 +1,4 @@
+var namespacejaco__msgs_1_1msg_1_1__SetFingersPositionActionFeedback =
+[
+    [ "SetFingersPositionActionFeedback", "de/df4/classjaco__msgs_1_1msg_1_1__SetFingersPositionActionFeedback_1_1SetFingersPositionActionFeedback.html", "de/df4/classjaco__msgs_1_1msg_1_1__SetFingersPositionActionFeedback_1_1SetFingersPositionActionFeedback" ]
+];

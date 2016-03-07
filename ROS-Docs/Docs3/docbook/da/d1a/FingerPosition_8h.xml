@@ -1,0 +1,401 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="da/d1a/FingerPosition_8h">
+    <title>FingerPosition.h File Reference</title>
+    <programlisting>#include &lt;string&gt;</programlisting>
+    <programlisting>#include &lt;vector&gt;</programlisting>
+    <programlisting>#include &lt;map&gt;</programlisting>
+    <programlisting>#include &lt;ros/types.h&gt;</programlisting>
+    <programlisting>#include &lt;ros/serialization.h&gt;</programlisting>
+    <programlisting>#include &lt;ros/builtin_message_traits.h&gt;</programlisting>
+    <programlisting>#include &lt;ros/message_operations.h&gt;</programlisting>
+<para>Include dependency diagram for FingerPosition.h</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../d6/d44/FingerPosition_8h__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Included by dependency diagram for FingerPosition.h</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../d8/d1d/FingerPosition_8h__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+        <section>
+            <title> Classes </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="df/d79/structjaco__msgs_1_1FingerPosition__">jaco_msgs::FingerPosition_</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d5/d7c/structros_1_1message__operations_1_1Printer_3_01_1_1jaco__msgs_1_1FingerPosition___3_01ContainerAllocator_01_4_01_4">ros::message_operations::Printer&lt; ::jaco_msgs::FingerPosition_&lt; ContainerAllocator &gt; &gt;</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="dc/dd0/structros_1_1message__traits_1_1DataType_3_01_1_1jaco__msgs_1_1FingerPosition___3_01ContainerAllocator_01_4_01_4">ros::message_traits::DataType&lt; ::jaco_msgs::FingerPosition_&lt; ContainerAllocator &gt; &gt;</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="df/d22/structros_1_1message__traits_1_1Definition_3_01_1_1jaco__msgs_1_1FingerPosition___3_01ContainerAllocator_01_4_01_4">ros::message_traits::Definition&lt; ::jaco_msgs::FingerPosition_&lt; ContainerAllocator &gt; &gt;</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d4/d63/structros_1_1message__traits_1_1HasHeader_3_01_1_1jaco__msgs_1_1FingerPosition___3_01ContainerAllocator_01_4_01_4">ros::message_traits::HasHeader&lt; ::jaco_msgs::FingerPosition_&lt; ContainerAllocator &gt; &gt;</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d6/d0c/structros_1_1message__traits_1_1HasHeader_3_01_1_1jaco__msgs_1_1FingerPosition___3_01ContainerAllocator_01_4_01const_01_01_4">ros::message_traits::HasHeader&lt; ::jaco_msgs::FingerPosition_&lt; ContainerAllocator &gt; const  &gt;</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d0/d24/structros_1_1message__traits_1_1IsFixedSize_3_01_1_1jaco__msgs_1_1FingerPosition___3_01ContainerAllocator_01_4_01_4">ros::message_traits::IsFixedSize&lt; ::jaco_msgs::FingerPosition_&lt; ContainerAllocator &gt; &gt;</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d9/d5e/structros_1_1message__traits_1_1IsFixedSize_3_01_1_1jaco__msgs_1_1FingerPosition___3_01ContainerAllocator_01_4_01const_01_01_4">ros::message_traits::IsFixedSize&lt; ::jaco_msgs::FingerPosition_&lt; ContainerAllocator &gt; const  &gt;</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="dd/d8a/structros_1_1message__traits_1_1IsMessage_3_01_1_1jaco__msgs_1_1FingerPosition___3_01ContainerAllocator_01_4_01_4">ros::message_traits::IsMessage&lt; ::jaco_msgs::FingerPosition_&lt; ContainerAllocator &gt; &gt;</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="de/d0f/structros_1_1message__traits_1_1IsMessage_3_01_1_1jaco__msgs_1_1FingerPosition___3_01ContainerAllocator_01_4_01const_01_01_4">ros::message_traits::IsMessage&lt; ::jaco_msgs::FingerPosition_&lt; ContainerAllocator &gt; const  &gt;</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d3/d4d/structros_1_1message__traits_1_1MD5Sum_3_01_1_1jaco__msgs_1_1FingerPosition___3_01ContainerAllocator_01_4_01_4">ros::message_traits::MD5Sum&lt; ::jaco_msgs::FingerPosition_&lt; ContainerAllocator &gt; &gt;</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="db/d11/structros_1_1serialization_1_1Serializer_3_01_1_1jaco__msgs_1_1FingerPosition___3_01ContainerAllocator_01_4_01_4">ros::serialization::Serializer&lt; ::jaco_msgs::FingerPosition_&lt; ContainerAllocator &gt; &gt;</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <simplesect>
+            <title> Namespaces </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d7/dba/namespacejaco__msgs">jaco_msgs</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="db/d2f/namespaceros">ros</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d6/db4/namespaceros_1_1message__operations">ros::message_operations</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d0/db0/namespaceros_1_1message__traits">ros::message_traits</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="da/d37/namespaceros_1_1serialization">ros::serialization</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+    <simplesect>
+        <title>Detailed Description</title>
+    <para>Definition in file D:/Longfei/Desktop/catkin_KinovaROS/devel/include/jaco_msgs/FingerPosition.h</para>
+    </simplesect>
+    <literallayout><computeroutput>
+1 <emphasis class="comment">/*&#32;Software&#32;License&#32;Agreement&#32;(BSD&#32;License)</emphasis>
+2 <emphasis class="comment">&#32;*</emphasis>
+3 <emphasis class="comment">&#32;*&#32;Copyright&#32;(c)&#32;2011,&#32;Willow&#32;Garage,&#32;Inc.</emphasis>
+4 <emphasis class="comment">&#32;*&#32;All&#32;rights&#32;reserved.</emphasis>
+5 <emphasis class="comment">&#32;*</emphasis>
+6 <emphasis class="comment">&#32;*&#32;Redistribution&#32;and&#32;use&#32;in&#32;source&#32;and&#32;binary&#32;forms,&#32;with&#32;or&#32;without</emphasis>
+7 <emphasis class="comment">&#32;*&#32;modification,&#32;are&#32;permitted&#32;provided&#32;that&#32;the&#32;following&#32;conditions</emphasis>
+8 <emphasis class="comment">&#32;*&#32;are&#32;met:</emphasis>
+9 <emphasis class="comment">&#32;*</emphasis>
+10 <emphasis class="comment">&#32;*&#32;&#32;*&#32;Redistributions&#32;of&#32;source&#32;code&#32;must&#32;retain&#32;the&#32;above&#32;copyright</emphasis>
+11 <emphasis class="comment">&#32;*&#32;&#32;&#32;&#32;notice,&#32;this&#32;list&#32;of&#32;conditions&#32;and&#32;the&#32;following&#32;disclaimer.</emphasis>
+12 <emphasis class="comment">&#32;*&#32;&#32;*&#32;Redistributions&#32;in&#32;binary&#32;form&#32;must&#32;reproduce&#32;the&#32;above</emphasis>
+13 <emphasis class="comment">&#32;*&#32;&#32;&#32;&#32;copyright&#32;notice,&#32;this&#32;list&#32;of&#32;conditions&#32;and&#32;the&#32;following</emphasis>
+14 <emphasis class="comment">&#32;*&#32;&#32;&#32;&#32;disclaimer&#32;in&#32;the&#32;documentation&#32;and/or&#32;other&#32;materials&#32;provided</emphasis>
+15 <emphasis class="comment">&#32;*&#32;&#32;&#32;&#32;with&#32;the&#32;distribution.</emphasis>
+16 <emphasis class="comment">&#32;*&#32;&#32;*&#32;Neither&#32;the&#32;name&#32;of&#32;Willow&#32;Garage,&#32;Inc.&#32;nor&#32;the&#32;names&#32;of&#32;its</emphasis>
+17 <emphasis class="comment">&#32;*&#32;&#32;&#32;&#32;contributors&#32;may&#32;be&#32;used&#32;to&#32;endorse&#32;or&#32;promote&#32;products&#32;derived</emphasis>
+18 <emphasis class="comment">&#32;*&#32;&#32;&#32;&#32;from&#32;this&#32;software&#32;without&#32;specific&#32;prior&#32;written&#32;permission.</emphasis>
+19 <emphasis class="comment">&#32;*</emphasis>
+20 <emphasis class="comment">&#32;*&#32;THIS&#32;SOFTWARE&#32;IS&#32;PROVIDED&#32;BY&#32;THE&#32;COPYRIGHT&#32;HOLDERS&#32;AND&#32;CONTRIBUTORS</emphasis>
+21 <emphasis class="comment">&#32;*&#32;&quot;AS&#32;IS&quot;&#32;AND&#32;ANY&#32;EXPRESS&#32;OR&#32;IMPLIED&#32;WARRANTIES,&#32;INCLUDING,&#32;BUT&#32;NOT</emphasis>
+22 <emphasis class="comment">&#32;*&#32;LIMITED&#32;TO,&#32;THE&#32;IMPLIED&#32;WARRANTIES&#32;OF&#32;MERCHANTABILITY&#32;AND&#32;FITNESS</emphasis>
+23 <emphasis class="comment">&#32;*&#32;FOR&#32;A&#32;PARTICULAR&#32;PURPOSE&#32;ARE&#32;DISCLAIMED.&#32;IN&#32;NO&#32;EVENT&#32;SHALL&#32;THE</emphasis>
+24 <emphasis class="comment">&#32;*&#32;COPYRIGHT&#32;OWNER&#32;OR&#32;CONTRIBUTORS&#32;BE&#32;LIABLE&#32;FOR&#32;ANY&#32;DIRECT,&#32;INDIRECT,</emphasis>
+25 <emphasis class="comment">&#32;*&#32;INCIDENTAL,&#32;SPECIAL,&#32;EXEMPLARY,&#32;OR&#32;CONSEQUENTIAL&#32;DAMAGES&#32;(INCLUDING,</emphasis>
+26 <emphasis class="comment">&#32;*&#32;BUT&#32;NOT&#32;LIMITED&#32;TO,&#32;PROCUREMENT&#32;OF&#32;SUBSTITUTE&#32;GOODS&#32;OR&#32;SERVICES;</emphasis>
+27 <emphasis class="comment">&#32;*&#32;LOSS&#32;OF&#32;USE,&#32;DATA,&#32;OR&#32;PROFITS;&#32;OR&#32;BUSINESS&#32;INTERRUPTION)&#32;HOWEVER</emphasis>
+28 <emphasis class="comment">&#32;*&#32;CAUSED&#32;AND&#32;ON&#32;ANY&#32;THEORY&#32;OF&#32;LIABILITY,&#32;WHETHER&#32;IN&#32;CONTRACT,&#32;STRICT</emphasis>
+29 <emphasis class="comment">&#32;*&#32;LIABILITY,&#32;OR&#32;TORT&#32;(INCLUDING&#32;NEGLIGENCE&#32;OR&#32;OTHERWISE)&#32;ARISING&#32;IN</emphasis>
+30 <emphasis class="comment">&#32;*&#32;ANY&#32;WAY&#32;OUT&#32;OF&#32;THE&#32;USE&#32;OF&#32;THIS&#32;SOFTWARE,&#32;EVEN&#32;IF&#32;ADVISED&#32;OF&#32;THE</emphasis>
+31 <emphasis class="comment">&#32;*&#32;POSSIBILITY&#32;OF&#32;SUCH&#32;DAMAGE.</emphasis>
+32 <emphasis class="comment">&#32;*</emphasis>
+33 <emphasis class="comment">&#32;*&#32;Auto-generated&#32;by&#32;genmsg_cpp&#32;from&#32;file&#32;/home/longfei/catkin_KinovaROS/src/jaco-ros/jaco_msgs/msg/FingerPosition.msg</emphasis>
+34 <emphasis class="comment">&#32;*</emphasis>
+35 <emphasis class="comment">&#32;*/</emphasis>
+36 
+37 
+38 <emphasis class="preprocessor">#ifndef&#32;JACO_MSGS_MESSAGE_FINGERPOSITION_H</emphasis>
+39 <emphasis class="preprocessor">#define&#32;JACO_MSGS_MESSAGE_FINGERPOSITION_H</emphasis>
+40 
+41 
+42 <emphasis class="preprocessor">#include&#32;&lt;string&gt;</emphasis>
+43 <emphasis class="preprocessor">#include&#32;&lt;vector&gt;</emphasis>
+44 <emphasis class="preprocessor">#include&#32;&lt;map&gt;</emphasis>
+45 
+46 <emphasis class="preprocessor">#include&#32;&lt;ros/types.h&gt;</emphasis>
+47 <emphasis class="preprocessor">#include&#32;&lt;ros/serialization.h&gt;</emphasis>
+48 <emphasis class="preprocessor">#include&#32;&lt;ros/builtin_message_traits.h&gt;</emphasis>
+49 <emphasis class="preprocessor">#include&#32;&lt;ros/message_operations.h&gt;</emphasis>
+50 
+51 
+52 <emphasis class="keyword">namespace&#32;</emphasis><link linkend="d7/dba/namespacejaco__msgs">jaco_msgs</link>
+53 {
+54 <emphasis class="keyword">template</emphasis>&#32;&lt;<emphasis class="keyword">class</emphasis>&#32;ContainerAllocator&gt;
+<link linkend="df/d79/structjaco__msgs_1_1FingerPosition__">55 </link><emphasis class="keyword">struct&#32;</emphasis><link linkend="df/d79/structjaco__msgs_1_1FingerPosition__">FingerPosition_</link>
+56 {
+<link linkend="df/d79/structjaco__msgs_1_1FingerPosition___1a06fcb3aa502633f3f8ce415b3d2c7b7b">57 </link>&#32;&#32;<emphasis class="keyword">typedef</emphasis>&#32;<link linkend="df/d79/structjaco__msgs_1_1FingerPosition__">FingerPosition_&lt;ContainerAllocator&gt;</link>&#32;<link linkend="df/d79/structjaco__msgs_1_1FingerPosition___1a06fcb3aa502633f3f8ce415b3d2c7b7b">Type</link>;
+58 
+<link linkend="df/d79/structjaco__msgs_1_1FingerPosition___1af14a9baa194db80f15ef09685a64c8d2">59 </link>&#32;&#32;<link linkend="df/d79/structjaco__msgs_1_1FingerPosition___1af14a9baa194db80f15ef09685a64c8d2">FingerPosition_</link>()
+60 &#32;&#32;&#32;&#32;:&#32;<link linkend="df/d79/structjaco__msgs_1_1FingerPosition___1a5e08265efb8023ba04d99d556e186b14">finger1</link>(0.0)
+61 &#32;&#32;&#32;&#32;,&#32;<link linkend="df/d79/structjaco__msgs_1_1FingerPosition___1a7dcdd9f48dc0ff847c0170a096038917">finger2</link>(0.0)
+62 &#32;&#32;&#32;&#32;,&#32;<link linkend="df/d79/structjaco__msgs_1_1FingerPosition___1abb7ec1eff7489809a20c32b8ea19386b">finger3</link>(0.0)&#32;&#32;{
+63 &#32;&#32;&#32;&#32;}
+<link linkend="df/d79/structjaco__msgs_1_1FingerPosition___1ac9a874e396470cca48ba8d83f0295341">64 </link>&#32;&#32;<link linkend="df/d79/structjaco__msgs_1_1FingerPosition___1ac9a874e396470cca48ba8d83f0295341">FingerPosition_</link>(<emphasis class="keyword">const</emphasis>&#32;ContainerAllocator&amp;&#32;_alloc)
+65 &#32;&#32;&#32;&#32;:&#32;<link linkend="df/d79/structjaco__msgs_1_1FingerPosition___1a5e08265efb8023ba04d99d556e186b14">finger1</link>(0.0)
+66 &#32;&#32;&#32;&#32;,&#32;<link linkend="df/d79/structjaco__msgs_1_1FingerPosition___1a7dcdd9f48dc0ff847c0170a096038917">finger2</link>(0.0)
+67 &#32;&#32;&#32;&#32;,&#32;<link linkend="df/d79/structjaco__msgs_1_1FingerPosition___1abb7ec1eff7489809a20c32b8ea19386b">finger3</link>(0.0)&#32;&#32;{
+68 &#32;&#32;&#32;&#32;}
+69 
+70 
+71 
+<link linkend="df/d79/structjaco__msgs_1_1FingerPosition___1ac5de244eb53b4bb0d3407b07b5769b8b">72 </link>&#32;&#32;&#32;<emphasis class="keyword">typedef</emphasis>&#32;<emphasis class="keywordtype">float</emphasis>&#32;<link linkend="df/d79/structjaco__msgs_1_1FingerPosition___1ac5de244eb53b4bb0d3407b07b5769b8b">_finger1_type</link>;
+<link linkend="df/d79/structjaco__msgs_1_1FingerPosition___1a5e08265efb8023ba04d99d556e186b14">73 </link>&#32;&#32;_finger1_type&#32;<link linkend="df/d79/structjaco__msgs_1_1FingerPosition___1a5e08265efb8023ba04d99d556e186b14">finger1</link>;
+74 
+<link linkend="df/d79/structjaco__msgs_1_1FingerPosition___1afef383694b756f484b98bdd8d8b4c945">75 </link>&#32;&#32;&#32;<emphasis class="keyword">typedef</emphasis>&#32;<emphasis class="keywordtype">float</emphasis>&#32;<link linkend="df/d79/structjaco__msgs_1_1FingerPosition___1afef383694b756f484b98bdd8d8b4c945">_finger2_type</link>;
+<link linkend="df/d79/structjaco__msgs_1_1FingerPosition___1a7dcdd9f48dc0ff847c0170a096038917">76 </link>&#32;&#32;_finger2_type&#32;<link linkend="df/d79/structjaco__msgs_1_1FingerPosition___1a7dcdd9f48dc0ff847c0170a096038917">finger2</link>;
+77 
+<link linkend="df/d79/structjaco__msgs_1_1FingerPosition___1a0efba96ee62a6a41fe83c572572a4170">78 </link>&#32;&#32;&#32;<emphasis class="keyword">typedef</emphasis>&#32;<emphasis class="keywordtype">float</emphasis>&#32;<link linkend="df/d79/structjaco__msgs_1_1FingerPosition___1a0efba96ee62a6a41fe83c572572a4170">_finger3_type</link>;
+<link linkend="df/d79/structjaco__msgs_1_1FingerPosition___1abb7ec1eff7489809a20c32b8ea19386b">79 </link>&#32;&#32;_finger3_type&#32;<link linkend="df/d79/structjaco__msgs_1_1FingerPosition___1abb7ec1eff7489809a20c32b8ea19386b">finger3</link>;
+80 
+81 
+82 
+83 
+<link linkend="df/d79/structjaco__msgs_1_1FingerPosition___1aca153f29d4b020d2c62e54833c3e83bc">84 </link>&#32;&#32;<emphasis class="keyword">typedef</emphasis>&#32;boost::shared_ptr&lt;&#32;::jaco_msgs::FingerPosition_&lt;ContainerAllocator&gt;&#32;&gt;&#32;<link linkend="df/d79/structjaco__msgs_1_1FingerPosition___1aca153f29d4b020d2c62e54833c3e83bc">Ptr</link>;
+<link linkend="df/d79/structjaco__msgs_1_1FingerPosition___1aa5251615a131d806203aed481d508ed1">85 </link>&#32;&#32;<emphasis class="keyword">typedef</emphasis>&#32;boost::shared_ptr&lt;&#32;::jaco_msgs::FingerPosition_&lt;ContainerAllocator&gt;&#32;<emphasis class="keyword">const</emphasis>&gt;&#32;<link linkend="df/d79/structjaco__msgs_1_1FingerPosition___1aa5251615a131d806203aed481d508ed1">ConstPtr</link>;
+<link linkend="df/d79/structjaco__msgs_1_1FingerPosition___1ab85e7311b4ade23eed568a21589ae12f">86 </link>&#32;&#32;boost::shared_ptr&lt;std::map&lt;std::string,&#32;std::string&gt;&#32;&gt;&#32;<link linkend="df/d79/structjaco__msgs_1_1FingerPosition___1ab85e7311b4ade23eed568a21589ae12f">__connection_header</link>;
+87 
+88 };&#32;<emphasis class="comment">//&#32;struct&#32;FingerPosition_</emphasis>
+89 
+<link linkend="d7/dba/namespacejaco__msgs_1a8d92f0e718e45f82b621ddf049a2f110">90 </link>typedef&#32;::jaco_msgs::FingerPosition_&lt;std::allocator&lt;void&gt;&#32;&gt;&#32;<link linkend="d7/dba/namespacejaco__msgs_1a8d92f0e718e45f82b621ddf049a2f110">FingerPosition</link>;
+91 
+<link linkend="d7/dba/namespacejaco__msgs_1a07dcbbbd6b126792a3b2cbd5d9f055e3">92 </link><emphasis class="keyword">typedef</emphasis>&#32;boost::shared_ptr&lt;&#32;::jaco_msgs::FingerPosition&#32;&gt;&#32;<link linkend="d7/dba/namespacejaco__msgs_1a07dcbbbd6b126792a3b2cbd5d9f055e3">FingerPositionPtr</link>;
+<link linkend="d7/dba/namespacejaco__msgs_1acb9f03caff18d5ea850efba0ccbb807b">93 </link><emphasis class="keyword">typedef</emphasis>&#32;boost::shared_ptr&lt;&#32;::jaco_msgs::FingerPosition&#32;const&gt;&#32;<link linkend="d7/dba/namespacejaco__msgs_1acb9f03caff18d5ea850efba0ccbb807b">FingerPositionConstPtr</link>;
+94 
+95 <emphasis class="comment">//&#32;constants&#32;requiring&#32;out&#32;of&#32;line&#32;definition</emphasis>
+96 
+97 
+98 
+99 <emphasis class="keyword">template</emphasis>&lt;<emphasis class="keyword">typename</emphasis>&#32;ContainerAllocator&gt;
+<link linkend="d7/dba/namespacejaco__msgs_1a6402588389ef1286b2469fc35961f292">100 </link>std::ostream&amp;&#32;operator&lt;&lt;(std::ostream&amp;&#32;s,&#32;const&#32;::jaco_msgs::FingerPosition_&lt;ContainerAllocator&gt;&#32;&amp;&#32;v)
+101 {
+102 ros::message_operations::Printer&lt;&#32;::jaco_msgs::FingerPosition_&lt;ContainerAllocator&gt;&#32;&gt;::stream(s,&#32;<emphasis class="stringliteral">&quot;&quot;</emphasis>,&#32;v);
+103 <emphasis class="keywordflow">return</emphasis>&#32;s;
+104 }
+105 
+106 }&#32;<emphasis class="comment">//&#32;namespace&#32;jaco_msgs</emphasis>
+107 
+108 <emphasis class="keyword">namespace&#32;</emphasis><link linkend="db/d2f/namespaceros">ros</link>
+109 {
+110 <emphasis class="keyword">namespace&#32;</emphasis>message_traits
+111 {
+112 
+113 
+114 
+115 <emphasis class="comment">//&#32;BOOLTRAITS&#32;{&apos;IsFixedSize&apos;:&#32;True,&#32;&apos;IsMessage&apos;:&#32;True,&#32;&apos;HasHeader&apos;:&#32;False}</emphasis>
+116 <emphasis class="comment">//&#32;{&apos;std_msgs&apos;:&#32;[&apos;/opt/ros/hydro/share/std_msgs/cmake/../msg&apos;],&#32;&apos;actionlib_msgs&apos;:&#32;[&apos;/opt/ros/hydro/share/actionlib_msgs/cmake/../msg&apos;],&#32;&apos;jaco_msgs&apos;:&#32;[&apos;/home/longfei/catkin_KinovaROS/src/jaco-ros/jaco_msgs/msg&apos;,&#32;&apos;/home/longfei/catkin_KinovaROS/devel/share/jaco_msgs/msg&apos;],&#32;&apos;geometry_msgs&apos;:&#32;[&apos;/opt/ros/hydro/share/geometry_msgs/cmake/../msg&apos;]}</emphasis>
+117 
+118 <emphasis class="comment">//&#32;!!!!!!!!!!!&#32;[&apos;__class__&apos;,&#32;&apos;__delattr__&apos;,&#32;&apos;__dict__&apos;,&#32;&apos;__doc__&apos;,&#32;&apos;__eq__&apos;,&#32;&apos;__format__&apos;,&#32;&apos;__getattribute__&apos;,&#32;&apos;__hash__&apos;,&#32;&apos;__init__&apos;,&#32;&apos;__module__&apos;,&#32;&apos;__ne__&apos;,&#32;&apos;__new__&apos;,&#32;&apos;__reduce__&apos;,&#32;&apos;__reduce_ex__&apos;,&#32;&apos;__repr__&apos;,&#32;&apos;__setattr__&apos;,&#32;&apos;__sizeof__&apos;,&#32;&apos;__str__&apos;,&#32;&apos;__subclasshook__&apos;,&#32;&apos;__weakref__&apos;,&#32;&apos;_parsed_fields&apos;,&#32;&apos;constants&apos;,&#32;&apos;fields&apos;,&#32;&apos;full_name&apos;,&#32;&apos;has_header&apos;,&#32;&apos;header_present&apos;,&#32;&apos;names&apos;,&#32;&apos;package&apos;,&#32;&apos;parsed_fields&apos;,&#32;&apos;short_name&apos;,&#32;&apos;text&apos;,&#32;&apos;types&apos;]</emphasis>
+119 
+120 
+121 
+122 
+123 <emphasis class="keyword">template</emphasis>&#32;&lt;<emphasis class="keyword">class</emphasis>&#32;ContainerAllocator&gt;
+<link linkend="d0/d24/structros_1_1message__traits_1_1IsFixedSize_3_01_1_1jaco__msgs_1_1FingerPosition___3_01ContainerAllocator_01_4_01_4">124 </link><emphasis class="keyword">struct&#32;</emphasis>IsFixedSize&lt;&#32;::<link linkend="df/d79/structjaco__msgs_1_1FingerPosition__">jaco_msgs::FingerPosition_</link>&lt;ContainerAllocator&gt;&#32;&gt;
+125 &#32;&#32;:&#32;TrueType
+126 &#32;&#32;{&#32;};
+127 
+128 <emphasis class="keyword">template</emphasis>&#32;&lt;<emphasis class="keyword">class</emphasis>&#32;ContainerAllocator&gt;
+<link linkend="d9/d5e/structros_1_1message__traits_1_1IsFixedSize_3_01_1_1jaco__msgs_1_1FingerPosition___3_01ContainerAllocator_01_4_01const_01_01_4">129 </link><emphasis class="keyword">struct&#32;</emphasis>IsFixedSize&lt;&#32;::<link linkend="df/d79/structjaco__msgs_1_1FingerPosition__">jaco_msgs::FingerPosition_</link>&lt;ContainerAllocator&gt;&#32;const&gt;
+130 &#32;&#32;:&#32;TrueType
+131 &#32;&#32;{&#32;};
+132 
+133 <emphasis class="keyword">template</emphasis>&#32;&lt;<emphasis class="keyword">class</emphasis>&#32;ContainerAllocator&gt;
+<link linkend="dd/d8a/structros_1_1message__traits_1_1IsMessage_3_01_1_1jaco__msgs_1_1FingerPosition___3_01ContainerAllocator_01_4_01_4">134 </link><emphasis class="keyword">struct&#32;</emphasis>IsMessage&lt;&#32;::<link linkend="df/d79/structjaco__msgs_1_1FingerPosition__">jaco_msgs::FingerPosition_</link>&lt;ContainerAllocator&gt;&#32;&gt;
+135 &#32;&#32;:&#32;TrueType
+136 &#32;&#32;{&#32;};
+137 
+138 <emphasis class="keyword">template</emphasis>&#32;&lt;<emphasis class="keyword">class</emphasis>&#32;ContainerAllocator&gt;
+<link linkend="de/d0f/structros_1_1message__traits_1_1IsMessage_3_01_1_1jaco__msgs_1_1FingerPosition___3_01ContainerAllocator_01_4_01const_01_01_4">139 </link><emphasis class="keyword">struct&#32;</emphasis>IsMessage&lt;&#32;::<link linkend="df/d79/structjaco__msgs_1_1FingerPosition__">jaco_msgs::FingerPosition_</link>&lt;ContainerAllocator&gt;&#32;const&gt;
+140 &#32;&#32;:&#32;TrueType
+141 &#32;&#32;{&#32;};
+142 
+143 <emphasis class="keyword">template</emphasis>&#32;&lt;<emphasis class="keyword">class</emphasis>&#32;ContainerAllocator&gt;
+<link linkend="d4/d63/structros_1_1message__traits_1_1HasHeader_3_01_1_1jaco__msgs_1_1FingerPosition___3_01ContainerAllocator_01_4_01_4">144 </link><emphasis class="keyword">struct&#32;</emphasis>HasHeader&lt;&#32;::<link linkend="df/d79/structjaco__msgs_1_1FingerPosition__">jaco_msgs::FingerPosition_</link>&lt;ContainerAllocator&gt;&#32;&gt;
+145 &#32;&#32;:&#32;FalseType
+146 &#32;&#32;{&#32;};
+147 
+148 <emphasis class="keyword">template</emphasis>&#32;&lt;<emphasis class="keyword">class</emphasis>&#32;ContainerAllocator&gt;
+<link linkend="d6/d0c/structros_1_1message__traits_1_1HasHeader_3_01_1_1jaco__msgs_1_1FingerPosition___3_01ContainerAllocator_01_4_01const_01_01_4">149 </link><emphasis class="keyword">struct&#32;</emphasis>HasHeader&lt;&#32;::<link linkend="df/d79/structjaco__msgs_1_1FingerPosition__">jaco_msgs::FingerPosition_</link>&lt;ContainerAllocator&gt;&#32;const&gt;
+150 &#32;&#32;:&#32;FalseType
+151 &#32;&#32;{&#32;};
+152 
+153 
+154 <emphasis class="keyword">template</emphasis>&lt;<emphasis class="keyword">class</emphasis>&#32;ContainerAllocator&gt;
+<link linkend="d3/d4d/structros_1_1message__traits_1_1MD5Sum_3_01_1_1jaco__msgs_1_1FingerPosition___3_01ContainerAllocator_01_4_01_4">155 </link><emphasis class="keyword">struct&#32;</emphasis>MD5Sum&lt;&#32;::<link linkend="df/d79/structjaco__msgs_1_1FingerPosition__">jaco_msgs::FingerPosition_</link>&lt;ContainerAllocator&gt;&#32;&gt;
+156 {
+<link linkend="d3/d4d/structros_1_1message__traits_1_1MD5Sum_3_01_1_1jaco__msgs_1_1FingerPosition___3_01ContainerAllocator_01_4_01_4_1aa6c75fe78564164e3b3b8a16de33d55a">157 </link>&#32;&#32;<emphasis class="keyword">static</emphasis>&#32;<emphasis class="keyword">const</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>*&#32;<link linkend="d3/d4d/structros_1_1message__traits_1_1MD5Sum_3_01_1_1jaco__msgs_1_1FingerPosition___3_01ContainerAllocator_01_4_01_4_1aa6c75fe78564164e3b3b8a16de33d55a">value</link>()
+158 &#32;&#32;{
+159 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;<emphasis class="stringliteral">&quot;f56891e5dcd1900989f764a9b845c8e5&quot;</emphasis>;
+160 &#32;&#32;}
+161 
+<link linkend="d3/d4d/structros_1_1message__traits_1_1MD5Sum_3_01_1_1jaco__msgs_1_1FingerPosition___3_01ContainerAllocator_01_4_01_4_1a2f90a3bd613f4a4cf9f9e6c8d375fa67">162 </link>&#32;&#32;<emphasis class="keyword">static</emphasis>&#32;<emphasis class="keyword">const</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>*&#32;<link linkend="d3/d4d/structros_1_1message__traits_1_1MD5Sum_3_01_1_1jaco__msgs_1_1FingerPosition___3_01ContainerAllocator_01_4_01_4_1a2f90a3bd613f4a4cf9f9e6c8d375fa67">value</link>(const&#32;::jaco_msgs::FingerPosition_&lt;ContainerAllocator&gt;&amp;)&#32;{&#32;<emphasis class="keywordflow">return</emphasis>&#32;<link linkend="d3/d4d/structros_1_1message__traits_1_1MD5Sum_3_01_1_1jaco__msgs_1_1FingerPosition___3_01ContainerAllocator_01_4_01_4_1a2f90a3bd613f4a4cf9f9e6c8d375fa67">value</link>();&#32;}
+<link linkend="d3/d4d/structros_1_1message__traits_1_1MD5Sum_3_01_1_1jaco__msgs_1_1FingerPosition___3_01ContainerAllocator_01_4_01_4_1ab04b3394e130402c42653c0210de8e7a">163 </link>&#32;&#32;<emphasis class="keyword">static</emphasis>&#32;<emphasis class="keyword">const</emphasis>&#32;uint64_t&#32;static_value1&#32;=&#32;0xf56891e5dcd19009ULL;
+<link linkend="d3/d4d/structros_1_1message__traits_1_1MD5Sum_3_01_1_1jaco__msgs_1_1FingerPosition___3_01ContainerAllocator_01_4_01_4_1a8cb225cbcd5edf6ab4bc37f4486403d3">164 </link>&#32;&#32;<emphasis class="keyword">static</emphasis>&#32;<emphasis class="keyword">const</emphasis>&#32;uint64_t&#32;static_value2&#32;=&#32;0x89f764a9b845c8e5ULL;
+165 };
+166 
+167 <emphasis class="keyword">template</emphasis>&lt;<emphasis class="keyword">class</emphasis>&#32;ContainerAllocator&gt;
+<link linkend="dc/dd0/structros_1_1message__traits_1_1DataType_3_01_1_1jaco__msgs_1_1FingerPosition___3_01ContainerAllocator_01_4_01_4">168 </link><emphasis class="keyword">struct&#32;</emphasis>DataType&lt;&#32;::<link linkend="df/d79/structjaco__msgs_1_1FingerPosition__">jaco_msgs::FingerPosition_</link>&lt;ContainerAllocator&gt;&#32;&gt;
+169 {
+<link linkend="dc/dd0/structros_1_1message__traits_1_1DataType_3_01_1_1jaco__msgs_1_1FingerPosition___3_01ContainerAllocator_01_4_01_4_1a2ffc35bfb5f7a4dc531970a246a6d531">170 </link>&#32;&#32;<emphasis class="keyword">static</emphasis>&#32;<emphasis class="keyword">const</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>*&#32;<link linkend="dc/dd0/structros_1_1message__traits_1_1DataType_3_01_1_1jaco__msgs_1_1FingerPosition___3_01ContainerAllocator_01_4_01_4_1a2ffc35bfb5f7a4dc531970a246a6d531">value</link>()
+171 &#32;&#32;{
+172 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;<emphasis class="stringliteral">&quot;jaco_msgs/FingerPosition&quot;</emphasis>;
+173 &#32;&#32;}
+174 
+<link linkend="dc/dd0/structros_1_1message__traits_1_1DataType_3_01_1_1jaco__msgs_1_1FingerPosition___3_01ContainerAllocator_01_4_01_4_1a843aca60d418209678a42a8d33803039">175 </link>&#32;&#32;<emphasis class="keyword">static</emphasis>&#32;<emphasis class="keyword">const</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>*&#32;<link linkend="dc/dd0/structros_1_1message__traits_1_1DataType_3_01_1_1jaco__msgs_1_1FingerPosition___3_01ContainerAllocator_01_4_01_4_1a843aca60d418209678a42a8d33803039">value</link>(const&#32;::jaco_msgs::FingerPosition_&lt;ContainerAllocator&gt;&amp;)&#32;{&#32;<emphasis class="keywordflow">return</emphasis>&#32;<link linkend="dc/dd0/structros_1_1message__traits_1_1DataType_3_01_1_1jaco__msgs_1_1FingerPosition___3_01ContainerAllocator_01_4_01_4_1a843aca60d418209678a42a8d33803039">value</link>();&#32;}
+176 };
+177 
+178 <emphasis class="keyword">template</emphasis>&lt;<emphasis class="keyword">class</emphasis>&#32;ContainerAllocator&gt;
+<link linkend="df/d22/structros_1_1message__traits_1_1Definition_3_01_1_1jaco__msgs_1_1FingerPosition___3_01ContainerAllocator_01_4_01_4">179 </link><emphasis class="keyword">struct&#32;</emphasis>Definition&lt;&#32;::<link linkend="df/d79/structjaco__msgs_1_1FingerPosition__">jaco_msgs::FingerPosition_</link>&lt;ContainerAllocator&gt;&#32;&gt;
+180 {
+<link linkend="df/d22/structros_1_1message__traits_1_1Definition_3_01_1_1jaco__msgs_1_1FingerPosition___3_01ContainerAllocator_01_4_01_4_1a9e85a9210f058b97897cf1bafa1302c4">181 </link>&#32;&#32;<emphasis class="keyword">static</emphasis>&#32;<emphasis class="keyword">const</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>*&#32;<link linkend="df/d22/structros_1_1message__traits_1_1Definition_3_01_1_1jaco__msgs_1_1FingerPosition___3_01ContainerAllocator_01_4_01_4_1a9e85a9210f058b97897cf1bafa1302c4">value</link>()
+182 &#32;&#32;{
+183 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;<emphasis class="stringliteral">&quot;float32&#32;finger1\n\</emphasis>
+184 <emphasis class="stringliteral">float32&#32;finger2\n\</emphasis>
+185 <emphasis class="stringliteral">float32&#32;finger3\n\</emphasis>
+186 <emphasis class="stringliteral">&quot;</emphasis>;
+187 &#32;&#32;}
+188 
+<link linkend="df/d22/structros_1_1message__traits_1_1Definition_3_01_1_1jaco__msgs_1_1FingerPosition___3_01ContainerAllocator_01_4_01_4_1a7f54bb0cc3ac6faf5080b54329a068af">189 </link>&#32;&#32;<emphasis class="keyword">static</emphasis>&#32;<emphasis class="keyword">const</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>*&#32;<link linkend="df/d22/structros_1_1message__traits_1_1Definition_3_01_1_1jaco__msgs_1_1FingerPosition___3_01ContainerAllocator_01_4_01_4_1a7f54bb0cc3ac6faf5080b54329a068af">value</link>(const&#32;::jaco_msgs::FingerPosition_&lt;ContainerAllocator&gt;&amp;)&#32;{&#32;<emphasis class="keywordflow">return</emphasis>&#32;<link linkend="df/d22/structros_1_1message__traits_1_1Definition_3_01_1_1jaco__msgs_1_1FingerPosition___3_01ContainerAllocator_01_4_01_4_1a7f54bb0cc3ac6faf5080b54329a068af">value</link>();&#32;}
+190 };
+191 
+192 }&#32;<emphasis class="comment">//&#32;namespace&#32;message_traits</emphasis>
+193 }&#32;<emphasis class="comment">//&#32;namespace&#32;ros</emphasis>
+194 
+195 <emphasis class="keyword">namespace&#32;</emphasis><link linkend="db/d2f/namespaceros">ros</link>
+196 {
+197 <emphasis class="keyword">namespace&#32;</emphasis>serialization
+198 {
+199 
+<link linkend="db/d11/structros_1_1serialization_1_1Serializer_3_01_1_1jaco__msgs_1_1FingerPosition___3_01ContainerAllocator_01_4_01_4">200 </link>&#32;&#32;<emphasis class="keyword">template</emphasis>&lt;<emphasis class="keyword">class</emphasis>&#32;ContainerAllocator&gt;&#32;<emphasis class="keyword">struct&#32;</emphasis>Serializer&lt;&#32;::<link linkend="df/d79/structjaco__msgs_1_1FingerPosition__">jaco_msgs::FingerPosition_</link>&lt;ContainerAllocator&gt;&#32;&gt;
+201 &#32;&#32;{
+<link linkend="db/d11/structros_1_1serialization_1_1Serializer_3_01_1_1jaco__msgs_1_1FingerPosition___3_01ContainerAllocator_01_4_01_4_1a141e7da1368d0ab05ce66ca8d2abdc42">202 </link>&#32;&#32;&#32;&#32;<emphasis class="keyword">template</emphasis>&lt;<emphasis class="keyword">typename</emphasis>&#32;Stream,&#32;<emphasis class="keyword">typename</emphasis>&#32;T&gt;&#32;<emphasis class="keyword">inline</emphasis>&#32;<emphasis class="keyword">static</emphasis>&#32;<emphasis class="keywordtype">void</emphasis>&#32;<link linkend="db/d11/structros_1_1serialization_1_1Serializer_3_01_1_1jaco__msgs_1_1FingerPosition___3_01ContainerAllocator_01_4_01_4_1a141e7da1368d0ab05ce66ca8d2abdc42">allInOne</link>(Stream&amp;&#32;stream,&#32;T&#32;m)
+203 &#32;&#32;&#32;&#32;{
+204 &#32;&#32;&#32;&#32;&#32;&#32;stream.next(m.finger1);
+205 &#32;&#32;&#32;&#32;&#32;&#32;stream.next(m.finger2);
+206 &#32;&#32;&#32;&#32;&#32;&#32;stream.next(m.finger3);
+207 &#32;&#32;&#32;&#32;}
+208 
+<link linkend="db/d11/structros_1_1serialization_1_1Serializer_3_01_1_1jaco__msgs_1_1FingerPosition___3_01ContainerAllocator_01_4_01_4_1a0dbb2b1898411c74c0357ded01339c6b">209 </link>&#32;&#32;&#32;&#32;<link linkend="db/d11/structros_1_1serialization_1_1Serializer_3_01_1_1jaco__msgs_1_1FingerPosition___3_01ContainerAllocator_01_4_01_4_1a0dbb2b1898411c74c0357ded01339c6b">ROS_DECLARE_ALLINONE_SERIALIZER</link>;
+210 &#32;&#32;};&#32;<emphasis class="comment">//&#32;struct&#32;FingerPosition_</emphasis>
+211 
+212 }&#32;<emphasis class="comment">//&#32;namespace&#32;serialization</emphasis>
+213 }&#32;<emphasis class="comment">//&#32;namespace&#32;ros</emphasis>
+214 
+215 <emphasis class="keyword">namespace&#32;</emphasis><link linkend="db/d2f/namespaceros">ros</link>
+216 {
+217 <emphasis class="keyword">namespace&#32;</emphasis>message_operations
+218 {
+219 
+220 <emphasis class="keyword">template</emphasis>&lt;<emphasis class="keyword">class</emphasis>&#32;ContainerAllocator&gt;
+<link linkend="d5/d7c/structros_1_1message__operations_1_1Printer_3_01_1_1jaco__msgs_1_1FingerPosition___3_01ContainerAllocator_01_4_01_4">221 </link><emphasis class="keyword">struct&#32;</emphasis>Printer&lt;&#32;::<link linkend="df/d79/structjaco__msgs_1_1FingerPosition__">jaco_msgs::FingerPosition_</link>&lt;ContainerAllocator&gt;&#32;&gt;
+222 {
+<link linkend="d5/d7c/structros_1_1message__operations_1_1Printer_3_01_1_1jaco__msgs_1_1FingerPosition___3_01ContainerAllocator_01_4_01_4_1ab84f4e2bedb66dcd8daa7cc36c250624">223 </link>&#32;&#32;<emphasis class="keyword">template</emphasis>&lt;<emphasis class="keyword">typename</emphasis>&#32;Stream&gt;&#32;<emphasis class="keyword">static</emphasis>&#32;<emphasis class="keywordtype">void</emphasis>&#32;<link linkend="d5/d7c/structros_1_1message__operations_1_1Printer_3_01_1_1jaco__msgs_1_1FingerPosition___3_01ContainerAllocator_01_4_01_4_1ab84f4e2bedb66dcd8daa7cc36c250624">stream</link>(Stream&amp;&#32;s,&#32;<emphasis class="keyword">const</emphasis>&#32;std::string&amp;&#32;indent,&#32;const&#32;::jaco_msgs::FingerPosition_&lt;ContainerAllocator&gt;&amp;&#32;v)
+224 &#32;&#32;{
+225 &#32;&#32;&#32;&#32;s&#32;&lt;&lt;&#32;indent&#32;&lt;&lt;&#32;<emphasis class="stringliteral">&quot;finger1:&#32;&quot;</emphasis>;
+226 &#32;&#32;&#32;&#32;Printer&lt;float&gt;::stream(s,&#32;indent&#32;+&#32;<emphasis class="stringliteral">&quot;&#32;&#32;&quot;</emphasis>,&#32;v.finger1);
+227 &#32;&#32;&#32;&#32;s&#32;&lt;&lt;&#32;indent&#32;&lt;&lt;&#32;<emphasis class="stringliteral">&quot;finger2:&#32;&quot;</emphasis>;
+228 &#32;&#32;&#32;&#32;Printer&lt;float&gt;::stream(s,&#32;indent&#32;+&#32;<emphasis class="stringliteral">&quot;&#32;&#32;&quot;</emphasis>,&#32;v.finger2);
+229 &#32;&#32;&#32;&#32;s&#32;&lt;&lt;&#32;indent&#32;&lt;&lt;&#32;<emphasis class="stringliteral">&quot;finger3:&#32;&quot;</emphasis>;
+230 &#32;&#32;&#32;&#32;Printer&lt;float&gt;::stream(s,&#32;indent&#32;+&#32;<emphasis class="stringliteral">&quot;&#32;&#32;&quot;</emphasis>,&#32;v.finger3);
+231 &#32;&#32;}
+232 };
+233 
+234 }&#32;<emphasis class="comment">//&#32;namespace&#32;message_operations</emphasis>
+235 }&#32;<emphasis class="comment">//&#32;namespace&#32;ros</emphasis>
+236 
+237 <emphasis class="preprocessor">#endif&#32;//&#32;JACO_MSGS_MESSAGE_FINGERPOSITION_H</emphasis>
+    </computeroutput></literallayout>
+</section>

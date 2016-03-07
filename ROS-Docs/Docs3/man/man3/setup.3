@@ -1,0 +1,30 @@
+.TH "setup" 3 "Thu Mar 3 2016" "Version 1.0.1" "Kinova-ROS" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+setup \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "\fBsetup_args\fP"
+.br
+.in -1c
+.SH "Variable Documentation"
+.PP 
+.SS "setup\&.setup_args"
+\fBInitial value:\fP
+.PP
+.nf
+1 = generate_distutils_setup(
+2     packages=['jaco_demo'],
+3     package_dir={'': 'nodes'},
+4     requires=['std_msgs', 'rospy', 'jaco_msgs', 'jaco_driver', 'geometry_msgs']
+5 )
+.fi
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Kinova-ROS from the source code\&.

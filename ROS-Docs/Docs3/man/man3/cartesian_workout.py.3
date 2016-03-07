@@ -1,0 +1,41 @@
+.TH "D:/Longfei/Desktop/catkin_KinovaROS/src/jaco-ros/jaco_demo/nodes/jaco_demo/cartesian_workout.py" 3 "Thu Mar 3 2016" "Version 1.0.1" "Kinova-ROS" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+D:/Longfei/Desktop/catkin_KinovaROS/src/jaco-ros/jaco_demo/nodes/jaco_demo/cartesian_workout.py \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Namespaces"
+
+.in +1c
+.ti -1c
+.RI " \fBcartesian_workout\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "def \fBcartesian_workout\&.cartesian_pose_client\fP (position, orientation)"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "\fBcartesian_workout\&.mag\fP = np\&.sqrt(sum(np\&.power(raw_pose[3:], 2)))"
+.br
+.ti -1c
+.RI "\fBcartesian_workout\&.poses\fP = \fBgoal_generators\&.random_pose_generator\fP(int(sys\&.argv[3]))"
+.br
+.ti -1c
+.RI "list \fBcartesian_workout\&.raw_pose\fP = [float(n) for n in sys\&.argv[2:]]"
+.br
+.ti -1c
+.RI "\fBcartesian_workout\&.result\fP = cartesian_pose_client(pos, orient)"
+.br
+.in -1c
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Kinova-ROS from the source code\&.

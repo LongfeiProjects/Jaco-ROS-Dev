@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="dc/db8/structros_1_1message__traits_1_1IsFixedSize_3_01_1_1jaco__msgs_1_1SetFingersPositionActionGoal__85342a82537d288e6c9f33743bb7590b">
+<title>ros::message_traits::IsFixedSize&lt; ::jaco_msgs::SetFingersPositionActionGoal_&lt; ContainerAllocator &gt; &gt; struct Reference</title>
+<para>
+    <programlisting>#include <link linkend="d4/d0d/SetFingersPositionActionGoal_8h">&quot;SetFingersPositionActionGoal.h&quot;</link></programlisting>
+</para>
+<para>Inheritance diagram for ros::message_traits::IsFixedSize&lt; ::jaco_msgs::SetFingersPositionActionGoal_&lt; ContainerAllocator &gt; &gt;</para>
+<para>
+    <figure>
+        <title>Inheritance graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../d2/d0d/structros_1_1message__traits_1_1IsFixedSize_3_01_1_1jaco__msgs_1_1SetFingersPositionActionGoal__04bc0dd9fe5f309135ba8785b41e3b26.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Collaboration diagram for ros::message_traits::IsFixedSize&lt; ::jaco_msgs::SetFingersPositionActionGoal_&lt; ContainerAllocator &gt; &gt;</para>
+<para>
+    <figure>
+        <title>Collaboration graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../d3/d5a/structros_1_1message__traits_1_1IsFixedSize_3_01_1_1jaco__msgs_1_1SetFingersPositionActionGoal__dafd76778784cf971826a8c89efb4d57.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+    <templateparamlist>
+      <param>
+        <type>class ContainerAllocator</type>
+      </param>
+    </templateparamlist>
+</section>

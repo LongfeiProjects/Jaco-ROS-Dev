@@ -1,0 +1,125 @@
+\hypertarget{structCartesianInfo}{}\section{Cartesian\+Info Struct Reference}
+\label{structCartesianInfo}\index{Cartesian\+Info@{Cartesian\+Info}}
+
+
+This data structure holds values in an cartesian control context.  
+
+
+
+
+{\ttfamily \#include \char`\"{}Definition\char`\"{}}
+
+
+
+Inheritance diagram for Cartesian\+Info\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=205pt]{dc/d2e/structCartesianInfo__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Cartesian\+Info\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=153pt]{d2/d3b/structCartesianInfo__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{structCartesianInfo_a6d47623939d86124525ab4c8f7a2b8e9}{Init\+Struct} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float \hyperlink{structCartesianInfo_a39135e53155aa4025c40eeefbfd3b17c}{ThetaX}
+\begin{DoxyCompactList}\small\item\em This is the value related to the orientation around the X axis. Unit depends on the context it\textquotesingle{}s been used. \end{DoxyCompactList}\item 
+float \hyperlink{structCartesianInfo_a4aef5897f4cdcf7ecc9df6804f844d46}{ThetaY}
+\begin{DoxyCompactList}\small\item\em This is the value related to the orientation around the Y axis. Unit depends on the context it\textquotesingle{}s been used. \end{DoxyCompactList}\item 
+float \hyperlink{structCartesianInfo_a2890c501f3b7b9479e12ad51f04f0a7f}{ThetaZ}
+\begin{DoxyCompactList}\small\item\em This is the value related to the orientation around the Z axis. Unit depends on the context it\textquotesingle{}s been used. \end{DoxyCompactList}\item 
+float \hyperlink{structCartesianInfo_a212cc2dcae1697132fc31fa2f5d17269}{X}
+\begin{DoxyCompactList}\small\item\em This is the value related to the translation along the X axis. Unit depends on the context it\textquotesingle{}s been used. \end{DoxyCompactList}\item 
+float \hyperlink{structCartesianInfo_a12c2611c89445419b336e58815d87c7c}{Y}
+\begin{DoxyCompactList}\small\item\em This is the value related to the translation along the Y axis. Unit depends on the context it\textquotesingle{}s been used. \end{DoxyCompactList}\item 
+float \hyperlink{structCartesianInfo_a14e196e4cb38c0ae7f4658b9b070b7fe}{Z}
+\begin{DoxyCompactList}\small\item\em This is the value related to the translation along the Z axis. Unit depends on the context it\textquotesingle{}s been used. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This data structure holds values in an cartesian control context. 
+
+\subsection{Member Function Documentation}
+\index{Cartesian\+Info@{Cartesian\+Info}!Init\+Struct@{Init\+Struct}}
+\index{Init\+Struct@{Init\+Struct}!Cartesian\+Info@{Cartesian\+Info}}
+\subsubsection[{\texorpdfstring{Init\+Struct()}{InitStruct()}}]{\setlength{\rightskip}{0pt plus 5cm}void Cartesian\+Info\+::\+Init\+Struct (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{structCartesianInfo_a6d47623939d86124525ab4c8f7a2b8e9}{}\label{structCartesianInfo_a6d47623939d86124525ab4c8f7a2b8e9}
+This method will initialises all the values to 0 
+\begin{DoxyCode}
+399     \{
+400         \hyperlink{structCartesianInfo_a212cc2dcae1697132fc31fa2f5d17269}{X} = 0.0f;
+401         \hyperlink{structCartesianInfo_a12c2611c89445419b336e58815d87c7c}{Y} = 0.0f;
+402         \hyperlink{structCartesianInfo_a14e196e4cb38c0ae7f4658b9b070b7fe}{Z} = 0.0f;
+403         \hyperlink{structCartesianInfo_a39135e53155aa4025c40eeefbfd3b17c}{ThetaX} = 0.0f;
+404         \hyperlink{structCartesianInfo_a4aef5897f4cdcf7ecc9df6804f844d46}{ThetaY} = 0.0f;
+405         \hyperlink{structCartesianInfo_a2890c501f3b7b9479e12ad51f04f0a7f}{ThetaZ} = 0.0f;
+406     \}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\index{Cartesian\+Info@{Cartesian\+Info}!ThetaX@{ThetaX}}
+\index{ThetaX@{ThetaX}!Cartesian\+Info@{Cartesian\+Info}}
+\subsubsection[{\texorpdfstring{ThetaX}{ThetaX}}]{\setlength{\rightskip}{0pt plus 5cm}float Cartesian\+Info\+::\+ThetaX}\hypertarget{structCartesianInfo_a39135e53155aa4025c40eeefbfd3b17c}{}\label{structCartesianInfo_a39135e53155aa4025c40eeefbfd3b17c}
+
+
+This is the value related to the orientation around the X axis. Unit depends on the context it\textquotesingle{}s been used. 
+
+This is the value related to the orientation around the X axis. Depending on the context it\textquotesingle{}s been used, the unit of the value will change. As an example if the current control mode is cartesian position the unit will be R\+AD but if the control mode is cartesian velocity then the unit will be R\+AD per second. \index{Cartesian\+Info@{Cartesian\+Info}!ThetaY@{ThetaY}}
+\index{ThetaY@{ThetaY}!Cartesian\+Info@{Cartesian\+Info}}
+\subsubsection[{\texorpdfstring{ThetaY}{ThetaY}}]{\setlength{\rightskip}{0pt plus 5cm}float Cartesian\+Info\+::\+ThetaY}\hypertarget{structCartesianInfo_a4aef5897f4cdcf7ecc9df6804f844d46}{}\label{structCartesianInfo_a4aef5897f4cdcf7ecc9df6804f844d46}
+
+
+This is the value related to the orientation around the Y axis. Unit depends on the context it\textquotesingle{}s been used. 
+
+As an example if the current control mode is cartesian position the unit will be R\+AD but if the control mode is cartesian velocity then the unit will be R\+AD per second. \index{Cartesian\+Info@{Cartesian\+Info}!ThetaZ@{ThetaZ}}
+\index{ThetaZ@{ThetaZ}!Cartesian\+Info@{Cartesian\+Info}}
+\subsubsection[{\texorpdfstring{ThetaZ}{ThetaZ}}]{\setlength{\rightskip}{0pt plus 5cm}float Cartesian\+Info\+::\+ThetaZ}\hypertarget{structCartesianInfo_a2890c501f3b7b9479e12ad51f04f0a7f}{}\label{structCartesianInfo_a2890c501f3b7b9479e12ad51f04f0a7f}
+
+
+This is the value related to the orientation around the Z axis. Unit depends on the context it\textquotesingle{}s been used. 
+
+As an example if the current control mode is cartesian position the unit will be R\+AD but if the control mode is cartesian velocity then the unit will be R\+AD per second. \index{Cartesian\+Info@{Cartesian\+Info}!X@{X}}
+\index{X@{X}!Cartesian\+Info@{Cartesian\+Info}}
+\subsubsection[{\texorpdfstring{X}{X}}]{\setlength{\rightskip}{0pt plus 5cm}float Cartesian\+Info\+::X}\hypertarget{structCartesianInfo_a212cc2dcae1697132fc31fa2f5d17269}{}\label{structCartesianInfo_a212cc2dcae1697132fc31fa2f5d17269}
+
+
+This is the value related to the translation along the X axis. Unit depends on the context it\textquotesingle{}s been used. 
+
+As an example if the current control mode is cartesian position the unit will be meters but if the control mode is cartesian velocity then the unit will be meters per second. \index{Cartesian\+Info@{Cartesian\+Info}!Y@{Y}}
+\index{Y@{Y}!Cartesian\+Info@{Cartesian\+Info}}
+\subsubsection[{\texorpdfstring{Y}{Y}}]{\setlength{\rightskip}{0pt plus 5cm}float Cartesian\+Info\+::Y}\hypertarget{structCartesianInfo_a12c2611c89445419b336e58815d87c7c}{}\label{structCartesianInfo_a12c2611c89445419b336e58815d87c7c}
+
+
+This is the value related to the translation along the Y axis. Unit depends on the context it\textquotesingle{}s been used. 
+
+As an example if the current control mode is cartesian position the unit will be meters but if the control mode is cartesian velocity then the unit will be meters per second. \index{Cartesian\+Info@{Cartesian\+Info}!Z@{Z}}
+\index{Z@{Z}!Cartesian\+Info@{Cartesian\+Info}}
+\subsubsection[{\texorpdfstring{Z}{Z}}]{\setlength{\rightskip}{0pt plus 5cm}float Cartesian\+Info\+::Z}\hypertarget{structCartesianInfo_a14e196e4cb38c0ae7f4658b9b070b7fe}{}\label{structCartesianInfo_a14e196e4cb38c0ae7f4658b9b070b7fe}
+
+
+This is the value related to the translation along the Z axis. Unit depends on the context it\textquotesingle{}s been used. 
+
+As an example if the current control mode is cartesian position the unit will be meters but if the control mode is cartesian velocity then the unit will be meters per second. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Longfei/\+Desktop/catkin\+\_\+\+Kinova\+R\+O\+S/src/jaco-\/ros/jaco\+\_\+driver/include/kinova/\hyperlink{KinovaTypes_8h}{Kinova\+Types.\+h}\end{DoxyCompactItemize}

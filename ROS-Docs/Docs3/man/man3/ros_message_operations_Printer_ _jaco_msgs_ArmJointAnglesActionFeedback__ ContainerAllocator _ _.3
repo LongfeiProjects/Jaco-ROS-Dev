@@ -1,0 +1,47 @@
+.TH "ros::message_operations::Printer< ::jaco_msgs::ArmJointAnglesActionFeedback_< ContainerAllocator > >" 3 "Thu Mar 3 2016" "Version 1.0.1" "Kinova-ROS" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ros::message_operations::Printer< ::jaco_msgs::ArmJointAnglesActionFeedback_< ContainerAllocator > > \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include 'ArmJointAnglesActionFeedback\&.h'\fP
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "template<typename Stream > static void \fBstream\fP (Stream &s, const std::string &indent, const ::\fBjaco_msgs::ArmJointAnglesActionFeedback_\fP< ContainerAllocator > &v)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.SS "template<class ContainerAllocator>
+.br
+struct ros::message_operations::Printer< ::jaco_msgs::ArmJointAnglesActionFeedback_< ContainerAllocator > >"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "template<class ContainerAllocator > template<typename Stream > static void ros::message_operations::Printer< ::\fBjaco_msgs::ArmJointAnglesActionFeedback_\fP< ContainerAllocator > >::stream (Stream & s, const std::string & indent, const ::\fBjaco_msgs::ArmJointAnglesActionFeedback_\fP< ContainerAllocator > & v)\fC [inline]\fP, \fC [static]\fP"
+
+.PP
+.nf
+302   {
+303     s << indent << "header: ";
+304     s << std::endl;
+305     Printer< ::std_msgs::Header_<ContainerAllocator> >::stream(s, indent + "  ", v\&.header);
+306     s << indent << "status: ";
+307     s << std::endl;
+308     Printer< ::actionlib_msgs::GoalStatus_<ContainerAllocator> >::stream(s, indent + "  ", v\&.status);
+309     s << indent << "feedback: ";
+310     s << std::endl;
+311     Printer< ::jaco_msgs::ArmJointAnglesFeedback_<ContainerAllocator> >::stream(s, indent + "  ", v\&.feedback);
+312   }
+.fi
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Kinova-ROS from the source code\&.

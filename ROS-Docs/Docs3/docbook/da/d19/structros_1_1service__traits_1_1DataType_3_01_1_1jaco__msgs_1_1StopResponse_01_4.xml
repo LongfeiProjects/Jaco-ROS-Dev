@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="da/d19/structros_1_1service__traits_1_1DataType_3_01_1_1jaco__msgs_1_1StopResponse_01_4">
+<title>ros::service_traits::DataType&lt; ::jaco_msgs::StopResponse &gt; struct Reference</title>
+<para>
+    <programlisting>#include <link linkend="d2/dae/Stop_8h">&quot;Stop.h&quot;</link></programlisting>
+</para>
+<para>Inheritance diagram for ros::service_traits::DataType&lt; ::jaco_msgs::StopResponse &gt;</para>
+<para>
+    <figure>
+        <title>Inheritance graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../d2/d11/structros_1_1service__traits_1_1DataType_3_01_1_1jaco__msgs_1_1StopResponse_01_4__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Collaboration diagram for ros::service_traits::DataType&lt; ::jaco_msgs::StopResponse &gt;</para>
+<para>
+    <figure>
+        <title>Collaboration graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../d9/df3/structros_1_1service__traits_1_1DataType_3_01_1_1jaco__msgs_1_1StopResponse_01_4__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+    <templateparamlist>
+    </templateparamlist>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static const char * <link linkend="da/d19/structros_1_1service__traits_1_1DataType_3_01_1_1jaco__msgs_1_1StopResponse_01_4_1aaef41cb9d1f2fb25ab595a034f516f7e">value</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static const char * <link linkend="da/d19/structros_1_1service__traits_1_1DataType_3_01_1_1jaco__msgs_1_1StopResponse_01_4_1ae3ea9249c395307217cd00410b123816">value</link> (
+const ::<link linkend="d7/dba/namespacejaco__msgs_1a2694506badd782d8dc5474717333e374">jaco_msgs::StopResponse</link> &amp; )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+            <section xml:id="da/d19/structros_1_1service__traits_1_1DataType_3_01_1_1jaco__msgs_1_1StopResponse_01_4_1aaef41cb9d1f2fb25ab595a034f516f7e">
+                <title>static const char* ros::service_traits::DataType&lt; ::jaco_msgs::StopResponse &gt;::value ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="da/d19/structros_1_1service__traits_1_1DataType_3_01_1_1jaco__msgs_1_1StopResponse_01_4_1ae3ea9249c395307217cd00410b123816">
+                <title>static const char* ros::service_traits::DataType&lt; ::jaco_msgs::StopResponse &gt;::value (const ::jaco_msgs::StopResponse &amp;)</title> <emphasis></emphasis>
+                
+            </section>
+</section>

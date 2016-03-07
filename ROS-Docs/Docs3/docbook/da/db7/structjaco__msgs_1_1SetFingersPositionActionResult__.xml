@@ -1,0 +1,166 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="da/db7/structjaco__msgs_1_1SetFingersPositionActionResult__">
+<title>jaco_msgs::SetFingersPositionActionResult_ struct Reference</title>
+<para>
+    <programlisting>#include <link linkend="db/d1b/SetFingersPositionActionResult_8h">&quot;SetFingersPositionActionResult.h&quot;</link></programlisting>
+</para>
+<para>Inheritance diagram for jaco_msgs::SetFingersPositionActionResult_</para>
+<para>
+    <figure>
+        <title>Inheritance graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../d7/d93/structjaco__msgs_1_1SetFingersPositionActionResult____inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Collaboration diagram for jaco_msgs::SetFingersPositionActionResult_</para>
+<para>
+    <figure>
+        <title>Collaboration graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../d8/d32/structjaco__msgs_1_1SetFingersPositionActionResult____coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+    <templateparamlist>
+      <param>
+        <type>class</type>
+        <declname>ContainerAllocator</declname>
+        <defname>ContainerAllocator</defname>
+      </param>
+    </templateparamlist>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef ::std_msgs::Header_&lt; ContainerAllocator &gt;  <link linkend="da/db7/structjaco__msgs_1_1SetFingersPositionActionResult___1adafecfdd9d7d042f35c88e4c41aa2b4f">_header_type</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef ::<link linkend="d3/d75/structjaco__msgs_1_1SetFingersPositionResult__">jaco_msgs::SetFingersPositionResult_</link>&lt; ContainerAllocator &gt;  <link linkend="da/db7/structjaco__msgs_1_1SetFingersPositionActionResult___1a0afeedf3b25e89762f7afc0636d21640">_result_type</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef ::actionlib_msgs::GoalStatus_&lt; ContainerAllocator &gt;  <link linkend="da/db7/structjaco__msgs_1_1SetFingersPositionActionResult___1ac4ef0553517c5a84f08a672d3b0d2c9f">_status_type</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef boost::shared_ptr&lt; ::<link linkend="da/db7/structjaco__msgs_1_1SetFingersPositionActionResult__">jaco_msgs::SetFingersPositionActionResult_</link>&lt; ContainerAllocator &gt; const  &gt;  <link linkend="da/db7/structjaco__msgs_1_1SetFingersPositionActionResult___1a368570cbffaf720aea48642ec7c8829e">ConstPtr</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef boost::shared_ptr&lt; ::<link linkend="da/db7/structjaco__msgs_1_1SetFingersPositionActionResult__">jaco_msgs::SetFingersPositionActionResult_</link>&lt; ContainerAllocator &gt; &gt;  <link linkend="da/db7/structjaco__msgs_1_1SetFingersPositionActionResult___1a3ddc98892b0e2d7b1853973b9fd24322">Ptr</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef <link linkend="da/db7/structjaco__msgs_1_1SetFingersPositionActionResult__">SetFingersPositionActionResult_</link>&lt; ContainerAllocator &gt;  <link linkend="da/db7/structjaco__msgs_1_1SetFingersPositionActionResult___1ab425bbd950edd7263d5b580ebae81577">Type</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Public Attributes</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>boost::shared_ptr&lt; std::map&lt; std::string, std::string &gt; &gt; __connection_header</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>_header_type header</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>_result_type result</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>_status_type status</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="da/db7/structjaco__msgs_1_1SetFingersPositionActionResult___1a116424722e3d5b240b77f0e699102f0b">SetFingersPositionActionResult_</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="da/db7/structjaco__msgs_1_1SetFingersPositionActionResult___1a7c57ab3e9d99773be307f3f2e044936b">SetFingersPositionActionResult_</link> (
+const ContainerAllocator &amp; _alloc)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+            <section xml:id="da/db7/structjaco__msgs_1_1SetFingersPositionActionResult___1adafecfdd9d7d042f35c88e4c41aa2b4f">
+                <title>typedef ::std_msgs::Header_&lt;ContainerAllocator&gt; jaco_msgs::SetFingersPositionActionResult_&lt; ContainerAllocator &gt;::_header_type</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="da/db7/structjaco__msgs_1_1SetFingersPositionActionResult___1a0afeedf3b25e89762f7afc0636d21640">
+                <title>typedef ::jaco_msgs::SetFingersPositionResult_&lt;ContainerAllocator&gt; jaco_msgs::SetFingersPositionActionResult_&lt; ContainerAllocator &gt;::_result_type</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="da/db7/structjaco__msgs_1_1SetFingersPositionActionResult___1ac4ef0553517c5a84f08a672d3b0d2c9f">
+                <title>typedef ::actionlib_msgs::GoalStatus_&lt;ContainerAllocator&gt; jaco_msgs::SetFingersPositionActionResult_&lt; ContainerAllocator &gt;::_status_type</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="da/db7/structjaco__msgs_1_1SetFingersPositionActionResult___1a368570cbffaf720aea48642ec7c8829e">
+                <title>typedef boost::shared_ptr&lt; ::jaco_msgs::SetFingersPositionActionResult_&lt;ContainerAllocator&gt; const&gt; jaco_msgs::SetFingersPositionActionResult_&lt; ContainerAllocator &gt;::ConstPtr</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="da/db7/structjaco__msgs_1_1SetFingersPositionActionResult___1a3ddc98892b0e2d7b1853973b9fd24322">
+                <title>typedef boost::shared_ptr&lt; ::jaco_msgs::SetFingersPositionActionResult_&lt;ContainerAllocator&gt; &gt; jaco_msgs::SetFingersPositionActionResult_&lt; ContainerAllocator &gt;::Ptr</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="da/db7/structjaco__msgs_1_1SetFingersPositionActionResult___1ab425bbd950edd7263d5b580ebae81577">
+                <title>typedef SetFingersPositionActionResult_&lt;ContainerAllocator&gt; jaco_msgs::SetFingersPositionActionResult_&lt; ContainerAllocator &gt;::Type</title> <emphasis></emphasis>
+                
+            </section>
+        <section>
+            <title>Member Data Documentation</title>
+        </section>
+            <section xml:id="da/db7/structjaco__msgs_1_1SetFingersPositionActionResult___1a116424722e3d5b240b77f0e699102f0b">
+                <title>jaco_msgs::SetFingersPositionActionResult_&lt; ContainerAllocator &gt;::SetFingersPositionActionResult_ ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="da/db7/structjaco__msgs_1_1SetFingersPositionActionResult___1a7c57ab3e9d99773be307f3f2e044936b">
+                <title>jaco_msgs::SetFingersPositionActionResult_&lt; ContainerAllocator &gt;::SetFingersPositionActionResult_ (const ContainerAllocator &amp;_alloc)</title> <emphasis></emphasis>
+                
+            </section>
+</section>

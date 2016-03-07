@@ -1,0 +1,70 @@
+.TH "jaco::JacoCommException" 3 "Thu Mar 3 2016" "Version 1.0.1" "Kinova-ROS" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+jaco::JacoCommException \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include 'jaco_types\&.h'\fP
+.PP
+Inherits \fBjaco::JacoException\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBJacoCommException\fP (const std::string &message, const int error_code)"
+.br
+.ti -1c
+.RI "const char * \fBwhat\fP () const   throw ()"
+.br
+.ti -1c
+.RI "\fB~JacoCommException\fP ()  throw ()"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "std::string \fBdesc_\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "jaco::JacoCommException::JacoCommException (const std::string & message, const int error_code)\fC [explicit]\fP"
+
+.PP
+.nf
+87 {
+88     std::stringstream ss;
+89         ss << "JacoCommException: " << message << " (return code: " << error_code << ")" << std::endl;
+90     desc_ = ss\&.str();
+91 }
+.fi
+.SS "jaco::JacoCommException::~JacoCommException ()\fC [inline]\fP"
+
+.PP
+.nf
+68 {}
+.fi
+.SH "Member Function Documentation"
+.PP 
+.SS "const char * jaco::JacoCommException::what () const"
+
+.PP
+.nf
+95 {
+96     return desc_\&.c_str();
+97 }
+.fi
+.SH "Member Data Documentation"
+.PP 
+.SS "std::string jaco::JacoCommException::desc_\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Kinova-ROS from the source code\&.

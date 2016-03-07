@@ -1,0 +1,70 @@
+.TH "D:/Longfei/Desktop/catkin_KinovaROS/src/jaco-ros/jaco_demo/nodes/jaco_demo/mico_force_control.py" 3 "Thu Mar 3 2016" "Version 1.0.1" "Kinova-ROS" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+D:/Longfei/Desktop/catkin_KinovaROS/src/jaco-ros/jaco_demo/nodes/jaco_demo/mico_force_control.py \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Namespaces"
+
+.in +1c
+.ti -1c
+.RI " \fBmico_force_control\fP"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "\fBmico_force_control\&.damping_ang\fP = rospy\&.get_param('damping_ang', 10\&.0)"
+.br
+.ti -1c
+.RI "\fBmico_force_control\&.damping_lin\fP = rospy\&.get_param('damping_lin', 80\&.0)"
+.br
+.ti -1c
+.RI "\fBmico_force_control\&.force_max_ang\fP = rospy\&.get_param('force_max_ang', 40\&.0)"
+.br
+.ti -1c
+.RI "\fBmico_force_control\&.force_max_lin\fP = rospy\&.get_param('force_max_lin', 40\&.0)"
+.br
+.ti -1c
+.RI "\fBmico_force_control\&.force_min_ang\fP = rospy\&.get_param('force_min_ang', 0\&.1)"
+.br
+.ti -1c
+.RI "\fBmico_force_control\&.force_min_lin\fP = rospy\&.get_param('force_min_lin', 0\&.1)"
+.br
+.ti -1c
+.RI "\fBmico_force_control\&.inertia_ang\fP = rospy\&.get_param('inertia_ang', 3\&.0)"
+.br
+.ti -1c
+.RI "\fBmico_force_control\&.inertia_lin\fP = rospy\&.get_param('inertia_lin', 10\&.0)"
+.br
+.ti -1c
+.RI "\fBmico_force_control\&.robot\fP = rospy\&.get_param('robot', 'mico')"
+.br
+.ti -1c
+.RI "\fBmico_force_control\&.set_req\fP = SetForceControlParamsRequest()"
+.br
+.ti -1c
+.RI "\fBmico_force_control\&.srv_set\fP = rospy\&.ServiceProxy(robot + '_arm_driver/in/set_force_control_params', SetForceControlParams)"
+.br
+.ti -1c
+.RI "\fBmico_force_control\&.srv_start\fP = rospy\&.ServiceProxy(robot + '_arm_driver/in/start_force_control', Start)"
+.br
+.ti -1c
+.RI "\fBmico_force_control\&.srv_stop\fP = rospy\&.ServiceProxy(robot + '_arm_driver/in/stop_force_control', Stop)"
+.br
+.ti -1c
+.RI "\fBmico_force_control\&.x\fP"
+.br
+.ti -1c
+.RI "\fBmico_force_control\&.y\fP"
+.br
+.ti -1c
+.RI "\fBmico_force_control\&.z\fP"
+.br
+.in -1c
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Kinova-ROS from the source code\&.

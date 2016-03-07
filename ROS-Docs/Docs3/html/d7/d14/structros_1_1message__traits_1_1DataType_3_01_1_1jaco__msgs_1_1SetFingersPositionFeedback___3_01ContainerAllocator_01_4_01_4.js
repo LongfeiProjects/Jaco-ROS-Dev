@@ -1,0 +1,5 @@
+var structros_1_1message__traits_1_1DataType_3_01_1_1jaco__msgs_1_1SetFingersPositionFeedback___3_01ContainerAllocator_01_4_01_4 =
+[
+    [ "value", "d7/d14/structros_1_1message__traits_1_1DataType_3_01_1_1jaco__msgs_1_1SetFingersPositionFeedback___3_01ContainerAllocator_01_4_01_4.html#af0494d4a1d9b1046e1dde58778f112a3", null ],
+    [ "value", "d7/d14/structros_1_1message__traits_1_1DataType_3_01_1_1jaco__msgs_1_1SetFingersPositionFeedback___3_01ContainerAllocator_01_4_01_4.html#abd5ae01fb5d175bc8d47a1e4cdb9edc1", null ]
+];

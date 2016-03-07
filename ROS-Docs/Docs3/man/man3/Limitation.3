@@ -1,0 +1,102 @@
+.TH "Limitation" 3 "Thu Mar 3 2016" "Version 1.0.1" "Kinova-ROS" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Limitation \- This data structure represents all limitation that can be applied to a control context\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include 'Definition'\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBInitStruct\fP ()"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "float \fBaccelerationParameter1\fP"
+.br
+.ti -1c
+.RI "float \fBaccelerationParameter2\fP"
+.br
+.ti -1c
+.RI "float \fBaccelerationParameter3\fP"
+.br
+.ti -1c
+.RI "float \fBforceParameter1\fP"
+.br
+.ti -1c
+.RI "float \fBforceParameter2\fP"
+.br
+.ti -1c
+.RI "float \fBforceParameter3\fP"
+.br
+.ti -1c
+.RI "float \fBspeedParameter1\fP"
+.br
+.RI "\fIIn a cartesian context, this represents the translation velocity but in an angular context, this represents the velocity of the actuators 1, 2 and 3\&. \fP"
+.ti -1c
+.RI "float \fBspeedParameter2\fP"
+.br
+.RI "\fIIn a cartesian context, this represents the orientation velocity but in an angular context, this represents the velocity of the actuators 4, 5 and 6\&. \fP"
+.ti -1c
+.RI "float \fBspeedParameter3\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+This data structure represents all limitation that can be applied to a control context\&. 
+
+Depending on the context, units and behaviour can change\&. See each parameter for more informations\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "void Limitation::InitStruct ()\fC [inline]\fP"
+
+.PP
+.nf
+613     {
+614         speedParameter1 = 0\&.0f;
+615         speedParameter2 = 0\&.0f;
+616         speedParameter3 = 0\&.0f;
+617         forceParameter1 = 0\&.0f;
+618         forceParameter2 = 0\&.0f;
+619         forceParameter3 = 0\&.0f;
+620         accelerationParameter1 = 0\&.0f;
+621         accelerationParameter2 = 0\&.0f;
+622         accelerationParameter3 = 0\&.0f;
+623     }
+.fi
+.SH "Member Data Documentation"
+.PP 
+.SS "float Limitation::accelerationParameter1"
+Not used for now\&. 
+.SS "float Limitation::accelerationParameter2"
+Not used for now\&. 
+.SS "float Limitation::accelerationParameter3"
+Not used for now\&. 
+.SS "float Limitation::forceParameter1"
+Not used for now\&. 
+.SS "float Limitation::forceParameter2"
+Not used for now\&. 
+.SS "float Limitation::forceParameter3"
+Not used for now\&. 
+.SS "float Limitation::speedParameter1"
+
+.PP
+In a cartesian context, this represents the translation velocity but in an angular context, this represents the velocity of the actuators 1, 2 and 3\&. 
+.SS "float Limitation::speedParameter2"
+
+.PP
+In a cartesian context, this represents the orientation velocity but in an angular context, this represents the velocity of the actuators 4, 5 and 6\&. 
+.SS "float Limitation::speedParameter3"
+Not used for now\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Kinova-ROS from the source code\&.

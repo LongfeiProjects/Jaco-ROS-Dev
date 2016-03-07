@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="dd/ddb/structros_1_1service__traits_1_1DataType_3_01_1_1jaco__msgs_1_1Start_01_4">
+<title>ros::service_traits::DataType&lt; ::jaco_msgs::Start &gt; struct Reference</title>
+<para>
+    <programlisting>#include <link linkend="df/d42/Start_8h">&quot;Start.h&quot;</link></programlisting>
+</para>
+<para>Inheritance diagram for ros::service_traits::DataType&lt; ::jaco_msgs::Start &gt;</para>
+<para>
+    <figure>
+        <title>Inheritance graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../db/ddf/structros_1_1service__traits_1_1DataType_3_01_1_1jaco__msgs_1_1Start_01_4__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Collaboration diagram for ros::service_traits::DataType&lt; ::jaco_msgs::Start &gt;</para>
+<para>
+    <figure>
+        <title>Collaboration graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../dd/d4a/structros_1_1service__traits_1_1DataType_3_01_1_1jaco__msgs_1_1Start_01_4__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+    <templateparamlist>
+    </templateparamlist>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static const char * <link linkend="dd/ddb/structros_1_1service__traits_1_1DataType_3_01_1_1jaco__msgs_1_1Start_01_4_1a209952e5aa02dc377d6b090996a46c2d">value</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static const char * <link linkend="dd/ddb/structros_1_1service__traits_1_1DataType_3_01_1_1jaco__msgs_1_1Start_01_4_1a76a75bb7b1d49fcbdda5a559f4a59c1f">value</link> (
+const ::<link linkend="d7/dba/namespacejaco__msgs_1d8/d46/structjaco__msgs_1_1Start">jaco_msgs::Start</link> &amp; )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+            <section xml:id="dd/ddb/structros_1_1service__traits_1_1DataType_3_01_1_1jaco__msgs_1_1Start_01_4_1a209952e5aa02dc377d6b090996a46c2d">
+                <title>static const char* ros::service_traits::DataType&lt; ::jaco_msgs::Start &gt;::value ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="dd/ddb/structros_1_1service__traits_1_1DataType_3_01_1_1jaco__msgs_1_1Start_01_4_1a76a75bb7b1d49fcbdda5a559f4a59c1f">
+                <title>static const char* ros::service_traits::DataType&lt; ::jaco_msgs::Start &gt;::value (const ::jaco_msgs::Start &amp;)</title> <emphasis></emphasis>
+                
+            </section>
+</section>

@@ -1,0 +1,165 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="d8/da9/classjaco_1_1JacoKinematics">
+<title>jaco::JacoKinematics class Reference</title>
+<para>
+    <programlisting>#include <link linkend="da/d01/jaco__arm__kinematics_8h">&quot;jaco_arm_kinematics.h&quot;</link></programlisting>
+</para>
+<para>Inheritance diagram for jaco::JacoKinematics</para>
+<para>
+    <figure>
+        <title>Inheritance graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../d0/d77/classjaco_1_1JacoKinematics__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Collaboration diagram for jaco::JacoKinematics</para>
+<para>
+    <figure>
+        <title>Collaboration graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../d8/dea/classjaco_1_1JacoKinematics__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+        <section>
+            <title>Private Attributes</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>double base_to_api_</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>double base_to_j1_</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>tf::TransformBroadcaster broadcaster_</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>double j1_to_j2_</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>double j2_to_j3_</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>double j3_offset_</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>double j3_to_j4_</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>double j4_to_j5_</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>double j5_bend_degrees_</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>double j5_to_j6_</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>double j6_bend_degrees_</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>double j6_to_end_</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>std::string tf_prefix_</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>float <link linkend="d8/da9/classjaco_1_1JacoKinematics_1a340eda126d97aa3700cc5dc8be89aa39">degToRad</link> (
+float degrees)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="d8/da9/classjaco_1_1JacoKinematics_1ad7c0d6e5dbf5feb29aaf6bcb65f14b86">JacoKinematics</link> (
+const ros::NodeHandle &amp; node_handle)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="d8/da9/classjaco_1_1JacoKinematics_1a605302243138ca469a7a416be25a6804">updateForward</link> (
+float q1, float q2, float q3, float q4, float q5, float q6)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Member Data Documentation</title>
+        </section>
+            <section xml:id="d8/da9/classjaco_1_1JacoKinematics_1a340eda126d97aa3700cc5dc8be89aa39">
+                <title>float jaco::JacoKinematics::degToRad (float degrees)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="d8/da9/classjaco_1_1JacoKinematics_1ad7c0d6e5dbf5feb29aaf6bcb65f14b86">
+                <title>jaco::JacoKinematics::JacoKinematics (const ros::NodeHandle &amp;node_handle)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="d8/da9/classjaco_1_1JacoKinematics_1a605302243138ca469a7a416be25a6804">
+                <title>void jaco::JacoKinematics::updateForward (float q1, float q2, float q3, float q4, float q5, float q6)</title> <emphasis></emphasis>
+                
+            </section>
+</section>

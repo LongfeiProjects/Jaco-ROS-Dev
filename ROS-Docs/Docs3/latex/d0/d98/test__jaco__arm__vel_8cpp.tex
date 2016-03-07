@@ -1,0 +1,89 @@
+\hypertarget{test__jaco__arm__vel_8cpp}{}\section{D\+:/\+Longfei/\+Desktop/catkin\+\_\+\+Kinova\+R\+O\+S/src/jaco-\/ros/jaco\+\_\+driver/src/testers/test\+\_\+jaco\+\_\+arm\+\_\+vel.cpp File Reference}
+\label{test__jaco__arm__vel_8cpp}\index{D\+:/\+Longfei/\+Desktop/catkin\+\_\+\+Kinova\+R\+O\+S/src/jaco-\/ros/jaco\+\_\+driver/src/testers/test\+\_\+jaco\+\_\+arm\+\_\+vel.\+cpp@{D\+:/\+Longfei/\+Desktop/catkin\+\_\+\+Kinova\+R\+O\+S/src/jaco-\/ros/jaco\+\_\+driver/src/testers/test\+\_\+jaco\+\_\+arm\+\_\+vel.\+cpp}}
+{\ttfamily \#include $<$geometry\+\_\+msgs/\+Pose\+Stamped.\+h$>$}\\*
+{\ttfamily \#include $<$geometry\+\_\+msgs/\+Twist\+Stamped.\+h$>$}\\*
+{\ttfamily \#include $<$tf/tf.\+h$>$}\\*
+{\ttfamily \#include $<$ros/ros.\+h$>$}\\*
+{\ttfamily \#include $<$jaco\+\_\+msgs/cartesian\+\_\+velocity.\+h$>$}\\*
+Include dependency graph for test\+\_\+jaco\+\_\+arm\+\_\+vel.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{db/dda/test__jaco__arm__vel_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{test__jaco__arm__vel_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{main} (int argc, char $\ast$$\ast$argv)
+\item 
+void \hyperlink{test__jaco__arm__vel_8cpp_acaaff023b0d196868429ae4d95cced23}{Timer\+Callback} (const ros\+::\+Timer\+Event \&)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+ros\+::\+Publisher \hyperlink{test__jaco__arm__vel_8cpp_a350594df3e8f6948c8462edfd41ce086}{pub}
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{test\+\_\+jaco\+\_\+arm\+\_\+vel.\+cpp@{test\+\_\+jaco\+\_\+arm\+\_\+vel.\+cpp}!main@{main}}
+\index{main@{main}!test\+\_\+jaco\+\_\+arm\+\_\+vel.\+cpp@{test\+\_\+jaco\+\_\+arm\+\_\+vel.\+cpp}}
+\subsubsection[{\texorpdfstring{main(int argc, char $\ast$$\ast$argv)}{main(int argc, char **argv)}}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char $\ast$$\ast$}]{argv}
+\end{DoxyParamCaption}
+)}\hypertarget{test__jaco__arm__vel_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{}\label{test__jaco__arm__vel_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}
+String containing the topic name for cartesian commands 
+\begin{DoxyCode}
+43                                 \{
+44 
+45     \textcolor{comment}{/* Set up ROS */}
+46     ros::init(argc, argv, \textcolor{stringliteral}{"test\_jaco\_arm\_vel"});
+47     ros::NodeHandle nh;
+48     ros::NodeHandle param\_nh(\textcolor{stringliteral}{"~"});
+49 
+50     std::string \hyperlink{namespacejaco__msgs_a3885bcb43e15bd44e269141fd88ae604}{JointVelocity}(\textcolor{stringliteral}{"CartesianVelocity"}); 
+51 
+52      \hyperlink{test__jaco__arm__vel_8cpp_a350594df3e8f6948c8462edfd41ce086}{pub} = nh.advertise<jaco\_msgs::cartesian\_velocity>(\hyperlink{namespacejaco__msgs_a3885bcb43e15bd44e269141fd88ae604}{JointVelocity},
+53             2);
+54 
+55     ros::Timer timer = nh.createTimer(ros::Duration(0.01),\hyperlink{test__jaco__arm__vel_8cpp_acaaff023b0d196868429ae4d95cced23}{TimerCallback});
+56 
+57 
+58     ros::spin();
+59 \}
+\end{DoxyCode}
+\index{test\+\_\+jaco\+\_\+arm\+\_\+vel.\+cpp@{test\+\_\+jaco\+\_\+arm\+\_\+vel.\+cpp}!Timer\+Callback@{Timer\+Callback}}
+\index{Timer\+Callback@{Timer\+Callback}!test\+\_\+jaco\+\_\+arm\+\_\+vel.\+cpp@{test\+\_\+jaco\+\_\+arm\+\_\+vel.\+cpp}}
+\subsubsection[{\texorpdfstring{Timer\+Callback(const ros\+::\+Timer\+Event \&)}{TimerCallback(const ros::TimerEvent &)}}]{\setlength{\rightskip}{0pt plus 5cm}void Timer\+Callback (
+\begin{DoxyParamCaption}
+\item[{const ros\+::\+Timer\+Event \&}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{test__jaco__arm__vel_8cpp_acaaff023b0d196868429ae4d95cced23}{}\label{test__jaco__arm__vel_8cpp_acaaff023b0d196868429ae4d95cced23}
+
+\begin{DoxyCode}
+27 \{
+28     jaco\_msgs::cartesian\_velocity test\_msg;
+29 
+30             test\_msg.Velocity\_X = 0.0;
+31             test\_msg.Velocity\_Y = 10;
+32             test\_msg.Velocity\_Z = 0;
+33             test\_msg.Velocity\_TX = 0;
+34             test\_msg.Velocity\_TY = 0;
+35             test\_msg.Velocity\_TZ = 0;
+36 
+37 
+38             \hyperlink{test__jaco__arm__vel_8cpp_a350594df3e8f6948c8462edfd41ce086}{pub}.publish(test\_msg);
+39 
+40 
+41 \}
+\end{DoxyCode}
+
+
+\subsection{Variable Documentation}
+\index{test\+\_\+jaco\+\_\+arm\+\_\+vel.\+cpp@{test\+\_\+jaco\+\_\+arm\+\_\+vel.\+cpp}!pub@{pub}}
+\index{pub@{pub}!test\+\_\+jaco\+\_\+arm\+\_\+vel.\+cpp@{test\+\_\+jaco\+\_\+arm\+\_\+vel.\+cpp}}
+\subsubsection[{\texorpdfstring{pub}{pub}}]{\setlength{\rightskip}{0pt plus 5cm}ros\+::\+Publisher pub}\hypertarget{test__jaco__arm__vel_8cpp_a350594df3e8f6948c8462edfd41ce086}{}\label{test__jaco__arm__vel_8cpp_a350594df3e8f6948c8462edfd41ce086}

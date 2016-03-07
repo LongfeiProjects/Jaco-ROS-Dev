@@ -1,0 +1,88 @@
+.TH "joint_angle_workout" 3 "Thu Mar 3 2016" "Version 1.0.1" "Kinova-ROS" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+joint_angle_workout \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "def \fBjoint_angle_client\fP (angle_set)"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "\fBangles\fP = \fBgoal_generators\&.random_joint_angles_generator\fP(int(sys\&.argv[3]))"
+.br
+.ti -1c
+.RI "list \fBraw_angles\fP = [float(n) for n in sys\&.argv[2:]]"
+.br
+.ti -1c
+.RI "\fBresult\fP = \fBjoint_angle_client\fP(angle_set)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.PP
+.nf
+A helper program to test cartesian goals for the JACO and MICO arms.
+.fi
+.PP
+ 
+.SH "Function Documentation"
+.PP 
+.SS "def joint_angle_workout\&.joint_angle_client ( angle_set)"
+
+.PP
+.nf
+Send a joint angle goal to the action server.
+.fi
+.PP
+ 
+.PP
+.nf
+17 def joint_angle_client(angle_set):
+18     """Send a joint angle goal to the action server\&."""
+19     action_address = '/' + str(sys\&.argv[1]) + '_arm_driver/joint_angles/arm_joint_angles'
+20     client = actionlib\&.SimpleActionClient(action_address,
+21                                           jaco_msgs\&.msg\&.ArmJointAnglesAction)
+22     client\&.wait_for_server()
+23 
+24     goal = jaco_msgs\&.msg\&.ArmJointAnglesGoal()
+25 
+26     goal\&.angles\&.joint1 = angle_set[0]
+27     goal\&.angles\&.joint2 = angle_set[1]
+28     goal\&.angles\&.joint3 = angle_set[2]
+29     goal\&.angles\&.joint4 = angle_set[3]
+30     goal\&.angles\&.joint5 = angle_set[4]
+31     goal\&.angles\&.joint6 = angle_set[5]
+32 
+33     print('goal: {}'\&.format(goal))
+34 
+35     client\&.send_goal(goal)
+36     if client\&.wait_for_result(rospy\&.Duration(20\&.0)):
+37         return client\&.get_result()
+38     else:
+39         print('        the joint angle action timed-out')
+40         client\&.cancel_all_goals()
+41         return None
+42 
+43 
+.fi
+.SH "Variable Documentation"
+.PP 
+.SS "list joint_angle_workout\&.angles = \fBgoal_generators\&.random_joint_angles_generator\fP(int(sys\&.argv[3]))"
+
+.SS "list joint_angle_workout\&.raw_angles = [float(n) for n in sys\&.argv[2:]]"
+
+.SS "joint_angle_workout\&.result = \fBjoint_angle_client\fP(angle_set)"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Kinova-ROS from the source code\&.

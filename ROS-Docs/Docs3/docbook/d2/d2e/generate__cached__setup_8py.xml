@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="d2/d2e/generate__cached__setup_8py">
+    <title>generate_cached_setup.py File Reference</title>
+<para>Include dependency diagram for generate_cached_setup.py</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../d0/d16/generate__cached__setup_8py__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Included by dependency diagram for generate_cached_setup.py</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../dd/d87/generate__cached__setup_8py__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+        <simplesect>
+            <title> Namespaces </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d1/d99/namespacegenerate__cached__setup">generate_cached_setup</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+    <simplesect>
+        <title>Detailed Description</title>
+    <para>Definition in file D:/Longfei/Desktop/catkin_KinovaROS/build/catkin_generated/generate_cached_setup.py</para>
+    </simplesect>
+    <literallayout><computeroutput>
+<link linkend="d1/d99/namespacegenerate__cached__setup">1 </link><emphasis class="keyword">from</emphasis>&#32;__future__&#32;<emphasis class="keyword">import</emphasis>&#32;print_function
+2 <emphasis class="keyword">import</emphasis>&#32;argparse
+3 <emphasis class="keyword">import</emphasis>&#32;os
+4 <emphasis class="keyword">import</emphasis>&#32;stat
+5 <emphasis class="keyword">import</emphasis>&#32;sys
+6 
+7 <emphasis class="comment">#&#32;find&#32;the&#32;import&#32;for&#32;catkin&apos;s&#32;python&#32;package&#32;-&#32;either&#32;from&#32;source&#32;space&#32;or&#32;from&#32;an&#32;installed&#32;underlay</emphasis>
+8 <emphasis class="keywordflow">if</emphasis>&#32;os.path.exists(os.path.join(<emphasis class="stringliteral">&apos;/opt/ros/hydro/share/catkin/cmake&apos;</emphasis>,&#32;<emphasis class="stringliteral">&apos;catkinConfig.cmake.in&apos;</emphasis>)):
+9 &#32;&#32;&#32;&#32;sys.path.insert(0,&#32;os.path.join(<emphasis class="stringliteral">&apos;/opt/ros/hydro/share/catkin/cmake&apos;</emphasis>,&#32;<emphasis class="stringliteral">&apos;..&apos;</emphasis>,&#32;<emphasis class="stringliteral">&apos;python&apos;</emphasis>))
+10 <emphasis class="keywordflow">try</emphasis>:
+11 &#32;&#32;&#32;&#32;<emphasis class="keyword">from</emphasis>&#32;catkin.environment_cache&#32;<emphasis class="keyword">import</emphasis>&#32;generate_environment_script
+12 <emphasis class="keywordflow">except</emphasis>&#32;ImportError:
+13 &#32;&#32;&#32;&#32;<emphasis class="comment">#&#32;search&#32;for&#32;catkin&#32;package&#32;in&#32;all&#32;workspaces&#32;and&#32;prepend&#32;to&#32;path</emphasis>
+14 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">for</emphasis>&#32;workspace&#32;<emphasis class="keywordflow">in</emphasis>&#32;<emphasis class="stringliteral">&quot;/home/longfei/catkin_ws/devel;/opt/ros/hydro&quot;</emphasis>.split(<emphasis class="stringliteral">&apos;;&apos;</emphasis>):
+<link linkend="d1/d99/namespacegenerate__cached__setup_1a72579fd01529a79bab20d99291889d3f">15 </link>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;python_path&#32;=&#32;os.path.join(workspace,&#32;<emphasis class="stringliteral">&apos;lib/python2.7/dist-packages&apos;</emphasis>)
+16 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;os.path.isdir(os.path.join(python_path,&#32;<emphasis class="stringliteral">&apos;catkin&apos;</emphasis>)):
+17 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;sys.path.insert(0,&#32;python_path)
+18 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">break</emphasis>
+19 &#32;&#32;&#32;&#32;<emphasis class="keyword">from</emphasis>&#32;catkin.environment_cache&#32;<emphasis class="keyword">import</emphasis>&#32;generate_environment_script
+20 
+<link linkend="d1/d99/namespacegenerate__cached__setup_1a52601295006f2366a311c4453d8f2f2e">21 </link>code&#32;=&#32;generate_environment_script(<emphasis class="stringliteral">&apos;/home/longfei/catkin_KinovaROS/devel/env.sh&apos;</emphasis>)
+22 
+<link linkend="d1/d99/namespacegenerate__cached__setup_1a0265aee5075ee1eb701ff69c98ad6793">23 </link>output_filename&#32;=&#32;<emphasis class="stringliteral">&apos;/home/longfei/catkin_KinovaROS/build/catkin_generated/setup_cached.sh&apos;</emphasis>
+24 with&#32;open(output_filename,&#32;<emphasis class="stringliteral">&apos;w&apos;</emphasis>)&#32;<emphasis class="keyword">as</emphasis>&#32;f:
+25 &#32;&#32;&#32;&#32;<emphasis class="comment">#print(&apos;Generate&#32;script&#32;for&#32;cached&#32;setup&#32;&quot;%s&quot;&apos;&#32;%&#32;output_filename)</emphasis>
+26 &#32;&#32;&#32;&#32;f.write(<emphasis class="stringliteral">&apos;\n&apos;</emphasis>.join(code))
+27 
+<link linkend="d1/d99/namespacegenerate__cached__setup_1a10081e5abedae9bd46dd91202096e789">28 </link>mode&#32;=&#32;os.stat(output_filename).st_mode
+29 os.chmod(output_filename,&#32;mode&#32;|&#32;stat.S_IXUSR)
+    </computeroutput></literallayout>
+</section>

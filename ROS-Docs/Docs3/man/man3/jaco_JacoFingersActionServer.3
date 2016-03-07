@@ -1,0 +1,206 @@
+.TH "jaco::JacoFingersActionServer" 3 "Thu Mar 3 2016" "Version 1.0.1" "Kinova-ROS" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+jaco::JacoFingersActionServer \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include 'jaco_fingers_action\&.h'\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBactionCallback\fP (const \fBjaco_msgs::SetFingersPositionGoalConstPtr\fP &)"
+.br
+.ti -1c
+.RI "\fBJacoFingersActionServer\fP (\fBJacoComm\fP &, const ros::NodeHandle &n)"
+.br
+.ti -1c
+.RI "\fB~JacoFingersActionServer\fP ()"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "actionlib::SimpleActionServer< \fBjaco_msgs::SetFingersPositionAction\fP > \fBaction_server_\fP"
+.br
+.ti -1c
+.RI "\fBJacoComm\fP & \fBarm_comm_\fP"
+.br
+.ti -1c
+.RI "\fBjaco::FingerAngles\fP \fBlast_nonstall_finger_positions_\fP"
+.br
+.ti -1c
+.RI "ros::Time \fBlast_nonstall_time_\fP"
+.br
+.ti -1c
+.RI "ros::NodeHandle \fBnode_handle_\fP"
+.br
+.ti -1c
+.RI "double \fBrate_hz_\fP"
+.br
+.ti -1c
+.RI "double \fBstall_interval_seconds_\fP"
+.br
+.ti -1c
+.RI "double \fBstall_threshold_\fP"
+.br
+.ti -1c
+.RI "float \fBtolerance_\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "jaco::JacoFingersActionServer::JacoFingersActionServer (\fBJacoComm\fP & arm_comm, const ros::NodeHandle & n)"
+
+.PP
+.nf
+55     : arm_comm_(arm_comm),
+56       node_handle_(nh, "fingers"),
+57       action_server_(node_handle_, "finger_positions",
+58                      boost::bind(&JacoFingersActionServer::actionCallback, this, _1), false)
+59 {
+60     double tolerance;
+61     node_handle_\&.param<double>("stall_interval_seconds", stall_interval_seconds_, 0\&.5);
+62     node_handle_\&.param<double>("stall_threshold", stall_threshold_, 1\&.0);
+63     node_handle_\&.param<double>("rate_hz", rate_hz_, 10\&.0);
+64     node_handle_\&.param<double>("tolerance", tolerance, 2\&.0);
+65     tolerance_ = static_cast<float>(tolerance);
+66 
+67     action_server_\&.start();
+68 }
+.fi
+.SS "jaco::JacoFingersActionServer::~JacoFingersActionServer ()"
+
+.PP
+.nf
+72 {
+73 }
+.fi
+.SH "Member Function Documentation"
+.PP 
+.SS "void jaco::JacoFingersActionServer::actionCallback (const \fBjaco_msgs::SetFingersPositionGoalConstPtr\fP & goal)"
+
+.PP
+.nf
+77 {
+78     if ((arm_comm_\&.numFingers() < 3) && (goal->fingers\&.finger3 != 0\&.0))
+79     {
+80         ROS_WARN("Detected that the third finger command was non-zero even though there "
+81                  "are only two fingers on the gripper\&. The goal for the third finger "
+82                  "should be set to zero or you make experience delays in action results\&.");
+83     }
+84 
+85     jaco_msgs::SetFingersPositionFeedback feedback;
+86     jaco_msgs::SetFingersPositionResult result;
+87     FingerAngles current_finger_positions;
+88     ros::Time current_time = ros::Time::now();
+89 
+90     try
+91     {
+92         arm_comm_\&.getFingerPositions(current_finger_positions);
+93 
+94         if (arm_comm_\&.isStopped())
+95         {
+96             ROS_INFO("Could not complete finger action because the arm is stopped");
+97             result\&.fingers = current_finger_positions\&.constructFingersMsg();
+98             action_server_\&.setAborted(result);
+99             return;
+100         }
+101 
+102         last_nonstall_time_ = current_time;
+103         last_nonstall_finger_positions_ = current_finger_positions;
+104 
+105         FingerAngles target(goal->fingers);
+106         arm_comm_\&.setFingerPositions(target);
+107 
+108         // Loop until the action completed, is preempted, or fails in some way\&.
+109         // timeout is left to the caller since the timeout may greatly depend on
+110         // the context of the movement\&.
+111         while (true)
+112         {
+113             ros::spinOnce();
+114 
+115             if (action_server_\&.isPreemptRequested() || !ros::ok())
+116             {
+117                 result\&.fingers = current_finger_positions\&.constructFingersMsg();
+118                 arm_comm_\&.stopAPI();
+119                 arm_comm_\&.startAPI();
+120                 action_server_\&.setPreempted(result);
+121                 return;
+122             }
+123             else if (arm_comm_\&.isStopped())
+124             {
+125                 result\&.fingers = current_finger_positions\&.constructFingersMsg();
+126                 action_server_\&.setAborted(result);
+127                 return;
+128             }
+129 
+130             arm_comm_\&.getFingerPositions(current_finger_positions);
+131             current_time = ros::Time::now();
+132             feedback\&.fingers = current_finger_positions\&.constructFingersMsg();
+133             action_server_\&.publishFeedback(feedback);
+134 
+135             if (target\&.isCloseToOther(current_finger_positions, tolerance_))
+136             {
+137                 // Check if the action has succeeeded
+138                 result\&.fingers = current_finger_positions\&.constructFingersMsg();
+139                 action_server_\&.setSucceeded(result);
+140                 return;
+141             }
+142             else if (!last_nonstall_finger_positions_\&.isCloseToOther(current_finger_positions, stall_threshold_))
+143             {
+144                 // Check if we are outside of a potential stall condition
+145                 last_nonstall_time_ = current_time;
+146                 last_nonstall_finger_positions_ = current_finger_positions;
+147             }
+148             else if ((current_time - last_nonstall_time_)\&.toSec() > stall_interval_seconds_)
+149             {
+150                 // Check if the full stall condition has been meet
+151                 result\&.fingers = current_finger_positions\&.constructFingersMsg();
+152                 arm_comm_\&.stopAPI();
+153                 arm_comm_\&.startAPI();
+154                 action_server_\&.setPreempted(result);
+155                 return;
+156             }
+157 
+158             ros::Rate(rate_hz_)\&.sleep();
+159         }
+160     }
+161     catch(const std::exception& e)
+162     {
+163         result\&.fingers = current_finger_positions\&.constructFingersMsg();
+164         ROS_ERROR_STREAM(e\&.what());
+165         action_server_\&.setAborted(result);
+166     }
+167 }
+.fi
+.SH "Member Data Documentation"
+.PP 
+.SS "actionlib::SimpleActionServer<\fBjaco_msgs::SetFingersPositionAction\fP> jaco::JacoFingersActionServer::action_server_\fC [private]\fP"
+
+.SS "\fBJacoComm\fP& jaco::JacoFingersActionServer::arm_comm_\fC [private]\fP"
+
+.SS "\fBjaco::FingerAngles\fP jaco::JacoFingersActionServer::last_nonstall_finger_positions_\fC [private]\fP"
+
+.SS "ros::Time jaco::JacoFingersActionServer::last_nonstall_time_\fC [private]\fP"
+
+.SS "ros::NodeHandle jaco::JacoFingersActionServer::node_handle_\fC [private]\fP"
+
+.SS "double jaco::JacoFingersActionServer::rate_hz_\fC [private]\fP"
+
+.SS "double jaco::JacoFingersActionServer::stall_interval_seconds_\fC [private]\fP"
+
+.SS "double jaco::JacoFingersActionServer::stall_threshold_\fC [private]\fP"
+
+.SS "float jaco::JacoFingersActionServer::tolerance_\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Kinova-ROS from the source code\&.

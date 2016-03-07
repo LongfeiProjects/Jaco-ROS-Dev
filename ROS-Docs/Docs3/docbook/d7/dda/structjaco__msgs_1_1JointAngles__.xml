@@ -1,0 +1,220 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="d7/dda/structjaco__msgs_1_1JointAngles__">
+<title>jaco_msgs::JointAngles_ struct Reference</title>
+<para>
+    <programlisting>#include <link linkend="d9/d8d/JointAngles_8h">&quot;JointAngles.h&quot;</link></programlisting>
+</para>
+<para>Inheritance diagram for jaco_msgs::JointAngles_</para>
+<para>
+    <figure>
+        <title>Inheritance graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../de/d8e/structjaco__msgs_1_1JointAngles____inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Collaboration diagram for jaco_msgs::JointAngles_</para>
+<para>
+    <figure>
+        <title>Collaboration graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../da/d29/structjaco__msgs_1_1JointAngles____coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+    <templateparamlist>
+      <param>
+        <type>class</type>
+        <declname>ContainerAllocator</declname>
+        <defname>ContainerAllocator</defname>
+      </param>
+    </templateparamlist>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef float  <link linkend="d7/dda/structjaco__msgs_1_1JointAngles___1ad68900048ed8b91940a224d1c39a1b0d">_joint1_type</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef float  <link linkend="d7/dda/structjaco__msgs_1_1JointAngles___1a7908a1dd9bd0a8b94bfaccdb54237faa">_joint2_type</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef float  <link linkend="d7/dda/structjaco__msgs_1_1JointAngles___1a3ebebbb479a12b31cef37c2dee41d20b">_joint3_type</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef float  <link linkend="d7/dda/structjaco__msgs_1_1JointAngles___1a4d55cf2b8660d9ab7896de50664b9ee1">_joint4_type</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef float  <link linkend="d7/dda/structjaco__msgs_1_1JointAngles___1ab4d7a4bc19b5a6d132666a21273df1ae">_joint5_type</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef float  <link linkend="d7/dda/structjaco__msgs_1_1JointAngles___1a298f6a826b48509fa922df955db3ac71">_joint6_type</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef boost::shared_ptr&lt; ::<link linkend="d7/dda/structjaco__msgs_1_1JointAngles__">jaco_msgs::JointAngles_</link>&lt; ContainerAllocator &gt; const  &gt;  <link linkend="d7/dda/structjaco__msgs_1_1JointAngles___1a99a33fd1ec8ee206d19e905a8ffe989a">ConstPtr</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef boost::shared_ptr&lt; ::<link linkend="d7/dda/structjaco__msgs_1_1JointAngles__">jaco_msgs::JointAngles_</link>&lt; ContainerAllocator &gt; &gt;  <link linkend="d7/dda/structjaco__msgs_1_1JointAngles___1a86d65786f9f73c0a62b47c104f6b9fa9">Ptr</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef <link linkend="d7/dda/structjaco__msgs_1_1JointAngles__">JointAngles_</link>&lt; ContainerAllocator &gt;  <link linkend="d7/dda/structjaco__msgs_1_1JointAngles___1a241d45fab0d4a6249e3ab293288ad9e8">Type</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Public Attributes</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>boost::shared_ptr&lt; std::map&lt; std::string, std::string &gt; &gt; __connection_header</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>_joint1_type joint1</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>_joint2_type joint2</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>_joint3_type joint3</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>_joint4_type joint4</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>_joint5_type joint5</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>_joint6_type joint6</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="d7/dda/structjaco__msgs_1_1JointAngles___1a50a22b1f460bc39c40ef6771e8551e9c">JointAngles_</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="d7/dda/structjaco__msgs_1_1JointAngles___1aef102ac717e984bc88a8e0c27b1b3c6e">JointAngles_</link> (
+const ContainerAllocator &amp; _alloc)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+            <section xml:id="d7/dda/structjaco__msgs_1_1JointAngles___1ad68900048ed8b91940a224d1c39a1b0d">
+                <title>typedef float jaco_msgs::JointAngles_&lt; ContainerAllocator &gt;::_joint1_type</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="d7/dda/structjaco__msgs_1_1JointAngles___1a7908a1dd9bd0a8b94bfaccdb54237faa">
+                <title>typedef float jaco_msgs::JointAngles_&lt; ContainerAllocator &gt;::_joint2_type</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="d7/dda/structjaco__msgs_1_1JointAngles___1a3ebebbb479a12b31cef37c2dee41d20b">
+                <title>typedef float jaco_msgs::JointAngles_&lt; ContainerAllocator &gt;::_joint3_type</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="d7/dda/structjaco__msgs_1_1JointAngles___1a4d55cf2b8660d9ab7896de50664b9ee1">
+                <title>typedef float jaco_msgs::JointAngles_&lt; ContainerAllocator &gt;::_joint4_type</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="d7/dda/structjaco__msgs_1_1JointAngles___1ab4d7a4bc19b5a6d132666a21273df1ae">
+                <title>typedef float jaco_msgs::JointAngles_&lt; ContainerAllocator &gt;::_joint5_type</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="d7/dda/structjaco__msgs_1_1JointAngles___1a298f6a826b48509fa922df955db3ac71">
+                <title>typedef float jaco_msgs::JointAngles_&lt; ContainerAllocator &gt;::_joint6_type</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="d7/dda/structjaco__msgs_1_1JointAngles___1a99a33fd1ec8ee206d19e905a8ffe989a">
+                <title>typedef boost::shared_ptr&lt; ::jaco_msgs::JointAngles_&lt;ContainerAllocator&gt; const&gt; jaco_msgs::JointAngles_&lt; ContainerAllocator &gt;::ConstPtr</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="d7/dda/structjaco__msgs_1_1JointAngles___1a86d65786f9f73c0a62b47c104f6b9fa9">
+                <title>typedef boost::shared_ptr&lt; ::jaco_msgs::JointAngles_&lt;ContainerAllocator&gt; &gt; jaco_msgs::JointAngles_&lt; ContainerAllocator &gt;::Ptr</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="d7/dda/structjaco__msgs_1_1JointAngles___1a241d45fab0d4a6249e3ab293288ad9e8">
+                <title>typedef JointAngles_&lt;ContainerAllocator&gt; jaco_msgs::JointAngles_&lt; ContainerAllocator &gt;::Type</title> <emphasis></emphasis>
+                
+            </section>
+        <section>
+            <title>Member Data Documentation</title>
+        </section>
+            <section xml:id="d7/dda/structjaco__msgs_1_1JointAngles___1a50a22b1f460bc39c40ef6771e8551e9c">
+                <title>jaco_msgs::JointAngles_&lt; ContainerAllocator &gt;::JointAngles_ ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="d7/dda/structjaco__msgs_1_1JointAngles___1aef102ac717e984bc88a8e0c27b1b3c6e">
+                <title>jaco_msgs::JointAngles_&lt; ContainerAllocator &gt;::JointAngles_ (const ContainerAllocator &amp;_alloc)</title> <emphasis></emphasis>
+                
+            </section>
+</section>

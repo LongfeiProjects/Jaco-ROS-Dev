@@ -1,0 +1,199 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="d8/d35/jaco__arm_8h">
+    <title>jaco_arm.h File Reference</title>
+    <programlisting>#include &lt;ros/ros.h&gt;</programlisting>
+    <programlisting>#include &lt;geometry_msgs/PoseStamped.h&gt;</programlisting>
+    <programlisting>#include &lt;geometry_msgs/WrenchStamped.h&gt;</programlisting>
+    <programlisting>#include &lt;geometry_msgs/TwistStamped.h&gt;</programlisting>
+    <programlisting>#include &lt;tf/tf.h&gt;</programlisting>
+    <programlisting>#include &lt;tf/transform_listener.h&gt;</programlisting>
+    <programlisting>#include &lt;sensor_msgs/JointState.h&gt;</programlisting>
+    <programlisting>#include &lt;jaco_msgs/Stop.h&gt;</programlisting>
+    <programlisting>#include &lt;jaco_msgs/Start.h&gt;</programlisting>
+    <programlisting>#include &lt;jaco_msgs/HomeArm.h&gt;</programlisting>
+    <programlisting>#include &lt;jaco_msgs/JointVelocity.h&gt;</programlisting>
+    <programlisting>#include &lt;jaco_msgs/FingerPosition.h&gt;</programlisting>
+    <programlisting>#include &lt;jaco_msgs/JointAngles.h&gt;</programlisting>
+    <programlisting>#include &lt;jaco_msgs/SetForceControlParams.h&gt;</programlisting>
+    <programlisting>#include &lt;time.h&gt;</programlisting>
+    <programlisting>#include &lt;math.h&gt;</programlisting>
+    <programlisting>#include &lt;vector&gt;</programlisting>
+    <programlisting>#include &quot;kinova/KinovaTypes.h&quot;</programlisting>
+    <programlisting>#include &quot;jaco_driver/jaco_comm.h&quot;</programlisting>
+    <programlisting>#include &quot;jaco_driver/jaco_api.h&quot;</programlisting>
+<para>Include dependency diagram for jaco_arm.h</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../d3/d26/jaco__arm_8h__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Included by dependency diagram for jaco_arm.h</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../d5/dea/jaco__arm_8h__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+        <section>
+            <title> Classes </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d3/d95/classjaco_1_1JacoArm">jaco::JacoArm</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <simplesect>
+            <title> Namespaces </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d4/d3c/namespacejaco">jaco</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+    <simplesect>
+        <title>Detailed Description</title>
+    <para>Definition in file D:/Longfei/Desktop/catkin_KinovaROS/src/jaco-ros/jaco_driver/include/jaco_driver/jaco_arm.h</para>
+    </simplesect>
+    <literallayout><computeroutput>
+1 <emphasis class="comment">/*</emphasis>
+2 <emphasis class="comment">&#32;*&#32;jaco_arm_driver.h</emphasis>
+3 <emphasis class="comment">&#32;*</emphasis>
+4 <emphasis class="comment">&#32;*&#32;&#32;Created&#32;on:&#32;Feb&#32;26,&#32;2013</emphasis>
+5 <emphasis class="comment">&#32;*&#32;&#32;Modified&#32;on:&#32;June&#32;25,&#32;2013</emphasis>
+6 <emphasis class="comment">&#32;*&#32;&#32;&#32;&#32;&#32;&#32;Author:&#32;mdedonato,&#32;Clearpath&#32;Robotics</emphasis>
+7 <emphasis class="comment">&#32;*</emphasis>
+8 <emphasis class="comment">&#32;*/</emphasis>
+9 
+10 <emphasis class="preprocessor">#ifndef&#32;JACO_DRIVER_JACO_ARM_H</emphasis>
+11 <emphasis class="preprocessor">#define&#32;JACO_DRIVER_JACO_ARM_H</emphasis>
+12 
+13 <emphasis class="preprocessor">#include&#32;&lt;ros/ros.h&gt;</emphasis>
+14 
+15 <emphasis class="preprocessor">#include&#32;&lt;geometry_msgs/PoseStamped.h&gt;</emphasis>
+16 <emphasis class="preprocessor">#include&#32;&lt;geometry_msgs/WrenchStamped.h&gt;</emphasis>
+17 <emphasis class="preprocessor">#include&#32;&lt;geometry_msgs/TwistStamped.h&gt;</emphasis>
+18 <emphasis class="preprocessor">#include&#32;&lt;tf/tf.h&gt;</emphasis>
+19 <emphasis class="preprocessor">#include&#32;&lt;tf/transform_listener.h&gt;</emphasis>
+20 <emphasis class="preprocessor">#include&#32;&lt;sensor_msgs/JointState.h&gt;</emphasis>
+21 
+22 <emphasis class="preprocessor">#include&#32;&lt;<link linkend="d2/dae/Stop_8h">jaco_msgs/Stop.h</link>&gt;</emphasis>
+23 <emphasis class="preprocessor">#include&#32;&lt;<link linkend="df/d42/Start_8h">jaco_msgs/Start.h</link>&gt;</emphasis>
+24 <emphasis class="preprocessor">#include&#32;&lt;<link linkend="dd/dd4/HomeArm_8h">jaco_msgs/HomeArm.h</link>&gt;</emphasis>
+25 <emphasis class="preprocessor">#include&#32;&lt;<link linkend="d2/d48/JointVelocity_8h">jaco_msgs/JointVelocity.h</link>&gt;</emphasis>
+26 <emphasis class="preprocessor">#include&#32;&lt;<link linkend="da/d1a/FingerPosition_8h">jaco_msgs/FingerPosition.h</link>&gt;</emphasis>
+27 <emphasis class="preprocessor">#include&#32;&lt;<link linkend="d9/d8d/JointAngles_8h">jaco_msgs/JointAngles.h</link>&gt;</emphasis>
+28 <emphasis class="preprocessor">#include&#32;&lt;<link linkend="de/de3/SetForceControlParams_8h">jaco_msgs/SetForceControlParams.h</link>&gt;</emphasis>
+29 
+30 <emphasis class="preprocessor">#include&#32;&lt;time.h&gt;</emphasis>
+31 <emphasis class="preprocessor">#include&#32;&lt;math.h&gt;</emphasis>
+32 <emphasis class="preprocessor">#include&#32;&lt;vector&gt;</emphasis>
+33 
+34 <emphasis class="preprocessor">#include&#32;&quot;<link linkend="df/d36/KinovaTypes_8h">kinova/KinovaTypes.h</link>&quot;</emphasis>
+35 <emphasis class="preprocessor">#include&#32;&quot;<link linkend="d8/de6/jaco__comm_8h">jaco_driver/jaco_comm.h</link>&quot;</emphasis>
+36 <emphasis class="preprocessor">#include&#32;&quot;<link linkend="d0/d9e/jaco__api_8h">jaco_driver/jaco_api.h</link>&quot;</emphasis>
+37 
+38 
+39 <emphasis class="keyword">namespace&#32;</emphasis><link linkend="d4/d3c/namespacejaco">jaco</link>
+40 {
+41 
+42 <emphasis class="comment">//&#32;Maximum&#32;number&#32;of&#32;joints&#32;on&#32;Jaco-like&#32;robots:</emphasis>
+<link linkend="d4/d3c/namespacejaco_1a842fe600d7cc8aba974c8e39e0d88399">43 </link><emphasis class="keyword">static</emphasis>&#32;<emphasis class="keyword">const</emphasis>&#32;<emphasis class="keywordtype">int</emphasis>&#32;&#32;&#32;&#32;&#32;<link linkend="d4/d3c/namespacejaco_1a842fe600d7cc8aba974c8e39e0d88399">JACO_JOINTS_COUNT</link>&#32;=&#32;9;
+44 
+<link linkend="d3/d95/classjaco_1_1JacoArm">45 </link><emphasis class="keyword">class&#32;</emphasis><link linkend="d3/d95/classjaco_1_1JacoArm">JacoArm</link>
+46 {
+47 &#32;<emphasis class="keyword">public</emphasis>:
+48 &#32;&#32;&#32;&#32;<link linkend="d3/d95/classjaco_1_1JacoArm_1ab29d25cb3b4bafdc523cbe271c801681">JacoArm</link>(<link linkend="d5/d2b/classjaco_1_1JacoComm">JacoComm</link>&amp;&#32;arm,&#32;<emphasis class="keyword">const</emphasis>&#32;ros::NodeHandle&#32;&amp;node_handle);
+49 &#32;&#32;&#32;&#32;<link linkend="d3/d95/classjaco_1_1JacoArm_1a77535c062ca1d8e11b11e691bb1ee0da">~JacoArm</link>();
+50 
+51 &#32;&#32;&#32;&#32;<emphasis class="keywordtype">void</emphasis>&#32;<link linkend="d3/d95/classjaco_1_1JacoArm_1a2c2cfc44e480845bbf7e78c6bfe454b6">jointVelocityCallback</link>(<emphasis class="keyword">const</emphasis>&#32;<link linkend="d7/dba/namespacejaco__msgs_1aab606d270e36965850c5e08ce8073242">jaco_msgs::JointVelocityConstPtr</link>&amp;&#32;joint_vel);
+52 &#32;&#32;&#32;&#32;<emphasis class="keywordtype">void</emphasis>&#32;<link linkend="d3/d95/classjaco_1_1JacoArm_1a091f2eaffef84362f69e3b49482982db">cartesianVelocityCallback</link>(<emphasis class="keyword">const</emphasis>&#32;geometry_msgs::TwistStampedConstPtr&amp;&#32;cartesian_vel);
+53 
+54 &#32;&#32;&#32;&#32;<emphasis class="keywordtype">bool</emphasis>&#32;<link linkend="d3/d95/classjaco_1_1JacoArm_1a14ddcea579804fbbd3fb11643bc91e78">stopServiceCallback</link>(<link linkend="db/d9b/structjaco__msgs_1_1StopRequest__">jaco_msgs::Stop::Request</link>&#32;&amp;req,&#32;<link linkend="d3/d1d/structjaco__msgs_1_1StopResponse__">jaco_msgs::Stop::Response</link>&#32;&amp;res);
+55 &#32;&#32;&#32;&#32;<emphasis class="keywordtype">bool</emphasis>&#32;<link linkend="d3/d95/classjaco_1_1JacoArm_1a0b59f245a5ca363c52dcbc211f20fa64">startServiceCallback</link>(<link linkend="d3/ded/structjaco__msgs_1_1StartRequest__">jaco_msgs::Start::Request</link>&#32;&amp;req,&#32;<link linkend="df/dc7/structjaco__msgs_1_1StartResponse__">jaco_msgs::Start::Response</link>&#32;&amp;res);
+56 &#32;&#32;&#32;&#32;<emphasis class="keywordtype">bool</emphasis>&#32;<link linkend="d3/d95/classjaco_1_1JacoArm_1a0296802ee4994977c35532077dd28a44">homeArmServiceCallback</link>(<link linkend="de/dcb/structjaco__msgs_1_1HomeArmRequest__">jaco_msgs::HomeArm::Request</link>&#32;&amp;req,&#32;<link linkend="d8/d71/structjaco__msgs_1_1HomeArmResponse__">jaco_msgs::HomeArm::Response</link>&#32;&amp;res);
+57 &#32;&#32;&#32;&#32;
+58 &#32;&#32;&#32;&#32;<emphasis class="keywordtype">bool</emphasis>&#32;<link linkend="d3/d95/classjaco_1_1JacoArm_1a7a5b8120d770ed6ab0bd4593213de712">setForceControlParamsCallback</link>(<link linkend="df/db3/structjaco__msgs_1_1SetForceControlParamsRequest__">jaco_msgs::SetForceControlParams::Request</link>&#32;&amp;req,
+59 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="df/dd2/structjaco__msgs_1_1SetForceControlParamsResponse__">jaco_msgs::SetForceControlParams::Response</link>&#32;&amp;res);
+60 &#32;&#32;&#32;&#32;<emphasis class="keywordtype">bool</emphasis>&#32;<link linkend="d3/d95/classjaco_1_1JacoArm_1a6c96a5dcf017d0b054048e7765cd3f38">startForceControlCallback</link>(<link linkend="d3/ded/structjaco__msgs_1_1StartRequest__">jaco_msgs::Start::Request</link>&#32;&amp;req,
+61 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="df/dc7/structjaco__msgs_1_1StartResponse__">jaco_msgs::Start::Response</link>&#32;&amp;res);
+62 &#32;&#32;&#32;&#32;<emphasis class="keywordtype">bool</emphasis>&#32;<link linkend="d3/d95/classjaco_1_1JacoArm_1a0ddc9f2458a2c5e17e095b03b72699dc">stopForceControlCallback</link>(<link linkend="db/d9b/structjaco__msgs_1_1StopRequest__">jaco_msgs::Stop::Request</link>&#32;&amp;req,
+63 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="d3/d1d/structjaco__msgs_1_1StopResponse__">jaco_msgs::Stop::Response</link>&#32;&amp;res);
+64 
+65 &#32;<emphasis class="keyword">private</emphasis>:
+66 &#32;&#32;&#32;&#32;<emphasis class="keywordtype">void</emphasis>&#32;<link linkend="d3/d95/classjaco_1_1JacoArm_1ac9feee593db40584276b22f7db03206e">positionTimer</link>(<emphasis class="keyword">const</emphasis>&#32;ros::TimerEvent&amp;);
+67 &#32;&#32;&#32;&#32;<emphasis class="keywordtype">void</emphasis>&#32;<link linkend="d3/d95/classjaco_1_1JacoArm_1a0effe31602b4af803cff1566a358fdfb">cartesianVelocityTimer</link>(<emphasis class="keyword">const</emphasis>&#32;ros::TimerEvent&amp;);
+68 &#32;&#32;&#32;&#32;<emphasis class="keywordtype">void</emphasis>&#32;<link linkend="d3/d95/classjaco_1_1JacoArm_1a0897025ed2834e5802e504b64d67a88b">jointVelocityTimer</link>(<emphasis class="keyword">const</emphasis>&#32;ros::TimerEvent&amp;);
+69 &#32;&#32;&#32;&#32;<emphasis class="keywordtype">void</emphasis>&#32;<link linkend="d3/d95/classjaco_1_1JacoArm_1a3a04586ffe92b995c58c9fa94a030bf8">statusTimer</link>(<emphasis class="keyword">const</emphasis>&#32;ros::TimerEvent&amp;);
+70 
+71 &#32;&#32;&#32;&#32;<emphasis class="keywordtype">void</emphasis>&#32;<link linkend="d3/d95/classjaco_1_1JacoArm_1a238a888aa46e98fcae569bf942d61e32">publishJointAngles</link>(<emphasis class="keywordtype">void</emphasis>);
+72 &#32;&#32;&#32;&#32;<emphasis class="keywordtype">void</emphasis>&#32;<link linkend="d3/d95/classjaco_1_1JacoArm_1a91106f68edeff4b26d02a6d7a8528df6">publishToolPosition</link>(<emphasis class="keywordtype">void</emphasis>);
+73 &#32;&#32;&#32;&#32;<emphasis class="keywordtype">void</emphasis>&#32;<link linkend="d3/d95/classjaco_1_1JacoArm_1a91d14ff9734d5941167ba0ec13ec3e36">publishToolWrench</link>(<emphasis class="keywordtype">void</emphasis>);
+74 &#32;&#32;&#32;&#32;<emphasis class="keywordtype">void</emphasis>&#32;<link linkend="d3/d95/classjaco_1_1JacoArm_1a978feb8b29f9ef7d6d42596984e1962a">publishFingerPosition</link>(<emphasis class="keywordtype">void</emphasis>);
+75 
+<link linkend="d3/d95/classjaco_1_1JacoArm_1a110ba0f607ab1c4c903e8fb59fe79c3b">76 </link>&#32;&#32;&#32;&#32;tf::TransformListener&#32;<link linkend="d3/d95/classjaco_1_1JacoArm_1a110ba0f607ab1c4c903e8fb59fe79c3b">tf_listener_</link>;
+<link linkend="d3/d95/classjaco_1_1JacoArm_1aa8b6a99580f2ccf8a5c509cc0f3b3c8e">77 </link>&#32;&#32;&#32;&#32;ros::NodeHandle&#32;<link linkend="d3/d95/classjaco_1_1JacoArm_1aa8b6a99580f2ccf8a5c509cc0f3b3c8e">node_handle_</link>;
+<link linkend="d3/d95/classjaco_1_1JacoArm_1a2f9cbba855994058b82c0f4628349286">78 </link>&#32;&#32;&#32;&#32;<link linkend="d5/d2b/classjaco_1_1JacoComm">JacoComm</link>&#32;&amp;<link linkend="d3/d95/classjaco_1_1JacoArm_1a2f9cbba855994058b82c0f4628349286">jaco_comm_</link>;
+79 
+80 &#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;Publishers,&#32;subscribers,&#32;services</emphasis>
+<link linkend="d3/d95/classjaco_1_1JacoArm_1a531289127704e9ffb5055cc58d3f90f8">81 </link>&#32;&#32;&#32;&#32;ros::Subscriber&#32;<link linkend="d3/d95/classjaco_1_1JacoArm_1a531289127704e9ffb5055cc58d3f90f8">joint_velocity_subscriber_</link>;
+<link linkend="d3/d95/classjaco_1_1JacoArm_1a7598c2dfaa6677241e490eb42f175a3b">82 </link>&#32;&#32;&#32;&#32;ros::Subscriber&#32;<link linkend="d3/d95/classjaco_1_1JacoArm_1a7598c2dfaa6677241e490eb42f175a3b">cartesian_velocity_subscriber_</link>;
+83 
+<link linkend="d3/d95/classjaco_1_1JacoArm_1a074f24a17f50b88921a9bc9d8e52c09b">84 </link>&#32;&#32;&#32;&#32;ros::Publisher&#32;<link linkend="d3/d95/classjaco_1_1JacoArm_1a074f24a17f50b88921a9bc9d8e52c09b">joint_angles_publisher_</link>;
+<link linkend="d3/d95/classjaco_1_1JacoArm_1a9d6b0687a753f44ecdb2e93aeeddd288">85 </link>&#32;&#32;&#32;&#32;ros::Publisher&#32;<link linkend="d3/d95/classjaco_1_1JacoArm_1a9d6b0687a753f44ecdb2e93aeeddd288">tool_position_publisher_</link>;
+<link linkend="d3/d95/classjaco_1_1JacoArm_1abff4dc1bbe63e0be7cd20ac7c4d37be4">86 </link>&#32;&#32;&#32;&#32;ros::Publisher&#32;<link linkend="d3/d95/classjaco_1_1JacoArm_1abff4dc1bbe63e0be7cd20ac7c4d37be4">tool_wrench_publisher_</link>;
+<link linkend="d3/d95/classjaco_1_1JacoArm_1a323990f9bd26de33240df3f107e29a49">87 </link>&#32;&#32;&#32;&#32;ros::Publisher&#32;<link linkend="d3/d95/classjaco_1_1JacoArm_1a323990f9bd26de33240df3f107e29a49">finger_position_publisher_</link>;
+<link linkend="d3/d95/classjaco_1_1JacoArm_1a914eb71a6de747a2e63b880b2a0ac0b4">88 </link>&#32;&#32;&#32;&#32;ros::Publisher&#32;<link linkend="d3/d95/classjaco_1_1JacoArm_1a914eb71a6de747a2e63b880b2a0ac0b4">joint_state_publisher_</link>;
+89 
+<link linkend="d3/d95/classjaco_1_1JacoArm_1a43eca41486bfa5f012085d3bb02ac7ca">90 </link>&#32;&#32;&#32;&#32;ros::ServiceServer&#32;<link linkend="d3/d95/classjaco_1_1JacoArm_1a43eca41486bfa5f012085d3bb02ac7ca">stop_service_</link>;
+<link linkend="d3/d95/classjaco_1_1JacoArm_1a7003937a11db04de838d05de05d29481">91 </link>&#32;&#32;&#32;&#32;ros::ServiceServer&#32;<link linkend="d3/d95/classjaco_1_1JacoArm_1a7003937a11db04de838d05de05d29481">start_service_</link>;
+<link linkend="d3/d95/classjaco_1_1JacoArm_1af025f6af7b63a3dd5ce18a31b082eec3">92 </link>&#32;&#32;&#32;&#32;ros::ServiceServer&#32;<link linkend="d3/d95/classjaco_1_1JacoArm_1af025f6af7b63a3dd5ce18a31b082eec3">homing_service_</link>;
+93 
+<link linkend="d3/d95/classjaco_1_1JacoArm_1a65f6584b95beb04af852cba7d953fdc3">94 </link>&#32;&#32;&#32;&#32;ros::ServiceServer&#32;<link linkend="d3/d95/classjaco_1_1JacoArm_1a65f6584b95beb04af852cba7d953fdc3">set_force_control_params_service_</link>;
+<link linkend="d3/d95/classjaco_1_1JacoArm_1aaf2a407b08e3982c463bbcf364be2dfa">95 </link>&#32;&#32;&#32;&#32;ros::ServiceServer&#32;<link linkend="d3/d95/classjaco_1_1JacoArm_1aaf2a407b08e3982c463bbcf364be2dfa">start_force_control_service_</link>;
+<link linkend="d3/d95/classjaco_1_1JacoArm_1af20526f276fc6708aacec52ca08ad189">96 </link>&#32;&#32;&#32;&#32;ros::ServiceServer&#32;<link linkend="d3/d95/classjaco_1_1JacoArm_1af20526f276fc6708aacec52ca08ad189">stop_force_control_service_</link>;
+97 
+98 &#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;Timers&#32;for&#32;control&#32;loops</emphasis>
+<link linkend="d3/d95/classjaco_1_1JacoArm_1ac11bbbecb7bebfef8b77d31b0294017a">99 </link>&#32;&#32;&#32;&#32;ros::Timer&#32;<link linkend="d3/d95/classjaco_1_1JacoArm_1ac11bbbecb7bebfef8b77d31b0294017a">status_timer_</link>;
+<link linkend="d3/d95/classjaco_1_1JacoArm_1a11e0ed71d6c21e5df7e88fd6ab61df95">100 </link>&#32;&#32;&#32;&#32;ros::Timer&#32;<link linkend="d3/d95/classjaco_1_1JacoArm_1a11e0ed71d6c21e5df7e88fd6ab61df95">cartesian_vel_timer_</link>;
+<link linkend="d3/d95/classjaco_1_1JacoArm_1ac4ad9c07f3a173e89d6767ec7a2dba12">101 </link>&#32;&#32;&#32;&#32;ros::Timer&#32;<link linkend="d3/d95/classjaco_1_1JacoArm_1ac4ad9c07f3a173e89d6767ec7a2dba12">joint_vel_timer_</link>;
+102 
+103 &#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;Parameters</emphasis>
+<link linkend="d3/d95/classjaco_1_1JacoArm_1aa44e18590ad8352a058df6abbd4a3c3b">104 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">double</emphasis>&#32;<link linkend="d3/d95/classjaco_1_1JacoArm_1aa44e18590ad8352a058df6abbd4a3c3b">status_interval_seconds_</link>;
+<link linkend="d3/d95/classjaco_1_1JacoArm_1ac27941dace9da942beeff70926cc736e">105 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">double</emphasis>&#32;<link linkend="d3/d95/classjaco_1_1JacoArm_1ac27941dace9da942beeff70926cc736e">joint_vel_timeout_seconds_</link>;
+<link linkend="d3/d95/classjaco_1_1JacoArm_1a822ad8d6fcc8719c5a090456998e832a">106 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">double</emphasis>&#32;<link linkend="d3/d95/classjaco_1_1JacoArm_1a822ad8d6fcc8719c5a090456998e832a">cartesian_vel_timeout_seconds_</link>;
+<link linkend="d3/d95/classjaco_1_1JacoArm_1a832938e80c91ce57ec241a1429133926">107 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">double</emphasis>&#32;<link linkend="d3/d95/classjaco_1_1JacoArm_1a832938e80c91ce57ec241a1429133926">joint_vel_interval_seconds_</link>;
+<link linkend="d3/d95/classjaco_1_1JacoArm_1aa111ac63977d9a50b7e707b4a9e75e20">108 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">double</emphasis>&#32;<link linkend="d3/d95/classjaco_1_1JacoArm_1aa111ac63977d9a50b7e707b4a9e75e20">cartesian_vel_interval_seconds_</link>;
+<link linkend="d3/d95/classjaco_1_1JacoArm_1a4f7d75d1cfcf82b4221e6bd6e4412cf9">109 </link>&#32;&#32;&#32;&#32;std::string&#32;<link linkend="d3/d95/classjaco_1_1JacoArm_1a4f7d75d1cfcf82b4221e6bd6e4412cf9">tf_prefix_</link>;
+<link linkend="d3/d95/classjaco_1_1JacoArm_1a45f8b1fbeec4d1abfcad6d3f9e65b6ca">110 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">double</emphasis>&#32;<link linkend="d3/d95/classjaco_1_1JacoArm_1a45f8b1fbeec4d1abfcad6d3f9e65b6ca">finger_conv_ratio_</link>;
+<link linkend="d3/d95/classjaco_1_1JacoArm_1a20deb1358ca2385fcf9dca3f0f771409">111 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">bool</emphasis>&#32;<link linkend="d3/d95/classjaco_1_1JacoArm_1a20deb1358ca2385fcf9dca3f0f771409">convert_joint_velocities_</link>;
+112 
+113 &#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;State&#32;tracking&#32;or&#32;utility&#32;members</emphasis>
+<link linkend="d3/d95/classjaco_1_1JacoArm_1a17701f668a0b3ea2accf6c5fb420e012">114 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">bool</emphasis>&#32;<link linkend="d3/d95/classjaco_1_1JacoArm_1a17701f668a0b3ea2accf6c5fb420e012">cartesian_vel_timer_flag_</link>;
+<link linkend="d3/d95/classjaco_1_1JacoArm_1a27effbbd66cd47378b49995cf80b8ffb">115 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">bool</emphasis>&#32;<link linkend="d3/d95/classjaco_1_1JacoArm_1a27effbbd66cd47378b49995cf80b8ffb">joint_vel_timer_flag_</link>;
+116 
+<link linkend="d3/d95/classjaco_1_1JacoArm_1a640c8142aa9ab07ea9c2a3d7c5eb74cb">117 </link>&#32;&#32;&#32;&#32;<link linkend="d0/df5/structAngularInfo">AngularInfo</link>&#32;<link linkend="d3/d95/classjaco_1_1JacoArm_1a640c8142aa9ab07ea9c2a3d7c5eb74cb">joint_velocities_</link>;
+<link linkend="d3/d95/classjaco_1_1JacoArm_1a804e6400a10726f2ec0af9ec718bd0cf">118 </link>&#32;&#32;&#32;&#32;<link linkend="dd/d00/structCartesianInfo">CartesianInfo</link>&#32;<link linkend="d3/d95/classjaco_1_1JacoArm_1a804e6400a10726f2ec0af9ec718bd0cf">cartesian_velocities_</link>;
+119 
+<link linkend="d3/d95/classjaco_1_1JacoArm_1a36758d949907e58807d6d4c3792a01df">120 </link>&#32;&#32;&#32;&#32;ros::Time&#32;<link linkend="d3/d95/classjaco_1_1JacoArm_1a36758d949907e58807d6d4c3792a01df">last_joint_vel_cmd_time_</link>;
+<link linkend="d3/d95/classjaco_1_1JacoArm_1a2ad620e8551ca62db4077135597b6618">121 </link>&#32;&#32;&#32;&#32;ros::Time&#32;<link linkend="d3/d95/classjaco_1_1JacoArm_1a2ad620e8551ca62db4077135597b6618">last_cartesian_vel_cmd_time_</link>;
+122 
+<link linkend="d3/d95/classjaco_1_1JacoArm_1a9a6611a10119b2651aa96eb21ecd10ad">123 </link>&#32;&#32;&#32;&#32;std::vector&lt;&#32;std::string&#32;&gt;&#32;<link linkend="d3/d95/classjaco_1_1JacoArm_1a9a6611a10119b2651aa96eb21ecd10ad">joint_names_</link>;
+124 };
+125 
+126 }&#32;&#32;<emphasis class="comment">//&#32;namespace&#32;jaco</emphasis>
+127 <emphasis class="preprocessor">#endif&#32;&#32;//&#32;JACO_DRIVER_JACO_ARM_H</emphasis>
+    </computeroutput></literallayout>
+</section>

@@ -1,0 +1,79 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="dd/d05/jaco__demo_2____init_____8py">
+    <title>__init__.py File Reference</title>
+<para>Include dependency diagram for __init__.py</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../dc/ddc/jaco__demo_2____init_____8py__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Included by dependency diagram for __init__.py</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../d8/da6/jaco__demo_2____init_____8py__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+        <simplesect>
+            <title> Namespaces </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d3/d0a/namespacejaco__demo">jaco_demo</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+    <simplesect>
+        <title>Detailed Description</title>
+    <para>Definition in file D:/Longfei/Desktop/catkin_KinovaROS/devel/lib/python2.7/dist-packages/jaco_demo/__init__.py</para>
+    </simplesect>
+    <literallayout><computeroutput>
+<link linkend="d3/d0a/namespacejaco__demo">1 </link><emphasis class="comment">#&#32;generated&#32;from&#32;catkin/cmake/template/__init__.py.in</emphasis>
+2 <emphasis class="comment">#&#32;keep&#32;symbol&#32;table&#32;as&#32;clean&#32;as&#32;possible&#32;by&#32;deleting&#32;all&#32;unnecessary&#32;symbols</emphasis>
+3 
+4 <emphasis class="keyword">from</emphasis>&#32;os&#32;<emphasis class="keyword">import</emphasis>&#32;path&#32;<emphasis class="keyword">as</emphasis>&#32;os_path
+5 <emphasis class="keyword">from</emphasis>&#32;sys&#32;<emphasis class="keyword">import</emphasis>&#32;path&#32;<emphasis class="keyword">as</emphasis>&#32;sys_path
+6 
+7 <emphasis class="keyword">from</emphasis>&#32;pkgutil&#32;<emphasis class="keyword">import</emphasis>&#32;extend_path
+8 
+<link linkend="d3/d0a/namespacejaco__demo_1af784247e9de42619c18a7e5d44c6b375">9 </link>__extended_path&#32;=&#32;<emphasis class="stringliteral">&quot;/home/longfei/catkin_KinovaROS/src/jaco-ros/jaco_demo/nodes&quot;</emphasis>.split(<emphasis class="stringliteral">&quot;;&quot;</emphasis>)
+10 <emphasis class="keywordflow">for</emphasis>&#32;p&#32;<emphasis class="keywordflow">in</emphasis>&#32;reversed(__extended_path):
+11 &#32;&#32;&#32;&#32;sys_path.insert(0,&#32;p)
+12 &#32;&#32;&#32;&#32;del&#32;p
+13 del&#32;sys_path
+14 
+<link linkend="d3/d0a/namespacejaco__demo_1a2905ccdea36f19d995e18224d6687ad8">15 </link>__path__&#32;=&#32;extend_path(__path__,&#32;__name__)
+16 del&#32;extend_path
+17 
+<link linkend="d3/d0a/namespacejaco__demo_1ada50e7bb0d50193ddbee4715600f4ae0">18 </link>__execfiles&#32;=&#32;[]
+19 <emphasis class="keywordflow">for</emphasis>&#32;p&#32;<emphasis class="keywordflow">in</emphasis>&#32;__extended_path:
+<link linkend="d3/d0a/namespacejaco__demo_1a3119f51bb1227df24870e8da520a08b8">20 </link>&#32;&#32;&#32;&#32;src_init_file&#32;=&#32;os_path.join(p,&#32;__name__&#32;+&#32;<emphasis class="stringliteral">&apos;.py&apos;</emphasis>)
+21 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;os_path.isfile(src_init_file):
+22 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;__execfiles.append(src_init_file)
+23 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">else</emphasis>:
+24 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;src_init_file&#32;=&#32;os_path.join(p,&#32;__name__,&#32;<emphasis class="stringliteral">&apos;__init__.py&apos;</emphasis>)
+25 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;os_path.isfile(src_init_file):
+26 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;__execfiles.append(src_init_file)
+27 &#32;&#32;&#32;&#32;del&#32;src_init_file
+28 &#32;&#32;&#32;&#32;del&#32;p
+29 del&#32;os_path
+30 del&#32;__extended_path
+31 
+32 <emphasis class="keywordflow">for</emphasis>&#32;__execfile&#32;<emphasis class="keywordflow">in</emphasis>&#32;__execfiles:
+33 &#32;&#32;&#32;&#32;with&#32;open(__execfile,&#32;<emphasis class="stringliteral">&apos;r&apos;)&#32;as&#32;__fh:</emphasis>
+34 <emphasis class="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;exec(__fh.read())</emphasis>
+35 <emphasis class="stringliteral">&#32;&#32;&#32;&#32;del&#32;__fh</emphasis>
+36 <emphasis class="stringliteral">&#32;&#32;&#32;&#32;del&#32;__execfile</emphasis>
+37 <emphasis class="stringliteral">del&#32;__execfiles</emphasis>
+<emphasis class="stringliteral">    </computeroutput></literallayout>
+</section>

@@ -1,0 +1,234 @@
+.TH "jaco::JacoPoseActionServer" 3 "Thu Mar 3 2016" "Version 1.0.1" "Kinova-ROS" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+jaco::JacoPoseActionServer \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include 'jaco_pose_action\&.h'\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBactionCallback\fP (const \fBjaco_msgs::ArmPoseGoalConstPtr\fP &)"
+.br
+.ti -1c
+.RI "\fBJacoPoseActionServer\fP (\fBJacoComm\fP &, const ros::NodeHandle &n)"
+.br
+.ti -1c
+.RI "\fB~JacoPoseActionServer\fP ()"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "actionlib::SimpleActionServer< \fBjaco_msgs::ArmPoseAction\fP > \fBaction_server_\fP"
+.br
+.ti -1c
+.RI "std::string \fBapi_origin_frame_\fP"
+.br
+.ti -1c
+.RI "\fBJacoComm\fP & \fBarm_comm_\fP"
+.br
+.ti -1c
+.RI "\fBjaco::JacoPose\fP \fBlast_nonstall_pose_\fP"
+.br
+.ti -1c
+.RI "ros::Time \fBlast_nonstall_time_\fP"
+.br
+.ti -1c
+.RI "tf::TransformListener \fBlistener\fP"
+.br
+.ti -1c
+.RI "ros::NodeHandle \fBnode_handle_\fP"
+.br
+.ti -1c
+.RI "double \fBrate_hz_\fP"
+.br
+.ti -1c
+.RI "double \fBstall_interval_seconds_\fP"
+.br
+.ti -1c
+.RI "double \fBstall_threshold_\fP"
+.br
+.ti -1c
+.RI "std::string \fBtf_prefix_\fP"
+.br
+.ti -1c
+.RI "float \fBtolerance_\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "jaco::JacoPoseActionServer::JacoPoseActionServer (\fBJacoComm\fP & arm_comm, const ros::NodeHandle & n)"
+
+.PP
+.nf
+56     : arm_comm_(arm_comm),
+57       node_handle_(nh, "arm_pose"),
+58       action_server_(node_handle_, "arm_pose",
+59                      boost::bind(&JacoPoseActionServer::actionCallback, this, _1), false)
+60 {
+61     double tolerance;
+62     node_handle_\&.param<double>("stall_interval_seconds", stall_interval_seconds_, 1\&.0);
+63     node_handle_\&.param<double>("stall_threshold", stall_threshold_, 0\&.005);
+64     node_handle_\&.param<double>("rate_hz", rate_hz_, 10\&.0);
+65     node_handle_\&.param<double>("tolerance", tolerance, 0\&.01);
+66     node_handle_\&.param<std::string>("tf_prefix", tf_prefix_, "jaco_");
+67 
+68     tolerance_ = static_cast<float>(tolerance);
+69     std::stringstream ss;
+70     ss << tf_prefix_ << "api_origin";
+71     api_origin_frame_ = ss\&.str();
+72 
+73     action_server_\&.start();
+74 }
+.fi
+.SS "jaco::JacoPoseActionServer::~JacoPoseActionServer ()"
+
+.PP
+.nf
+78 {
+79 }
+.fi
+.SH "Member Function Documentation"
+.PP 
+.SS "void jaco::JacoPoseActionServer::actionCallback (const \fBjaco_msgs::ArmPoseGoalConstPtr\fP & goal)"
+
+.PP
+.nf
+83 {
+84     jaco_msgs::ArmPoseFeedback feedback;
+85     jaco_msgs::ArmPoseResult result;
+86     feedback\&.pose\&.header\&.frame_id = goal->pose\&.header\&.frame_id;
+87     result\&.pose\&.header\&.frame_id = goal->pose\&.header\&.frame_id;
+88 
+89     ros::Time current_time = ros::Time::now();
+90     JacoPose current_pose;
+91     geometry_msgs::PoseStamped local_pose;
+92     local_pose\&.header\&.frame_id = api_origin_frame_;
+93 
+94     try
+95     {
+96         // Put the goal pose into the frame used by the arm
+97         if (ros::ok()
+98                 && !listener\&.canTransform(api_origin_frame_, goal->pose\&.header\&.frame_id,
+99                                           goal->pose\&.header\&.stamp))
+100         {
+101             ROS_ERROR("Could not get transfrom from %s to %s, aborting cartesian movement",
+102                       api_origin_frame_\&.c_str(), goal->pose\&.header\&.frame_id\&.c_str());
+103             action_server_\&.setAborted(result);
+104             return;
+105         }
+106 
+107         listener\&.transformPose(local_pose\&.header\&.frame_id, goal->pose, local_pose);
+108         arm_comm_\&.getCartesianPosition(current_pose);
+109 
+110         if (arm_comm_\&.isStopped())
+111         {
+112             ROS_INFO("Could not complete cartesian action because the arm is 'stopped'\&.");
+113             local_pose\&.pose = current_pose\&.constructPoseMsg();
+114             listener\&.transformPose(result\&.pose\&.header\&.frame_id, local_pose, result\&.pose);
+115             action_server_\&.setAborted(result);
+116             return;
+117         }
+118 
+119         last_nonstall_time_ = current_time;
+120         last_nonstall_pose_ = current_pose;
+121 
+122         JacoPose target(local_pose\&.pose);
+123         arm_comm_\&.setCartesianPosition(target);
+124 
+125         while (true)
+126         {
+127             ros::spinOnce();
+128 
+129             if (action_server_\&.isPreemptRequested() || !ros::ok())
+130             {
+131                 result\&.pose = feedback\&.pose;
+132                 arm_comm_\&.stopAPI();
+133                 arm_comm_\&.startAPI();
+134                 action_server_\&.setPreempted(result);
+135                 return;
+136             }
+137             else if (arm_comm_\&.isStopped())
+138             {
+139                 result\&.pose = feedback\&.pose;
+140                 action_server_\&.setAborted(result);
+141                 return;
+142             }
+143 
+144             arm_comm_\&.getCartesianPosition(current_pose);
+145             current_time = ros::Time::now();
+146             local_pose\&.pose = current_pose\&.constructPoseMsg();
+147             listener\&.transformPose(feedback\&.pose\&.header\&.frame_id, local_pose, feedback\&.pose);
+148             action_server_\&.publishFeedback(feedback);
+149 
+150             if (target\&.isCloseToOther(current_pose, tolerance_))
+151             {
+152                 result\&.pose = feedback\&.pose;
+153                 action_server_\&.setSucceeded(result);
+154                 return;
+155             }
+156             else if (!last_nonstall_pose_\&.isCloseToOther(current_pose, stall_threshold_))
+157             {
+158                 // Check if we are outside of a potential stall condition
+159                 last_nonstall_time_ = current_time;
+160                 last_nonstall_pose_ = current_pose;
+161             }
+162             else if ((current_time - last_nonstall_time_)\&.toSec() > stall_interval_seconds_)
+163             {
+164                 // Check if the full stall condition has been meet
+165                 result\&.pose = feedback\&.pose;
+166                 arm_comm_\&.stopAPI();
+167                 arm_comm_\&.startAPI();
+168                 action_server_\&.setPreempted(result);
+169                 return;
+170             }
+171 
+172             ros::Rate(rate_hz_)\&.sleep();
+173         }
+174     }
+175     catch(const std::exception& e)
+176     {
+177         result\&.pose = feedback\&.pose;
+178         ROS_ERROR_STREAM(e\&.what());
+179         action_server_\&.setAborted(result);
+180     }
+181 }
+.fi
+.SH "Member Data Documentation"
+.PP 
+.SS "actionlib::SimpleActionServer<\fBjaco_msgs::ArmPoseAction\fP> jaco::JacoPoseActionServer::action_server_\fC [private]\fP"
+
+.SS "std::string jaco::JacoPoseActionServer::api_origin_frame_\fC [private]\fP"
+
+.SS "\fBJacoComm\fP& jaco::JacoPoseActionServer::arm_comm_\fC [private]\fP"
+
+.SS "\fBjaco::JacoPose\fP jaco::JacoPoseActionServer::last_nonstall_pose_\fC [private]\fP"
+
+.SS "ros::Time jaco::JacoPoseActionServer::last_nonstall_time_\fC [private]\fP"
+
+.SS "tf::TransformListener jaco::JacoPoseActionServer::listener\fC [private]\fP"
+
+.SS "ros::NodeHandle jaco::JacoPoseActionServer::node_handle_\fC [private]\fP"
+
+.SS "double jaco::JacoPoseActionServer::rate_hz_\fC [private]\fP"
+
+.SS "double jaco::JacoPoseActionServer::stall_interval_seconds_\fC [private]\fP"
+
+.SS "double jaco::JacoPoseActionServer::stall_threshold_\fC [private]\fP"
+
+.SS "std::string jaco::JacoPoseActionServer::tf_prefix_\fC [private]\fP"
+
+.SS "float jaco::JacoPoseActionServer::tolerance_\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Kinova-ROS from the source code\&.

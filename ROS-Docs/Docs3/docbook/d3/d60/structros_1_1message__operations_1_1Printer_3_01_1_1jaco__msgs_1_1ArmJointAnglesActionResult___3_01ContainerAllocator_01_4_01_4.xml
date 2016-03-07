@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="d3/d60/structros_1_1message__operations_1_1Printer_3_01_1_1jaco__msgs_1_1ArmJointAnglesActionResult___3_01ContainerAllocator_01_4_01_4">
+<title>ros::message_operations::Printer&lt; ::jaco_msgs::ArmJointAnglesActionResult_&lt; ContainerAllocator &gt; &gt; struct Reference</title>
+<para>
+    <programlisting>#include <link linkend="dd/de1/ArmJointAnglesActionResult_8h">&quot;ArmJointAnglesActionResult.h&quot;</link></programlisting>
+</para>
+<para>Inheritance diagram for ros::message_operations::Printer&lt; ::jaco_msgs::ArmJointAnglesActionResult_&lt; ContainerAllocator &gt; &gt;</para>
+<para>
+    <figure>
+        <title>Inheritance graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../df/d49/structros_1_1message__operations_1_1Printer_3_01_1_1jaco__msgs_1_1ArmJointAnglesActionResult___31394571fa79d3fdbac366ef2ded70768.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Collaboration diagram for ros::message_operations::Printer&lt; ::jaco_msgs::ArmJointAnglesActionResult_&lt; ContainerAllocator &gt; &gt;</para>
+<para>
+    <figure>
+        <title>Collaboration graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../d2/deb/structros_1_1message__operations_1_1Printer_3_01_1_1jaco__msgs_1_1ArmJointAnglesActionResult___30c1978640f764289ddf406dd54034df1.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+    <templateparamlist>
+      <param>
+        <type>class ContainerAllocator</type>
+      </param>
+    </templateparamlist>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static void <link linkend="d3/d60/structros_1_1message__operations_1_1Printer_3_01_1_1jaco__msgs_1_1ArmJointAnglesActionResult___3_01ContainerAllocator_01_4_01_4_1a84ef1e26ad4c49c3b45441133f02b86a">stream</link> (
+Stream &amp; s, const std::string &amp; indent, const ::<link linkend="d4/d5d/structjaco__msgs_1_1ArmJointAnglesActionResult__">jaco_msgs::ArmJointAnglesActionResult_</link>&lt; ContainerAllocator &gt; &amp; v)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+            <section xml:id="d3/d60/structros_1_1message__operations_1_1Printer_3_01_1_1jaco__msgs_1_1ArmJointAnglesActionResult___3_01ContainerAllocator_01_4_01_4_1a84ef1e26ad4c49c3b45441133f02b86a">
+                <title>static void ros::message_operations::Printer&lt; ::jaco_msgs::ArmJointAnglesActionResult_&lt; ContainerAllocator &gt; &gt;::stream (Stream &amp;s, const std::string &amp;indent, const ::jaco_msgs::ArmJointAnglesActionResult_&lt; ContainerAllocator &gt; &amp;v)</title> <emphasis></emphasis>
+                
+            </section>
+</section>

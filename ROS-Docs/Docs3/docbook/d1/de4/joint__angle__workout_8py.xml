@@ -1,0 +1,115 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="d1/de4/joint__angle__workout_8py">
+    <title>joint_angle_workout.py File Reference</title>
+<para>Include dependency diagram for joint_angle_workout.py</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../da/ddf/joint__angle__workout_8py__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Included by dependency diagram for joint_angle_workout.py</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../d1/d00/joint__angle__workout_8py__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+        <simplesect>
+            <title> Namespaces </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="da/dd2/namespacejoint__angle__workout">joint_angle_workout</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+    <simplesect>
+        <title>Detailed Description</title>
+    <para>Definition in file D:/Longfei/Desktop/catkin_KinovaROS/src/jaco-ros/jaco_demo/nodes/jaco_demo/joint_angle_workout.py</para>
+    </simplesect>
+    <literallayout><computeroutput>
+<link linkend="da/dd2/namespacejoint__angle__workout">1 </link><emphasis class="comment">#!&#32;/usr/bin/env&#32;python</emphasis>
+2 <emphasis class="stringliteral">&quot;&quot;&quot;A&#32;helper&#32;program&#32;to&#32;test&#32;cartesian&#32;goals&#32;for&#32;the&#32;JACO&#32;and&#32;MICO&#32;arms.&quot;&quot;&quot;</emphasis>
+3 
+4 <emphasis class="keyword">import</emphasis>&#32;roslib;&#32;roslib.load_manifest(<emphasis class="stringliteral">&apos;jaco_demo&apos;</emphasis>)
+5 <emphasis class="keyword">import</emphasis>&#32;rospy
+6 
+7 <emphasis class="keyword">import</emphasis>&#32;sys
+8 
+9 <emphasis class="keyword">import</emphasis>&#32;math
+10 
+11 <emphasis class="keyword">import</emphasis>&#32;actionlib
+12 <emphasis class="keyword">import</emphasis>&#32;<link linkend="d2/dbe/namespacejaco__msgs_1_1msg">jaco_msgs.msg</link>
+13 
+14 <emphasis class="keyword">import</emphasis>&#32;goal_generators
+15 
+16 
+<link linkend="da/dd2/namespacejoint__angle__workout_1a8574a355a0a9e85d1767e15c49cb052e">17 </link><emphasis class="keyword">def&#32;</emphasis><link linkend="da/dd2/namespacejoint__angle__workout_1a8574a355a0a9e85d1767e15c49cb052e">joint_angle_client</link>(angle_set):
+18 &#32;&#32;&#32;&#32;<emphasis class="stringliteral">&quot;&quot;&quot;Send&#32;a&#32;joint&#32;angle&#32;goal&#32;to&#32;the&#32;action&#32;server.&quot;&quot;&quot;</emphasis>
+19 &#32;&#32;&#32;&#32;action_address&#32;=&#32;<emphasis class="stringliteral">&apos;/&apos;</emphasis>&#32;+&#32;str(sys.argv[1])&#32;+&#32;<emphasis class="stringliteral">&apos;_arm_driver/joint_angles/arm_joint_angles&apos;</emphasis>
+20 &#32;&#32;&#32;&#32;client&#32;=&#32;actionlib.SimpleActionClient(action_address,
+21 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="d3/de4/classjaco__msgs_1_1msg_1_1__ArmJointAnglesAction_1_1ArmJointAnglesAction">jaco_msgs.msg.ArmJointAnglesAction</link>)
+22 &#32;&#32;&#32;&#32;client.wait_for_server()
+23 
+24 &#32;&#32;&#32;&#32;goal&#32;=&#32;<link linkend="d4/d45/classjaco__msgs_1_1msg_1_1__ArmJointAnglesGoal_1_1ArmJointAnglesGoal">jaco_msgs.msg.ArmJointAnglesGoal</link>()
+25 
+26 &#32;&#32;&#32;&#32;goal.angles.joint1&#32;=&#32;angle_set[0]
+27 &#32;&#32;&#32;&#32;goal.angles.joint2&#32;=&#32;angle_set[1]
+28 &#32;&#32;&#32;&#32;goal.angles.joint3&#32;=&#32;angle_set[2]
+29 &#32;&#32;&#32;&#32;goal.angles.joint4&#32;=&#32;angle_set[3]
+30 &#32;&#32;&#32;&#32;goal.angles.joint5&#32;=&#32;angle_set[4]
+31 &#32;&#32;&#32;&#32;goal.angles.joint6&#32;=&#32;angle_set[5]
+32 
+33 &#32;&#32;&#32;&#32;print(<emphasis class="stringliteral">&apos;goal:&#32;{}&apos;</emphasis>.format(goal))
+34 
+35 &#32;&#32;&#32;&#32;client.send_goal(goal)
+36 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;client.wait_for_result(rospy.Duration(20.0)):
+37 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;client.get_result()
+38 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">else</emphasis>:
+39 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;print(<emphasis class="stringliteral">&apos;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;the&#32;joint&#32;angle&#32;action&#32;timed-out&apos;</emphasis>)
+40 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;client.cancel_all_goals()
+41 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;<emphasis class="keywordtype">None</emphasis>
+42 
+43 
+44 <emphasis class="keywordflow">if</emphasis>&#32;__name__&#32;==&#32;<emphasis class="stringliteral">&apos;__main__&apos;</emphasis>:
+45 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;len(sys.argv)&#32;<emphasis class="keywordflow">not</emphasis>&#32;<emphasis class="keywordflow">in</emphasis>&#32;[3,&#32;4,&#32;8]&#32;<emphasis class="keywordflow">or</emphasis>&#32;<emphasis class="stringliteral">&apos;help&apos;</emphasis>&#32;<emphasis class="keywordflow">in</emphasis>&#32;str(sys.argv):
+46 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;print(<emphasis class="stringliteral">&apos;Usage:&apos;</emphasis>)
+47 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;print(<emphasis class="stringliteral">&apos;&#32;&#32;&#32;&#32;joint_angle_workout.py&#32;node_name&#32;random&#32;num&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;-&#32;randomly&#32;generate&#32;num&#32;joint&#32;angle&#32;sets&apos;</emphasis>)
+48 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;print(<emphasis class="stringliteral">&apos;&#32;&#32;&#32;&#32;joint_angle_workout.py&#32;node_name&#32;file_path&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;-&#32;use&#32;poses&#32;from&#32;file&apos;</emphasis>)
+49 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;print(<emphasis class="stringliteral">&apos;&#32;&#32;&#32;&#32;joint_angle_workout.py&#32;node_name&#32;j1&#32;j2&#32;j3&#32;j4&#32;j5&#32;j6&#32;&#32;&#32;-&#32;use&#32;these&#32;specific&#32;angle&apos;</emphasis>)
+50 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;exit()
+51 
+52 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">try</emphasis>:
+53 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;rospy.init_node(str(sys.argv[1])&#32;+&#32;<emphasis class="stringliteral">&apos;_joint_angle_workout&apos;</emphasis>)
+54 
+55 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;str(sys.argv[2])&#32;==&#32;<emphasis class="stringliteral">&apos;random&apos;</emphasis>&#32;<emphasis class="keywordflow">and</emphasis>&#32;len(sys.argv)&#32;==&#32;4:
+56 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;print(<emphasis class="stringliteral">&apos;Using&#32;{}&#32;randomly&#32;generated&#32;joint&#32;angle&#32;sets&apos;</emphasis>.format(int(sys.argv[3])))
+<link linkend="da/dd2/namespacejoint__angle__workout_1a44cb6da34666d45961b26233ed5264bf">57 </link>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;angles&#32;=&#32;<link linkend="df/da8/namespacegoal__generators_1a6ab109de507bd107dedc7801ca7c5381">goal_generators.random_joint_angles_generator</link>(int(sys.argv[3]))
+58 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">elif</emphasis>&#32;len(sys.argv)&#32;==&#32;3:
+59 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;print(<emphasis class="stringliteral">&apos;Using&#32;joint&#32;angles&#32;from&#32;file:&#32;{}&apos;</emphasis>.format(sys.argv[2]))
+60 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;angles&#32;=&#32;<link linkend="df/da8/namespacegoal__generators_1a39b5582c84cdf5891bf92b77ab9c0b3b">goal_generators.joint_angles_from_file</link>(str(sys.argv[2]))
+61 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">else</emphasis>:
+62 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;print(<emphasis class="stringliteral">&apos;Using&#32;the&#32;specified&#32;joint&#32;angles:&apos;</emphasis>)
+<link linkend="da/dd2/namespacejoint__angle__workout_1a2c310c9dff3a6e145dc3474b7c751546">63 </link>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;raw_angles&#32;=&#32;[float(n)&#32;<emphasis class="keywordflow">for</emphasis>&#32;n&#32;<emphasis class="keywordflow">in</emphasis>&#32;sys.argv[2:]]
+64 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;angles&#32;=&#32;[raw_angles]
+65 
+66 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">for</emphasis>&#32;angle_set&#32;<emphasis class="keywordflow">in</emphasis>&#32;angles:
+67 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;print(<emphasis class="stringliteral">&apos;&#32;&#32;&#32;&#32;angles:&#32;{}&apos;</emphasis>.format(angle_set))
+<link linkend="da/dd2/namespacejoint__angle__workout_1ad8129235290985797e7512a9f73bdaf4">68 </link>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;result&#32;=&#32;<link linkend="da/dd2/namespacejoint__angle__workout_1a8574a355a0a9e85d1767e15c49cb052e">joint_angle_client</link>(angle_set)
+69 
+70 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;print(<emphasis class="stringliteral">&apos;Done!&apos;</emphasis>)
+71 
+72 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">except</emphasis>&#32;rospy.ROSInterruptException:
+73 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">print</emphasis>&#32;<emphasis class="stringliteral">&quot;program&#32;interrupted&#32;before&#32;completion&quot;</emphasis>
+    </computeroutput></literallayout>
+</section>

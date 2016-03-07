@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="d2/d8b/installspace_2jaco__msgs-msg-paths-context_8py">
+    <title>jaco_msgs-msg-paths-context.py File Reference</title>
+<para>Include dependency diagram for jaco_msgs-msg-paths-context.py</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../d0/df6/installspace_2jaco__msgs-msg-paths-context_8py__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Included by dependency diagram for jaco_msgs-msg-paths-context.py</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../dd/d09/installspace_2jaco__msgs-msg-paths-context_8py__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+        <simplesect>
+            <title> Namespaces </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d1/d19/namespacejaco__msgs-msg-paths-context">jaco_msgs-msg-paths-context</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+    <simplesect>
+        <title>Detailed Description</title>
+    <para>Definition in file D:/Longfei/Desktop/catkin_KinovaROS/build/jaco-ros/jaco_msgs/catkin_generated/installspace/jaco_msgs-msg-paths-context.py</para>
+    </simplesect>
+    <literallayout><computeroutput>
+<link linkend="d1/d19/namespacejaco__msgs-msg-paths-context">1 </link><emphasis class="comment">#&#32;generated&#32;from&#32;genmsg/cmake/pkg-msg-paths.context.in</emphasis>
+2 
+<link linkend="d1/d19/namespacejaco__msgs-msg-paths-context_1adffb8432fbac7333d3bc5236b5cc1af1">3 </link>DEVELSPACE&#32;=&#32;<emphasis class="stringliteral">&apos;FALSE&apos;</emphasis>&#32;==&#32;<emphasis class="stringliteral">&apos;TRUE&apos;</emphasis>
+<link linkend="d1/d19/namespacejaco__msgs-msg-paths-context_1aa9c588ac9faf9483a91cb495a8be5af4">4 </link>INSTALLSPACE&#32;=&#32;<emphasis class="stringliteral">&apos;TRUE&apos;</emphasis>&#32;==&#32;<emphasis class="stringliteral">&apos;TRUE&apos;</emphasis>
+5 
+<link linkend="d1/d19/namespacejaco__msgs-msg-paths-context_1a07c6ad829df8f3bb3913008e8a58a711">6 </link>PROJECT_NAME&#32;=&#32;<emphasis class="stringliteral">&apos;jaco_msgs&apos;</emphasis>
+<link linkend="d1/d19/namespacejaco__msgs-msg-paths-context_1a615c13a91bdf0d70e95ff767b9bb1f66">7 </link>PKG_MSG_INCLUDE_DIRS&#32;=&#32;<emphasis class="stringliteral">&apos;msg;msg;msg;msg&apos;</emphasis>
+<link linkend="d1/d19/namespacejaco__msgs-msg-paths-context_1ac3895b5ef2c57e7c5bbab6bc600b5b98">8 </link>ARG_DEPENDENCIES&#32;=&#32;<emphasis class="stringliteral">&apos;actionlib_msgs;geometry_msgs&apos;</emphasis>
+    </computeroutput></literallayout>
+</section>

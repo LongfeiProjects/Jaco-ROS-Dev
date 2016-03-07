@@ -1,0 +1,326 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="dd/d18/structAngularAcceleration">
+<title>AngularAcceleration struct Reference</title>
+<para>
+    <programlisting>#include <link linkend="df/d36/KinovaTypes_8h">&quot;Definition&quot;</link></programlisting>
+</para>
+<para>Inheritance diagram for AngularAcceleration</para>
+<para>
+    <figure>
+        <title>Inheritance graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../d9/def/structAngularAcceleration__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Collaboration diagram for AngularAcceleration</para>
+<para>
+    <figure>
+        <title>Collaboration graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../d4/de1/structAngularAcceleration__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+        <section>
+            <title>Public Attributes</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>float Actuator1_X<para><emphasis>Acceleration on X axis of the joint #1. Unit is G.</emphasis></para></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>float Actuator1_Y<para><emphasis>Acceleration on Y axis of the joint #1. Unit is G.</emphasis></para></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>float Actuator1_Z<para><emphasis>Acceleration on Z axis of the joint #1. Unit is G.</emphasis></para></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>float Actuator2_X<para><emphasis>Acceleration on X axis of the joint #2. Unit is G.</emphasis></para></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>float Actuator2_Y<para><emphasis>Acceleration on Y axis of the joint #2. Unit is G.</emphasis></para></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>float Actuator2_Z<para><emphasis>Acceleration on Z axis of the joint #2. Unit is G.</emphasis></para></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>float Actuator3_X<para><emphasis>Acceleration on X axis of the joint #3. Unit is G.</emphasis></para></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>float Actuator3_Y<para><emphasis>Acceleration on Y axis of the joint #3. Unit is G.</emphasis></para></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>float Actuator3_Z<para><emphasis>Acceleration on Z axis of the joint #3. Unit is G.</emphasis></para></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>float Actuator4_X<para><emphasis>Acceleration on X axis of the joint #4. Unit is G.</emphasis></para></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>float Actuator4_Y<para><emphasis>Acceleration on Y axis of the joint #4. Unit is G.</emphasis></para></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>float Actuator4_Z<para><emphasis>Acceleration on Z axis of the joint #4. Unit is G.</emphasis></para></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>float Actuator5_X<para><emphasis>Acceleration on X axis of the joint #5. Unit is G.</emphasis></para></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>float Actuator5_Y<para><emphasis>Acceleration on Y axis of the joint #5. Unit is G.</emphasis></para></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>float Actuator5_Z<para><emphasis>Acceleration on Z axis of the joint #5. Unit is G.</emphasis></para></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>float Actuator6_X<para><emphasis>Acceleration on X axis of the joint #6. Unit is G.</emphasis></para></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>float Actuator6_Y<para><emphasis>Acceleration on Y axis of the joint #6. Unit is G.</emphasis></para></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>float Actuator6_Z<para><emphasis>Acceleration on Z axis of the joint #6. Unit is G.</emphasis></para></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="dd/d18/structAngularAcceleration_1a4afb405ec59c4f2ceac6302021eaebf8">InitStruct</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+    <simplesect>
+
+<para>This data structure holds acceleration values(X, Y, Z) in an angular(joint by joint) control context. </para>
+    </simplesect>
+        <section>
+            <title>Member Data Documentation</title>
+            <simplesect>
+                <title>float AngularAcceleration::Actuator1_X</title>                
+<para>Acceleration on X axis of the joint #1. Unit is G. </para>
+
+                <para>Definition at line 2327 of file KinovaTypes.h</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>KinovaTypes.h</para></listitem></itemizedlist></para>
+            </simplesect>
+            <simplesect>
+                <title>float AngularAcceleration::Actuator1_Y</title>                
+<para>Acceleration on Y axis of the joint #1. Unit is G. </para>
+
+                <para>Definition at line 2333 of file KinovaTypes.h</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>KinovaTypes.h</para></listitem></itemizedlist></para>
+            </simplesect>
+            <simplesect>
+                <title>float AngularAcceleration::Actuator1_Z</title>                
+<para>Acceleration on Z axis of the joint #1. Unit is G. </para>
+
+                <para>Definition at line 2339 of file KinovaTypes.h</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>KinovaTypes.h</para></listitem></itemizedlist></para>
+            </simplesect>
+            <simplesect>
+                <title>float AngularAcceleration::Actuator2_X</title>                
+<para>Acceleration on X axis of the joint #2. Unit is G. </para>
+
+                <para>Definition at line 2345 of file KinovaTypes.h</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>KinovaTypes.h</para></listitem></itemizedlist></para>
+            </simplesect>
+            <simplesect>
+                <title>float AngularAcceleration::Actuator2_Y</title>                
+<para>Acceleration on Y axis of the joint #2. Unit is G. </para>
+
+                <para>Definition at line 2351 of file KinovaTypes.h</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>KinovaTypes.h</para></listitem></itemizedlist></para>
+            </simplesect>
+            <simplesect>
+                <title>float AngularAcceleration::Actuator2_Z</title>                
+<para>Acceleration on Z axis of the joint #2. Unit is G. </para>
+
+                <para>Definition at line 2357 of file KinovaTypes.h</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>KinovaTypes.h</para></listitem></itemizedlist></para>
+            </simplesect>
+            <simplesect>
+                <title>float AngularAcceleration::Actuator3_X</title>                
+<para>Acceleration on X axis of the joint #3. Unit is G. </para>
+
+                <para>Definition at line 2363 of file KinovaTypes.h</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>KinovaTypes.h</para></listitem></itemizedlist></para>
+            </simplesect>
+            <simplesect>
+                <title>float AngularAcceleration::Actuator3_Y</title>                
+<para>Acceleration on Y axis of the joint #3. Unit is G. </para>
+
+                <para>Definition at line 2369 of file KinovaTypes.h</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>KinovaTypes.h</para></listitem></itemizedlist></para>
+            </simplesect>
+            <simplesect>
+                <title>float AngularAcceleration::Actuator3_Z</title>                
+<para>Acceleration on Z axis of the joint #3. Unit is G. </para>
+
+                <para>Definition at line 2375 of file KinovaTypes.h</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>KinovaTypes.h</para></listitem></itemizedlist></para>
+            </simplesect>
+            <simplesect>
+                <title>float AngularAcceleration::Actuator4_X</title>                
+<para>Acceleration on X axis of the joint #4. Unit is G. </para>
+
+                <para>Definition at line 2381 of file KinovaTypes.h</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>KinovaTypes.h</para></listitem></itemizedlist></para>
+            </simplesect>
+            <simplesect>
+                <title>float AngularAcceleration::Actuator4_Y</title>                
+<para>Acceleration on Y axis of the joint #4. Unit is G. </para>
+
+                <para>Definition at line 2387 of file KinovaTypes.h</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>KinovaTypes.h</para></listitem></itemizedlist></para>
+            </simplesect>
+            <simplesect>
+                <title>float AngularAcceleration::Actuator4_Z</title>                
+<para>Acceleration on Z axis of the joint #4. Unit is G. </para>
+
+                <para>Definition at line 2393 of file KinovaTypes.h</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>KinovaTypes.h</para></listitem></itemizedlist></para>
+            </simplesect>
+            <simplesect>
+                <title>float AngularAcceleration::Actuator5_X</title>                
+<para>Acceleration on X axis of the joint #5. Unit is G. </para>
+
+                <para>Definition at line 2399 of file KinovaTypes.h</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>KinovaTypes.h</para></listitem></itemizedlist></para>
+            </simplesect>
+            <simplesect>
+                <title>float AngularAcceleration::Actuator5_Y</title>                
+<para>Acceleration on Y axis of the joint #5. Unit is G. </para>
+
+                <para>Definition at line 2405 of file KinovaTypes.h</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>KinovaTypes.h</para></listitem></itemizedlist></para>
+            </simplesect>
+            <simplesect>
+                <title>float AngularAcceleration::Actuator5_Z</title>                
+<para>Acceleration on Z axis of the joint #5. Unit is G. </para>
+
+                <para>Definition at line 2411 of file KinovaTypes.h</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>KinovaTypes.h</para></listitem></itemizedlist></para>
+            </simplesect>
+            <simplesect>
+                <title>float AngularAcceleration::Actuator6_X</title>                
+<para>Acceleration on X axis of the joint #6. Unit is G. </para>
+
+                <para>Definition at line 2417 of file KinovaTypes.h</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>KinovaTypes.h</para></listitem></itemizedlist></para>
+            </simplesect>
+            <simplesect>
+                <title>float AngularAcceleration::Actuator6_Y</title>                
+<para>Acceleration on Y axis of the joint #6. Unit is G. </para>
+
+                <para>Definition at line 2423 of file KinovaTypes.h</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>KinovaTypes.h</para></listitem></itemizedlist></para>
+            </simplesect>
+            <simplesect>
+                <title>float AngularAcceleration::Actuator6_Z</title>                
+<para>Acceleration on Z axis of the joint #6. Unit is G. </para>
+
+                <para>Definition at line 2429 of file KinovaTypes.h</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>KinovaTypes.h</para></listitem></itemizedlist></para>
+            </simplesect>
+        </section>
+            <section xml:id="dd/d18/structAngularAcceleration_1a4afb405ec59c4f2ceac6302021eaebf8">
+                <title>void AngularAcceleration::InitStruct ()</title> <emphasis></emphasis>
+                
+<para>This method will initialises all the values to 0 </para>
+
+            </section>
+</section>

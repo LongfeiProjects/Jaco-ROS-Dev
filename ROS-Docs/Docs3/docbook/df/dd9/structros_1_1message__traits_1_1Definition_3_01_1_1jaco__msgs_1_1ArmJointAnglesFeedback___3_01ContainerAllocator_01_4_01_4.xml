@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="df/dd9/structros_1_1message__traits_1_1Definition_3_01_1_1jaco__msgs_1_1ArmJointAnglesFeedback___3_01ContainerAllocator_01_4_01_4">
+<title>ros::message_traits::Definition&lt; ::jaco_msgs::ArmJointAnglesFeedback_&lt; ContainerAllocator &gt; &gt; struct Reference</title>
+<para>
+    <programlisting>#include <link linkend="dc/dc1/ArmJointAnglesFeedback_8h">&quot;ArmJointAnglesFeedback.h&quot;</link></programlisting>
+</para>
+<para>Inheritance diagram for ros::message_traits::Definition&lt; ::jaco_msgs::ArmJointAnglesFeedback_&lt; ContainerAllocator &gt; &gt;</para>
+<para>
+    <figure>
+        <title>Inheritance graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../d3/dad/structros_1_1message__traits_1_1Definition_3_01_1_1jaco__msgs_1_1ArmJointAnglesFeedback___3_01Coa09db44fd8de9814e523c96ad651f941.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Collaboration diagram for ros::message_traits::Definition&lt; ::jaco_msgs::ArmJointAnglesFeedback_&lt; ContainerAllocator &gt; &gt;</para>
+<para>
+    <figure>
+        <title>Collaboration graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../db/d14/structros_1_1message__traits_1_1Definition_3_01_1_1jaco__msgs_1_1ArmJointAnglesFeedback___3_01Co63e4c2c03c3317f445b03558fd53cbd4.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+    <templateparamlist>
+      <param>
+        <type>class ContainerAllocator</type>
+      </param>
+    </templateparamlist>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static const char * <link linkend="df/dd9/structros_1_1message__traits_1_1Definition_3_01_1_1jaco__msgs_1_1ArmJointAnglesFeedback___3_01ContainerAllocator_01_4_01_4_1ac16eec284f4f7335505c277b9ed5f5c0">value</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static const char * <link linkend="df/dd9/structros_1_1message__traits_1_1Definition_3_01_1_1jaco__msgs_1_1ArmJointAnglesFeedback___3_01ContainerAllocator_01_4_01_4_1aaac4698420c5eb98daca1e7df0f14fe0">value</link> (
+const ::<link linkend="d8/dcc/structjaco__msgs_1_1ArmJointAnglesFeedback__">jaco_msgs::ArmJointAnglesFeedback_</link>&lt; ContainerAllocator &gt; &amp; )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+            <section xml:id="df/dd9/structros_1_1message__traits_1_1Definition_3_01_1_1jaco__msgs_1_1ArmJointAnglesFeedback___3_01ContainerAllocator_01_4_01_4_1ac16eec284f4f7335505c277b9ed5f5c0">
+                <title>static const char* ros::message_traits::Definition&lt; ::jaco_msgs::ArmJointAnglesFeedback_&lt; ContainerAllocator &gt; &gt;::value ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="df/dd9/structros_1_1message__traits_1_1Definition_3_01_1_1jaco__msgs_1_1ArmJointAnglesFeedback___3_01ContainerAllocator_01_4_01_4_1aaac4698420c5eb98daca1e7df0f14fe0">
+                <title>static const char* ros::message_traits::Definition&lt; ::jaco_msgs::ArmJointAnglesFeedback_&lt; ContainerAllocator &gt; &gt;::value (const ::jaco_msgs::ArmJointAnglesFeedback_&lt; ContainerAllocator &gt; &amp;)</title> <emphasis></emphasis>
+                
+            </section>
+</section>

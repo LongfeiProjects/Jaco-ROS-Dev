@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="d0/df6/namespacefinger__action__client">
+<title>finger_action_client</title>
+        <section>
+            <title>Variables</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="d0/df6/namespacefinger__action__client_1a457ef4f2bf118e0ad46b05a4956a496d">result</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Functions</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>def <link linkend="d0/df6/namespacefinger__action__client_1a052b0ba6f2141589b77dad69727b3246">pose_client</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+</section>

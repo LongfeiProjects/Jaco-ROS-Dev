@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="da/dab/setup_8py">
+    <title>setup.py File Reference</title>
+<para>Include dependency diagram for setup.py</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../d1/de7/setup_8py__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Included by dependency diagram for setup.py</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../d5/d98/setup_8py__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+        <simplesect>
+            <title> Namespaces </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="dd/dc4/namespacesetup">setup</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+    <simplesect>
+        <title>Detailed Description</title>
+    <para>Definition in file D:/Longfei/Desktop/catkin_KinovaROS/src/jaco-ros/jaco_demo/setup.py</para>
+    </simplesect>
+    <literallayout><computeroutput>
+<link linkend="dd/dc4/namespacesetup">1 </link><emphasis class="comment">##&#32;!&#32;DO&#32;NOT&#32;MANUALLY&#32;INVOKE&#32;THIS&#32;setup.py,&#32;USE&#32;CATKIN&#32;INSTEAD</emphasis>
+2 
+3 <emphasis class="keyword">from</emphasis>&#32;distutils.core&#32;<emphasis class="keyword">import</emphasis>&#32;setup
+4 <emphasis class="keyword">from</emphasis>&#32;catkin_pkg.python_setup&#32;<emphasis class="keyword">import</emphasis>&#32;generate_distutils_setup
+5 
+6 <emphasis class="comment">#&#32;fetch&#32;values&#32;from&#32;package.xml</emphasis>
+<link linkend="dd/dc4/namespacesetup_1a504ffa482edfe0eff08f64b2f5dff0e9">7 </link>setup_args&#32;=&#32;generate_distutils_setup(
+8 &#32;&#32;&#32;&#32;packages=[<emphasis class="stringliteral">&apos;jaco_demo&apos;</emphasis>],
+9 &#32;&#32;&#32;&#32;package_dir={<emphasis class="stringliteral">&apos;&apos;</emphasis>:&#32;<emphasis class="stringliteral">&apos;nodes&apos;</emphasis>},
+10 &#32;&#32;&#32;&#32;requires=[<emphasis class="stringliteral">&apos;std_msgs&apos;</emphasis>,&#32;<emphasis class="stringliteral">&apos;rospy&apos;</emphasis>,&#32;<emphasis class="stringliteral">&apos;jaco_msgs&apos;</emphasis>,&#32;<emphasis class="stringliteral">&apos;jaco_driver&apos;</emphasis>,&#32;<emphasis class="stringliteral">&apos;geometry_msgs&apos;</emphasis>]
+11 )
+12 
+13 <link linkend="dd/dc4/namespacesetup">setup</link>(**setup_args)
+    </computeroutput></literallayout>
+</section>

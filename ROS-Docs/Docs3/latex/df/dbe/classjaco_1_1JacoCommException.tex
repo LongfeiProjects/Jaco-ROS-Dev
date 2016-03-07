@@ -1,0 +1,101 @@
+\hypertarget{classjaco_1_1JacoCommException}{}\section{jaco\+:\+:Jaco\+Comm\+Exception Class Reference}
+\label{classjaco_1_1JacoCommException}\index{jaco\+::\+Jaco\+Comm\+Exception@{jaco\+::\+Jaco\+Comm\+Exception}}
+
+
+{\ttfamily \#include \char`\"{}jaco\+\_\+types.\+h\char`\"{}}
+
+
+
+Inheritance diagram for jaco\+:\+:Jaco\+Comm\+Exception\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=213pt]{d5/d20/classjaco_1_1JacoCommException__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for jaco\+:\+:Jaco\+Comm\+Exception\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=283pt]{d5/dd0/classjaco_1_1JacoCommException__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classjaco_1_1JacoCommException_af6c28818c201bacdc8a08a346325822c}{Jaco\+Comm\+Exception} (const std\+::string \&message, const int error\+\_\+code)
+\item 
+const char $\ast$ \hyperlink{classjaco_1_1JacoCommException_a7689658c873a6b22857db7c2bb630d43}{what} () const   throw ()
+\item 
+\hyperlink{classjaco_1_1JacoCommException_a8ef866b21c40fcc539984e0d90f355e3}{$\sim$\+Jaco\+Comm\+Exception} ()  throw ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \hyperlink{classjaco_1_1JacoCommException_ab8c43df074f755cbfc7a6d6bf1b7a950}{desc\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{jaco\+::\+Jaco\+Comm\+Exception@{jaco\+::\+Jaco\+Comm\+Exception}!Jaco\+Comm\+Exception@{Jaco\+Comm\+Exception}}
+\index{Jaco\+Comm\+Exception@{Jaco\+Comm\+Exception}!jaco\+::\+Jaco\+Comm\+Exception@{jaco\+::\+Jaco\+Comm\+Exception}}
+\subsubsection[{\texorpdfstring{Jaco\+Comm\+Exception(const std\+::string \&message, const int error\+\_\+code)}{JacoCommException(const std::string &message, const int error_code)}}]{\setlength{\rightskip}{0pt plus 5cm}jaco\+::\+Jaco\+Comm\+Exception\+::\+Jaco\+Comm\+Exception (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{message, }
+\item[{const int}]{error\+\_\+code}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [explicit]}}\hypertarget{classjaco_1_1JacoCommException_af6c28818c201bacdc8a08a346325822c}{}\label{classjaco_1_1JacoCommException_af6c28818c201bacdc8a08a346325822c}
+
+\begin{DoxyCode}
+87 \{
+88     std::stringstream ss;
+89         ss << \textcolor{stringliteral}{"JacoCommException: "} << message << \textcolor{stringliteral}{" (return code: "} << error\_code << \textcolor{stringliteral}{")"} << std::endl;
+90     \hyperlink{classjaco_1_1JacoCommException_ab8c43df074f755cbfc7a6d6bf1b7a950}{desc\_} = ss.str();
+91 \}
+\end{DoxyCode}
+\index{jaco\+::\+Jaco\+Comm\+Exception@{jaco\+::\+Jaco\+Comm\+Exception}!````~Jaco\+Comm\+Exception@{$\sim$\+Jaco\+Comm\+Exception}}
+\index{````~Jaco\+Comm\+Exception@{$\sim$\+Jaco\+Comm\+Exception}!jaco\+::\+Jaco\+Comm\+Exception@{jaco\+::\+Jaco\+Comm\+Exception}}
+\subsubsection[{\texorpdfstring{$\sim$\+Jaco\+Comm\+Exception()}{~JacoCommException()}}]{\setlength{\rightskip}{0pt plus 5cm}jaco\+::\+Jaco\+Comm\+Exception\+::$\sim$\+Jaco\+Comm\+Exception (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) throw  ) \hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classjaco_1_1JacoCommException_a8ef866b21c40fcc539984e0d90f355e3}{}\label{classjaco_1_1JacoCommException_a8ef866b21c40fcc539984e0d90f355e3}
+
+\begin{DoxyCode}
+68 \{\}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{jaco\+::\+Jaco\+Comm\+Exception@{jaco\+::\+Jaco\+Comm\+Exception}!what@{what}}
+\index{what@{what}!jaco\+::\+Jaco\+Comm\+Exception@{jaco\+::\+Jaco\+Comm\+Exception}}
+\subsubsection[{\texorpdfstring{what() const }{what() const }}]{\setlength{\rightskip}{0pt plus 5cm}const char $\ast$ jaco\+::\+Jaco\+Comm\+Exception\+::what (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const throw  ) }\hypertarget{classjaco_1_1JacoCommException_a7689658c873a6b22857db7c2bb630d43}{}\label{classjaco_1_1JacoCommException_a7689658c873a6b22857db7c2bb630d43}
+
+\begin{DoxyCode}
+95 \{
+96     \textcolor{keywordflow}{return} \hyperlink{classjaco_1_1JacoCommException_ab8c43df074f755cbfc7a6d6bf1b7a950}{desc\_}.c\_str();
+97 \}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\index{jaco\+::\+Jaco\+Comm\+Exception@{jaco\+::\+Jaco\+Comm\+Exception}!desc\+\_\+@{desc\+\_\+}}
+\index{desc\+\_\+@{desc\+\_\+}!jaco\+::\+Jaco\+Comm\+Exception@{jaco\+::\+Jaco\+Comm\+Exception}}
+\subsubsection[{\texorpdfstring{desc\+\_\+}{desc_}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string jaco\+::\+Jaco\+Comm\+Exception\+::desc\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classjaco_1_1JacoCommException_ab8c43df074f755cbfc7a6d6bf1b7a950}{}\label{classjaco_1_1JacoCommException_ab8c43df074f755cbfc7a6d6bf1b7a950}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Longfei/\+Desktop/catkin\+\_\+\+Kinova\+R\+O\+S/src/jaco-\/ros/jaco\+\_\+driver/include/jaco\+\_\+driver/\hyperlink{jaco__types_8h}{jaco\+\_\+types.\+h}\item 
+D\+:/\+Longfei/\+Desktop/catkin\+\_\+\+Kinova\+R\+O\+S/src/jaco-\/ros/jaco\+\_\+driver/src/\hyperlink{jaco__types_8cpp}{jaco\+\_\+types.\+cpp}\end{DoxyCompactItemize}

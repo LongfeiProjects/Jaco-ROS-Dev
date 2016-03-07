@@ -1,0 +1,168 @@
+.TH "SensorsInfo" 3 "Thu Mar 3 2016" "Version 1.0.1" "Kinova-ROS" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+SensorsInfo \- This data structure holds the values of the robot's sensors\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include 'Definition'\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBInitStruct\fP ()"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "float \fBAccelerationX\fP"
+.br
+.RI "\fIThis is the value read by the acceleration sensor on the X axis\&. Unit is G\&. \fP"
+.ti -1c
+.RI "float \fBAccelerationY\fP"
+.br
+.RI "\fIThis is the value read by the acceleration sensor on the Y axis\&. Unit is G\&. \fP"
+.ti -1c
+.RI "float \fBAccelerationZ\fP"
+.br
+.RI "\fIThis is the value read by the acceleration sensor on the Z axis\&. Unit is G\&. \fP"
+.ti -1c
+.RI "float \fBActuatorTemp1\fP"
+.br
+.RI "\fIThis is the value read by the temperature sensor on the actuator 1\&. Unit is C°\&. \fP"
+.ti -1c
+.RI "float \fBActuatorTemp2\fP"
+.br
+.RI "\fIThis is the value read by the temperature sensor on the actuator 2\&. Unit is C°\&. \fP"
+.ti -1c
+.RI "float \fBActuatorTemp3\fP"
+.br
+.RI "\fIThis is the value read by the temperature sensor on the actuator 3\&. Unit is C°\&. \fP"
+.ti -1c
+.RI "float \fBActuatorTemp4\fP"
+.br
+.RI "\fIThis is the value read by the temperature sensor on the actuator 4\&. Unit is C°\&. \fP"
+.ti -1c
+.RI "float \fBActuatorTemp5\fP"
+.br
+.RI "\fIThis is the value read by the temperature sensor on the actuator 5\&. Unit is C°\&. \fP"
+.ti -1c
+.RI "float \fBActuatorTemp6\fP"
+.br
+.RI "\fIThis is the value read by the temperature sensor on the actuator 6\&. Unit is C°\&. \fP"
+.ti -1c
+.RI "float \fBCurrent\fP"
+.br
+.RI "\fIThis is the main power supply's current\&. Unit is A\&. \fP"
+.ti -1c
+.RI "float \fBFingerTemp1\fP"
+.br
+.RI "\fIThis is the value read by the temperature sensor on the finger 1\&. Unit is C°\&. \fP"
+.ti -1c
+.RI "float \fBFingerTemp2\fP"
+.br
+.RI "\fIThis is the value read by the temperature sensor on the finger 2\&. Unit is C°\&. \fP"
+.ti -1c
+.RI "float \fBFingerTemp3\fP"
+.br
+.RI "\fIThis is the value read by the temperature sensor on the finger 3\&. Unit is C°\&. \fP"
+.ti -1c
+.RI "float \fBVoltage\fP"
+.br
+.RI "\fIThis is the main power supply voltage\&. (24 V) Unit is V\&. \fP"
+.in -1c
+.SH "Detailed Description"
+.PP 
+This data structure holds the values of the robot's sensors\&. 
+
+If the robot is a Jaco, the 3 finger values will be filled but if the robot is a Mico, the finger 3 will not be filled\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "void SensorsInfo::InitStruct ()\fC [inline]\fP"
+This method will initialises all the values to 0 
+.PP
+.nf
+491     {
+492         Voltage       = 0\&.0f;
+493         Current       = 0\&.0f;
+494         AccelerationX = 0\&.0f;
+495         AccelerationY = 0\&.0f;
+496         AccelerationZ = 0\&.0f;
+497         ActuatorTemp1 = 0\&.0f;
+498         ActuatorTemp2 = 0\&.0f;
+499         ActuatorTemp3 = 0\&.0f;
+500         ActuatorTemp4 = 0\&.0f;
+501         ActuatorTemp5 = 0\&.0f;
+502         ActuatorTemp6 = 0\&.0f;
+503         FingerTemp1   = 0\&.0f;
+504         FingerTemp2   = 0\&.0f;
+505         FingerTemp3   = 0\&.0f;
+506     }
+.fi
+.SH "Member Data Documentation"
+.PP 
+.SS "float SensorsInfo::AccelerationX"
+
+.PP
+This is the value read by the acceleration sensor on the X axis\&. Unit is G\&. 
+.SS "float SensorsInfo::AccelerationY"
+
+.PP
+This is the value read by the acceleration sensor on the Y axis\&. Unit is G\&. 
+.SS "float SensorsInfo::AccelerationZ"
+
+.PP
+This is the value read by the acceleration sensor on the Z axis\&. Unit is G\&. 
+.SS "float SensorsInfo::ActuatorTemp1"
+
+.PP
+This is the value read by the temperature sensor on the actuator 1\&. Unit is C°\&. 
+.SS "float SensorsInfo::ActuatorTemp2"
+
+.PP
+This is the value read by the temperature sensor on the actuator 2\&. Unit is C°\&. 
+.SS "float SensorsInfo::ActuatorTemp3"
+
+.PP
+This is the value read by the temperature sensor on the actuator 3\&. Unit is C°\&. 
+.SS "float SensorsInfo::ActuatorTemp4"
+
+.PP
+This is the value read by the temperature sensor on the actuator 4\&. Unit is C°\&. 
+.SS "float SensorsInfo::ActuatorTemp5"
+
+.PP
+This is the value read by the temperature sensor on the actuator 5\&. Unit is C°\&. 
+.SS "float SensorsInfo::ActuatorTemp6"
+
+.PP
+This is the value read by the temperature sensor on the actuator 6\&. Unit is C°\&. 
+.SS "float SensorsInfo::Current"
+
+.PP
+This is the main power supply's current\&. Unit is A\&. 
+.SS "float SensorsInfo::FingerTemp1"
+
+.PP
+This is the value read by the temperature sensor on the finger 1\&. Unit is C°\&. 
+.SS "float SensorsInfo::FingerTemp2"
+
+.PP
+This is the value read by the temperature sensor on the finger 2\&. Unit is C°\&. 
+.SS "float SensorsInfo::FingerTemp3"
+
+.PP
+This is the value read by the temperature sensor on the finger 3\&. Unit is C°\&. 
+.SS "float SensorsInfo::Voltage"
+
+.PP
+This is the main power supply voltage\&. (24 V) Unit is V\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Kinova-ROS from the source code\&.

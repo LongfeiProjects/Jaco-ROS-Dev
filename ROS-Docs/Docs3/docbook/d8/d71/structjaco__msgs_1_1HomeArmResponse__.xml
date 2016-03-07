@@ -1,0 +1,130 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="d8/d71/structjaco__msgs_1_1HomeArmResponse__">
+<title>jaco_msgs::HomeArmResponse_ struct Reference</title>
+<para>
+    <programlisting>#include <link linkend="db/dda/HomeArmResponse_8h">&quot;HomeArmResponse.h&quot;</link></programlisting>
+</para>
+<para>Inheritance diagram for jaco_msgs::HomeArmResponse_</para>
+<para>
+    <figure>
+        <title>Inheritance graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../df/d21/structjaco__msgs_1_1HomeArmResponse____inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Collaboration diagram for jaco_msgs::HomeArmResponse_</para>
+<para>
+    <figure>
+        <title>Collaboration graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../dc/dc6/structjaco__msgs_1_1HomeArmResponse____coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+    <templateparamlist>
+      <param>
+        <type>class</type>
+        <declname>ContainerAllocator</declname>
+        <defname>ContainerAllocator</defname>
+      </param>
+    </templateparamlist>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef std::basic_string&lt; char, std::char_traits&lt; char &gt;, typename ContainerAllocator::template rebind&lt; char &gt;::other &gt;  <link linkend="d8/d71/structjaco__msgs_1_1HomeArmResponse___1aca787aa960164fab78282b0f84b6d636">_homearm_result_type</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef boost::shared_ptr&lt; ::<link linkend="d8/d71/structjaco__msgs_1_1HomeArmResponse__">jaco_msgs::HomeArmResponse_</link>&lt; ContainerAllocator &gt; const  &gt;  <link linkend="d8/d71/structjaco__msgs_1_1HomeArmResponse___1a3ea69e441416b51b1be0a08085a75de9">ConstPtr</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef boost::shared_ptr&lt; ::<link linkend="d8/d71/structjaco__msgs_1_1HomeArmResponse__">jaco_msgs::HomeArmResponse_</link>&lt; ContainerAllocator &gt; &gt;  <link linkend="d8/d71/structjaco__msgs_1_1HomeArmResponse___1a09088b3e8e0ceec2cfba7a8af421b6a5">Ptr</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef <link linkend="d8/d71/structjaco__msgs_1_1HomeArmResponse__">HomeArmResponse_</link>&lt; ContainerAllocator &gt;  <link linkend="d8/d71/structjaco__msgs_1_1HomeArmResponse___1a45275577566d0460a221081eb55d1dc7">Type</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Public Attributes</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>boost::shared_ptr&lt; std::map&lt; std::string, std::string &gt; &gt; __connection_header</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>_homearm_result_type homearm_result</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="d8/d71/structjaco__msgs_1_1HomeArmResponse___1ad4386054a190abe60a3e3ceec9a03067">HomeArmResponse_</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="d8/d71/structjaco__msgs_1_1HomeArmResponse___1a25164c606346dfcaaacc74c6e62e7fee">HomeArmResponse_</link> (
+const ContainerAllocator &amp; _alloc)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+            <section xml:id="d8/d71/structjaco__msgs_1_1HomeArmResponse___1aca787aa960164fab78282b0f84b6d636">
+                <title>typedef std::basic_string&lt;char, std::char_traits&lt;char&gt;, typename ContainerAllocator::template rebind&lt;char&gt;::other &gt; jaco_msgs::HomeArmResponse_&lt; ContainerAllocator &gt;::_homearm_result_type</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="d8/d71/structjaco__msgs_1_1HomeArmResponse___1a3ea69e441416b51b1be0a08085a75de9">
+                <title>typedef boost::shared_ptr&lt; ::jaco_msgs::HomeArmResponse_&lt;ContainerAllocator&gt; const&gt; jaco_msgs::HomeArmResponse_&lt; ContainerAllocator &gt;::ConstPtr</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="d8/d71/structjaco__msgs_1_1HomeArmResponse___1a09088b3e8e0ceec2cfba7a8af421b6a5">
+                <title>typedef boost::shared_ptr&lt; ::jaco_msgs::HomeArmResponse_&lt;ContainerAllocator&gt; &gt; jaco_msgs::HomeArmResponse_&lt; ContainerAllocator &gt;::Ptr</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="d8/d71/structjaco__msgs_1_1HomeArmResponse___1a45275577566d0460a221081eb55d1dc7">
+                <title>typedef HomeArmResponse_&lt;ContainerAllocator&gt; jaco_msgs::HomeArmResponse_&lt; ContainerAllocator &gt;::Type</title> <emphasis></emphasis>
+                
+            </section>
+        <section>
+            <title>Member Data Documentation</title>
+        </section>
+            <section xml:id="d8/d71/structjaco__msgs_1_1HomeArmResponse___1ad4386054a190abe60a3e3ceec9a03067">
+                <title>jaco_msgs::HomeArmResponse_&lt; ContainerAllocator &gt;::HomeArmResponse_ ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="d8/d71/structjaco__msgs_1_1HomeArmResponse___1a25164c606346dfcaaacc74c6e62e7fee">
+                <title>jaco_msgs::HomeArmResponse_&lt; ContainerAllocator &gt;::HomeArmResponse_ (const ContainerAllocator &amp;_alloc)</title> <emphasis></emphasis>
+                
+            </section>
+</section>

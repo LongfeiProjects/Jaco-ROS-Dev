@@ -1,0 +1,65 @@
+.TH "anonymous_namespace{jaco_arm.cpp}" 3 "Thu Mar 3 2016" "Version 1.0.1" "Kinova-ROS" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+anonymous_namespace{jaco_arm.cpp} \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBconvertKinDeg\fP (double &qd)"
+.br
+.RI "\fIConvert Kinova-specific angle degree variations (0\&.\&.180, 360-181) to a more regular representation (0\&.\&.180, -180\&.\&.0)\&. \fP"
+.ti -1c
+.RI "void \fBconvertKinDeg\fP (std::vector< double > &qds)"
+.br
+.ti -1c
+.RI "void \fBconvertKinDeg\fP (geometry_msgs::Vector3 &qds)"
+.br
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "void anonymous_namespace{jaco_arm\&.cpp}::convertKinDeg (double & qd)\fC [inline]\fP"
+
+.PP
+Convert Kinova-specific angle degree variations (0\&.\&.180, 360-181) to a more regular representation (0\&.\&.180, -180\&.\&.0)\&. 
+.PP
+.nf
+21     {
+22         static const double PI_180 = (PI / 180\&.0);
+23 
+24         // Angle velocities from the API are 0\&.\&.180 for positive values,
+25         // and 360\&.\&.181 for negative ones, in a kind of 2-complement setup\&.
+26         if (qd > 180\&.0) {
+27             qd -= 360\&.0;
+28         }
+29         qd *= PI_180;
+30     }
+.fi
+.SS "void anonymous_namespace{jaco_arm\&.cpp}::convertKinDeg (std::vector< double > & qds)\fC [inline]\fP"
+
+.PP
+.nf
+33     {
+34         for (int i = 0; i < qds\&.size(); ++i) {
+35             double& qd = qds[i];
+36             convertKinDeg(qd);
+37         }
+38     }
+.fi
+.SS "void anonymous_namespace{jaco_arm\&.cpp}::convertKinDeg (geometry_msgs::Vector3 & qds)\fC [inline]\fP"
+
+.PP
+.nf
+41     {
+42         convertKinDeg(qds\&.x);
+43         convertKinDeg(qds\&.y);
+44         convertKinDeg(qds\&.z);
+45     }
+.fi
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Kinova-ROS from the source code\&.

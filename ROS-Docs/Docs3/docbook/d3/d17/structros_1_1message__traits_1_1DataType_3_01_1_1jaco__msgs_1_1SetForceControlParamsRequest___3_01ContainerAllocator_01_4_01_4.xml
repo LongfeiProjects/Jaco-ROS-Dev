@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="d3/d17/structros_1_1message__traits_1_1DataType_3_01_1_1jaco__msgs_1_1SetForceControlParamsRequest___3_01ContainerAllocator_01_4_01_4">
+<title>ros::message_traits::DataType&lt; ::jaco_msgs::SetForceControlParamsRequest_&lt; ContainerAllocator &gt; &gt; struct Reference</title>
+<para>
+    <programlisting>#include <link linkend="d5/d16/SetForceControlParamsRequest_8h">&quot;SetForceControlParamsRequest.h&quot;</link></programlisting>
+</para>
+<para>Inheritance diagram for ros::message_traits::DataType&lt; ::jaco_msgs::SetForceControlParamsRequest_&lt; ContainerAllocator &gt; &gt;</para>
+<para>
+    <figure>
+        <title>Inheritance graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../dc/d16/structros_1_1message__traits_1_1DataType_3_01_1_1jaco__msgs_1_1SetForceControlParamsRequest___3_33d4a8b772add63ab3a5f8709f9e2f0e.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Collaboration diagram for ros::message_traits::DataType&lt; ::jaco_msgs::SetForceControlParamsRequest_&lt; ContainerAllocator &gt; &gt;</para>
+<para>
+    <figure>
+        <title>Collaboration graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../dd/dc7/structros_1_1message__traits_1_1DataType_3_01_1_1jaco__msgs_1_1SetForceControlParamsRequest___3_1b67454cc6b8aa2ce39d277ef30632b1.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+    <templateparamlist>
+      <param>
+        <type>class ContainerAllocator</type>
+      </param>
+    </templateparamlist>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static const char * <link linkend="d3/d17/structros_1_1message__traits_1_1DataType_3_01_1_1jaco__msgs_1_1SetForceControlParamsRequest___3_01ContainerAllocator_01_4_01_4_1a04a30da1d26d17eda37a866d4ac7a0fb">value</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static const char * <link linkend="d3/d17/structros_1_1message__traits_1_1DataType_3_01_1_1jaco__msgs_1_1SetForceControlParamsRequest___3_01ContainerAllocator_01_4_01_4_1a7a967395f6e2a75b9f39fa6a6d1d59ee">value</link> (
+const ::<link linkend="df/db3/structjaco__msgs_1_1SetForceControlParamsRequest__">jaco_msgs::SetForceControlParamsRequest_</link>&lt; ContainerAllocator &gt; &amp; )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+            <section xml:id="d3/d17/structros_1_1message__traits_1_1DataType_3_01_1_1jaco__msgs_1_1SetForceControlParamsRequest___3_01ContainerAllocator_01_4_01_4_1a04a30da1d26d17eda37a866d4ac7a0fb">
+                <title>static const char* ros::message_traits::DataType&lt; ::jaco_msgs::SetForceControlParamsRequest_&lt; ContainerAllocator &gt; &gt;::value ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="d3/d17/structros_1_1message__traits_1_1DataType_3_01_1_1jaco__msgs_1_1SetForceControlParamsRequest___3_01ContainerAllocator_01_4_01_4_1a7a967395f6e2a75b9f39fa6a6d1d59ee">
+                <title>static const char* ros::message_traits::DataType&lt; ::jaco_msgs::SetForceControlParamsRequest_&lt; ContainerAllocator &gt; &gt;::value (const ::jaco_msgs::SetForceControlParamsRequest_&lt; ContainerAllocator &gt; &amp;)</title> <emphasis></emphasis>
+                
+            </section>
+</section>

@@ -1,0 +1,196 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="d8/de0/classjaco__msgs_1_1srv_1_1__Stop_1_1StopResponse">
+<title>jaco_msgs::srv::_Stop::StopResponse class Reference</title>
+<para>Inheritance diagram for jaco_msgs::srv::_Stop::StopResponse</para>
+<para>
+    <figure>
+        <title>Inheritance graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../de/db0/classjaco__msgs_1_1srv_1_1__Stop_1_1StopResponse__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Collaboration diagram for jaco_msgs::srv::_Stop::StopResponse</para>
+<para>
+    <figure>
+        <title>Collaboration graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../d8/da0/classjaco__msgs_1_1srv_1_1__Stop_1_1StopResponse__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>list __slots__</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>string _full_text</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>bool _has_header</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>string _md5sum</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>list _slot_types</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>string _type</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Public Attributes</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>stop_result</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>def <link linkend="d8/de0/classjaco__msgs_1_1srv_1_1__Stop_1_1StopResponse_1ac4e2684f8a210a9322df2fa51a6a224e">__init__</link> (
+self , args , kwds )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>def <link linkend="d8/de0/classjaco__msgs_1_1srv_1_1__Stop_1_1StopResponse_1aad9bf4bb2029499f434e26ed591214fa">deserialize</link> (
+self , str )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>def <link linkend="d8/de0/classjaco__msgs_1_1srv_1_1__Stop_1_1StopResponse_1a05a0d6323888083b3a61437fc0196f38">deserialize_numpy</link> (
+self , str , numpy )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>def <link linkend="d8/de0/classjaco__msgs_1_1srv_1_1__Stop_1_1StopResponse_1a5bef46643daf1117ce583561c2357d3a">serialize</link> (
+self , buff )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>def <link linkend="d8/de0/classjaco__msgs_1_1srv_1_1__Stop_1_1StopResponse_1a637940eeffcc5a745fe28d7b14e8e328">serialize_numpy</link> (
+self , buff , numpy )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>def <link linkend="d8/de0/classjaco__msgs_1_1srv_1_1__Stop_1_1StopResponse_1a87c99ab61f7d3e0fe6da4e13294cb790">_get_types</link> (
+self )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Member Data Documentation</title>
+        </section>
+            <section xml:id="d8/de0/classjaco__msgs_1_1srv_1_1__Stop_1_1StopResponse_1ac4e2684f8a210a9322df2fa51a6a224e">
+                <title>def jaco_msgs.srv._Stop.StopResponse.__init__ (self, args, kwds)</title> <emphasis></emphasis>
+                
+<para><literallayout>Constructor. Any message fields that are implicitly/explicitly
+set to None will be assigned a default value. The recommend
+use is keyword arguments as this is more robust to future message
+changes.  You cannot mix in-order arguments and keyword arguments.
+
+The available fields are:
+   stop_result
+
+:param args: complete set of field values, in .msg order
+:param kwds: use keyword arguments corresponding to message field names
+to set specific fields.
+</literallayout> </para>
+
+            </section>
+            <section xml:id="d8/de0/classjaco__msgs_1_1srv_1_1__Stop_1_1StopResponse_1aad9bf4bb2029499f434e26ed591214fa">
+                <title>def jaco_msgs.srv._Stop.StopResponse.deserialize (self, str)</title> <emphasis></emphasis>
+                
+<para><literallayout>unpack serialized message in str into this message instance
+:param str: byte array of serialized message, ``str``
+</literallayout> </para>
+
+            </section>
+            <section xml:id="d8/de0/classjaco__msgs_1_1srv_1_1__Stop_1_1StopResponse_1a05a0d6323888083b3a61437fc0196f38">
+                <title>def jaco_msgs.srv._Stop.StopResponse.deserialize_numpy (self, str, numpy)</title> <emphasis></emphasis>
+                
+<para><literallayout>unpack serialized message in str into this message instance using numpy for array types
+:param str: byte array of serialized message, ``str``
+:param numpy: numpy python module
+</literallayout> </para>
+
+            </section>
+            <section xml:id="d8/de0/classjaco__msgs_1_1srv_1_1__Stop_1_1StopResponse_1a5bef46643daf1117ce583561c2357d3a">
+                <title>def jaco_msgs.srv._Stop.StopResponse.serialize (self, buff)</title> <emphasis></emphasis>
+                
+<para><literallayout>serialize message into buffer
+:param buff: buffer, ``StringIO``
+</literallayout> </para>
+
+            </section>
+            <section xml:id="d8/de0/classjaco__msgs_1_1srv_1_1__Stop_1_1StopResponse_1a637940eeffcc5a745fe28d7b14e8e328">
+                <title>def jaco_msgs.srv._Stop.StopResponse.serialize_numpy (self, buff, numpy)</title> <emphasis></emphasis>
+                
+<para><literallayout>serialize message with numpy array types into buffer
+:param buff: buffer, ``StringIO``
+:param numpy: numpy python module
+</literallayout> </para>
+
+            </section>
+            <section xml:id="d8/de0/classjaco__msgs_1_1srv_1_1__Stop_1_1StopResponse_1a87c99ab61f7d3e0fe6da4e13294cb790">
+                <title>def jaco_msgs.srv._Stop.StopResponse._get_types (self)</title> <emphasis></emphasis>
+                
+<para><literallayout>internal API method
+</literallayout> </para>
+
+            </section>
+</section>

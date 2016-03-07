@@ -1,0 +1,205 @@
+.TH "admittance_ctrl.AdmittanceCtrl" 3 "Thu Mar 3 2016" "Version 1.0.1" "Kinova-ROS" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+admittance_ctrl.AdmittanceCtrl \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "def \fB__init__\fP (self)"
+.br
+.ti -1c
+.RI "def \fBsaturate_vel\fP (self, vel)"
+.br
+.ti -1c
+.RI "def \fBtimer_cb\fP (self, event)"
+.br
+.ti -1c
+.RI "def \fBwrench_cb\fP (self, msg)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBcur_wrench\fP"
+.br
+.ti -1c
+.RI "\fBdz_x_max\fP"
+.br
+.ti -1c
+.RI "\fBdz_x_min\fP"
+.br
+.ti -1c
+.RI "\fBdz_y_max\fP"
+.br
+.ti -1c
+.RI "\fBdz_y_min\fP"
+.br
+.ti -1c
+.RI "\fBdz_z_max\fP"
+.br
+.ti -1c
+.RI "\fBdz_z_min\fP"
+.br
+.ti -1c
+.RI "\fBk_f\fP"
+.br
+.ti -1c
+.RI "\fBpub_cmd_vel\fP"
+.br
+.ti -1c
+.RI "\fBsub_wrench\fP"
+.br
+.ti -1c
+.RI "\fBtimer\fP"
+.br
+.ti -1c
+.RI "\fBvel_max\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "def admittance_ctrl\&.AdmittanceCtrl\&.__init__ ( self)"
+
+.PP
+.nf
+40     def __init__(self):
+41         self\&.cur_wrench = Wrench()
+42 
+43         self\&.dz_x_min = rospy\&.get_param("~dz_x_min",  -10)
+44         self\&.dz_x_max = rospy\&.get_param("~dz_x_max",   10)
+45         self\&.dz_y_min = rospy\&.get_param("~dz_y_min",  -10)
+46         self\&.dz_y_max = rospy\&.get_param("~dz_y_max",   10)
+47         self\&.dz_z_min = rospy\&.get_param("~dz_z_min",  -10)
+48         self\&.dz_z_max = rospy\&.get_param("~dz_z_max",   30)
+49         self\&.k_f      = rospy\&.get_param("~k_f",      -0\&.1)
+50         self\&.vel_max  = rospy\&.get_param("~vel_max",   0\&.1)
+51         period        = rospy\&.get_param("~period",    0\&.1)
+52 
+53         self\&.sub_wrench  = rospy\&.Subscriber("wrench", WrenchStamped, self\&.wrench_cb)
+54         self\&.pub_cmd_vel = rospy\&.Publisher("cmd_vel", TwistStamped, queue_size=1)
+55         self\&.timer       = rospy\&.Timer(rospy\&.Duration(period), self\&.timer_cb)
+56 
+.fi
+.SH "Member Function Documentation"
+.PP 
+.SS "def admittance_ctrl\&.AdmittanceCtrl\&.saturate_vel ( self,  vel)"
+
+.PP
+.nf
+100     def saturate_vel(self, vel):
+101         avel = abs(vel)
+102         if avel > self\&.vel_max: 
+103             return vel / avel * self\&.vel_max
+104         else:
+105             return vel
+106 
+.fi
+.SS "def admittance_ctrl\&.AdmittanceCtrl\&.timer_cb ( self,  event)"
+
+.PP
+.nf
+62     def timer_cb(self, event):
+63         enable = False
+64 
+65         twist = Twist()
+66 
+67         fx = self\&.cur_wrench\&.force\&.x
+68         fy = self\&.cur_wrench\&.force\&.y
+69         fz = self\&.cur_wrench\&.force\&.z
+70 
+71         if   (fx > self\&.dz_x_max):
+72             twist\&.linear\&.x = self\&.k_f * (fx - self\&.dz_x_max)
+73             enable = True
+74         elif (fx < self\&.dz_x_min):
+75             twist\&.linear\&.x = self\&.k_f * (fx - self\&.dz_x_min)
+76             enable = True
+77         if   (fy > self\&.dz_y_max):
+78             twist\&.linear\&.y = self\&.k_f * (fy - self\&.dz_y_max)
+79             enable = True
+80         elif (fy < self\&.dz_y_min):
+81             twist\&.linear\&.y = self\&.k_f * (fy - self\&.dz_y_min)
+82             enable = True
+83         if   (fz > self\&.dz_z_max):
+84             twist\&.linear\&.z = self\&.k_f * (fz - self\&.dz_z_max)
+85             enable = True
+86         elif (fz < self\&.dz_z_min):
+87             twist\&.linear\&.z = self\&.k_f * (fz - self\&.dz_z_min)
+88             enable = True
+89 
+90         if enable:
+91             twist\&.linear\&.x = self\&.saturate_vel(twist\&.linear\&.x)
+92             twist\&.linear\&.y = self\&.saturate_vel(twist\&.linear\&.y)
+93             twist\&.linear\&.z = self\&.saturate_vel(twist\&.linear\&.z)
+94 
+95             twist_s = TwistStamped()
+96             twist_s\&.header\&.stamp = rospy\&.get_rostime()
+97             twist_s\&.twist        = twist
+98             self\&.pub_cmd_vel\&.publish(twist_s)
+99 
+.fi
+.SS "def admittance_ctrl\&.AdmittanceCtrl\&.wrench_cb ( self,  msg)"
+
+.PP
+.nf
+57     def wrench_cb(self, msg):
+58         # NOTE: This assumes that the input wrench is in the base frame of the
+59         # robot, or at least the same frame as the cartesian velocity input\&.
+60         self\&.cur_wrench = msg\&.wrench
+61 
+.fi
+.SH "Member Data Documentation"
+.PP 
+.SS "admittance_ctrl\&.AdmittanceCtrl\&.cur_wrench"
+
+.PP
+Referenced by admittance_ctrl\&.AdmittanceCtrl\&.wrench_cb()\&.
+.SS "admittance_ctrl\&.AdmittanceCtrl\&.dz_x_max"
+
+.PP
+Referenced by admittance_ctrl\&.AdmittanceCtrl\&.timer_cb()\&.
+.SS "admittance_ctrl\&.AdmittanceCtrl\&.dz_x_min"
+
+.PP
+Referenced by admittance_ctrl\&.AdmittanceCtrl\&.timer_cb()\&.
+.SS "admittance_ctrl\&.AdmittanceCtrl\&.dz_y_max"
+
+.PP
+Referenced by admittance_ctrl\&.AdmittanceCtrl\&.timer_cb()\&.
+.SS "admittance_ctrl\&.AdmittanceCtrl\&.dz_y_min"
+
+.PP
+Referenced by admittance_ctrl\&.AdmittanceCtrl\&.timer_cb()\&.
+.SS "admittance_ctrl\&.AdmittanceCtrl\&.dz_z_max"
+
+.PP
+Referenced by admittance_ctrl\&.AdmittanceCtrl\&.timer_cb()\&.
+.SS "admittance_ctrl\&.AdmittanceCtrl\&.dz_z_min"
+
+.PP
+Referenced by admittance_ctrl\&.AdmittanceCtrl\&.timer_cb()\&.
+.SS "admittance_ctrl\&.AdmittanceCtrl\&.k_f"
+
+.PP
+Referenced by admittance_ctrl\&.AdmittanceCtrl\&.timer_cb()\&.
+.SS "admittance_ctrl\&.AdmittanceCtrl\&.pub_cmd_vel"
+
+.SS "admittance_ctrl\&.AdmittanceCtrl\&.sub_wrench"
+
+.SS "admittance_ctrl\&.AdmittanceCtrl\&.timer"
+
+.SS "admittance_ctrl\&.AdmittanceCtrl\&.vel_max"
+
+.PP
+Referenced by admittance_ctrl\&.AdmittanceCtrl\&.saturate_vel()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Kinova-ROS from the source code\&.

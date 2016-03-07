@@ -1,0 +1,9 @@
+<map id="jaco::JacoArm" name="jaco::JacoArm">
+<area shape="rect" id="node2" href="$dd/d00/structCartesianInfo.html" title="This data structure holds values in an cartesian control context. " alt="" coords="5,505,103,656"/>
+<area shape="rect" id="node3" href="$d0/df5/structAngularInfo.html" title="This data structure holds values in an angular(joint by joint) control context. As an example struct ..." alt="" coords="155,505,249,656"/>
+<area shape="rect" id="node4" href="$d5/d2b/classjaco_1_1JacoComm.html" title="{jaco::JacoComm\n|&#45; api_mutex_\l&#45; is_software_stop_\l&#45; num_fingers_\l&#45; robot_type_\l|+ getCartesianForce()\l+ getCartesianPosition()\l+ getConfig()\l+ getFingerPositions()\l+ getJointAngles()\l+ getJointTorques()\l+ getJointVelocities()\l+ getQuickStatus()\l+ homeArm()\l+ initFingers()\land 22 more...\l}" alt="" coords="274,447,437,715"/>
+<area shape="rect" id="node5" href="$d5/d3c/classjaco_1_1JacoAPI.html" title="{jaco::JacoAPI\n|+ closeAPI\l+ eraseAllTrajectories\l+ getActualTrajectoryInfo\l+ getAngularCurrent\l+ getAngularForce\l+ getAngularPosition\l+ getAngularVelocity\l+ getAPIVersion\l+ getCartesianForce\l+ getCartesianPosition\land 27 more...\l|+ JacoAPI()\l}" alt="" coords="248,160,415,384"/>
+<area shape="rect" id="node6" title="STL class. " alt="" coords="593,233,673,311"/>
+<area shape="rect" id="node7" title="STL class. " alt="" coords="569,5,696,97"/>
+<area shape="rect" id="node9" title="STL class. " alt="" coords="439,233,552,311"/>
+</map>

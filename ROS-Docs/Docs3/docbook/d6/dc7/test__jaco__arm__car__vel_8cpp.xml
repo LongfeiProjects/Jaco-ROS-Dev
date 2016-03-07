@@ -1,0 +1,128 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="d6/dc7/test__jaco__arm__car__vel_8cpp">
+    <title>test_jaco_arm_car_vel.cpp File Reference</title>
+    <programlisting>#include &lt;jaco_driver/test_jaco_arm_car_vel.h&gt;</programlisting>
+<para>Include dependency diagram for test_jaco_arm_car_vel.cpp</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../d4/d39/test__jaco__arm__car__vel_8cpp__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Included by dependency diagram for test_jaco_arm_car_vel.cpp</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../de/d3b/test__jaco__arm__car__vel_8cpp__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+        <section>
+            <title>Functions</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="d6/dc7/test__jaco__arm__car__vel_8cpp_1a3c04138a5bfe5d72780bb7e82a18e627">main</link> (
+int argc, char ** argv)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+    <simplesect>
+        <title>Detailed Description</title>
+    <para>Definition in file D:/Longfei/Desktop/catkin_KinovaROS/src/jaco-ros/jaco_driver/src/testers/test_jaco_arm_car_vel.cpp</para>
+    </simplesect>
+    <literallayout><computeroutput>
+1 <emphasis class="comment">//============================================================================</emphasis>
+2 <emphasis class="comment">//&#32;Name&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;:&#32;Jaco.cpp</emphasis>
+3 <emphasis class="comment">//&#32;Author&#32;&#32;&#32;&#32;&#32;&#32;:&#32;</emphasis>
+4 <emphasis class="comment">//&#32;Version&#32;&#32;&#32;&#32;&#32;:</emphasis>
+5 <emphasis class="comment">//&#32;Copyright&#32;&#32;&#32;:&#32;Your&#32;copyright&#32;notice</emphasis>
+6 <emphasis class="comment">//&#32;Description&#32;:&#32;Hello&#32;World&#32;in&#32;C++,&#32;Ansi-style</emphasis>
+7 <emphasis class="comment">//============================================================================</emphasis>
+8 
+17 <emphasis class="comment">//License&#32;File</emphasis>
+18 <emphasis class="preprocessor">#include&#32;&lt;jaco_driver/test_jaco_arm_car_vel.h&gt;</emphasis>
+19 
+20 <emphasis class="keyword">using&#32;namespace&#32;</emphasis><link linkend="d8/dcc/namespacestd">std</link>;
+21 
+22 
+23 CartesianVelTest::CartesianVelTest(ros::NodeHandle&#32;nh,std::string&#32;<link linkend="d7/dba/namespacejaco__msgs_1a3885bcb43e15bd44e269141fd88ae604">JointVelocity</link>)
+24 {
+25 &#32;&#32;&#32;&#32;&#32;<link linkend="db/d3f/test__jaco__arm__controller_8cpp_1ad5e5d8e14bfcad1c0cc878616783a7e2">pub</link>&#32;=&#32;nh.advertise&lt;geometry_msgs::TwistStamped&gt;(<link linkend="d7/dba/namespacejaco__msgs_1a3885bcb43e15bd44e269141fd88ae604">JointVelocity</link>,
+26 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;2);
+27 &#32;&#32;&#32;&#32;&#32;&#32;x_vel&#32;=&#32;0;
+28 &#32;&#32;&#32;&#32;&#32;&#32;y_vel&#32;=&#32;0;
+29 &#32;&#32;&#32;&#32;&#32;&#32;z_vel&#32;=&#32;0;
+30 &#32;&#32;&#32;&#32;&#32;&#32;rx_vel&#32;=&#32;0;
+31 &#32;&#32;&#32;&#32;&#32;&#32;ry_vel&#32;=&#32;0;
+32 &#32;&#32;&#32;&#32;&#32;&#32;rz_vel&#32;=&#32;0;
+33 
+34 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;dr_call&#32;=&#32;boost::bind(&amp;<link linkend="db/d3f/test__jaco__arm__controller_8cpp_1a9b22877867bb7fee9e5a33831d4f5151">CartesianVelTest::callback</link>,<emphasis class="keyword">this</emphasis>,&#32;_1,&#32;_2);
+35 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;dr_server.setCallback(dr_call);
+36 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;timer&#32;=&#32;nh.createTimer(ros::Duration(0.1),&amp;<link linkend="db/d3f/test__jaco__arm__controller_8cpp_1a555d06d88fe912826cb143b1eb9b595f">CartesianVelTest::TimerCallback</link>,<emphasis class="keyword">this</emphasis>);
+37 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//ROS_INFO(&quot;Start&quot;);</emphasis>
+38 
+39 }
+40 <emphasis class="keywordtype">void</emphasis>&#32;<link linkend="db/d3f/test__jaco__arm__controller_8cpp_1a555d06d88fe912826cb143b1eb9b595f">CartesianVelTest::TimerCallback</link>(<emphasis class="keyword">const</emphasis>&#32;ros::TimerEvent&amp;)
+41 {
+42 &#32;&#32;&#32;&#32;geometry_msgs::TwistStamped&#32;test_msg;
+43 
+44 
+45 &#32;&#32;&#32;&#32;test_msg.header.frame_id&#32;&#32;&#32;&#32;=&#32;<emphasis class="stringliteral">&quot;/jaco_arm_api&quot;</emphasis>;
+46 &#32;&#32;&#32;&#32;test_msg.header.stamp&#32;&#32;&#32;=&#32;ros::Time().now();
+47 
+48 
+49 
+50 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;test_msg.twist.linear.x&#32;=&#32;x_vel;
+51 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;test_msg.twist.linear.y&#32;=&#32;y_vel;
+52 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;test_msg.twist.linear.z&#32;=&#32;z_vel;
+53 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;test_msg.twist.angular.x=&#32;rx_vel;
+54 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;test_msg.twist.angular.y&#32;=&#32;ry_vel;
+55 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;test_msg.twist.angular.z&#32;=&#32;rz_vel;
+56 
+57 
+58 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="db/d3f/test__jaco__arm__controller_8cpp_1ad5e5d8e14bfcad1c0cc878616783a7e2">pub</link>.publish(test_msg);
+59 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;&#32;ROS_INFO(&quot;Timer&quot;);</emphasis>
+60 
+61 
+62 }
+63 
+64 <emphasis class="keywordtype">void</emphasis>&#32;<link linkend="db/d3f/test__jaco__arm__controller_8cpp_1a9b22877867bb7fee9e5a33831d4f5151">CartesianVelTest::callback</link>(jaco_msgs::JacoVelocityConfig&#32;&amp;config,&#32;uint32_t&#32;level)&#32;{
+65 
+66 &#32;&#32;&#32;&#32;&#32;x_vel=config.X_Vel;
+67 &#32;&#32;&#32;&#32;&#32;y_vel=config.Y_Vel;
+68 &#32;&#32;&#32;&#32;&#32;z_vel=config.Z_Vel;
+69 &#32;&#32;&#32;&#32;&#32;rx_vel=config.RX_Vel;
+70 &#32;&#32;&#32;&#32;&#32;ry_vel=config.RY_Vel;
+71 &#32;&#32;&#32;&#32;&#32;rz_vel=config.RZ_Vel;
+72 
+73 &#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;&#32;ROS_INFO(&quot;Reconfigure&quot;);</emphasis>
+74 
+75 
+76 }
+77 
+<link linkend="d6/dc7/test__jaco__arm__car__vel_8cpp_1a3c04138a5bfe5d72780bb7e82a18e627">78 </link><emphasis class="keywordtype">int</emphasis>&#32;<link linkend="d6/dc7/test__jaco__arm__car__vel_8cpp_1a3c04138a5bfe5d72780bb7e82a18e627">main</link>(<emphasis class="keywordtype">int</emphasis>&#32;argc,&#32;<emphasis class="keywordtype">char</emphasis>&#32;**argv)&#32;{
+79 
+80 &#32;&#32;&#32;&#32;<emphasis class="comment">/*&#32;Set&#32;up&#32;ROS&#32;*/</emphasis>
+81 &#32;&#32;&#32;&#32;ros::init(argc,&#32;argv,&#32;<emphasis class="stringliteral">&quot;test_jaco_arm_car_vel&quot;</emphasis>);
+82 &#32;&#32;&#32;&#32;ros::NodeHandle&#32;nh;
+83 &#32;&#32;&#32;&#32;ros::NodeHandle&#32;param_nh(<emphasis class="stringliteral">&quot;~&quot;</emphasis>);
+84 
+85 &#32;&#32;&#32;&#32;std::string&#32;<link linkend="d7/dba/namespacejaco__msgs_1a3885bcb43e15bd44e269141fd88ae604">JointVelocity</link>(<emphasis class="stringliteral">&quot;CartesianVelocity&quot;</emphasis>);&#32;
+86 
+87 &#32;&#32;&#32;&#32;CartesianVelTest&#32;test_node(nh,JointVelocity);
+88 
+89 
+90 &#32;&#32;&#32;&#32;ros::spin();
+91 }
+92 
+    </computeroutput></literallayout>
+</section>

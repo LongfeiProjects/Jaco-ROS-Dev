@@ -1,0 +1,302 @@
+.TH "jaco::JacoAPI" 3 "Thu Mar 3 2016" "Version 1.0.1" "Kinova-ROS" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+jaco::JacoAPI \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include 'jaco_api\&.h'\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBJacoAPI\fP (void)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "int(* \fBcloseAPI\fP )(void)"
+.br
+.ti -1c
+.RI "int(* \fBeraseAllTrajectories\fP )()"
+.br
+.ti -1c
+.RI "int(* \fBgetActualTrajectoryInfo\fP )(\fBTrajectoryPoint\fP &)"
+.br
+.ti -1c
+.RI "int(* \fBgetAngularCurrent\fP )(\fBAngularPosition\fP &)"
+.br
+.ti -1c
+.RI "int(* \fBgetAngularForce\fP )(\fBAngularPosition\fP &)"
+.br
+.ti -1c
+.RI "int(* \fBgetAngularPosition\fP )(\fBAngularPosition\fP &)"
+.br
+.ti -1c
+.RI "int(* \fBgetAngularVelocity\fP )(\fBAngularPosition\fP &)"
+.br
+.ti -1c
+.RI "int(* \fBgetAPIVersion\fP )(std::vector< int > &)"
+.br
+.ti -1c
+.RI "int(* \fBgetCartesianForce\fP )(\fBCartesianPosition\fP &)"
+.br
+.ti -1c
+.RI "int(* \fBgetCartesianPosition\fP )(\fBCartesianPosition\fP &)"
+.br
+.ti -1c
+.RI "int(* \fBgetClientConfigurations\fP )(\fBClientConfigurations\fP &)"
+.br
+.ti -1c
+.RI "int(* \fBgetCodeVersion\fP )(std::vector< int > &)"
+.br
+.ti -1c
+.RI "int(* \fBgetControlType\fP )(int &)"
+.br
+.ti -1c
+.RI "int(* \fBgetDevices\fP )(std::vector< \fBKinovaDevice\fP > &, int &)"
+.br
+.ti -1c
+.RI "int(* \fBgetGeneralInformations\fP )(\fBGeneralInformations\fP &)"
+.br
+.ti -1c
+.RI "int(* \fBgetGlobalTrajectoryInfo\fP )(\fBTrajectoryFIFO\fP &)"
+.br
+.ti -1c
+.RI "int(* \fBgetPositionCurrentActuators\fP )(std::vector< float > &)"
+.br
+.ti -1c
+.RI "int(* \fBgetQuickStatus\fP )(\fBQuickStatus\fP &)"
+.br
+.ti -1c
+.RI "int(* \fBgetSensorsInfo\fP )(\fBSensorsInfo\fP &)"
+.br
+.ti -1c
+.RI "int(* \fBinitAPI\fP )(void)"
+.br
+.ti -1c
+.RI "int(* \fBinitFingers\fP )()"
+.br
+.ti -1c
+.RI "int(* \fBmoveHome\fP )()"
+.br
+.ti -1c
+.RI "int(* \fBrestoreFactoryDefault\fP )()"
+.br
+.ti -1c
+.RI "int(* \fBsendAdvanceTrajectory\fP )(\fBTrajectoryPoint\fP)"
+.br
+.ti -1c
+.RI "int(* \fBsendBasicTrajectory\fP )(\fBTrajectoryPoint\fP)"
+.br
+.ti -1c
+.RI "int(* \fBsendJoystickCommand\fP )(\fBJoystickCommand\fP)"
+.br
+.ti -1c
+.RI "int(* \fBsetActiveDevice\fP )(\fBKinovaDevice\fP)"
+.br
+.ti -1c
+.RI "int(* \fBsetActuatorPID\fP )(unsigned int, float, float, float)"
+.br
+.ti -1c
+.RI "int(* \fBsetAngularControl\fP )()"
+.br
+.ti -1c
+.RI "int(* \fBsetCartesianControl\fP )()"
+.br
+.ti -1c
+.RI "int(* \fBsetCartesianForceMinMax\fP )(\fBCartesianInfo\fP, \fBCartesianInfo\fP)"
+.br
+.ti -1c
+.RI "int(* \fBsetCartesianInertiaDamping\fP )(\fBCartesianInfo\fP, \fBCartesianInfo\fP)"
+.br
+.ti -1c
+.RI "int(* \fBsetClientConfigurations\fP )(\fBClientConfigurations\fP)"
+.br
+.ti -1c
+.RI "int(* \fBstartControlAPI\fP )()"
+.br
+.ti -1c
+.RI "int(* \fBstartForceControl\fP )()"
+.br
+.ti -1c
+.RI "int(* \fBstopControlAPI\fP )()"
+.br
+.ti -1c
+.RI "int(* \fBstopForceControl\fP )()"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "jaco::JacoAPI::JacoAPI (void)"
+
+.PP
+.nf
+25 {
+26     void *usbLib = dlopen(JACO_USB_LIBRARY, RTLD_NOW | RTLD_GLOBAL);
+27     if (usbLib == NULL)
+28     {
+29         ROS_WARN("%s", dlerror());
+30     }
+31 
+32     initAPI = (int (*)())checkApiInit(usbLib, "InitAPI");
+33 
+34     closeAPI = (int (*)())checkApiInit(usbLib, "CloseAPI");
+35 
+36     getAPIVersion = (int (*)(std::vector<int> &))checkApiInit(usbLib, "GetAPIVersion");
+37 
+38     getDevices = (int (*)(std::vector<KinovaDevice> &, int &))checkApiInit(usbLib, "GetDevices");
+39 
+40     setActiveDevice = (int (*)(KinovaDevice))checkApiInit(usbLib, "SetActiveDevice");
+41 
+42     getCodeVersion = (int (*)(std::vector<int> &))checkApiInit(usbLib, "GetCodeVersion");
+43 
+44     getGeneralInformations = (int (*)(GeneralInformations &))checkApiInit(usbLib, "GetGeneralInformations");
+45 
+46     getCartesianPosition = (int (*)(CartesianPosition &))checkApiInit(usbLib, "GetCartesianPosition");
+47 
+48     getAngularPosition = (int (*)(AngularPosition &))checkApiInit(usbLib, "GetAngularPosition");
+49 
+50     getAngularVelocity = (int (*)(AngularPosition &))checkApiInit(usbLib, "GetAngularVelocity");
+51 
+52     getCartesianForce = (int (*)(CartesianPosition &))checkApiInit(usbLib, "GetCartesianForce");
+53 
+54     setCartesianForceMinMax = (int (*)(CartesianInfo, CartesianInfo))checkApiInit(usbLib, "SetCartesianForceMinMax");
+55 
+56     setCartesianInertiaDamping = (int (*)(CartesianInfo, CartesianInfo))checkApiInit(usbLib, "SetCartesianInertiaDamping");
+57 
+58     startForceControl = (int (*)())checkApiInit(usbLib, "StartForceControl");
+59 
+60     stopForceControl = (int (*)())checkApiInit(usbLib, "StopForceControl");
+61 
+62     getAngularForce = (int (*)(AngularPosition &))checkApiInit(usbLib, "GetAngularForce");
+63 
+64     getAngularCurrent = (int (*)(AngularPosition &))checkApiInit(usbLib, "GetAngularCurrent");
+65 
+66     getActualTrajectoryInfo = (int (*)(TrajectoryPoint &))checkApiInit(usbLib, "GetActualTrajectoryInfo");
+67 
+68     getGlobalTrajectoryInfo = (int (*)(TrajectoryFIFO &))checkApiInit(usbLib, "GetGlobalTrajectoryInfo");
+69 
+70     getSensorsInfo = (int (*)(SensorsInfo &))checkApiInit(usbLib, "GetSensorsInfo");
+71 
+72     setAngularControl = (int (*)())checkApiInit(usbLib, "SetAngularControl");
+73 
+74     setCartesianControl = (int (*)())checkApiInit(usbLib, "SetCartesianControl");
+75 
+76     startControlAPI = (int (*)())checkApiInit(usbLib, "StartControlAPI");
+77 
+78     stopControlAPI = (int (*)())checkApiInit(usbLib, "StopControlAPI");
+79 
+80     moveHome = (int (*)())checkApiInit(usbLib, "MoveHome");
+81 
+82     initFingers = (int (*)())checkApiInit(usbLib, "InitFingers");
+83 
+84     restoreFactoryDefault = (int (*)())checkApiInit(usbLib, "RestoreFactoryDefault");
+85 
+86     sendJoystickCommand = (int (*)(JoystickCommand))checkApiInit(usbLib, "SendJoystickCommand");
+87 
+88     sendAdvanceTrajectory = (int (*)(TrajectoryPoint))checkApiInit(usbLib, "SendAdvanceTrajectory");
+89 
+90     sendBasicTrajectory = (int (*)(TrajectoryPoint))checkApiInit(usbLib, "SendBasicTrajectory");
+91 
+92     getControlType = (int (*)(int &)) checkApiInit(usbLib, "GetControlType");
+93 
+94     getQuickStatus = (int (*)(QuickStatus &))checkApiInit(usbLib, "GetQuickStatus");
+95 
+96     getClientConfigurations = (int (*)(ClientConfigurations &))checkApiInit(usbLib, "GetClientConfigurations");
+97 
+98     setClientConfigurations = (int (*)( ClientConfigurations))checkApiInit(usbLib, "SetClientConfigurations");
+99 
+100     eraseAllTrajectories = (int (*)())checkApiInit(usbLib, "EraseAllTrajectories");
+101 
+102     getPositionCurrentActuators = (int (*)(std::vector<float> &))checkApiInit(usbLib, "GetPositionCurrentActuators");
+103 
+104     setActuatorPID = (int (*)(unsigned int, float, float, float))checkApiInit(usbLib, "SetActuatorPID");
+105 }
+.fi
+.SH "Member Data Documentation"
+.PP 
+.SS "int(* jaco::JacoAPI::closeAPI) (void)"
+
+.SS "int(* jaco::JacoAPI::eraseAllTrajectories) ()"
+
+.SS "int(* jaco::JacoAPI::getActualTrajectoryInfo) (\fBTrajectoryPoint\fP &)"
+
+.SS "int(* jaco::JacoAPI::getAngularCurrent) (\fBAngularPosition\fP &)"
+
+.SS "int(* jaco::JacoAPI::getAngularForce) (\fBAngularPosition\fP &)"
+
+.SS "int(* jaco::JacoAPI::getAngularPosition) (\fBAngularPosition\fP &)"
+
+.SS "int(* jaco::JacoAPI::getAngularVelocity) (\fBAngularPosition\fP &)"
+
+.SS "int(* jaco::JacoAPI::getAPIVersion) (std::vector< int > &)"
+
+.SS "int(* jaco::JacoAPI::getCartesianForce) (\fBCartesianPosition\fP &)"
+
+.SS "int(* jaco::JacoAPI::getCartesianPosition) (\fBCartesianPosition\fP &)"
+
+.SS "int(* jaco::JacoAPI::getClientConfigurations) (\fBClientConfigurations\fP &)"
+
+.SS "int(* jaco::JacoAPI::getCodeVersion) (std::vector< int > &)"
+
+.SS "int(* jaco::JacoAPI::getControlType) (int &)"
+
+.SS "int(* jaco::JacoAPI::getDevices) (std::vector< \fBKinovaDevice\fP > &, int &)"
+
+.SS "int(* jaco::JacoAPI::getGeneralInformations) (\fBGeneralInformations\fP &)"
+
+.SS "int(* jaco::JacoAPI::getGlobalTrajectoryInfo) (\fBTrajectoryFIFO\fP &)"
+
+.SS "int(* jaco::JacoAPI::getPositionCurrentActuators) (std::vector< float > &)"
+
+.SS "int(* jaco::JacoAPI::getQuickStatus) (\fBQuickStatus\fP &)"
+
+.SS "int(* jaco::JacoAPI::getSensorsInfo) (\fBSensorsInfo\fP &)"
+
+.SS "int(* jaco::JacoAPI::initAPI) (void)"
+
+.SS "int(* jaco::JacoAPI::initFingers) ()"
+
+.SS "int(* jaco::JacoAPI::moveHome) ()"
+
+.SS "int(* jaco::JacoAPI::restoreFactoryDefault) ()"
+
+.SS "int(* jaco::JacoAPI::sendAdvanceTrajectory) (\fBTrajectoryPoint\fP)"
+
+.SS "int(* jaco::JacoAPI::sendBasicTrajectory) (\fBTrajectoryPoint\fP)"
+
+.SS "int(* jaco::JacoAPI::sendJoystickCommand) (\fBJoystickCommand\fP)"
+
+.SS "int(* jaco::JacoAPI::setActiveDevice) (\fBKinovaDevice\fP)"
+
+.SS "int(* jaco::JacoAPI::setActuatorPID) (unsigned int, float, float, float)"
+
+.SS "int(* jaco::JacoAPI::setAngularControl) ()"
+
+.SS "int(* jaco::JacoAPI::setCartesianControl) ()"
+
+.SS "int(* jaco::JacoAPI::setCartesianForceMinMax) (\fBCartesianInfo\fP, \fBCartesianInfo\fP)"
+
+.SS "int(* jaco::JacoAPI::setCartesianInertiaDamping) (\fBCartesianInfo\fP, \fBCartesianInfo\fP)"
+
+.SS "int(* jaco::JacoAPI::setClientConfigurations) (\fBClientConfigurations\fP)"
+
+.SS "int(* jaco::JacoAPI::startControlAPI) ()"
+
+.SS "int(* jaco::JacoAPI::startForceControl) ()"
+
+.SS "int(* jaco::JacoAPI::stopControlAPI) ()"
+
+.SS "int(* jaco::JacoAPI::stopForceControl) ()"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Kinova-ROS from the source code\&.

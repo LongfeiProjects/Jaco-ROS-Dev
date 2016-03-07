@@ -1,0 +1,164 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="d9/d20/admittance__ctrl_8py">
+    <title>admittance_ctrl.py File Reference</title>
+<para>Include dependency diagram for admittance_ctrl.py</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../d6/d7c/admittance__ctrl_8py__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Included by dependency diagram for admittance_ctrl.py</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../da/dd7/admittance__ctrl_8py__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+        <section>
+            <title> Classes </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="dd/d36/classadmittance__ctrl_1_1AdmittanceCtrl">admittance_ctrl::AdmittanceCtrl</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <simplesect>
+            <title> Namespaces </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d7/d0c/namespaceadmittance__ctrl">admittance_ctrl</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+    <simplesect>
+        <title>Detailed Description</title>
+    <para>Definition in file D:/Longfei/Desktop/catkin_KinovaROS/src/jaco-ros/jaco_demo/nodes/jaco_demo/admittance_ctrl.py</para>
+    </simplesect>
+    <literallayout><computeroutput>
+<link linkend="d7/d0c/namespaceadmittance__ctrl">1 </link><emphasis class="comment">#!/usr/bin/env&#32;python</emphasis>
+2 
+3 <emphasis class="comment">###&#32;A&#32;very&#32;basic&#32;admittance&#32;controller&#32;to&#32;demonstrate&#32;the&#32;Wrench&#32;output&#32;and</emphasis>
+4 <emphasis class="comment">###&#32;cartesian&#32;velocity&#32;input&#32;of&#32;the&#32;Jaco/Mico&#32;node.</emphasis>
+5 <emphasis class="comment">###&#32;See&#32;the&#32;associated&#32;launch&#32;file&#32;for&#32;running&#32;the&#32;complete&#32;demo.</emphasis>
+6 <emphasis class="comment">###</emphasis>
+7 <emphasis class="comment">###&#32;Defines&#32;a&#32;deadzone&#32;box&#32;for&#32;the&#32;applied&#32;forces.</emphasis>
+8 <emphasis class="comment">###&#32;When&#32;the&#32;force&#32;exceed&#32;the&#32;deadzone&#32;bounds&#32;in&#32;a&#32;dimension,&#32;a&#32;cartesian</emphasis>
+9 <emphasis class="comment">###&#32;velocity&#32;is&#32;applied&#32;as&#32;a&#32;factor&#32;(k_f)&#32;times&#32;the&#32;distance&#32;from&#32;the&#32;crossed</emphasis>
+10 <emphasis class="comment">###&#32;bound&#32;(err).</emphasis>
+11 <emphasis class="comment">###&#32;NOTE:&#32;Ignores&#32;torque&#32;for&#32;now.</emphasis>
+12 <emphasis class="comment">###&#32;NOTE:&#32;The&#32;wrench&#32;output&#32;of&#32;the&#32;Jaco&#32;node&#32;represents&#32;the&#32;force&#32;that&#32;the&#32;robot</emphasis>
+13 <emphasis class="comment">###&#32;applies,&#32;and&#32;not&#32;that&#32;it&#32;perceives,&#32;and&#32;is&#32;oriented&#32;in&#32;the&#32;base&#32;frame.</emphasis>
+14 <emphasis class="comment">###&#32;For&#32;instance,&#32;this&#32;means&#32;that&#32;gravity&#32;is&#32;part&#32;of&#32;the&#32;wrench&#32;output&#32;as&#32;force</emphasis>
+15 <emphasis class="comment">###&#32;in&#32;the&#32;positive&#32;part&#32;of&#32;the&#32;Z&#32;axis.</emphasis>
+16 <emphasis class="comment">###&#32;This&#32;explains&#32;the&#32;higher&#32;upper&#32;bound&#32;of&#32;the&#32;deadzone&#32;in&#32;the&#32;Z&#32;axis,&#32;as&#32;this</emphasis>
+17 <emphasis class="comment">###&#32;deadzone&#32;is&#32;applied&#32;on&#32;the&#32;raw&#32;input,&#32;and&#32;not&#32;the&#32;output.</emphasis>
+18 <emphasis class="comment">###</emphasis>
+19 <emphasis class="comment">###&#32;Topics:</emphasis>
+20 <emphasis class="comment">###&#32;&#32;-&#32;wrench:&#32;&#32;Input&#32;force&#32;(geometry_msgs/StampedWrench).</emphasis>
+21 <emphasis class="comment">###&#32;&#32;-&#32;cmd_vel:&#32;Cartesian&#32;velocity&#32;output&#32;(geometry_msgs/TwistStamped).</emphasis>
+22 <emphasis class="comment">###</emphasis>
+23 <emphasis class="comment">###&#32;Parameters:</emphasis>
+24 <emphasis class="comment">###&#32;&#32;-&#32;dz_x_min:&#32;Lower&#32;bound&#32;of&#32;the&#32;deadzone&#32;in&#32;the&#32;X&#32;axis.&#32;Default:&#32;-10.0&#32;N.</emphasis>
+25 <emphasis class="comment">###&#32;&#32;-&#32;dz_x_max:&#32;Upper&#32;bound&#32;of&#32;the&#32;deadzone&#32;in&#32;the&#32;X&#32;axis.&#32;Default:&#32;&#32;10.0&#32;N.</emphasis>
+26 <emphasis class="comment">###&#32;&#32;-&#32;dz_y_min:&#32;Lower&#32;bound&#32;of&#32;the&#32;deadzone&#32;in&#32;the&#32;Y&#32;axis.&#32;Default:&#32;-10.0&#32;N.</emphasis>
+27 <emphasis class="comment">###&#32;&#32;-&#32;dz_y_max:&#32;Upper&#32;bound&#32;of&#32;the&#32;deadzone&#32;in&#32;the&#32;Y&#32;axis.&#32;Default:&#32;&#32;10.0&#32;N.</emphasis>
+28 <emphasis class="comment">###&#32;&#32;-&#32;dz_z_min:&#32;Lower&#32;bound&#32;of&#32;the&#32;deadzone&#32;in&#32;the&#32;Z&#32;axis.&#32;Default:&#32;-10.0&#32;N.</emphasis>
+29 <emphasis class="comment">###&#32;&#32;-&#32;dz_z_max:&#32;Upper&#32;bound&#32;of&#32;the&#32;deadzone&#32;in&#32;the&#32;Z&#32;axis.&#32;Default:&#32;&#32;30.0&#32;N.</emphasis>
+30 <emphasis class="comment">###&#32;&#32;-&#32;k_f:&#32;&#32;&#32;&#32;&#32;&#32;Response&#32;factor&#32;(k_f&#32;*&#32;err).&#32;Default:&#32;-0.1&#32;m/(s&#32;*&#32;N).</emphasis>
+31 <emphasis class="comment">###&#32;&#32;-&#32;vel_max:&#32;&#32;Maximum&#32;velocity&#32;in&#32;any&#32;dimension.&#32;Default:&#32;0.1.</emphasis>
+32 <emphasis class="comment">###&#32;&#32;-&#32;period:&#32;&#32;&#32;Update&#32;period,&#32;in&#32;s.&#32;Default:&#32;0.10&#32;s&#32;(10&#32;Hz)</emphasis>
+33 
+34 <emphasis class="keyword">import</emphasis>&#32;roslib;&#32;roslib.load_manifest(<emphasis class="stringliteral">&apos;jaco_demo&apos;</emphasis>)
+35 <emphasis class="keyword">import</emphasis>&#32;rospy
+36 
+37 <emphasis class="keyword">from</emphasis>&#32;geometry_msgs.msg&#32;<emphasis class="keyword">import</emphasis>&#32;Wrench,&#32;WrenchStamped,&#32;Twist,&#32;TwistStamped
+38 
+<link linkend="dd/d36/classadmittance__ctrl_1_1AdmittanceCtrl">39 </link><emphasis class="keyword">class&#32;</emphasis><link linkend="dd/d36/classadmittance__ctrl_1_1AdmittanceCtrl">AdmittanceCtrl</link>:
+<link linkend="dd/d36/classadmittance__ctrl_1_1AdmittanceCtrl_1a6e303b642da1e5fe2c9a3a29a148dbb9">40 </link>&#32;&#32;&#32;&#32;<emphasis class="keyword">def&#32;</emphasis><link linkend="dd/d36/classadmittance__ctrl_1_1AdmittanceCtrl_1a6e303b642da1e5fe2c9a3a29a148dbb9">__init__</link>(self):
+<link linkend="dd/d36/classadmittance__ctrl_1_1AdmittanceCtrl_1a3654d3f7f31c450d8cb010a4dadb3e18">41 </link>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;self.<link linkend="dd/d36/classadmittance__ctrl_1_1AdmittanceCtrl_1a3654d3f7f31c450d8cb010a4dadb3e18">cur_wrench</link>&#32;=&#32;Wrench()
+42 
+<link linkend="dd/d36/classadmittance__ctrl_1_1AdmittanceCtrl_1ae12abadbff515007a7857f4ad04a2068">43 </link>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;self.<link linkend="dd/d36/classadmittance__ctrl_1_1AdmittanceCtrl_1ae12abadbff515007a7857f4ad04a2068">dz_x_min</link>&#32;=&#32;rospy.get_param(<emphasis class="stringliteral">&quot;~dz_x_min&quot;</emphasis>,&#32;&#32;-10)
+<link linkend="dd/d36/classadmittance__ctrl_1_1AdmittanceCtrl_1a5f68a4404ad164497f0a5e57adc06ae5">44 </link>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;self.<link linkend="dd/d36/classadmittance__ctrl_1_1AdmittanceCtrl_1a5f68a4404ad164497f0a5e57adc06ae5">dz_x_max</link>&#32;=&#32;rospy.get_param(<emphasis class="stringliteral">&quot;~dz_x_max&quot;</emphasis>,&#32;&#32;&#32;10)
+<link linkend="dd/d36/classadmittance__ctrl_1_1AdmittanceCtrl_1a35e4e59c55a85d6dbc1f5ccfc5b87f25">45 </link>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;self.<link linkend="dd/d36/classadmittance__ctrl_1_1AdmittanceCtrl_1a35e4e59c55a85d6dbc1f5ccfc5b87f25">dz_y_min</link>&#32;=&#32;rospy.get_param(<emphasis class="stringliteral">&quot;~dz_y_min&quot;</emphasis>,&#32;&#32;-10)
+<link linkend="dd/d36/classadmittance__ctrl_1_1AdmittanceCtrl_1af0acd0a0262fbcc79e90b8035e3197d6">46 </link>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;self.<link linkend="dd/d36/classadmittance__ctrl_1_1AdmittanceCtrl_1af0acd0a0262fbcc79e90b8035e3197d6">dz_y_max</link>&#32;=&#32;rospy.get_param(<emphasis class="stringliteral">&quot;~dz_y_max&quot;</emphasis>,&#32;&#32;&#32;10)
+<link linkend="dd/d36/classadmittance__ctrl_1_1AdmittanceCtrl_1a6c0fe2e42dde125b1e6f81814ce57c02">47 </link>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;self.<link linkend="dd/d36/classadmittance__ctrl_1_1AdmittanceCtrl_1a6c0fe2e42dde125b1e6f81814ce57c02">dz_z_min</link>&#32;=&#32;rospy.get_param(<emphasis class="stringliteral">&quot;~dz_z_min&quot;</emphasis>,&#32;&#32;-10)
+<link linkend="dd/d36/classadmittance__ctrl_1_1AdmittanceCtrl_1ab3d7954604431dd6244691fd54112420">48 </link>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;self.<link linkend="dd/d36/classadmittance__ctrl_1_1AdmittanceCtrl_1ab3d7954604431dd6244691fd54112420">dz_z_max</link>&#32;=&#32;rospy.get_param(<emphasis class="stringliteral">&quot;~dz_z_max&quot;</emphasis>,&#32;&#32;&#32;30)
+<link linkend="dd/d36/classadmittance__ctrl_1_1AdmittanceCtrl_1a9a0d5d08a89a7cc49b27a9de9d44d8d6">49 </link>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;self.<link linkend="dd/d36/classadmittance__ctrl_1_1AdmittanceCtrl_1a9a0d5d08a89a7cc49b27a9de9d44d8d6">k_f</link>&#32;&#32;&#32;&#32;&#32;&#32;=&#32;rospy.get_param(<emphasis class="stringliteral">&quot;~k_f&quot;</emphasis>,&#32;&#32;&#32;&#32;&#32;&#32;-0.1)
+<link linkend="dd/d36/classadmittance__ctrl_1_1AdmittanceCtrl_1a2d0c030242f05f5aed46ce03810d721a">50 </link>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;self.<link linkend="dd/d36/classadmittance__ctrl_1_1AdmittanceCtrl_1a2d0c030242f05f5aed46ce03810d721a">vel_max</link>&#32;&#32;=&#32;rospy.get_param(<emphasis class="stringliteral">&quot;~vel_max&quot;</emphasis>,&#32;&#32;&#32;0.1)
+51 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;period&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;=&#32;rospy.get_param(<emphasis class="stringliteral">&quot;~period&quot;</emphasis>,&#32;&#32;&#32;&#32;0.1)
+52 
+<link linkend="dd/d36/classadmittance__ctrl_1_1AdmittanceCtrl_1abcd3dae9bd287755d88fb6ab5621b66f">53 </link>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;self.<link linkend="dd/d36/classadmittance__ctrl_1_1AdmittanceCtrl_1abcd3dae9bd287755d88fb6ab5621b66f">sub_wrench</link>&#32;&#32;=&#32;rospy.Subscriber(<emphasis class="stringliteral">&quot;wrench&quot;</emphasis>,&#32;WrenchStamped,&#32;self.<link linkend="dd/d36/classadmittance__ctrl_1_1AdmittanceCtrl_1a26b129bab2045988a9de094fbc7b582d">wrench_cb</link>)
+<link linkend="dd/d36/classadmittance__ctrl_1_1AdmittanceCtrl_1a9e2e5b35def00bad6fc3fec2d80c63c4">54 </link>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;self.<link linkend="dd/d36/classadmittance__ctrl_1_1AdmittanceCtrl_1a9e2e5b35def00bad6fc3fec2d80c63c4">pub_cmd_vel</link>&#32;=&#32;rospy.Publisher(<emphasis class="stringliteral">&quot;cmd_vel&quot;</emphasis>,&#32;TwistStamped,&#32;queue_size=1)
+<link linkend="dd/d36/classadmittance__ctrl_1_1AdmittanceCtrl_1a83d7b0847cefa7749b3d4a9672c4d1c4">55 </link>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;self.<link linkend="dd/d36/classadmittance__ctrl_1_1AdmittanceCtrl_1a83d7b0847cefa7749b3d4a9672c4d1c4">timer</link>&#32;&#32;&#32;&#32;&#32;&#32;&#32;=&#32;rospy.Timer(rospy.Duration(period),&#32;self.<link linkend="dd/d36/classadmittance__ctrl_1_1AdmittanceCtrl_1a38c53c8d924147104986363e8bd630f7">timer_cb</link>)
+56 
+<link linkend="dd/d36/classadmittance__ctrl_1_1AdmittanceCtrl_1a26b129bab2045988a9de094fbc7b582d">57 </link>&#32;&#32;&#32;&#32;<emphasis class="keyword">def&#32;</emphasis><link linkend="dd/d36/classadmittance__ctrl_1_1AdmittanceCtrl_1a26b129bab2045988a9de094fbc7b582d">wrench_cb</link>(self,&#32;msg):
+58 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">#&#32;NOTE:&#32;This&#32;assumes&#32;that&#32;the&#32;input&#32;wrench&#32;is&#32;in&#32;the&#32;base&#32;frame&#32;of&#32;the</emphasis>
+59 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">#&#32;robot,&#32;or&#32;at&#32;least&#32;the&#32;same&#32;frame&#32;as&#32;the&#32;cartesian&#32;velocity&#32;input.</emphasis>
+60 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;self.<link linkend="dd/d36/classadmittance__ctrl_1_1AdmittanceCtrl_1a3654d3f7f31c450d8cb010a4dadb3e18">cur_wrench</link>&#32;=&#32;msg.wrench
+61 
+<link linkend="dd/d36/classadmittance__ctrl_1_1AdmittanceCtrl_1a38c53c8d924147104986363e8bd630f7">62 </link>&#32;&#32;&#32;&#32;<emphasis class="keyword">def&#32;</emphasis><link linkend="dd/d36/classadmittance__ctrl_1_1AdmittanceCtrl_1a38c53c8d924147104986363e8bd630f7">timer_cb</link>(self,&#32;event):
+63 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;enable&#32;=&#32;<emphasis class="keyword">False</emphasis>
+64 
+65 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;twist&#32;=&#32;Twist()
+66 
+67 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;fx&#32;=&#32;self.cur_wrench.force.x
+68 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;fy&#32;=&#32;self.cur_wrench.force.y
+69 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;fz&#32;=&#32;self.cur_wrench.force.z
+70 
+71 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;&#32;&#32;(fx&#32;&gt;&#32;self.<link linkend="dd/d36/classadmittance__ctrl_1_1AdmittanceCtrl_1a5f68a4404ad164497f0a5e57adc06ae5">dz_x_max</link>):
+72 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;twist.linear.x&#32;=&#32;self.<link linkend="dd/d36/classadmittance__ctrl_1_1AdmittanceCtrl_1a9a0d5d08a89a7cc49b27a9de9d44d8d6">k_f</link>&#32;*&#32;(fx&#32;-&#32;self.<link linkend="dd/d36/classadmittance__ctrl_1_1AdmittanceCtrl_1a5f68a4404ad164497f0a5e57adc06ae5">dz_x_max</link>)
+73 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;enable&#32;=&#32;<emphasis class="keyword">True</emphasis>
+74 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">elif</emphasis>&#32;(fx&#32;&lt;&#32;self.<link linkend="dd/d36/classadmittance__ctrl_1_1AdmittanceCtrl_1ae12abadbff515007a7857f4ad04a2068">dz_x_min</link>):
+75 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;twist.linear.x&#32;=&#32;self.<link linkend="dd/d36/classadmittance__ctrl_1_1AdmittanceCtrl_1a9a0d5d08a89a7cc49b27a9de9d44d8d6">k_f</link>&#32;*&#32;(fx&#32;-&#32;self.<link linkend="dd/d36/classadmittance__ctrl_1_1AdmittanceCtrl_1ae12abadbff515007a7857f4ad04a2068">dz_x_min</link>)
+76 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;enable&#32;=&#32;<emphasis class="keyword">True</emphasis>
+77 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;&#32;&#32;(fy&#32;&gt;&#32;self.<link linkend="dd/d36/classadmittance__ctrl_1_1AdmittanceCtrl_1af0acd0a0262fbcc79e90b8035e3197d6">dz_y_max</link>):
+78 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;twist.linear.y&#32;=&#32;self.<link linkend="dd/d36/classadmittance__ctrl_1_1AdmittanceCtrl_1a9a0d5d08a89a7cc49b27a9de9d44d8d6">k_f</link>&#32;*&#32;(fy&#32;-&#32;self.<link linkend="dd/d36/classadmittance__ctrl_1_1AdmittanceCtrl_1af0acd0a0262fbcc79e90b8035e3197d6">dz_y_max</link>)
+79 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;enable&#32;=&#32;<emphasis class="keyword">True</emphasis>
+80 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">elif</emphasis>&#32;(fy&#32;&lt;&#32;self.<link linkend="dd/d36/classadmittance__ctrl_1_1AdmittanceCtrl_1a35e4e59c55a85d6dbc1f5ccfc5b87f25">dz_y_min</link>):
+81 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;twist.linear.y&#32;=&#32;self.<link linkend="dd/d36/classadmittance__ctrl_1_1AdmittanceCtrl_1a9a0d5d08a89a7cc49b27a9de9d44d8d6">k_f</link>&#32;*&#32;(fy&#32;-&#32;self.<link linkend="dd/d36/classadmittance__ctrl_1_1AdmittanceCtrl_1a35e4e59c55a85d6dbc1f5ccfc5b87f25">dz_y_min</link>)
+82 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;enable&#32;=&#32;<emphasis class="keyword">True</emphasis>
+83 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;&#32;&#32;(fz&#32;&gt;&#32;self.<link linkend="dd/d36/classadmittance__ctrl_1_1AdmittanceCtrl_1ab3d7954604431dd6244691fd54112420">dz_z_max</link>):
+84 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;twist.linear.z&#32;=&#32;self.<link linkend="dd/d36/classadmittance__ctrl_1_1AdmittanceCtrl_1a9a0d5d08a89a7cc49b27a9de9d44d8d6">k_f</link>&#32;*&#32;(fz&#32;-&#32;self.<link linkend="dd/d36/classadmittance__ctrl_1_1AdmittanceCtrl_1ab3d7954604431dd6244691fd54112420">dz_z_max</link>)
+85 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;enable&#32;=&#32;<emphasis class="keyword">True</emphasis>
+86 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">elif</emphasis>&#32;(fz&#32;&lt;&#32;self.<link linkend="dd/d36/classadmittance__ctrl_1_1AdmittanceCtrl_1a6c0fe2e42dde125b1e6f81814ce57c02">dz_z_min</link>):
+87 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;twist.linear.z&#32;=&#32;self.<link linkend="dd/d36/classadmittance__ctrl_1_1AdmittanceCtrl_1a9a0d5d08a89a7cc49b27a9de9d44d8d6">k_f</link>&#32;*&#32;(fz&#32;-&#32;self.<link linkend="dd/d36/classadmittance__ctrl_1_1AdmittanceCtrl_1a6c0fe2e42dde125b1e6f81814ce57c02">dz_z_min</link>)
+88 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;enable&#32;=&#32;<emphasis class="keyword">True</emphasis>
+89 
+90 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;enable:
+91 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;twist.linear.x&#32;=&#32;self.<link linkend="dd/d36/classadmittance__ctrl_1_1AdmittanceCtrl_1a7191d1d7f805fbeef6a0a0667bd0ac65">saturate_vel</link>(twist.linear.x)
+92 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;twist.linear.y&#32;=&#32;self.<link linkend="dd/d36/classadmittance__ctrl_1_1AdmittanceCtrl_1a7191d1d7f805fbeef6a0a0667bd0ac65">saturate_vel</link>(twist.linear.y)
+93 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;twist.linear.z&#32;=&#32;self.<link linkend="dd/d36/classadmittance__ctrl_1_1AdmittanceCtrl_1a7191d1d7f805fbeef6a0a0667bd0ac65">saturate_vel</link>(twist.linear.z)
+94 
+95 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;twist_s&#32;=&#32;TwistStamped()
+96 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;twist_s.header.stamp&#32;=&#32;rospy.get_rostime()
+97 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;twist_s.twist&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;=&#32;twist
+98 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;self.pub_cmd_vel.publish(twist_s)
+99 
+<link linkend="dd/d36/classadmittance__ctrl_1_1AdmittanceCtrl_1a7191d1d7f805fbeef6a0a0667bd0ac65">100 </link>&#32;&#32;&#32;&#32;<emphasis class="keyword">def&#32;</emphasis><link linkend="dd/d36/classadmittance__ctrl_1_1AdmittanceCtrl_1a7191d1d7f805fbeef6a0a0667bd0ac65">saturate_vel</link>(self,&#32;vel):
+101 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;avel&#32;=&#32;abs(vel)
+102 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;avel&#32;&gt;&#32;self.<link linkend="dd/d36/classadmittance__ctrl_1_1AdmittanceCtrl_1a2d0c030242f05f5aed46ce03810d721a">vel_max</link>:&#32;
+103 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;vel&#32;/&#32;avel&#32;*&#32;self.<link linkend="dd/d36/classadmittance__ctrl_1_1AdmittanceCtrl_1a2d0c030242f05f5aed46ce03810d721a">vel_max</link>
+104 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">else</emphasis>:
+105 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;vel
+106 
+107 <emphasis class="keywordflow">if</emphasis>&#32;__name__&#32;==&#32;<emphasis class="stringliteral">&quot;__main__&quot;</emphasis>:
+108 &#32;&#32;&#32;&#32;rospy.init_node(<emphasis class="stringliteral">&quot;admittance_ctrl&quot;</emphasis>)
+<link linkend="d7/d0c/namespaceadmittance__ctrl_1afea3593bd3ba80364f80f609075607fb">109 </link>&#32;&#32;&#32;&#32;node&#32;=&#32;<link linkend="dd/d36/classadmittance__ctrl_1_1AdmittanceCtrl">AdmittanceCtrl</link>()
+110 
+111 &#32;&#32;&#32;&#32;rospy.spin()
+112 
+    </computeroutput></literallayout>
+</section>

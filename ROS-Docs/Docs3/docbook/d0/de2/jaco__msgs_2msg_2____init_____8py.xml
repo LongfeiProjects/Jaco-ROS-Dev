@@ -1,0 +1,66 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="d0/de2/jaco__msgs_2msg_2____init_____8py">
+    <title>__init__.py File Reference</title>
+<para>Include dependency diagram for __init__.py</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../d9/db9/jaco__msgs_2msg_2____init_____8py__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Included by dependency diagram for __init__.py</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../d6/d2f/jaco__msgs_2msg_2____init_____8py__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+        <simplesect>
+            <title> Namespaces </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d2/dbe/namespacejaco__msgs_1_1msg">jaco_msgs::msg</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+    <simplesect>
+        <title>Detailed Description</title>
+    <para>Definition in file D:/Longfei/Desktop/catkin_KinovaROS/devel/lib/python2.7/dist-packages/jaco_msgs/msg/__init__.py</para>
+    </simplesect>
+    <literallayout><computeroutput>
+<link linkend="d2/dbe/namespacejaco__msgs_1_1msg">1 </link><emphasis class="keyword">from</emphasis>&#32;._ArmPoseActionGoal&#32;<emphasis class="keyword">import</emphasis>&#32;*
+2 <emphasis class="keyword">from</emphasis>&#32;._ArmPoseAction&#32;<emphasis class="keyword">import</emphasis>&#32;*
+3 <emphasis class="keyword">from</emphasis>&#32;._JointAngles&#32;<emphasis class="keyword">import</emphasis>&#32;*
+4 <emphasis class="keyword">from</emphasis>&#32;._SetFingersPositionActionFeedback&#32;<emphasis class="keyword">import</emphasis>&#32;*
+5 <emphasis class="keyword">from</emphasis>&#32;._ArmJointAnglesAction&#32;<emphasis class="keyword">import</emphasis>&#32;*
+6 <emphasis class="keyword">from</emphasis>&#32;._SetFingersPositionResult&#32;<emphasis class="keyword">import</emphasis>&#32;*
+7 <emphasis class="keyword">from</emphasis>&#32;._SetFingersPositionAction&#32;<emphasis class="keyword">import</emphasis>&#32;*
+8 <emphasis class="keyword">from</emphasis>&#32;._SetFingersPositionGoal&#32;<emphasis class="keyword">import</emphasis>&#32;*
+9 <emphasis class="keyword">from</emphasis>&#32;._JointVelocity&#32;<emphasis class="keyword">import</emphasis>&#32;*
+10 <emphasis class="keyword">from</emphasis>&#32;._ArmJointAnglesActionFeedback&#32;<emphasis class="keyword">import</emphasis>&#32;*
+11 <emphasis class="keyword">from</emphasis>&#32;._ArmPoseActionFeedback&#32;<emphasis class="keyword">import</emphasis>&#32;*
+12 <emphasis class="keyword">from</emphasis>&#32;._ArmJointAnglesGoal&#32;<emphasis class="keyword">import</emphasis>&#32;*
+13 <emphasis class="keyword">from</emphasis>&#32;._ArmPoseGoal&#32;<emphasis class="keyword">import</emphasis>&#32;*
+14 <emphasis class="keyword">from</emphasis>&#32;._ArmJointAnglesFeedback&#32;<emphasis class="keyword">import</emphasis>&#32;*
+15 <emphasis class="keyword">from</emphasis>&#32;._ArmPoseActionResult&#32;<emphasis class="keyword">import</emphasis>&#32;*
+16 <emphasis class="keyword">from</emphasis>&#32;._SetFingersPositionActionGoal&#32;<emphasis class="keyword">import</emphasis>&#32;*
+17 <emphasis class="keyword">from</emphasis>&#32;._ArmJointAnglesActionGoal&#32;<emphasis class="keyword">import</emphasis>&#32;*
+18 <emphasis class="keyword">from</emphasis>&#32;._ArmJointAnglesResult&#32;<emphasis class="keyword">import</emphasis>&#32;*
+19 <emphasis class="keyword">from</emphasis>&#32;._ArmPoseFeedback&#32;<emphasis class="keyword">import</emphasis>&#32;*
+20 <emphasis class="keyword">from</emphasis>&#32;._FingerPosition&#32;<emphasis class="keyword">import</emphasis>&#32;*
+21 <emphasis class="keyword">from</emphasis>&#32;._SetFingersPositionActionResult&#32;<emphasis class="keyword">import</emphasis>&#32;*
+22 <emphasis class="keyword">from</emphasis>&#32;._ArmJointAnglesActionResult&#32;<emphasis class="keyword">import</emphasis>&#32;*
+23 <emphasis class="keyword">from</emphasis>&#32;._SetFingersPositionFeedback&#32;<emphasis class="keyword">import</emphasis>&#32;*
+24 <emphasis class="keyword">from</emphasis>&#32;._ArmPoseResult&#32;<emphasis class="keyword">import</emphasis>&#32;*
+    </computeroutput></literallayout>
+</section>

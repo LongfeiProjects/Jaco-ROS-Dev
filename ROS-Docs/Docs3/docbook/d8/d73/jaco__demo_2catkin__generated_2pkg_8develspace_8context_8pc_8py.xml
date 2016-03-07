@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="d8/d73/jaco__demo_2catkin__generated_2pkg_8develspace_8context_8pc_8py">
+    <title>pkg.develspace.context.pc.py File Reference</title>
+<para>Include dependency diagram for pkg.develspace.context.pc.py</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../d9/dea/jaco__demo_2catkin__generated_2pkg_8develspace_8context_8pc_8py__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Included by dependency diagram for pkg.develspace.context.pc.py</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../d7/d7f/jaco__demo_2catkin__generated_2pkg_8develspace_8context_8pc_8py__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+        <simplesect>
+            <title> Namespaces </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d1/dda/namespacepkg">pkg</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+    <simplesect>
+        <title>Detailed Description</title>
+    <para>Definition in file D:/Longfei/Desktop/catkin_KinovaROS/build/jaco-ros/jaco_demo/catkin_generated/pkg.develspace.context.pc.py</para>
+    </simplesect>
+    <literallayout><computeroutput>
+<link linkend="d1/dda/namespacepkg">1 </link><emphasis class="comment">#&#32;generated&#32;from&#32;catkin/cmake/template/pkg.context.pc.in</emphasis>
+<link linkend="d1/dda/namespacepkg_1ae26c7a5a06b7d738f4d210ca449e6bee">2 </link>CATKIN_PACKAGE_PREFIX&#32;=&#32;<emphasis class="stringliteral">&quot;&quot;</emphasis>
+<link linkend="d1/dda/namespacepkg_1a2760bf8266ff58da440f65ee91b203ab">3 </link>PROJECT_PKG_CONFIG_INCLUDE_DIRS&#32;=&#32;<emphasis class="stringliteral">&quot;&quot;</emphasis>.split(<emphasis class="stringliteral">&apos;;&apos;</emphasis>)&#32;<emphasis class="keywordflow">if</emphasis>&#32;<emphasis class="stringliteral">&quot;&quot;</emphasis>&#32;!=&#32;<emphasis class="stringliteral">&quot;&quot;</emphasis>&#32;<emphasis class="keywordflow">else</emphasis>&#32;[]
+<link linkend="d1/dda/namespacepkg_1a17c18447fad253ee1c0d76deec88028c">4 </link>PROJECT_CATKIN_DEPENDS&#32;=&#32;<emphasis class="stringliteral">&quot;jaco_driver;jaco_msgs;roscpp;rospy;std_msgs;geometry_msgs&quot;</emphasis>.replace(<emphasis class="stringliteral">&apos;;&apos;</emphasis>,&#32;<emphasis class="stringliteral">&apos;&#32;&apos;</emphasis>)
+<link linkend="d1/dda/namespacepkg_1a433e30cecb4a0123a7c4b384d168e336">5 </link>PKG_CONFIG_LIBRARIES_WITH_PREFIX&#32;=&#32;<emphasis class="stringliteral">&quot;&quot;</emphasis>.split(<emphasis class="stringliteral">&apos;;&apos;</emphasis>)&#32;<emphasis class="keywordflow">if</emphasis>&#32;<emphasis class="stringliteral">&quot;&quot;</emphasis>&#32;!=&#32;<emphasis class="stringliteral">&quot;&quot;</emphasis>&#32;<emphasis class="keywordflow">else</emphasis>&#32;[]
+<link linkend="d1/dda/namespacepkg_1a7dfbe99257c26f5e4a3a5483995d9ddc">6 </link>PROJECT_NAME&#32;=&#32;<emphasis class="stringliteral">&quot;jaco_demo&quot;</emphasis>
+<link linkend="d1/dda/namespacepkg_1a3f0f1b4bc03c596525e025539ca4332f">7 </link>PROJECT_SPACE_DIR&#32;=&#32;<emphasis class="stringliteral">&quot;/home/longfei/catkin_KinovaROS/devel&quot;</emphasis>
+<link linkend="d1/dda/namespacepkg_1ab1037914b9286bb61855131c06149648">8 </link>PROJECT_VERSION&#32;=&#32;<emphasis class="stringliteral">&quot;0.0.1&quot;</emphasis>
+    </computeroutput></literallayout>
+</section>

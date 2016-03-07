@@ -1,0 +1,107 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="d9/dd3/jaco__pose__action_8h">
+    <title>jaco_pose_action.h File Reference</title>
+    <programlisting>#include &lt;ros/ros.h&gt;</programlisting>
+    <programlisting>#include &lt;actionlib/server/simple_action_server.h&gt;</programlisting>
+    <programlisting>#include &lt;tf/tf.h&gt;</programlisting>
+    <programlisting>#include &lt;tf/transform_listener.h&gt;</programlisting>
+    <programlisting>#include &lt;jaco_msgs/ArmPoseAction.h&gt;</programlisting>
+    <programlisting>#include &lt;string&gt;</programlisting>
+    <programlisting>#include &quot;jaco_driver/jaco_comm.h&quot;</programlisting>
+<para>Include dependency diagram for jaco_pose_action.h</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../d7/d19/jaco__pose__action_8h__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Included by dependency diagram for jaco_pose_action.h</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../d2/d32/jaco__pose__action_8h__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+        <section>
+            <title> Classes </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="dc/dc7/classjaco_1_1JacoPoseActionServer">jaco::JacoPoseActionServer</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <simplesect>
+            <title> Namespaces </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d4/d3c/namespacejaco">jaco</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+    <simplesect>
+        <title>Detailed Description</title>
+    <para>Definition in file D:/Longfei/Desktop/catkin_KinovaROS/src/jaco-ros/jaco_driver/include/jaco_driver/jaco_pose_action.h</para>
+    </simplesect>
+    <literallayout><computeroutput>
+1 
+46 <emphasis class="preprocessor">#ifndef&#32;JACO_DRIVER_JACO_POSE_ACTION_H_s</emphasis>
+47 <emphasis class="preprocessor">#define&#32;JACO_DRIVER_JACO_POSE_ACTION_H_s</emphasis>
+48 
+49 <emphasis class="preprocessor">#include&#32;&lt;ros/ros.h&gt;</emphasis>
+50 <emphasis class="preprocessor">#include&#32;&lt;actionlib/server/simple_action_server.h&gt;</emphasis>
+51 <emphasis class="preprocessor">#include&#32;&lt;tf/tf.h&gt;</emphasis>
+52 <emphasis class="preprocessor">#include&#32;&lt;tf/transform_listener.h&gt;</emphasis>
+53 
+54 <emphasis class="preprocessor">#include&#32;&lt;<link linkend="d5/dc2/ArmPoseAction_8h">jaco_msgs/ArmPoseAction.h</link>&gt;</emphasis>
+55 
+56 <emphasis class="preprocessor">#include&#32;&lt;string&gt;</emphasis>
+57 <emphasis class="preprocessor">#include&#32;&quot;<link linkend="d8/de6/jaco__comm_8h">jaco_driver/jaco_comm.h</link>&quot;</emphasis>
+58 
+59 
+60 <emphasis class="keyword">namespace&#32;</emphasis><link linkend="d4/d3c/namespacejaco">jaco</link>
+61 {
+62 
+<link linkend="dc/dc7/classjaco_1_1JacoPoseActionServer">63 </link><emphasis class="keyword">class&#32;</emphasis><link linkend="dc/dc7/classjaco_1_1JacoPoseActionServer">JacoPoseActionServer</link>
+64 {
+65 &#32;<emphasis class="keyword">public</emphasis>:
+66 &#32;&#32;&#32;&#32;<link linkend="dc/dc7/classjaco_1_1JacoPoseActionServer_1aadc62df5a70d28ec54c90ceeec00fbe3">JacoPoseActionServer</link>(<link linkend="d5/d2b/classjaco_1_1JacoComm">JacoComm</link>&#32;&amp;,&#32;<emphasis class="keyword">const</emphasis>&#32;ros::NodeHandle&#32;&amp;n);
+67 &#32;&#32;&#32;&#32;<link linkend="dc/dc7/classjaco_1_1JacoPoseActionServer_1ab1c488f56f4759f917c46406230e6c84">~JacoPoseActionServer</link>();
+68 
+69 &#32;&#32;&#32;&#32;<emphasis class="keywordtype">void</emphasis>&#32;<link linkend="dc/dc7/classjaco_1_1JacoPoseActionServer_1a82396bb5f219f54518a80493bfd38f26">actionCallback</link>(<emphasis class="keyword">const</emphasis>&#32;<link linkend="d7/dba/namespacejaco__msgs_1ab8464776109924758c47fab6ce179567">jaco_msgs::ArmPoseGoalConstPtr</link>&#32;&amp;);
+70 
+71 &#32;<emphasis class="keyword">private</emphasis>:
+<link linkend="dc/dc7/classjaco_1_1JacoPoseActionServer_1ae5c09c6924a4eeccd4d32ca59ed6465d">72 </link>&#32;&#32;&#32;&#32;ros::NodeHandle&#32;<link linkend="dc/dc7/classjaco_1_1JacoPoseActionServer_1ae5c09c6924a4eeccd4d32ca59ed6465d">node_handle_</link>;
+<link linkend="dc/dc7/classjaco_1_1JacoPoseActionServer_1ad849b8d5a2bb31a65ab24b586a86c9a1">73 </link>&#32;&#32;&#32;&#32;<link linkend="d5/d2b/classjaco_1_1JacoComm">JacoComm</link>&#32;&amp;<link linkend="dc/dc7/classjaco_1_1JacoPoseActionServer_1ad849b8d5a2bb31a65ab24b586a86c9a1">arm_comm_</link>;
+<link linkend="dc/dc7/classjaco_1_1JacoPoseActionServer_1ac5ecd6a61bf824052ff744aad8bf886a">74 </link>&#32;&#32;&#32;&#32;actionlib::SimpleActionServer&lt;jaco_msgs::ArmPoseAction&gt;&#32;<link linkend="dc/dc7/classjaco_1_1JacoPoseActionServer_1ac5ecd6a61bf824052ff744aad8bf886a">action_server_</link>;
+<link linkend="dc/dc7/classjaco_1_1JacoPoseActionServer_1a43c58cdc664caaa1471792c672aea7c1">75 </link>&#32;&#32;&#32;&#32;tf::TransformListener&#32;<link linkend="dc/dc7/classjaco_1_1JacoPoseActionServer_1a43c58cdc664caaa1471792c672aea7c1">listener</link>;
+76 
+<link linkend="dc/dc7/classjaco_1_1JacoPoseActionServer_1a6b5b38efebafd4426afd01368bcf6f87">77 </link>&#32;&#32;&#32;&#32;ros::Time&#32;<link linkend="dc/dc7/classjaco_1_1JacoPoseActionServer_1a6b5b38efebafd4426afd01368bcf6f87">last_nonstall_time_</link>;
+<link linkend="dc/dc7/classjaco_1_1JacoPoseActionServer_1aa7e288732479301e6f63762f91b08580">78 </link>&#32;&#32;&#32;&#32;<link linkend="dd/da4/classjaco_1_1JacoPose">jaco::JacoPose</link>&#32;<link linkend="dc/dc7/classjaco_1_1JacoPoseActionServer_1aa7e288732479301e6f63762f91b08580">last_nonstall_pose_</link>;
+79 
+<link linkend="dc/dc7/classjaco_1_1JacoPoseActionServer_1a5f90297e166e0113362ad14abc78f13f">80 </link>&#32;&#32;&#32;&#32;std::string&#32;<link linkend="dc/dc7/classjaco_1_1JacoPoseActionServer_1a5f90297e166e0113362ad14abc78f13f">api_origin_frame_</link>;
+81 
+82 &#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;Parameters</emphasis>
+<link linkend="dc/dc7/classjaco_1_1JacoPoseActionServer_1a48c5866f584f192be487934d3fbf5ebc">83 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">double</emphasis>&#32;<link linkend="dc/dc7/classjaco_1_1JacoPoseActionServer_1a48c5866f584f192be487934d3fbf5ebc">stall_interval_seconds_</link>;
+<link linkend="dc/dc7/classjaco_1_1JacoPoseActionServer_1a71248453a7bb76ba012040b1b9d67924">84 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">double</emphasis>&#32;<link linkend="dc/dc7/classjaco_1_1JacoPoseActionServer_1a71248453a7bb76ba012040b1b9d67924">stall_threshold_</link>;
+<link linkend="dc/dc7/classjaco_1_1JacoPoseActionServer_1a3512d3517f7d55ad0b481081a7000b06">85 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">double</emphasis>&#32;<link linkend="dc/dc7/classjaco_1_1JacoPoseActionServer_1a3512d3517f7d55ad0b481081a7000b06">rate_hz_</link>;
+<link linkend="dc/dc7/classjaco_1_1JacoPoseActionServer_1a086630400cbfd3e75414a620f8220038">86 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">float</emphasis>&#32;<link linkend="dc/dc7/classjaco_1_1JacoPoseActionServer_1a086630400cbfd3e75414a620f8220038">tolerance_</link>;
+<link linkend="dc/dc7/classjaco_1_1JacoPoseActionServer_1ae846600150f2139d117f9994bf19747f">87 </link>&#32;&#32;&#32;&#32;std::string&#32;<link linkend="dc/dc7/classjaco_1_1JacoPoseActionServer_1ae846600150f2139d117f9994bf19747f">tf_prefix_</link>;
+88 };
+89 
+90 }&#32;&#32;<emphasis class="comment">//&#32;namespace&#32;jaco</emphasis>
+91 <emphasis class="preprocessor">#endif&#32;&#32;//&#32;JACO_DRIVER_JACO_POSE_ACTION_H_s</emphasis>
+92 
+    </computeroutput></literallayout>
+</section>

@@ -1,0 +1,107 @@
+.TH "JoystickCommand" 3 "Thu Mar 3 2016" "Version 1.0.1" "Kinova-ROS" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+JoystickCommand \- This is a virtual representation of a 6-axis joystick\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include 'KinovaTypes\&.h'\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBInitStruct\fP ()"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "short \fBButtonValue\fP [\fBJOYSTICK_BUTTON_COUNT\fP]"
+.br
+.RI "\fIThis array contains the state of all the buttons\&. (1 = PRESSED, 0 = RELEASED) \fP"
+.ti -1c
+.RI "float \fBInclineForwardBackward\fP"
+.br
+.RI "\fIThat holds the behaviour of the stick when it is inclined forward and backward\&. (value between -1 and 1 inclusively) 2 functionalities can be mapped with this value, there is an event when the value is negative and there is one when it is positive\&. \fP"
+.ti -1c
+.RI "float \fBInclineLeftRight\fP"
+.br
+.RI "\fIThat holds the behaviour of the stick when it is inclined from left to right\&. (value between -1 and 1 inclusively) 2 functionalities can be mapped with this value, there is an event when the value is negative and there is one when it is positive\&. \fP"
+.ti -1c
+.RI "float \fBMoveForwardBackward\fP"
+.br
+.RI "\fIThat holds the behaviour of the stick when it is moved forward and backward\&. (value between -1 and 1 inclusively) 2 functionalities can be mapped with this value, there is an event when the value is negative and there is one when it is positive\&. \fP"
+.ti -1c
+.RI "float \fBMoveLeftRight\fP"
+.br
+.RI "\fIThat holds the behaviour of the stick when it is moved from left to right\&. (value between -1 and 1 inclusively) 2 functionalities can be mapped with this value, there is an event when the value is negative and there is one when it is positive\&. \fP"
+.ti -1c
+.RI "float \fBPushPull\fP"
+.br
+.RI "\fIThat holds the behaviour of the stick when it is pushed and pulled\&. (value between -1 and 1 inclusively) 2 functionalities can be mapped with this value, there is an event when the value is negative and there is one when it is positive\&. \fP"
+.ti -1c
+.RI "float \fBRotate\fP"
+.br
+.RI "\fIThat holds the behaviour of the stick when it is rotated clockwork and counter clockwork\&. (value between -1 and 1 inclusively) 2 functionalities can be mapped with this value, there is an event when the value is negative and there is one when it is positive\&. \fP"
+.in -1c
+.SH "Detailed Description"
+.PP 
+This is a virtual representation of a 6-axis joystick\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "void JoystickCommand::InitStruct ()\fC [inline]\fP"
+
+.PP
+.nf
+782     {
+783         for(int i = 0; i < JOYSTICK_BUTTON_COUNT; i++)
+784         {
+785             ButtonValue[i] = 0;
+786         }
+787 
+788         InclineLeftRight = 0\&.0f;
+789         InclineForwardBackward = 0\&.0f;
+790         Rotate = 0\&.0f;
+791         MoveLeftRight = 0\&.0f;
+792         MoveForwardBackward = 0\&.0f;
+793         PushPull = 0\&.0f;
+794     }
+.fi
+.SH "Member Data Documentation"
+.PP 
+.SS "short JoystickCommand::ButtonValue[\fBJOYSTICK_BUTTON_COUNT\fP]"
+
+.PP
+This array contains the state of all the buttons\&. (1 = PRESSED, 0 = RELEASED) 
+.SS "float JoystickCommand::InclineForwardBackward"
+
+.PP
+That holds the behaviour of the stick when it is inclined forward and backward\&. (value between -1 and 1 inclusively) 2 functionalities can be mapped with this value, there is an event when the value is negative and there is one when it is positive\&. 
+.SS "float JoystickCommand::InclineLeftRight"
+
+.PP
+That holds the behaviour of the stick when it is inclined from left to right\&. (value between -1 and 1 inclusively) 2 functionalities can be mapped with this value, there is an event when the value is negative and there is one when it is positive\&. 
+.SS "float JoystickCommand::MoveForwardBackward"
+
+.PP
+That holds the behaviour of the stick when it is moved forward and backward\&. (value between -1 and 1 inclusively) 2 functionalities can be mapped with this value, there is an event when the value is negative and there is one when it is positive\&. 
+.SS "float JoystickCommand::MoveLeftRight"
+
+.PP
+That holds the behaviour of the stick when it is moved from left to right\&. (value between -1 and 1 inclusively) 2 functionalities can be mapped with this value, there is an event when the value is negative and there is one when it is positive\&. 
+.SS "float JoystickCommand::PushPull"
+
+.PP
+That holds the behaviour of the stick when it is pushed and pulled\&. (value between -1 and 1 inclusively) 2 functionalities can be mapped with this value, there is an event when the value is negative and there is one when it is positive\&. 
+.SS "float JoystickCommand::Rotate"
+
+.PP
+That holds the behaviour of the stick when it is rotated clockwork and counter clockwork\&. (value between -1 and 1 inclusively) 2 functionalities can be mapped with this value, there is an event when the value is negative and there is one when it is positive\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Kinova-ROS from the source code\&.

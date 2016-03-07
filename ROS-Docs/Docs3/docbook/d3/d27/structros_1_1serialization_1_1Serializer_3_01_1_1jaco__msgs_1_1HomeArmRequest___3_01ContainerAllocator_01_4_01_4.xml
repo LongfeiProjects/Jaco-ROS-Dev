@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="d3/d27/structros_1_1serialization_1_1Serializer_3_01_1_1jaco__msgs_1_1HomeArmRequest___3_01ContainerAllocator_01_4_01_4">
+<title>ros::serialization::Serializer&lt; ::jaco_msgs::HomeArmRequest_&lt; ContainerAllocator &gt; &gt; struct Reference</title>
+<para>
+    <programlisting>#include <link linkend="d1/d5a/HomeArmRequest_8h">&quot;HomeArmRequest.h&quot;</link></programlisting>
+</para>
+<para>Inheritance diagram for ros::serialization::Serializer&lt; ::jaco_msgs::HomeArmRequest_&lt; ContainerAllocator &gt; &gt;</para>
+<para>
+    <figure>
+        <title>Inheritance graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../d2/d3d/structros_1_1serialization_1_1Serializer_3_01_1_1jaco__msgs_1_1HomeArmRequest___3_01ContainerAll1ee45914a456697babc1cea529be8f05.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Collaboration diagram for ros::serialization::Serializer&lt; ::jaco_msgs::HomeArmRequest_&lt; ContainerAllocator &gt; &gt;</para>
+<para>
+    <figure>
+        <title>Collaboration graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../d3/dc2/structros_1_1serialization_1_1Serializer_3_01_1_1jaco__msgs_1_1HomeArmRequest___3_01ContainerAllocator_01_4_01_4__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+    <templateparamlist>
+      <param>
+        <type>class ContainerAllocator</type>
+      </param>
+    </templateparamlist>
+        <section>
+            <title>Public Attributes</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>ROS_DECLARE_ALLINONE_SERIALIZER</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static void <link linkend="d3/d27/structros_1_1serialization_1_1Serializer_3_01_1_1jaco__msgs_1_1HomeArmRequest___3_01ContainerAllocator_01_4_01_4_1afd9be9caa7814f9af0c62009138828bb">allInOne</link> (
+Stream &amp; , T )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Member Data Documentation</title>
+        </section>
+            <section xml:id="d3/d27/structros_1_1serialization_1_1Serializer_3_01_1_1jaco__msgs_1_1HomeArmRequest___3_01ContainerAllocator_01_4_01_4_1afd9be9caa7814f9af0c62009138828bb">
+                <title>static void ros::serialization::Serializer&lt; ::jaco_msgs::HomeArmRequest_&lt; ContainerAllocator &gt; &gt;::allInOne (Stream &amp;, T)</title> <emphasis></emphasis>
+                
+            </section>
+</section>

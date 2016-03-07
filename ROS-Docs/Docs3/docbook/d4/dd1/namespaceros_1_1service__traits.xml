@@ -1,0 +1,175 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="d4/dd1/namespaceros_1_1service__traits">
+<title>ros::service_traits</title>
+        <section>
+            <title> Classes </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d2/d62/structros_1_1service__traits_1_1DataType_3_01_1_1jaco__msgs_1_1HomeArm_01_4">ros::service_traits::DataType&lt; ::jaco_msgs::HomeArm &gt;</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d5/d9d/structros_1_1service__traits_1_1DataType_3_01_1_1jaco__msgs_1_1HomeArmRequest_01_4">ros::service_traits::DataType&lt; ::jaco_msgs::HomeArmRequest &gt;</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d8/d07/structros_1_1service__traits_1_1DataType_3_01_1_1jaco__msgs_1_1HomeArmResponse_01_4">ros::service_traits::DataType&lt; ::jaco_msgs::HomeArmResponse &gt;</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="de/d4d/structros_1_1service__traits_1_1DataType_3_01_1_1jaco__msgs_1_1SetForceControlParams_01_4">ros::service_traits::DataType&lt; ::jaco_msgs::SetForceControlParams &gt;</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d3/d50/structros_1_1service__traits_1_1DataType_3_01_1_1jaco__msgs_1_1SetForceControlParamsRequest_01_4">ros::service_traits::DataType&lt; ::jaco_msgs::SetForceControlParamsRequest &gt;</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d8/d72/structros_1_1service__traits_1_1DataType_3_01_1_1jaco__msgs_1_1SetForceControlParamsResponse_01_4">ros::service_traits::DataType&lt; ::jaco_msgs::SetForceControlParamsResponse &gt;</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="dd/ddb/structros_1_1service__traits_1_1DataType_3_01_1_1jaco__msgs_1_1Start_01_4">ros::service_traits::DataType&lt; ::jaco_msgs::Start &gt;</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="db/d90/structros_1_1service__traits_1_1DataType_3_01_1_1jaco__msgs_1_1StartRequest_01_4">ros::service_traits::DataType&lt; ::jaco_msgs::StartRequest &gt;</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d1/da3/structros_1_1service__traits_1_1DataType_3_01_1_1jaco__msgs_1_1StartResponse_01_4">ros::service_traits::DataType&lt; ::jaco_msgs::StartResponse &gt;</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d0/d47/structros_1_1service__traits_1_1DataType_3_01_1_1jaco__msgs_1_1Stop_01_4">ros::service_traits::DataType&lt; ::jaco_msgs::Stop &gt;</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d2/de7/structros_1_1service__traits_1_1DataType_3_01_1_1jaco__msgs_1_1StopRequest_01_4">ros::service_traits::DataType&lt; ::jaco_msgs::StopRequest &gt;</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="da/d19/structros_1_1service__traits_1_1DataType_3_01_1_1jaco__msgs_1_1StopResponse_01_4">ros::service_traits::DataType&lt; ::jaco_msgs::StopResponse &gt;</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d0/d36/structros_1_1service__traits_1_1MD5Sum_3_01_1_1jaco__msgs_1_1HomeArm_01_4">ros::service_traits::MD5Sum&lt; ::jaco_msgs::HomeArm &gt;</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d8/df1/structros_1_1service__traits_1_1MD5Sum_3_01_1_1jaco__msgs_1_1HomeArmRequest_01_4">ros::service_traits::MD5Sum&lt; ::jaco_msgs::HomeArmRequest &gt;</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d6/d2f/structros_1_1service__traits_1_1MD5Sum_3_01_1_1jaco__msgs_1_1HomeArmResponse_01_4">ros::service_traits::MD5Sum&lt; ::jaco_msgs::HomeArmResponse &gt;</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d8/d87/structros_1_1service__traits_1_1MD5Sum_3_01_1_1jaco__msgs_1_1SetForceControlParams_01_4">ros::service_traits::MD5Sum&lt; ::jaco_msgs::SetForceControlParams &gt;</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="df/d4e/structros_1_1service__traits_1_1MD5Sum_3_01_1_1jaco__msgs_1_1SetForceControlParamsRequest_01_4">ros::service_traits::MD5Sum&lt; ::jaco_msgs::SetForceControlParamsRequest &gt;</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="de/d13/structros_1_1service__traits_1_1MD5Sum_3_01_1_1jaco__msgs_1_1SetForceControlParamsResponse_01_4">ros::service_traits::MD5Sum&lt; ::jaco_msgs::SetForceControlParamsResponse &gt;</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d1/ddf/structros_1_1service__traits_1_1MD5Sum_3_01_1_1jaco__msgs_1_1Start_01_4">ros::service_traits::MD5Sum&lt; ::jaco_msgs::Start &gt;</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="de/d86/structros_1_1service__traits_1_1MD5Sum_3_01_1_1jaco__msgs_1_1StartRequest_01_4">ros::service_traits::MD5Sum&lt; ::jaco_msgs::StartRequest &gt;</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d9/d66/structros_1_1service__traits_1_1MD5Sum_3_01_1_1jaco__msgs_1_1StartResponse_01_4">ros::service_traits::MD5Sum&lt; ::jaco_msgs::StartResponse &gt;</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="de/d34/structros_1_1service__traits_1_1MD5Sum_3_01_1_1jaco__msgs_1_1Stop_01_4">ros::service_traits::MD5Sum&lt; ::jaco_msgs::Stop &gt;</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="db/d52/structros_1_1service__traits_1_1MD5Sum_3_01_1_1jaco__msgs_1_1StopRequest_01_4">ros::service_traits::MD5Sum&lt; ::jaco_msgs::StopRequest &gt;</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d4/d10/structros_1_1service__traits_1_1MD5Sum_3_01_1_1jaco__msgs_1_1StopResponse_01_4">ros::service_traits::MD5Sum&lt; ::jaco_msgs::StopResponse &gt;</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+</section>

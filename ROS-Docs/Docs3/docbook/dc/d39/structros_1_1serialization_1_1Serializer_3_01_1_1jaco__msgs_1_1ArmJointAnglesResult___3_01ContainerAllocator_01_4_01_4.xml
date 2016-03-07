@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="dc/d39/structros_1_1serialization_1_1Serializer_3_01_1_1jaco__msgs_1_1ArmJointAnglesResult___3_01ContainerAllocator_01_4_01_4">
+<title>ros::serialization::Serializer&lt; ::jaco_msgs::ArmJointAnglesResult_&lt; ContainerAllocator &gt; &gt; struct Reference</title>
+<para>
+    <programlisting>#include <link linkend="db/d55/ArmJointAnglesResult_8h">&quot;ArmJointAnglesResult.h&quot;</link></programlisting>
+</para>
+<para>Inheritance diagram for ros::serialization::Serializer&lt; ::jaco_msgs::ArmJointAnglesResult_&lt; ContainerAllocator &gt; &gt;</para>
+<para>
+    <figure>
+        <title>Inheritance graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../d4/d0a/structros_1_1serialization_1_1Serializer_3_01_1_1jaco__msgs_1_1ArmJointAnglesResult___3_01Contaidb7649c70572c9e4eab939db124c40ce.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Collaboration diagram for ros::serialization::Serializer&lt; ::jaco_msgs::ArmJointAnglesResult_&lt; ContainerAllocator &gt; &gt;</para>
+<para>
+    <figure>
+        <title>Collaboration graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../d5/d07/structros_1_1serialization_1_1Serializer_3_01_1_1jaco__msgs_1_1ArmJointAnglesResult___3_01Contaicec447822175e6c6397fc69d43e1e99a.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+    <templateparamlist>
+      <param>
+        <type>class ContainerAllocator</type>
+      </param>
+    </templateparamlist>
+        <section>
+            <title>Public Attributes</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>ROS_DECLARE_ALLINONE_SERIALIZER</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static void <link linkend="dc/d39/structros_1_1serialization_1_1Serializer_3_01_1_1jaco__msgs_1_1ArmJointAnglesResult___3_01ContainerAllocator_01_4_01_4_1ad97aff444b4cc651ad5eb4f743e45a76">allInOne</link> (
+Stream &amp; stream, T m)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Member Data Documentation</title>
+        </section>
+            <section xml:id="dc/d39/structros_1_1serialization_1_1Serializer_3_01_1_1jaco__msgs_1_1ArmJointAnglesResult___3_01ContainerAllocator_01_4_01_4_1ad97aff444b4cc651ad5eb4f743e45a76">
+                <title>static void ros::serialization::Serializer&lt; ::jaco_msgs::ArmJointAnglesResult_&lt; ContainerAllocator &gt; &gt;::allInOne (Stream &amp;stream, T m)</title> <emphasis></emphasis>
+                
+            </section>
+</section>

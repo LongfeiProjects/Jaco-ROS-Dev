@@ -1,0 +1,146 @@
+.TH "D:/Longfei/Desktop/catkin_KinovaROS/src/jaco-ros/jaco_driver/src/testers/test_jaco_arm_controller.cpp" 3 "Thu Mar 3 2016" "Version 1.0.1" "Kinova-ROS" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+D:/Longfei/Desktop/catkin_KinovaROS/src/jaco-ros/jaco_driver/src/testers/test_jaco_arm_controller.cpp \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <geometry_msgs/PoseStamped\&.h>\fP
+.br
+\fC#include <geometry_msgs/TwistStamped\&.h>\fP
+.br
+\fC#include <tf/tf\&.h>\fP
+.br
+\fC#include <ros/ros\&.h>\fP
+.br
+\fC#include <jaco_driver/JacoPositionConfig\&.h>\fP
+.br
+\fC#include <dynamic_reconfigure/server\&.h>\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBcallback\fP (jaco_driver::JacoPositionConfig &config, uint32_t level)"
+.br
+.ti -1c
+.RI "int \fBmain\fP (int argc, char **argv)"
+.br
+.ti -1c
+.RI "void \fBTimerCallback\fP (const ros::TimerEvent &)"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "ros::Publisher * \fBpub\fP"
+.br
+.ti -1c
+.RI "float \fBrx_pose\fP =0"
+.br
+.ti -1c
+.RI "float \fBry_pose\fP =0"
+.br
+.ti -1c
+.RI "float \fBrz_pose\fP =0"
+.br
+.ti -1c
+.RI "float \fBx_pose\fP =0"
+.br
+.ti -1c
+.RI "float \fBy_pose\fP =0"
+.br
+.ti -1c
+.RI "float \fBz_pose\fP =0"
+.br
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "void callback (jaco_driver::JacoPositionConfig & config, uint32_t level)"
+
+.PP
+.nf
+38                                                                      {
+39 
+40      x_pose=config\&.X_Pose;
+41      y_pose=config\&.Y_Pose;
+42      z_pose=config\&.Z_Pose;
+43      rx_pose=config\&.RX_Pose;
+44      ry_pose=config\&.RY_Pose;
+45      rz_pose=config\&.RZ_Pose;
+46 
+47     //  ROS_INFO("Reconfigure");
+48 
+49 
+50 }
+.fi
+.SS "int main (int argc, char ** argv)"
+String containing the topic name for cartesian commands 
+.PP
+.nf
+73                                 {
+74 
+75     /* Set up ROS */
+76     ros::init(argc, argv, "test_jaco_arm_controller");
+77     ros::NodeHandle nh;
+78     ros::NodeHandle param_nh("~");
+79 
+80     std::string ArmPose("object_pose"); 
+81 
+82     ros::Publisher pub2 = nh\&.advertise<geometry_msgs::PoseStamped>(ArmPose,
+83             2);
+84 
+85     pub = &pub2;
+86     dynamic_reconfigure::Server<jaco_driver::JacoPositionConfig>  dr_server;
+87  dynamic_reconfigure::Server<jaco_driver::JacoPositionConfig>::CallbackType dr_call = boost::bind(&callback, _1, _2);
+88     dr_server\&.setCallback(dr_call);
+89       ros::Timer    timer = nh\&.createTimer(ros::Duration(0\&.1),&TimerCallback);
+90 
+91         ros::spin();
+92 
+93 }
+.fi
+.SS "void CartesianVelTest::TimerCallback (const ros::TimerEvent &)"
+
+.PP
+.nf
+55 {
+56     geometry_msgs::PoseStamped test_msg;
+57 
+58             test_msg\&.pose\&.position\&.x = x_pose;
+59             test_msg\&.pose\&.position\&.y = y_pose;
+60             test_msg\&.pose\&.position\&.z = z_pose;
+61 
+62             tf::Quaternion q;
+63 
+64             q\&.setRPY(rx_pose,ry_pose,rz_pose);
+65 
+66             tf::quaternionTFToMsg(q,test_msg\&.pose\&.orientation);
+67             test_msg\&.header\&.frame_id = "/arm_base";
+68             test_msg\&.header\&.stamp = ros::Time()\&.now();
+69             pub->publish(test_msg);
+70 
+71 }
+.fi
+.SH "Variable Documentation"
+.PP 
+.SS "ros::Publisher* pub"
+
+.SS "float rx_pose =0"
+
+.SS "float ry_pose =0"
+
+.SS "float rz_pose =0"
+
+.SS "float x_pose =0"
+
+.SS "float y_pose =0"
+
+.SS "float z_pose =0"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Kinova-ROS from the source code\&.

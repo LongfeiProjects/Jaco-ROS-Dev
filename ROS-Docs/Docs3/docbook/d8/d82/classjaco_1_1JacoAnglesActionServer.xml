@@ -1,0 +1,137 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="d8/d82/classjaco_1_1JacoAnglesActionServer">
+<title>jaco::JacoAnglesActionServer class Reference</title>
+<para>
+    <programlisting>#include <link linkend="d2/d16/jaco__angles__action_8h">&quot;jaco_angles_action.h&quot;</link></programlisting>
+</para>
+<para>Inheritance diagram for jaco::JacoAnglesActionServer</para>
+<para>
+    <figure>
+        <title>Inheritance graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../d9/d60/classjaco_1_1JacoAnglesActionServer__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Collaboration diagram for jaco::JacoAnglesActionServer</para>
+<para>
+    <figure>
+        <title>Collaboration graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../d7/d31/classjaco_1_1JacoAnglesActionServer__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+        <section>
+            <title>Private Attributes</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>actionlib::SimpleActionServer&lt; jaco_msgs::ArmJointAnglesAction &gt; action_server_</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>JacoComm &amp; arm_comm_</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>JacoAngles last_nonstall_angles_</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>ros::Time last_nonstall_time_</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>ros::NodeHandle node_handle_</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>double rate_hz_</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>double stall_interval_seconds_</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>double stall_threshold_</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>float tolerance_</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="d8/d82/classjaco_1_1JacoAnglesActionServer_1a3a3da8fd412f2311534246d2287a5b90">actionCallback</link> (
+const <link linkend="d7/dba/namespacejaco__msgs_1a9056d2fb29e6973f6db43a60138ffc7c">jaco_msgs::ArmJointAnglesGoalConstPtr</link> &amp; )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="d8/d82/classjaco_1_1JacoAnglesActionServer_1a53ddba342c38bb3d9cf34ad773d7189f">JacoAnglesActionServer</link> (
+<link linkend="d5/d2b/classjaco_1_1JacoComm">JacoComm</link> &amp; , const ros::NodeHandle &amp; n)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="d8/d82/classjaco_1_1JacoAnglesActionServer_1a6d6ed0c99c45e1eebab14bba3233580e">~JacoAnglesActionServer</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Member Data Documentation</title>
+        </section>
+            <section xml:id="d8/d82/classjaco_1_1JacoAnglesActionServer_1a3a3da8fd412f2311534246d2287a5b90">
+                <title>void jaco::JacoAnglesActionServer::actionCallback (const jaco_msgs::ArmJointAnglesGoalConstPtr &amp;)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="d8/d82/classjaco_1_1JacoAnglesActionServer_1a53ddba342c38bb3d9cf34ad773d7189f">
+                <title>jaco::JacoAnglesActionServer::JacoAnglesActionServer (JacoComm &amp;, const ros::NodeHandle &amp;n)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="d8/d82/classjaco_1_1JacoAnglesActionServer_1a6d6ed0c99c45e1eebab14bba3233580e">
+                <title>jaco::JacoAnglesActionServer::~JacoAnglesActionServer ()</title> <emphasis></emphasis>
+                
+            </section>
+</section>

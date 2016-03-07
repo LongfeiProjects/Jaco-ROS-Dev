@@ -1,0 +1,224 @@
+.TH "jaco::JacoPose" 3 "Thu Mar 3 2016" "Version 1.0.1" "Kinova-ROS" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+jaco::JacoPose \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include 'jaco_types\&.h'\fP
+.PP
+Inherits \fBCartesianInfo\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "geometry_msgs::Pose \fBconstructPoseMsg\fP ()"
+.br
+.ti -1c
+.RI "geometry_msgs::Wrench \fBconstructWrenchMsg\fP ()"
+.br
+.ti -1c
+.RI "void \fBInitStruct\fP ()"
+.br
+.ti -1c
+.RI "bool \fBisCloseToOther\fP (const \fBJacoPose\fP &, float tolerance) const "
+.br
+.ti -1c
+.RI "\fBJacoPose\fP ()"
+.br
+.ti -1c
+.RI "\fBJacoPose\fP (const geometry_msgs::Pose &pose)"
+.br
+.ti -1c
+.RI "\fBJacoPose\fP (const \fBCartesianInfo\fP &pose)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "float \fBThetaX\fP"
+.br
+.RI "\fIThis is the value related to the orientation around the X axis\&. Unit depends on the context it's been used\&. \fP"
+.ti -1c
+.RI "float \fBThetaY\fP"
+.br
+.RI "\fIThis is the value related to the orientation around the Y axis\&. Unit depends on the context it's been used\&. \fP"
+.ti -1c
+.RI "float \fBThetaZ\fP"
+.br
+.RI "\fIThis is the value related to the orientation around the Z axis\&. Unit depends on the context it's been used\&. \fP"
+.ti -1c
+.RI "float \fBX\fP"
+.br
+.RI "\fIThis is the value related to the translation along the X axis\&. Unit depends on the context it's been used\&. \fP"
+.ti -1c
+.RI "float \fBY\fP"
+.br
+.RI "\fIThis is the value related to the translation along the Y axis\&. Unit depends on the context it's been used\&. \fP"
+.ti -1c
+.RI "float \fBZ\fP"
+.br
+.RI "\fIThis is the value related to the translation along the Z axis\&. Unit depends on the context it's been used\&. \fP"
+.in -1c
+.SH "Detailed Description"
+.PP 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "jaco::JacoPose::JacoPose ()\fC [inline]\fP"
+
+.PP
+.nf
+79 {}
+.fi
+.SS "jaco::JacoPose::JacoPose (const geometry_msgs::Pose & pose)\fC [explicit]\fP"
+
+.PP
+.nf
+104 {
+105     double tx, ty, tz;
+106     tf::Quaternion q;
+107     tf::quaternionMsgToTF(pose\&.orientation, q);
+108 
+109     tf::Matrix3x3 bt_q(q);
+110 
+111     bt_q\&.getEulerYPR(tz, ty, tx);
+112 
+113     X = static_cast<float>(pose\&.position\&.x);
+114     Y = static_cast<float>(pose\&.position\&.y);
+115     Z = static_cast<float>(pose\&.position\&.z);
+116 
+117     ThetaX = normalizeInRads(tx);
+118     ThetaY = normalizeInRads(ty);
+119     ThetaZ = normalizeInRads(tz);
+120 }
+.fi
+.SS "jaco::JacoPose::JacoPose (const \fBCartesianInfo\fP & pose)\fC [explicit]\fP"
+
+.PP
+.nf
+124 {
+125     X = pose\&.X;
+126     Y = pose\&.Y;
+127     Z = pose\&.Z;
+128 
+129     ThetaX = normalizeInRads(pose\&.ThetaX);
+130     ThetaY = normalizeInRads(pose\&.ThetaY);
+131     ThetaZ = normalizeInRads(pose\&.ThetaZ);
+132 }
+.fi
+.SH "Member Function Documentation"
+.PP 
+.SS "geometry_msgs::Pose jaco::JacoPose::constructPoseMsg ()"
+
+.PP
+.nf
+136 {
+137     geometry_msgs::Pose pose;
+138     tf::Quaternion position_quaternion;
+139 
+140     
+141     // TODO: QUICK FIX, bake this as a quaternion:
+142     tf::Matrix3x3 mx(           1,            0,            0, 
+143                                 0,  cos(ThetaX), -sin(ThetaX),
+144                                 0,  sin(ThetaX),  cos(ThetaX));
+145     tf::Matrix3x3 my( cos(ThetaY),            0,  sin(ThetaY),
+146                                 0,            1,            0,
+147                      -sin(ThetaY),            0,  cos(ThetaY));
+148     tf::Matrix3x3 mz( cos(ThetaZ), -sin(ThetaZ),            0,
+149                       sin(ThetaZ),  cos(ThetaZ),            0,
+150                                 0,            0,            1);
+151 
+152     tf::Matrix3x3  mg = mx * my * mz;
+153     mg\&.getRotation(position_quaternion);
+154 
+155     // NOTE: This doesn't work, as angles reported by the API are not fixed\&.
+156     // position_quaternion\&.setRPY(ThetaX, ThetaY, ThetaZ);
+157 
+158     
+159     tf::quaternionTFToMsg(position_quaternion, pose\&.orientation);
+160 
+161     pose\&.position\&.x = X;
+162     pose\&.position\&.y = Y;
+163     pose\&.position\&.z = Z;
+164 
+165     return pose;
+166 }
+.fi
+.SS "geometry_msgs::Wrench jaco::JacoPose::constructWrenchMsg ()"
+
+.PP
+.nf
+169 {
+170     geometry_msgs::Wrench wrench;
+171 
+172     wrench\&.force\&.x  = X;
+173     wrench\&.force\&.y  = Y;
+174     wrench\&.force\&.z  = Z;
+175     wrench\&.torque\&.x = ThetaX;
+176     wrench\&.torque\&.y = ThetaY;
+177     wrench\&.torque\&.z = ThetaZ;
+178 
+179     return wrench;
+180 }
+.fi
+.SS "void CartesianInfo::InitStruct ()\fC [inline]\fP, \fC [inherited]\fP"
+This method will initialises all the values to 0 
+.PP
+.nf
+399     {
+400         X = 0\&.0f;
+401         Y = 0\&.0f;
+402         Z = 0\&.0f;
+403         ThetaX = 0\&.0f;
+404         ThetaY = 0\&.0f;
+405         ThetaZ = 0\&.0f;
+406     }
+.fi
+.SS "bool jaco::JacoPose::isCloseToOther (const \fBJacoPose\fP & other, float tolerance) const"
+
+.PP
+.nf
+183 {
+184     bool status = true;
+185     status = status && areValuesClose(X, other\&.X, tolerance);
+186     status = status && areValuesClose(Y, other\&.Y, tolerance);
+187     status = status && areValuesClose(Z, other\&.Z, tolerance);
+188     status = status && areValuesClose(ThetaX, other\&.ThetaX, tolerance);
+189     status = status && areValuesClose(ThetaY, other\&.ThetaY, tolerance);
+190     status = status && areValuesClose(ThetaZ, other\&.ThetaZ, tolerance);
+191     return status;
+192 }
+.fi
+.SH "Member Data Documentation"
+.PP 
+.SS "float CartesianInfo::ThetaX\fC [inherited]\fP"
+
+.PP
+This is the value related to the orientation around the X axis\&. Unit depends on the context it's been used\&. This is the value related to the orientation around the X axis\&. Depending on the context it's been used, the unit of the value will change\&. As an example if the current control mode is cartesian position the unit will be RAD but if the control mode is cartesian velocity then the unit will be RAD per second\&. 
+.SS "float CartesianInfo::ThetaY\fC [inherited]\fP"
+
+.PP
+This is the value related to the orientation around the Y axis\&. Unit depends on the context it's been used\&. As an example if the current control mode is cartesian position the unit will be RAD but if the control mode is cartesian velocity then the unit will be RAD per second\&. 
+.SS "float CartesianInfo::ThetaZ\fC [inherited]\fP"
+
+.PP
+This is the value related to the orientation around the Z axis\&. Unit depends on the context it's been used\&. As an example if the current control mode is cartesian position the unit will be RAD but if the control mode is cartesian velocity then the unit will be RAD per second\&. 
+.SS "float CartesianInfo::X\fC [inherited]\fP"
+
+.PP
+This is the value related to the translation along the X axis\&. Unit depends on the context it's been used\&. As an example if the current control mode is cartesian position the unit will be meters but if the control mode is cartesian velocity then the unit will be meters per second\&. 
+.SS "float CartesianInfo::Y\fC [inherited]\fP"
+
+.PP
+This is the value related to the translation along the Y axis\&. Unit depends on the context it's been used\&. As an example if the current control mode is cartesian position the unit will be meters but if the control mode is cartesian velocity then the unit will be meters per second\&. 
+.SS "float CartesianInfo::Z\fC [inherited]\fP"
+
+.PP
+This is the value related to the translation along the Z axis\&. Unit depends on the context it's been used\&. As an example if the current control mode is cartesian position the unit will be meters but if the control mode is cartesian velocity then the unit will be meters per second\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Kinova-ROS from the source code\&.

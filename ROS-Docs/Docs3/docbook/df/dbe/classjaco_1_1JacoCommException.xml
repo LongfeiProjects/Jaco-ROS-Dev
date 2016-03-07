@@ -1,0 +1,81 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="df/dbe/classjaco_1_1JacoCommException">
+<title>jaco::JacoCommException class Reference</title>
+<para>
+    <programlisting>#include <link linkend="d7/d98/jaco__types_8h">&quot;jaco_types.h&quot;</link></programlisting>
+</para>
+<para>Inheritance diagram for jaco::JacoCommException</para>
+<para>
+    <figure>
+        <title>Inheritance graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../d5/d20/classjaco_1_1JacoCommException__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Collaboration diagram for jaco::JacoCommException</para>
+<para>
+    <figure>
+        <title>Collaboration graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../d5/dd0/classjaco_1_1JacoCommException__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+        <section>
+            <title>Private Attributes</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>std::string desc_</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="df/dbe/classjaco_1_1JacoCommException_1af6c28818c201bacdc8a08a346325822c">JacoCommException</link> (
+const std::string &amp; message, const int error_code)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>const char * <link linkend="df/dbe/classjaco_1_1JacoCommException_1a7689658c873a6b22857db7c2bb630d43">what</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="df/dbe/classjaco_1_1JacoCommException_1a8ef866b21c40fcc539984e0d90f355e3">~JacoCommException</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Member Data Documentation</title>
+        </section>
+            <section xml:id="df/dbe/classjaco_1_1JacoCommException_1af6c28818c201bacdc8a08a346325822c">
+                <title>jaco::JacoCommException::JacoCommException (const std::string &amp;message, const int error_code)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="df/dbe/classjaco_1_1JacoCommException_1a7689658c873a6b22857db7c2bb630d43">
+                <title>const char * jaco::JacoCommException::what () const </title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="df/dbe/classjaco_1_1JacoCommException_1a8ef866b21c40fcc539984e0d90f355e3">
+                <title>jaco::JacoCommException::~JacoCommException ()</title> <emphasis></emphasis>
+                
+            </section>
+</section>

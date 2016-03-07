@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="dc/d03/structros_1_1message__traits_1_1IsFixedSize_3_01_1_1jaco__msgs_1_1ArmPoseActionFeedback___3_01Co52ad99d0f62f41acb9d98cf1b57f7795">
+<title>ros::message_traits::IsFixedSize&lt; ::jaco_msgs::ArmPoseActionFeedback_&lt; ContainerAllocator &gt; const  &gt; struct Reference</title>
+<para>
+    <programlisting>#include <link linkend="d1/d70/ArmPoseActionFeedback_8h">&quot;ArmPoseActionFeedback.h&quot;</link></programlisting>
+</para>
+<para>Inheritance diagram for ros::message_traits::IsFixedSize&lt; ::jaco_msgs::ArmPoseActionFeedback_&lt; ContainerAllocator &gt; const  &gt;</para>
+<para>
+    <figure>
+        <title>Inheritance graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../d3/d3d/structros_1_1message__traits_1_1IsFixedSize_3_01_1_1jaco__msgs_1_1ArmPoseActionFeedback___3_01Cof7d60b4046168e6ad579294ded99359d.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Collaboration diagram for ros::message_traits::IsFixedSize&lt; ::jaco_msgs::ArmPoseActionFeedback_&lt; ContainerAllocator &gt; const  &gt;</para>
+<para>
+    <figure>
+        <title>Collaboration graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../d8/d6d/structros_1_1message__traits_1_1IsFixedSize_3_01_1_1jaco__msgs_1_1ArmPoseActionFeedback___3_01Co9172de085cd70649949314489bbcf5a7.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+    <templateparamlist>
+      <param>
+        <type>class ContainerAllocator</type>
+      </param>
+    </templateparamlist>
+</section>

@@ -1,0 +1,175 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="d2/dbe/namespacejaco__msgs_1_1msg">
+<title>jaco_msgs::msg</title>
+        <simplesect>
+            <title> Namespaces </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d8/d27/namespacejaco__msgs_1_1msg_1_1__ArmJointAnglesAction">jaco_msgs::msg::_ArmJointAnglesAction</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d2/d91/namespacejaco__msgs_1_1msg_1_1__ArmJointAnglesActionFeedback">jaco_msgs::msg::_ArmJointAnglesActionFeedback</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d8/dec/namespacejaco__msgs_1_1msg_1_1__ArmJointAnglesActionGoal">jaco_msgs::msg::_ArmJointAnglesActionGoal</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d6/d9a/namespacejaco__msgs_1_1msg_1_1__ArmJointAnglesActionResult">jaco_msgs::msg::_ArmJointAnglesActionResult</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="dd/d12/namespacejaco__msgs_1_1msg_1_1__ArmJointAnglesFeedback">jaco_msgs::msg::_ArmJointAnglesFeedback</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d1/d59/namespacejaco__msgs_1_1msg_1_1__ArmJointAnglesGoal">jaco_msgs::msg::_ArmJointAnglesGoal</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="dc/d0b/namespacejaco__msgs_1_1msg_1_1__ArmJointAnglesResult">jaco_msgs::msg::_ArmJointAnglesResult</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d4/dfb/namespacejaco__msgs_1_1msg_1_1__ArmPoseAction">jaco_msgs::msg::_ArmPoseAction</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="df/dcd/namespacejaco__msgs_1_1msg_1_1__ArmPoseActionFeedback">jaco_msgs::msg::_ArmPoseActionFeedback</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d5/db7/namespacejaco__msgs_1_1msg_1_1__ArmPoseActionGoal">jaco_msgs::msg::_ArmPoseActionGoal</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="dc/d55/namespacejaco__msgs_1_1msg_1_1__ArmPoseActionResult">jaco_msgs::msg::_ArmPoseActionResult</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="dd/d48/namespacejaco__msgs_1_1msg_1_1__ArmPoseFeedback">jaco_msgs::msg::_ArmPoseFeedback</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="dc/d1c/namespacejaco__msgs_1_1msg_1_1__ArmPoseGoal">jaco_msgs::msg::_ArmPoseGoal</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="da/d8a/namespacejaco__msgs_1_1msg_1_1__ArmPoseResult">jaco_msgs::msg::_ArmPoseResult</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d4/da8/namespacejaco__msgs_1_1msg_1_1__FingerPosition">jaco_msgs::msg::_FingerPosition</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d5/dd2/namespacejaco__msgs_1_1msg_1_1__JointAngles">jaco_msgs::msg::_JointAngles</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d4/d8a/namespacejaco__msgs_1_1msg_1_1__JointVelocity">jaco_msgs::msg::_JointVelocity</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d2/d36/namespacejaco__msgs_1_1msg_1_1__SetFingersPositionAction">jaco_msgs::msg::_SetFingersPositionAction</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d6/d2f/namespacejaco__msgs_1_1msg_1_1__SetFingersPositionActionFeedback">jaco_msgs::msg::_SetFingersPositionActionFeedback</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d0/d4c/namespacejaco__msgs_1_1msg_1_1__SetFingersPositionActionGoal">jaco_msgs::msg::_SetFingersPositionActionGoal</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d7/d12/namespacejaco__msgs_1_1msg_1_1__SetFingersPositionActionResult">jaco_msgs::msg::_SetFingersPositionActionResult</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d7/d80/namespacejaco__msgs_1_1msg_1_1__SetFingersPositionFeedback">jaco_msgs::msg::_SetFingersPositionFeedback</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="de/d03/namespacejaco__msgs_1_1msg_1_1__SetFingersPositionGoal">jaco_msgs::msg::_SetFingersPositionGoal</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d6/daf/namespacejaco__msgs_1_1msg_1_1__SetFingersPositionResult">jaco_msgs::msg::_SetFingersPositionResult</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+</section>

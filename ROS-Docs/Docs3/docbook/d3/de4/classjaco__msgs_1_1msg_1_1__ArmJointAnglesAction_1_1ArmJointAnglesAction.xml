@@ -1,0 +1,210 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="d3/de4/classjaco__msgs_1_1msg_1_1__ArmJointAnglesAction_1_1ArmJointAnglesAction">
+<title>jaco_msgs::msg::_ArmJointAnglesAction::ArmJointAnglesAction class Reference</title>
+<para>Inheritance diagram for jaco_msgs::msg::_ArmJointAnglesAction::ArmJointAnglesAction</para>
+<para>
+    <figure>
+        <title>Inheritance graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../d0/d5c/classjaco__msgs_1_1msg_1_1__ArmJointAnglesAction_1_1ArmJointAnglesAction__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Collaboration diagram for jaco_msgs::msg::_ArmJointAnglesAction::ArmJointAnglesAction</para>
+<para>
+    <figure>
+        <title>Collaboration graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../de/d72/classjaco__msgs_1_1msg_1_1__ArmJointAnglesAction_1_1ArmJointAnglesAction__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>list __slots__</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>string _full_text</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>bool _has_header</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>string _md5sum</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>list _slot_types</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>string _type</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Public Attributes</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>action_feedback</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>action_goal</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>action_result</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>def <link linkend="d3/de4/classjaco__msgs_1_1msg_1_1__ArmJointAnglesAction_1_1ArmJointAnglesAction_1a8439ec228e0e1910a6a0349a3296903b">__init__</link> (
+self , args , kwds )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>def <link linkend="d3/de4/classjaco__msgs_1_1msg_1_1__ArmJointAnglesAction_1_1ArmJointAnglesAction_1acf40100262ea6a8e64214e79e711c9dd">deserialize</link> (
+self , str )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>def <link linkend="d3/de4/classjaco__msgs_1_1msg_1_1__ArmJointAnglesAction_1_1ArmJointAnglesAction_1a08749897ec2a811bc7bb253c107e25d5">deserialize_numpy</link> (
+self , str , numpy )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>def <link linkend="d3/de4/classjaco__msgs_1_1msg_1_1__ArmJointAnglesAction_1_1ArmJointAnglesAction_1a037ec8c60926016d9d4b3cdaeac113c3">serialize</link> (
+self , buff )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>def <link linkend="d3/de4/classjaco__msgs_1_1msg_1_1__ArmJointAnglesAction_1_1ArmJointAnglesAction_1a2fe71a4e99d4ac3d0c43569e043f462e">serialize_numpy</link> (
+self , buff , numpy )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>def <link linkend="d3/de4/classjaco__msgs_1_1msg_1_1__ArmJointAnglesAction_1_1ArmJointAnglesAction_1aeed3f28bc6b88de9a09308494dfe0b49">_get_types</link> (
+self )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Member Data Documentation</title>
+        </section>
+            <section xml:id="d3/de4/classjaco__msgs_1_1msg_1_1__ArmJointAnglesAction_1_1ArmJointAnglesAction_1a8439ec228e0e1910a6a0349a3296903b">
+                <title>def jaco_msgs.msg._ArmJointAnglesAction.ArmJointAnglesAction.__init__ (self, args, kwds)</title> <emphasis></emphasis>
+                
+<para><literallayout>Constructor. Any message fields that are implicitly/explicitly
+set to None will be assigned a default value. The recommend
+use is keyword arguments as this is more robust to future message
+changes.  You cannot mix in-order arguments and keyword arguments.
+
+The available fields are:
+   action_goal,action_result,action_feedback
+
+:param args: complete set of field values, in .msg order
+:param kwds: use keyword arguments corresponding to message field names
+to set specific fields.
+</literallayout> </para>
+
+            </section>
+            <section xml:id="d3/de4/classjaco__msgs_1_1msg_1_1__ArmJointAnglesAction_1_1ArmJointAnglesAction_1acf40100262ea6a8e64214e79e711c9dd">
+                <title>def jaco_msgs.msg._ArmJointAnglesAction.ArmJointAnglesAction.deserialize (self, str)</title> <emphasis></emphasis>
+                
+<para><literallayout>unpack serialized message in str into this message instance
+:param str: byte array of serialized message, ``str``
+</literallayout> </para>
+
+            </section>
+            <section xml:id="d3/de4/classjaco__msgs_1_1msg_1_1__ArmJointAnglesAction_1_1ArmJointAnglesAction_1a08749897ec2a811bc7bb253c107e25d5">
+                <title>def jaco_msgs.msg._ArmJointAnglesAction.ArmJointAnglesAction.deserialize_numpy (self, str, numpy)</title> <emphasis></emphasis>
+                
+<para><literallayout>unpack serialized message in str into this message instance using numpy for array types
+:param str: byte array of serialized message, ``str``
+:param numpy: numpy python module
+</literallayout> </para>
+
+            </section>
+            <section xml:id="d3/de4/classjaco__msgs_1_1msg_1_1__ArmJointAnglesAction_1_1ArmJointAnglesAction_1a037ec8c60926016d9d4b3cdaeac113c3">
+                <title>def jaco_msgs.msg._ArmJointAnglesAction.ArmJointAnglesAction.serialize (self, buff)</title> <emphasis></emphasis>
+                
+<para><literallayout>serialize message into buffer
+:param buff: buffer, ``StringIO``
+</literallayout> </para>
+
+            </section>
+            <section xml:id="d3/de4/classjaco__msgs_1_1msg_1_1__ArmJointAnglesAction_1_1ArmJointAnglesAction_1a2fe71a4e99d4ac3d0c43569e043f462e">
+                <title>def jaco_msgs.msg._ArmJointAnglesAction.ArmJointAnglesAction.serialize_numpy (self, buff, numpy)</title> <emphasis></emphasis>
+                
+<para><literallayout>serialize message with numpy array types into buffer
+:param buff: buffer, ``StringIO``
+:param numpy: numpy python module
+</literallayout> </para>
+
+            </section>
+            <section xml:id="d3/de4/classjaco__msgs_1_1msg_1_1__ArmJointAnglesAction_1_1ArmJointAnglesAction_1aeed3f28bc6b88de9a09308494dfe0b49">
+                <title>def jaco_msgs.msg._ArmJointAnglesAction.ArmJointAnglesAction._get_types (self)</title> <emphasis></emphasis>
+                
+<para><literallayout>internal API method
+</literallayout> </para>
+
+            </section>
+</section>

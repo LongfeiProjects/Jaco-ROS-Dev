@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="d4/dd7/structros_1_1message__traits_1_1DataType_3_01_1_1jaco__msgs_1_1ArmPoseResult___3_01ContainerAllocator_01_4_01_4">
+<title>ros::message_traits::DataType&lt; ::jaco_msgs::ArmPoseResult_&lt; ContainerAllocator &gt; &gt; struct Reference</title>
+<para>
+    <programlisting>#include <link linkend="d5/d95/ArmPoseResult_8h">&quot;ArmPoseResult.h&quot;</link></programlisting>
+</para>
+<para>Inheritance diagram for ros::message_traits::DataType&lt; ::jaco_msgs::ArmPoseResult_&lt; ContainerAllocator &gt; &gt;</para>
+<para>
+    <figure>
+        <title>Inheritance graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../dc/db2/structros_1_1message__traits_1_1DataType_3_01_1_1jaco__msgs_1_1ArmPoseResult___3_01ContainerAllocator_01_4_01_4__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Collaboration diagram for ros::message_traits::DataType&lt; ::jaco_msgs::ArmPoseResult_&lt; ContainerAllocator &gt; &gt;</para>
+<para>
+    <figure>
+        <title>Collaboration graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../d3/d83/structros_1_1message__traits_1_1DataType_3_01_1_1jaco__msgs_1_1ArmPoseResult___3_01ContainerAllocator_01_4_01_4__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+    <templateparamlist>
+      <param>
+        <type>class ContainerAllocator</type>
+      </param>
+    </templateparamlist>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static const char * <link linkend="d4/dd7/structros_1_1message__traits_1_1DataType_3_01_1_1jaco__msgs_1_1ArmPoseResult___3_01ContainerAllocator_01_4_01_4_1a2e753a1db2bf21d14d1eed9f77d159c2">value</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static const char * <link linkend="d4/dd7/structros_1_1message__traits_1_1DataType_3_01_1_1jaco__msgs_1_1ArmPoseResult___3_01ContainerAllocator_01_4_01_4_1afa0114ae100fc123354f3e360f471ceb">value</link> (
+const ::<link linkend="d3/d54/structjaco__msgs_1_1ArmPoseResult__">jaco_msgs::ArmPoseResult_</link>&lt; ContainerAllocator &gt; &amp; )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+            <section xml:id="d4/dd7/structros_1_1message__traits_1_1DataType_3_01_1_1jaco__msgs_1_1ArmPoseResult___3_01ContainerAllocator_01_4_01_4_1a2e753a1db2bf21d14d1eed9f77d159c2">
+                <title>static const char* ros::message_traits::DataType&lt; ::jaco_msgs::ArmPoseResult_&lt; ContainerAllocator &gt; &gt;::value ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="d4/dd7/structros_1_1message__traits_1_1DataType_3_01_1_1jaco__msgs_1_1ArmPoseResult___3_01ContainerAllocator_01_4_01_4_1afa0114ae100fc123354f3e360f471ceb">
+                <title>static const char* ros::message_traits::DataType&lt; ::jaco_msgs::ArmPoseResult_&lt; ContainerAllocator &gt; &gt;::value (const ::jaco_msgs::ArmPoseResult_&lt; ContainerAllocator &gt; &amp;)</title> <emphasis></emphasis>
+                
+            </section>
+</section>

@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="db/dc2/structros_1_1message__traits_1_1Definition_3_01_1_1jaco__msgs_1_1StopRequest___3_01ContainerAllocator_01_4_01_4">
+<title>ros::message_traits::Definition&lt; ::jaco_msgs::StopRequest_&lt; ContainerAllocator &gt; &gt; struct Reference</title>
+<para>
+    <programlisting>#include <link linkend="d9/d02/StopRequest_8h">&quot;StopRequest.h&quot;</link></programlisting>
+</para>
+<para>Inheritance diagram for ros::message_traits::Definition&lt; ::jaco_msgs::StopRequest_&lt; ContainerAllocator &gt; &gt;</para>
+<para>
+    <figure>
+        <title>Inheritance graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../d1/d11/structros_1_1message__traits_1_1Definition_3_01_1_1jaco__msgs_1_1StopRequest___3_01ContainerAllocator_01_4_01_4__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Collaboration diagram for ros::message_traits::Definition&lt; ::jaco_msgs::StopRequest_&lt; ContainerAllocator &gt; &gt;</para>
+<para>
+    <figure>
+        <title>Collaboration graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../d4/dd3/structros_1_1message__traits_1_1Definition_3_01_1_1jaco__msgs_1_1StopRequest___3_01ContainerAllocator_01_4_01_4__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+    <templateparamlist>
+      <param>
+        <type>class ContainerAllocator</type>
+      </param>
+    </templateparamlist>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static const char * <link linkend="db/dc2/structros_1_1message__traits_1_1Definition_3_01_1_1jaco__msgs_1_1StopRequest___3_01ContainerAllocator_01_4_01_4_1ab2bf8b6f9d47a598da2e9f0870d7325f">value</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static const char * <link linkend="db/dc2/structros_1_1message__traits_1_1Definition_3_01_1_1jaco__msgs_1_1StopRequest___3_01ContainerAllocator_01_4_01_4_1a01828fbc9b45669a29c9a3314cb1c7dd">value</link> (
+const ::<link linkend="db/d9b/structjaco__msgs_1_1StopRequest__">jaco_msgs::StopRequest_</link>&lt; ContainerAllocator &gt; &amp; )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+            <section xml:id="db/dc2/structros_1_1message__traits_1_1Definition_3_01_1_1jaco__msgs_1_1StopRequest___3_01ContainerAllocator_01_4_01_4_1ab2bf8b6f9d47a598da2e9f0870d7325f">
+                <title>static const char* ros::message_traits::Definition&lt; ::jaco_msgs::StopRequest_&lt; ContainerAllocator &gt; &gt;::value ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="db/dc2/structros_1_1message__traits_1_1Definition_3_01_1_1jaco__msgs_1_1StopRequest___3_01ContainerAllocator_01_4_01_4_1a01828fbc9b45669a29c9a3314cb1c7dd">
+                <title>static const char* ros::message_traits::Definition&lt; ::jaco_msgs::StopRequest_&lt; ContainerAllocator &gt; &gt;::value (const ::jaco_msgs::StopRequest_&lt; ContainerAllocator &gt; &amp;)</title> <emphasis></emphasis>
+                
+            </section>
+</section>

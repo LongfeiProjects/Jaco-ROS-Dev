@@ -1,0 +1,67 @@
+.TH "D:/Longfei/Desktop/catkin_KinovaROS/src/jaco-ros/jaco_driver/src/nodes/jaco_arm_driver.cpp" 3 "Thu Mar 3 2016" "Version 1.0.1" "Kinova-ROS" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+D:/Longfei/Desktop/catkin_KinovaROS/src/jaco-ros/jaco_driver/src/nodes/jaco_arm_driver.cpp \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'jaco_driver/jaco_api\&.h'\fP
+.br
+\fC#include 'jaco_driver/jaco_arm\&.h'\fP
+.br
+\fC#include 'jaco_driver/jaco_pose_action\&.h'\fP
+.br
+\fC#include 'jaco_driver/jaco_angles_action\&.h'\fP
+.br
+\fC#include 'jaco_driver/jaco_fingers_action\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "int \fBmain\fP (int argc, char **argv)"
+.br
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "int main (int argc, char ** argv)"
+
+.PP
+.nf
+17 {
+18     ros::init(argc, argv, "jaco_arm_driver");
+19     ros::NodeHandle nh("~");
+20     boost::recursive_mutex api_mutex;
+21 
+22     bool is_first_init = true;
+23     while (ros::ok())
+24     {
+25         try
+26         {
+27             jaco::JacoComm comm(nh, api_mutex, is_first_init);
+28             jaco::JacoArm jaco(comm, nh);
+29             jaco::JacoPoseActionServer pose_server(comm, nh);
+30             jaco::JacoAnglesActionServer angles_server(comm, nh);
+31             jaco::JacoFingersActionServer fingers_server(comm, nh);
+32 
+33             ros::spin();
+34         }
+35         catch(const std::exception& e)
+36         {
+37             ROS_ERROR_STREAM(e\&.what());
+38             jaco::JacoAPI api;
+39             boost::recursive_mutex::scoped_lock lock(api_mutex);
+40             api\&.closeAPI();
+41             ros::Duration(1\&.0)\&.sleep();
+42         }
+43 
+44         is_first_init = false;
+45     }
+46     return 0;
+47 }
+.fi
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Kinova-ROS from the source code\&.

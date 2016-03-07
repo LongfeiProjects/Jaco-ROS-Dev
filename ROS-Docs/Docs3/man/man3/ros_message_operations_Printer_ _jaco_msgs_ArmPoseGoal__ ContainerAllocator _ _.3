@@ -1,0 +1,41 @@
+.TH "ros::message_operations::Printer< ::jaco_msgs::ArmPoseGoal_< ContainerAllocator > >" 3 "Thu Mar 3 2016" "Version 1.0.1" "Kinova-ROS" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ros::message_operations::Printer< ::jaco_msgs::ArmPoseGoal_< ContainerAllocator > > \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include 'ArmPoseGoal\&.h'\fP
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "template<typename Stream > static void \fBstream\fP (Stream &s, const std::string &indent, const ::\fBjaco_msgs::ArmPoseGoal_\fP< ContainerAllocator > &v)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.SS "template<class ContainerAllocator>
+.br
+struct ros::message_operations::Printer< ::jaco_msgs::ArmPoseGoal_< ContainerAllocator > >"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "template<class ContainerAllocator > template<typename Stream > static void ros::message_operations::Printer< ::\fBjaco_msgs::ArmPoseGoal_\fP< ContainerAllocator > >::stream (Stream & s, const std::string & indent, const ::\fBjaco_msgs::ArmPoseGoal_\fP< ContainerAllocator > & v)\fC [inline]\fP, \fC [static]\fP"
+
+.PP
+.nf
+259   {
+260     s << indent << "pose: ";
+261     s << std::endl;
+262     Printer< ::geometry_msgs::PoseStamped_<ContainerAllocator> >::stream(s, indent + "  ", v\&.pose);
+263   }
+.fi
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Kinova-ROS from the source code\&.

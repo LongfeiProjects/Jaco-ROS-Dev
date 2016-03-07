@@ -1,0 +1,4 @@
+var namespacejaco__msgs_1_1msg_1_1__SetFingersPositionActionResult =
+[
+    [ "SetFingersPositionActionResult", "db/ddb/classjaco__msgs_1_1msg_1_1__SetFingersPositionActionResult_1_1SetFingersPositionActionResult.html", "db/ddb/classjaco__msgs_1_1msg_1_1__SetFingersPositionActionResult_1_1SetFingersPositionActionResult" ]
+];

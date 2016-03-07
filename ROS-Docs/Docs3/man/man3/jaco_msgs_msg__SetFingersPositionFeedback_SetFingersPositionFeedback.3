@@ -1,0 +1,285 @@
+.TH "jaco_msgs.msg._SetFingersPositionFeedback.SetFingersPositionFeedback" 3 "Thu Mar 3 2016" "Version 1.0.1" "Kinova-ROS" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+jaco_msgs.msg._SetFingersPositionFeedback.SetFingersPositionFeedback \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits Message\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "def \fB__init__\fP (self, args, kwds)"
+.br
+.ti -1c
+.RI "def \fBdeserialize\fP (self, str)"
+.br
+.ti -1c
+.RI "def \fBdeserialize_numpy\fP (self, str, numpy)"
+.br
+.ti -1c
+.RI "def \fBserialize\fP (self, buff)"
+.br
+.ti -1c
+.RI "def \fBserialize_numpy\fP (self, buff, numpy)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBfingers\fP"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "def \fB_get_types\fP (self)"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "list \fB__slots__\fP = ['\fBfingers\fP']"
+.br
+.ti -1c
+.RI "string \fB_full_text\fP"
+.br
+.ti -1c
+.RI "bool \fB_has_header\fP = False"
+.br
+.ti -1c
+.RI "string \fB_md5sum\fP = 'bdbf88b45be6ef8cd65f0b4fc487d49d'"
+.br
+.ti -1c
+.RI "list \fB_slot_types\fP = ['jaco_msgs/\fBFingerPosition\fP']"
+.br
+.ti -1c
+.RI "string \fB_type\fP = 'jaco_msgs/\fBSetFingersPositionFeedback\fP'"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "def jaco_msgs\&.msg\&._SetFingersPositionFeedback\&.SetFingersPositionFeedback\&.__init__ ( self,  args,  kwds)"
+
+.PP
+.nf
+Constructor. Any message fields that are implicitly/explicitly
+set to None will be assigned a default value. The recommend
+use is keyword arguments as this is more robust to future message
+changes.  You cannot mix in-order arguments and keyword arguments.
+
+The available fields are:
+   fingers
+
+:param args: complete set of field values, in .msg order
+:param kwds: use keyword arguments corresponding to message field names
+to set specific fields.
+
+.fi
+.PP
+ 
+.PP
+.nf
+28   def __init__(self, *args, **kwds):
+29     """
+30     Constructor\&. Any message fields that are implicitly/explicitly
+31     set to None will be assigned a default value\&. The recommend
+32     use is keyword arguments as this is more robust to future message
+33     changes\&.  You cannot mix in-order arguments and keyword arguments\&.
+34 
+35     The available fields are:
+36        fingers
+37 
+38     :param args: complete set of field values, in \&.msg order
+39     :param kwds: use keyword arguments corresponding to message field names
+40     to set specific fields\&.
+41     """
+42     if args or kwds:
+43       super(SetFingersPositionFeedback, self)\&.__init__(*args, **kwds)
+44       #message fields cannot be None, assign default values for those that are
+45       if self\&.fingers is None:
+46         self\&.fingers = jaco_msgs\&.msg\&.FingerPosition()
+47     else:
+48       self\&.fingers = jaco_msgs\&.msg\&.FingerPosition()
+49 
+.fi
+.SH "Member Function Documentation"
+.PP 
+.SS "def jaco_msgs\&.msg\&._SetFingersPositionFeedback\&.SetFingersPositionFeedback\&._get_types ( self)\fC [private]\fP"
+
+.PP
+.nf
+internal API method
+
+.fi
+.PP
+ 
+.PP
+.nf
+50   def _get_types(self):
+51     """
+52     internal API method
+53     """
+54     return self\&._slot_types
+55 
+.fi
+.SS "def jaco_msgs\&.msg\&._SetFingersPositionFeedback\&.SetFingersPositionFeedback\&.deserialize ( self,  str)"
+
+.PP
+.nf
+unpack serialized message in str into this message instance
+:param str: byte array of serialized message, ``str``
+
+.fi
+.PP
+ 
+.PP
+.nf
+67   def deserialize(self, str):
+68     """
+69     unpack serialized message in str into this message instance
+70     :param str: byte array of serialized message, ``str``
+71     """
+72     try:
+73       if self\&.fingers is None:
+74         self\&.fingers = jaco_msgs\&.msg\&.FingerPosition()
+75       end = 0
+76       _x = self
+77       start = end
+78       end += 12
+79       (_x\&.fingers\&.finger1, _x\&.fingers\&.finger2, _x\&.fingers\&.finger3,) = _struct_3f\&.unpack(str[start:end])
+80       return self
+81     except struct\&.error as e:
+82       raise genpy\&.DeserializationError(e) #most likely buffer underfill
+83 
+84 
+.fi
+.SS "def jaco_msgs\&.msg\&._SetFingersPositionFeedback\&.SetFingersPositionFeedback\&.deserialize_numpy ( self,  str,  numpy)"
+
+.PP
+.nf
+unpack serialized message in str into this message instance using numpy for array types
+:param str: byte array of serialized message, ``str``
+:param numpy: numpy python module
+
+.fi
+.PP
+ 
+.PP
+.nf
+97   def deserialize_numpy(self, str, numpy):
+98     """
+99     unpack serialized message in str into this message instance using numpy for array types
+100     :param str: byte array of serialized message, ``str``
+101     :param numpy: numpy python module
+102     """
+103     try:
+104       if self\&.fingers is None:
+105         self\&.fingers = jaco_msgs\&.msg\&.FingerPosition()
+106       end = 0
+107       _x = self
+108       start = end
+109       end += 12
+110       (_x\&.fingers\&.finger1, _x\&.fingers\&.finger2, _x\&.fingers\&.finger3,) = _struct_3f\&.unpack(str[start:end])
+111       return self
+112     except struct\&.error as e:
+113       raise genpy\&.DeserializationError(e) #most likely buffer underfill
+114 
+.fi
+.SS "def jaco_msgs\&.msg\&._SetFingersPositionFeedback\&.SetFingersPositionFeedback\&.serialize ( self,  buff)"
+
+.PP
+.nf
+serialize message into buffer
+:param buff: buffer, ``StringIO``
+
+.fi
+.PP
+ 
+.PP
+.nf
+56   def serialize(self, buff):
+57     """
+58     serialize message into buffer
+59     :param buff: buffer, ``StringIO``
+60     """
+61     try:
+62       _x = self
+63       buff\&.write(_struct_3f\&.pack(_x\&.fingers\&.finger1, _x\&.fingers\&.finger2, _x\&.fingers\&.finger3))
+64     except struct\&.error as se: self\&._check_types(struct\&.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(_x))))
+65     except TypeError as te: self\&._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(_x))))
+66 
+.fi
+.SS "def jaco_msgs\&.msg\&._SetFingersPositionFeedback\&.SetFingersPositionFeedback\&.serialize_numpy ( self,  buff,  numpy)"
+
+.PP
+.nf
+serialize message with numpy array types into buffer
+:param buff: buffer, ``StringIO``
+:param numpy: numpy python module
+
+.fi
+.PP
+ 
+.PP
+.nf
+85   def serialize_numpy(self, buff, numpy):
+86     """
+87     serialize message with numpy array types into buffer
+88     :param buff: buffer, ``StringIO``
+89     :param numpy: numpy python module
+90     """
+91     try:
+92       _x = self
+93       buff\&.write(_struct_3f\&.pack(_x\&.fingers\&.finger1, _x\&.fingers\&.finger2, _x\&.fingers\&.finger3))
+94     except struct\&.error as se: self\&._check_types(struct\&.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(_x))))
+95     except TypeError as te: self\&._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(_x))))
+96 
+.fi
+.SH "Member Data Documentation"
+.PP 
+.SS "list jaco_msgs\&.msg\&._SetFingersPositionFeedback\&.SetFingersPositionFeedback\&.__slots__ = ['\fBfingers\fP']\fC [static]\fP, \fC [private]\fP"
+
+.SS "string jaco_msgs\&.msg\&._SetFingersPositionFeedback\&.SetFingersPositionFeedback\&._full_text\fC [static]\fP, \fC [private]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+1 = """# ====== DO NOT MODIFY! AUTOGENERATED FROM AN ACTION DEFINITION ======
+2 # Feedback message
+3 FingerPosition fingers
+4 
+5 
+6 ================================================================================
+7 MSG: jaco_msgs/FingerPosition
+8 float32 finger1
+9 float32 finger2
+10 float32 finger3
+11 
+12 """
+.fi
+.SS "bool jaco_msgs\&.msg\&._SetFingersPositionFeedback\&.SetFingersPositionFeedback\&._has_header = False\fC [static]\fP, \fC [private]\fP"
+
+.SS "string jaco_msgs\&.msg\&._SetFingersPositionFeedback\&.SetFingersPositionFeedback\&._md5sum = 'bdbf88b45be6ef8cd65f0b4fc487d49d'\fC [static]\fP, \fC [private]\fP"
+
+.SS "list jaco_msgs\&.msg\&._SetFingersPositionFeedback\&.SetFingersPositionFeedback\&._slot_types = ['jaco_msgs/\fBFingerPosition\fP']\fC [static]\fP, \fC [private]\fP"
+
+.PP
+Referenced by jaco_msgs\&.msg\&._SetFingersPositionFeedback\&.SetFingersPositionFeedback\&._get_types()\&.
+.SS "string jaco_msgs\&.msg\&._SetFingersPositionFeedback\&.SetFingersPositionFeedback\&._type = 'jaco_msgs/\fBSetFingersPositionFeedback\fP'\fC [static]\fP, \fC [private]\fP"
+
+.SS "jaco_msgs\&.msg\&._SetFingersPositionFeedback\&.SetFingersPositionFeedback\&.fingers"
+
+.PP
+Referenced by jaco_msgs\&.msg\&._SetFingersPositionFeedback\&.SetFingersPositionFeedback\&.__init__(), jaco_msgs\&.msg\&._SetFingersPositionFeedback\&.SetFingersPositionFeedback\&.deserialize(), and jaco_msgs\&.msg\&._SetFingersPositionFeedback\&.SetFingersPositionFeedback\&.deserialize_numpy()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Kinova-ROS from the source code\&.

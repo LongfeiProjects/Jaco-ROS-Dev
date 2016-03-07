@@ -1,0 +1,130 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="d3/d1d/structjaco__msgs_1_1StopResponse__">
+<title>jaco_msgs::StopResponse_ struct Reference</title>
+<para>
+    <programlisting>#include <link linkend="d5/d58/StopResponse_8h">&quot;StopResponse.h&quot;</link></programlisting>
+</para>
+<para>Inheritance diagram for jaco_msgs::StopResponse_</para>
+<para>
+    <figure>
+        <title>Inheritance graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../d1/dd5/structjaco__msgs_1_1StopResponse____inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Collaboration diagram for jaco_msgs::StopResponse_</para>
+<para>
+    <figure>
+        <title>Collaboration graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../dd/dc8/structjaco__msgs_1_1StopResponse____coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+    <templateparamlist>
+      <param>
+        <type>class</type>
+        <declname>ContainerAllocator</declname>
+        <defname>ContainerAllocator</defname>
+      </param>
+    </templateparamlist>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef std::basic_string&lt; char, std::char_traits&lt; char &gt;, typename ContainerAllocator::template rebind&lt; char &gt;::other &gt;  <link linkend="d3/d1d/structjaco__msgs_1_1StopResponse___1a26c3d39d10b87a3ce89bd27f50d7b788">_stop_result_type</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef boost::shared_ptr&lt; ::<link linkend="d3/d1d/structjaco__msgs_1_1StopResponse__">jaco_msgs::StopResponse_</link>&lt; ContainerAllocator &gt; const  &gt;  <link linkend="d3/d1d/structjaco__msgs_1_1StopResponse___1ac6329c392d36e795a755bc9c2fdae72e">ConstPtr</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef boost::shared_ptr&lt; ::<link linkend="d3/d1d/structjaco__msgs_1_1StopResponse__">jaco_msgs::StopResponse_</link>&lt; ContainerAllocator &gt; &gt;  <link linkend="d3/d1d/structjaco__msgs_1_1StopResponse___1a72009453942d0f347cf6e03df1d065eb">Ptr</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef <link linkend="d3/d1d/structjaco__msgs_1_1StopResponse__">StopResponse_</link>&lt; ContainerAllocator &gt;  <link linkend="d3/d1d/structjaco__msgs_1_1StopResponse___1aacce47cb15c303b83b12f5a4104389e8">Type</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Public Attributes</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>boost::shared_ptr&lt; std::map&lt; std::string, std::string &gt; &gt; __connection_header</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>_stop_result_type stop_result</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="d3/d1d/structjaco__msgs_1_1StopResponse___1af29f8b13387ba40a1067438ad322d381">StopResponse_</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="d3/d1d/structjaco__msgs_1_1StopResponse___1a8202717ce1e3645d82b4cb5f9bafb28e">StopResponse_</link> (
+const ContainerAllocator &amp; _alloc)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+            <section xml:id="d3/d1d/structjaco__msgs_1_1StopResponse___1a26c3d39d10b87a3ce89bd27f50d7b788">
+                <title>typedef std::basic_string&lt;char, std::char_traits&lt;char&gt;, typename ContainerAllocator::template rebind&lt;char&gt;::other &gt; jaco_msgs::StopResponse_&lt; ContainerAllocator &gt;::_stop_result_type</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="d3/d1d/structjaco__msgs_1_1StopResponse___1ac6329c392d36e795a755bc9c2fdae72e">
+                <title>typedef boost::shared_ptr&lt; ::jaco_msgs::StopResponse_&lt;ContainerAllocator&gt; const&gt; jaco_msgs::StopResponse_&lt; ContainerAllocator &gt;::ConstPtr</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="d3/d1d/structjaco__msgs_1_1StopResponse___1a72009453942d0f347cf6e03df1d065eb">
+                <title>typedef boost::shared_ptr&lt; ::jaco_msgs::StopResponse_&lt;ContainerAllocator&gt; &gt; jaco_msgs::StopResponse_&lt; ContainerAllocator &gt;::Ptr</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="d3/d1d/structjaco__msgs_1_1StopResponse___1aacce47cb15c303b83b12f5a4104389e8">
+                <title>typedef StopResponse_&lt;ContainerAllocator&gt; jaco_msgs::StopResponse_&lt; ContainerAllocator &gt;::Type</title> <emphasis></emphasis>
+                
+            </section>
+        <section>
+            <title>Member Data Documentation</title>
+        </section>
+            <section xml:id="d3/d1d/structjaco__msgs_1_1StopResponse___1af29f8b13387ba40a1067438ad322d381">
+                <title>jaco_msgs::StopResponse_&lt; ContainerAllocator &gt;::StopResponse_ ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="d3/d1d/structjaco__msgs_1_1StopResponse___1a8202717ce1e3645d82b4cb5f9bafb28e">
+                <title>jaco_msgs::StopResponse_&lt; ContainerAllocator &gt;::StopResponse_ (const ContainerAllocator &amp;_alloc)</title> <emphasis></emphasis>
+                
+            </section>
+</section>

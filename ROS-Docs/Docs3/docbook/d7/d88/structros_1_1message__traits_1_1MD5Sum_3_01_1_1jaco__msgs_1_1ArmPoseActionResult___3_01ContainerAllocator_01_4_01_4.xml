@@ -1,0 +1,78 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="d7/d88/structros_1_1message__traits_1_1MD5Sum_3_01_1_1jaco__msgs_1_1ArmPoseActionResult___3_01ContainerAllocator_01_4_01_4">
+<title>ros::message_traits::MD5Sum&lt; ::jaco_msgs::ArmPoseActionResult_&lt; ContainerAllocator &gt; &gt; struct Reference</title>
+<para>
+    <programlisting>#include <link linkend="d9/de0/ArmPoseActionResult_8h">&quot;ArmPoseActionResult.h&quot;</link></programlisting>
+</para>
+<para>Inheritance diagram for ros::message_traits::MD5Sum&lt; ::jaco_msgs::ArmPoseActionResult_&lt; ContainerAllocator &gt; &gt;</para>
+<para>
+    <figure>
+        <title>Inheritance graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../d2/d1e/structros_1_1message__traits_1_1MD5Sum_3_01_1_1jaco__msgs_1_1ArmPoseActionResult___3_01Containera28f724e88ac1be807ef63935066b168.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Collaboration diagram for ros::message_traits::MD5Sum&lt; ::jaco_msgs::ArmPoseActionResult_&lt; ContainerAllocator &gt; &gt;</para>
+<para>
+    <figure>
+        <title>Collaboration graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../d0/da1/structros_1_1message__traits_1_1MD5Sum_3_01_1_1jaco__msgs_1_1ArmPoseActionResult___3_01Container3e1b64de59ad5bb5ef74ade4002028b3.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+    <templateparamlist>
+      <param>
+        <type>class ContainerAllocator</type>
+      </param>
+    </templateparamlist>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static const uint64_t static_value1</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static const uint64_t static_value2</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static const char * <link linkend="d7/d88/structros_1_1message__traits_1_1MD5Sum_3_01_1_1jaco__msgs_1_1ArmPoseActionResult___3_01ContainerAllocator_01_4_01_4_1a7182a7a1992a5fd5dd39ab5cbcd6683d">value</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static const char * <link linkend="d7/d88/structros_1_1message__traits_1_1MD5Sum_3_01_1_1jaco__msgs_1_1ArmPoseActionResult___3_01ContainerAllocator_01_4_01_4_1ab536e6b2c4659fb9185f1076a33747bb">value</link> (
+const ::<link linkend="d0/d68/structjaco__msgs_1_1ArmPoseActionResult__">jaco_msgs::ArmPoseActionResult_</link>&lt; ContainerAllocator &gt; &amp; )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+            <section xml:id="d7/d88/structros_1_1message__traits_1_1MD5Sum_3_01_1_1jaco__msgs_1_1ArmPoseActionResult___3_01ContainerAllocator_01_4_01_4_1a7182a7a1992a5fd5dd39ab5cbcd6683d">
+                <title>static const char* ros::message_traits::MD5Sum&lt; ::jaco_msgs::ArmPoseActionResult_&lt; ContainerAllocator &gt; &gt;::value ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="d7/d88/structros_1_1message__traits_1_1MD5Sum_3_01_1_1jaco__msgs_1_1ArmPoseActionResult___3_01ContainerAllocator_01_4_01_4_1ab536e6b2c4659fb9185f1076a33747bb">
+                <title>static const char* ros::message_traits::MD5Sum&lt; ::jaco_msgs::ArmPoseActionResult_&lt; ContainerAllocator &gt; &gt;::value (const ::jaco_msgs::ArmPoseActionResult_&lt; ContainerAllocator &gt; &amp;)</title> <emphasis></emphasis>
+                
+            </section>
+</section>

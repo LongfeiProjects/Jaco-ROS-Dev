@@ -1,0 +1,1127 @@
+.TH "jaco_msgs" 3 "Thu Mar 3 2016" "Version 1.0.1" "Kinova-ROS" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+jaco_msgs \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Namespaces"
+
+.in +1c
+.ti -1c
+.RI " \fBmsg\fP"
+.br
+.ti -1c
+.RI " \fBsrv\fP"
+.br
+.in -1c
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBArmJointAnglesAction_\fP"
+.br
+.ti -1c
+.RI "struct \fBArmJointAnglesActionFeedback_\fP"
+.br
+.ti -1c
+.RI "struct \fBArmJointAnglesActionGoal_\fP"
+.br
+.ti -1c
+.RI "struct \fBArmJointAnglesActionResult_\fP"
+.br
+.ti -1c
+.RI "struct \fBArmJointAnglesFeedback_\fP"
+.br
+.ti -1c
+.RI "struct \fBArmJointAnglesGoal_\fP"
+.br
+.ti -1c
+.RI "struct \fBArmJointAnglesResult_\fP"
+.br
+.ti -1c
+.RI "struct \fBArmPoseAction_\fP"
+.br
+.ti -1c
+.RI "struct \fBArmPoseActionFeedback_\fP"
+.br
+.ti -1c
+.RI "struct \fBArmPoseActionGoal_\fP"
+.br
+.ti -1c
+.RI "struct \fBArmPoseActionResult_\fP"
+.br
+.ti -1c
+.RI "struct \fBArmPoseFeedback_\fP"
+.br
+.ti -1c
+.RI "struct \fBArmPoseGoal_\fP"
+.br
+.ti -1c
+.RI "struct \fBArmPoseResult_\fP"
+.br
+.ti -1c
+.RI "struct \fBFingerPosition_\fP"
+.br
+.ti -1c
+.RI "struct \fBHomeArm\fP"
+.br
+.ti -1c
+.RI "struct \fBHomeArmRequest_\fP"
+.br
+.ti -1c
+.RI "struct \fBHomeArmResponse_\fP"
+.br
+.ti -1c
+.RI "struct \fBJointAngles_\fP"
+.br
+.ti -1c
+.RI "struct \fBJointVelocity_\fP"
+.br
+.ti -1c
+.RI "struct \fBSetFingersPositionAction_\fP"
+.br
+.ti -1c
+.RI "struct \fBSetFingersPositionActionFeedback_\fP"
+.br
+.ti -1c
+.RI "struct \fBSetFingersPositionActionGoal_\fP"
+.br
+.ti -1c
+.RI "struct \fBSetFingersPositionActionResult_\fP"
+.br
+.ti -1c
+.RI "struct \fBSetFingersPositionFeedback_\fP"
+.br
+.ti -1c
+.RI "struct \fBSetFingersPositionGoal_\fP"
+.br
+.ti -1c
+.RI "struct \fBSetFingersPositionResult_\fP"
+.br
+.ti -1c
+.RI "struct \fBSetForceControlParams\fP"
+.br
+.ti -1c
+.RI "struct \fBSetForceControlParamsRequest_\fP"
+.br
+.ti -1c
+.RI "struct \fBSetForceControlParamsResponse_\fP"
+.br
+.ti -1c
+.RI "struct \fBStart\fP"
+.br
+.ti -1c
+.RI "struct \fBStartRequest_\fP"
+.br
+.ti -1c
+.RI "struct \fBStartResponse_\fP"
+.br
+.ti -1c
+.RI "struct \fBStop\fP"
+.br
+.ti -1c
+.RI "struct \fBStopRequest_\fP"
+.br
+.ti -1c
+.RI "struct \fBStopResponse_\fP"
+.br
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef ::\fBjaco_msgs::ArmJointAnglesAction_\fP< std::allocator< void > > \fBArmJointAnglesAction\fP"
+.br
+.ti -1c
+.RI "typedef boost::shared_ptr< ::\fBjaco_msgs::ArmJointAnglesAction\fP const  > \fBArmJointAnglesActionConstPtr\fP"
+.br
+.ti -1c
+.RI "typedef ::\fBjaco_msgs::ArmJointAnglesActionFeedback_\fP< std::allocator< void > > \fBArmJointAnglesActionFeedback\fP"
+.br
+.ti -1c
+.RI "typedef boost::shared_ptr< ::\fBjaco_msgs::ArmJointAnglesActionFeedback\fP const  > \fBArmJointAnglesActionFeedbackConstPtr\fP"
+.br
+.ti -1c
+.RI "typedef boost::shared_ptr< ::\fBjaco_msgs::ArmJointAnglesActionFeedback\fP > \fBArmJointAnglesActionFeedbackPtr\fP"
+.br
+.ti -1c
+.RI "typedef ::\fBjaco_msgs::ArmJointAnglesActionGoal_\fP< std::allocator< void > > \fBArmJointAnglesActionGoal\fP"
+.br
+.ti -1c
+.RI "typedef boost::shared_ptr< ::\fBjaco_msgs::ArmJointAnglesActionGoal\fP const  > \fBArmJointAnglesActionGoalConstPtr\fP"
+.br
+.ti -1c
+.RI "typedef boost::shared_ptr< ::\fBjaco_msgs::ArmJointAnglesActionGoal\fP > \fBArmJointAnglesActionGoalPtr\fP"
+.br
+.ti -1c
+.RI "typedef boost::shared_ptr< ::\fBjaco_msgs::ArmJointAnglesAction\fP > \fBArmJointAnglesActionPtr\fP"
+.br
+.ti -1c
+.RI "typedef ::\fBjaco_msgs::ArmJointAnglesActionResult_\fP< std::allocator< void > > \fBArmJointAnglesActionResult\fP"
+.br
+.ti -1c
+.RI "typedef boost::shared_ptr< ::\fBjaco_msgs::ArmJointAnglesActionResult\fP const  > \fBArmJointAnglesActionResultConstPtr\fP"
+.br
+.ti -1c
+.RI "typedef boost::shared_ptr< ::\fBjaco_msgs::ArmJointAnglesActionResult\fP > \fBArmJointAnglesActionResultPtr\fP"
+.br
+.ti -1c
+.RI "typedef ::\fBjaco_msgs::ArmJointAnglesFeedback_\fP< std::allocator< void > > \fBArmJointAnglesFeedback\fP"
+.br
+.ti -1c
+.RI "typedef boost::shared_ptr< ::\fBjaco_msgs::ArmJointAnglesFeedback\fP const  > \fBArmJointAnglesFeedbackConstPtr\fP"
+.br
+.ti -1c
+.RI "typedef boost::shared_ptr< ::\fBjaco_msgs::ArmJointAnglesFeedback\fP > \fBArmJointAnglesFeedbackPtr\fP"
+.br
+.ti -1c
+.RI "typedef ::\fBjaco_msgs::ArmJointAnglesGoal_\fP< std::allocator< void > > \fBArmJointAnglesGoal\fP"
+.br
+.ti -1c
+.RI "typedef boost::shared_ptr< ::\fBjaco_msgs::ArmJointAnglesGoal\fP const  > \fBArmJointAnglesGoalConstPtr\fP"
+.br
+.ti -1c
+.RI "typedef boost::shared_ptr< ::\fBjaco_msgs::ArmJointAnglesGoal\fP > \fBArmJointAnglesGoalPtr\fP"
+.br
+.ti -1c
+.RI "typedef ::\fBjaco_msgs::ArmJointAnglesResult_\fP< std::allocator< void > > \fBArmJointAnglesResult\fP"
+.br
+.ti -1c
+.RI "typedef boost::shared_ptr< ::\fBjaco_msgs::ArmJointAnglesResult\fP const  > \fBArmJointAnglesResultConstPtr\fP"
+.br
+.ti -1c
+.RI "typedef boost::shared_ptr< ::\fBjaco_msgs::ArmJointAnglesResult\fP > \fBArmJointAnglesResultPtr\fP"
+.br
+.ti -1c
+.RI "typedef ::\fBjaco_msgs::ArmPoseAction_\fP< std::allocator< void > > \fBArmPoseAction\fP"
+.br
+.ti -1c
+.RI "typedef boost::shared_ptr< ::\fBjaco_msgs::ArmPoseAction\fP const  > \fBArmPoseActionConstPtr\fP"
+.br
+.ti -1c
+.RI "typedef ::\fBjaco_msgs::ArmPoseActionFeedback_\fP< std::allocator< void > > \fBArmPoseActionFeedback\fP"
+.br
+.ti -1c
+.RI "typedef boost::shared_ptr< ::\fBjaco_msgs::ArmPoseActionFeedback\fP const  > \fBArmPoseActionFeedbackConstPtr\fP"
+.br
+.ti -1c
+.RI "typedef boost::shared_ptr< ::\fBjaco_msgs::ArmPoseActionFeedback\fP > \fBArmPoseActionFeedbackPtr\fP"
+.br
+.ti -1c
+.RI "typedef ::\fBjaco_msgs::ArmPoseActionGoal_\fP< std::allocator< void > > \fBArmPoseActionGoal\fP"
+.br
+.ti -1c
+.RI "typedef boost::shared_ptr< ::\fBjaco_msgs::ArmPoseActionGoal\fP const  > \fBArmPoseActionGoalConstPtr\fP"
+.br
+.ti -1c
+.RI "typedef boost::shared_ptr< ::\fBjaco_msgs::ArmPoseActionGoal\fP > \fBArmPoseActionGoalPtr\fP"
+.br
+.ti -1c
+.RI "typedef boost::shared_ptr< ::\fBjaco_msgs::ArmPoseAction\fP > \fBArmPoseActionPtr\fP"
+.br
+.ti -1c
+.RI "typedef ::\fBjaco_msgs::ArmPoseActionResult_\fP< std::allocator< void > > \fBArmPoseActionResult\fP"
+.br
+.ti -1c
+.RI "typedef boost::shared_ptr< ::\fBjaco_msgs::ArmPoseActionResult\fP const  > \fBArmPoseActionResultConstPtr\fP"
+.br
+.ti -1c
+.RI "typedef boost::shared_ptr< ::\fBjaco_msgs::ArmPoseActionResult\fP > \fBArmPoseActionResultPtr\fP"
+.br
+.ti -1c
+.RI "typedef ::\fBjaco_msgs::ArmPoseFeedback_\fP< std::allocator< void > > \fBArmPoseFeedback\fP"
+.br
+.ti -1c
+.RI "typedef boost::shared_ptr< ::\fBjaco_msgs::ArmPoseFeedback\fP const  > \fBArmPoseFeedbackConstPtr\fP"
+.br
+.ti -1c
+.RI "typedef boost::shared_ptr< ::\fBjaco_msgs::ArmPoseFeedback\fP > \fBArmPoseFeedbackPtr\fP"
+.br
+.ti -1c
+.RI "typedef ::\fBjaco_msgs::ArmPoseGoal_\fP< std::allocator< void > > \fBArmPoseGoal\fP"
+.br
+.ti -1c
+.RI "typedef boost::shared_ptr< ::\fBjaco_msgs::ArmPoseGoal\fP const  > \fBArmPoseGoalConstPtr\fP"
+.br
+.ti -1c
+.RI "typedef boost::shared_ptr< ::\fBjaco_msgs::ArmPoseGoal\fP > \fBArmPoseGoalPtr\fP"
+.br
+.ti -1c
+.RI "typedef ::\fBjaco_msgs::ArmPoseResult_\fP< std::allocator< void > > \fBArmPoseResult\fP"
+.br
+.ti -1c
+.RI "typedef boost::shared_ptr< ::\fBjaco_msgs::ArmPoseResult\fP const  > \fBArmPoseResultConstPtr\fP"
+.br
+.ti -1c
+.RI "typedef boost::shared_ptr< ::\fBjaco_msgs::ArmPoseResult\fP > \fBArmPoseResultPtr\fP"
+.br
+.ti -1c
+.RI "typedef ::\fBjaco_msgs::FingerPosition_\fP< std::allocator< void > > \fBFingerPosition\fP"
+.br
+.ti -1c
+.RI "typedef boost::shared_ptr< ::\fBjaco_msgs::FingerPosition\fP const  > \fBFingerPositionConstPtr\fP"
+.br
+.ti -1c
+.RI "typedef boost::shared_ptr< ::\fBjaco_msgs::FingerPosition\fP > \fBFingerPositionPtr\fP"
+.br
+.ti -1c
+.RI "typedef ::\fBjaco_msgs::HomeArmRequest_\fP< std::allocator< void > > \fBHomeArmRequest\fP"
+.br
+.ti -1c
+.RI "typedef boost::shared_ptr< ::\fBjaco_msgs::HomeArmRequest\fP const  > \fBHomeArmRequestConstPtr\fP"
+.br
+.ti -1c
+.RI "typedef boost::shared_ptr< ::\fBjaco_msgs::HomeArmRequest\fP > \fBHomeArmRequestPtr\fP"
+.br
+.ti -1c
+.RI "typedef ::\fBjaco_msgs::HomeArmResponse_\fP< std::allocator< void > > \fBHomeArmResponse\fP"
+.br
+.ti -1c
+.RI "typedef boost::shared_ptr< ::\fBjaco_msgs::HomeArmResponse\fP const  > \fBHomeArmResponseConstPtr\fP"
+.br
+.ti -1c
+.RI "typedef boost::shared_ptr< ::\fBjaco_msgs::HomeArmResponse\fP > \fBHomeArmResponsePtr\fP"
+.br
+.ti -1c
+.RI "typedef ::\fBjaco_msgs::JointAngles_\fP< std::allocator< void > > \fBJointAngles\fP"
+.br
+.ti -1c
+.RI "typedef boost::shared_ptr< ::\fBjaco_msgs::JointAngles\fP const  > \fBJointAnglesConstPtr\fP"
+.br
+.ti -1c
+.RI "typedef boost::shared_ptr< ::\fBjaco_msgs::JointAngles\fP > \fBJointAnglesPtr\fP"
+.br
+.ti -1c
+.RI "typedef ::\fBjaco_msgs::JointVelocity_\fP< std::allocator< void > > \fBJointVelocity\fP"
+.br
+.ti -1c
+.RI "typedef boost::shared_ptr< ::\fBjaco_msgs::JointVelocity\fP const  > \fBJointVelocityConstPtr\fP"
+.br
+.ti -1c
+.RI "typedef boost::shared_ptr< ::\fBjaco_msgs::JointVelocity\fP > \fBJointVelocityPtr\fP"
+.br
+.ti -1c
+.RI "typedef ::\fBjaco_msgs::SetFingersPositionAction_\fP< std::allocator< void > > \fBSetFingersPositionAction\fP"
+.br
+.ti -1c
+.RI "typedef boost::shared_ptr< ::\fBjaco_msgs::SetFingersPositionAction\fP const  > \fBSetFingersPositionActionConstPtr\fP"
+.br
+.ti -1c
+.RI "typedef ::\fBjaco_msgs::SetFingersPositionActionFeedback_\fP< std::allocator< void > > \fBSetFingersPositionActionFeedback\fP"
+.br
+.ti -1c
+.RI "typedef boost::shared_ptr< ::\fBjaco_msgs::SetFingersPositionActionFeedback\fP const  > \fBSetFingersPositionActionFeedbackConstPtr\fP"
+.br
+.ti -1c
+.RI "typedef boost::shared_ptr< ::\fBjaco_msgs::SetFingersPositionActionFeedback\fP > \fBSetFingersPositionActionFeedbackPtr\fP"
+.br
+.ti -1c
+.RI "typedef ::\fBjaco_msgs::SetFingersPositionActionGoal_\fP< std::allocator< void > > \fBSetFingersPositionActionGoal\fP"
+.br
+.ti -1c
+.RI "typedef boost::shared_ptr< ::\fBjaco_msgs::SetFingersPositionActionGoal\fP const  > \fBSetFingersPositionActionGoalConstPtr\fP"
+.br
+.ti -1c
+.RI "typedef boost::shared_ptr< ::\fBjaco_msgs::SetFingersPositionActionGoal\fP > \fBSetFingersPositionActionGoalPtr\fP"
+.br
+.ti -1c
+.RI "typedef boost::shared_ptr< ::\fBjaco_msgs::SetFingersPositionAction\fP > \fBSetFingersPositionActionPtr\fP"
+.br
+.ti -1c
+.RI "typedef ::\fBjaco_msgs::SetFingersPositionActionResult_\fP< std::allocator< void > > \fBSetFingersPositionActionResult\fP"
+.br
+.ti -1c
+.RI "typedef boost::shared_ptr< ::\fBjaco_msgs::SetFingersPositionActionResult\fP const  > \fBSetFingersPositionActionResultConstPtr\fP"
+.br
+.ti -1c
+.RI "typedef boost::shared_ptr< ::\fBjaco_msgs::SetFingersPositionActionResult\fP > \fBSetFingersPositionActionResultPtr\fP"
+.br
+.ti -1c
+.RI "typedef ::\fBjaco_msgs::SetFingersPositionFeedback_\fP< std::allocator< void > > \fBSetFingersPositionFeedback\fP"
+.br
+.ti -1c
+.RI "typedef boost::shared_ptr< ::\fBjaco_msgs::SetFingersPositionFeedback\fP const  > \fBSetFingersPositionFeedbackConstPtr\fP"
+.br
+.ti -1c
+.RI "typedef boost::shared_ptr< ::\fBjaco_msgs::SetFingersPositionFeedback\fP > \fBSetFingersPositionFeedbackPtr\fP"
+.br
+.ti -1c
+.RI "typedef ::\fBjaco_msgs::SetFingersPositionGoal_\fP< std::allocator< void > > \fBSetFingersPositionGoal\fP"
+.br
+.ti -1c
+.RI "typedef boost::shared_ptr< ::\fBjaco_msgs::SetFingersPositionGoal\fP const  > \fBSetFingersPositionGoalConstPtr\fP"
+.br
+.ti -1c
+.RI "typedef boost::shared_ptr< ::\fBjaco_msgs::SetFingersPositionGoal\fP > \fBSetFingersPositionGoalPtr\fP"
+.br
+.ti -1c
+.RI "typedef ::\fBjaco_msgs::SetFingersPositionResult_\fP< std::allocator< void > > \fBSetFingersPositionResult\fP"
+.br
+.ti -1c
+.RI "typedef boost::shared_ptr< ::\fBjaco_msgs::SetFingersPositionResult\fP const  > \fBSetFingersPositionResultConstPtr\fP"
+.br
+.ti -1c
+.RI "typedef boost::shared_ptr< ::\fBjaco_msgs::SetFingersPositionResult\fP > \fBSetFingersPositionResultPtr\fP"
+.br
+.ti -1c
+.RI "typedef ::\fBjaco_msgs::SetForceControlParamsRequest_\fP< std::allocator< void > > \fBSetForceControlParamsRequest\fP"
+.br
+.ti -1c
+.RI "typedef boost::shared_ptr< ::\fBjaco_msgs::SetForceControlParamsRequest\fP const  > \fBSetForceControlParamsRequestConstPtr\fP"
+.br
+.ti -1c
+.RI "typedef boost::shared_ptr< ::\fBjaco_msgs::SetForceControlParamsRequest\fP > \fBSetForceControlParamsRequestPtr\fP"
+.br
+.ti -1c
+.RI "typedef ::\fBjaco_msgs::SetForceControlParamsResponse_\fP< std::allocator< void > > \fBSetForceControlParamsResponse\fP"
+.br
+.ti -1c
+.RI "typedef boost::shared_ptr< ::\fBjaco_msgs::SetForceControlParamsResponse\fP const  > \fBSetForceControlParamsResponseConstPtr\fP"
+.br
+.ti -1c
+.RI "typedef boost::shared_ptr< ::\fBjaco_msgs::SetForceControlParamsResponse\fP > \fBSetForceControlParamsResponsePtr\fP"
+.br
+.ti -1c
+.RI "typedef ::\fBjaco_msgs::StartRequest_\fP< std::allocator< void > > \fBStartRequest\fP"
+.br
+.ti -1c
+.RI "typedef boost::shared_ptr< ::\fBjaco_msgs::StartRequest\fP const  > \fBStartRequestConstPtr\fP"
+.br
+.ti -1c
+.RI "typedef boost::shared_ptr< ::\fBjaco_msgs::StartRequest\fP > \fBStartRequestPtr\fP"
+.br
+.ti -1c
+.RI "typedef ::\fBjaco_msgs::StartResponse_\fP< std::allocator< void > > \fBStartResponse\fP"
+.br
+.ti -1c
+.RI "typedef boost::shared_ptr< ::\fBjaco_msgs::StartResponse\fP const  > \fBStartResponseConstPtr\fP"
+.br
+.ti -1c
+.RI "typedef boost::shared_ptr< ::\fBjaco_msgs::StartResponse\fP > \fBStartResponsePtr\fP"
+.br
+.ti -1c
+.RI "typedef ::\fBjaco_msgs::StopRequest_\fP< std::allocator< void > > \fBStopRequest\fP"
+.br
+.ti -1c
+.RI "typedef boost::shared_ptr< ::\fBjaco_msgs::StopRequest\fP const  > \fBStopRequestConstPtr\fP"
+.br
+.ti -1c
+.RI "typedef boost::shared_ptr< ::\fBjaco_msgs::StopRequest\fP > \fBStopRequestPtr\fP"
+.br
+.ti -1c
+.RI "typedef ::\fBjaco_msgs::StopResponse_\fP< std::allocator< void > > \fBStopResponse\fP"
+.br
+.ti -1c
+.RI "typedef boost::shared_ptr< ::\fBjaco_msgs::StopResponse\fP const  > \fBStopResponseConstPtr\fP"
+.br
+.ti -1c
+.RI "typedef boost::shared_ptr< ::\fBjaco_msgs::StopResponse\fP > \fBStopResponsePtr\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "template<typename ContainerAllocator > std::ostream & \fBoperator<<\fP (std::ostream &s, const ::\fBjaco_msgs::HomeArmRequest_\fP< ContainerAllocator > &v)"
+.br
+.ti -1c
+.RI "template<typename ContainerAllocator > std::ostream & \fBoperator<<\fP (std::ostream &s, const ::\fBjaco_msgs::SetForceControlParamsResponse_\fP< ContainerAllocator > &v)"
+.br
+.ti -1c
+.RI "template<typename ContainerAllocator > std::ostream & \fBoperator<<\fP (std::ostream &s, const ::\fBjaco_msgs::StartRequest_\fP< ContainerAllocator > &v)"
+.br
+.ti -1c
+.RI "template<typename ContainerAllocator > std::ostream & \fBoperator<<\fP (std::ostream &s, const ::\fBjaco_msgs::StopRequest_\fP< ContainerAllocator > &v)"
+.br
+.ti -1c
+.RI "template<typename ContainerAllocator > std::ostream & \fBoperator<<\fP (std::ostream &s, const ::\fBjaco_msgs::HomeArmResponse_\fP< ContainerAllocator > &v)"
+.br
+.ti -1c
+.RI "template<typename ContainerAllocator > std::ostream & \fBoperator<<\fP (std::ostream &s, const ::\fBjaco_msgs::StopResponse_\fP< ContainerAllocator > &v)"
+.br
+.ti -1c
+.RI "template<typename ContainerAllocator > std::ostream & \fBoperator<<\fP (std::ostream &s, const ::\fBjaco_msgs::StartResponse_\fP< ContainerAllocator > &v)"
+.br
+.ti -1c
+.RI "template<typename ContainerAllocator > std::ostream & \fBoperator<<\fP (std::ostream &s, const ::\fBjaco_msgs::SetFingersPositionResult_\fP< ContainerAllocator > &v)"
+.br
+.ti -1c
+.RI "template<typename ContainerAllocator > std::ostream & \fBoperator<<\fP (std::ostream &s, const ::\fBjaco_msgs::ArmJointAnglesResult_\fP< ContainerAllocator > &v)"
+.br
+.ti -1c
+.RI "template<typename ContainerAllocator > std::ostream & \fBoperator<<\fP (std::ostream &s, const ::\fBjaco_msgs::ArmJointAnglesFeedback_\fP< ContainerAllocator > &v)"
+.br
+.ti -1c
+.RI "template<typename ContainerAllocator > std::ostream & \fBoperator<<\fP (std::ostream &s, const ::\fBjaco_msgs::ArmPoseFeedback_\fP< ContainerAllocator > &v)"
+.br
+.ti -1c
+.RI "template<typename ContainerAllocator > std::ostream & \fBoperator<<\fP (std::ostream &s, const ::\fBjaco_msgs::SetFingersPositionFeedback_\fP< ContainerAllocator > &v)"
+.br
+.ti -1c
+.RI "template<typename ContainerAllocator > std::ostream & \fBoperator<<\fP (std::ostream &s, const ::\fBjaco_msgs::SetFingersPositionGoal_\fP< ContainerAllocator > &v)"
+.br
+.ti -1c
+.RI "template<typename ContainerAllocator > std::ostream & \fBoperator<<\fP (std::ostream &s, const ::\fBjaco_msgs::ArmPoseGoal_\fP< ContainerAllocator > &v)"
+.br
+.ti -1c
+.RI "template<typename ContainerAllocator > std::ostream & \fBoperator<<\fP (std::ostream &s, const ::\fBjaco_msgs::ArmJointAnglesGoal_\fP< ContainerAllocator > &v)"
+.br
+.ti -1c
+.RI "template<typename ContainerAllocator > std::ostream & \fBoperator<<\fP (std::ostream &s, const ::\fBjaco_msgs::ArmPoseResult_\fP< ContainerAllocator > &v)"
+.br
+.ti -1c
+.RI "template<typename ContainerAllocator > std::ostream & \fBoperator<<\fP (std::ostream &s, const ::\fBjaco_msgs::FingerPosition_\fP< ContainerAllocator > &v)"
+.br
+.ti -1c
+.RI "template<typename ContainerAllocator > std::ostream & \fBoperator<<\fP (std::ostream &s, const ::\fBjaco_msgs::ArmJointAnglesActionGoal_\fP< ContainerAllocator > &v)"
+.br
+.ti -1c
+.RI "template<typename ContainerAllocator > std::ostream & \fBoperator<<\fP (std::ostream &s, const ::\fBjaco_msgs::ArmPoseAction_\fP< ContainerAllocator > &v)"
+.br
+.ti -1c
+.RI "template<typename ContainerAllocator > std::ostream & \fBoperator<<\fP (std::ostream &s, const ::\fBjaco_msgs::ArmJointAnglesAction_\fP< ContainerAllocator > &v)"
+.br
+.ti -1c
+.RI "template<typename ContainerAllocator > std::ostream & \fBoperator<<\fP (std::ostream &s, const ::\fBjaco_msgs::SetFingersPositionActionGoal_\fP< ContainerAllocator > &v)"
+.br
+.ti -1c
+.RI "template<typename ContainerAllocator > std::ostream & \fBoperator<<\fP (std::ostream &s, const ::\fBjaco_msgs::SetFingersPositionActionResult_\fP< ContainerAllocator > &v)"
+.br
+.ti -1c
+.RI "template<typename ContainerAllocator > std::ostream & \fBoperator<<\fP (std::ostream &s, const ::\fBjaco_msgs::ArmPoseActionResult_\fP< ContainerAllocator > &v)"
+.br
+.ti -1c
+.RI "template<typename ContainerAllocator > std::ostream & \fBoperator<<\fP (std::ostream &s, const ::\fBjaco_msgs::ArmPoseActionGoal_\fP< ContainerAllocator > &v)"
+.br
+.ti -1c
+.RI "template<typename ContainerAllocator > std::ostream & \fBoperator<<\fP (std::ostream &s, const ::\fBjaco_msgs::ArmPoseActionFeedback_\fP< ContainerAllocator > &v)"
+.br
+.ti -1c
+.RI "template<typename ContainerAllocator > std::ostream & \fBoperator<<\fP (std::ostream &s, const ::\fBjaco_msgs::ArmJointAnglesActionFeedback_\fP< ContainerAllocator > &v)"
+.br
+.ti -1c
+.RI "template<typename ContainerAllocator > std::ostream & \fBoperator<<\fP (std::ostream &s, const ::\fBjaco_msgs::SetFingersPositionAction_\fP< ContainerAllocator > &v)"
+.br
+.ti -1c
+.RI "template<typename ContainerAllocator > std::ostream & \fBoperator<<\fP (std::ostream &s, const ::\fBjaco_msgs::SetFingersPositionActionFeedback_\fP< ContainerAllocator > &v)"
+.br
+.ti -1c
+.RI "template<typename ContainerAllocator > std::ostream & \fBoperator<<\fP (std::ostream &s, const ::\fBjaco_msgs::ArmJointAnglesActionResult_\fP< ContainerAllocator > &v)"
+.br
+.ti -1c
+.RI "template<typename ContainerAllocator > std::ostream & \fBoperator<<\fP (std::ostream &s, const ::\fBjaco_msgs::JointAngles_\fP< ContainerAllocator > &v)"
+.br
+.ti -1c
+.RI "template<typename ContainerAllocator > std::ostream & \fBoperator<<\fP (std::ostream &s, const ::\fBjaco_msgs::JointVelocity_\fP< ContainerAllocator > &v)"
+.br
+.ti -1c
+.RI "template<typename ContainerAllocator > std::ostream & \fBoperator<<\fP (std::ostream &s, const ::\fBjaco_msgs::SetForceControlParamsRequest_\fP< ContainerAllocator > &v)"
+.br
+.in -1c
+.SH "Class Documentation"
+.PP 
+.SH "struct jaco_msgs::HomeArm"
+.PP 
+\fBClass Members:\fP
+.RS 4
+typedef \fBHomeArmRequest\fP \fIRequest\fP 
+.br
+.PP
+typedef \fBRequest\fP \fIRequestType\fP 
+.br
+.PP
+typedef \fBHomeArmResponse\fP \fIResponse\fP 
+.br
+.PP
+typedef \fBResponse\fP \fIResponseType\fP 
+.br
+.PP
+.RE
+.PP
+\fBClass Members:\fP
+.RS 4
+\fBRequest\fP \fIrequest\fP 
+.br
+.PP
+\fBResponse\fP \fIresponse\fP 
+.br
+.PP
+.RE
+.PP
+.SH "struct jaco_msgs::SetForceControlParams"
+.PP 
+\fBClass Members:\fP
+.RS 4
+typedef 
+.br
+\fBSetForceControlParamsRequest\fP \fIRequest\fP 
+.br
+.PP
+typedef \fBRequest\fP \fIRequestType\fP 
+.br
+.PP
+typedef 
+.br
+\fBSetForceControlParamsResponse\fP \fIResponse\fP 
+.br
+.PP
+typedef \fBResponse\fP \fIResponseType\fP 
+.br
+.PP
+.RE
+.PP
+\fBClass Members:\fP
+.RS 4
+\fBRequest\fP \fIrequest\fP 
+.br
+.PP
+\fBResponse\fP \fIresponse\fP 
+.br
+.PP
+.RE
+.PP
+.SH "struct jaco_msgs::Start"
+.PP 
+\fBClass Members:\fP
+.RS 4
+typedef \fBStartRequest\fP \fIRequest\fP 
+.br
+.PP
+typedef \fBRequest\fP \fIRequestType\fP 
+.br
+.PP
+typedef \fBStartResponse\fP \fIResponse\fP 
+.br
+.PP
+typedef \fBResponse\fP \fIResponseType\fP 
+.br
+.PP
+.RE
+.PP
+\fBClass Members:\fP
+.RS 4
+\fBRequest\fP \fIrequest\fP 
+.br
+.PP
+\fBResponse\fP \fIresponse\fP 
+.br
+.PP
+.RE
+.PP
+.SH "struct jaco_msgs::Stop"
+.PP 
+\fBClass Members:\fP
+.RS 4
+typedef \fBStopRequest\fP \fIRequest\fP 
+.br
+.PP
+typedef \fBRequest\fP \fIRequestType\fP 
+.br
+.PP
+typedef \fBStopResponse\fP \fIResponse\fP 
+.br
+.PP
+typedef \fBResponse\fP \fIResponseType\fP 
+.br
+.PP
+.RE
+.PP
+\fBClass Members:\fP
+.RS 4
+\fBRequest\fP \fIrequest\fP 
+.br
+.PP
+\fBResponse\fP \fIresponse\fP 
+.br
+.PP
+.RE
+.PP
+.SH "Typedef Documentation"
+.PP 
+.SS "typedef ::\fBjaco_msgs::ArmJointAnglesAction_\fP<std::allocator<void> > \fBjaco_msgs::ArmJointAnglesAction\fP"
+
+.SS "typedef boost::shared_ptr< ::\fBjaco_msgs::ArmJointAnglesAction\fP const> \fBjaco_msgs::ArmJointAnglesActionConstPtr\fP"
+
+.SS "typedef ::\fBjaco_msgs::ArmJointAnglesActionFeedback_\fP<std::allocator<void> > \fBjaco_msgs::ArmJointAnglesActionFeedback\fP"
+
+.SS "typedef boost::shared_ptr< ::\fBjaco_msgs::ArmJointAnglesActionFeedback\fP const> \fBjaco_msgs::ArmJointAnglesActionFeedbackConstPtr\fP"
+
+.SS "typedef boost::shared_ptr< ::\fBjaco_msgs::ArmJointAnglesActionFeedback\fP > \fBjaco_msgs::ArmJointAnglesActionFeedbackPtr\fP"
+
+.SS "typedef ::\fBjaco_msgs::ArmJointAnglesActionGoal_\fP<std::allocator<void> > \fBjaco_msgs::ArmJointAnglesActionGoal\fP"
+
+.SS "typedef boost::shared_ptr< ::\fBjaco_msgs::ArmJointAnglesActionGoal\fP const> \fBjaco_msgs::ArmJointAnglesActionGoalConstPtr\fP"
+
+.SS "typedef boost::shared_ptr< ::\fBjaco_msgs::ArmJointAnglesActionGoal\fP > \fBjaco_msgs::ArmJointAnglesActionGoalPtr\fP"
+
+.SS "typedef boost::shared_ptr< ::\fBjaco_msgs::ArmJointAnglesAction\fP > \fBjaco_msgs::ArmJointAnglesActionPtr\fP"
+
+.SS "typedef ::\fBjaco_msgs::ArmJointAnglesActionResult_\fP<std::allocator<void> > \fBjaco_msgs::ArmJointAnglesActionResult\fP"
+
+.SS "typedef boost::shared_ptr< ::\fBjaco_msgs::ArmJointAnglesActionResult\fP const> \fBjaco_msgs::ArmJointAnglesActionResultConstPtr\fP"
+
+.SS "typedef boost::shared_ptr< ::\fBjaco_msgs::ArmJointAnglesActionResult\fP > \fBjaco_msgs::ArmJointAnglesActionResultPtr\fP"
+
+.SS "typedef ::\fBjaco_msgs::ArmJointAnglesFeedback_\fP<std::allocator<void> > \fBjaco_msgs::ArmJointAnglesFeedback\fP"
+
+.SS "typedef boost::shared_ptr< ::\fBjaco_msgs::ArmJointAnglesFeedback\fP const> \fBjaco_msgs::ArmJointAnglesFeedbackConstPtr\fP"
+
+.SS "typedef boost::shared_ptr< ::\fBjaco_msgs::ArmJointAnglesFeedback\fP > \fBjaco_msgs::ArmJointAnglesFeedbackPtr\fP"
+
+.SS "typedef ::\fBjaco_msgs::ArmJointAnglesGoal_\fP<std::allocator<void> > \fBjaco_msgs::ArmJointAnglesGoal\fP"
+
+.SS "typedef boost::shared_ptr< ::\fBjaco_msgs::ArmJointAnglesGoal\fP const> \fBjaco_msgs::ArmJointAnglesGoalConstPtr\fP"
+
+.SS "typedef boost::shared_ptr< ::\fBjaco_msgs::ArmJointAnglesGoal\fP > \fBjaco_msgs::ArmJointAnglesGoalPtr\fP"
+
+.SS "typedef ::\fBjaco_msgs::ArmJointAnglesResult_\fP<std::allocator<void> > \fBjaco_msgs::ArmJointAnglesResult\fP"
+
+.SS "typedef boost::shared_ptr< ::\fBjaco_msgs::ArmJointAnglesResult\fP const> \fBjaco_msgs::ArmJointAnglesResultConstPtr\fP"
+
+.SS "typedef boost::shared_ptr< ::\fBjaco_msgs::ArmJointAnglesResult\fP > \fBjaco_msgs::ArmJointAnglesResultPtr\fP"
+
+.SS "typedef ::\fBjaco_msgs::ArmPoseAction_\fP<std::allocator<void> > \fBjaco_msgs::ArmPoseAction\fP"
+
+.SS "typedef boost::shared_ptr< ::\fBjaco_msgs::ArmPoseAction\fP const> \fBjaco_msgs::ArmPoseActionConstPtr\fP"
+
+.SS "typedef ::\fBjaco_msgs::ArmPoseActionFeedback_\fP<std::allocator<void> > \fBjaco_msgs::ArmPoseActionFeedback\fP"
+
+.SS "typedef boost::shared_ptr< ::\fBjaco_msgs::ArmPoseActionFeedback\fP const> \fBjaco_msgs::ArmPoseActionFeedbackConstPtr\fP"
+
+.SS "typedef boost::shared_ptr< ::\fBjaco_msgs::ArmPoseActionFeedback\fP > \fBjaco_msgs::ArmPoseActionFeedbackPtr\fP"
+
+.SS "typedef ::\fBjaco_msgs::ArmPoseActionGoal_\fP<std::allocator<void> > \fBjaco_msgs::ArmPoseActionGoal\fP"
+
+.SS "typedef boost::shared_ptr< ::\fBjaco_msgs::ArmPoseActionGoal\fP const> \fBjaco_msgs::ArmPoseActionGoalConstPtr\fP"
+
+.SS "typedef boost::shared_ptr< ::\fBjaco_msgs::ArmPoseActionGoal\fP > \fBjaco_msgs::ArmPoseActionGoalPtr\fP"
+
+.SS "typedef boost::shared_ptr< ::\fBjaco_msgs::ArmPoseAction\fP > \fBjaco_msgs::ArmPoseActionPtr\fP"
+
+.SS "typedef ::\fBjaco_msgs::ArmPoseActionResult_\fP<std::allocator<void> > \fBjaco_msgs::ArmPoseActionResult\fP"
+
+.SS "typedef boost::shared_ptr< ::\fBjaco_msgs::ArmPoseActionResult\fP const> \fBjaco_msgs::ArmPoseActionResultConstPtr\fP"
+
+.SS "typedef boost::shared_ptr< ::\fBjaco_msgs::ArmPoseActionResult\fP > \fBjaco_msgs::ArmPoseActionResultPtr\fP"
+
+.SS "typedef ::\fBjaco_msgs::ArmPoseFeedback_\fP<std::allocator<void> > \fBjaco_msgs::ArmPoseFeedback\fP"
+
+.SS "typedef boost::shared_ptr< ::\fBjaco_msgs::ArmPoseFeedback\fP const> \fBjaco_msgs::ArmPoseFeedbackConstPtr\fP"
+
+.SS "typedef boost::shared_ptr< ::\fBjaco_msgs::ArmPoseFeedback\fP > \fBjaco_msgs::ArmPoseFeedbackPtr\fP"
+
+.SS "typedef ::\fBjaco_msgs::ArmPoseGoal_\fP<std::allocator<void> > \fBjaco_msgs::ArmPoseGoal\fP"
+
+.SS "typedef boost::shared_ptr< ::\fBjaco_msgs::ArmPoseGoal\fP const> \fBjaco_msgs::ArmPoseGoalConstPtr\fP"
+
+.SS "typedef boost::shared_ptr< ::\fBjaco_msgs::ArmPoseGoal\fP > \fBjaco_msgs::ArmPoseGoalPtr\fP"
+
+.SS "typedef ::\fBjaco_msgs::ArmPoseResult_\fP<std::allocator<void> > \fBjaco_msgs::ArmPoseResult\fP"
+
+.SS "typedef boost::shared_ptr< ::\fBjaco_msgs::ArmPoseResult\fP const> \fBjaco_msgs::ArmPoseResultConstPtr\fP"
+
+.SS "typedef boost::shared_ptr< ::\fBjaco_msgs::ArmPoseResult\fP > \fBjaco_msgs::ArmPoseResultPtr\fP"
+
+.SS "typedef ::\fBjaco_msgs::FingerPosition_\fP<std::allocator<void> > \fBjaco_msgs::FingerPosition\fP"
+
+.SS "typedef boost::shared_ptr< ::\fBjaco_msgs::FingerPosition\fP const> \fBjaco_msgs::FingerPositionConstPtr\fP"
+
+.SS "typedef boost::shared_ptr< ::\fBjaco_msgs::FingerPosition\fP > \fBjaco_msgs::FingerPositionPtr\fP"
+
+.SS "typedef ::\fBjaco_msgs::HomeArmRequest_\fP<std::allocator<void> > \fBjaco_msgs::HomeArmRequest\fP"
+
+.SS "typedef boost::shared_ptr< ::\fBjaco_msgs::HomeArmRequest\fP const> \fBjaco_msgs::HomeArmRequestConstPtr\fP"
+
+.SS "typedef boost::shared_ptr< ::\fBjaco_msgs::HomeArmRequest\fP > \fBjaco_msgs::HomeArmRequestPtr\fP"
+
+.SS "typedef ::\fBjaco_msgs::HomeArmResponse_\fP<std::allocator<void> > \fBjaco_msgs::HomeArmResponse\fP"
+
+.SS "typedef boost::shared_ptr< ::\fBjaco_msgs::HomeArmResponse\fP const> \fBjaco_msgs::HomeArmResponseConstPtr\fP"
+
+.SS "typedef boost::shared_ptr< ::\fBjaco_msgs::HomeArmResponse\fP > \fBjaco_msgs::HomeArmResponsePtr\fP"
+
+.SS "typedef ::\fBjaco_msgs::JointAngles_\fP<std::allocator<void> > \fBjaco_msgs::JointAngles\fP"
+
+.SS "typedef boost::shared_ptr< ::\fBjaco_msgs::JointAngles\fP const> \fBjaco_msgs::JointAnglesConstPtr\fP"
+
+.SS "typedef boost::shared_ptr< ::\fBjaco_msgs::JointAngles\fP > \fBjaco_msgs::JointAnglesPtr\fP"
+
+.SS "typedef ::\fBjaco_msgs::JointVelocity_\fP<std::allocator<void> > \fBjaco_msgs::JointVelocity\fP"
+
+.SS "typedef boost::shared_ptr< ::\fBjaco_msgs::JointVelocity\fP const> \fBjaco_msgs::JointVelocityConstPtr\fP"
+
+.SS "typedef boost::shared_ptr< ::\fBjaco_msgs::JointVelocity\fP > \fBjaco_msgs::JointVelocityPtr\fP"
+
+.SS "typedef ::\fBjaco_msgs::SetFingersPositionAction_\fP<std::allocator<void> > \fBjaco_msgs::SetFingersPositionAction\fP"
+
+.SS "typedef boost::shared_ptr< ::\fBjaco_msgs::SetFingersPositionAction\fP const> \fBjaco_msgs::SetFingersPositionActionConstPtr\fP"
+
+.SS "typedef ::\fBjaco_msgs::SetFingersPositionActionFeedback_\fP<std::allocator<void> > \fBjaco_msgs::SetFingersPositionActionFeedback\fP"
+
+.SS "typedef boost::shared_ptr< ::\fBjaco_msgs::SetFingersPositionActionFeedback\fP const> \fBjaco_msgs::SetFingersPositionActionFeedbackConstPtr\fP"
+
+.SS "typedef boost::shared_ptr< ::\fBjaco_msgs::SetFingersPositionActionFeedback\fP > \fBjaco_msgs::SetFingersPositionActionFeedbackPtr\fP"
+
+.SS "typedef ::\fBjaco_msgs::SetFingersPositionActionGoal_\fP<std::allocator<void> > \fBjaco_msgs::SetFingersPositionActionGoal\fP"
+
+.SS "typedef boost::shared_ptr< ::\fBjaco_msgs::SetFingersPositionActionGoal\fP const> \fBjaco_msgs::SetFingersPositionActionGoalConstPtr\fP"
+
+.SS "typedef boost::shared_ptr< ::\fBjaco_msgs::SetFingersPositionActionGoal\fP > \fBjaco_msgs::SetFingersPositionActionGoalPtr\fP"
+
+.SS "typedef boost::shared_ptr< ::\fBjaco_msgs::SetFingersPositionAction\fP > \fBjaco_msgs::SetFingersPositionActionPtr\fP"
+
+.SS "typedef ::\fBjaco_msgs::SetFingersPositionActionResult_\fP<std::allocator<void> > \fBjaco_msgs::SetFingersPositionActionResult\fP"
+
+.SS "typedef boost::shared_ptr< ::\fBjaco_msgs::SetFingersPositionActionResult\fP const> \fBjaco_msgs::SetFingersPositionActionResultConstPtr\fP"
+
+.SS "typedef boost::shared_ptr< ::\fBjaco_msgs::SetFingersPositionActionResult\fP > \fBjaco_msgs::SetFingersPositionActionResultPtr\fP"
+
+.SS "typedef ::\fBjaco_msgs::SetFingersPositionFeedback_\fP<std::allocator<void> > \fBjaco_msgs::SetFingersPositionFeedback\fP"
+
+.SS "typedef boost::shared_ptr< ::\fBjaco_msgs::SetFingersPositionFeedback\fP const> \fBjaco_msgs::SetFingersPositionFeedbackConstPtr\fP"
+
+.SS "typedef boost::shared_ptr< ::\fBjaco_msgs::SetFingersPositionFeedback\fP > \fBjaco_msgs::SetFingersPositionFeedbackPtr\fP"
+
+.SS "typedef ::\fBjaco_msgs::SetFingersPositionGoal_\fP<std::allocator<void> > \fBjaco_msgs::SetFingersPositionGoal\fP"
+
+.SS "typedef boost::shared_ptr< ::\fBjaco_msgs::SetFingersPositionGoal\fP const> \fBjaco_msgs::SetFingersPositionGoalConstPtr\fP"
+
+.SS "typedef boost::shared_ptr< ::\fBjaco_msgs::SetFingersPositionGoal\fP > \fBjaco_msgs::SetFingersPositionGoalPtr\fP"
+
+.SS "typedef ::\fBjaco_msgs::SetFingersPositionResult_\fP<std::allocator<void> > \fBjaco_msgs::SetFingersPositionResult\fP"
+
+.SS "typedef boost::shared_ptr< ::\fBjaco_msgs::SetFingersPositionResult\fP const> \fBjaco_msgs::SetFingersPositionResultConstPtr\fP"
+
+.SS "typedef boost::shared_ptr< ::\fBjaco_msgs::SetFingersPositionResult\fP > \fBjaco_msgs::SetFingersPositionResultPtr\fP"
+
+.SS "typedef ::\fBjaco_msgs::SetForceControlParamsRequest_\fP<std::allocator<void> > \fBjaco_msgs::SetForceControlParamsRequest\fP"
+
+.SS "typedef boost::shared_ptr< ::\fBjaco_msgs::SetForceControlParamsRequest\fP const> \fBjaco_msgs::SetForceControlParamsRequestConstPtr\fP"
+
+.SS "typedef boost::shared_ptr< ::\fBjaco_msgs::SetForceControlParamsRequest\fP > \fBjaco_msgs::SetForceControlParamsRequestPtr\fP"
+
+.SS "typedef ::\fBjaco_msgs::SetForceControlParamsResponse_\fP<std::allocator<void> > \fBjaco_msgs::SetForceControlParamsResponse\fP"
+
+.SS "typedef boost::shared_ptr< ::\fBjaco_msgs::SetForceControlParamsResponse\fP const> \fBjaco_msgs::SetForceControlParamsResponseConstPtr\fP"
+
+.SS "typedef boost::shared_ptr< ::\fBjaco_msgs::SetForceControlParamsResponse\fP > \fBjaco_msgs::SetForceControlParamsResponsePtr\fP"
+
+.SS "typedef ::\fBjaco_msgs::StartRequest_\fP<std::allocator<void> > \fBjaco_msgs::StartRequest\fP"
+
+.SS "typedef boost::shared_ptr< ::\fBjaco_msgs::StartRequest\fP const> \fBjaco_msgs::StartRequestConstPtr\fP"
+
+.SS "typedef boost::shared_ptr< ::\fBjaco_msgs::StartRequest\fP > \fBjaco_msgs::StartRequestPtr\fP"
+
+.SS "typedef ::\fBjaco_msgs::StartResponse_\fP<std::allocator<void> > \fBjaco_msgs::StartResponse\fP"
+
+.SS "typedef boost::shared_ptr< ::\fBjaco_msgs::StartResponse\fP const> \fBjaco_msgs::StartResponseConstPtr\fP"
+
+.SS "typedef boost::shared_ptr< ::\fBjaco_msgs::StartResponse\fP > \fBjaco_msgs::StartResponsePtr\fP"
+
+.SS "typedef ::\fBjaco_msgs::StopRequest_\fP<std::allocator<void> > \fBjaco_msgs::StopRequest\fP"
+
+.SS "typedef boost::shared_ptr< ::\fBjaco_msgs::StopRequest\fP const> \fBjaco_msgs::StopRequestConstPtr\fP"
+
+.SS "typedef boost::shared_ptr< ::\fBjaco_msgs::StopRequest\fP > \fBjaco_msgs::StopRequestPtr\fP"
+
+.SS "typedef ::\fBjaco_msgs::StopResponse_\fP<std::allocator<void> > \fBjaco_msgs::StopResponse\fP"
+
+.SS "typedef boost::shared_ptr< ::\fBjaco_msgs::StopResponse\fP const> \fBjaco_msgs::StopResponseConstPtr\fP"
+
+.SS "typedef boost::shared_ptr< ::\fBjaco_msgs::StopResponse\fP > \fBjaco_msgs::StopResponsePtr\fP"
+
+.SH "Function Documentation"
+.PP 
+.SS "template<typename ContainerAllocator > std::ostream& jaco_msgs::operator<< (std::ostream & s, const ::\fBjaco_msgs::HomeArmRequest_\fP< ContainerAllocator > & v)"
+
+.PP
+.nf
+88 {
+89 ros::message_operations::Printer< ::jaco_msgs::HomeArmRequest_<ContainerAllocator> >::stream(s, "", v);
+90 return s;
+91 }
+.fi
+.SS "template<typename ContainerAllocator > std::ostream& jaco_msgs::operator<< (std::ostream & s, const ::\fBjaco_msgs::SetForceControlParamsResponse_\fP< ContainerAllocator > & v)"
+
+.PP
+.nf
+88 {
+89 ros::message_operations::Printer< ::jaco_msgs::SetForceControlParamsResponse_<ContainerAllocator> >::stream(s, "", v);
+90 return s;
+91 }
+.fi
+.SS "template<typename ContainerAllocator > std::ostream& jaco_msgs::operator<< (std::ostream & s, const ::\fBjaco_msgs::StartRequest_\fP< ContainerAllocator > & v)"
+
+.PP
+.nf
+88 {
+89 ros::message_operations::Printer< ::jaco_msgs::StartRequest_<ContainerAllocator> >::stream(s, "", v);
+90 return s;
+91 }
+.fi
+.SS "template<typename ContainerAllocator > std::ostream& jaco_msgs::operator<< (std::ostream & s, const ::\fBjaco_msgs::StopRequest_\fP< ContainerAllocator > & v)"
+
+.PP
+.nf
+88 {
+89 ros::message_operations::Printer< ::jaco_msgs::StopRequest_<ContainerAllocator> >::stream(s, "", v);
+90 return s;
+91 }
+.fi
+.SS "template<typename ContainerAllocator > std::ostream& jaco_msgs::operator<< (std::ostream & s, const ::\fBjaco_msgs::HomeArmResponse_\fP< ContainerAllocator > & v)"
+
+.PP
+.nf
+91 {
+92 ros::message_operations::Printer< ::jaco_msgs::HomeArmResponse_<ContainerAllocator> >::stream(s, "", v);
+93 return s;
+94 }
+.fi
+.SS "template<typename ContainerAllocator > std::ostream& jaco_msgs::operator<< (std::ostream & s, const ::\fBjaco_msgs::StopResponse_\fP< ContainerAllocator > & v)"
+
+.PP
+.nf
+91 {
+92 ros::message_operations::Printer< ::jaco_msgs::StopResponse_<ContainerAllocator> >::stream(s, "", v);
+93 return s;
+94 }
+.fi
+.SS "template<typename ContainerAllocator > std::ostream& jaco_msgs::operator<< (std::ostream & s, const ::\fBjaco_msgs::StartResponse_\fP< ContainerAllocator > & v)"
+
+.PP
+.nf
+91 {
+92 ros::message_operations::Printer< ::jaco_msgs::StartResponse_<ContainerAllocator> >::stream(s, "", v);
+93 return s;
+94 }
+.fi
+.SS "template<typename ContainerAllocator > std::ostream& jaco_msgs::operator<< (std::ostream & s, const ::\fBjaco_msgs::SetFingersPositionResult_\fP< ContainerAllocator > & v)"
+
+.PP
+.nf
+92 {
+93 ros::message_operations::Printer< ::jaco_msgs::SetFingersPositionResult_<ContainerAllocator> >::stream(s, "", v);
+94 return s;
+95 }
+.fi
+.SS "template<typename ContainerAllocator > std::ostream& jaco_msgs::operator<< (std::ostream & s, const ::\fBjaco_msgs::ArmJointAnglesResult_\fP< ContainerAllocator > & v)"
+
+.PP
+.nf
+92 {
+93 ros::message_operations::Printer< ::jaco_msgs::ArmJointAnglesResult_<ContainerAllocator> >::stream(s, "", v);
+94 return s;
+95 }
+.fi
+.SS "template<typename ContainerAllocator > std::ostream& jaco_msgs::operator<< (std::ostream & s, const ::\fBjaco_msgs::ArmJointAnglesFeedback_\fP< ContainerAllocator > & v)"
+
+.PP
+.nf
+92 {
+93 ros::message_operations::Printer< ::jaco_msgs::ArmJointAnglesFeedback_<ContainerAllocator> >::stream(s, "", v);
+94 return s;
+95 }
+.fi
+.SS "template<typename ContainerAllocator > std::ostream& jaco_msgs::operator<< (std::ostream & s, const ::\fBjaco_msgs::ArmPoseFeedback_\fP< ContainerAllocator > & v)"
+
+.PP
+.nf
+92 {
+93 ros::message_operations::Printer< ::jaco_msgs::ArmPoseFeedback_<ContainerAllocator> >::stream(s, "", v);
+94 return s;
+95 }
+.fi
+.SS "template<typename ContainerAllocator > std::ostream& jaco_msgs::operator<< (std::ostream & s, const ::\fBjaco_msgs::SetFingersPositionFeedback_\fP< ContainerAllocator > & v)"
+
+.PP
+.nf
+92 {
+93 ros::message_operations::Printer< ::jaco_msgs::SetFingersPositionFeedback_<ContainerAllocator> >::stream(s, "", v);
+94 return s;
+95 }
+.fi
+.SS "template<typename ContainerAllocator > std::ostream& jaco_msgs::operator<< (std::ostream & s, const ::\fBjaco_msgs::SetFingersPositionGoal_\fP< ContainerAllocator > & v)"
+
+.PP
+.nf
+92 {
+93 ros::message_operations::Printer< ::jaco_msgs::SetFingersPositionGoal_<ContainerAllocator> >::stream(s, "", v);
+94 return s;
+95 }
+.fi
+.SS "template<typename ContainerAllocator > std::ostream& jaco_msgs::operator<< (std::ostream & s, const ::\fBjaco_msgs::ArmPoseGoal_\fP< ContainerAllocator > & v)"
+
+.PP
+.nf
+92 {
+93 ros::message_operations::Printer< ::jaco_msgs::ArmPoseGoal_<ContainerAllocator> >::stream(s, "", v);
+94 return s;
+95 }
+.fi
+.SS "template<typename ContainerAllocator > std::ostream& jaco_msgs::operator<< (std::ostream & s, const ::\fBjaco_msgs::ArmJointAnglesGoal_\fP< ContainerAllocator > & v)"
+
+.PP
+.nf
+92 {
+93 ros::message_operations::Printer< ::jaco_msgs::ArmJointAnglesGoal_<ContainerAllocator> >::stream(s, "", v);
+94 return s;
+95 }
+.fi
+.SS "template<typename ContainerAllocator > std::ostream& jaco_msgs::operator<< (std::ostream & s, const ::\fBjaco_msgs::ArmPoseResult_\fP< ContainerAllocator > & v)"
+
+.PP
+.nf
+92 {
+93 ros::message_operations::Printer< ::jaco_msgs::ArmPoseResult_<ContainerAllocator> >::stream(s, "", v);
+94 return s;
+95 }
+.fi
+.SS "template<typename ContainerAllocator > std::ostream& jaco_msgs::operator<< (std::ostream & s, const ::\fBjaco_msgs::FingerPosition_\fP< ContainerAllocator > & v)"
+
+.PP
+.nf
+101 {
+102 ros::message_operations::Printer< ::jaco_msgs::FingerPosition_<ContainerAllocator> >::stream(s, "", v);
+103 return s;
+104 }
+.fi
+.SS "template<typename ContainerAllocator > std::ostream& jaco_msgs::operator<< (std::ostream & s, const ::\fBjaco_msgs::ArmJointAnglesActionGoal_\fP< ContainerAllocator > & v)"
+
+.PP
+.nf
+104 {
+105 ros::message_operations::Printer< ::jaco_msgs::ArmJointAnglesActionGoal_<ContainerAllocator> >::stream(s, "", v);
+106 return s;
+107 }
+.fi
+.SS "template<typename ContainerAllocator > std::ostream& jaco_msgs::operator<< (std::ostream & s, const ::\fBjaco_msgs::ArmPoseAction_\fP< ContainerAllocator > & v)"
+
+.PP
+.nf
+104 {
+105 ros::message_operations::Printer< ::jaco_msgs::ArmPoseAction_<ContainerAllocator> >::stream(s, "", v);
+106 return s;
+107 }
+.fi
+.SS "template<typename ContainerAllocator > std::ostream& jaco_msgs::operator<< (std::ostream & s, const ::\fBjaco_msgs::ArmJointAnglesAction_\fP< ContainerAllocator > & v)"
+
+.PP
+.nf
+104 {
+105 ros::message_operations::Printer< ::jaco_msgs::ArmJointAnglesAction_<ContainerAllocator> >::stream(s, "", v);
+106 return s;
+107 }
+.fi
+.SS "template<typename ContainerAllocator > std::ostream& jaco_msgs::operator<< (std::ostream & s, const ::\fBjaco_msgs::SetFingersPositionActionGoal_\fP< ContainerAllocator > & v)"
+
+.PP
+.nf
+104 {
+105 ros::message_operations::Printer< ::jaco_msgs::SetFingersPositionActionGoal_<ContainerAllocator> >::stream(s, "", v);
+106 return s;
+107 }
+.fi
+.SS "template<typename ContainerAllocator > std::ostream& jaco_msgs::operator<< (std::ostream & s, const ::\fBjaco_msgs::SetFingersPositionActionResult_\fP< ContainerAllocator > & v)"
+
+.PP
+.nf
+104 {
+105 ros::message_operations::Printer< ::jaco_msgs::SetFingersPositionActionResult_<ContainerAllocator> >::stream(s, "", v);
+106 return s;
+107 }
+.fi
+.SS "template<typename ContainerAllocator > std::ostream& jaco_msgs::operator<< (std::ostream & s, const ::\fBjaco_msgs::ArmPoseActionResult_\fP< ContainerAllocator > & v)"
+
+.PP
+.nf
+104 {
+105 ros::message_operations::Printer< ::jaco_msgs::ArmPoseActionResult_<ContainerAllocator> >::stream(s, "", v);
+106 return s;
+107 }
+.fi
+.SS "template<typename ContainerAllocator > std::ostream& jaco_msgs::operator<< (std::ostream & s, const ::\fBjaco_msgs::ArmPoseActionGoal_\fP< ContainerAllocator > & v)"
+
+.PP
+.nf
+104 {
+105 ros::message_operations::Printer< ::jaco_msgs::ArmPoseActionGoal_<ContainerAllocator> >::stream(s, "", v);
+106 return s;
+107 }
+.fi
+.SS "template<typename ContainerAllocator > std::ostream& jaco_msgs::operator<< (std::ostream & s, const ::\fBjaco_msgs::ArmPoseActionFeedback_\fP< ContainerAllocator > & v)"
+
+.PP
+.nf
+104 {
+105 ros::message_operations::Printer< ::jaco_msgs::ArmPoseActionFeedback_<ContainerAllocator> >::stream(s, "", v);
+106 return s;
+107 }
+.fi
+.SS "template<typename ContainerAllocator > std::ostream& jaco_msgs::operator<< (std::ostream & s, const ::\fBjaco_msgs::ArmJointAnglesActionFeedback_\fP< ContainerAllocator > & v)"
+
+.PP
+.nf
+104 {
+105 ros::message_operations::Printer< ::jaco_msgs::ArmJointAnglesActionFeedback_<ContainerAllocator> >::stream(s, "", v);
+106 return s;
+107 }
+.fi
+.SS "template<typename ContainerAllocator > std::ostream& jaco_msgs::operator<< (std::ostream & s, const ::\fBjaco_msgs::SetFingersPositionAction_\fP< ContainerAllocator > & v)"
+
+.PP
+.nf
+104 {
+105 ros::message_operations::Printer< ::jaco_msgs::SetFingersPositionAction_<ContainerAllocator> >::stream(s, "", v);
+106 return s;
+107 }
+.fi
+.SS "template<typename ContainerAllocator > std::ostream& jaco_msgs::operator<< (std::ostream & s, const ::\fBjaco_msgs::SetFingersPositionActionFeedback_\fP< ContainerAllocator > & v)"
+
+.PP
+.nf
+104 {
+105 ros::message_operations::Printer< ::jaco_msgs::SetFingersPositionActionFeedback_<ContainerAllocator> >::stream(s, "", v);
+106 return s;
+107 }
+.fi
+.SS "template<typename ContainerAllocator > std::ostream& jaco_msgs::operator<< (std::ostream & s, const ::\fBjaco_msgs::ArmJointAnglesActionResult_\fP< ContainerAllocator > & v)"
+
+.PP
+.nf
+104 {
+105 ros::message_operations::Printer< ::jaco_msgs::ArmJointAnglesActionResult_<ContainerAllocator> >::stream(s, "", v);
+106 return s;
+107 }
+.fi
+.SS "template<typename ContainerAllocator > std::ostream& jaco_msgs::operator<< (std::ostream & s, const ::\fBjaco_msgs::JointAngles_\fP< ContainerAllocator > & v)"
+
+.PP
+.nf
+116 {
+117 ros::message_operations::Printer< ::jaco_msgs::JointAngles_<ContainerAllocator> >::stream(s, "", v);
+118 return s;
+119 }
+.fi
+.SS "template<typename ContainerAllocator > std::ostream& jaco_msgs::operator<< (std::ostream & s, const ::\fBjaco_msgs::JointVelocity_\fP< ContainerAllocator > & v)"
+
+.PP
+.nf
+116 {
+117 ros::message_operations::Printer< ::jaco_msgs::JointVelocity_<ContainerAllocator> >::stream(s, "", v);
+118 return s;
+119 }
+.fi
+.SS "template<typename ContainerAllocator > std::ostream& jaco_msgs::operator<< (std::ostream & s, const ::\fBjaco_msgs::SetForceControlParamsRequest_\fP< ContainerAllocator > & v)"
+
+.PP
+.nf
+134 {
+135 ros::message_operations::Printer< ::jaco_msgs::SetForceControlParamsRequest_<ContainerAllocator> >::stream(s, "", v);
+136 return s;
+137 }
+.fi
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Kinova-ROS from the source code\&.

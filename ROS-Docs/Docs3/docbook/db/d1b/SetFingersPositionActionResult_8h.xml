@@ -1,0 +1,481 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="db/d1b/SetFingersPositionActionResult_8h">
+    <title>SetFingersPositionActionResult.h File Reference</title>
+    <programlisting>#include &lt;string&gt;</programlisting>
+    <programlisting>#include &lt;vector&gt;</programlisting>
+    <programlisting>#include &lt;map&gt;</programlisting>
+    <programlisting>#include &lt;ros/types.h&gt;</programlisting>
+    <programlisting>#include &lt;ros/serialization.h&gt;</programlisting>
+    <programlisting>#include &lt;ros/builtin_message_traits.h&gt;</programlisting>
+    <programlisting>#include &lt;ros/message_operations.h&gt;</programlisting>
+    <programlisting>#include &lt;std_msgs/Header.h&gt;</programlisting>
+    <programlisting>#include &lt;actionlib_msgs/GoalStatus.h&gt;</programlisting>
+    <programlisting>#include &lt;jaco_msgs/SetFingersPositionResult.h&gt;</programlisting>
+<para>Include dependency diagram for SetFingersPositionActionResult.h</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../d7/d52/SetFingersPositionActionResult_8h__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Included by dependency diagram for SetFingersPositionActionResult.h</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../dd/d92/SetFingersPositionActionResult_8h__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+        <section>
+            <title> Classes </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="da/db7/structjaco__msgs_1_1SetFingersPositionActionResult__">jaco_msgs::SetFingersPositionActionResult_</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d8/df3/structros_1_1message__operations_1_1Printer_3_01_1_1jaco__msgs_1_1SetFingersPositionActionResult044e352a34a7e800d3ed4a693b89337f">ros::message_operations::Printer&lt; ::jaco_msgs::SetFingersPositionActionResult_&lt; ContainerAllocator &gt; &gt;</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="df/d4b/structros_1_1message__traits_1_1DataType_3_01_1_1jaco__msgs_1_1SetFingersPositionActionResult___261d7fa0605a3d790ae7a5ae14788b18">ros::message_traits::DataType&lt; ::jaco_msgs::SetFingersPositionActionResult_&lt; ContainerAllocator &gt; &gt;</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d7/d22/structros_1_1message__traits_1_1Definition_3_01_1_1jaco__msgs_1_1SetFingersPositionActionResult_d77f823cc2975df7a63f01b98938519f">ros::message_traits::Definition&lt; ::jaco_msgs::SetFingersPositionActionResult_&lt; ContainerAllocator &gt; &gt;</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d5/dbe/structros_1_1message__traits_1_1HasHeader_3_01_1_1jaco__msgs_1_1SetFingersPositionActionResult__2e85c66de02b41802b0f52d162e48290">ros::message_traits::HasHeader&lt; ::jaco_msgs::SetFingersPositionActionResult_&lt; ContainerAllocator &gt; &gt;</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d6/d68/structros_1_1message__traits_1_1HasHeader_3_01_1_1jaco__msgs_1_1SetFingersPositionActionResult__48c09174784ce87d80d2aed37fbf5199">ros::message_traits::HasHeader&lt; ::jaco_msgs::SetFingersPositionActionResult_&lt; ContainerAllocator &gt; const  &gt;</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="dc/d2f/structros_1_1message__traits_1_1IsFixedSize_3_01_1_1jaco__msgs_1_1SetFingersPositionActionResult5da3521b7abec5178a9c3038c11f63d8">ros::message_traits::IsFixedSize&lt; ::jaco_msgs::SetFingersPositionActionResult_&lt; ContainerAllocator &gt; &gt;</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="dc/dd2/structros_1_1message__traits_1_1IsFixedSize_3_01_1_1jaco__msgs_1_1SetFingersPositionActionResult5c72c2a1694af4cc7dc8586930e94a67">ros::message_traits::IsFixedSize&lt; ::jaco_msgs::SetFingersPositionActionResult_&lt; ContainerAllocator &gt; const  &gt;</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="dd/dd1/structros_1_1message__traits_1_1IsMessage_3_01_1_1jaco__msgs_1_1SetFingersPositionActionResult__757ad1fe13355cb697d2ab8a4b4167d6">ros::message_traits::IsMessage&lt; ::jaco_msgs::SetFingersPositionActionResult_&lt; ContainerAllocator &gt; &gt;</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d5/d17/structros_1_1message__traits_1_1IsMessage_3_01_1_1jaco__msgs_1_1SetFingersPositionActionResult__e9cfa5ea6f52c2558a064565c2b5cfc0">ros::message_traits::IsMessage&lt; ::jaco_msgs::SetFingersPositionActionResult_&lt; ContainerAllocator &gt; const  &gt;</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="df/d96/structros_1_1message__traits_1_1MD5Sum_3_01_1_1jaco__msgs_1_1SetFingersPositionActionResult___3_01ContainerAllocator_01_4_01_4">ros::message_traits::MD5Sum&lt; ::jaco_msgs::SetFingersPositionActionResult_&lt; ContainerAllocator &gt; &gt;</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d2/dfd/structros_1_1serialization_1_1Serializer_3_01_1_1jaco__msgs_1_1SetFingersPositionActionResult___838e73897c4a86106fa5fb9dc69a0e18">ros::serialization::Serializer&lt; ::jaco_msgs::SetFingersPositionActionResult_&lt; ContainerAllocator &gt; &gt;</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <simplesect>
+            <title> Namespaces </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d7/dba/namespacejaco__msgs">jaco_msgs</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="db/d2f/namespaceros">ros</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d6/db4/namespaceros_1_1message__operations">ros::message_operations</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d0/db0/namespaceros_1_1message__traits">ros::message_traits</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="da/d37/namespaceros_1_1serialization">ros::serialization</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+    <simplesect>
+        <title>Detailed Description</title>
+    <para>Definition in file D:/Longfei/Desktop/catkin_KinovaROS/devel/include/jaco_msgs/SetFingersPositionActionResult.h</para>
+    </simplesect>
+    <literallayout><computeroutput>
+1 <emphasis class="comment">/*&#32;Software&#32;License&#32;Agreement&#32;(BSD&#32;License)</emphasis>
+2 <emphasis class="comment">&#32;*</emphasis>
+3 <emphasis class="comment">&#32;*&#32;Copyright&#32;(c)&#32;2011,&#32;Willow&#32;Garage,&#32;Inc.</emphasis>
+4 <emphasis class="comment">&#32;*&#32;All&#32;rights&#32;reserved.</emphasis>
+5 <emphasis class="comment">&#32;*</emphasis>
+6 <emphasis class="comment">&#32;*&#32;Redistribution&#32;and&#32;use&#32;in&#32;source&#32;and&#32;binary&#32;forms,&#32;with&#32;or&#32;without</emphasis>
+7 <emphasis class="comment">&#32;*&#32;modification,&#32;are&#32;permitted&#32;provided&#32;that&#32;the&#32;following&#32;conditions</emphasis>
+8 <emphasis class="comment">&#32;*&#32;are&#32;met:</emphasis>
+9 <emphasis class="comment">&#32;*</emphasis>
+10 <emphasis class="comment">&#32;*&#32;&#32;*&#32;Redistributions&#32;of&#32;source&#32;code&#32;must&#32;retain&#32;the&#32;above&#32;copyright</emphasis>
+11 <emphasis class="comment">&#32;*&#32;&#32;&#32;&#32;notice,&#32;this&#32;list&#32;of&#32;conditions&#32;and&#32;the&#32;following&#32;disclaimer.</emphasis>
+12 <emphasis class="comment">&#32;*&#32;&#32;*&#32;Redistributions&#32;in&#32;binary&#32;form&#32;must&#32;reproduce&#32;the&#32;above</emphasis>
+13 <emphasis class="comment">&#32;*&#32;&#32;&#32;&#32;copyright&#32;notice,&#32;this&#32;list&#32;of&#32;conditions&#32;and&#32;the&#32;following</emphasis>
+14 <emphasis class="comment">&#32;*&#32;&#32;&#32;&#32;disclaimer&#32;in&#32;the&#32;documentation&#32;and/or&#32;other&#32;materials&#32;provided</emphasis>
+15 <emphasis class="comment">&#32;*&#32;&#32;&#32;&#32;with&#32;the&#32;distribution.</emphasis>
+16 <emphasis class="comment">&#32;*&#32;&#32;*&#32;Neither&#32;the&#32;name&#32;of&#32;Willow&#32;Garage,&#32;Inc.&#32;nor&#32;the&#32;names&#32;of&#32;its</emphasis>
+17 <emphasis class="comment">&#32;*&#32;&#32;&#32;&#32;contributors&#32;may&#32;be&#32;used&#32;to&#32;endorse&#32;or&#32;promote&#32;products&#32;derived</emphasis>
+18 <emphasis class="comment">&#32;*&#32;&#32;&#32;&#32;from&#32;this&#32;software&#32;without&#32;specific&#32;prior&#32;written&#32;permission.</emphasis>
+19 <emphasis class="comment">&#32;*</emphasis>
+20 <emphasis class="comment">&#32;*&#32;THIS&#32;SOFTWARE&#32;IS&#32;PROVIDED&#32;BY&#32;THE&#32;COPYRIGHT&#32;HOLDERS&#32;AND&#32;CONTRIBUTORS</emphasis>
+21 <emphasis class="comment">&#32;*&#32;&quot;AS&#32;IS&quot;&#32;AND&#32;ANY&#32;EXPRESS&#32;OR&#32;IMPLIED&#32;WARRANTIES,&#32;INCLUDING,&#32;BUT&#32;NOT</emphasis>
+22 <emphasis class="comment">&#32;*&#32;LIMITED&#32;TO,&#32;THE&#32;IMPLIED&#32;WARRANTIES&#32;OF&#32;MERCHANTABILITY&#32;AND&#32;FITNESS</emphasis>
+23 <emphasis class="comment">&#32;*&#32;FOR&#32;A&#32;PARTICULAR&#32;PURPOSE&#32;ARE&#32;DISCLAIMED.&#32;IN&#32;NO&#32;EVENT&#32;SHALL&#32;THE</emphasis>
+24 <emphasis class="comment">&#32;*&#32;COPYRIGHT&#32;OWNER&#32;OR&#32;CONTRIBUTORS&#32;BE&#32;LIABLE&#32;FOR&#32;ANY&#32;DIRECT,&#32;INDIRECT,</emphasis>
+25 <emphasis class="comment">&#32;*&#32;INCIDENTAL,&#32;SPECIAL,&#32;EXEMPLARY,&#32;OR&#32;CONSEQUENTIAL&#32;DAMAGES&#32;(INCLUDING,</emphasis>
+26 <emphasis class="comment">&#32;*&#32;BUT&#32;NOT&#32;LIMITED&#32;TO,&#32;PROCUREMENT&#32;OF&#32;SUBSTITUTE&#32;GOODS&#32;OR&#32;SERVICES;</emphasis>
+27 <emphasis class="comment">&#32;*&#32;LOSS&#32;OF&#32;USE,&#32;DATA,&#32;OR&#32;PROFITS;&#32;OR&#32;BUSINESS&#32;INTERRUPTION)&#32;HOWEVER</emphasis>
+28 <emphasis class="comment">&#32;*&#32;CAUSED&#32;AND&#32;ON&#32;ANY&#32;THEORY&#32;OF&#32;LIABILITY,&#32;WHETHER&#32;IN&#32;CONTRACT,&#32;STRICT</emphasis>
+29 <emphasis class="comment">&#32;*&#32;LIABILITY,&#32;OR&#32;TORT&#32;(INCLUDING&#32;NEGLIGENCE&#32;OR&#32;OTHERWISE)&#32;ARISING&#32;IN</emphasis>
+30 <emphasis class="comment">&#32;*&#32;ANY&#32;WAY&#32;OUT&#32;OF&#32;THE&#32;USE&#32;OF&#32;THIS&#32;SOFTWARE,&#32;EVEN&#32;IF&#32;ADVISED&#32;OF&#32;THE</emphasis>
+31 <emphasis class="comment">&#32;*&#32;POSSIBILITY&#32;OF&#32;SUCH&#32;DAMAGE.</emphasis>
+32 <emphasis class="comment">&#32;*</emphasis>
+33 <emphasis class="comment">&#32;*&#32;Auto-generated&#32;by&#32;genmsg_cpp&#32;from&#32;file&#32;/home/longfei/catkin_KinovaROS/devel/share/jaco_msgs/msg/SetFingersPositionActionResult.msg</emphasis>
+34 <emphasis class="comment">&#32;*</emphasis>
+35 <emphasis class="comment">&#32;*/</emphasis>
+36 
+37 
+38 <emphasis class="preprocessor">#ifndef&#32;JACO_MSGS_MESSAGE_SETFINGERSPOSITIONACTIONRESULT_H</emphasis>
+39 <emphasis class="preprocessor">#define&#32;JACO_MSGS_MESSAGE_SETFINGERSPOSITIONACTIONRESULT_H</emphasis>
+40 
+41 
+42 <emphasis class="preprocessor">#include&#32;&lt;string&gt;</emphasis>
+43 <emphasis class="preprocessor">#include&#32;&lt;vector&gt;</emphasis>
+44 <emphasis class="preprocessor">#include&#32;&lt;map&gt;</emphasis>
+45 
+46 <emphasis class="preprocessor">#include&#32;&lt;ros/types.h&gt;</emphasis>
+47 <emphasis class="preprocessor">#include&#32;&lt;ros/serialization.h&gt;</emphasis>
+48 <emphasis class="preprocessor">#include&#32;&lt;ros/builtin_message_traits.h&gt;</emphasis>
+49 <emphasis class="preprocessor">#include&#32;&lt;ros/message_operations.h&gt;</emphasis>
+50 
+51 <emphasis class="preprocessor">#include&#32;&lt;std_msgs/Header.h&gt;</emphasis>
+52 <emphasis class="preprocessor">#include&#32;&lt;actionlib_msgs/GoalStatus.h&gt;</emphasis>
+53 <emphasis class="preprocessor">#include&#32;&lt;<link linkend="d5/dd7/SetFingersPositionResult_8h">jaco_msgs/SetFingersPositionResult.h</link>&gt;</emphasis>
+54 
+55 <emphasis class="keyword">namespace&#32;</emphasis><link linkend="d7/dba/namespacejaco__msgs">jaco_msgs</link>
+56 {
+57 <emphasis class="keyword">template</emphasis>&#32;&lt;<emphasis class="keyword">class</emphasis>&#32;ContainerAllocator&gt;
+<link linkend="da/db7/structjaco__msgs_1_1SetFingersPositionActionResult__">58 </link><emphasis class="keyword">struct&#32;</emphasis><link linkend="da/db7/structjaco__msgs_1_1SetFingersPositionActionResult__">SetFingersPositionActionResult_</link>
+59 {
+<link linkend="da/db7/structjaco__msgs_1_1SetFingersPositionActionResult___1ab425bbd950edd7263d5b580ebae81577">60 </link>&#32;&#32;<emphasis class="keyword">typedef</emphasis>&#32;<link linkend="da/db7/structjaco__msgs_1_1SetFingersPositionActionResult__">SetFingersPositionActionResult_&lt;ContainerAllocator&gt;</link>&#32;<link linkend="da/db7/structjaco__msgs_1_1SetFingersPositionActionResult___1ab425bbd950edd7263d5b580ebae81577">Type</link>;
+61 
+<link linkend="da/db7/structjaco__msgs_1_1SetFingersPositionActionResult___1a116424722e3d5b240b77f0e699102f0b">62 </link>&#32;&#32;<link linkend="da/db7/structjaco__msgs_1_1SetFingersPositionActionResult___1a116424722e3d5b240b77f0e699102f0b">SetFingersPositionActionResult_</link>()
+63 &#32;&#32;&#32;&#32;:&#32;<link linkend="da/db7/structjaco__msgs_1_1SetFingersPositionActionResult___1afe9c9e9a117299f47004490d673fca99">header</link>()
+64 &#32;&#32;&#32;&#32;,&#32;<link linkend="da/db7/structjaco__msgs_1_1SetFingersPositionActionResult___1a2071f3ed40cf494554bf7dab9b8da10d">status</link>()
+65 &#32;&#32;&#32;&#32;,&#32;<link linkend="da/db7/structjaco__msgs_1_1SetFingersPositionActionResult___1a56e4fe7830f94aed326d00adc8cf0ac3">result</link>()&#32;&#32;{
+66 &#32;&#32;&#32;&#32;}
+<link linkend="da/db7/structjaco__msgs_1_1SetFingersPositionActionResult___1a7c57ab3e9d99773be307f3f2e044936b">67 </link>&#32;&#32;<link linkend="da/db7/structjaco__msgs_1_1SetFingersPositionActionResult___1a7c57ab3e9d99773be307f3f2e044936b">SetFingersPositionActionResult_</link>(<emphasis class="keyword">const</emphasis>&#32;ContainerAllocator&amp;&#32;_alloc)
+68 &#32;&#32;&#32;&#32;:&#32;<link linkend="da/db7/structjaco__msgs_1_1SetFingersPositionActionResult___1afe9c9e9a117299f47004490d673fca99">header</link>(_alloc)
+69 &#32;&#32;&#32;&#32;,&#32;<link linkend="da/db7/structjaco__msgs_1_1SetFingersPositionActionResult___1a2071f3ed40cf494554bf7dab9b8da10d">status</link>(_alloc)
+70 &#32;&#32;&#32;&#32;,&#32;<link linkend="da/db7/structjaco__msgs_1_1SetFingersPositionActionResult___1a56e4fe7830f94aed326d00adc8cf0ac3">result</link>(_alloc)&#32;&#32;{
+71 &#32;&#32;&#32;&#32;}
+72 
+73 
+74 
+<link linkend="da/db7/structjaco__msgs_1_1SetFingersPositionActionResult___1adafecfdd9d7d042f35c88e4c41aa2b4f">75 </link>&#32;&#32;&#32;typedef&#32;&#32;::std_msgs::Header_&lt;ContainerAllocator&gt;&#32;&#32;<link linkend="da/db7/structjaco__msgs_1_1SetFingersPositionActionResult___1adafecfdd9d7d042f35c88e4c41aa2b4f">_header_type</link>;
+<link linkend="da/db7/structjaco__msgs_1_1SetFingersPositionActionResult___1afe9c9e9a117299f47004490d673fca99">76 </link>&#32;&#32;_header_type&#32;<link linkend="da/db7/structjaco__msgs_1_1SetFingersPositionActionResult___1afe9c9e9a117299f47004490d673fca99">header</link>;
+77 
+<link linkend="da/db7/structjaco__msgs_1_1SetFingersPositionActionResult___1ac4ef0553517c5a84f08a672d3b0d2c9f">78 </link>&#32;&#32;&#32;typedef&#32;&#32;::actionlib_msgs::GoalStatus_&lt;ContainerAllocator&gt;&#32;&#32;<link linkend="da/db7/structjaco__msgs_1_1SetFingersPositionActionResult___1ac4ef0553517c5a84f08a672d3b0d2c9f">_status_type</link>;
+<link linkend="da/db7/structjaco__msgs_1_1SetFingersPositionActionResult___1a2071f3ed40cf494554bf7dab9b8da10d">79 </link>&#32;&#32;_status_type&#32;<link linkend="da/db7/structjaco__msgs_1_1SetFingersPositionActionResult___1a2071f3ed40cf494554bf7dab9b8da10d">status</link>;
+80 
+<link linkend="da/db7/structjaco__msgs_1_1SetFingersPositionActionResult___1a0afeedf3b25e89762f7afc0636d21640">81 </link>&#32;&#32;&#32;typedef&#32;&#32;::jaco_msgs::SetFingersPositionResult_&lt;ContainerAllocator&gt;&#32;&#32;<link linkend="da/db7/structjaco__msgs_1_1SetFingersPositionActionResult___1a0afeedf3b25e89762f7afc0636d21640">_result_type</link>;
+<link linkend="da/db7/structjaco__msgs_1_1SetFingersPositionActionResult___1a56e4fe7830f94aed326d00adc8cf0ac3">82 </link>&#32;&#32;_result_type&#32;<link linkend="da/db7/structjaco__msgs_1_1SetFingersPositionActionResult___1a56e4fe7830f94aed326d00adc8cf0ac3">result</link>;
+83 
+84 
+85 
+86 
+<link linkend="da/db7/structjaco__msgs_1_1SetFingersPositionActionResult___1a3ddc98892b0e2d7b1853973b9fd24322">87 </link>&#32;&#32;<emphasis class="keyword">typedef</emphasis>&#32;boost::shared_ptr&lt;&#32;::jaco_msgs::SetFingersPositionActionResult_&lt;ContainerAllocator&gt;&#32;&gt;&#32;<link linkend="da/db7/structjaco__msgs_1_1SetFingersPositionActionResult___1a3ddc98892b0e2d7b1853973b9fd24322">Ptr</link>;
+<link linkend="da/db7/structjaco__msgs_1_1SetFingersPositionActionResult___1a368570cbffaf720aea48642ec7c8829e">88 </link>&#32;&#32;<emphasis class="keyword">typedef</emphasis>&#32;boost::shared_ptr&lt;&#32;::jaco_msgs::SetFingersPositionActionResult_&lt;ContainerAllocator&gt;&#32;<emphasis class="keyword">const</emphasis>&gt;&#32;<link linkend="da/db7/structjaco__msgs_1_1SetFingersPositionActionResult___1a368570cbffaf720aea48642ec7c8829e">ConstPtr</link>;
+<link linkend="da/db7/structjaco__msgs_1_1SetFingersPositionActionResult___1a891db5c1dd5862e22b11505a18d47d73">89 </link>&#32;&#32;boost::shared_ptr&lt;std::map&lt;std::string,&#32;std::string&gt;&#32;&gt;&#32;<link linkend="da/db7/structjaco__msgs_1_1SetFingersPositionActionResult___1a891db5c1dd5862e22b11505a18d47d73">__connection_header</link>;
+90 
+91 };&#32;<emphasis class="comment">//&#32;struct&#32;SetFingersPositionActionResult_</emphasis>
+92 
+<link linkend="d7/dba/namespacejaco__msgs_1abe0caa1fc40ecf2de26ec686e3c4a0fb">93 </link>typedef&#32;::jaco_msgs::SetFingersPositionActionResult_&lt;std::allocator&lt;void&gt;&#32;&gt;&#32;<link linkend="d7/dba/namespacejaco__msgs_1abe0caa1fc40ecf2de26ec686e3c4a0fb">SetFingersPositionActionResult</link>;
+94 
+<link linkend="d7/dba/namespacejaco__msgs_1a86bbaee297d8ebb495034ab11eb539b4">95 </link><emphasis class="keyword">typedef</emphasis>&#32;boost::shared_ptr&lt;&#32;::jaco_msgs::SetFingersPositionActionResult&#32;&gt;&#32;<link linkend="d7/dba/namespacejaco__msgs_1a86bbaee297d8ebb495034ab11eb539b4">SetFingersPositionActionResultPtr</link>;
+<link linkend="d7/dba/namespacejaco__msgs_1aee01d75d20086911a84dd80ddf97f132">96 </link><emphasis class="keyword">typedef</emphasis>&#32;boost::shared_ptr&lt;&#32;::jaco_msgs::SetFingersPositionActionResult&#32;const&gt;&#32;<link linkend="d7/dba/namespacejaco__msgs_1aee01d75d20086911a84dd80ddf97f132">SetFingersPositionActionResultConstPtr</link>;
+97 
+98 <emphasis class="comment">//&#32;constants&#32;requiring&#32;out&#32;of&#32;line&#32;definition</emphasis>
+99 
+100 
+101 
+102 <emphasis class="keyword">template</emphasis>&lt;<emphasis class="keyword">typename</emphasis>&#32;ContainerAllocator&gt;
+<link linkend="d7/dba/namespacejaco__msgs_1ab158bf1114311b871f12f51de32ef756">103 </link>std::ostream&amp;&#32;operator&lt;&lt;(std::ostream&amp;&#32;s,&#32;const&#32;::jaco_msgs::SetFingersPositionActionResult_&lt;ContainerAllocator&gt;&#32;&amp;&#32;v)
+104 {
+105 ros::message_operations::Printer&lt;&#32;::jaco_msgs::SetFingersPositionActionResult_&lt;ContainerAllocator&gt;&#32;&gt;::stream(s,&#32;<emphasis class="stringliteral">&quot;&quot;</emphasis>,&#32;v);
+106 <emphasis class="keywordflow">return</emphasis>&#32;s;
+107 }
+108 
+109 }&#32;<emphasis class="comment">//&#32;namespace&#32;jaco_msgs</emphasis>
+110 
+111 <emphasis class="keyword">namespace&#32;</emphasis><link linkend="db/d2f/namespaceros">ros</link>
+112 {
+113 <emphasis class="keyword">namespace&#32;</emphasis>message_traits
+114 {
+115 
+116 
+117 
+118 <emphasis class="comment">//&#32;BOOLTRAITS&#32;{&apos;IsFixedSize&apos;:&#32;False,&#32;&apos;IsMessage&apos;:&#32;True,&#32;&apos;HasHeader&apos;:&#32;True}</emphasis>
+119 <emphasis class="comment">//&#32;{&apos;std_msgs&apos;:&#32;[&apos;/opt/ros/hydro/share/std_msgs/cmake/../msg&apos;],&#32;&apos;actionlib_msgs&apos;:&#32;[&apos;/opt/ros/hydro/share/actionlib_msgs/cmake/../msg&apos;],&#32;&apos;jaco_msgs&apos;:&#32;[&apos;/home/longfei/catkin_KinovaROS/src/jaco-ros/jaco_msgs/msg&apos;,&#32;&apos;/home/longfei/catkin_KinovaROS/devel/share/jaco_msgs/msg&apos;],&#32;&apos;geometry_msgs&apos;:&#32;[&apos;/opt/ros/hydro/share/geometry_msgs/cmake/../msg&apos;]}</emphasis>
+120 
+121 <emphasis class="comment">//&#32;!!!!!!!!!!!&#32;[&apos;__class__&apos;,&#32;&apos;__delattr__&apos;,&#32;&apos;__dict__&apos;,&#32;&apos;__doc__&apos;,&#32;&apos;__eq__&apos;,&#32;&apos;__format__&apos;,&#32;&apos;__getattribute__&apos;,&#32;&apos;__hash__&apos;,&#32;&apos;__init__&apos;,&#32;&apos;__module__&apos;,&#32;&apos;__ne__&apos;,&#32;&apos;__new__&apos;,&#32;&apos;__reduce__&apos;,&#32;&apos;__reduce_ex__&apos;,&#32;&apos;__repr__&apos;,&#32;&apos;__setattr__&apos;,&#32;&apos;__sizeof__&apos;,&#32;&apos;__str__&apos;,&#32;&apos;__subclasshook__&apos;,&#32;&apos;__weakref__&apos;,&#32;&apos;_parsed_fields&apos;,&#32;&apos;constants&apos;,&#32;&apos;fields&apos;,&#32;&apos;full_name&apos;,&#32;&apos;has_header&apos;,&#32;&apos;header_present&apos;,&#32;&apos;names&apos;,&#32;&apos;package&apos;,&#32;&apos;parsed_fields&apos;,&#32;&apos;short_name&apos;,&#32;&apos;text&apos;,&#32;&apos;types&apos;]</emphasis>
+122 
+123 
+124 
+125 
+126 <emphasis class="keyword">template</emphasis>&#32;&lt;<emphasis class="keyword">class</emphasis>&#32;ContainerAllocator&gt;
+<link linkend="dc/d2f/structros_1_1message__traits_1_1IsFixedSize_3_01_1_1jaco__msgs_1_1SetFingersPositionActionResult5da3521b7abec5178a9c3038c11f63d8">127 </link><emphasis class="keyword">struct&#32;</emphasis>IsFixedSize&lt;&#32;::<link linkend="da/db7/structjaco__msgs_1_1SetFingersPositionActionResult__">jaco_msgs::SetFingersPositionActionResult_</link>&lt;ContainerAllocator&gt;&#32;&gt;
+128 &#32;&#32;:&#32;FalseType
+129 &#32;&#32;{&#32;};
+130 
+131 <emphasis class="keyword">template</emphasis>&#32;&lt;<emphasis class="keyword">class</emphasis>&#32;ContainerAllocator&gt;
+<link linkend="dc/dd2/structros_1_1message__traits_1_1IsFixedSize_3_01_1_1jaco__msgs_1_1SetFingersPositionActionResult5c72c2a1694af4cc7dc8586930e94a67">132 </link><emphasis class="keyword">struct&#32;</emphasis>IsFixedSize&lt;&#32;::<link linkend="da/db7/structjaco__msgs_1_1SetFingersPositionActionResult__">jaco_msgs::SetFingersPositionActionResult_</link>&lt;ContainerAllocator&gt;&#32;const&gt;
+133 &#32;&#32;:&#32;FalseType
+134 &#32;&#32;{&#32;};
+135 
+136 <emphasis class="keyword">template</emphasis>&#32;&lt;<emphasis class="keyword">class</emphasis>&#32;ContainerAllocator&gt;
+<link linkend="dd/dd1/structros_1_1message__traits_1_1IsMessage_3_01_1_1jaco__msgs_1_1SetFingersPositionActionResult__757ad1fe13355cb697d2ab8a4b4167d6">137 </link><emphasis class="keyword">struct&#32;</emphasis>IsMessage&lt;&#32;::<link linkend="da/db7/structjaco__msgs_1_1SetFingersPositionActionResult__">jaco_msgs::SetFingersPositionActionResult_</link>&lt;ContainerAllocator&gt;&#32;&gt;
+138 &#32;&#32;:&#32;TrueType
+139 &#32;&#32;{&#32;};
+140 
+141 <emphasis class="keyword">template</emphasis>&#32;&lt;<emphasis class="keyword">class</emphasis>&#32;ContainerAllocator&gt;
+<link linkend="d5/d17/structros_1_1message__traits_1_1IsMessage_3_01_1_1jaco__msgs_1_1SetFingersPositionActionResult__e9cfa5ea6f52c2558a064565c2b5cfc0">142 </link><emphasis class="keyword">struct&#32;</emphasis>IsMessage&lt;&#32;::<link linkend="da/db7/structjaco__msgs_1_1SetFingersPositionActionResult__">jaco_msgs::SetFingersPositionActionResult_</link>&lt;ContainerAllocator&gt;&#32;const&gt;
+143 &#32;&#32;:&#32;TrueType
+144 &#32;&#32;{&#32;};
+145 
+146 <emphasis class="keyword">template</emphasis>&#32;&lt;<emphasis class="keyword">class</emphasis>&#32;ContainerAllocator&gt;
+<link linkend="d5/dbe/structros_1_1message__traits_1_1HasHeader_3_01_1_1jaco__msgs_1_1SetFingersPositionActionResult__2e85c66de02b41802b0f52d162e48290">147 </link><emphasis class="keyword">struct&#32;</emphasis>HasHeader&lt;&#32;::<link linkend="da/db7/structjaco__msgs_1_1SetFingersPositionActionResult__">jaco_msgs::SetFingersPositionActionResult_</link>&lt;ContainerAllocator&gt;&#32;&gt;
+148 &#32;&#32;:&#32;TrueType
+149 &#32;&#32;{&#32;};
+150 
+151 <emphasis class="keyword">template</emphasis>&#32;&lt;<emphasis class="keyword">class</emphasis>&#32;ContainerAllocator&gt;
+<link linkend="d6/d68/structros_1_1message__traits_1_1HasHeader_3_01_1_1jaco__msgs_1_1SetFingersPositionActionResult__48c09174784ce87d80d2aed37fbf5199">152 </link><emphasis class="keyword">struct&#32;</emphasis>HasHeader&lt;&#32;::<link linkend="da/db7/structjaco__msgs_1_1SetFingersPositionActionResult__">jaco_msgs::SetFingersPositionActionResult_</link>&lt;ContainerAllocator&gt;&#32;const&gt;
+153 &#32;&#32;:&#32;TrueType
+154 &#32;&#32;{&#32;};
+155 
+156 
+157 <emphasis class="keyword">template</emphasis>&lt;<emphasis class="keyword">class</emphasis>&#32;ContainerAllocator&gt;
+<link linkend="df/d96/structros_1_1message__traits_1_1MD5Sum_3_01_1_1jaco__msgs_1_1SetFingersPositionActionResult___3_01ContainerAllocator_01_4_01_4">158 </link><emphasis class="keyword">struct&#32;</emphasis>MD5Sum&lt;&#32;::<link linkend="da/db7/structjaco__msgs_1_1SetFingersPositionActionResult__">jaco_msgs::SetFingersPositionActionResult_</link>&lt;ContainerAllocator&gt;&#32;&gt;
+159 {
+<link linkend="df/d96/structros_1_1message__traits_1_1MD5Sum_3_01_1_1jaco__msgs_1_1SetFingersPositionActionResult___3_01ContainerAllocator_01_4_01_4_1a9ddf9d312a597df8a97956e3cd77d71d">160 </link>&#32;&#32;<emphasis class="keyword">static</emphasis>&#32;<emphasis class="keyword">const</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>*&#32;<link linkend="df/d96/structros_1_1message__traits_1_1MD5Sum_3_01_1_1jaco__msgs_1_1SetFingersPositionActionResult___3_01ContainerAllocator_01_4_01_4_1a9ddf9d312a597df8a97956e3cd77d71d">value</link>()
+161 &#32;&#32;{
+162 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;<emphasis class="stringliteral">&quot;0a2da074d5bec989ac2f4ba43b591cd9&quot;</emphasis>;
+163 &#32;&#32;}
+164 
+<link linkend="df/d96/structros_1_1message__traits_1_1MD5Sum_3_01_1_1jaco__msgs_1_1SetFingersPositionActionResult___3_01ContainerAllocator_01_4_01_4_1a92cea316ffa76e77857f40307e466c1e">165 </link>&#32;&#32;<emphasis class="keyword">static</emphasis>&#32;<emphasis class="keyword">const</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>*&#32;<link linkend="df/d96/structros_1_1message__traits_1_1MD5Sum_3_01_1_1jaco__msgs_1_1SetFingersPositionActionResult___3_01ContainerAllocator_01_4_01_4_1a92cea316ffa76e77857f40307e466c1e">value</link>(const&#32;::jaco_msgs::SetFingersPositionActionResult_&lt;ContainerAllocator&gt;&amp;)&#32;{&#32;<emphasis class="keywordflow">return</emphasis>&#32;<link linkend="df/d96/structros_1_1message__traits_1_1MD5Sum_3_01_1_1jaco__msgs_1_1SetFingersPositionActionResult___3_01ContainerAllocator_01_4_01_4_1a92cea316ffa76e77857f40307e466c1e">value</link>();&#32;}
+<link linkend="df/d96/structros_1_1message__traits_1_1MD5Sum_3_01_1_1jaco__msgs_1_1SetFingersPositionActionResult___3_01ContainerAllocator_01_4_01_4_1a077bc40f6b0b3af41a87560e52186ecd">166 </link>&#32;&#32;<emphasis class="keyword">static</emphasis>&#32;<emphasis class="keyword">const</emphasis>&#32;uint64_t&#32;static_value1&#32;=&#32;0x0a2da074d5bec989ULL;
+<link linkend="df/d96/structros_1_1message__traits_1_1MD5Sum_3_01_1_1jaco__msgs_1_1SetFingersPositionActionResult___3_01ContainerAllocator_01_4_01_4_1a96dd664e394cabaf4d4e6f78356ab53f">167 </link>&#32;&#32;<emphasis class="keyword">static</emphasis>&#32;<emphasis class="keyword">const</emphasis>&#32;uint64_t&#32;static_value2&#32;=&#32;0xac2f4ba43b591cd9ULL;
+168 };
+169 
+170 <emphasis class="keyword">template</emphasis>&lt;<emphasis class="keyword">class</emphasis>&#32;ContainerAllocator&gt;
+<link linkend="df/d4b/structros_1_1message__traits_1_1DataType_3_01_1_1jaco__msgs_1_1SetFingersPositionActionResult___261d7fa0605a3d790ae7a5ae14788b18">171 </link><emphasis class="keyword">struct&#32;</emphasis>DataType&lt;&#32;::<link linkend="da/db7/structjaco__msgs_1_1SetFingersPositionActionResult__">jaco_msgs::SetFingersPositionActionResult_</link>&lt;ContainerAllocator&gt;&#32;&gt;
+172 {
+<link linkend="df/d4b/structros_1_1message__traits_1_1DataType_3_01_1_1jaco__msgs_1_1SetFingersPositionActionResult___261d7fa0605a3d790ae7a5ae14788b18_1a5000d3315db097c977274cc246e0a210">173 </link>&#32;&#32;<emphasis class="keyword">static</emphasis>&#32;<emphasis class="keyword">const</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>*&#32;<link linkend="df/d4b/structros_1_1message__traits_1_1DataType_3_01_1_1jaco__msgs_1_1SetFingersPositionActionResult___261d7fa0605a3d790ae7a5ae14788b18_1a5000d3315db097c977274cc246e0a210">value</link>()
+174 &#32;&#32;{
+175 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;<emphasis class="stringliteral">&quot;jaco_msgs/SetFingersPositionActionResult&quot;</emphasis>;
+176 &#32;&#32;}
+177 
+<link linkend="df/d4b/structros_1_1message__traits_1_1DataType_3_01_1_1jaco__msgs_1_1SetFingersPositionActionResult___261d7fa0605a3d790ae7a5ae14788b18_1a953e8593af0cd31ec2e378f24b213a8d">178 </link>&#32;&#32;<emphasis class="keyword">static</emphasis>&#32;<emphasis class="keyword">const</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>*&#32;<link linkend="df/d4b/structros_1_1message__traits_1_1DataType_3_01_1_1jaco__msgs_1_1SetFingersPositionActionResult___261d7fa0605a3d790ae7a5ae14788b18_1a953e8593af0cd31ec2e378f24b213a8d">value</link>(const&#32;::jaco_msgs::SetFingersPositionActionResult_&lt;ContainerAllocator&gt;&amp;)&#32;{&#32;<emphasis class="keywordflow">return</emphasis>&#32;<link linkend="df/d4b/structros_1_1message__traits_1_1DataType_3_01_1_1jaco__msgs_1_1SetFingersPositionActionResult___261d7fa0605a3d790ae7a5ae14788b18_1a953e8593af0cd31ec2e378f24b213a8d">value</link>();&#32;}
+179 };
+180 
+181 <emphasis class="keyword">template</emphasis>&lt;<emphasis class="keyword">class</emphasis>&#32;ContainerAllocator&gt;
+<link linkend="d7/d22/structros_1_1message__traits_1_1Definition_3_01_1_1jaco__msgs_1_1SetFingersPositionActionResult_d77f823cc2975df7a63f01b98938519f">182 </link><emphasis class="keyword">struct&#32;</emphasis>Definition&lt;&#32;::<link linkend="da/db7/structjaco__msgs_1_1SetFingersPositionActionResult__">jaco_msgs::SetFingersPositionActionResult_</link>&lt;ContainerAllocator&gt;&#32;&gt;
+183 {
+<link linkend="d7/d22/structros_1_1message__traits_1_1Definition_3_01_1_1jaco__msgs_1_1SetFingersPositionActionResult_d77f823cc2975df7a63f01b98938519f_1a66448123fcd55046650a46be8972c13f">184 </link>&#32;&#32;<emphasis class="keyword">static</emphasis>&#32;<emphasis class="keyword">const</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>*&#32;<link linkend="d7/d22/structros_1_1message__traits_1_1Definition_3_01_1_1jaco__msgs_1_1SetFingersPositionActionResult_d77f823cc2975df7a63f01b98938519f_1a66448123fcd55046650a46be8972c13f">value</link>()
+185 &#32;&#32;{
+186 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;<emphasis class="stringliteral">&quot;#&#32;======&#32;DO&#32;NOT&#32;MODIFY!&#32;AUTOGENERATED&#32;FROM&#32;AN&#32;ACTION&#32;DEFINITION&#32;======\n\</emphasis>
+187 <emphasis class="stringliteral">\n\</emphasis>
+188 <emphasis class="stringliteral">Header&#32;header\n\</emphasis>
+189 <emphasis class="stringliteral">actionlib_msgs/GoalStatus&#32;status\n\</emphasis>
+190 <emphasis class="stringliteral">SetFingersPositionResult&#32;result\n\</emphasis>
+191 <emphasis class="stringliteral">\n\</emphasis>
+192 <emphasis class="stringliteral">================================================================================\n\</emphasis>
+193 <emphasis class="stringliteral">MSG:&#32;std_msgs/Header\n\</emphasis>
+194 <emphasis class="stringliteral">#&#32;Standard&#32;metadata&#32;for&#32;higher-level&#32;stamped&#32;data&#32;types.\n\</emphasis>
+195 <emphasis class="stringliteral">#&#32;This&#32;is&#32;generally&#32;used&#32;to&#32;communicate&#32;timestamped&#32;data&#32;\n\</emphasis>
+196 <emphasis class="stringliteral">#&#32;in&#32;a&#32;particular&#32;coordinate&#32;frame.\n\</emphasis>
+197 <emphasis class="stringliteral">#&#32;\n\</emphasis>
+198 <emphasis class="stringliteral">#&#32;sequence&#32;ID:&#32;consecutively&#32;increasing&#32;ID&#32;\n\</emphasis>
+199 <emphasis class="stringliteral">uint32&#32;seq\n\</emphasis>
+200 <emphasis class="stringliteral">#Two-integer&#32;timestamp&#32;that&#32;is&#32;expressed&#32;as:\n\</emphasis>
+201 <emphasis class="stringliteral">#&#32;*&#32;stamp.secs:&#32;seconds&#32;(stamp_secs)&#32;since&#32;epoch\n\</emphasis>
+202 <emphasis class="stringliteral">#&#32;*&#32;stamp.nsecs:&#32;nanoseconds&#32;since&#32;stamp_secs\n\</emphasis>
+203 <emphasis class="stringliteral">#&#32;time-handling&#32;sugar&#32;is&#32;provided&#32;by&#32;the&#32;client&#32;library\n\</emphasis>
+204 <emphasis class="stringliteral">time&#32;stamp\n\</emphasis>
+205 <emphasis class="stringliteral">#Frame&#32;this&#32;data&#32;is&#32;associated&#32;with\n\</emphasis>
+206 <emphasis class="stringliteral">#&#32;0:&#32;no&#32;frame\n\</emphasis>
+207 <emphasis class="stringliteral">#&#32;1:&#32;global&#32;frame\n\</emphasis>
+208 <emphasis class="stringliteral">string&#32;frame_id\n\</emphasis>
+209 <emphasis class="stringliteral">\n\</emphasis>
+210 <emphasis class="stringliteral">================================================================================\n\</emphasis>
+211 <emphasis class="stringliteral">MSG:&#32;actionlib_msgs/GoalStatus\n\</emphasis>
+212 <emphasis class="stringliteral">GoalID&#32;goal_id\n\</emphasis>
+213 <emphasis class="stringliteral">uint8&#32;status\n\</emphasis>
+214 <emphasis class="stringliteral">uint8&#32;PENDING&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;=&#32;0&#32;&#32;&#32;#&#32;The&#32;goal&#32;has&#32;yet&#32;to&#32;be&#32;processed&#32;by&#32;the&#32;action&#32;server\n\</emphasis>
+215 <emphasis class="stringliteral">uint8&#32;ACTIVE&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;=&#32;1&#32;&#32;&#32;#&#32;The&#32;goal&#32;is&#32;currently&#32;being&#32;processed&#32;by&#32;the&#32;action&#32;server\n\</emphasis>
+216 <emphasis class="stringliteral">uint8&#32;PREEMPTED&#32;&#32;&#32;&#32;&#32;&#32;&#32;=&#32;2&#32;&#32;&#32;#&#32;The&#32;goal&#32;received&#32;a&#32;cancel&#32;request&#32;after&#32;it&#32;started&#32;executing\n\</emphasis>
+217 <emphasis class="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;#&#32;&#32;&#32;and&#32;has&#32;since&#32;completed&#32;its&#32;execution&#32;(Terminal&#32;State)\n\</emphasis>
+218 <emphasis class="stringliteral">uint8&#32;SUCCEEDED&#32;&#32;&#32;&#32;&#32;&#32;&#32;=&#32;3&#32;&#32;&#32;#&#32;The&#32;goal&#32;was&#32;achieved&#32;successfully&#32;by&#32;the&#32;action&#32;server&#32;(Terminal&#32;State)\n\</emphasis>
+219 <emphasis class="stringliteral">uint8&#32;ABORTED&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;=&#32;4&#32;&#32;&#32;#&#32;The&#32;goal&#32;was&#32;aborted&#32;during&#32;execution&#32;by&#32;the&#32;action&#32;server&#32;due\n\</emphasis>
+220 <emphasis class="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;#&#32;&#32;&#32;&#32;to&#32;some&#32;failure&#32;(Terminal&#32;State)\n\</emphasis>
+221 <emphasis class="stringliteral">uint8&#32;REJECTED&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;=&#32;5&#32;&#32;&#32;#&#32;The&#32;goal&#32;was&#32;rejected&#32;by&#32;the&#32;action&#32;server&#32;without&#32;being&#32;processed,\n\</emphasis>
+222 <emphasis class="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;#&#32;&#32;&#32;&#32;because&#32;the&#32;goal&#32;was&#32;unattainable&#32;or&#32;invalid&#32;(Terminal&#32;State)\n\</emphasis>
+223 <emphasis class="stringliteral">uint8&#32;PREEMPTING&#32;&#32;&#32;&#32;&#32;&#32;=&#32;6&#32;&#32;&#32;#&#32;The&#32;goal&#32;received&#32;a&#32;cancel&#32;request&#32;after&#32;it&#32;started&#32;executing\n\</emphasis>
+224 <emphasis class="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;#&#32;&#32;&#32;&#32;and&#32;has&#32;not&#32;yet&#32;completed&#32;execution\n\</emphasis>
+225 <emphasis class="stringliteral">uint8&#32;RECALLING&#32;&#32;&#32;&#32;&#32;&#32;&#32;=&#32;7&#32;&#32;&#32;#&#32;The&#32;goal&#32;received&#32;a&#32;cancel&#32;request&#32;before&#32;it&#32;started&#32;executing,\n\</emphasis>
+226 <emphasis class="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;#&#32;&#32;&#32;&#32;but&#32;the&#32;action&#32;server&#32;has&#32;not&#32;yet&#32;confirmed&#32;that&#32;the&#32;goal&#32;is&#32;canceled\n\</emphasis>
+227 <emphasis class="stringliteral">uint8&#32;RECALLED&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;=&#32;8&#32;&#32;&#32;#&#32;The&#32;goal&#32;received&#32;a&#32;cancel&#32;request&#32;before&#32;it&#32;started&#32;executing\n\</emphasis>
+228 <emphasis class="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;#&#32;&#32;&#32;&#32;and&#32;was&#32;successfully&#32;cancelled&#32;(Terminal&#32;State)\n\</emphasis>
+229 <emphasis class="stringliteral">uint8&#32;LOST&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;=&#32;9&#32;&#32;&#32;#&#32;An&#32;action&#32;client&#32;can&#32;determine&#32;that&#32;a&#32;goal&#32;is&#32;LOST.&#32;This&#32;should&#32;not&#32;be\n\</emphasis>
+230 <emphasis class="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;#&#32;&#32;&#32;&#32;sent&#32;over&#32;the&#32;wire&#32;by&#32;an&#32;action&#32;server\n\</emphasis>
+231 <emphasis class="stringliteral">\n\</emphasis>
+232 <emphasis class="stringliteral">#Allow&#32;for&#32;the&#32;user&#32;to&#32;associate&#32;a&#32;string&#32;with&#32;GoalStatus&#32;for&#32;debugging\n\</emphasis>
+233 <emphasis class="stringliteral">string&#32;text\n\</emphasis>
+234 <emphasis class="stringliteral">\n\</emphasis>
+235 <emphasis class="stringliteral">\n\</emphasis>
+236 <emphasis class="stringliteral">================================================================================\n\</emphasis>
+237 <emphasis class="stringliteral">MSG:&#32;actionlib_msgs/GoalID\n\</emphasis>
+238 <emphasis class="stringliteral">#&#32;The&#32;stamp&#32;should&#32;store&#32;the&#32;time&#32;at&#32;which&#32;this&#32;goal&#32;was&#32;requested.\n\</emphasis>
+239 <emphasis class="stringliteral">#&#32;It&#32;is&#32;used&#32;by&#32;an&#32;action&#32;server&#32;when&#32;it&#32;tries&#32;to&#32;preempt&#32;all\n\</emphasis>
+240 <emphasis class="stringliteral">#&#32;goals&#32;that&#32;were&#32;requested&#32;before&#32;a&#32;certain&#32;time\n\</emphasis>
+241 <emphasis class="stringliteral">time&#32;stamp\n\</emphasis>
+242 <emphasis class="stringliteral">\n\</emphasis>
+243 <emphasis class="stringliteral">#&#32;The&#32;id&#32;provides&#32;a&#32;way&#32;to&#32;associate&#32;feedback&#32;and\n\</emphasis>
+244 <emphasis class="stringliteral">#&#32;result&#32;message&#32;with&#32;specific&#32;goal&#32;requests.&#32;The&#32;id\n\</emphasis>
+245 <emphasis class="stringliteral">#&#32;specified&#32;must&#32;be&#32;unique.\n\</emphasis>
+246 <emphasis class="stringliteral">string&#32;id\n\</emphasis>
+247 <emphasis class="stringliteral">\n\</emphasis>
+248 <emphasis class="stringliteral">\n\</emphasis>
+249 <emphasis class="stringliteral">================================================================================\n\</emphasis>
+250 <emphasis class="stringliteral">MSG:&#32;jaco_msgs/SetFingersPositionResult\n\</emphasis>
+251 <emphasis class="stringliteral">#&#32;======&#32;DO&#32;NOT&#32;MODIFY!&#32;AUTOGENERATED&#32;FROM&#32;AN&#32;ACTION&#32;DEFINITION&#32;======\n\</emphasis>
+252 <emphasis class="stringliteral">#&#32;Result\n\</emphasis>
+253 <emphasis class="stringliteral">FingerPosition&#32;fingers\n\</emphasis>
+254 <emphasis class="stringliteral">\n\</emphasis>
+255 <emphasis class="stringliteral">================================================================================\n\</emphasis>
+256 <emphasis class="stringliteral">MSG:&#32;jaco_msgs/FingerPosition\n\</emphasis>
+257 <emphasis class="stringliteral">float32&#32;finger1\n\</emphasis>
+258 <emphasis class="stringliteral">float32&#32;finger2\n\</emphasis>
+259 <emphasis class="stringliteral">float32&#32;finger3\n\</emphasis>
+260 <emphasis class="stringliteral">&quot;</emphasis>;
+261 &#32;&#32;}
+262 
+<link linkend="d7/d22/structros_1_1message__traits_1_1Definition_3_01_1_1jaco__msgs_1_1SetFingersPositionActionResult_d77f823cc2975df7a63f01b98938519f_1a542d8984da47f6ff43bd9a20cc742213">263 </link>&#32;&#32;<emphasis class="keyword">static</emphasis>&#32;<emphasis class="keyword">const</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>*&#32;<link linkend="d7/d22/structros_1_1message__traits_1_1Definition_3_01_1_1jaco__msgs_1_1SetFingersPositionActionResult_d77f823cc2975df7a63f01b98938519f_1a542d8984da47f6ff43bd9a20cc742213">value</link>(const&#32;::jaco_msgs::SetFingersPositionActionResult_&lt;ContainerAllocator&gt;&amp;)&#32;{&#32;<emphasis class="keywordflow">return</emphasis>&#32;<link linkend="d7/d22/structros_1_1message__traits_1_1Definition_3_01_1_1jaco__msgs_1_1SetFingersPositionActionResult_d77f823cc2975df7a63f01b98938519f_1a542d8984da47f6ff43bd9a20cc742213">value</link>();&#32;}
+264 };
+265 
+266 }&#32;<emphasis class="comment">//&#32;namespace&#32;message_traits</emphasis>
+267 }&#32;<emphasis class="comment">//&#32;namespace&#32;ros</emphasis>
+268 
+269 <emphasis class="keyword">namespace&#32;</emphasis><link linkend="db/d2f/namespaceros">ros</link>
+270 {
+271 <emphasis class="keyword">namespace&#32;</emphasis>serialization
+272 {
+273 
+<link linkend="d2/dfd/structros_1_1serialization_1_1Serializer_3_01_1_1jaco__msgs_1_1SetFingersPositionActionResult___838e73897c4a86106fa5fb9dc69a0e18">274 </link>&#32;&#32;<emphasis class="keyword">template</emphasis>&lt;<emphasis class="keyword">class</emphasis>&#32;ContainerAllocator&gt;&#32;<emphasis class="keyword">struct&#32;</emphasis>Serializer&lt;&#32;::<link linkend="da/db7/structjaco__msgs_1_1SetFingersPositionActionResult__">jaco_msgs::SetFingersPositionActionResult_</link>&lt;ContainerAllocator&gt;&#32;&gt;
+275 &#32;&#32;{
+<link linkend="d2/dfd/structros_1_1serialization_1_1Serializer_3_01_1_1jaco__msgs_1_1SetFingersPositionActionResult___838e73897c4a86106fa5fb9dc69a0e18_1ada21712728ca9802ec5889ef6b7f9f0e">276 </link>&#32;&#32;&#32;&#32;<emphasis class="keyword">template</emphasis>&lt;<emphasis class="keyword">typename</emphasis>&#32;Stream,&#32;<emphasis class="keyword">typename</emphasis>&#32;T&gt;&#32;<emphasis class="keyword">inline</emphasis>&#32;<emphasis class="keyword">static</emphasis>&#32;<emphasis class="keywordtype">void</emphasis>&#32;<link linkend="d2/dfd/structros_1_1serialization_1_1Serializer_3_01_1_1jaco__msgs_1_1SetFingersPositionActionResult___838e73897c4a86106fa5fb9dc69a0e18_1ada21712728ca9802ec5889ef6b7f9f0e">allInOne</link>(Stream&amp;&#32;stream,&#32;T&#32;m)
+277 &#32;&#32;&#32;&#32;{
+278 &#32;&#32;&#32;&#32;&#32;&#32;stream.next(m.header);
+279 &#32;&#32;&#32;&#32;&#32;&#32;stream.next(m.status);
+280 &#32;&#32;&#32;&#32;&#32;&#32;stream.next(m.result);
+281 &#32;&#32;&#32;&#32;}
+282 
+<link linkend="d2/dfd/structros_1_1serialization_1_1Serializer_3_01_1_1jaco__msgs_1_1SetFingersPositionActionResult___838e73897c4a86106fa5fb9dc69a0e18_1a25848e48e74236ba39112d2e7aba4603">283 </link>&#32;&#32;&#32;&#32;<link linkend="d2/dfd/structros_1_1serialization_1_1Serializer_3_01_1_1jaco__msgs_1_1SetFingersPositionActionResult___838e73897c4a86106fa5fb9dc69a0e18_1a25848e48e74236ba39112d2e7aba4603">ROS_DECLARE_ALLINONE_SERIALIZER</link>;
+284 &#32;&#32;};&#32;<emphasis class="comment">//&#32;struct&#32;SetFingersPositionActionResult_</emphasis>
+285 
+286 }&#32;<emphasis class="comment">//&#32;namespace&#32;serialization</emphasis>
+287 }&#32;<emphasis class="comment">//&#32;namespace&#32;ros</emphasis>
+288 
+289 <emphasis class="keyword">namespace&#32;</emphasis><link linkend="db/d2f/namespaceros">ros</link>
+290 {
+291 <emphasis class="keyword">namespace&#32;</emphasis>message_operations
+292 {
+293 
+294 <emphasis class="keyword">template</emphasis>&lt;<emphasis class="keyword">class</emphasis>&#32;ContainerAllocator&gt;
+<link linkend="d8/df3/structros_1_1message__operations_1_1Printer_3_01_1_1jaco__msgs_1_1SetFingersPositionActionResult044e352a34a7e800d3ed4a693b89337f">295 </link><emphasis class="keyword">struct&#32;</emphasis>Printer&lt;&#32;::<link linkend="da/db7/structjaco__msgs_1_1SetFingersPositionActionResult__">jaco_msgs::SetFingersPositionActionResult_</link>&lt;ContainerAllocator&gt;&#32;&gt;
+296 {
+<link linkend="d8/df3/structros_1_1message__operations_1_1Printer_3_01_1_1jaco__msgs_1_1SetFingersPositionActionResult044e352a34a7e800d3ed4a693b89337f_1a6c16a0d639132e8751510460c02e8b4e">297 </link>&#32;&#32;<emphasis class="keyword">template</emphasis>&lt;<emphasis class="keyword">typename</emphasis>&#32;Stream&gt;&#32;<emphasis class="keyword">static</emphasis>&#32;<emphasis class="keywordtype">void</emphasis>&#32;<link linkend="d8/df3/structros_1_1message__operations_1_1Printer_3_01_1_1jaco__msgs_1_1SetFingersPositionActionResult044e352a34a7e800d3ed4a693b89337f_1a6c16a0d639132e8751510460c02e8b4e">stream</link>(Stream&amp;&#32;s,&#32;<emphasis class="keyword">const</emphasis>&#32;std::string&amp;&#32;indent,&#32;const&#32;::jaco_msgs::SetFingersPositionActionResult_&lt;ContainerAllocator&gt;&amp;&#32;v)
+298 &#32;&#32;{
+299 &#32;&#32;&#32;&#32;s&#32;&lt;&lt;&#32;indent&#32;&lt;&lt;&#32;<emphasis class="stringliteral">&quot;header:&#32;&quot;</emphasis>;
+300 &#32;&#32;&#32;&#32;s&#32;&lt;&lt;&#32;std::endl;
+301 &#32;&#32;&#32;&#32;Printer&lt;&#32;::std_msgs::Header_&lt;ContainerAllocator&gt;&#32;&gt;::stream(s,&#32;indent&#32;+&#32;<emphasis class="stringliteral">&quot;&#32;&#32;&quot;</emphasis>,&#32;v.header);
+302 &#32;&#32;&#32;&#32;s&#32;&lt;&lt;&#32;indent&#32;&lt;&lt;&#32;<emphasis class="stringliteral">&quot;status:&#32;&quot;</emphasis>;
+303 &#32;&#32;&#32;&#32;s&#32;&lt;&lt;&#32;std::endl;
+304 &#32;&#32;&#32;&#32;Printer&lt;&#32;::actionlib_msgs::GoalStatus_&lt;ContainerAllocator&gt;&#32;&gt;::stream(s,&#32;indent&#32;+&#32;<emphasis class="stringliteral">&quot;&#32;&#32;&quot;</emphasis>,&#32;v.status);
+305 &#32;&#32;&#32;&#32;s&#32;&lt;&lt;&#32;indent&#32;&lt;&lt;&#32;<emphasis class="stringliteral">&quot;result:&#32;&quot;</emphasis>;
+306 &#32;&#32;&#32;&#32;s&#32;&lt;&lt;&#32;std::endl;
+307 &#32;&#32;&#32;&#32;Printer&lt;&#32;::jaco_msgs::SetFingersPositionResult_&lt;ContainerAllocator&gt;&#32;&gt;::stream(s,&#32;indent&#32;+&#32;<emphasis class="stringliteral">&quot;&#32;&#32;&quot;</emphasis>,&#32;v.result);
+308 &#32;&#32;}
+309 };
+310 
+311 }&#32;<emphasis class="comment">//&#32;namespace&#32;message_operations</emphasis>
+312 }&#32;<emphasis class="comment">//&#32;namespace&#32;ros</emphasis>
+313 
+314 <emphasis class="preprocessor">#endif&#32;//&#32;JACO_MSGS_MESSAGE_SETFINGERSPOSITIONACTIONRESULT_H</emphasis>
+    </computeroutput></literallayout>
+</section>

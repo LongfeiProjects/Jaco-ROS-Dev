@@ -1,0 +1,112 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="df/dd2/structjaco__msgs_1_1SetForceControlParamsResponse__">
+<title>jaco_msgs::SetForceControlParamsResponse_ struct Reference</title>
+<para>
+    <programlisting>#include <link linkend="d4/df9/SetForceControlParamsResponse_8h">&quot;SetForceControlParamsResponse.h&quot;</link></programlisting>
+</para>
+<para>Inheritance diagram for jaco_msgs::SetForceControlParamsResponse_</para>
+<para>
+    <figure>
+        <title>Inheritance graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../dd/d6e/structjaco__msgs_1_1SetForceControlParamsResponse____inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Collaboration diagram for jaco_msgs::SetForceControlParamsResponse_</para>
+<para>
+    <figure>
+        <title>Collaboration graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../d1/d7e/structjaco__msgs_1_1SetForceControlParamsResponse____coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+    <templateparamlist>
+      <param>
+        <type>class</type>
+        <declname>ContainerAllocator</declname>
+        <defname>ContainerAllocator</defname>
+      </param>
+    </templateparamlist>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef boost::shared_ptr&lt; ::<link linkend="df/dd2/structjaco__msgs_1_1SetForceControlParamsResponse__">jaco_msgs::SetForceControlParamsResponse_</link>&lt; ContainerAllocator &gt; const  &gt;  <link linkend="df/dd2/structjaco__msgs_1_1SetForceControlParamsResponse___1a1be8572b7aa81f0d904c12eb1e203a74">ConstPtr</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef boost::shared_ptr&lt; ::<link linkend="df/dd2/structjaco__msgs_1_1SetForceControlParamsResponse__">jaco_msgs::SetForceControlParamsResponse_</link>&lt; ContainerAllocator &gt; &gt;  <link linkend="df/dd2/structjaco__msgs_1_1SetForceControlParamsResponse___1a80a1f49c09c1d0ffccf753dbade78922">Ptr</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef <link linkend="df/dd2/structjaco__msgs_1_1SetForceControlParamsResponse__">SetForceControlParamsResponse_</link>&lt; ContainerAllocator &gt;  <link linkend="df/dd2/structjaco__msgs_1_1SetForceControlParamsResponse___1a4925175e5a6228261ad680833a4f14a4">Type</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Public Attributes</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>boost::shared_ptr&lt; std::map&lt; std::string, std::string &gt; &gt; __connection_header</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="df/dd2/structjaco__msgs_1_1SetForceControlParamsResponse___1af5c22ddf148e525b6c34b08a86cb53b4">SetForceControlParamsResponse_</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="df/dd2/structjaco__msgs_1_1SetForceControlParamsResponse___1ac6265756ad349dff863e238bcac5c168">SetForceControlParamsResponse_</link> (
+const ContainerAllocator &amp; _alloc)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+            <section xml:id="df/dd2/structjaco__msgs_1_1SetForceControlParamsResponse___1a1be8572b7aa81f0d904c12eb1e203a74">
+                <title>typedef boost::shared_ptr&lt; ::jaco_msgs::SetForceControlParamsResponse_&lt;ContainerAllocator&gt; const&gt; jaco_msgs::SetForceControlParamsResponse_&lt; ContainerAllocator &gt;::ConstPtr</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="df/dd2/structjaco__msgs_1_1SetForceControlParamsResponse___1a80a1f49c09c1d0ffccf753dbade78922">
+                <title>typedef boost::shared_ptr&lt; ::jaco_msgs::SetForceControlParamsResponse_&lt;ContainerAllocator&gt; &gt; jaco_msgs::SetForceControlParamsResponse_&lt; ContainerAllocator &gt;::Ptr</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="df/dd2/structjaco__msgs_1_1SetForceControlParamsResponse___1a4925175e5a6228261ad680833a4f14a4">
+                <title>typedef SetForceControlParamsResponse_&lt;ContainerAllocator&gt; jaco_msgs::SetForceControlParamsResponse_&lt; ContainerAllocator &gt;::Type</title> <emphasis></emphasis>
+                
+            </section>
+        <section>
+            <title>Member Data Documentation</title>
+        </section>
+            <section xml:id="df/dd2/structjaco__msgs_1_1SetForceControlParamsResponse___1af5c22ddf148e525b6c34b08a86cb53b4">
+                <title>jaco_msgs::SetForceControlParamsResponse_&lt; ContainerAllocator &gt;::SetForceControlParamsResponse_ ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="df/dd2/structjaco__msgs_1_1SetForceControlParamsResponse___1ac6265756ad349dff863e238bcac5c168">
+                <title>jaco_msgs::SetForceControlParamsResponse_&lt; ContainerAllocator &gt;::SetForceControlParamsResponse_ (const ContainerAllocator &amp;_alloc)</title> <emphasis></emphasis>
+                
+            </section>
+</section>

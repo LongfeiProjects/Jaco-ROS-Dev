@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="d0/d42/structros_1_1message__traits_1_1IsFixedSize_3_01_1_1jaco__msgs_1_1HomeArmResponse___3_01ContainerAllocator_01_4_01const_01_01_4">
+<title>ros::message_traits::IsFixedSize&lt; ::jaco_msgs::HomeArmResponse_&lt; ContainerAllocator &gt; const  &gt; struct Reference</title>
+<para>
+    <programlisting>#include <link linkend="db/dda/HomeArmResponse_8h">&quot;HomeArmResponse.h&quot;</link></programlisting>
+</para>
+<para>Inheritance diagram for ros::message_traits::IsFixedSize&lt; ::jaco_msgs::HomeArmResponse_&lt; ContainerAllocator &gt; const  &gt;</para>
+<para>
+    <figure>
+        <title>Inheritance graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../d9/d9c/structros_1_1message__traits_1_1IsFixedSize_3_01_1_1jaco__msgs_1_1HomeArmResponse___3_01Containe8bab1e789f1bb44de71461243c00724f.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Collaboration diagram for ros::message_traits::IsFixedSize&lt; ::jaco_msgs::HomeArmResponse_&lt; ContainerAllocator &gt; const  &gt;</para>
+<para>
+    <figure>
+        <title>Collaboration graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../d3/dc0/structros_1_1message__traits_1_1IsFixedSize_3_01_1_1jaco__msgs_1_1HomeArmResponse___3_01Containe23d4a9c3162bd5cbb859755e44676b6b.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+    <templateparamlist>
+      <param>
+        <type>class ContainerAllocator</type>
+      </param>
+    </templateparamlist>
+</section>

@@ -1,0 +1,173 @@
+.TH "jaco::JacoAngles" 3 "Thu Mar 3 2016" "Version 1.0.1" "Kinova-ROS" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+jaco::JacoAngles \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include 'jaco_types\&.h'\fP
+.PP
+Inherits \fBAngularInfo\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBjaco_msgs::JointAngles\fP \fBconstructAnglesMsg\fP ()"
+.br
+.ti -1c
+.RI "void \fBInitStruct\fP ()"
+.br
+.ti -1c
+.RI "bool \fBisCloseToOther\fP (const \fBJacoAngles\fP &, float tolerance) const "
+.br
+.ti -1c
+.RI "\fBJacoAngles\fP ()"
+.br
+.ti -1c
+.RI "\fBJacoAngles\fP (const \fBjaco_msgs::JointAngles\fP &angles)"
+.br
+.ti -1c
+.RI "\fBJacoAngles\fP (const \fBAngularInfo\fP &angles)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "float \fBActuator1\fP"
+.br
+.RI "\fIThis is the value related to the first actuator\&. Unit depends on the context it's been used\&. \fP"
+.ti -1c
+.RI "float \fBActuator2\fP"
+.br
+.RI "\fIThis is the value related to the second actuator\&. Unit depends on the context it's been used\&. \fP"
+.ti -1c
+.RI "float \fBActuator3\fP"
+.br
+.RI "\fIThis is the value related to the third actuator\&. Unit depends on the context it's been used\&. \fP"
+.ti -1c
+.RI "float \fBActuator4\fP"
+.br
+.RI "\fIThis is the value related to the actuator #4\&. Unit depends on the context it's been used\&. \fP"
+.ti -1c
+.RI "float \fBActuator5\fP"
+.br
+.RI "\fIThis is the value related to the actuator #5\&. Unit depends on the context it's been used\&. \fP"
+.ti -1c
+.RI "float \fBActuator6\fP"
+.br
+.RI "\fIThis is the value related to the actuator #6\&. Unit depends on the context it's been used\&. \fP"
+.in -1c
+.SH "Detailed Description"
+.PP 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "jaco::JacoAngles::JacoAngles ()\fC [inline]\fP"
+
+.PP
+.nf
+93 {}
+.fi
+.SS "jaco::JacoAngles::JacoAngles (const \fBjaco_msgs::JointAngles\fP & angles)\fC [explicit]\fP"
+
+.PP
+.nf
+196 {
+197     Actuator1 = normalizePositiveInDegrees(180\&.0 - (angles\&.joint1 * (180\&.0 / M_PI)));
+198     Actuator2 = normalizePositiveInDegrees((angles\&.joint2 * (180\&.0 / M_PI)) + 270\&.0);
+199     Actuator3 = normalizePositiveInDegrees(90\&.0 - (angles\&.joint3 * (180\&.0 / M_PI)));
+200     Actuator4 = normalizePositiveInDegrees(180\&.0 - (angles\&.joint4 * (180\&.0 / M_PI)));
+201     Actuator5 = normalizePositiveInDegrees(180\&.0 - (angles\&.joint5 * (180\&.0 / M_PI)));
+202     Actuator6 = normalizePositiveInDegrees(260\&.0 - (angles\&.joint6 * (180\&.0 / M_PI)));
+203 }
+.fi
+.SS "jaco::JacoAngles::JacoAngles (const \fBAngularInfo\fP & angles)\fC [explicit]\fP"
+
+.PP
+.nf
+207 {
+208     Actuator1 = normalizePositiveInDegrees(angles\&.Actuator1);
+209     Actuator2 = normalizePositiveInDegrees(angles\&.Actuator2);
+210     Actuator3 = normalizePositiveInDegrees(angles\&.Actuator3);
+211     Actuator4 = normalizePositiveInDegrees(angles\&.Actuator4);
+212     Actuator5 = normalizePositiveInDegrees(angles\&.Actuator5);
+213     Actuator6 = normalizePositiveInDegrees(angles\&.Actuator6);
+214 }
+.fi
+.SH "Member Function Documentation"
+.PP 
+.SS "\fBjaco_msgs::JointAngles\fP jaco::JacoAngles::constructAnglesMsg ()"
+
+.PP
+.nf
+218 {
+219     jaco_msgs::JointAngles angles;
+220     angles\&.joint1 = (180\&.0 - Actuator1) / (180\&.0 / M_PI);
+221     angles\&.joint2 = (Actuator2 - 270\&.0) / (180\&.0 / M_PI);
+222     angles\&.joint3 = (90\&.0 - Actuator3) / (180\&.0 / M_PI);
+223     angles\&.joint4 = (180\&.0 - Actuator4) / (180\&.0 / M_PI);
+224     angles\&.joint5 = (180\&.0 - Actuator5) / (180\&.0 / M_PI);
+225     angles\&.joint6 = (260\&.0 - Actuator6) / (180\&.0 / M_PI);
+226     return angles;
+227 }
+.fi
+.SS "void AngularInfo::InitStruct ()\fC [inline]\fP, \fC [inherited]\fP"
+This method will initialises all the values to 0 
+.PP
+.nf
+336     {
+337         Actuator1 = 0\&.0f;
+338         Actuator2 = 0\&.0f;
+339         Actuator3 = 0\&.0f;
+340         Actuator4 = 0\&.0f;
+341         Actuator5 = 0\&.0f;
+342         Actuator6 = 0\&.0f;
+343     }
+.fi
+.SS "bool jaco::JacoAngles::isCloseToOther (const \fBJacoAngles\fP & other, float tolerance) const"
+
+.PP
+.nf
+231 {
+232     bool status = true;
+233     status = status && areValuesClose(Actuator1, other\&.Actuator1, tolerance);
+234     status = status && areValuesClose(Actuator2, other\&.Actuator2, tolerance);
+235     status = status && areValuesClose(Actuator3, other\&.Actuator3, tolerance);
+236     status = status && areValuesClose(Actuator4, other\&.Actuator4, tolerance);
+237     status = status && areValuesClose(Actuator5, other\&.Actuator5, tolerance);
+238     status = status && areValuesClose(Actuator6, other\&.Actuator6, tolerance);
+239     return status;
+240 }
+.fi
+.SH "Member Data Documentation"
+.PP 
+.SS "float AngularInfo::Actuator1\fC [inherited]\fP"
+
+.PP
+This is the value related to the first actuator\&. Unit depends on the context it's been used\&. As an example if the current control mode is angular position the unit will be degree but if the control mode is angular velocity then the unit will be degree per second\&. 
+.SS "float AngularInfo::Actuator2\fC [inherited]\fP"
+
+.PP
+This is the value related to the second actuator\&. Unit depends on the context it's been used\&. As an example if the current control mode is angular position the unit will be degree but if the control mode is angular velocity then the unit will be degree per second\&. 
+.SS "float AngularInfo::Actuator3\fC [inherited]\fP"
+
+.PP
+This is the value related to the third actuator\&. Unit depends on the context it's been used\&. As an example if the current control mode is angular position the unit will be degree but if the control mode is angular velocity then the unit will be degree per second\&. 
+.SS "float AngularInfo::Actuator4\fC [inherited]\fP"
+
+.PP
+This is the value related to the actuator #4\&. Unit depends on the context it's been used\&. As an example if the current control mode is angular position the unit will be degree but if the control mode is angular velocity then the unit will be degree per second\&. 
+.SS "float AngularInfo::Actuator5\fC [inherited]\fP"
+
+.PP
+This is the value related to the actuator #5\&. Unit depends on the context it's been used\&. As an example if the current control mode is angular position the unit will be degree but if the control mode is angular velocity then the unit will be degree per second\&. 
+.SS "float AngularInfo::Actuator6\fC [inherited]\fP"
+
+.PP
+This is the value related to the actuator #6\&. Unit depends on the context it's been used\&. As an example if the current control mode is angular position the unit will be degree but if the control mode is angular velocity then the unit will be degree per second\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Kinova-ROS from the source code\&.

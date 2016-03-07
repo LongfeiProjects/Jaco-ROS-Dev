@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="d7/d0c/namespaceadmittance__ctrl">
+<title>admittance_ctrl</title>
+        <section>
+            <title> Classes </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="dd/d36/classadmittance__ctrl_1_1AdmittanceCtrl">admittance_ctrl::AdmittanceCtrl</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Variables</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="d7/d0c/namespaceadmittance__ctrl_1afea3593bd3ba80364f80f609075607fb">node</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+</section>

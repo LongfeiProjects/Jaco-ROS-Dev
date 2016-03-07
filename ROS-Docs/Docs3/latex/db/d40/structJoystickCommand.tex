@@ -1,0 +1,129 @@
+\hypertarget{structJoystickCommand}{}\section{Joystick\+Command Struct Reference}
+\label{structJoystickCommand}\index{Joystick\+Command@{Joystick\+Command}}
+
+
+This is a virtual representation of a 6-\/axis joystick.  
+
+
+
+
+{\ttfamily \#include \char`\"{}Kinova\+Types.\+h\char`\"{}}
+
+
+
+Collaboration diagram for Joystick\+Command\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=211pt]{d4/df2/structJoystickCommand__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{structJoystickCommand_ad3d41f607c6ea6916e061a8edae5a0e4}{Init\+Struct} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+short \hyperlink{structJoystickCommand_abe14f0b7b117048aa1c7f9626a669035}{Button\+Value} \mbox{[}\hyperlink{KinovaTypes_8h_a3792c81f5808ad4f30000689ee0f0d07}{J\+O\+Y\+S\+T\+I\+C\+K\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+C\+O\+U\+NT}\mbox{]}
+\begin{DoxyCompactList}\small\item\em This array contains the state of all the buttons. (1 = P\+R\+E\+S\+S\+ED, 0 = R\+E\+L\+E\+A\+S\+ED) \end{DoxyCompactList}\item 
+float \hyperlink{structJoystickCommand_ac1ac2e83b68ea20eba3e92935b966ba6}{Incline\+Forward\+Backward}
+\begin{DoxyCompactList}\small\item\em That holds the behaviour of the stick when it is inclined forward and backward. (value between -\/1 and 1 inclusively) 2 functionalities can be mapped with this value, there is an event when the value is negative and there is one when it is positive. \end{DoxyCompactList}\item 
+float \hyperlink{structJoystickCommand_a357b7ffd95720084658487aee12662c8}{Incline\+Left\+Right}
+\begin{DoxyCompactList}\small\item\em That holds the behaviour of the stick when it is inclined from left to right. (value between -\/1 and 1 inclusively) 2 functionalities can be mapped with this value, there is an event when the value is negative and there is one when it is positive. \end{DoxyCompactList}\item 
+float \hyperlink{structJoystickCommand_a9ca8ffe74ba1717de22528f71b0e5592}{Move\+Forward\+Backward}
+\begin{DoxyCompactList}\small\item\em That holds the behaviour of the stick when it is moved forward and backward. (value between -\/1 and 1 inclusively) 2 functionalities can be mapped with this value, there is an event when the value is negative and there is one when it is positive. \end{DoxyCompactList}\item 
+float \hyperlink{structJoystickCommand_a6ca311d7940ce3c7ea6e9a3719388181}{Move\+Left\+Right}
+\begin{DoxyCompactList}\small\item\em That holds the behaviour of the stick when it is moved from left to right. (value between -\/1 and 1 inclusively) 2 functionalities can be mapped with this value, there is an event when the value is negative and there is one when it is positive. \end{DoxyCompactList}\item 
+float \hyperlink{structJoystickCommand_af530128a7a89e383f88a4c2b798a66b4}{Push\+Pull}
+\begin{DoxyCompactList}\small\item\em That holds the behaviour of the stick when it is pushed and pulled. (value between -\/1 and 1 inclusively) 2 functionalities can be mapped with this value, there is an event when the value is negative and there is one when it is positive. \end{DoxyCompactList}\item 
+float \hyperlink{structJoystickCommand_a02fece0bcf6cfc2135f294a3dbe9db4e}{Rotate}
+\begin{DoxyCompactList}\small\item\em That holds the behaviour of the stick when it is rotated clockwork and counter clockwork. (value between -\/1 and 1 inclusively) 2 functionalities can be mapped with this value, there is an event when the value is negative and there is one when it is positive. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This is a virtual representation of a 6-\/axis joystick. 
+
+\subsection{Member Function Documentation}
+\index{Joystick\+Command@{Joystick\+Command}!Init\+Struct@{Init\+Struct}}
+\index{Init\+Struct@{Init\+Struct}!Joystick\+Command@{Joystick\+Command}}
+\subsubsection[{\texorpdfstring{Init\+Struct()}{InitStruct()}}]{\setlength{\rightskip}{0pt plus 5cm}void Joystick\+Command\+::\+Init\+Struct (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{structJoystickCommand_ad3d41f607c6ea6916e061a8edae5a0e4}{}\label{structJoystickCommand_ad3d41f607c6ea6916e061a8edae5a0e4}
+
+\begin{DoxyCode}
+782     \{
+783         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0; i < \hyperlink{KinovaTypes_8h_a3792c81f5808ad4f30000689ee0f0d07}{JOYSTICK\_BUTTON\_COUNT}; i++)
+784         \{
+785             \hyperlink{structJoystickCommand_abe14f0b7b117048aa1c7f9626a669035}{ButtonValue}[i] = 0;
+786         \}
+787 
+788         \hyperlink{structJoystickCommand_a357b7ffd95720084658487aee12662c8}{InclineLeftRight} = 0.0f;
+789         \hyperlink{structJoystickCommand_ac1ac2e83b68ea20eba3e92935b966ba6}{InclineForwardBackward} = 0.0f;
+790         \hyperlink{structJoystickCommand_a02fece0bcf6cfc2135f294a3dbe9db4e}{Rotate} = 0.0f;
+791         \hyperlink{structJoystickCommand_a6ca311d7940ce3c7ea6e9a3719388181}{MoveLeftRight} = 0.0f;
+792         \hyperlink{structJoystickCommand_a9ca8ffe74ba1717de22528f71b0e5592}{MoveForwardBackward} = 0.0f;
+793         \hyperlink{structJoystickCommand_af530128a7a89e383f88a4c2b798a66b4}{PushPull} = 0.0f;
+794     \}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\index{Joystick\+Command@{Joystick\+Command}!Button\+Value@{Button\+Value}}
+\index{Button\+Value@{Button\+Value}!Joystick\+Command@{Joystick\+Command}}
+\subsubsection[{\texorpdfstring{Button\+Value}{ButtonValue}}]{\setlength{\rightskip}{0pt plus 5cm}short Joystick\+Command\+::\+Button\+Value\mbox{[}{\bf J\+O\+Y\+S\+T\+I\+C\+K\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+C\+O\+U\+NT}\mbox{]}}\hypertarget{structJoystickCommand_abe14f0b7b117048aa1c7f9626a669035}{}\label{structJoystickCommand_abe14f0b7b117048aa1c7f9626a669035}
+
+
+This array contains the state of all the buttons. (1 = P\+R\+E\+S\+S\+ED, 0 = R\+E\+L\+E\+A\+S\+ED) 
+
+\index{Joystick\+Command@{Joystick\+Command}!Incline\+Forward\+Backward@{Incline\+Forward\+Backward}}
+\index{Incline\+Forward\+Backward@{Incline\+Forward\+Backward}!Joystick\+Command@{Joystick\+Command}}
+\subsubsection[{\texorpdfstring{Incline\+Forward\+Backward}{InclineForwardBackward}}]{\setlength{\rightskip}{0pt plus 5cm}float Joystick\+Command\+::\+Incline\+Forward\+Backward}\hypertarget{structJoystickCommand_ac1ac2e83b68ea20eba3e92935b966ba6}{}\label{structJoystickCommand_ac1ac2e83b68ea20eba3e92935b966ba6}
+
+
+That holds the behaviour of the stick when it is inclined forward and backward. (value between -\/1 and 1 inclusively) 2 functionalities can be mapped with this value, there is an event when the value is negative and there is one when it is positive. 
+
+\index{Joystick\+Command@{Joystick\+Command}!Incline\+Left\+Right@{Incline\+Left\+Right}}
+\index{Incline\+Left\+Right@{Incline\+Left\+Right}!Joystick\+Command@{Joystick\+Command}}
+\subsubsection[{\texorpdfstring{Incline\+Left\+Right}{InclineLeftRight}}]{\setlength{\rightskip}{0pt plus 5cm}float Joystick\+Command\+::\+Incline\+Left\+Right}\hypertarget{structJoystickCommand_a357b7ffd95720084658487aee12662c8}{}\label{structJoystickCommand_a357b7ffd95720084658487aee12662c8}
+
+
+That holds the behaviour of the stick when it is inclined from left to right. (value between -\/1 and 1 inclusively) 2 functionalities can be mapped with this value, there is an event when the value is negative and there is one when it is positive. 
+
+\index{Joystick\+Command@{Joystick\+Command}!Move\+Forward\+Backward@{Move\+Forward\+Backward}}
+\index{Move\+Forward\+Backward@{Move\+Forward\+Backward}!Joystick\+Command@{Joystick\+Command}}
+\subsubsection[{\texorpdfstring{Move\+Forward\+Backward}{MoveForwardBackward}}]{\setlength{\rightskip}{0pt plus 5cm}float Joystick\+Command\+::\+Move\+Forward\+Backward}\hypertarget{structJoystickCommand_a9ca8ffe74ba1717de22528f71b0e5592}{}\label{structJoystickCommand_a9ca8ffe74ba1717de22528f71b0e5592}
+
+
+That holds the behaviour of the stick when it is moved forward and backward. (value between -\/1 and 1 inclusively) 2 functionalities can be mapped with this value, there is an event when the value is negative and there is one when it is positive. 
+
+\index{Joystick\+Command@{Joystick\+Command}!Move\+Left\+Right@{Move\+Left\+Right}}
+\index{Move\+Left\+Right@{Move\+Left\+Right}!Joystick\+Command@{Joystick\+Command}}
+\subsubsection[{\texorpdfstring{Move\+Left\+Right}{MoveLeftRight}}]{\setlength{\rightskip}{0pt plus 5cm}float Joystick\+Command\+::\+Move\+Left\+Right}\hypertarget{structJoystickCommand_a6ca311d7940ce3c7ea6e9a3719388181}{}\label{structJoystickCommand_a6ca311d7940ce3c7ea6e9a3719388181}
+
+
+That holds the behaviour of the stick when it is moved from left to right. (value between -\/1 and 1 inclusively) 2 functionalities can be mapped with this value, there is an event when the value is negative and there is one when it is positive. 
+
+\index{Joystick\+Command@{Joystick\+Command}!Push\+Pull@{Push\+Pull}}
+\index{Push\+Pull@{Push\+Pull}!Joystick\+Command@{Joystick\+Command}}
+\subsubsection[{\texorpdfstring{Push\+Pull}{PushPull}}]{\setlength{\rightskip}{0pt plus 5cm}float Joystick\+Command\+::\+Push\+Pull}\hypertarget{structJoystickCommand_af530128a7a89e383f88a4c2b798a66b4}{}\label{structJoystickCommand_af530128a7a89e383f88a4c2b798a66b4}
+
+
+That holds the behaviour of the stick when it is pushed and pulled. (value between -\/1 and 1 inclusively) 2 functionalities can be mapped with this value, there is an event when the value is negative and there is one when it is positive. 
+
+\index{Joystick\+Command@{Joystick\+Command}!Rotate@{Rotate}}
+\index{Rotate@{Rotate}!Joystick\+Command@{Joystick\+Command}}
+\subsubsection[{\texorpdfstring{Rotate}{Rotate}}]{\setlength{\rightskip}{0pt plus 5cm}float Joystick\+Command\+::\+Rotate}\hypertarget{structJoystickCommand_a02fece0bcf6cfc2135f294a3dbe9db4e}{}\label{structJoystickCommand_a02fece0bcf6cfc2135f294a3dbe9db4e}
+
+
+That holds the behaviour of the stick when it is rotated clockwork and counter clockwork. (value between -\/1 and 1 inclusively) 2 functionalities can be mapped with this value, there is an event when the value is negative and there is one when it is positive. 
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Longfei/\+Desktop/catkin\+\_\+\+Kinova\+R\+O\+S/src/jaco-\/ros/jaco\+\_\+driver/include/kinova/\hyperlink{KinovaTypes_8h}{Kinova\+Types.\+h}\end{DoxyCompactItemize}

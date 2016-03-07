@@ -1,0 +1,124 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="da/d01/jaco__arm__kinematics_8h">
+    <title>jaco_arm_kinematics.h File Reference</title>
+    <programlisting>#include &lt;math.h&gt;</programlisting>
+    <programlisting>#include &lt;ros/ros.h&gt;</programlisting>
+    <programlisting>#include &lt;tf/tf.h&gt;</programlisting>
+    <programlisting>#include &lt;tf/transform_broadcaster.h&gt;</programlisting>
+    <programlisting>#include &lt;string&gt;</programlisting>
+<para>Include dependency diagram for jaco_arm_kinematics.h</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../dc/d80/jaco__arm__kinematics_8h__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Included by dependency diagram for jaco_arm_kinematics.h</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../db/da8/jaco__arm__kinematics_8h__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+        <section>
+            <title> Classes </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d8/da9/classjaco_1_1JacoKinematics">jaco::JacoKinematics</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <simplesect>
+            <title> Namespaces </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d4/d3c/namespacejaco">jaco</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+    <simplesect>
+        <title>Detailed Description</title>
+    <para>Definition in file D:/Longfei/Desktop/catkin_KinovaROS/src/jaco-ros/jaco_driver/include/jaco_driver/jaco_arm_kinematics.h</para>
+    </simplesect>
+    <literallayout><computeroutput>
+1 <emphasis class="comment">/*</emphasis>
+2 <emphasis class="comment">&#32;*&#32;jaco_arm.h</emphasis>
+3 <emphasis class="comment">&#32;*</emphasis>
+4 <emphasis class="comment">&#32;*&#32;&#32;Created&#32;on:&#32;Mar&#32;6,&#32;2013</emphasis>
+5 <emphasis class="comment">&#32;*&#32;&#32;&#32;&#32;&#32;&#32;Author:&#32;mdedonato</emphasis>
+6 <emphasis class="comment">&#32;*/</emphasis>
+7 
+8 <emphasis class="preprocessor">#ifndef&#32;JACO_DRIVER_JACO_ARM_KINEMATICS_H</emphasis>
+9 <emphasis class="preprocessor">#define&#32;JACO_DRIVER_JACO_ARM_KINEMATICS_H</emphasis>
+10 
+11 <emphasis class="preprocessor">#include&#32;&lt;math.h&gt;</emphasis>
+12 
+13 <emphasis class="preprocessor">#include&#32;&lt;ros/ros.h&gt;</emphasis>
+14 <emphasis class="preprocessor">#include&#32;&lt;tf/tf.h&gt;</emphasis>
+15 <emphasis class="preprocessor">#include&#32;&lt;tf/transform_broadcaster.h&gt;</emphasis>
+16 
+17 <emphasis class="preprocessor">#include&#32;&lt;string&gt;</emphasis>
+18 
+19 
+20 <emphasis class="comment">/******************************************/</emphasis>
+21 <emphasis class="comment">/**************DH&#32;Parameters***************/</emphasis>
+22 <emphasis class="comment">/******************************************/</emphasis>
+23 <emphasis class="comment">/*&#32;i&#32;*&#32;alpha(i-1)&#32;*&#32;a(i-1)&#32;*&#32;di&#32;&#32;*&#32;theta1&#32;*/</emphasis>
+24 <emphasis class="comment">/******************************************/</emphasis>
+25 <emphasis class="comment">/*&#32;1&#32;*&#32;0&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*&#32;0&#32;&#32;&#32;&#32;&#32;&#32;*&#32;D1&#32;&#32;*&#32;q1&#32;&#32;&#32;&#32;&#32;*/</emphasis>
+26 <emphasis class="comment">/*&#32;2&#32;*&#32;-pi/2&#32;&#32;&#32;&#32;&#32;&#32;*&#32;0&#32;&#32;&#32;&#32;&#32;&#32;*&#32;0&#32;&#32;&#32;*&#32;q2&#32;&#32;&#32;&#32;&#32;*/</emphasis>
+27 <emphasis class="comment">/*&#32;3&#32;*&#32;0&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*&#32;D2&#32;&#32;&#32;&#32;&#32;*&#32;0&#32;&#32;&#32;*&#32;q3&#32;&#32;&#32;&#32;&#32;*/</emphasis>
+28 <emphasis class="comment">/*&#32;4&#32;*&#32;-pi/2&#32;&#32;&#32;&#32;&#32;&#32;*&#32;0&#32;&#32;&#32;&#32;&#32;&#32;*&#32;d4b&#32;*&#32;q4&#32;&#32;&#32;&#32;&#32;*/</emphasis>
+29 <emphasis class="comment">/*&#32;5&#32;*&#32;2*aa&#32;&#32;&#32;&#32;&#32;&#32;&#32;*&#32;0&#32;&#32;&#32;&#32;&#32;&#32;*&#32;d5b&#32;*&#32;q5&#32;&#32;&#32;&#32;&#32;*/</emphasis>
+30 <emphasis class="comment">/*&#32;6&#32;*&#32;2*aa&#32;&#32;&#32;&#32;&#32;&#32;&#32;*&#32;0&#32;&#32;&#32;&#32;&#32;&#32;*&#32;d6b&#32;*&#32;q6&#32;&#32;&#32;&#32;&#32;*/</emphasis>
+31 <emphasis class="comment">/******************************************/</emphasis>
+32 
+33 <emphasis class="keyword">namespace&#32;</emphasis><link linkend="d4/d3c/namespacejaco">jaco</link>
+34 {
+35 
+<link linkend="d8/da9/classjaco_1_1JacoKinematics">36 </link><emphasis class="keyword">class&#32;</emphasis><link linkend="d8/da9/classjaco_1_1JacoKinematics">JacoKinematics</link>
+37 {
+38 &#32;<emphasis class="keyword">public</emphasis>:
+39 &#32;&#32;&#32;&#32;<emphasis class="keyword">explicit</emphasis>&#32;<link linkend="d8/da9/classjaco_1_1JacoKinematics_1ad7c0d6e5dbf5feb29aaf6bcb65f14b86">JacoKinematics</link>(<emphasis class="keyword">const</emphasis>&#32;ros::NodeHandle&amp;&#32;node_handle);
+40 
+41 &#32;&#32;&#32;&#32;<emphasis class="keywordtype">void</emphasis>&#32;<link linkend="d8/da9/classjaco_1_1JacoKinematics_1a605302243138ca469a7a416be25a6804">updateForward</link>(<emphasis class="keywordtype">float</emphasis>&#32;q1,&#32;<emphasis class="keywordtype">float</emphasis>&#32;q2,&#32;<emphasis class="keywordtype">float</emphasis>&#32;q3,&#32;<emphasis class="keywordtype">float</emphasis>&#32;q4,&#32;<emphasis class="keywordtype">float</emphasis>&#32;q5,&#32;<emphasis class="keywordtype">float</emphasis>&#32;q6);
+42 
+<link linkend="d8/da9/classjaco_1_1JacoKinematics_1a340eda126d97aa3700cc5dc8be89aa39">43 </link>&#32;&#32;&#32;&#32;<emphasis class="keyword">inline</emphasis>&#32;<emphasis class="keywordtype">float</emphasis>&#32;<link linkend="d8/da9/classjaco_1_1JacoKinematics_1a340eda126d97aa3700cc5dc8be89aa39">degToRad</link>(<emphasis class="keywordtype">float</emphasis>&#32;degrees)
+44 &#32;&#32;&#32;&#32;{
+45 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;(degrees&#32;*&#32;(M_PI&#32;/&#32;180));
+46 &#32;&#32;&#32;&#32;}
+47 
+48 &#32;<emphasis class="keyword">private</emphasis>:
+<link linkend="d8/da9/classjaco_1_1JacoKinematics_1a3314f9e6a8fb86405384dd23bd194e46">49 </link>&#32;&#32;&#32;&#32;tf::TransformBroadcaster&#32;<link linkend="d8/da9/classjaco_1_1JacoKinematics_1a3314f9e6a8fb86405384dd23bd194e46">broadcaster_</link>;
+<link linkend="d8/da9/classjaco_1_1JacoKinematics_1a0efb1f0ad1937553c7e285b27da0bdd3">50 </link>&#32;&#32;&#32;&#32;std::string&#32;<link linkend="d8/da9/classjaco_1_1JacoKinematics_1a0efb1f0ad1937553c7e285b27da0bdd3">tf_prefix_</link>;
+51 
+52 &#32;&#32;&#32;&#32;<emphasis class="comment">/*&#32;Robot&#32;Length&#32;Values&#32;(Meters)&#32;*/</emphasis>
+<link linkend="d8/da9/classjaco_1_1JacoKinematics_1a4edc270c1506293993ed77f04409045c">53 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">double</emphasis>&#32;<link linkend="d8/da9/classjaco_1_1JacoKinematics_1a4edc270c1506293993ed77f04409045c">base_to_api_</link>;
+<link linkend="d8/da9/classjaco_1_1JacoKinematics_1a7f67ac2a11176769a3477924f46c7284">54 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">double</emphasis>&#32;<link linkend="d8/da9/classjaco_1_1JacoKinematics_1a7f67ac2a11176769a3477924f46c7284">base_to_j1_</link>;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;base&#32;to&#32;joint1&#32;(Meters)</emphasis>
+<link linkend="d8/da9/classjaco_1_1JacoKinematics_1af9545eaea2e16deaaeea5c1e4db27fe2">55 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">double</emphasis>&#32;<link linkend="d8/da9/classjaco_1_1JacoKinematics_1af9545eaea2e16deaaeea5c1e4db27fe2">j1_to_j2_</link>;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;joint1&#32;to&#32;joint2&#32;(Meters)</emphasis>
+<link linkend="d8/da9/classjaco_1_1JacoKinematics_1ab19fccf28da90214c1aab8f11f1e7b42">56 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">double</emphasis>&#32;<link linkend="d8/da9/classjaco_1_1JacoKinematics_1ab19fccf28da90214c1aab8f11f1e7b42">j2_to_j3_</link>;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;arm&#32;length&#32;(Meters)</emphasis>
+<link linkend="d8/da9/classjaco_1_1JacoKinematics_1ae9e4c7a1d4e000d1697465f2f7ba4a12">57 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">double</emphasis>&#32;<link linkend="d8/da9/classjaco_1_1JacoKinematics_1ae9e4c7a1d4e000d1697465f2f7ba4a12">j3_offset_</link>;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;Arm&#32;Length&#32;(Meters)</emphasis>
+<link linkend="d8/da9/classjaco_1_1JacoKinematics_1a873308257c7953e6e98b3229766ee8a4">58 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">double</emphasis>&#32;<link linkend="d8/da9/classjaco_1_1JacoKinematics_1a873308257c7953e6e98b3229766ee8a4">j3_to_j4_</link>;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;Front&#32;Arm&#32;Length&#32;(Meters)</emphasis>
+<link linkend="d8/da9/classjaco_1_1JacoKinematics_1a5e322eafc0b3b827ae1713d24178c1f8">59 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">double</emphasis>&#32;<link linkend="d8/da9/classjaco_1_1JacoKinematics_1a5e322eafc0b3b827ae1713d24178c1f8">j4_to_j5_</link>;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;First&#32;Wrist&#32;Length&#32;(Meters)</emphasis>
+<link linkend="d8/da9/classjaco_1_1JacoKinematics_1a156f585f21c8495d3772fb872cace39e">60 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">double</emphasis>&#32;<link linkend="d8/da9/classjaco_1_1JacoKinematics_1a156f585f21c8495d3772fb872cace39e">j5_to_j6_</link>;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;Second&#32;Wrist&#32;Length&#32;(Meters)</emphasis>
+<link linkend="d8/da9/classjaco_1_1JacoKinematics_1a9e7969fbd9647524c0eef9b8f2ab0f1f">61 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">double</emphasis>&#32;<link linkend="d8/da9/classjaco_1_1JacoKinematics_1a9e7969fbd9647524c0eef9b8f2ab0f1f">j6_to_end_</link>;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;Wrist&#32;to&#32;Center&#32;of&#32;Hand(Meters)</emphasis>
+<link linkend="d8/da9/classjaco_1_1JacoKinematics_1ad309e89a6e5c60e0f614629c5f1b4c79">62 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">double</emphasis>&#32;<link linkend="d8/da9/classjaco_1_1JacoKinematics_1ad309e89a6e5c60e0f614629c5f1b4c79">j5_bend_degrees_</link>;&#32;&#32;<emphasis class="comment">//</emphasis>
+<link linkend="d8/da9/classjaco_1_1JacoKinematics_1a41a21f1b560c3387855f15059a619994">63 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">double</emphasis>&#32;<link linkend="d8/da9/classjaco_1_1JacoKinematics_1a41a21f1b560c3387855f15059a619994">j6_bend_degrees_</link>;
+64 };
+65 
+66 }&#32;&#32;<emphasis class="comment">//&#32;namespace&#32;jaco</emphasis>
+67 <emphasis class="preprocessor">#endif&#32;&#32;//&#32;JACO_DRIVER_JACO_ARM_KINEMATICS_H</emphasis>
+    </computeroutput></literallayout>
+</section>

@@ -1,0 +1,40 @@
+.TH "ros::message_operations::Printer< ::jaco_msgs::HomeArmResponse_< ContainerAllocator > >" 3 "Thu Mar 3 2016" "Version 1.0.1" "Kinova-ROS" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ros::message_operations::Printer< ::jaco_msgs::HomeArmResponse_< ContainerAllocator > > \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include 'HomeArmResponse\&.h'\fP
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "template<typename Stream > static void \fBstream\fP (Stream &s, const std::string &indent, const ::\fBjaco_msgs::HomeArmResponse_\fP< ContainerAllocator > &v)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.SS "template<class ContainerAllocator>
+.br
+struct ros::message_operations::Printer< ::jaco_msgs::HomeArmResponse_< ContainerAllocator > >"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "template<class ContainerAllocator > template<typename Stream > static void ros::message_operations::Printer< ::\fBjaco_msgs::HomeArmResponse_\fP< ContainerAllocator > >::stream (Stream & s, const std::string & indent, const ::\fBjaco_msgs::HomeArmResponse_\fP< ContainerAllocator > & v)\fC [inline]\fP, \fC [static]\fP"
+
+.PP
+.nf
+211   {
+212     s << indent << "homearm_result: ";
+213     Printer<std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other > >::stream(s, indent + "  ", v\&.homearm_result);
+214   }
+.fi
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Kinova-ROS from the source code\&.

@@ -1,0 +1,490 @@
+.TH "D:/Longfei/Desktop/catkin_KinovaROS/src/jaco-ros/jaco_driver/include/kinova/Kinova.API.UsbCommandLayerUbuntu.h" 3 "Thu Mar 3 2016" "Version 1.0.1" "Kinova-ROS" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+D:/Longfei/Desktop/catkin_KinovaROS/src/jaco-ros/jaco_driver/include/kinova/Kinova.API.UsbCommandLayerUbuntu.h \- This file contains header of all available functions of this API\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <vector>\fP
+.br
+\fC#include 'KinovaTypes\&.h'\fP
+.br
+\fC#include 'Kinova\&.API\&.CommLayerUbuntu\&.h'\fP
+.br
+\fC#include <stdio\&.h>\fP
+.br
+
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBCOMM_LAYER_PATH\fP   'Kinova\&.API\&.CommLayerUbuntu\&.so'"
+.br
+.ti -1c
+.RI "#define \fBCOMMAND_LAYER_VERSION\fP   50101"
+.br
+.ti -1c
+.RI "#define \fBERROR_API_NOT_INITIALIZED\fP   2101"
+.br
+.ti -1c
+.RI "#define \fBERROR_CLOSE_METHOD\fP   2007"
+.br
+.ti -1c
+.RI "#define \fBERROR_GET_DEVICE_COUNT_METHOD\fP   2008"
+.br
+.ti -1c
+.RI "#define \fBERROR_GET_DEVICES_LIST_METHOD\fP   2011"
+.br
+.ti -1c
+.RI "#define \fBERROR_INIT_API\fP   2001"
+.br
+.ti -1c
+.RI "#define \fBERROR_INIT_COMM_METHOD\fP   2006"
+.br
+.ti -1c
+.RI "#define \fBERROR_INVALID_PARAM\fP   2100"
+.br
+.ti -1c
+.RI "#define \fBERROR_LOAD_COMM_DLL\fP   2002"
+.br
+.ti -1c
+.RI "#define \fBERROR_SEMAPHORE_FAILED\fP   2012"
+.br
+.ti -1c
+.RI "#define \fBERROR_SEND_PACKET_METHOD\fP   2009"
+.br
+.ti -1c
+.RI "#define \fBERROR_SET_ACTIVE_DEVICE_METHOD\fP   2010"
+.br
+.ti -1c
+.RI "#define \fBJACO_COMM_FAILED\fP   2004"
+.br
+.ti -1c
+.RI "#define \fBJACO_NACK_FIRST\fP   2003"
+.br
+.ti -1c
+.RI "#define \fBJACO_NACK_NORMAL\fP   2005"
+.br
+.ti -1c
+.RI "#define \fBKINOVA_\fP   1"
+.br
+.ti -1c
+.RI "#define \fBKINOVAAPIUSBCOMMANDLAYER_API\fP   \fB__attribute__\fP ((visibility ('default')))"
+.br
+.ti -1c
+.RI "#define \fBSUCCESS\fP   1"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBKINOVAAPIUSBCOMMANDLAYER_API\fP int \fBClearErrorLog\fP ()"
+.br
+.ti -1c
+.RI "\fBKINOVAAPIUSBCOMMANDLAYER_API\fP int \fBCloseAPI\fP (void)"
+.br
+.ti -1c
+.RI "\fBKINOVAAPIUSBCOMMANDLAYER_API\fP int \fBEraseAllProtectionZones\fP ()"
+.br
+.ti -1c
+.RI "\fBKINOVAAPIUSBCOMMANDLAYER_API\fP int \fBEraseAllTrajectories\fP ()"
+.br
+.ti -1c
+.RI "\fBKINOVAAPIUSBCOMMANDLAYER_API\fP int \fBGetActualTrajectoryInfo\fP (\fBTrajectoryPoint\fP &Response)"
+.br
+.ti -1c
+.RI "\fBKINOVAAPIUSBCOMMANDLAYER_API\fP int \fBGetActuatorAcceleration\fP (\fBAngularAcceleration\fP &Response)"
+.br
+.ti -1c
+.RI "\fBKINOVAAPIUSBCOMMANDLAYER_API\fP int \fBGetAngularCommand\fP (\fBAngularPosition\fP &Response)"
+.br
+.ti -1c
+.RI "\fBKINOVAAPIUSBCOMMANDLAYER_API\fP int \fBGetAngularCurrent\fP (\fBAngularPosition\fP &Response)"
+.br
+.ti -1c
+.RI "\fBKINOVAAPIUSBCOMMANDLAYER_API\fP int \fBGetAngularCurrentMotor\fP (\fBAngularPosition\fP &Response)"
+.br
+.ti -1c
+.RI "\fBKINOVAAPIUSBCOMMANDLAYER_API\fP int \fBGetAngularForce\fP (\fBAngularPosition\fP &Response)"
+.br
+.ti -1c
+.RI "\fBKINOVAAPIUSBCOMMANDLAYER_API\fP int \fBGetAngularForceGravityFree\fP (\fBAngularPosition\fP &Response)"
+.br
+.ti -1c
+.RI "\fBKINOVAAPIUSBCOMMANDLAYER_API\fP int \fBGetAngularPosition\fP (\fBAngularPosition\fP &Response)"
+.br
+.ti -1c
+.RI "\fBKINOVAAPIUSBCOMMANDLAYER_API\fP int \fBGetAngularVelocity\fP (\fBAngularPosition\fP &Response)"
+.br
+.ti -1c
+.RI "\fBKINOVAAPIUSBCOMMANDLAYER_API\fP int \fBGetAPIVersion\fP (std::vector< int > &Response)"
+.br
+.ti -1c
+.RI "\fBKINOVAAPIUSBCOMMANDLAYER_API\fP int \fBGetCartesianCommand\fP (\fBCartesianPosition\fP &Response)"
+.br
+.ti -1c
+.RI "\fBKINOVAAPIUSBCOMMANDLAYER_API\fP int \fBGetCartesianForce\fP (\fBCartesianPosition\fP &Response)"
+.br
+.ti -1c
+.RI "\fBKINOVAAPIUSBCOMMANDLAYER_API\fP int \fBGetCartesianPosition\fP (\fBCartesianPosition\fP &Response)"
+.br
+.ti -1c
+.RI "\fBKINOVAAPIUSBCOMMANDLAYER_API\fP int \fBGetClientConfigurations\fP (\fBClientConfigurations\fP &config)"
+.br
+.ti -1c
+.RI "\fBKINOVAAPIUSBCOMMANDLAYER_API\fP int \fBGetCodeVersion\fP (std::vector< int > &Response)"
+.br
+.ti -1c
+.RI "\fBKINOVAAPIUSBCOMMANDLAYER_API\fP int \fBGetControlMapping\fP (\fBControlMappingCharts\fP &Response)"
+.br
+.ti -1c
+.RI "\fBKINOVAAPIUSBCOMMANDLAYER_API\fP int \fBGetControlType\fP (int &Response)"
+.br
+.ti -1c
+.RI "\fBKINOVAAPIUSBCOMMANDLAYER_API\fP int \fBGetDevices\fP (std::vector< \fBKinovaDevice\fP > &devices, int &\fBresult\fP)"
+.br
+.ti -1c
+.RI "\fBKINOVAAPIUSBCOMMANDLAYER_API\fP int \fBGetDevValue\fP (std::vector< float > &Response)"
+.br
+.ti -1c
+.RI "\fBKINOVAAPIUSBCOMMANDLAYER_API\fP int \fBGetForcesInfo\fP (\fBForcesInfo\fP &Response)"
+.br
+.ti -1c
+.RI "\fBKINOVAAPIUSBCOMMANDLAYER_API\fP int \fBGetGeneralInformations\fP (\fBGeneralInformations\fP &Response)"
+.br
+.ti -1c
+.RI "\fBKINOVAAPIUSBCOMMANDLAYER_API\fP int \fBGetGlobalTrajectoryInfo\fP (\fBTrajectoryFIFO\fP &Response)"
+.br
+.ti -1c
+.RI "\fBKINOVAAPIUSBCOMMANDLAYER_API\fP int \fBGetGripperStatus\fP (\fBGripper\fP &Response)"
+.br
+.ti -1c
+.RI "\fBKINOVAAPIUSBCOMMANDLAYER_API\fP int \fBGetPeripheralInventory\fP (std::vector< \fBPeripheralInfo\fP > &)"
+.br
+.ti -1c
+.RI "\fBKINOVAAPIUSBCOMMANDLAYER_API\fP int \fBGetPositionCurrentActuators\fP (std::vector< float > &Response)"
+.br
+.ti -1c
+.RI "\fBKINOVAAPIUSBCOMMANDLAYER_API\fP int \fBGetProtectionZone\fP (\fBZoneList\fP &Response)"
+.br
+.ti -1c
+.RI "\fBKINOVAAPIUSBCOMMANDLAYER_API\fP int \fBGetQuickStatus\fP (\fBQuickStatus\fP &Response)"
+.br
+.ti -1c
+.RI "\fBKINOVAAPIUSBCOMMANDLAYER_API\fP int \fBGetSensorsInfo\fP (\fBSensorsInfo\fP &Response)"
+.br
+.ti -1c
+.RI "\fBKINOVAAPIUSBCOMMANDLAYER_API\fP int \fBGetSingularityVector\fP (\fBSingularityVector\fP &Response)"
+.br
+.ti -1c
+.RI "\fBKINOVAAPIUSBCOMMANDLAYER_API\fP int \fBGetSpasmFilterValues\fP (std::vector< float > &Response, int &activationStatus)"
+.br
+.ti -1c
+.RI "\fBKINOVAAPIUSBCOMMANDLAYER_API\fP int \fBGetSystemError\fP (unsigned int indexError, \fBSystemError\fP &Response)"
+.br
+.ti -1c
+.RI "\fBKINOVAAPIUSBCOMMANDLAYER_API\fP int \fBGetSystemErrorCount\fP (unsigned int &Response)"
+.br
+.ti -1c
+.RI "\fBKINOVAAPIUSBCOMMANDLAYER_API\fP int \fBInitAPI\fP (void)"
+.br
+.ti -1c
+.RI "\fBKINOVAAPIUSBCOMMANDLAYER_API\fP int \fBInitFingers\fP ()"
+.br
+.ti -1c
+.RI "\fBKINOVAAPIUSBCOMMANDLAYER_API\fP int \fBMoveHome\fP ()"
+.br
+.ti -1c
+.RI "\fBKINOVAAPIUSBCOMMANDLAYER_API\fP int \fBProgramFlash\fP (char *filename)"
+.br
+.ti -1c
+.RI "\fBKINOVAAPIUSBCOMMANDLAYER_API\fP int \fBRestoreFactoryDefault\fP ()"
+.br
+.ti -1c
+.RI "\fBKINOVAAPIUSBCOMMANDLAYER_API\fP int \fBSendAdvanceTrajectory\fP (\fBTrajectoryPoint\fP trajectory)"
+.br
+.ti -1c
+.RI "\fBKINOVAAPIUSBCOMMANDLAYER_API\fP int \fBSendBasicTrajectory\fP (\fBTrajectoryPoint\fP trajectory)"
+.br
+.ti -1c
+.RI "\fBKINOVAAPIUSBCOMMANDLAYER_API\fP int \fBSendJoystickCommand\fP (\fBJoystickCommand\fP joystickCommand)"
+.br
+.ti -1c
+.RI "\fBKINOVAAPIUSBCOMMANDLAYER_API\fP int \fBSetActiveDevice\fP (\fBKinovaDevice\fP device)"
+.br
+.ti -1c
+.RI "\fBKINOVAAPIUSBCOMMANDLAYER_API\fP int \fBSetActuatorAddress\fP (int ActuatorAdress, int newAddress)"
+.br
+.ti -1c
+.RI "\fBKINOVAAPIUSBCOMMANDLAYER_API\fP int \fBSetActuatorPID\fP (unsigned int address, float P, float I, float D)"
+.br
+.ti -1c
+.RI "\fBKINOVAAPIUSBCOMMANDLAYER_API\fP int \fBSetActuatorPIDFilter\fP (int ActuatorAdress, float filterP, float filterI, float filterD)"
+.br
+.ti -1c
+.RI "\fBKINOVAAPIUSBCOMMANDLAYER_API\fP int \fBSetAngularControl\fP ()"
+.br
+.ti -1c
+.RI "\fBKINOVAAPIUSBCOMMANDLAYER_API\fP int \fBSetAngularInertiaDamping\fP (\fBAngularInfo\fP inertia, \fBAngularInfo\fP damping)"
+.br
+.ti -1c
+.RI "\fBKINOVAAPIUSBCOMMANDLAYER_API\fP int \fBSetAngularTorqueMinMax\fP (\fBAngularInfo\fP min, \fBAngularInfo\fP \fBmax\fP)"
+.br
+.ti -1c
+.RI "\fBKINOVAAPIUSBCOMMANDLAYER_API\fP int \fBSetCartesianControl\fP ()"
+.br
+.ti -1c
+.RI "\fBKINOVAAPIUSBCOMMANDLAYER_API\fP int \fBSetCartesianForceMinMax\fP (\fBCartesianInfo\fP min, \fBCartesianInfo\fP \fBmax\fP)"
+.br
+.ti -1c
+.RI "\fBKINOVAAPIUSBCOMMANDLAYER_API\fP int \fBSetCartesianInertiaDamping\fP (\fBCartesianInfo\fP inertia, \fBCartesianInfo\fP damping)"
+.br
+.ti -1c
+.RI "\fBKINOVAAPIUSBCOMMANDLAYER_API\fP int \fBSetClientConfigurations\fP (\fBClientConfigurations\fP config)"
+.br
+.ti -1c
+.RI "\fBKINOVAAPIUSBCOMMANDLAYER_API\fP int \fBSetControlMapping\fP (\fBControlMappingCharts\fP Command)"
+.br
+.ti -1c
+.RI "\fBKINOVAAPIUSBCOMMANDLAYER_API\fP int \fBSetDevValue\fP (std::vector< float > command)"
+.br
+.ti -1c
+.RI "\fBKINOVAAPIUSBCOMMANDLAYER_API\fP int \fBSetFrameType\fP (int frameType)"
+.br
+.ti -1c
+.RI "\fBKINOVAAPIUSBCOMMANDLAYER_API\fP int \fBSetJointZero\fP (int ActuatorAdress)"
+.br
+.ti -1c
+.RI "\fBKINOVAAPIUSBCOMMANDLAYER_API\fP int \fBSetModel\fP (char Command[\fBSTRING_LENGTH\fP], char temp[\fBSTRING_LENGTH\fP])"
+.br
+.ti -1c
+.RI "\fBKINOVAAPIUSBCOMMANDLAYER_API\fP int \fBSetProtectionZone\fP (\fBZoneList\fP Command)"
+.br
+.ti -1c
+.RI "\fBKINOVAAPIUSBCOMMANDLAYER_API\fP int \fBSetSerialNumber\fP (char Command[\fBSTRING_LENGTH\fP], char temp[\fBSTRING_LENGTH\fP])"
+.br
+.ti -1c
+.RI "\fBKINOVAAPIUSBCOMMANDLAYER_API\fP int \fBSetSpasmFilterValues\fP (std::vector< float > Response, int activationStatus)"
+.br
+.ti -1c
+.RI "\fBKINOVAAPIUSBCOMMANDLAYER_API\fP int \fBSetTorqueGain\fP (int ActuatorAdress, int Gain)"
+.br
+.ti -1c
+.RI "\fBKINOVAAPIUSBCOMMANDLAYER_API\fP int \fBSetTorqueZero\fP (int ActuatorAdress)"
+.br
+.ti -1c
+.RI "\fBKINOVAAPIUSBCOMMANDLAYER_API\fP int \fBStartControlAPI\fP ()"
+.br
+.ti -1c
+.RI "\fBKINOVAAPIUSBCOMMANDLAYER_API\fP int \fBStartCurrentLimitation\fP ()"
+.br
+.ti -1c
+.RI "\fBKINOVAAPIUSBCOMMANDLAYER_API\fP int \fBStartForceControl\fP ()"
+.br
+.ti -1c
+.RI "\fBKINOVAAPIUSBCOMMANDLAYER_API\fP int \fBStopControlAPI\fP ()"
+.br
+.ti -1c
+.RI "\fBKINOVAAPIUSBCOMMANDLAYER_API\fP int \fBStopCurrentLimitation\fP ()"
+.br
+.ti -1c
+.RI "\fBKINOVAAPIUSBCOMMANDLAYER_API\fP int \fBStopForceControl\fP ()"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+This file contains header of all available functions of this API\&. 
+
+
+.PP
+Definition in file \fBKinova\&.API\&.UsbCommandLayerUbuntu\&.h\fP\&.
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define COMM_LAYER_PATH   'Kinova\&.API\&.CommLayerUbuntu\&.so'"
+
+.SS "#define COMMAND_LAYER_VERSION   50101"
+
+.SS "#define ERROR_API_NOT_INITIALIZED   2101"
+
+.SS "#define ERROR_CLOSE_METHOD   2007"
+
+.SS "#define ERROR_GET_DEVICE_COUNT_METHOD   2008"
+
+.SS "#define ERROR_GET_DEVICES_LIST_METHOD   2011"
+
+.SS "#define ERROR_INIT_API   2001"
+
+.SS "#define ERROR_INIT_COMM_METHOD   2006"
+
+.SS "#define ERROR_INVALID_PARAM   2100"
+
+.SS "#define ERROR_LOAD_COMM_DLL   2002"
+
+.SS "#define ERROR_SEMAPHORE_FAILED   2012"
+
+.SS "#define ERROR_SEND_PACKET_METHOD   2009"
+
+.SS "#define ERROR_SET_ACTIVE_DEVICE_METHOD   2010"
+
+.SS "#define JACO_COMM_FAILED   2004"
+
+.SS "#define JACO_NACK_FIRST   2003"
+
+.SS "#define JACO_NACK_NORMAL   2005"
+
+.SS "#define KINOVA_   1"
+
+.SS "#define KINOVAAPIUSBCOMMANDLAYER_API   \fB__attribute__\fP ((visibility ('default')))"
+
+.SS "#define SUCCESS   1"
+
+.SH "Function Documentation"
+.PP 
+.SS "\fBKINOVAAPIUSBCOMMANDLAYER_API\fP int ClearErrorLog ()"
+
+.SS "\fBKINOVAAPIUSBCOMMANDLAYER_API\fP int CloseAPI (void)"
+
+.SS "\fBKINOVAAPIUSBCOMMANDLAYER_API\fP int EraseAllProtectionZones ()"
+
+.SS "\fBKINOVAAPIUSBCOMMANDLAYER_API\fP int EraseAllTrajectories ()"
+
+.SS "\fBKINOVAAPIUSBCOMMANDLAYER_API\fP int GetActualTrajectoryInfo (\fBTrajectoryPoint\fP & Response)"
+
+.SS "\fBKINOVAAPIUSBCOMMANDLAYER_API\fP int GetActuatorAcceleration (\fBAngularAcceleration\fP & Response)"
+
+.SS "\fBKINOVAAPIUSBCOMMANDLAYER_API\fP int GetAngularCommand (\fBAngularPosition\fP & Response)"
+
+.SS "\fBKINOVAAPIUSBCOMMANDLAYER_API\fP int GetAngularCurrent (\fBAngularPosition\fP & Response)"
+
+.SS "\fBKINOVAAPIUSBCOMMANDLAYER_API\fP int GetAngularCurrentMotor (\fBAngularPosition\fP & Response)"
+
+.SS "\fBKINOVAAPIUSBCOMMANDLAYER_API\fP int GetAngularForce (\fBAngularPosition\fP & Response)"
+
+.SS "\fBKINOVAAPIUSBCOMMANDLAYER_API\fP int GetAngularForceGravityFree (\fBAngularPosition\fP & Response)"
+
+.SS "\fBKINOVAAPIUSBCOMMANDLAYER_API\fP int GetAngularPosition (\fBAngularPosition\fP & Response)"
+
+.SS "\fBKINOVAAPIUSBCOMMANDLAYER_API\fP int GetAngularVelocity (\fBAngularPosition\fP & Response)"
+
+.SS "\fBKINOVAAPIUSBCOMMANDLAYER_API\fP int GetAPIVersion (std::vector< int > & Response)"
+
+.SS "\fBKINOVAAPIUSBCOMMANDLAYER_API\fP int GetCartesianCommand (\fBCartesianPosition\fP & Response)"
+
+.SS "\fBKINOVAAPIUSBCOMMANDLAYER_API\fP int GetCartesianForce (\fBCartesianPosition\fP & Response)"
+
+.SS "\fBKINOVAAPIUSBCOMMANDLAYER_API\fP int GetCartesianPosition (\fBCartesianPosition\fP & Response)"
+
+.SS "\fBKINOVAAPIUSBCOMMANDLAYER_API\fP int GetClientConfigurations (\fBClientConfigurations\fP & config)"
+
+.SS "\fBKINOVAAPIUSBCOMMANDLAYER_API\fP int GetCodeVersion (std::vector< int > & Response)"
+
+.SS "\fBKINOVAAPIUSBCOMMANDLAYER_API\fP int GetControlMapping (\fBControlMappingCharts\fP & Response)"
+
+.SS "\fBKINOVAAPIUSBCOMMANDLAYER_API\fP int GetControlType (int & Response)"
+
+.SS "\fBKINOVAAPIUSBCOMMANDLAYER_API\fP int GetDevices (std::vector< \fBKinovaDevice\fP > & devices, int & result)"
+
+.SS "\fBKINOVAAPIUSBCOMMANDLAYER_API\fP int GetDevValue (std::vector< float > & Response)"
+
+.SS "\fBKINOVAAPIUSBCOMMANDLAYER_API\fP int GetForcesInfo (\fBForcesInfo\fP & Response)"
+
+.SS "\fBKINOVAAPIUSBCOMMANDLAYER_API\fP int GetGeneralInformations (\fBGeneralInformations\fP & Response)"
+
+.SS "\fBKINOVAAPIUSBCOMMANDLAYER_API\fP int GetGlobalTrajectoryInfo (\fBTrajectoryFIFO\fP & Response)"
+
+.SS "\fBKINOVAAPIUSBCOMMANDLAYER_API\fP int GetGripperStatus (\fBGripper\fP & Response)"
+
+.SS "\fBKINOVAAPIUSBCOMMANDLAYER_API\fP int GetPeripheralInventory (std::vector< \fBPeripheralInfo\fP > &)"
+
+.SS "\fBKINOVAAPIUSBCOMMANDLAYER_API\fP int GetPositionCurrentActuators (std::vector< float > & Response)"
+
+.SS "\fBKINOVAAPIUSBCOMMANDLAYER_API\fP int GetProtectionZone (\fBZoneList\fP & Response)"
+
+.SS "\fBKINOVAAPIUSBCOMMANDLAYER_API\fP int GetQuickStatus (\fBQuickStatus\fP & Response)"
+
+.SS "\fBKINOVAAPIUSBCOMMANDLAYER_API\fP int GetSensorsInfo (\fBSensorsInfo\fP & Response)"
+
+.SS "\fBKINOVAAPIUSBCOMMANDLAYER_API\fP int GetSingularityVector (\fBSingularityVector\fP & Response)"
+
+.SS "\fBKINOVAAPIUSBCOMMANDLAYER_API\fP int GetSpasmFilterValues (std::vector< float > & Response, int & activationStatus)"
+
+.SS "\fBKINOVAAPIUSBCOMMANDLAYER_API\fP int GetSystemError (unsigned int indexError, \fBSystemError\fP & Response)"
+
+.SS "\fBKINOVAAPIUSBCOMMANDLAYER_API\fP int GetSystemErrorCount (unsigned int & Response)"
+
+.SS "\fBKINOVAAPIUSBCOMMANDLAYER_API\fP int InitAPI (void)"
+
+.SS "\fBKINOVAAPIUSBCOMMANDLAYER_API\fP int InitFingers ()"
+
+.SS "\fBKINOVAAPIUSBCOMMANDLAYER_API\fP int MoveHome ()"
+
+.SS "\fBKINOVAAPIUSBCOMMANDLAYER_API\fP int ProgramFlash (char * filename)"
+
+.SS "\fBKINOVAAPIUSBCOMMANDLAYER_API\fP int RestoreFactoryDefault ()"
+
+.SS "\fBKINOVAAPIUSBCOMMANDLAYER_API\fP int SendAdvanceTrajectory (\fBTrajectoryPoint\fP trajectory)"
+
+.SS "\fBKINOVAAPIUSBCOMMANDLAYER_API\fP int SendBasicTrajectory (\fBTrajectoryPoint\fP trajectory)"
+
+.SS "\fBKINOVAAPIUSBCOMMANDLAYER_API\fP int SendJoystickCommand (\fBJoystickCommand\fP joystickCommand)"
+
+.SS "\fBKINOVAAPIUSBCOMMANDLAYER_API\fP int SetActiveDevice (\fBKinovaDevice\fP device)"
+
+.SS "\fBKINOVAAPIUSBCOMMANDLAYER_API\fP int SetActuatorAddress (int ActuatorAdress, int newAddress)"
+
+.SS "\fBKINOVAAPIUSBCOMMANDLAYER_API\fP int SetActuatorPID (unsigned int address, float P, float I, float D)"
+
+.SS "\fBKINOVAAPIUSBCOMMANDLAYER_API\fP int SetActuatorPIDFilter (int ActuatorAdress, float filterP, float filterI, float filterD)"
+
+.SS "\fBKINOVAAPIUSBCOMMANDLAYER_API\fP int SetAngularControl ()"
+
+.SS "\fBKINOVAAPIUSBCOMMANDLAYER_API\fP int SetAngularInertiaDamping (\fBAngularInfo\fP inertia, \fBAngularInfo\fP damping)"
+
+.SS "\fBKINOVAAPIUSBCOMMANDLAYER_API\fP int SetAngularTorqueMinMax (\fBAngularInfo\fP min, \fBAngularInfo\fP max)"
+
+.SS "\fBKINOVAAPIUSBCOMMANDLAYER_API\fP int SetCartesianControl ()"
+
+.SS "\fBKINOVAAPIUSBCOMMANDLAYER_API\fP int SetCartesianForceMinMax (\fBCartesianInfo\fP min, \fBCartesianInfo\fP max)"
+
+.SS "\fBKINOVAAPIUSBCOMMANDLAYER_API\fP int SetCartesianInertiaDamping (\fBCartesianInfo\fP inertia, \fBCartesianInfo\fP damping)"
+
+.SS "\fBKINOVAAPIUSBCOMMANDLAYER_API\fP int SetClientConfigurations (\fBClientConfigurations\fP config)"
+
+.SS "\fBKINOVAAPIUSBCOMMANDLAYER_API\fP int SetControlMapping (\fBControlMappingCharts\fP Command)"
+
+.SS "\fBKINOVAAPIUSBCOMMANDLAYER_API\fP int SetDevValue (std::vector< float > command)"
+
+.SS "\fBKINOVAAPIUSBCOMMANDLAYER_API\fP int SetFrameType (int frameType)"
+
+.SS "\fBKINOVAAPIUSBCOMMANDLAYER_API\fP int SetJointZero (int ActuatorAdress)"
+
+.SS "\fBKINOVAAPIUSBCOMMANDLAYER_API\fP int SetModel (char Command[STRING_LENGTH], char temp[STRING_LENGTH])"
+
+.SS "\fBKINOVAAPIUSBCOMMANDLAYER_API\fP int SetProtectionZone (\fBZoneList\fP Command)"
+
+.SS "\fBKINOVAAPIUSBCOMMANDLAYER_API\fP int SetSerialNumber (char Command[STRING_LENGTH], char temp[STRING_LENGTH])"
+
+.SS "\fBKINOVAAPIUSBCOMMANDLAYER_API\fP int SetSpasmFilterValues (std::vector< float > Response, int activationStatus)"
+
+.SS "\fBKINOVAAPIUSBCOMMANDLAYER_API\fP int SetTorqueGain (int ActuatorAdress, int Gain)"
+
+.SS "\fBKINOVAAPIUSBCOMMANDLAYER_API\fP int SetTorqueZero (int ActuatorAdress)"
+
+.SS "\fBKINOVAAPIUSBCOMMANDLAYER_API\fP int StartControlAPI ()"
+
+.SS "\fBKINOVAAPIUSBCOMMANDLAYER_API\fP int StartCurrentLimitation ()"
+
+.SS "\fBKINOVAAPIUSBCOMMANDLAYER_API\fP int StartForceControl ()"
+
+.SS "\fBKINOVAAPIUSBCOMMANDLAYER_API\fP int StopControlAPI ()"
+
+.SS "\fBKINOVAAPIUSBCOMMANDLAYER_API\fP int StopCurrentLimitation ()"
+
+.SS "\fBKINOVAAPIUSBCOMMANDLAYER_API\fP int StopForceControl ()"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Kinova-ROS from the source code\&.

@@ -1,0 +1,65 @@
+.TH "finger_action_client" 3 "Thu Mar 3 2016" "Version 1.0.1" "Kinova-ROS" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+finger_action_client \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "def \fBpose_client\fP ()"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "\fBresult\fP = \fBpose_client\fP()"
+.br
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "def finger_action_client\&.pose_client ()"
+
+.PP
+.nf
+13 def pose_client():
+14     client = actionlib\&.SimpleActionClient('/jaco/finger_joint_angles', jaco_msgs\&.msg\&.SetFingersPositionAction)
+15 
+16     goal = jaco_msgs\&.msg\&.SetFingersPositionGoal()
+17 
+18     if len(sys\&.argv) < 4:
+19         goal\&.fingers\&.finger1 = 4000
+20         goal\&.fingers\&.finger2 = 4000
+21         goal\&.fingers\&.finger3 = 4000
+22 
+23         rospy\&.logwarn("Using test goal: \n%s", goal)
+24     else:
+25         goal\&.fingers\&.finger1 = float(sys\&.argv[1])
+26         goal\&.fingers\&.finger2 = float(sys\&.argv[2])
+27         goal\&.fingers\&.finger3 = float(sys\&.argv[3])
+28 
+29     client\&.wait_for_server()
+30     rospy\&.loginfo("Connected to Finger server")
+31 
+32     client\&.send_goal(goal)
+33 
+34     try:
+35         client\&.wait_for_result()
+36     except KeyboardInterrupt:
+37         rospy\&.loginfo("Program interrupted, pre-empting goal")
+38         client\&.cancel_all_goals()
+39 
+40     return client\&.get_result()
+41 
+.fi
+.SH "Variable Documentation"
+.PP 
+.SS "finger_action_client\&.result = \fBpose_client\fP()"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Kinova-ROS from the source code\&.

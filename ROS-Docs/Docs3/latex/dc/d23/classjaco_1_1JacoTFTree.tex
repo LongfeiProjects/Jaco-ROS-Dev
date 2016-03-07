@@ -1,0 +1,166 @@
+\hypertarget{classjaco_1_1JacoTFTree}{}\section{jaco\+:\+:Jaco\+T\+F\+Tree Class Reference}
+\label{classjaco_1_1JacoTFTree}\index{jaco\+::\+Jaco\+T\+F\+Tree@{jaco\+::\+Jaco\+T\+F\+Tree}}
+
+
+{\ttfamily \#include \char`\"{}jaco\+\_\+tf\+\_\+updater.\+h\char`\"{}}
+
+
+
+Collaboration diagram for jaco\+:\+:Jaco\+T\+F\+Tree\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{d6/d82/classjaco_1_1JacoTFTree__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classjaco_1_1JacoTFTree_aff3a20fea72ff3089968609d7a32ce53}{Jaco\+T\+F\+Tree} (ros\+::\+Node\+Handle nh)
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classjaco_1_1JacoTFTree_a9d27ae1569454f687fdb3efc3c2718cf}{calculate\+Postion} (void)
+\item 
+void \hyperlink{classjaco_1_1JacoTFTree_ad3cc49dbb3058895d32aa825f386d9d5}{joint\+Angles\+Msg\+Handler} (const \hyperlink{namespacejaco__msgs_a32b25235cc3066080b29ddfde0640ae9}{jaco\+\_\+msgs\+::\+Joint\+Angles\+Const\+Ptr} \&joint\+\_\+angles)
+\item 
+void \hyperlink{classjaco_1_1JacoTFTree_a6c1129c477dfc9e17cd2185924033ad5}{tf\+Update\+Handler} (const ros\+::\+Timer\+Event \&)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{namespacejaco__msgs_ae38be3f0cdaac5905b3df022403d6ef4}{jaco\+\_\+msgs\+::\+Joint\+Angles} \hyperlink{classjaco_1_1JacoTFTree_a352b7d128f76d3a4f01e01ec8b416e22}{current\+\_\+angles\+\_\+}
+\item 
+ros\+::\+Subscriber \hyperlink{classjaco_1_1JacoTFTree_a5908642f0eee94b14d4b4ef649e4ad0f}{joint\+\_\+angles\+\_\+subscriber\+\_\+}
+\item 
+\hyperlink{classjaco_1_1JacoKinematics}{jaco\+::\+Jaco\+Kinematics} \hyperlink{classjaco_1_1JacoTFTree_aacb83b30f56868891d78852834ef0532}{kinematics\+\_\+}
+\item 
+ros\+::\+Time \hyperlink{classjaco_1_1JacoTFTree_a20869124ed9dd0b936d79d5d8a60b6db}{last\+\_\+angle\+\_\+update\+\_\+}
+\item 
+ros\+::\+Timer \hyperlink{classjaco_1_1JacoTFTree_a1470ccde41ff4213c92b4e7ecbcad3e3}{tf\+\_\+update\+\_\+timer\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{jaco\+::\+Jaco\+T\+F\+Tree@{jaco\+::\+Jaco\+T\+F\+Tree}!Jaco\+T\+F\+Tree@{Jaco\+T\+F\+Tree}}
+\index{Jaco\+T\+F\+Tree@{Jaco\+T\+F\+Tree}!jaco\+::\+Jaco\+T\+F\+Tree@{jaco\+::\+Jaco\+T\+F\+Tree}}
+\subsubsection[{\texorpdfstring{Jaco\+T\+F\+Tree(ros\+::\+Node\+Handle nh)}{JacoTFTree(ros::NodeHandle nh)}}]{\setlength{\rightskip}{0pt plus 5cm}jaco\+::\+Jaco\+T\+F\+Tree\+::\+Jaco\+T\+F\+Tree (
+\begin{DoxyParamCaption}
+\item[{ros\+::\+Node\+Handle}]{nh}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [explicit]}}\hypertarget{classjaco_1_1JacoTFTree_aff3a20fea72ff3089968609d7a32ce53}{}\label{classjaco_1_1JacoTFTree_aff3a20fea72ff3089968609d7a32ce53}
+
+\begin{DoxyCode}
+16     : \hyperlink{classjaco_1_1JacoTFTree_aacb83b30f56868891d78852834ef0532}{kinematics\_}(node\_handle)
+17 \{
+18     \hyperlink{classjaco_1_1JacoTFTree_a5908642f0eee94b14d4b4ef649e4ad0f}{joint\_angles\_subscriber\_} = node\_handle.subscribe(\textcolor{stringliteral}{"in/joint\_angles"}, 1,
+19                                                      &
+      \hyperlink{classjaco_1_1JacoTFTree_ad3cc49dbb3058895d32aa825f386d9d5}{JacoTFTree::jointAnglesMsgHandler}, \textcolor{keyword}{this});
+20     \hyperlink{classjaco_1_1JacoTFTree_a352b7d128f76d3a4f01e01ec8b416e22}{current\_angles\_}.\hyperlink{structjaco__msgs_1_1JointAngles___a5ebadd874f74af99d452dc42787489b7}{joint1} = 0;
+21     \hyperlink{classjaco_1_1JacoTFTree_a352b7d128f76d3a4f01e01ec8b416e22}{current\_angles\_}.\hyperlink{structjaco__msgs_1_1JointAngles___ad7bfb312caeafc6b2cb1fc02c6a3e116}{joint2} = 0;
+22     \hyperlink{classjaco_1_1JacoTFTree_a352b7d128f76d3a4f01e01ec8b416e22}{current\_angles\_}.\hyperlink{structjaco__msgs_1_1JointAngles___ae8e5d407b34f0a6acd368ec1a28df526}{joint3} = 0;
+23     \hyperlink{classjaco_1_1JacoTFTree_a352b7d128f76d3a4f01e01ec8b416e22}{current\_angles\_}.\hyperlink{structjaco__msgs_1_1JointAngles___accb31f45f3a313794a9cab57b8a9b952}{joint4} = 0;
+24     \hyperlink{classjaco_1_1JacoTFTree_a352b7d128f76d3a4f01e01ec8b416e22}{current\_angles\_}.\hyperlink{structjaco__msgs_1_1JointAngles___ad02e456e0b382b2bf59b4eeb93318921}{joint5} = 0;
+25     \hyperlink{classjaco_1_1JacoTFTree_a352b7d128f76d3a4f01e01ec8b416e22}{current\_angles\_}.\hyperlink{structjaco__msgs_1_1JointAngles___a474d9f2a0e329ba6bd08c8fa265e9a50}{joint6} = 0;
+26     \hyperlink{classjaco_1_1JacoTFTree_a20869124ed9dd0b936d79d5d8a60b6db}{last\_angle\_update\_} = ros::Time().now();
+27     \hyperlink{classjaco_1_1JacoTFTree_a1470ccde41ff4213c92b4e7ecbcad3e3}{tf\_update\_timer\_} = node\_handle.createTimer(ros::Duration(0.01),
+28                                                &\hyperlink{classjaco_1_1JacoTFTree_a6c1129c477dfc9e17cd2185924033ad5}{JacoTFTree::tfUpdateHandler}, \textcolor{keyword}{
+      this});
+29     \hyperlink{classjaco_1_1JacoTFTree_a1470ccde41ff4213c92b4e7ecbcad3e3}{tf\_update\_timer\_}.stop();
+30 \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{jaco\+::\+Jaco\+T\+F\+Tree@{jaco\+::\+Jaco\+T\+F\+Tree}!calculate\+Postion@{calculate\+Postion}}
+\index{calculate\+Postion@{calculate\+Postion}!jaco\+::\+Jaco\+T\+F\+Tree@{jaco\+::\+Jaco\+T\+F\+Tree}}
+\subsubsection[{\texorpdfstring{calculate\+Postion(void)}{calculatePostion(void)}}]{\setlength{\rightskip}{0pt plus 5cm}void jaco\+::\+Jaco\+T\+F\+Tree\+::calculate\+Postion (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classjaco_1_1JacoTFTree_a9d27ae1569454f687fdb3efc3c2718cf}{}\label{classjaco_1_1JacoTFTree_a9d27ae1569454f687fdb3efc3c2718cf}
+
+\begin{DoxyCode}
+47 \{
+48     \textcolor{comment}{// Update the forward Kinematics}
+49     \hyperlink{classjaco_1_1JacoTFTree_aacb83b30f56868891d78852834ef0532}{kinematics\_}.\hyperlink{classjaco_1_1JacoKinematics_a605302243138ca469a7a416be25a6804}{updateForward}(\hyperlink{classjaco_1_1JacoTFTree_aacb83b30f56868891d78852834ef0532}{kinematics\_}.
+      \hyperlink{classjaco_1_1JacoKinematics_a340eda126d97aa3700cc5dc8be89aa39}{degToRad}(\hyperlink{classjaco_1_1JacoTFTree_a352b7d128f76d3a4f01e01ec8b416e22}{current\_angles\_}.\hyperlink{structjaco__msgs_1_1JointAngles___a5ebadd874f74af99d452dc42787489b7}{joint1}),
+50                               \hyperlink{classjaco_1_1JacoTFTree_aacb83b30f56868891d78852834ef0532}{kinematics\_}.\hyperlink{classjaco_1_1JacoKinematics_a340eda126d97aa3700cc5dc8be89aa39}{degToRad}(
+      \hyperlink{classjaco_1_1JacoTFTree_a352b7d128f76d3a4f01e01ec8b416e22}{current\_angles\_}.\hyperlink{structjaco__msgs_1_1JointAngles___ad7bfb312caeafc6b2cb1fc02c6a3e116}{joint2}),
+51                               \hyperlink{classjaco_1_1JacoTFTree_aacb83b30f56868891d78852834ef0532}{kinematics\_}.\hyperlink{classjaco_1_1JacoKinematics_a340eda126d97aa3700cc5dc8be89aa39}{degToRad}(
+      \hyperlink{classjaco_1_1JacoTFTree_a352b7d128f76d3a4f01e01ec8b416e22}{current\_angles\_}.\hyperlink{structjaco__msgs_1_1JointAngles___ae8e5d407b34f0a6acd368ec1a28df526}{joint3}),
+52                               \hyperlink{classjaco_1_1JacoTFTree_aacb83b30f56868891d78852834ef0532}{kinematics\_}.\hyperlink{classjaco_1_1JacoKinematics_a340eda126d97aa3700cc5dc8be89aa39}{degToRad}(
+      \hyperlink{classjaco_1_1JacoTFTree_a352b7d128f76d3a4f01e01ec8b416e22}{current\_angles\_}.\hyperlink{structjaco__msgs_1_1JointAngles___accb31f45f3a313794a9cab57b8a9b952}{joint4}),
+53                               \hyperlink{classjaco_1_1JacoTFTree_aacb83b30f56868891d78852834ef0532}{kinematics\_}.\hyperlink{classjaco_1_1JacoKinematics_a340eda126d97aa3700cc5dc8be89aa39}{degToRad}(
+      \hyperlink{classjaco_1_1JacoTFTree_a352b7d128f76d3a4f01e01ec8b416e22}{current\_angles\_}.\hyperlink{structjaco__msgs_1_1JointAngles___ad02e456e0b382b2bf59b4eeb93318921}{joint5}),
+54                               \hyperlink{classjaco_1_1JacoTFTree_aacb83b30f56868891d78852834ef0532}{kinematics\_}.\hyperlink{classjaco_1_1JacoKinematics_a340eda126d97aa3700cc5dc8be89aa39}{degToRad}(
+      \hyperlink{classjaco_1_1JacoTFTree_a352b7d128f76d3a4f01e01ec8b416e22}{current\_angles\_}.\hyperlink{structjaco__msgs_1_1JointAngles___a474d9f2a0e329ba6bd08c8fa265e9a50}{joint6}));
+55 \}
+\end{DoxyCode}
+\index{jaco\+::\+Jaco\+T\+F\+Tree@{jaco\+::\+Jaco\+T\+F\+Tree}!joint\+Angles\+Msg\+Handler@{joint\+Angles\+Msg\+Handler}}
+\index{joint\+Angles\+Msg\+Handler@{joint\+Angles\+Msg\+Handler}!jaco\+::\+Jaco\+T\+F\+Tree@{jaco\+::\+Jaco\+T\+F\+Tree}}
+\subsubsection[{\texorpdfstring{joint\+Angles\+Msg\+Handler(const jaco\+\_\+msgs\+::\+Joint\+Angles\+Const\+Ptr \&joint\+\_\+angles)}{jointAnglesMsgHandler(const jaco_msgs::JointAnglesConstPtr &joint_angles)}}]{\setlength{\rightskip}{0pt plus 5cm}void jaco\+::\+Jaco\+T\+F\+Tree\+::joint\+Angles\+Msg\+Handler (
+\begin{DoxyParamCaption}
+\item[{const {\bf jaco\+\_\+msgs\+::\+Joint\+Angles\+Const\+Ptr} \&}]{joint\+\_\+angles}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classjaco_1_1JacoTFTree_ad3cc49dbb3058895d32aa825f386d9d5}{}\label{classjaco_1_1JacoTFTree_ad3cc49dbb3058895d32aa825f386d9d5}
+
+\begin{DoxyCode}
+34 \{
+35     \hyperlink{classjaco_1_1JacoTFTree_a352b7d128f76d3a4f01e01ec8b416e22}{current\_angles\_}.\hyperlink{structjaco__msgs_1_1JointAngles___a5ebadd874f74af99d452dc42787489b7}{joint1} = joint\_angles->joint1;
+36     \hyperlink{classjaco_1_1JacoTFTree_a352b7d128f76d3a4f01e01ec8b416e22}{current\_angles\_}.\hyperlink{structjaco__msgs_1_1JointAngles___ad7bfb312caeafc6b2cb1fc02c6a3e116}{joint2} = joint\_angles->joint2;
+37     \hyperlink{classjaco_1_1JacoTFTree_a352b7d128f76d3a4f01e01ec8b416e22}{current\_angles\_}.\hyperlink{structjaco__msgs_1_1JointAngles___ae8e5d407b34f0a6acd368ec1a28df526}{joint3} = joint\_angles->joint3;
+38     \hyperlink{classjaco_1_1JacoTFTree_a352b7d128f76d3a4f01e01ec8b416e22}{current\_angles\_}.\hyperlink{structjaco__msgs_1_1JointAngles___accb31f45f3a313794a9cab57b8a9b952}{joint4} = joint\_angles->joint4;
+39     \hyperlink{classjaco_1_1JacoTFTree_a352b7d128f76d3a4f01e01ec8b416e22}{current\_angles\_}.\hyperlink{structjaco__msgs_1_1JointAngles___ad02e456e0b382b2bf59b4eeb93318921}{joint5} = joint\_angles->joint5;
+40     \hyperlink{classjaco_1_1JacoTFTree_a352b7d128f76d3a4f01e01ec8b416e22}{current\_angles\_}.\hyperlink{structjaco__msgs_1_1JointAngles___a474d9f2a0e329ba6bd08c8fa265e9a50}{joint6} = joint\_angles->joint6;
+41     \hyperlink{classjaco_1_1JacoTFTree_a20869124ed9dd0b936d79d5d8a60b6db}{last\_angle\_update\_} = ros::Time().now();
+42     \hyperlink{classjaco_1_1JacoTFTree_a1470ccde41ff4213c92b4e7ecbcad3e3}{tf\_update\_timer\_}.start();
+43 \}
+\end{DoxyCode}
+\index{jaco\+::\+Jaco\+T\+F\+Tree@{jaco\+::\+Jaco\+T\+F\+Tree}!tf\+Update\+Handler@{tf\+Update\+Handler}}
+\index{tf\+Update\+Handler@{tf\+Update\+Handler}!jaco\+::\+Jaco\+T\+F\+Tree@{jaco\+::\+Jaco\+T\+F\+Tree}}
+\subsubsection[{\texorpdfstring{tf\+Update\+Handler(const ros\+::\+Timer\+Event \&)}{tfUpdateHandler(const ros::TimerEvent &)}}]{\setlength{\rightskip}{0pt plus 5cm}void jaco\+::\+Jaco\+T\+F\+Tree\+::tf\+Update\+Handler (
+\begin{DoxyParamCaption}
+\item[{const ros\+::\+Timer\+Event \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classjaco_1_1JacoTFTree_a6c1129c477dfc9e17cd2185924033ad5}{}\label{classjaco_1_1JacoTFTree_a6c1129c477dfc9e17cd2185924033ad5}
+
+\begin{DoxyCode}
+59 \{
+60     this->\hyperlink{classjaco_1_1JacoTFTree_a9d27ae1569454f687fdb3efc3c2718cf}{calculatePostion}();  \textcolor{comment}{// Update TF Tree}
+61 
+62     \textcolor{keywordflow}{if} ((ros::Time().now().toSec() - \hyperlink{classjaco_1_1JacoTFTree_a20869124ed9dd0b936d79d5d8a60b6db}{last\_angle\_update\_}.toSec()) > 1)
+63     \{
+64         \hyperlink{classjaco_1_1JacoTFTree_a1470ccde41ff4213c92b4e7ecbcad3e3}{tf\_update\_timer\_}.stop();
+65     \}
+66 \}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\index{jaco\+::\+Jaco\+T\+F\+Tree@{jaco\+::\+Jaco\+T\+F\+Tree}!current\+\_\+angles\+\_\+@{current\+\_\+angles\+\_\+}}
+\index{current\+\_\+angles\+\_\+@{current\+\_\+angles\+\_\+}!jaco\+::\+Jaco\+T\+F\+Tree@{jaco\+::\+Jaco\+T\+F\+Tree}}
+\subsubsection[{\texorpdfstring{current\+\_\+angles\+\_\+}{current_angles_}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf jaco\+\_\+msgs\+::\+Joint\+Angles} jaco\+::\+Jaco\+T\+F\+Tree\+::current\+\_\+angles\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classjaco_1_1JacoTFTree_a352b7d128f76d3a4f01e01ec8b416e22}{}\label{classjaco_1_1JacoTFTree_a352b7d128f76d3a4f01e01ec8b416e22}
+\index{jaco\+::\+Jaco\+T\+F\+Tree@{jaco\+::\+Jaco\+T\+F\+Tree}!joint\+\_\+angles\+\_\+subscriber\+\_\+@{joint\+\_\+angles\+\_\+subscriber\+\_\+}}
+\index{joint\+\_\+angles\+\_\+subscriber\+\_\+@{joint\+\_\+angles\+\_\+subscriber\+\_\+}!jaco\+::\+Jaco\+T\+F\+Tree@{jaco\+::\+Jaco\+T\+F\+Tree}}
+\subsubsection[{\texorpdfstring{joint\+\_\+angles\+\_\+subscriber\+\_\+}{joint_angles_subscriber_}}]{\setlength{\rightskip}{0pt plus 5cm}ros\+::\+Subscriber jaco\+::\+Jaco\+T\+F\+Tree\+::joint\+\_\+angles\+\_\+subscriber\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classjaco_1_1JacoTFTree_a5908642f0eee94b14d4b4ef649e4ad0f}{}\label{classjaco_1_1JacoTFTree_a5908642f0eee94b14d4b4ef649e4ad0f}
+\index{jaco\+::\+Jaco\+T\+F\+Tree@{jaco\+::\+Jaco\+T\+F\+Tree}!kinematics\+\_\+@{kinematics\+\_\+}}
+\index{kinematics\+\_\+@{kinematics\+\_\+}!jaco\+::\+Jaco\+T\+F\+Tree@{jaco\+::\+Jaco\+T\+F\+Tree}}
+\subsubsection[{\texorpdfstring{kinematics\+\_\+}{kinematics_}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf jaco\+::\+Jaco\+Kinematics} jaco\+::\+Jaco\+T\+F\+Tree\+::kinematics\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classjaco_1_1JacoTFTree_aacb83b30f56868891d78852834ef0532}{}\label{classjaco_1_1JacoTFTree_aacb83b30f56868891d78852834ef0532}
+\index{jaco\+::\+Jaco\+T\+F\+Tree@{jaco\+::\+Jaco\+T\+F\+Tree}!last\+\_\+angle\+\_\+update\+\_\+@{last\+\_\+angle\+\_\+update\+\_\+}}
+\index{last\+\_\+angle\+\_\+update\+\_\+@{last\+\_\+angle\+\_\+update\+\_\+}!jaco\+::\+Jaco\+T\+F\+Tree@{jaco\+::\+Jaco\+T\+F\+Tree}}
+\subsubsection[{\texorpdfstring{last\+\_\+angle\+\_\+update\+\_\+}{last_angle_update_}}]{\setlength{\rightskip}{0pt plus 5cm}ros\+::\+Time jaco\+::\+Jaco\+T\+F\+Tree\+::last\+\_\+angle\+\_\+update\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classjaco_1_1JacoTFTree_a20869124ed9dd0b936d79d5d8a60b6db}{}\label{classjaco_1_1JacoTFTree_a20869124ed9dd0b936d79d5d8a60b6db}
+\index{jaco\+::\+Jaco\+T\+F\+Tree@{jaco\+::\+Jaco\+T\+F\+Tree}!tf\+\_\+update\+\_\+timer\+\_\+@{tf\+\_\+update\+\_\+timer\+\_\+}}
+\index{tf\+\_\+update\+\_\+timer\+\_\+@{tf\+\_\+update\+\_\+timer\+\_\+}!jaco\+::\+Jaco\+T\+F\+Tree@{jaco\+::\+Jaco\+T\+F\+Tree}}
+\subsubsection[{\texorpdfstring{tf\+\_\+update\+\_\+timer\+\_\+}{tf_update_timer_}}]{\setlength{\rightskip}{0pt plus 5cm}ros\+::\+Timer jaco\+::\+Jaco\+T\+F\+Tree\+::tf\+\_\+update\+\_\+timer\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classjaco_1_1JacoTFTree_a1470ccde41ff4213c92b4e7ecbcad3e3}{}\label{classjaco_1_1JacoTFTree_a1470ccde41ff4213c92b4e7ecbcad3e3}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Longfei/\+Desktop/catkin\+\_\+\+Kinova\+R\+O\+S/src/jaco-\/ros/jaco\+\_\+driver/include/jaco\+\_\+driver/\hyperlink{jaco__tf__updater_8h}{jaco\+\_\+tf\+\_\+updater.\+h}\item 
+D\+:/\+Longfei/\+Desktop/catkin\+\_\+\+Kinova\+R\+O\+S/src/jaco-\/ros/jaco\+\_\+driver/src/nodes/\hyperlink{jaco__tf__updater_8cpp}{jaco\+\_\+tf\+\_\+updater.\+cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,112 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="db/d9b/structjaco__msgs_1_1StopRequest__">
+<title>jaco_msgs::StopRequest_ struct Reference</title>
+<para>
+    <programlisting>#include <link linkend="d9/d02/StopRequest_8h">&quot;StopRequest.h&quot;</link></programlisting>
+</para>
+<para>Inheritance diagram for jaco_msgs::StopRequest_</para>
+<para>
+    <figure>
+        <title>Inheritance graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../d3/d97/structjaco__msgs_1_1StopRequest____inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Collaboration diagram for jaco_msgs::StopRequest_</para>
+<para>
+    <figure>
+        <title>Collaboration graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../dd/d9f/structjaco__msgs_1_1StopRequest____coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+    <templateparamlist>
+      <param>
+        <type>class</type>
+        <declname>ContainerAllocator</declname>
+        <defname>ContainerAllocator</defname>
+      </param>
+    </templateparamlist>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef boost::shared_ptr&lt; ::<link linkend="db/d9b/structjaco__msgs_1_1StopRequest__">jaco_msgs::StopRequest_</link>&lt; ContainerAllocator &gt; const  &gt;  <link linkend="db/d9b/structjaco__msgs_1_1StopRequest___1a8b4d8e02d8ae83d158cea49a234a07ff">ConstPtr</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef boost::shared_ptr&lt; ::<link linkend="db/d9b/structjaco__msgs_1_1StopRequest__">jaco_msgs::StopRequest_</link>&lt; ContainerAllocator &gt; &gt;  <link linkend="db/d9b/structjaco__msgs_1_1StopRequest___1ae726f4f132f3ee8365f7dfaa7e92dd3a">Ptr</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef <link linkend="db/d9b/structjaco__msgs_1_1StopRequest__">StopRequest_</link>&lt; ContainerAllocator &gt;  <link linkend="db/d9b/structjaco__msgs_1_1StopRequest___1a407910ce1da798042beb37f367c3a3df">Type</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Public Attributes</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>boost::shared_ptr&lt; std::map&lt; std::string, std::string &gt; &gt; __connection_header</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="db/d9b/structjaco__msgs_1_1StopRequest___1abb8615bb2d838799de21b5af9840afdc">StopRequest_</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="db/d9b/structjaco__msgs_1_1StopRequest___1afb2fee4be2e99a39dc69999a3c5e3406">StopRequest_</link> (
+const ContainerAllocator &amp; _alloc)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+            <section xml:id="db/d9b/structjaco__msgs_1_1StopRequest___1a8b4d8e02d8ae83d158cea49a234a07ff">
+                <title>typedef boost::shared_ptr&lt; ::jaco_msgs::StopRequest_&lt;ContainerAllocator&gt; const&gt; jaco_msgs::StopRequest_&lt; ContainerAllocator &gt;::ConstPtr</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="db/d9b/structjaco__msgs_1_1StopRequest___1ae726f4f132f3ee8365f7dfaa7e92dd3a">
+                <title>typedef boost::shared_ptr&lt; ::jaco_msgs::StopRequest_&lt;ContainerAllocator&gt; &gt; jaco_msgs::StopRequest_&lt; ContainerAllocator &gt;::Ptr</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="db/d9b/structjaco__msgs_1_1StopRequest___1a407910ce1da798042beb37f367c3a3df">
+                <title>typedef StopRequest_&lt;ContainerAllocator&gt; jaco_msgs::StopRequest_&lt; ContainerAllocator &gt;::Type</title> <emphasis></emphasis>
+                
+            </section>
+        <section>
+            <title>Member Data Documentation</title>
+        </section>
+            <section xml:id="db/d9b/structjaco__msgs_1_1StopRequest___1abb8615bb2d838799de21b5af9840afdc">
+                <title>jaco_msgs::StopRequest_&lt; ContainerAllocator &gt;::StopRequest_ ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="db/d9b/structjaco__msgs_1_1StopRequest___1afb2fee4be2e99a39dc69999a3c5e3406">
+                <title>jaco_msgs::StopRequest_&lt; ContainerAllocator &gt;::StopRequest_ (const ContainerAllocator &amp;_alloc)</title> <emphasis></emphasis>
+                
+            </section>
+</section>

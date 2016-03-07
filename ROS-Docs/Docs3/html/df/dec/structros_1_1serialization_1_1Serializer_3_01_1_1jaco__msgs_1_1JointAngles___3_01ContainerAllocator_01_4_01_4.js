@@ -1,0 +1,5 @@
+var structros_1_1serialization_1_1Serializer_3_01_1_1jaco__msgs_1_1JointAngles___3_01ContainerAllocator_01_4_01_4 =
+[
+    [ "allInOne", "df/dec/structros_1_1serialization_1_1Serializer_3_01_1_1jaco__msgs_1_1JointAngles___3_01ContainerAllocator_01_4_01_4.html#af95bbb96f9566d5ec913414458c3c796", null ],
+    [ "ROS_DECLARE_ALLINONE_SERIALIZER", "df/dec/structros_1_1serialization_1_1Serializer_3_01_1_1jaco__msgs_1_1JointAngles___3_01ContainerAllocator_01_4_01_4.html#a798ad306d0d5d94f7eb45903e651bf23", null ]
+];

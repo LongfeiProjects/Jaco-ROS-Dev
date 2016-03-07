@@ -1,0 +1,130 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="d6/de2/structjaco__msgs_1_1ArmPoseGoal__">
+<title>jaco_msgs::ArmPoseGoal_ struct Reference</title>
+<para>
+    <programlisting>#include <link linkend="dc/dd4/ArmPoseGoal_8h">&quot;ArmPoseGoal.h&quot;</link></programlisting>
+</para>
+<para>Inheritance diagram for jaco_msgs::ArmPoseGoal_</para>
+<para>
+    <figure>
+        <title>Inheritance graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../d9/d47/structjaco__msgs_1_1ArmPoseGoal____inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Collaboration diagram for jaco_msgs::ArmPoseGoal_</para>
+<para>
+    <figure>
+        <title>Collaboration graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../d3/dc7/structjaco__msgs_1_1ArmPoseGoal____coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+    <templateparamlist>
+      <param>
+        <type>class</type>
+        <declname>ContainerAllocator</declname>
+        <defname>ContainerAllocator</defname>
+      </param>
+    </templateparamlist>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef ::geometry_msgs::PoseStamped_&lt; ContainerAllocator &gt;  <link linkend="d6/de2/structjaco__msgs_1_1ArmPoseGoal___1a000eb0e79cdb7de7c51bac91709ffae0">_pose_type</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef boost::shared_ptr&lt; ::<link linkend="d6/de2/structjaco__msgs_1_1ArmPoseGoal__">jaco_msgs::ArmPoseGoal_</link>&lt; ContainerAllocator &gt; const  &gt;  <link linkend="d6/de2/structjaco__msgs_1_1ArmPoseGoal___1a54d5a329b1a740ee3922d9b43646d1ba">ConstPtr</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef boost::shared_ptr&lt; ::<link linkend="d6/de2/structjaco__msgs_1_1ArmPoseGoal__">jaco_msgs::ArmPoseGoal_</link>&lt; ContainerAllocator &gt; &gt;  <link linkend="d6/de2/structjaco__msgs_1_1ArmPoseGoal___1ad71d8fe47f303b9e2b8c0e8025424521">Ptr</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef <link linkend="d6/de2/structjaco__msgs_1_1ArmPoseGoal__">ArmPoseGoal_</link>&lt; ContainerAllocator &gt;  <link linkend="d6/de2/structjaco__msgs_1_1ArmPoseGoal___1a3eb2f7692263577184c3ae57546c0ca4">Type</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Public Attributes</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>boost::shared_ptr&lt; std::map&lt; std::string, std::string &gt; &gt; __connection_header</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>_pose_type pose</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="d6/de2/structjaco__msgs_1_1ArmPoseGoal___1ae3264330d49f19b8fc7dfa4bd186ed4b">ArmPoseGoal_</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="d6/de2/structjaco__msgs_1_1ArmPoseGoal___1a632af32f58ce624b50d654790a870cd4">ArmPoseGoal_</link> (
+const ContainerAllocator &amp; _alloc)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+            <section xml:id="d6/de2/structjaco__msgs_1_1ArmPoseGoal___1a000eb0e79cdb7de7c51bac91709ffae0">
+                <title>typedef ::geometry_msgs::PoseStamped_&lt;ContainerAllocator&gt; jaco_msgs::ArmPoseGoal_&lt; ContainerAllocator &gt;::_pose_type</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="d6/de2/structjaco__msgs_1_1ArmPoseGoal___1a54d5a329b1a740ee3922d9b43646d1ba">
+                <title>typedef boost::shared_ptr&lt; ::jaco_msgs::ArmPoseGoal_&lt;ContainerAllocator&gt; const&gt; jaco_msgs::ArmPoseGoal_&lt; ContainerAllocator &gt;::ConstPtr</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="d6/de2/structjaco__msgs_1_1ArmPoseGoal___1ad71d8fe47f303b9e2b8c0e8025424521">
+                <title>typedef boost::shared_ptr&lt; ::jaco_msgs::ArmPoseGoal_&lt;ContainerAllocator&gt; &gt; jaco_msgs::ArmPoseGoal_&lt; ContainerAllocator &gt;::Ptr</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="d6/de2/structjaco__msgs_1_1ArmPoseGoal___1a3eb2f7692263577184c3ae57546c0ca4">
+                <title>typedef ArmPoseGoal_&lt;ContainerAllocator&gt; jaco_msgs::ArmPoseGoal_&lt; ContainerAllocator &gt;::Type</title> <emphasis></emphasis>
+                
+            </section>
+        <section>
+            <title>Member Data Documentation</title>
+        </section>
+            <section xml:id="d6/de2/structjaco__msgs_1_1ArmPoseGoal___1ae3264330d49f19b8fc7dfa4bd186ed4b">
+                <title>jaco_msgs::ArmPoseGoal_&lt; ContainerAllocator &gt;::ArmPoseGoal_ ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="d6/de2/structjaco__msgs_1_1ArmPoseGoal___1a632af32f58ce624b50d654790a870cd4">
+                <title>jaco_msgs::ArmPoseGoal_&lt; ContainerAllocator &gt;::ArmPoseGoal_ (const ContainerAllocator &amp;_alloc)</title> <emphasis></emphasis>
+                
+            </section>
+</section>

@@ -1,0 +1,196 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="d1/de3/classjaco__msgs_1_1msg_1_1__ArmPoseResult_1_1ArmPoseResult">
+<title>jaco_msgs::msg::_ArmPoseResult::ArmPoseResult class Reference</title>
+<para>Inheritance diagram for jaco_msgs::msg::_ArmPoseResult::ArmPoseResult</para>
+<para>
+    <figure>
+        <title>Inheritance graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../d0/dd5/classjaco__msgs_1_1msg_1_1__ArmPoseResult_1_1ArmPoseResult__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Collaboration diagram for jaco_msgs::msg::_ArmPoseResult::ArmPoseResult</para>
+<para>
+    <figure>
+        <title>Collaboration graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../d0/dfa/classjaco__msgs_1_1msg_1_1__ArmPoseResult_1_1ArmPoseResult__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>list __slots__</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>string _full_text</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>bool _has_header</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>string _md5sum</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>list _slot_types</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>string _type</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Public Attributes</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>pose</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>def <link linkend="d1/de3/classjaco__msgs_1_1msg_1_1__ArmPoseResult_1_1ArmPoseResult_1a34d4a7fadb6c745f213afc32de2732de">__init__</link> (
+self , args , kwds )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>def <link linkend="d1/de3/classjaco__msgs_1_1msg_1_1__ArmPoseResult_1_1ArmPoseResult_1a790fee86b6ab3f966b1429a12fea923a">deserialize</link> (
+self , str )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>def <link linkend="d1/de3/classjaco__msgs_1_1msg_1_1__ArmPoseResult_1_1ArmPoseResult_1a43b337fcc8432842fc41c375313c8ae4">deserialize_numpy</link> (
+self , str , numpy )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>def <link linkend="d1/de3/classjaco__msgs_1_1msg_1_1__ArmPoseResult_1_1ArmPoseResult_1a10228688d2c0fb6adcd0704cd5d75206">serialize</link> (
+self , buff )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>def <link linkend="d1/de3/classjaco__msgs_1_1msg_1_1__ArmPoseResult_1_1ArmPoseResult_1ae14580df690e5c4ad0336be823e32b9d">serialize_numpy</link> (
+self , buff , numpy )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>def <link linkend="d1/de3/classjaco__msgs_1_1msg_1_1__ArmPoseResult_1_1ArmPoseResult_1a8baa7608b16aaa206b7ab60a0f985905">_get_types</link> (
+self )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Member Data Documentation</title>
+        </section>
+            <section xml:id="d1/de3/classjaco__msgs_1_1msg_1_1__ArmPoseResult_1_1ArmPoseResult_1a34d4a7fadb6c745f213afc32de2732de">
+                <title>def jaco_msgs.msg._ArmPoseResult.ArmPoseResult.__init__ (self, args, kwds)</title> <emphasis></emphasis>
+                
+<para><literallayout>Constructor. Any message fields that are implicitly/explicitly
+set to None will be assigned a default value. The recommend
+use is keyword arguments as this is more robust to future message
+changes.  You cannot mix in-order arguments and keyword arguments.
+
+The available fields are:
+   pose
+
+:param args: complete set of field values, in .msg order
+:param kwds: use keyword arguments corresponding to message field names
+to set specific fields.
+</literallayout> </para>
+
+            </section>
+            <section xml:id="d1/de3/classjaco__msgs_1_1msg_1_1__ArmPoseResult_1_1ArmPoseResult_1a790fee86b6ab3f966b1429a12fea923a">
+                <title>def jaco_msgs.msg._ArmPoseResult.ArmPoseResult.deserialize (self, str)</title> <emphasis></emphasis>
+                
+<para><literallayout>unpack serialized message in str into this message instance
+:param str: byte array of serialized message, ``str``
+</literallayout> </para>
+
+            </section>
+            <section xml:id="d1/de3/classjaco__msgs_1_1msg_1_1__ArmPoseResult_1_1ArmPoseResult_1a43b337fcc8432842fc41c375313c8ae4">
+                <title>def jaco_msgs.msg._ArmPoseResult.ArmPoseResult.deserialize_numpy (self, str, numpy)</title> <emphasis></emphasis>
+                
+<para><literallayout>unpack serialized message in str into this message instance using numpy for array types
+:param str: byte array of serialized message, ``str``
+:param numpy: numpy python module
+</literallayout> </para>
+
+            </section>
+            <section xml:id="d1/de3/classjaco__msgs_1_1msg_1_1__ArmPoseResult_1_1ArmPoseResult_1a10228688d2c0fb6adcd0704cd5d75206">
+                <title>def jaco_msgs.msg._ArmPoseResult.ArmPoseResult.serialize (self, buff)</title> <emphasis></emphasis>
+                
+<para><literallayout>serialize message into buffer
+:param buff: buffer, ``StringIO``
+</literallayout> </para>
+
+            </section>
+            <section xml:id="d1/de3/classjaco__msgs_1_1msg_1_1__ArmPoseResult_1_1ArmPoseResult_1ae14580df690e5c4ad0336be823e32b9d">
+                <title>def jaco_msgs.msg._ArmPoseResult.ArmPoseResult.serialize_numpy (self, buff, numpy)</title> <emphasis></emphasis>
+                
+<para><literallayout>serialize message with numpy array types into buffer
+:param buff: buffer, ``StringIO``
+:param numpy: numpy python module
+</literallayout> </para>
+
+            </section>
+            <section xml:id="d1/de3/classjaco__msgs_1_1msg_1_1__ArmPoseResult_1_1ArmPoseResult_1a8baa7608b16aaa206b7ab60a0f985905">
+                <title>def jaco_msgs.msg._ArmPoseResult.ArmPoseResult._get_types (self)</title> <emphasis></emphasis>
+                
+<para><literallayout>internal API method
+</literallayout> </para>
+
+            </section>
+</section>

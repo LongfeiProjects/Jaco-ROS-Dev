@@ -1,0 +1,50 @@
+.TH "ros::message_operations::Printer< ::jaco_msgs::JointAngles_< ContainerAllocator > >" 3 "Thu Mar 3 2016" "Version 1.0.1" "Kinova-ROS" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ros::message_operations::Printer< ::jaco_msgs::JointAngles_< ContainerAllocator > > \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include 'JointAngles\&.h'\fP
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "template<typename Stream > static void \fBstream\fP (Stream &s, const std::string &indent, const ::\fBjaco_msgs::JointAngles_\fP< ContainerAllocator > &v)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.SS "template<class ContainerAllocator>
+.br
+struct ros::message_operations::Printer< ::jaco_msgs::JointAngles_< ContainerAllocator > >"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "template<class ContainerAllocator > template<typename Stream > static void ros::message_operations::Printer< ::\fBjaco_msgs::JointAngles_\fP< ContainerAllocator > >::stream (Stream & s, const std::string & indent, const ::\fBjaco_msgs::JointAngles_\fP< ContainerAllocator > & v)\fC [inline]\fP, \fC [static]\fP"
+
+.PP
+.nf
+245   {
+246     s << indent << "joint1: ";
+247     Printer<float>::stream(s, indent + "  ", v\&.joint1);
+248     s << indent << "joint2: ";
+249     Printer<float>::stream(s, indent + "  ", v\&.joint2);
+250     s << indent << "joint3: ";
+251     Printer<float>::stream(s, indent + "  ", v\&.joint3);
+252     s << indent << "joint4: ";
+253     Printer<float>::stream(s, indent + "  ", v\&.joint4);
+254     s << indent << "joint5: ";
+255     Printer<float>::stream(s, indent + "  ", v\&.joint5);
+256     s << indent << "joint6: ";
+257     Printer<float>::stream(s, indent + "  ", v\&.joint6);
+258   }
+.fi
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Kinova-ROS from the source code\&.

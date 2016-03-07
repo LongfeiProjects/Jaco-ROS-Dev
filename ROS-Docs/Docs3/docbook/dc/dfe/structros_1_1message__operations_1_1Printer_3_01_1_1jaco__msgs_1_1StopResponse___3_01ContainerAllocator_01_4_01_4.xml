@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="dc/dfe/structros_1_1message__operations_1_1Printer_3_01_1_1jaco__msgs_1_1StopResponse___3_01ContainerAllocator_01_4_01_4">
+<title>ros::message_operations::Printer&lt; ::jaco_msgs::StopResponse_&lt; ContainerAllocator &gt; &gt; struct Reference</title>
+<para>
+    <programlisting>#include <link linkend="d5/d58/StopResponse_8h">&quot;StopResponse.h&quot;</link></programlisting>
+</para>
+<para>Inheritance diagram for ros::message_operations::Printer&lt; ::jaco_msgs::StopResponse_&lt; ContainerAllocator &gt; &gt;</para>
+<para>
+    <figure>
+        <title>Inheritance graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../dd/dc4/structros_1_1message__operations_1_1Printer_3_01_1_1jaco__msgs_1_1StopResponse___3_01ContainerAl89e745b50349072470b02a974f44efc0.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Collaboration diagram for ros::message_operations::Printer&lt; ::jaco_msgs::StopResponse_&lt; ContainerAllocator &gt; &gt;</para>
+<para>
+    <figure>
+        <title>Collaboration graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../d6/d97/structros_1_1message__operations_1_1Printer_3_01_1_1jaco__msgs_1_1StopResponse___3_01ContainerAllocator_01_4_01_4__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+    <templateparamlist>
+      <param>
+        <type>class ContainerAllocator</type>
+      </param>
+    </templateparamlist>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static void <link linkend="dc/dfe/structros_1_1message__operations_1_1Printer_3_01_1_1jaco__msgs_1_1StopResponse___3_01ContainerAllocator_01_4_01_4_1a99e4a9496c1f0f7502708e8962c38517">stream</link> (
+Stream &amp; s, const std::string &amp; indent, const ::<link linkend="d3/d1d/structjaco__msgs_1_1StopResponse__">jaco_msgs::StopResponse_</link>&lt; ContainerAllocator &gt; &amp; v)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+            <section xml:id="dc/dfe/structros_1_1message__operations_1_1Printer_3_01_1_1jaco__msgs_1_1StopResponse___3_01ContainerAllocator_01_4_01_4_1a99e4a9496c1f0f7502708e8962c38517">
+                <title>static void ros::message_operations::Printer&lt; ::jaco_msgs::StopResponse_&lt; ContainerAllocator &gt; &gt;::stream (Stream &amp;s, const std::string &amp;indent, const ::jaco_msgs::StopResponse_&lt; ContainerAllocator &gt; &amp;v)</title> <emphasis></emphasis>
+                
+            </section>
+</section>

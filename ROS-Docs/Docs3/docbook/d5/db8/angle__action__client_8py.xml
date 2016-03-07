@@ -1,0 +1,98 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="d5/db8/angle__action__client_8py">
+    <title>angle_action_client.py File Reference</title>
+<para>Include dependency diagram for angle_action_client.py</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../da/dc5/angle__action__client_8py__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Included by dependency diagram for angle_action_client.py</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../db/d31/angle__action__client_8py__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+        <simplesect>
+            <title> Namespaces </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d3/d02/namespaceangle__action__client">angle_action_client</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+    <simplesect>
+        <title>Detailed Description</title>
+    <para>Definition in file D:/Longfei/Desktop/catkin_KinovaROS/src/jaco-ros/jaco_driver/test/angle_action_client.py</para>
+    </simplesect>
+    <literallayout><computeroutput>
+<link linkend="d3/d02/namespaceangle__action__client">1 </link><emphasis class="comment">#!/usr/bin/env&#32;python</emphasis>
+2 
+3 <emphasis class="keyword">import</emphasis>&#32;roslib;&#32;roslib.load_manifest(<emphasis class="stringliteral">&apos;jaco_driver&apos;</emphasis>)
+4 <emphasis class="keyword">import</emphasis>&#32;rospy
+5 
+6 <emphasis class="keyword">import</emphasis>&#32;actionlib
+7 
+8 <emphasis class="keyword">import</emphasis>&#32;<link linkend="d2/dbe/namespacejaco__msgs_1_1msg">jaco_msgs.msg</link>
+9 
+10 <emphasis class="keyword">import</emphasis>&#32;sys
+11 
+12 
+<link linkend="d3/d02/namespaceangle__action__client_1a536654e415d43c20ff7be40b5b60f4e5">13 </link><emphasis class="keyword">def&#32;</emphasis><link linkend="d3/d02/namespaceangle__action__client_1a536654e415d43c20ff7be40b5b60f4e5">pose_client</link>():
+14 &#32;&#32;&#32;&#32;client&#32;=&#32;actionlib.SimpleActionClient(<emphasis class="stringliteral">&apos;/jaco/arm_joint_angles&apos;</emphasis>,&#32;<link linkend="d3/de4/classjaco__msgs_1_1msg_1_1__ArmJointAnglesAction_1_1ArmJointAnglesAction">jaco_msgs.msg.ArmJointAnglesAction</link>)
+15 
+16 &#32;&#32;&#32;&#32;goal&#32;=&#32;<link linkend="d4/d45/classjaco__msgs_1_1msg_1_1__ArmJointAnglesGoal_1_1ArmJointAnglesGoal">jaco_msgs.msg.ArmJointAnglesGoal</link>()
+17 
+18 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;len(sys.argv)&#32;&lt;&#32;7:
+19 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;goal.angles.joint1&#32;=&#32;1.5285271406173706&#32;
+20 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;goal.angles.joint2&#32;=&#32;-1.3800612688064575
+21 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;goal.angles.joint3&#32;=&#32;-0.1439174860715866
+22 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;goal.angles.joint4&#32;=&#32;0.15510250627994537
+23 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;goal.angles.joint5&#32;=&#32;0.6960597634315491
+24 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;goal.angles.joint6&#32;=&#32;3.3098342418670654
+25 
+26 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;rospy.logwarn(<emphasis class="stringliteral">&quot;Using&#32;test&#32;goal:&#32;\n%s&quot;</emphasis>,&#32;goal)
+27 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">else</emphasis>:
+28 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;goal.angles.joint1&#32;=&#32;float(sys.argv[1])
+29 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;goal.angles.joint2&#32;=&#32;float(sys.argv[2])
+30 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;goal.angles.joint3&#32;=&#32;float(sys.argv[3])
+31 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;goal.angles.joint4&#32;=&#32;float(sys.argv[4])
+32 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;goal.angles.joint5&#32;=&#32;float(sys.argv[5])
+33 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;goal.angles.joint6&#32;=&#32;float(sys.argv[6])
+34 
+35 
+36 &#32;&#32;&#32;&#32;client.wait_for_server()
+37 &#32;&#32;&#32;&#32;rospy.loginfo(<emphasis class="stringliteral">&quot;Connected&#32;to&#32;Pose&#32;server&quot;</emphasis>)
+38 
+39 &#32;&#32;&#32;&#32;client.send_goal(goal)
+40 
+41 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">try</emphasis>:
+42 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;client.wait_for_result()
+43 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">except</emphasis>&#32;KeyboardInterrupt:
+44 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;rospy.loginfo(<emphasis class="stringliteral">&quot;Program&#32;interrupted,&#32;pre-empting&#32;goal&quot;</emphasis>)
+45 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;client.cancel_all_goals()
+46 
+47 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;client.get_result()
+48 
+49 <emphasis class="keywordflow">if</emphasis>&#32;__name__&#32;==&#32;<emphasis class="stringliteral">&apos;__main__&apos;</emphasis>:
+50 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">try</emphasis>:
+51 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;rospy.init_node(<emphasis class="stringliteral">&apos;arm_pose_client&apos;</emphasis>)
+<link linkend="d3/d02/namespaceangle__action__client_1ae4489551abd88fa0cd5250b9db7fd50e">52 </link>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;result&#32;=&#32;<link linkend="d3/d02/namespaceangle__action__client_1a536654e415d43c20ff7be40b5b60f4e5">pose_client</link>()
+53 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;rospy.loginfo(<emphasis class="stringliteral">&quot;Result:&#32;%s&quot;</emphasis>,&#32;result)
+54 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">except</emphasis>&#32;rospy.ROSInterruptException:&#32;
+55 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;rospy.loginfo(<emphasis class="stringliteral">&quot;Program&#32;interrupted&#32;before&#32;completion&quot;</emphasis>)
+56 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+    </computeroutput></literallayout>
+</section>

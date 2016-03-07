@@ -1,0 +1,109 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="df/daf/mico__force__control_8py">
+    <title>mico_force_control.py File Reference</title>
+<para>Include dependency diagram for mico_force_control.py</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../de/d79/mico__force__control_8py__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Included by dependency diagram for mico_force_control.py</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../d8/d8e/mico__force__control_8py__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+        <simplesect>
+            <title> Namespaces </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d5/d34/namespacemico__force__control">mico_force_control</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+    <simplesect>
+        <title>Detailed Description</title>
+    <para>Definition in file D:/Longfei/Desktop/catkin_KinovaROS/src/jaco-ros/jaco_demo/nodes/jaco_demo/mico_force_control.py</para>
+    </simplesect>
+    <literallayout><computeroutput>
+<link linkend="d5/d34/namespacemico__force__control">1 </link><emphasis class="comment">#!/usr/bin/env&#32;python</emphasis>
+2 <emphasis class="comment">#</emphasis>
+3 <emphasis class="comment">#&#32;A&#32;basic&#32;node&#32;to&#32;start/stop&#32;force&#32;control&#32;on&#32;Kinova&#32;arms&#32;with&#32;force&#32;sensors</emphasis>
+4 <emphasis class="comment">#&#32;such&#32;as&#32;Mico.</emphasis>
+5 <emphasis class="comment">#&#32;See&#32;&apos;robot&apos;&#32;parameter&#32;to&#32;change&#32;the&#32;default&#32;driver&#32;namespace.</emphasis>
+6 
+7 <emphasis class="keyword">import</emphasis>&#32;roslib;&#32;roslib.load_manifest(<emphasis class="stringliteral">&apos;jaco_demo&apos;</emphasis>)
+8 <emphasis class="keyword">import</emphasis>&#32;rospy
+9 
+10 <emphasis class="keyword">from</emphasis>&#32;geometry_msgs.msg&#32;<emphasis class="keyword">import</emphasis>&#32;Vector3
+11 <emphasis class="keyword">from</emphasis>&#32;<link linkend="d4/d69/namespacejaco__msgs_1_1srv">jaco_msgs.srv</link>&#32;&#32;&#32;&#32;&#32;<emphasis class="keyword">import</emphasis>&#32;SetForceControlParams,&#32;SetForceControlParamsRequest,&#32;Start,&#32;Stop
+12 
+13 rospy.init_node(<emphasis class="stringliteral">&quot;force_control&quot;</emphasis>)
+14 
+<link linkend="d5/d34/namespacemico__force__control_1ae3d8428c9fe2a197c78735d5e2bf7d13">15 </link>robot&#32;&#32;&#32;&#32;&#32;=&#32;rospy.get_param(<emphasis class="stringliteral">&quot;robot&quot;</emphasis>,&#32;<emphasis class="stringliteral">&quot;mico&quot;</emphasis>)
+16 
+<link linkend="d5/d34/namespacemico__force__control_1a7bd9a03e89cd1a75c5b5fd43fe20043d">17 </link>inertia_lin&#32;&#32;&#32;=&#32;rospy.get_param(<emphasis class="stringliteral">&quot;inertia_lin&quot;</emphasis>,&#32;&#32;&#32;&#32;10.0)
+<link linkend="d5/d34/namespacemico__force__control_1a15342e572c568a704fb5af7c5865eae3">18 </link>inertia_ang&#32;&#32;&#32;=&#32;rospy.get_param(<emphasis class="stringliteral">&quot;inertia_ang&quot;</emphasis>,&#32;&#32;&#32;&#32;&#32;3.0)
+<link linkend="d5/d34/namespacemico__force__control_1a1355006730f1faaee4334f0c43f59746">19 </link>damping_lin&#32;&#32;&#32;=&#32;rospy.get_param(<emphasis class="stringliteral">&quot;damping_lin&quot;</emphasis>,&#32;&#32;&#32;&#32;80.0)
+<link linkend="d5/d34/namespacemico__force__control_1a92927656a13dc0f41e49ba262d47d74a">20 </link>damping_ang&#32;&#32;&#32;=&#32;rospy.get_param(<emphasis class="stringliteral">&quot;damping_ang&quot;</emphasis>,&#32;&#32;&#32;&#32;10.0)
+<link linkend="d5/d34/namespacemico__force__control_1a0ceb8e5eca328f479981a597d6ca88b2">21 </link>force_min_lin&#32;=&#32;rospy.get_param(<emphasis class="stringliteral">&quot;force_min_lin&quot;</emphasis>,&#32;&#32;&#32;0.1)
+<link linkend="d5/d34/namespacemico__force__control_1a6db552753f1e9477b67bafd6038452c1">22 </link>force_min_ang&#32;=&#32;rospy.get_param(<emphasis class="stringliteral">&quot;force_min_ang&quot;</emphasis>,&#32;&#32;&#32;0.1)
+<link linkend="d5/d34/namespacemico__force__control_1aa4fb6bd6977bbc2751bcc1d82e91372b">23 </link>force_max_lin&#32;=&#32;rospy.get_param(<emphasis class="stringliteral">&quot;force_max_lin&quot;</emphasis>,&#32;&#32;40.0)
+<link linkend="d5/d34/namespacemico__force__control_1a4f12ede33ebf4ea40b54445f58818f18">24 </link>force_max_ang&#32;=&#32;rospy.get_param(<emphasis class="stringliteral">&quot;force_max_ang&quot;</emphasis>,&#32;&#32;40.0)
+25 
+<link linkend="d5/d34/namespacemico__force__control_1ad419a15a7ffa6346e96486103e629a03">26 </link>srv_start&#32;=&#32;rospy.ServiceProxy(robot&#32;+&#32;<emphasis class="stringliteral">&quot;_arm_driver/in/start_force_control&quot;</emphasis>,&#32;&#32;&#32;&#32;&#32;&#32;Start)
+<link linkend="d5/d34/namespacemico__force__control_1a2cebf1d67600a8e0e30509e127b2ca15">27 </link>srv_stop&#32;&#32;=&#32;rospy.ServiceProxy(robot&#32;+&#32;<emphasis class="stringliteral">&quot;_arm_driver/in/stop_force_control&quot;</emphasis>,&#32;&#32;&#32;&#32;&#32;&#32;&#32;Stop)
+<link linkend="d5/d34/namespacemico__force__control_1aec902d9fa26ad89858657a5c69604244">28 </link>srv_set&#32;&#32;&#32;=&#32;rospy.ServiceProxy(robot&#32;+&#32;<emphasis class="stringliteral">&quot;_arm_driver/in/set_force_control_params&quot;</emphasis>,&#32;SetForceControlParams)
+29 
+30 srv_start.call()
+31 
+<link linkend="d5/d34/namespacemico__force__control_1adaac210d765d56a858099e0da5985634">32 </link>set_req&#32;=&#32;<link linkend="d7/dba/namespacejaco__msgs_1a3486b7826c8a999135bb2eded905e7a8">SetForceControlParamsRequest</link>()
+<link linkend="d5/d34/namespacemico__force__control_1aa9fdd2ef1b77ee897f0d602302379821">33 </link>set_req.inertia_linear.x&#32;&#32;&#32;&#32;=&#32;inertia_lin
+<link linkend="d5/d34/namespacemico__force__control_1a8a0f8c92894b08350a0d164ffac7d643">34 </link>set_req.inertia_linear.y&#32;&#32;&#32;&#32;=&#32;inertia_lin
+<link linkend="d5/d34/namespacemico__force__control_1a5537f83e86fedd5a78e2bbaab62d326f">35 </link>set_req.inertia_linear.z&#32;&#32;&#32;&#32;=&#32;inertia_lin
+36 set_req.inertia_angular.x&#32;&#32;&#32;=&#32;inertia_ang
+37 set_req.inertia_angular.y&#32;&#32;&#32;=&#32;inertia_ang
+38 set_req.inertia_angular.z&#32;&#32;&#32;=&#32;inertia_ang
+39 set_req.damping_linear.x&#32;&#32;&#32;&#32;=&#32;damping_lin
+40 set_req.damping_linear.y&#32;&#32;&#32;&#32;=&#32;damping_lin
+41 set_req.damping_linear.z&#32;&#32;&#32;&#32;=&#32;damping_lin
+42 set_req.damping_angular.x&#32;&#32;&#32;=&#32;damping_ang
+43 set_req.damping_angular.y&#32;&#32;&#32;=&#32;damping_ang
+44 set_req.damping_angular.z&#32;&#32;&#32;=&#32;damping_ang
+45 set_req.force_min_linear.x&#32;&#32;=&#32;force_min_lin
+46 set_req.force_min_linear.y&#32;&#32;=&#32;force_min_lin
+47 set_req.force_min_linear.z&#32;&#32;=&#32;force_min_lin
+48 set_req.force_min_angular.x&#32;=&#32;force_min_ang
+49 set_req.force_min_angular.y&#32;=&#32;force_min_ang
+50 set_req.force_min_angular.z&#32;=&#32;force_min_ang
+51 set_req.force_max_linear.x&#32;&#32;=&#32;force_max_lin
+52 set_req.force_max_linear.y&#32;&#32;=&#32;force_max_lin
+53 set_req.force_max_linear.z&#32;&#32;=&#32;force_max_lin
+54 set_req.force_max_angular.x&#32;=&#32;force_max_ang
+55 set_req.force_max_angular.y&#32;=&#32;force_max_ang
+56 set_req.force_max_angular.z&#32;=&#32;force_max_ang
+57 
+58 srv_set.call(set_req)
+59 
+60 
+61 <emphasis class="keywordflow">while</emphasis>&#32;<emphasis class="keywordflow">not</emphasis>&#32;rospy.is_shutdown():
+62 &#32;&#32;&#32;&#32;rospy.spin()
+63 
+64 srv_stop.call()
+65 
+66 <emphasis class="comment">#rospy.spin()</emphasis>
+67 
+    </computeroutput></literallayout>
+</section>

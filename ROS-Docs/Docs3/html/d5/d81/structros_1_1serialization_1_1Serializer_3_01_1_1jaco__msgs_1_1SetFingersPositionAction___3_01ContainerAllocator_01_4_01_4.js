@@ -1,0 +1,5 @@
+var structros_1_1serialization_1_1Serializer_3_01_1_1jaco__msgs_1_1SetFingersPositionAction___3_01ContainerAllocator_01_4_01_4 =
+[
+    [ "allInOne", "d5/d81/structros_1_1serialization_1_1Serializer_3_01_1_1jaco__msgs_1_1SetFingersPositionAction___3_01ContainerAllocator_01_4_01_4.html#ae856b9fe5651ac1601874588a5ebddde", null ],
+    [ "ROS_DECLARE_ALLINONE_SERIALIZER", "d5/d81/structros_1_1serialization_1_1Serializer_3_01_1_1jaco__msgs_1_1SetFingersPositionAction___3_01ContainerAllocator_01_4_01_4.html#a522ca42c2eece65fc41867613d55cf03", null ]
+];

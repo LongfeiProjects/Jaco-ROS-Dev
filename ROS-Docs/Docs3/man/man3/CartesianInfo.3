@@ -1,0 +1,96 @@
+.TH "CartesianInfo" 3 "Thu Mar 3 2016" "Version 1.0.1" "Kinova-ROS" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+CartesianInfo \- This data structure holds values in an cartesian control context\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include 'Definition'\fP
+.PP
+Inherited by \fBjaco::JacoPose\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBInitStruct\fP ()"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "float \fBThetaX\fP"
+.br
+.RI "\fIThis is the value related to the orientation around the X axis\&. Unit depends on the context it's been used\&. \fP"
+.ti -1c
+.RI "float \fBThetaY\fP"
+.br
+.RI "\fIThis is the value related to the orientation around the Y axis\&. Unit depends on the context it's been used\&. \fP"
+.ti -1c
+.RI "float \fBThetaZ\fP"
+.br
+.RI "\fIThis is the value related to the orientation around the Z axis\&. Unit depends on the context it's been used\&. \fP"
+.ti -1c
+.RI "float \fBX\fP"
+.br
+.RI "\fIThis is the value related to the translation along the X axis\&. Unit depends on the context it's been used\&. \fP"
+.ti -1c
+.RI "float \fBY\fP"
+.br
+.RI "\fIThis is the value related to the translation along the Y axis\&. Unit depends on the context it's been used\&. \fP"
+.ti -1c
+.RI "float \fBZ\fP"
+.br
+.RI "\fIThis is the value related to the translation along the Z axis\&. Unit depends on the context it's been used\&. \fP"
+.in -1c
+.SH "Detailed Description"
+.PP 
+This data structure holds values in an cartesian control context\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "void CartesianInfo::InitStruct ()\fC [inline]\fP"
+This method will initialises all the values to 0 
+.PP
+.nf
+399     {
+400         X = 0\&.0f;
+401         Y = 0\&.0f;
+402         Z = 0\&.0f;
+403         ThetaX = 0\&.0f;
+404         ThetaY = 0\&.0f;
+405         ThetaZ = 0\&.0f;
+406     }
+.fi
+.SH "Member Data Documentation"
+.PP 
+.SS "float CartesianInfo::ThetaX"
+
+.PP
+This is the value related to the orientation around the X axis\&. Unit depends on the context it's been used\&. This is the value related to the orientation around the X axis\&. Depending on the context it's been used, the unit of the value will change\&. As an example if the current control mode is cartesian position the unit will be RAD but if the control mode is cartesian velocity then the unit will be RAD per second\&. 
+.SS "float CartesianInfo::ThetaY"
+
+.PP
+This is the value related to the orientation around the Y axis\&. Unit depends on the context it's been used\&. As an example if the current control mode is cartesian position the unit will be RAD but if the control mode is cartesian velocity then the unit will be RAD per second\&. 
+.SS "float CartesianInfo::ThetaZ"
+
+.PP
+This is the value related to the orientation around the Z axis\&. Unit depends on the context it's been used\&. As an example if the current control mode is cartesian position the unit will be RAD but if the control mode is cartesian velocity then the unit will be RAD per second\&. 
+.SS "float CartesianInfo::X"
+
+.PP
+This is the value related to the translation along the X axis\&. Unit depends on the context it's been used\&. As an example if the current control mode is cartesian position the unit will be meters but if the control mode is cartesian velocity then the unit will be meters per second\&. 
+.SS "float CartesianInfo::Y"
+
+.PP
+This is the value related to the translation along the Y axis\&. Unit depends on the context it's been used\&. As an example if the current control mode is cartesian position the unit will be meters but if the control mode is cartesian velocity then the unit will be meters per second\&. 
+.SS "float CartesianInfo::Z"
+
+.PP
+This is the value related to the translation along the Z axis\&. Unit depends on the context it's been used\&. As an example if the current control mode is cartesian position the unit will be meters but if the control mode is cartesian velocity then the unit will be meters per second\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Kinova-ROS from the source code\&.

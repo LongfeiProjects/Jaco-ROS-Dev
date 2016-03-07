@@ -1,0 +1,94 @@
+.TH "UserPosition" 3 "Thu Mar 3 2016" "Version 1.0.1" "Kinova-ROS" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+UserPosition \- This data structure represents an abstract position built by a user\&. Depending on the control type the Cartesian information, the angular information or both will be used\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include 'Definition'\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBInitStruct\fP ()"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBAngularInfo\fP \fBActuators\fP"
+.br
+.RI "\fIAngular information about this position\&. \fP"
+.ti -1c
+.RI "\fBCartesianInfo\fP \fBCartesianPosition\fP"
+.br
+.RI "\fICartesian information about this position\&. \fP"
+.ti -1c
+.RI "float \fBDelay\fP"
+.br
+.RI "\fIThis is used only if the type of position is TIME_DELAY\&. It represents the delay in second\&. \fP"
+.ti -1c
+.RI "\fBFingersPosition\fP \fBFingers\fP"
+.br
+.RI "\fIfingers information about this position\&. \fP"
+.ti -1c
+.RI "\fBHAND_MODE\fP \fBHandMode\fP"
+.br
+.RI "\fIMode of the gripper\&. \fP"
+.ti -1c
+.RI "\fBPOSITION_TYPE\fP \fBType\fP"
+.br
+.RI "\fIThe type of this position\&. \fP"
+.in -1c
+.SH "Detailed Description"
+.PP 
+This data structure represents an abstract position built by a user\&. Depending on the control type the Cartesian information, the angular information or both will be used\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "void UserPosition::InitStruct ()\fC [inline]\fP"
+
+.PP
+.nf
+663     {
+664         Type = CARTESIAN_POSITION;
+665         Delay = 0\&.0f;
+666         CartesianPosition\&.InitStruct();
+667         Actuators\&.InitStruct();
+668         HandMode = POSITION_MODE;
+669         Fingers\&.InitStruct();
+670     }
+.fi
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBAngularInfo\fP UserPosition::Actuators"
+
+.PP
+Angular information about this position\&. 
+.SS "\fBCartesianInfo\fP UserPosition::CartesianPosition"
+
+.PP
+Cartesian information about this position\&. 
+.SS "float UserPosition::Delay"
+
+.PP
+This is used only if the type of position is TIME_DELAY\&. It represents the delay in second\&. 
+.SS "\fBFingersPosition\fP UserPosition::Fingers"
+
+.PP
+fingers information about this position\&. 
+.SS "\fBHAND_MODE\fP UserPosition::HandMode"
+
+.PP
+Mode of the gripper\&. 
+.SS "\fBPOSITION_TYPE\fP UserPosition::Type"
+
+.PP
+The type of this position\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Kinova-ROS from the source code\&.

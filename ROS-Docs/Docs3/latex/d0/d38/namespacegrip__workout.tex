@@ -1,0 +1,73 @@
+\hypertarget{namespacegrip__workout}{}\section{grip\+\_\+workout Namespace Reference}
+\label{namespacegrip__workout}\index{grip\+\_\+workout@{grip\+\_\+workout}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{namespacegrip__workout_a5c14bb069a6ceb0f3854520cc298a2c1}{gripper\+\_\+client} (finger\+\_\+positions)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{namespacegrip__workout_a3deafc04ebe19165cfdc795ba4f53692}{positions} = \hyperlink{namespacegoal__generators_a2b395bfee98a60349c6a7193e8d3059f}{goal\+\_\+generators.\+random\+\_\+jaco\+\_\+finger\+\_\+positions}(int(sys.\+argv\mbox{[}3\mbox{]}))
+\item 
+list \hyperlink{namespacegrip__workout_a2e28cab9dcd884944ac12b695ad4a773}{raw\+\_\+positions} = \mbox{[}float(n) for n in sys.\+argv\mbox{[}2\+:\mbox{]}\mbox{]}
+\item 
+\hyperlink{namespacegrip__workout_ac8e857bea751845a9f8c3f34d4fa3399}{result} = \hyperlink{namespacegrip__workout_a5c14bb069a6ceb0f3854520cc298a2c1}{gripper\+\_\+client}(position)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyVerb}A helper program to test gripper goals for the JACO and MICO arms.\end{DoxyVerb}
+ 
+
+\subsection{Function Documentation}
+\index{grip\+\_\+workout@{grip\+\_\+workout}!gripper\+\_\+client@{gripper\+\_\+client}}
+\index{gripper\+\_\+client@{gripper\+\_\+client}!grip\+\_\+workout@{grip\+\_\+workout}}
+\subsubsection[{\texorpdfstring{gripper\+\_\+client(finger\+\_\+positions)}{gripper_client(finger_positions)}}]{\setlength{\rightskip}{0pt plus 5cm}def grip\+\_\+workout.\+gripper\+\_\+client (
+\begin{DoxyParamCaption}
+\item[{}]{finger\+\_\+positions}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacegrip__workout_a5c14bb069a6ceb0f3854520cc298a2c1}{}\label{namespacegrip__workout_a5c14bb069a6ceb0f3854520cc298a2c1}
+\begin{DoxyVerb}Send a gripper goal to the action server.\end{DoxyVerb}
+ 
+\begin{DoxyCode}
+15 \textcolor{keyword}{def }\hyperlink{namespacegrip__workout_a5c14bb069a6ceb0f3854520cc298a2c1}{gripper\_client}(finger\_positions):
+16     \textcolor{stringliteral}{"""Send a gripper goal to the action server."""}
+17     action\_address = \textcolor{stringliteral}{'/'} + str(sys.argv[1]) + \textcolor{stringliteral}{'\_arm\_driver/fingers/finger\_positions'}
+18     client = actionlib.SimpleActionClient(action\_address,
+19                                           \hyperlink{classjaco__msgs_1_1msg_1_1__SetFingersPositionAction_1_1SetFingersPositionAction}{jaco\_msgs.msg.SetFingersPositionAction}
+      )
+20     client.wait\_for\_server()
+21 
+22     goal = \hyperlink{classjaco__msgs_1_1msg_1_1__SetFingersPositionGoal_1_1SetFingersPositionGoal}{jaco\_msgs.msg.SetFingersPositionGoal}()
+23     goal.fingers.finger1 = float(finger\_positions[0])
+24     goal.fingers.finger2 = float(finger\_positions[1])
+25 
+26     \textcolor{comment}{# The MICO arm has only two fingers, but the same action definition is used}
+27     \textcolor{keywordflow}{if} len(finger\_positions) < 3:
+28         goal.fingers.finger3 = 0.0
+29     \textcolor{keywordflow}{else}:
+30         goal.fingers.finger3 = float(finger\_positions[2])
+31 
+32     client.send\_goal(goal)
+33     \textcolor{keywordflow}{if} client.wait\_for\_result(rospy.Duration(5.0)):
+34         \textcolor{keywordflow}{return} client.get\_result()
+35     \textcolor{keywordflow}{else}:
+36         client.cancel\_all\_goals()
+37         print(\textcolor{stringliteral}{'        the gripper action timed-out'})
+38         \textcolor{keywordflow}{return} \textcolor{keywordtype}{None}
+39 
+40 
+\end{DoxyCode}
+
+
+\subsection{Variable Documentation}
+\index{grip\+\_\+workout@{grip\+\_\+workout}!positions@{positions}}
+\index{positions@{positions}!grip\+\_\+workout@{grip\+\_\+workout}}
+\subsubsection[{\texorpdfstring{positions}{positions}}]{\setlength{\rightskip}{0pt plus 5cm}list grip\+\_\+workout.\+positions = {\bf goal\+\_\+generators.\+random\+\_\+jaco\+\_\+finger\+\_\+positions}(int(sys.\+argv\mbox{[}3\mbox{]}))}\hypertarget{namespacegrip__workout_a3deafc04ebe19165cfdc795ba4f53692}{}\label{namespacegrip__workout_a3deafc04ebe19165cfdc795ba4f53692}
+\index{grip\+\_\+workout@{grip\+\_\+workout}!raw\+\_\+positions@{raw\+\_\+positions}}
+\index{raw\+\_\+positions@{raw\+\_\+positions}!grip\+\_\+workout@{grip\+\_\+workout}}
+\subsubsection[{\texorpdfstring{raw\+\_\+positions}{raw_positions}}]{\setlength{\rightskip}{0pt plus 5cm}list grip\+\_\+workout.\+raw\+\_\+positions = \mbox{[}float(n) for n in sys.\+argv\mbox{[}2\+:\mbox{]}\mbox{]}}\hypertarget{namespacegrip__workout_a2e28cab9dcd884944ac12b695ad4a773}{}\label{namespacegrip__workout_a2e28cab9dcd884944ac12b695ad4a773}
+\index{grip\+\_\+workout@{grip\+\_\+workout}!result@{result}}
+\index{result@{result}!grip\+\_\+workout@{grip\+\_\+workout}}
+\subsubsection[{\texorpdfstring{result}{result}}]{\setlength{\rightskip}{0pt plus 5cm}grip\+\_\+workout.\+result = {\bf gripper\+\_\+client}(position)}\hypertarget{namespacegrip__workout_ac8e857bea751845a9f8c3f34d4fa3399}{}\label{namespacegrip__workout_ac8e857bea751845a9f8c3f34d4fa3399}

@@ -1,0 +1,796 @@
+\hypertarget{Kinova_8API_8UsbCommandLayerUbuntu_8h}{}\section{D\+:/\+Longfei/\+Desktop/catkin\+\_\+\+Kinova\+R\+O\+S/src/jaco-\/ros/jaco\+\_\+driver/include/kinova/\+Kinova.A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h File Reference}
+\label{Kinova_8API_8UsbCommandLayerUbuntu_8h}\index{D\+:/\+Longfei/\+Desktop/catkin\+\_\+\+Kinova\+R\+O\+S/src/jaco-\/ros/jaco\+\_\+driver/include/kinova/\+Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{D\+:/\+Longfei/\+Desktop/catkin\+\_\+\+Kinova\+R\+O\+S/src/jaco-\/ros/jaco\+\_\+driver/include/kinova/\+Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}}
+
+
+This file contains header of all available functions of this A\+PI.  
+
+
+{\ttfamily \#include $<$vector$>$}\\*
+{\ttfamily \#include \char`\"{}Kinova\+Types.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Kinova.\+A\+P\+I.\+Comm\+Layer\+Ubuntu.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+Include dependency graph for Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/dbc/Kinova_8API_8UsbCommandLayerUbuntu_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d8/db1/Kinova_8API_8UsbCommandLayerUbuntu_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{Kinova_8API_8UsbCommandLayerUbuntu_8h_a12c8325343efa4c6e8ae136a72254878}{C\+O\+M\+M\+\_\+\+L\+A\+Y\+E\+R\+\_\+\+P\+A\+TH}~\char`\"{}Kinova.\+A\+P\+I.\+Comm\+Layer\+Ubuntu.\+so\char`\"{}
+\item 
+\#define \hyperlink{Kinova_8API_8UsbCommandLayerUbuntu_8h_aaeb890c653dc6657b1238afe3ce1a0f9}{C\+O\+M\+M\+A\+N\+D\+\_\+\+L\+A\+Y\+E\+R\+\_\+\+V\+E\+R\+S\+I\+ON}~50101
+\item 
+\#define \hyperlink{Kinova_8API_8UsbCommandLayerUbuntu_8h_a0eb31c1b663a821f8dc3a8bfabb66c68}{E\+R\+R\+O\+R\+\_\+\+A\+P\+I\+\_\+\+N\+O\+T\+\_\+\+I\+N\+I\+T\+I\+A\+L\+I\+Z\+ED}~2101
+\item 
+\#define \hyperlink{Kinova_8API_8UsbCommandLayerUbuntu_8h_a890a3525205b751506feb93582863fea}{E\+R\+R\+O\+R\+\_\+\+C\+L\+O\+S\+E\+\_\+\+M\+E\+T\+H\+OD}~2007
+\item 
+\#define \hyperlink{Kinova_8API_8UsbCommandLayerUbuntu_8h_a26d8ccb476c581bf24eaccd200530a91}{E\+R\+R\+O\+R\+\_\+\+G\+E\+T\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+C\+O\+U\+N\+T\+\_\+\+M\+E\+T\+H\+OD}~2008
+\item 
+\#define \hyperlink{Kinova_8API_8UsbCommandLayerUbuntu_8h_a50e55249141822b3841afc7bdfdc9a7e}{E\+R\+R\+O\+R\+\_\+\+G\+E\+T\+\_\+\+D\+E\+V\+I\+C\+E\+S\+\_\+\+L\+I\+S\+T\+\_\+\+M\+E\+T\+H\+OD}~2011
+\item 
+\#define \hyperlink{Kinova_8API_8UsbCommandLayerUbuntu_8h_ad9c707fcd3b8b900a267bb3112251768}{E\+R\+R\+O\+R\+\_\+\+I\+N\+I\+T\+\_\+\+A\+PI}~2001
+\item 
+\#define \hyperlink{Kinova_8API_8UsbCommandLayerUbuntu_8h_a33306e3b3c61996ac84a24cfd8a8ae95}{E\+R\+R\+O\+R\+\_\+\+I\+N\+I\+T\+\_\+\+C\+O\+M\+M\+\_\+\+M\+E\+T\+H\+OD}~2006
+\item 
+\#define \hyperlink{Kinova_8API_8UsbCommandLayerUbuntu_8h_a46991f9bc9447e7029136ea73ce8d373}{E\+R\+R\+O\+R\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+P\+A\+R\+AM}~2100
+\item 
+\#define \hyperlink{Kinova_8API_8UsbCommandLayerUbuntu_8h_a695917dd27731b8875a1ccf2cb370b61}{E\+R\+R\+O\+R\+\_\+\+L\+O\+A\+D\+\_\+\+C\+O\+M\+M\+\_\+\+D\+LL}~2002
+\item 
+\#define \hyperlink{Kinova_8API_8UsbCommandLayerUbuntu_8h_a8c5b24069ba1427e15a2a2dcbe004ba4}{E\+R\+R\+O\+R\+\_\+\+S\+E\+M\+A\+P\+H\+O\+R\+E\+\_\+\+F\+A\+I\+L\+ED}~2012
+\item 
+\#define \hyperlink{Kinova_8API_8UsbCommandLayerUbuntu_8h_afc952da53a52165715ceb34aea197e34}{E\+R\+R\+O\+R\+\_\+\+S\+E\+N\+D\+\_\+\+P\+A\+C\+K\+E\+T\+\_\+\+M\+E\+T\+H\+OD}~2009
+\item 
+\#define \hyperlink{Kinova_8API_8UsbCommandLayerUbuntu_8h_a241fc8c34c641a3fbdfc9a0298dcf757}{E\+R\+R\+O\+R\+\_\+\+S\+E\+T\+\_\+\+A\+C\+T\+I\+V\+E\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+M\+E\+T\+H\+OD}~2010
+\item 
+\#define \hyperlink{Kinova_8API_8UsbCommandLayerUbuntu_8h_a50277f315c115b1fc66870c649ea526b}{J\+A\+C\+O\+\_\+\+C\+O\+M\+M\+\_\+\+F\+A\+I\+L\+ED}~2004
+\item 
+\#define \hyperlink{Kinova_8API_8UsbCommandLayerUbuntu_8h_aaf06cf2cdd21e707734113d20e0a167c}{J\+A\+C\+O\+\_\+\+N\+A\+C\+K\+\_\+\+F\+I\+R\+ST}~2003
+\item 
+\#define \hyperlink{Kinova_8API_8UsbCommandLayerUbuntu_8h_afe14542a6cbdafc59256248a7305fb00}{J\+A\+C\+O\+\_\+\+N\+A\+C\+K\+\_\+\+N\+O\+R\+M\+AL}~2005
+\item 
+\#define \hyperlink{Kinova_8API_8UsbCommandLayerUbuntu_8h_a31327a2439c3f77d7d3774e7d49710de}{K\+I\+N\+O\+V\+A\+\_\+}~1
+\item 
+\#define \hyperlink{Kinova_8API_8UsbCommandLayerUbuntu_8h_abe06f11f1aa8abc575ebd4474e559d25}{K\+I\+N\+O\+V\+A\+A\+P\+I\+U\+S\+B\+C\+O\+M\+M\+A\+N\+D\+L\+A\+Y\+E\+R\+\_\+\+A\+PI}~\hyperlink{Kinova_8API_8CommLayerUbuntu_8h_a1d3678de7e45bc92e4c8ee7ece40c833}{\+\_\+\+\_\+attribute\+\_\+\+\_\+} ((visibility (\char`\"{}default\char`\"{})))
+\item 
+\#define \hyperlink{Kinova_8API_8UsbCommandLayerUbuntu_8h_aa90cac659d18e8ef6294c7ae337f6b58}{S\+U\+C\+C\+E\+SS}~1
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{Kinova_8API_8UsbCommandLayerUbuntu_8h_abe06f11f1aa8abc575ebd4474e559d25}{K\+I\+N\+O\+V\+A\+A\+P\+I\+U\+S\+B\+C\+O\+M\+M\+A\+N\+D\+L\+A\+Y\+E\+R\+\_\+\+A\+PI} int \hyperlink{Kinova_8API_8UsbCommandLayerUbuntu_8h_aeb08aa5439be6a60a197a01f3aae8e1e}{Clear\+Error\+Log} ()
+\item 
+\hyperlink{Kinova_8API_8UsbCommandLayerUbuntu_8h_abe06f11f1aa8abc575ebd4474e559d25}{K\+I\+N\+O\+V\+A\+A\+P\+I\+U\+S\+B\+C\+O\+M\+M\+A\+N\+D\+L\+A\+Y\+E\+R\+\_\+\+A\+PI} int \hyperlink{Kinova_8API_8UsbCommandLayerUbuntu_8h_a8c68cfab1fd05edea45717967cd35170}{Close\+A\+PI} (void)
+\item 
+\hyperlink{Kinova_8API_8UsbCommandLayerUbuntu_8h_abe06f11f1aa8abc575ebd4474e559d25}{K\+I\+N\+O\+V\+A\+A\+P\+I\+U\+S\+B\+C\+O\+M\+M\+A\+N\+D\+L\+A\+Y\+E\+R\+\_\+\+A\+PI} int \hyperlink{Kinova_8API_8UsbCommandLayerUbuntu_8h_a47f39fdf7e52e914e979d822c9209366}{Erase\+All\+Protection\+Zones} ()
+\item 
+\hyperlink{Kinova_8API_8UsbCommandLayerUbuntu_8h_abe06f11f1aa8abc575ebd4474e559d25}{K\+I\+N\+O\+V\+A\+A\+P\+I\+U\+S\+B\+C\+O\+M\+M\+A\+N\+D\+L\+A\+Y\+E\+R\+\_\+\+A\+PI} int \hyperlink{Kinova_8API_8UsbCommandLayerUbuntu_8h_a408913e7a3a1ba879f4575320bfeda14}{Erase\+All\+Trajectories} ()
+\item 
+\hyperlink{Kinova_8API_8UsbCommandLayerUbuntu_8h_abe06f11f1aa8abc575ebd4474e559d25}{K\+I\+N\+O\+V\+A\+A\+P\+I\+U\+S\+B\+C\+O\+M\+M\+A\+N\+D\+L\+A\+Y\+E\+R\+\_\+\+A\+PI} int \hyperlink{Kinova_8API_8UsbCommandLayerUbuntu_8h_a7e00e6d93a9d897037cfa627507647ef}{Get\+Actual\+Trajectory\+Info} (\hyperlink{structTrajectoryPoint}{Trajectory\+Point} \&Response)
+\item 
+\hyperlink{Kinova_8API_8UsbCommandLayerUbuntu_8h_abe06f11f1aa8abc575ebd4474e559d25}{K\+I\+N\+O\+V\+A\+A\+P\+I\+U\+S\+B\+C\+O\+M\+M\+A\+N\+D\+L\+A\+Y\+E\+R\+\_\+\+A\+PI} int \hyperlink{Kinova_8API_8UsbCommandLayerUbuntu_8h_abf41a716f69e403c4585a0b6ba4a50e8}{Get\+Actuator\+Acceleration} (\hyperlink{structAngularAcceleration}{Angular\+Acceleration} \&Response)
+\item 
+\hyperlink{Kinova_8API_8UsbCommandLayerUbuntu_8h_abe06f11f1aa8abc575ebd4474e559d25}{K\+I\+N\+O\+V\+A\+A\+P\+I\+U\+S\+B\+C\+O\+M\+M\+A\+N\+D\+L\+A\+Y\+E\+R\+\_\+\+A\+PI} int \hyperlink{Kinova_8API_8UsbCommandLayerUbuntu_8h_a5c289720f8a7af28a84e7dec66211f33}{Get\+Angular\+Command} (\hyperlink{KinovaTypes_8h_de/de7/structAngularPosition}{Angular\+Position} \&Response)
+\item 
+\hyperlink{Kinova_8API_8UsbCommandLayerUbuntu_8h_abe06f11f1aa8abc575ebd4474e559d25}{K\+I\+N\+O\+V\+A\+A\+P\+I\+U\+S\+B\+C\+O\+M\+M\+A\+N\+D\+L\+A\+Y\+E\+R\+\_\+\+A\+PI} int \hyperlink{Kinova_8API_8UsbCommandLayerUbuntu_8h_ad9a6f5444a8fa6df2cc324e54118f54f}{Get\+Angular\+Current} (\hyperlink{KinovaTypes_8h_de/de7/structAngularPosition}{Angular\+Position} \&Response)
+\item 
+\hyperlink{Kinova_8API_8UsbCommandLayerUbuntu_8h_abe06f11f1aa8abc575ebd4474e559d25}{K\+I\+N\+O\+V\+A\+A\+P\+I\+U\+S\+B\+C\+O\+M\+M\+A\+N\+D\+L\+A\+Y\+E\+R\+\_\+\+A\+PI} int \hyperlink{Kinova_8API_8UsbCommandLayerUbuntu_8h_afd4e6c87647569b8cf24a2678dc9ef25}{Get\+Angular\+Current\+Motor} (\hyperlink{KinovaTypes_8h_de/de7/structAngularPosition}{Angular\+Position} \&Response)
+\item 
+\hyperlink{Kinova_8API_8UsbCommandLayerUbuntu_8h_abe06f11f1aa8abc575ebd4474e559d25}{K\+I\+N\+O\+V\+A\+A\+P\+I\+U\+S\+B\+C\+O\+M\+M\+A\+N\+D\+L\+A\+Y\+E\+R\+\_\+\+A\+PI} int \hyperlink{Kinova_8API_8UsbCommandLayerUbuntu_8h_a7ae41c6db88958582f8598f71f664c89}{Get\+Angular\+Force} (\hyperlink{KinovaTypes_8h_de/de7/structAngularPosition}{Angular\+Position} \&Response)
+\item 
+\hyperlink{Kinova_8API_8UsbCommandLayerUbuntu_8h_abe06f11f1aa8abc575ebd4474e559d25}{K\+I\+N\+O\+V\+A\+A\+P\+I\+U\+S\+B\+C\+O\+M\+M\+A\+N\+D\+L\+A\+Y\+E\+R\+\_\+\+A\+PI} int \hyperlink{Kinova_8API_8UsbCommandLayerUbuntu_8h_a26652852e510b5d4048da7818cc2e143}{Get\+Angular\+Force\+Gravity\+Free} (\hyperlink{KinovaTypes_8h_de/de7/structAngularPosition}{Angular\+Position} \&Response)
+\item 
+\hyperlink{Kinova_8API_8UsbCommandLayerUbuntu_8h_abe06f11f1aa8abc575ebd4474e559d25}{K\+I\+N\+O\+V\+A\+A\+P\+I\+U\+S\+B\+C\+O\+M\+M\+A\+N\+D\+L\+A\+Y\+E\+R\+\_\+\+A\+PI} int \hyperlink{Kinova_8API_8UsbCommandLayerUbuntu_8h_a58ef9ea1c1ae0bc3905d9f72faee18dc}{Get\+Angular\+Position} (\hyperlink{KinovaTypes_8h_de/de7/structAngularPosition}{Angular\+Position} \&Response)
+\item 
+\hyperlink{Kinova_8API_8UsbCommandLayerUbuntu_8h_abe06f11f1aa8abc575ebd4474e559d25}{K\+I\+N\+O\+V\+A\+A\+P\+I\+U\+S\+B\+C\+O\+M\+M\+A\+N\+D\+L\+A\+Y\+E\+R\+\_\+\+A\+PI} int \hyperlink{Kinova_8API_8UsbCommandLayerUbuntu_8h_ad85d567f13629d5a8a20604c0c97ae22}{Get\+Angular\+Velocity} (\hyperlink{KinovaTypes_8h_de/de7/structAngularPosition}{Angular\+Position} \&Response)
+\item 
+\hyperlink{Kinova_8API_8UsbCommandLayerUbuntu_8h_abe06f11f1aa8abc575ebd4474e559d25}{K\+I\+N\+O\+V\+A\+A\+P\+I\+U\+S\+B\+C\+O\+M\+M\+A\+N\+D\+L\+A\+Y\+E\+R\+\_\+\+A\+PI} int \hyperlink{Kinova_8API_8UsbCommandLayerUbuntu_8h_ac1c28038b14ca7d6af85387b0af343d2}{Get\+A\+P\+I\+Version} (std\+::vector$<$ int $>$ \&Response)
+\item 
+\hyperlink{Kinova_8API_8UsbCommandLayerUbuntu_8h_abe06f11f1aa8abc575ebd4474e559d25}{K\+I\+N\+O\+V\+A\+A\+P\+I\+U\+S\+B\+C\+O\+M\+M\+A\+N\+D\+L\+A\+Y\+E\+R\+\_\+\+A\+PI} int \hyperlink{Kinova_8API_8UsbCommandLayerUbuntu_8h_aa112acb5e0a9d6657616377a90d1d3b1}{Get\+Cartesian\+Command} (\hyperlink{structCartesianPosition}{Cartesian\+Position} \&Response)
+\item 
+\hyperlink{Kinova_8API_8UsbCommandLayerUbuntu_8h_abe06f11f1aa8abc575ebd4474e559d25}{K\+I\+N\+O\+V\+A\+A\+P\+I\+U\+S\+B\+C\+O\+M\+M\+A\+N\+D\+L\+A\+Y\+E\+R\+\_\+\+A\+PI} int \hyperlink{Kinova_8API_8UsbCommandLayerUbuntu_8h_ae9ed9be44d89f54aa3c268186be4e4f4}{Get\+Cartesian\+Force} (\hyperlink{structCartesianPosition}{Cartesian\+Position} \&Response)
+\item 
+\hyperlink{Kinova_8API_8UsbCommandLayerUbuntu_8h_abe06f11f1aa8abc575ebd4474e559d25}{K\+I\+N\+O\+V\+A\+A\+P\+I\+U\+S\+B\+C\+O\+M\+M\+A\+N\+D\+L\+A\+Y\+E\+R\+\_\+\+A\+PI} int \hyperlink{Kinova_8API_8UsbCommandLayerUbuntu_8h_a6be8b4e54409ac8fa2c890f1e1e8e0a1}{Get\+Cartesian\+Position} (\hyperlink{structCartesianPosition}{Cartesian\+Position} \&Response)
+\item 
+\hyperlink{Kinova_8API_8UsbCommandLayerUbuntu_8h_abe06f11f1aa8abc575ebd4474e559d25}{K\+I\+N\+O\+V\+A\+A\+P\+I\+U\+S\+B\+C\+O\+M\+M\+A\+N\+D\+L\+A\+Y\+E\+R\+\_\+\+A\+PI} int \hyperlink{Kinova_8API_8UsbCommandLayerUbuntu_8h_aadfff8ea657c2e2e16510b3f3b886468}{Get\+Client\+Configurations} (\hyperlink{KinovaTypes_8h_d1/d2e/structClientConfigurations}{Client\+Configurations} \&config)
+\item 
+\hyperlink{Kinova_8API_8UsbCommandLayerUbuntu_8h_abe06f11f1aa8abc575ebd4474e559d25}{K\+I\+N\+O\+V\+A\+A\+P\+I\+U\+S\+B\+C\+O\+M\+M\+A\+N\+D\+L\+A\+Y\+E\+R\+\_\+\+A\+PI} int \hyperlink{Kinova_8API_8UsbCommandLayerUbuntu_8h_a60bd2b839aca973c134a7de0b988f164}{Get\+Code\+Version} (std\+::vector$<$ int $>$ \&Response)
+\item 
+\hyperlink{Kinova_8API_8UsbCommandLayerUbuntu_8h_abe06f11f1aa8abc575ebd4474e559d25}{K\+I\+N\+O\+V\+A\+A\+P\+I\+U\+S\+B\+C\+O\+M\+M\+A\+N\+D\+L\+A\+Y\+E\+R\+\_\+\+A\+PI} int \hyperlink{Kinova_8API_8UsbCommandLayerUbuntu_8h_a40ae13976ddf7d5a88d43999387e4ca0}{Get\+Control\+Mapping} (\hyperlink{KinovaTypes_8h_d4/d71/structControlMappingCharts}{Control\+Mapping\+Charts} \&Response)
+\item 
+\hyperlink{Kinova_8API_8UsbCommandLayerUbuntu_8h_abe06f11f1aa8abc575ebd4474e559d25}{K\+I\+N\+O\+V\+A\+A\+P\+I\+U\+S\+B\+C\+O\+M\+M\+A\+N\+D\+L\+A\+Y\+E\+R\+\_\+\+A\+PI} int \hyperlink{Kinova_8API_8UsbCommandLayerUbuntu_8h_a406331a1b6df3d0f3b3b8fecbc51d5b8}{Get\+Control\+Type} (int \&Response)
+\item 
+\hyperlink{Kinova_8API_8UsbCommandLayerUbuntu_8h_abe06f11f1aa8abc575ebd4474e559d25}{K\+I\+N\+O\+V\+A\+A\+P\+I\+U\+S\+B\+C\+O\+M\+M\+A\+N\+D\+L\+A\+Y\+E\+R\+\_\+\+A\+PI} int \hyperlink{Kinova_8API_8UsbCommandLayerUbuntu_8h_a5814f5c47fb3f439269f12c310f287a4}{Get\+Devices} (std\+::vector$<$ \hyperlink{Kinova_8API_8CommLayerUbuntu_8h_da/dd6/structKinovaDevice}{Kinova\+Device} $>$ \&devices, int \&\hyperlink{Kinova_8API_8CommLayerUbuntu_8h_a900dac90961bada00f57c207562a6a9a}{result})
+\item 
+\hyperlink{Kinova_8API_8UsbCommandLayerUbuntu_8h_abe06f11f1aa8abc575ebd4474e559d25}{K\+I\+N\+O\+V\+A\+A\+P\+I\+U\+S\+B\+C\+O\+M\+M\+A\+N\+D\+L\+A\+Y\+E\+R\+\_\+\+A\+PI} int \hyperlink{Kinova_8API_8UsbCommandLayerUbuntu_8h_a960b173a33b5c9179859e76b98476278}{Get\+Dev\+Value} (std\+::vector$<$ float $>$ \&Response)
+\item 
+\hyperlink{Kinova_8API_8UsbCommandLayerUbuntu_8h_abe06f11f1aa8abc575ebd4474e559d25}{K\+I\+N\+O\+V\+A\+A\+P\+I\+U\+S\+B\+C\+O\+M\+M\+A\+N\+D\+L\+A\+Y\+E\+R\+\_\+\+A\+PI} int \hyperlink{Kinova_8API_8UsbCommandLayerUbuntu_8h_a763871c1e32b0a08bba0e9c550de3a8e}{Get\+Forces\+Info} (\hyperlink{KinovaTypes_8h_d7/dff/structForcesInfo}{Forces\+Info} \&Response)
+\item 
+\hyperlink{Kinova_8API_8UsbCommandLayerUbuntu_8h_abe06f11f1aa8abc575ebd4474e559d25}{K\+I\+N\+O\+V\+A\+A\+P\+I\+U\+S\+B\+C\+O\+M\+M\+A\+N\+D\+L\+A\+Y\+E\+R\+\_\+\+A\+PI} int \hyperlink{Kinova_8API_8UsbCommandLayerUbuntu_8h_ab7d8661a7309e8cb4df1aa17b658169b}{Get\+General\+Informations} (\hyperlink{KinovaTypes_8h_d2/d0f/structGeneralInformations}{General\+Informations} \&Response)
+\item 
+\hyperlink{Kinova_8API_8UsbCommandLayerUbuntu_8h_abe06f11f1aa8abc575ebd4474e559d25}{K\+I\+N\+O\+V\+A\+A\+P\+I\+U\+S\+B\+C\+O\+M\+M\+A\+N\+D\+L\+A\+Y\+E\+R\+\_\+\+A\+PI} int \hyperlink{Kinova_8API_8UsbCommandLayerUbuntu_8h_a28d5f53daeda2497dbceeb5e8ed635eb}{Get\+Global\+Trajectory\+Info} (\hyperlink{KinovaTypes_8h_d7/ddf/structTrajectoryFIFO}{Trajectory\+F\+I\+FO} \&Response)
+\item 
+\hyperlink{Kinova_8API_8UsbCommandLayerUbuntu_8h_abe06f11f1aa8abc575ebd4474e559d25}{K\+I\+N\+O\+V\+A\+A\+P\+I\+U\+S\+B\+C\+O\+M\+M\+A\+N\+D\+L\+A\+Y\+E\+R\+\_\+\+A\+PI} int \hyperlink{Kinova_8API_8UsbCommandLayerUbuntu_8h_a94382130b0796558826d6044e5249c09}{Get\+Gripper\+Status} (\hyperlink{KinovaTypes_8h_d8/d2c/structGripper}{Gripper} \&Response)
+\item 
+\hyperlink{Kinova_8API_8UsbCommandLayerUbuntu_8h_abe06f11f1aa8abc575ebd4474e559d25}{K\+I\+N\+O\+V\+A\+A\+P\+I\+U\+S\+B\+C\+O\+M\+M\+A\+N\+D\+L\+A\+Y\+E\+R\+\_\+\+A\+PI} int \hyperlink{Kinova_8API_8UsbCommandLayerUbuntu_8h_a1fb82d6b0d534dd3b2acbd4f9a82e815}{Get\+Peripheral\+Inventory} (std\+::vector$<$ \hyperlink{KinovaTypes_8h_d3/d19/structPeripheralInfo}{Peripheral\+Info} $>$ \&)
+\item 
+\hyperlink{Kinova_8API_8UsbCommandLayerUbuntu_8h_abe06f11f1aa8abc575ebd4474e559d25}{K\+I\+N\+O\+V\+A\+A\+P\+I\+U\+S\+B\+C\+O\+M\+M\+A\+N\+D\+L\+A\+Y\+E\+R\+\_\+\+A\+PI} int \hyperlink{Kinova_8API_8UsbCommandLayerUbuntu_8h_a157b0c582c67825d220cb0e7464a298c}{Get\+Position\+Current\+Actuators} (std\+::vector$<$ float $>$ \&Response)
+\item 
+\hyperlink{Kinova_8API_8UsbCommandLayerUbuntu_8h_abe06f11f1aa8abc575ebd4474e559d25}{K\+I\+N\+O\+V\+A\+A\+P\+I\+U\+S\+B\+C\+O\+M\+M\+A\+N\+D\+L\+A\+Y\+E\+R\+\_\+\+A\+PI} int \hyperlink{Kinova_8API_8UsbCommandLayerUbuntu_8h_af6845bf7d390ade74b68c7c7e7d74139}{Get\+Protection\+Zone} (\hyperlink{KinovaTypes_8h_dd/d29/structZoneList}{Zone\+List} \&Response)
+\item 
+\hyperlink{Kinova_8API_8UsbCommandLayerUbuntu_8h_abe06f11f1aa8abc575ebd4474e559d25}{K\+I\+N\+O\+V\+A\+A\+P\+I\+U\+S\+B\+C\+O\+M\+M\+A\+N\+D\+L\+A\+Y\+E\+R\+\_\+\+A\+PI} int \hyperlink{Kinova_8API_8UsbCommandLayerUbuntu_8h_af7bd69e27ac64fe2b6117442a285cd53}{Get\+Quick\+Status} (\hyperlink{KinovaTypes_8h_df/d9d/structQuickStatus}{Quick\+Status} \&Response)
+\item 
+\hyperlink{Kinova_8API_8UsbCommandLayerUbuntu_8h_abe06f11f1aa8abc575ebd4474e559d25}{K\+I\+N\+O\+V\+A\+A\+P\+I\+U\+S\+B\+C\+O\+M\+M\+A\+N\+D\+L\+A\+Y\+E\+R\+\_\+\+A\+PI} int \hyperlink{Kinova_8API_8UsbCommandLayerUbuntu_8h_a467668c1ccb6eea2d89521c8cbe94ebf}{Get\+Sensors\+Info} (\hyperlink{structSensorsInfo}{Sensors\+Info} \&Response)
+\item 
+\hyperlink{Kinova_8API_8UsbCommandLayerUbuntu_8h_abe06f11f1aa8abc575ebd4474e559d25}{K\+I\+N\+O\+V\+A\+A\+P\+I\+U\+S\+B\+C\+O\+M\+M\+A\+N\+D\+L\+A\+Y\+E\+R\+\_\+\+A\+PI} int \hyperlink{Kinova_8API_8UsbCommandLayerUbuntu_8h_ae50cc84dceabf5404c62c30e39ae6df4}{Get\+Singularity\+Vector} (\hyperlink{KinovaTypes_8h_d5/d78/structSingularityVector}{Singularity\+Vector} \&Response)
+\item 
+\hyperlink{Kinova_8API_8UsbCommandLayerUbuntu_8h_abe06f11f1aa8abc575ebd4474e559d25}{K\+I\+N\+O\+V\+A\+A\+P\+I\+U\+S\+B\+C\+O\+M\+M\+A\+N\+D\+L\+A\+Y\+E\+R\+\_\+\+A\+PI} int \hyperlink{Kinova_8API_8UsbCommandLayerUbuntu_8h_a3cf1188af06395c8ff8ec00d32e5ae1a}{Get\+Spasm\+Filter\+Values} (std\+::vector$<$ float $>$ \&Response, int \&activation\+Status)
+\item 
+\hyperlink{Kinova_8API_8UsbCommandLayerUbuntu_8h_abe06f11f1aa8abc575ebd4474e559d25}{K\+I\+N\+O\+V\+A\+A\+P\+I\+U\+S\+B\+C\+O\+M\+M\+A\+N\+D\+L\+A\+Y\+E\+R\+\_\+\+A\+PI} int \hyperlink{Kinova_8API_8UsbCommandLayerUbuntu_8h_a02072cf8aba4054cf63631615a256b3a}{Get\+System\+Error} (unsigned int index\+Error, \hyperlink{KinovaTypes_8h_d0/de3/structSystemError}{System\+Error} \&Response)
+\item 
+\hyperlink{Kinova_8API_8UsbCommandLayerUbuntu_8h_abe06f11f1aa8abc575ebd4474e559d25}{K\+I\+N\+O\+V\+A\+A\+P\+I\+U\+S\+B\+C\+O\+M\+M\+A\+N\+D\+L\+A\+Y\+E\+R\+\_\+\+A\+PI} int \hyperlink{Kinova_8API_8UsbCommandLayerUbuntu_8h_a4f5f1d1c45a10e3b2ed2461ad127c7db}{Get\+System\+Error\+Count} (unsigned int \&Response)
+\item 
+\hyperlink{Kinova_8API_8UsbCommandLayerUbuntu_8h_abe06f11f1aa8abc575ebd4474e559d25}{K\+I\+N\+O\+V\+A\+A\+P\+I\+U\+S\+B\+C\+O\+M\+M\+A\+N\+D\+L\+A\+Y\+E\+R\+\_\+\+A\+PI} int \hyperlink{Kinova_8API_8UsbCommandLayerUbuntu_8h_ab1e7523fba35c20a8569e99bcdf63a5e}{Init\+A\+PI} (void)
+\item 
+\hyperlink{Kinova_8API_8UsbCommandLayerUbuntu_8h_abe06f11f1aa8abc575ebd4474e559d25}{K\+I\+N\+O\+V\+A\+A\+P\+I\+U\+S\+B\+C\+O\+M\+M\+A\+N\+D\+L\+A\+Y\+E\+R\+\_\+\+A\+PI} int \hyperlink{Kinova_8API_8UsbCommandLayerUbuntu_8h_a9898b3a0c07aa2844ab9d2dee7e21f18}{Init\+Fingers} ()
+\item 
+\hyperlink{Kinova_8API_8UsbCommandLayerUbuntu_8h_abe06f11f1aa8abc575ebd4474e559d25}{K\+I\+N\+O\+V\+A\+A\+P\+I\+U\+S\+B\+C\+O\+M\+M\+A\+N\+D\+L\+A\+Y\+E\+R\+\_\+\+A\+PI} int \hyperlink{Kinova_8API_8UsbCommandLayerUbuntu_8h_a3e2040173821c0a1f86713f04bd03cea}{Move\+Home} ()
+\item 
+\hyperlink{Kinova_8API_8UsbCommandLayerUbuntu_8h_abe06f11f1aa8abc575ebd4474e559d25}{K\+I\+N\+O\+V\+A\+A\+P\+I\+U\+S\+B\+C\+O\+M\+M\+A\+N\+D\+L\+A\+Y\+E\+R\+\_\+\+A\+PI} int \hyperlink{Kinova_8API_8UsbCommandLayerUbuntu_8h_a7428b825bdc649a02cb39a5002f96228}{Program\+Flash} (char $\ast$filename)
+\item 
+\hyperlink{Kinova_8API_8UsbCommandLayerUbuntu_8h_abe06f11f1aa8abc575ebd4474e559d25}{K\+I\+N\+O\+V\+A\+A\+P\+I\+U\+S\+B\+C\+O\+M\+M\+A\+N\+D\+L\+A\+Y\+E\+R\+\_\+\+A\+PI} int \hyperlink{Kinova_8API_8UsbCommandLayerUbuntu_8h_a316a307f9da5315ea0af6bf9ea153eb5}{Restore\+Factory\+Default} ()
+\item 
+\hyperlink{Kinova_8API_8UsbCommandLayerUbuntu_8h_abe06f11f1aa8abc575ebd4474e559d25}{K\+I\+N\+O\+V\+A\+A\+P\+I\+U\+S\+B\+C\+O\+M\+M\+A\+N\+D\+L\+A\+Y\+E\+R\+\_\+\+A\+PI} int \hyperlink{Kinova_8API_8UsbCommandLayerUbuntu_8h_ac802915b7390eb6ffd8e1206b52f557f}{Send\+Advance\+Trajectory} (\hyperlink{structTrajectoryPoint}{Trajectory\+Point} trajectory)
+\item 
+\hyperlink{Kinova_8API_8UsbCommandLayerUbuntu_8h_abe06f11f1aa8abc575ebd4474e559d25}{K\+I\+N\+O\+V\+A\+A\+P\+I\+U\+S\+B\+C\+O\+M\+M\+A\+N\+D\+L\+A\+Y\+E\+R\+\_\+\+A\+PI} int \hyperlink{Kinova_8API_8UsbCommandLayerUbuntu_8h_a9f21d4375c78210dea0d33316e23fcb8}{Send\+Basic\+Trajectory} (\hyperlink{structTrajectoryPoint}{Trajectory\+Point} trajectory)
+\item 
+\hyperlink{Kinova_8API_8UsbCommandLayerUbuntu_8h_abe06f11f1aa8abc575ebd4474e559d25}{K\+I\+N\+O\+V\+A\+A\+P\+I\+U\+S\+B\+C\+O\+M\+M\+A\+N\+D\+L\+A\+Y\+E\+R\+\_\+\+A\+PI} int \hyperlink{Kinova_8API_8UsbCommandLayerUbuntu_8h_ab52677c163193c4f160981a7503ec79a}{Send\+Joystick\+Command} (\hyperlink{structJoystickCommand}{Joystick\+Command} joystick\+Command)
+\item 
+\hyperlink{Kinova_8API_8UsbCommandLayerUbuntu_8h_abe06f11f1aa8abc575ebd4474e559d25}{K\+I\+N\+O\+V\+A\+A\+P\+I\+U\+S\+B\+C\+O\+M\+M\+A\+N\+D\+L\+A\+Y\+E\+R\+\_\+\+A\+PI} int \hyperlink{Kinova_8API_8UsbCommandLayerUbuntu_8h_a4506116c4053d8c12c13d6ef974699c2}{Set\+Active\+Device} (\hyperlink{Kinova_8API_8CommLayerUbuntu_8h_da/dd6/structKinovaDevice}{Kinova\+Device} device)
+\item 
+\hyperlink{Kinova_8API_8UsbCommandLayerUbuntu_8h_abe06f11f1aa8abc575ebd4474e559d25}{K\+I\+N\+O\+V\+A\+A\+P\+I\+U\+S\+B\+C\+O\+M\+M\+A\+N\+D\+L\+A\+Y\+E\+R\+\_\+\+A\+PI} int \hyperlink{Kinova_8API_8UsbCommandLayerUbuntu_8h_a5366b9fa9d7c3bb00118a1cb8caf470e}{Set\+Actuator\+Address} (int Actuator\+Adress, int new\+Address)
+\item 
+\hyperlink{Kinova_8API_8UsbCommandLayerUbuntu_8h_abe06f11f1aa8abc575ebd4474e559d25}{K\+I\+N\+O\+V\+A\+A\+P\+I\+U\+S\+B\+C\+O\+M\+M\+A\+N\+D\+L\+A\+Y\+E\+R\+\_\+\+A\+PI} int \hyperlink{Kinova_8API_8UsbCommandLayerUbuntu_8h_a5ac8a37b983294d15f6cccb7a6f1a414}{Set\+Actuator\+P\+ID} (unsigned int address, float P, float I, float D)
+\item 
+\hyperlink{Kinova_8API_8UsbCommandLayerUbuntu_8h_abe06f11f1aa8abc575ebd4474e559d25}{K\+I\+N\+O\+V\+A\+A\+P\+I\+U\+S\+B\+C\+O\+M\+M\+A\+N\+D\+L\+A\+Y\+E\+R\+\_\+\+A\+PI} int \hyperlink{Kinova_8API_8UsbCommandLayerUbuntu_8h_a4201734c8a9fefbf14d78f03195d7b71}{Set\+Actuator\+P\+I\+D\+Filter} (int Actuator\+Adress, float filterP, float filterI, float filterD)
+\item 
+\hyperlink{Kinova_8API_8UsbCommandLayerUbuntu_8h_abe06f11f1aa8abc575ebd4474e559d25}{K\+I\+N\+O\+V\+A\+A\+P\+I\+U\+S\+B\+C\+O\+M\+M\+A\+N\+D\+L\+A\+Y\+E\+R\+\_\+\+A\+PI} int \hyperlink{Kinova_8API_8UsbCommandLayerUbuntu_8h_a2a3d8fbff1add975bfff283ac3b8a3c6}{Set\+Angular\+Control} ()
+\item 
+\hyperlink{Kinova_8API_8UsbCommandLayerUbuntu_8h_abe06f11f1aa8abc575ebd4474e559d25}{K\+I\+N\+O\+V\+A\+A\+P\+I\+U\+S\+B\+C\+O\+M\+M\+A\+N\+D\+L\+A\+Y\+E\+R\+\_\+\+A\+PI} int \hyperlink{Kinova_8API_8UsbCommandLayerUbuntu_8h_a8a1de40ded42bb1c9ad599218506a7ba}{Set\+Angular\+Inertia\+Damping} (\hyperlink{structAngularInfo}{Angular\+Info} inertia, \hyperlink{structAngularInfo}{Angular\+Info} damping)
+\item 
+\hyperlink{Kinova_8API_8UsbCommandLayerUbuntu_8h_abe06f11f1aa8abc575ebd4474e559d25}{K\+I\+N\+O\+V\+A\+A\+P\+I\+U\+S\+B\+C\+O\+M\+M\+A\+N\+D\+L\+A\+Y\+E\+R\+\_\+\+A\+PI} int \hyperlink{Kinova_8API_8UsbCommandLayerUbuntu_8h_a28c19286fba497565c34d2a45e29372d}{Set\+Angular\+Torque\+Min\+Max} (\hyperlink{structAngularInfo}{Angular\+Info} min, \hyperlink{structAngularInfo}{Angular\+Info} \hyperlink{JacoPositionConfig_8dox_a55c9de72d9f3630abdf51bfe39c191dd}{max})
+\item 
+\hyperlink{Kinova_8API_8UsbCommandLayerUbuntu_8h_abe06f11f1aa8abc575ebd4474e559d25}{K\+I\+N\+O\+V\+A\+A\+P\+I\+U\+S\+B\+C\+O\+M\+M\+A\+N\+D\+L\+A\+Y\+E\+R\+\_\+\+A\+PI} int \hyperlink{Kinova_8API_8UsbCommandLayerUbuntu_8h_a9396131c243aa476db3e7a26b797e076}{Set\+Cartesian\+Control} ()
+\item 
+\hyperlink{Kinova_8API_8UsbCommandLayerUbuntu_8h_abe06f11f1aa8abc575ebd4474e559d25}{K\+I\+N\+O\+V\+A\+A\+P\+I\+U\+S\+B\+C\+O\+M\+M\+A\+N\+D\+L\+A\+Y\+E\+R\+\_\+\+A\+PI} int \hyperlink{Kinova_8API_8UsbCommandLayerUbuntu_8h_afdf4f71175b5208063a002818201ea76}{Set\+Cartesian\+Force\+Min\+Max} (\hyperlink{structCartesianInfo}{Cartesian\+Info} min, \hyperlink{structCartesianInfo}{Cartesian\+Info} \hyperlink{JacoPositionConfig_8dox_a55c9de72d9f3630abdf51bfe39c191dd}{max})
+\item 
+\hyperlink{Kinova_8API_8UsbCommandLayerUbuntu_8h_abe06f11f1aa8abc575ebd4474e559d25}{K\+I\+N\+O\+V\+A\+A\+P\+I\+U\+S\+B\+C\+O\+M\+M\+A\+N\+D\+L\+A\+Y\+E\+R\+\_\+\+A\+PI} int \hyperlink{Kinova_8API_8UsbCommandLayerUbuntu_8h_a6ad9b3474de09442a05f336cb7df7973}{Set\+Cartesian\+Inertia\+Damping} (\hyperlink{structCartesianInfo}{Cartesian\+Info} inertia, \hyperlink{structCartesianInfo}{Cartesian\+Info} damping)
+\item 
+\hyperlink{Kinova_8API_8UsbCommandLayerUbuntu_8h_abe06f11f1aa8abc575ebd4474e559d25}{K\+I\+N\+O\+V\+A\+A\+P\+I\+U\+S\+B\+C\+O\+M\+M\+A\+N\+D\+L\+A\+Y\+E\+R\+\_\+\+A\+PI} int \hyperlink{Kinova_8API_8UsbCommandLayerUbuntu_8h_aaaf906c81f0dbdc53101d61c7838eae8}{Set\+Client\+Configurations} (\hyperlink{KinovaTypes_8h_d1/d2e/structClientConfigurations}{Client\+Configurations} config)
+\item 
+\hyperlink{Kinova_8API_8UsbCommandLayerUbuntu_8h_abe06f11f1aa8abc575ebd4474e559d25}{K\+I\+N\+O\+V\+A\+A\+P\+I\+U\+S\+B\+C\+O\+M\+M\+A\+N\+D\+L\+A\+Y\+E\+R\+\_\+\+A\+PI} int \hyperlink{Kinova_8API_8UsbCommandLayerUbuntu_8h_a01a084c40c33a629ee44b5fac0ca40fb}{Set\+Control\+Mapping} (\hyperlink{KinovaTypes_8h_d4/d71/structControlMappingCharts}{Control\+Mapping\+Charts} Command)
+\item 
+\hyperlink{Kinova_8API_8UsbCommandLayerUbuntu_8h_abe06f11f1aa8abc575ebd4474e559d25}{K\+I\+N\+O\+V\+A\+A\+P\+I\+U\+S\+B\+C\+O\+M\+M\+A\+N\+D\+L\+A\+Y\+E\+R\+\_\+\+A\+PI} int \hyperlink{Kinova_8API_8UsbCommandLayerUbuntu_8h_a6340417b9bf8f549e249278fc6d33d00}{Set\+Dev\+Value} (std\+::vector$<$ float $>$ command)
+\item 
+\hyperlink{Kinova_8API_8UsbCommandLayerUbuntu_8h_abe06f11f1aa8abc575ebd4474e559d25}{K\+I\+N\+O\+V\+A\+A\+P\+I\+U\+S\+B\+C\+O\+M\+M\+A\+N\+D\+L\+A\+Y\+E\+R\+\_\+\+A\+PI} int \hyperlink{Kinova_8API_8UsbCommandLayerUbuntu_8h_af3bd0e6780c8c6238d2de8d3da69f200}{Set\+Frame\+Type} (int frame\+Type)
+\item 
+\hyperlink{Kinova_8API_8UsbCommandLayerUbuntu_8h_abe06f11f1aa8abc575ebd4474e559d25}{K\+I\+N\+O\+V\+A\+A\+P\+I\+U\+S\+B\+C\+O\+M\+M\+A\+N\+D\+L\+A\+Y\+E\+R\+\_\+\+A\+PI} int \hyperlink{Kinova_8API_8UsbCommandLayerUbuntu_8h_aa40b9a922065a45723d1ece7be9a02ca}{Set\+Joint\+Zero} (int Actuator\+Adress)
+\item 
+\hyperlink{Kinova_8API_8UsbCommandLayerUbuntu_8h_abe06f11f1aa8abc575ebd4474e559d25}{K\+I\+N\+O\+V\+A\+A\+P\+I\+U\+S\+B\+C\+O\+M\+M\+A\+N\+D\+L\+A\+Y\+E\+R\+\_\+\+A\+PI} int \hyperlink{Kinova_8API_8UsbCommandLayerUbuntu_8h_a46ab65b2af403fe511fd557b21c49cc1}{Set\+Model} (char Command\mbox{[}\hyperlink{KinovaTypes_8h_ac829415013d8120cedee928452ae0f55}{S\+T\+R\+I\+N\+G\+\_\+\+L\+E\+N\+G\+TH}\mbox{]}, char temp\mbox{[}\hyperlink{KinovaTypes_8h_ac829415013d8120cedee928452ae0f55}{S\+T\+R\+I\+N\+G\+\_\+\+L\+E\+N\+G\+TH}\mbox{]})
+\item 
+\hyperlink{Kinova_8API_8UsbCommandLayerUbuntu_8h_abe06f11f1aa8abc575ebd4474e559d25}{K\+I\+N\+O\+V\+A\+A\+P\+I\+U\+S\+B\+C\+O\+M\+M\+A\+N\+D\+L\+A\+Y\+E\+R\+\_\+\+A\+PI} int \hyperlink{Kinova_8API_8UsbCommandLayerUbuntu_8h_a6e9daa16713f652199be76db68140f48}{Set\+Protection\+Zone} (\hyperlink{KinovaTypes_8h_dd/d29/structZoneList}{Zone\+List} Command)
+\item 
+\hyperlink{Kinova_8API_8UsbCommandLayerUbuntu_8h_abe06f11f1aa8abc575ebd4474e559d25}{K\+I\+N\+O\+V\+A\+A\+P\+I\+U\+S\+B\+C\+O\+M\+M\+A\+N\+D\+L\+A\+Y\+E\+R\+\_\+\+A\+PI} int \hyperlink{Kinova_8API_8UsbCommandLayerUbuntu_8h_af49466c5a2dbdb5cb0cffd4b2eeb732d}{Set\+Serial\+Number} (char Command\mbox{[}\hyperlink{KinovaTypes_8h_ac829415013d8120cedee928452ae0f55}{S\+T\+R\+I\+N\+G\+\_\+\+L\+E\+N\+G\+TH}\mbox{]}, char temp\mbox{[}\hyperlink{KinovaTypes_8h_ac829415013d8120cedee928452ae0f55}{S\+T\+R\+I\+N\+G\+\_\+\+L\+E\+N\+G\+TH}\mbox{]})
+\item 
+\hyperlink{Kinova_8API_8UsbCommandLayerUbuntu_8h_abe06f11f1aa8abc575ebd4474e559d25}{K\+I\+N\+O\+V\+A\+A\+P\+I\+U\+S\+B\+C\+O\+M\+M\+A\+N\+D\+L\+A\+Y\+E\+R\+\_\+\+A\+PI} int \hyperlink{Kinova_8API_8UsbCommandLayerUbuntu_8h_a9b9e4d368ec162a7078d66c175d39e2c}{Set\+Spasm\+Filter\+Values} (std\+::vector$<$ float $>$ Response, int activation\+Status)
+\item 
+\hyperlink{Kinova_8API_8UsbCommandLayerUbuntu_8h_abe06f11f1aa8abc575ebd4474e559d25}{K\+I\+N\+O\+V\+A\+A\+P\+I\+U\+S\+B\+C\+O\+M\+M\+A\+N\+D\+L\+A\+Y\+E\+R\+\_\+\+A\+PI} int \hyperlink{Kinova_8API_8UsbCommandLayerUbuntu_8h_aef23b672396482a72c9ba81bb9756d9e}{Set\+Torque\+Gain} (int Actuator\+Adress, int Gain)
+\item 
+\hyperlink{Kinova_8API_8UsbCommandLayerUbuntu_8h_abe06f11f1aa8abc575ebd4474e559d25}{K\+I\+N\+O\+V\+A\+A\+P\+I\+U\+S\+B\+C\+O\+M\+M\+A\+N\+D\+L\+A\+Y\+E\+R\+\_\+\+A\+PI} int \hyperlink{Kinova_8API_8UsbCommandLayerUbuntu_8h_a552f60a7ef6fb7e19a8d9ac06fdbd189}{Set\+Torque\+Zero} (int Actuator\+Adress)
+\item 
+\hyperlink{Kinova_8API_8UsbCommandLayerUbuntu_8h_abe06f11f1aa8abc575ebd4474e559d25}{K\+I\+N\+O\+V\+A\+A\+P\+I\+U\+S\+B\+C\+O\+M\+M\+A\+N\+D\+L\+A\+Y\+E\+R\+\_\+\+A\+PI} int \hyperlink{Kinova_8API_8UsbCommandLayerUbuntu_8h_ac58735ec0d693b62919ed6b647207c44}{Start\+Control\+A\+PI} ()
+\item 
+\hyperlink{Kinova_8API_8UsbCommandLayerUbuntu_8h_abe06f11f1aa8abc575ebd4474e559d25}{K\+I\+N\+O\+V\+A\+A\+P\+I\+U\+S\+B\+C\+O\+M\+M\+A\+N\+D\+L\+A\+Y\+E\+R\+\_\+\+A\+PI} int \hyperlink{Kinova_8API_8UsbCommandLayerUbuntu_8h_a42a30576593f705ec5de78d6e7f6b1c0}{Start\+Current\+Limitation} ()
+\item 
+\hyperlink{Kinova_8API_8UsbCommandLayerUbuntu_8h_abe06f11f1aa8abc575ebd4474e559d25}{K\+I\+N\+O\+V\+A\+A\+P\+I\+U\+S\+B\+C\+O\+M\+M\+A\+N\+D\+L\+A\+Y\+E\+R\+\_\+\+A\+PI} int \hyperlink{Kinova_8API_8UsbCommandLayerUbuntu_8h_aedea2cbf905878c9b24d998e0fa3e06e}{Start\+Force\+Control} ()
+\item 
+\hyperlink{Kinova_8API_8UsbCommandLayerUbuntu_8h_abe06f11f1aa8abc575ebd4474e559d25}{K\+I\+N\+O\+V\+A\+A\+P\+I\+U\+S\+B\+C\+O\+M\+M\+A\+N\+D\+L\+A\+Y\+E\+R\+\_\+\+A\+PI} int \hyperlink{Kinova_8API_8UsbCommandLayerUbuntu_8h_ac3cb6e6a16838716235d935c92aa0a82}{Stop\+Control\+A\+PI} ()
+\item 
+\hyperlink{Kinova_8API_8UsbCommandLayerUbuntu_8h_abe06f11f1aa8abc575ebd4474e559d25}{K\+I\+N\+O\+V\+A\+A\+P\+I\+U\+S\+B\+C\+O\+M\+M\+A\+N\+D\+L\+A\+Y\+E\+R\+\_\+\+A\+PI} int \hyperlink{Kinova_8API_8UsbCommandLayerUbuntu_8h_a556dc384ffef31cb88648db2985d70b4}{Stop\+Current\+Limitation} ()
+\item 
+\hyperlink{Kinova_8API_8UsbCommandLayerUbuntu_8h_abe06f11f1aa8abc575ebd4474e559d25}{K\+I\+N\+O\+V\+A\+A\+P\+I\+U\+S\+B\+C\+O\+M\+M\+A\+N\+D\+L\+A\+Y\+E\+R\+\_\+\+A\+PI} int \hyperlink{Kinova_8API_8UsbCommandLayerUbuntu_8h_a040a5a1f4f5725c9f6832aa9650c62f8}{Stop\+Force\+Control} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This file contains header of all available functions of this A\+PI. 
+
+
+
+\subsection{Macro Definition Documentation}
+\index{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}!C\+O\+M\+M\+\_\+\+L\+A\+Y\+E\+R\+\_\+\+P\+A\+TH@{C\+O\+M\+M\+\_\+\+L\+A\+Y\+E\+R\+\_\+\+P\+A\+TH}}
+\index{C\+O\+M\+M\+\_\+\+L\+A\+Y\+E\+R\+\_\+\+P\+A\+TH@{C\+O\+M\+M\+\_\+\+L\+A\+Y\+E\+R\+\_\+\+P\+A\+TH}!Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}}
+\subsubsection[{\texorpdfstring{C\+O\+M\+M\+\_\+\+L\+A\+Y\+E\+R\+\_\+\+P\+A\+TH}{COMM_LAYER_PATH}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+O\+M\+M\+\_\+\+L\+A\+Y\+E\+R\+\_\+\+P\+A\+TH~\char`\"{}Kinova.\+A\+P\+I.\+Comm\+Layer\+Ubuntu.\+so\char`\"{}}\hypertarget{Kinova_8API_8UsbCommandLayerUbuntu_8h_a12c8325343efa4c6e8ae136a72254878}{}\label{Kinova_8API_8UsbCommandLayerUbuntu_8h_a12c8325343efa4c6e8ae136a72254878}
+\index{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}!C\+O\+M\+M\+A\+N\+D\+\_\+\+L\+A\+Y\+E\+R\+\_\+\+V\+E\+R\+S\+I\+ON@{C\+O\+M\+M\+A\+N\+D\+\_\+\+L\+A\+Y\+E\+R\+\_\+\+V\+E\+R\+S\+I\+ON}}
+\index{C\+O\+M\+M\+A\+N\+D\+\_\+\+L\+A\+Y\+E\+R\+\_\+\+V\+E\+R\+S\+I\+ON@{C\+O\+M\+M\+A\+N\+D\+\_\+\+L\+A\+Y\+E\+R\+\_\+\+V\+E\+R\+S\+I\+ON}!Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}}
+\subsubsection[{\texorpdfstring{C\+O\+M\+M\+A\+N\+D\+\_\+\+L\+A\+Y\+E\+R\+\_\+\+V\+E\+R\+S\+I\+ON}{COMMAND_LAYER_VERSION}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+O\+M\+M\+A\+N\+D\+\_\+\+L\+A\+Y\+E\+R\+\_\+\+V\+E\+R\+S\+I\+ON~50101}\hypertarget{Kinova_8API_8UsbCommandLayerUbuntu_8h_aaeb890c653dc6657b1238afe3ce1a0f9}{}\label{Kinova_8API_8UsbCommandLayerUbuntu_8h_aaeb890c653dc6657b1238afe3ce1a0f9}
+\index{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}!E\+R\+R\+O\+R\+\_\+\+A\+P\+I\+\_\+\+N\+O\+T\+\_\+\+I\+N\+I\+T\+I\+A\+L\+I\+Z\+ED@{E\+R\+R\+O\+R\+\_\+\+A\+P\+I\+\_\+\+N\+O\+T\+\_\+\+I\+N\+I\+T\+I\+A\+L\+I\+Z\+ED}}
+\index{E\+R\+R\+O\+R\+\_\+\+A\+P\+I\+\_\+\+N\+O\+T\+\_\+\+I\+N\+I\+T\+I\+A\+L\+I\+Z\+ED@{E\+R\+R\+O\+R\+\_\+\+A\+P\+I\+\_\+\+N\+O\+T\+\_\+\+I\+N\+I\+T\+I\+A\+L\+I\+Z\+ED}!Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}}
+\subsubsection[{\texorpdfstring{E\+R\+R\+O\+R\+\_\+\+A\+P\+I\+\_\+\+N\+O\+T\+\_\+\+I\+N\+I\+T\+I\+A\+L\+I\+Z\+ED}{ERROR_API_NOT_INITIALIZED}}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\+R\+R\+O\+R\+\_\+\+A\+P\+I\+\_\+\+N\+O\+T\+\_\+\+I\+N\+I\+T\+I\+A\+L\+I\+Z\+ED~2101}\hypertarget{Kinova_8API_8UsbCommandLayerUbuntu_8h_a0eb31c1b663a821f8dc3a8bfabb66c68}{}\label{Kinova_8API_8UsbCommandLayerUbuntu_8h_a0eb31c1b663a821f8dc3a8bfabb66c68}
+\index{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}!E\+R\+R\+O\+R\+\_\+\+C\+L\+O\+S\+E\+\_\+\+M\+E\+T\+H\+OD@{E\+R\+R\+O\+R\+\_\+\+C\+L\+O\+S\+E\+\_\+\+M\+E\+T\+H\+OD}}
+\index{E\+R\+R\+O\+R\+\_\+\+C\+L\+O\+S\+E\+\_\+\+M\+E\+T\+H\+OD@{E\+R\+R\+O\+R\+\_\+\+C\+L\+O\+S\+E\+\_\+\+M\+E\+T\+H\+OD}!Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}}
+\subsubsection[{\texorpdfstring{E\+R\+R\+O\+R\+\_\+\+C\+L\+O\+S\+E\+\_\+\+M\+E\+T\+H\+OD}{ERROR_CLOSE_METHOD}}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\+R\+R\+O\+R\+\_\+\+C\+L\+O\+S\+E\+\_\+\+M\+E\+T\+H\+OD~2007}\hypertarget{Kinova_8API_8UsbCommandLayerUbuntu_8h_a890a3525205b751506feb93582863fea}{}\label{Kinova_8API_8UsbCommandLayerUbuntu_8h_a890a3525205b751506feb93582863fea}
+\index{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}!E\+R\+R\+O\+R\+\_\+\+G\+E\+T\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+C\+O\+U\+N\+T\+\_\+\+M\+E\+T\+H\+OD@{E\+R\+R\+O\+R\+\_\+\+G\+E\+T\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+C\+O\+U\+N\+T\+\_\+\+M\+E\+T\+H\+OD}}
+\index{E\+R\+R\+O\+R\+\_\+\+G\+E\+T\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+C\+O\+U\+N\+T\+\_\+\+M\+E\+T\+H\+OD@{E\+R\+R\+O\+R\+\_\+\+G\+E\+T\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+C\+O\+U\+N\+T\+\_\+\+M\+E\+T\+H\+OD}!Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}}
+\subsubsection[{\texorpdfstring{E\+R\+R\+O\+R\+\_\+\+G\+E\+T\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+C\+O\+U\+N\+T\+\_\+\+M\+E\+T\+H\+OD}{ERROR_GET_DEVICE_COUNT_METHOD}}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\+R\+R\+O\+R\+\_\+\+G\+E\+T\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+C\+O\+U\+N\+T\+\_\+\+M\+E\+T\+H\+OD~2008}\hypertarget{Kinova_8API_8UsbCommandLayerUbuntu_8h_a26d8ccb476c581bf24eaccd200530a91}{}\label{Kinova_8API_8UsbCommandLayerUbuntu_8h_a26d8ccb476c581bf24eaccd200530a91}
+\index{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}!E\+R\+R\+O\+R\+\_\+\+G\+E\+T\+\_\+\+D\+E\+V\+I\+C\+E\+S\+\_\+\+L\+I\+S\+T\+\_\+\+M\+E\+T\+H\+OD@{E\+R\+R\+O\+R\+\_\+\+G\+E\+T\+\_\+\+D\+E\+V\+I\+C\+E\+S\+\_\+\+L\+I\+S\+T\+\_\+\+M\+E\+T\+H\+OD}}
+\index{E\+R\+R\+O\+R\+\_\+\+G\+E\+T\+\_\+\+D\+E\+V\+I\+C\+E\+S\+\_\+\+L\+I\+S\+T\+\_\+\+M\+E\+T\+H\+OD@{E\+R\+R\+O\+R\+\_\+\+G\+E\+T\+\_\+\+D\+E\+V\+I\+C\+E\+S\+\_\+\+L\+I\+S\+T\+\_\+\+M\+E\+T\+H\+OD}!Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}}
+\subsubsection[{\texorpdfstring{E\+R\+R\+O\+R\+\_\+\+G\+E\+T\+\_\+\+D\+E\+V\+I\+C\+E\+S\+\_\+\+L\+I\+S\+T\+\_\+\+M\+E\+T\+H\+OD}{ERROR_GET_DEVICES_LIST_METHOD}}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\+R\+R\+O\+R\+\_\+\+G\+E\+T\+\_\+\+D\+E\+V\+I\+C\+E\+S\+\_\+\+L\+I\+S\+T\+\_\+\+M\+E\+T\+H\+OD~2011}\hypertarget{Kinova_8API_8UsbCommandLayerUbuntu_8h_a50e55249141822b3841afc7bdfdc9a7e}{}\label{Kinova_8API_8UsbCommandLayerUbuntu_8h_a50e55249141822b3841afc7bdfdc9a7e}
+\index{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}!E\+R\+R\+O\+R\+\_\+\+I\+N\+I\+T\+\_\+\+A\+PI@{E\+R\+R\+O\+R\+\_\+\+I\+N\+I\+T\+\_\+\+A\+PI}}
+\index{E\+R\+R\+O\+R\+\_\+\+I\+N\+I\+T\+\_\+\+A\+PI@{E\+R\+R\+O\+R\+\_\+\+I\+N\+I\+T\+\_\+\+A\+PI}!Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}}
+\subsubsection[{\texorpdfstring{E\+R\+R\+O\+R\+\_\+\+I\+N\+I\+T\+\_\+\+A\+PI}{ERROR_INIT_API}}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\+R\+R\+O\+R\+\_\+\+I\+N\+I\+T\+\_\+\+A\+PI~2001}\hypertarget{Kinova_8API_8UsbCommandLayerUbuntu_8h_ad9c707fcd3b8b900a267bb3112251768}{}\label{Kinova_8API_8UsbCommandLayerUbuntu_8h_ad9c707fcd3b8b900a267bb3112251768}
+\index{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}!E\+R\+R\+O\+R\+\_\+\+I\+N\+I\+T\+\_\+\+C\+O\+M\+M\+\_\+\+M\+E\+T\+H\+OD@{E\+R\+R\+O\+R\+\_\+\+I\+N\+I\+T\+\_\+\+C\+O\+M\+M\+\_\+\+M\+E\+T\+H\+OD}}
+\index{E\+R\+R\+O\+R\+\_\+\+I\+N\+I\+T\+\_\+\+C\+O\+M\+M\+\_\+\+M\+E\+T\+H\+OD@{E\+R\+R\+O\+R\+\_\+\+I\+N\+I\+T\+\_\+\+C\+O\+M\+M\+\_\+\+M\+E\+T\+H\+OD}!Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}}
+\subsubsection[{\texorpdfstring{E\+R\+R\+O\+R\+\_\+\+I\+N\+I\+T\+\_\+\+C\+O\+M\+M\+\_\+\+M\+E\+T\+H\+OD}{ERROR_INIT_COMM_METHOD}}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\+R\+R\+O\+R\+\_\+\+I\+N\+I\+T\+\_\+\+C\+O\+M\+M\+\_\+\+M\+E\+T\+H\+OD~2006}\hypertarget{Kinova_8API_8UsbCommandLayerUbuntu_8h_a33306e3b3c61996ac84a24cfd8a8ae95}{}\label{Kinova_8API_8UsbCommandLayerUbuntu_8h_a33306e3b3c61996ac84a24cfd8a8ae95}
+\index{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}!E\+R\+R\+O\+R\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+P\+A\+R\+AM@{E\+R\+R\+O\+R\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+P\+A\+R\+AM}}
+\index{E\+R\+R\+O\+R\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+P\+A\+R\+AM@{E\+R\+R\+O\+R\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+P\+A\+R\+AM}!Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}}
+\subsubsection[{\texorpdfstring{E\+R\+R\+O\+R\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+P\+A\+R\+AM}{ERROR_INVALID_PARAM}}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\+R\+R\+O\+R\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+P\+A\+R\+AM~2100}\hypertarget{Kinova_8API_8UsbCommandLayerUbuntu_8h_a46991f9bc9447e7029136ea73ce8d373}{}\label{Kinova_8API_8UsbCommandLayerUbuntu_8h_a46991f9bc9447e7029136ea73ce8d373}
+\index{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}!E\+R\+R\+O\+R\+\_\+\+L\+O\+A\+D\+\_\+\+C\+O\+M\+M\+\_\+\+D\+LL@{E\+R\+R\+O\+R\+\_\+\+L\+O\+A\+D\+\_\+\+C\+O\+M\+M\+\_\+\+D\+LL}}
+\index{E\+R\+R\+O\+R\+\_\+\+L\+O\+A\+D\+\_\+\+C\+O\+M\+M\+\_\+\+D\+LL@{E\+R\+R\+O\+R\+\_\+\+L\+O\+A\+D\+\_\+\+C\+O\+M\+M\+\_\+\+D\+LL}!Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}}
+\subsubsection[{\texorpdfstring{E\+R\+R\+O\+R\+\_\+\+L\+O\+A\+D\+\_\+\+C\+O\+M\+M\+\_\+\+D\+LL}{ERROR_LOAD_COMM_DLL}}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\+R\+R\+O\+R\+\_\+\+L\+O\+A\+D\+\_\+\+C\+O\+M\+M\+\_\+\+D\+LL~2002}\hypertarget{Kinova_8API_8UsbCommandLayerUbuntu_8h_a695917dd27731b8875a1ccf2cb370b61}{}\label{Kinova_8API_8UsbCommandLayerUbuntu_8h_a695917dd27731b8875a1ccf2cb370b61}
+\index{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}!E\+R\+R\+O\+R\+\_\+\+S\+E\+M\+A\+P\+H\+O\+R\+E\+\_\+\+F\+A\+I\+L\+ED@{E\+R\+R\+O\+R\+\_\+\+S\+E\+M\+A\+P\+H\+O\+R\+E\+\_\+\+F\+A\+I\+L\+ED}}
+\index{E\+R\+R\+O\+R\+\_\+\+S\+E\+M\+A\+P\+H\+O\+R\+E\+\_\+\+F\+A\+I\+L\+ED@{E\+R\+R\+O\+R\+\_\+\+S\+E\+M\+A\+P\+H\+O\+R\+E\+\_\+\+F\+A\+I\+L\+ED}!Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}}
+\subsubsection[{\texorpdfstring{E\+R\+R\+O\+R\+\_\+\+S\+E\+M\+A\+P\+H\+O\+R\+E\+\_\+\+F\+A\+I\+L\+ED}{ERROR_SEMAPHORE_FAILED}}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\+R\+R\+O\+R\+\_\+\+S\+E\+M\+A\+P\+H\+O\+R\+E\+\_\+\+F\+A\+I\+L\+ED~2012}\hypertarget{Kinova_8API_8UsbCommandLayerUbuntu_8h_a8c5b24069ba1427e15a2a2dcbe004ba4}{}\label{Kinova_8API_8UsbCommandLayerUbuntu_8h_a8c5b24069ba1427e15a2a2dcbe004ba4}
+\index{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}!E\+R\+R\+O\+R\+\_\+\+S\+E\+N\+D\+\_\+\+P\+A\+C\+K\+E\+T\+\_\+\+M\+E\+T\+H\+OD@{E\+R\+R\+O\+R\+\_\+\+S\+E\+N\+D\+\_\+\+P\+A\+C\+K\+E\+T\+\_\+\+M\+E\+T\+H\+OD}}
+\index{E\+R\+R\+O\+R\+\_\+\+S\+E\+N\+D\+\_\+\+P\+A\+C\+K\+E\+T\+\_\+\+M\+E\+T\+H\+OD@{E\+R\+R\+O\+R\+\_\+\+S\+E\+N\+D\+\_\+\+P\+A\+C\+K\+E\+T\+\_\+\+M\+E\+T\+H\+OD}!Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}}
+\subsubsection[{\texorpdfstring{E\+R\+R\+O\+R\+\_\+\+S\+E\+N\+D\+\_\+\+P\+A\+C\+K\+E\+T\+\_\+\+M\+E\+T\+H\+OD}{ERROR_SEND_PACKET_METHOD}}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\+R\+R\+O\+R\+\_\+\+S\+E\+N\+D\+\_\+\+P\+A\+C\+K\+E\+T\+\_\+\+M\+E\+T\+H\+OD~2009}\hypertarget{Kinova_8API_8UsbCommandLayerUbuntu_8h_afc952da53a52165715ceb34aea197e34}{}\label{Kinova_8API_8UsbCommandLayerUbuntu_8h_afc952da53a52165715ceb34aea197e34}
+\index{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}!E\+R\+R\+O\+R\+\_\+\+S\+E\+T\+\_\+\+A\+C\+T\+I\+V\+E\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+M\+E\+T\+H\+OD@{E\+R\+R\+O\+R\+\_\+\+S\+E\+T\+\_\+\+A\+C\+T\+I\+V\+E\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+M\+E\+T\+H\+OD}}
+\index{E\+R\+R\+O\+R\+\_\+\+S\+E\+T\+\_\+\+A\+C\+T\+I\+V\+E\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+M\+E\+T\+H\+OD@{E\+R\+R\+O\+R\+\_\+\+S\+E\+T\+\_\+\+A\+C\+T\+I\+V\+E\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+M\+E\+T\+H\+OD}!Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}}
+\subsubsection[{\texorpdfstring{E\+R\+R\+O\+R\+\_\+\+S\+E\+T\+\_\+\+A\+C\+T\+I\+V\+E\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+M\+E\+T\+H\+OD}{ERROR_SET_ACTIVE_DEVICE_METHOD}}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\+R\+R\+O\+R\+\_\+\+S\+E\+T\+\_\+\+A\+C\+T\+I\+V\+E\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+M\+E\+T\+H\+OD~2010}\hypertarget{Kinova_8API_8UsbCommandLayerUbuntu_8h_a241fc8c34c641a3fbdfc9a0298dcf757}{}\label{Kinova_8API_8UsbCommandLayerUbuntu_8h_a241fc8c34c641a3fbdfc9a0298dcf757}
+\index{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}!J\+A\+C\+O\+\_\+\+C\+O\+M\+M\+\_\+\+F\+A\+I\+L\+ED@{J\+A\+C\+O\+\_\+\+C\+O\+M\+M\+\_\+\+F\+A\+I\+L\+ED}}
+\index{J\+A\+C\+O\+\_\+\+C\+O\+M\+M\+\_\+\+F\+A\+I\+L\+ED@{J\+A\+C\+O\+\_\+\+C\+O\+M\+M\+\_\+\+F\+A\+I\+L\+ED}!Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}}
+\subsubsection[{\texorpdfstring{J\+A\+C\+O\+\_\+\+C\+O\+M\+M\+\_\+\+F\+A\+I\+L\+ED}{JACO_COMM_FAILED}}]{\setlength{\rightskip}{0pt plus 5cm}\#define J\+A\+C\+O\+\_\+\+C\+O\+M\+M\+\_\+\+F\+A\+I\+L\+ED~2004}\hypertarget{Kinova_8API_8UsbCommandLayerUbuntu_8h_a50277f315c115b1fc66870c649ea526b}{}\label{Kinova_8API_8UsbCommandLayerUbuntu_8h_a50277f315c115b1fc66870c649ea526b}
+\index{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}!J\+A\+C\+O\+\_\+\+N\+A\+C\+K\+\_\+\+F\+I\+R\+ST@{J\+A\+C\+O\+\_\+\+N\+A\+C\+K\+\_\+\+F\+I\+R\+ST}}
+\index{J\+A\+C\+O\+\_\+\+N\+A\+C\+K\+\_\+\+F\+I\+R\+ST@{J\+A\+C\+O\+\_\+\+N\+A\+C\+K\+\_\+\+F\+I\+R\+ST}!Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}}
+\subsubsection[{\texorpdfstring{J\+A\+C\+O\+\_\+\+N\+A\+C\+K\+\_\+\+F\+I\+R\+ST}{JACO_NACK_FIRST}}]{\setlength{\rightskip}{0pt plus 5cm}\#define J\+A\+C\+O\+\_\+\+N\+A\+C\+K\+\_\+\+F\+I\+R\+ST~2003}\hypertarget{Kinova_8API_8UsbCommandLayerUbuntu_8h_aaf06cf2cdd21e707734113d20e0a167c}{}\label{Kinova_8API_8UsbCommandLayerUbuntu_8h_aaf06cf2cdd21e707734113d20e0a167c}
+\index{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}!J\+A\+C\+O\+\_\+\+N\+A\+C\+K\+\_\+\+N\+O\+R\+M\+AL@{J\+A\+C\+O\+\_\+\+N\+A\+C\+K\+\_\+\+N\+O\+R\+M\+AL}}
+\index{J\+A\+C\+O\+\_\+\+N\+A\+C\+K\+\_\+\+N\+O\+R\+M\+AL@{J\+A\+C\+O\+\_\+\+N\+A\+C\+K\+\_\+\+N\+O\+R\+M\+AL}!Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}}
+\subsubsection[{\texorpdfstring{J\+A\+C\+O\+\_\+\+N\+A\+C\+K\+\_\+\+N\+O\+R\+M\+AL}{JACO_NACK_NORMAL}}]{\setlength{\rightskip}{0pt plus 5cm}\#define J\+A\+C\+O\+\_\+\+N\+A\+C\+K\+\_\+\+N\+O\+R\+M\+AL~2005}\hypertarget{Kinova_8API_8UsbCommandLayerUbuntu_8h_afe14542a6cbdafc59256248a7305fb00}{}\label{Kinova_8API_8UsbCommandLayerUbuntu_8h_afe14542a6cbdafc59256248a7305fb00}
+\index{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}!K\+I\+N\+O\+V\+A\+\_\+@{K\+I\+N\+O\+V\+A\+\_\+}}
+\index{K\+I\+N\+O\+V\+A\+\_\+@{K\+I\+N\+O\+V\+A\+\_\+}!Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}}
+\subsubsection[{\texorpdfstring{K\+I\+N\+O\+V\+A\+\_\+}{KINOVA_}}]{\setlength{\rightskip}{0pt plus 5cm}\#define K\+I\+N\+O\+V\+A\+\_\+~1}\hypertarget{Kinova_8API_8UsbCommandLayerUbuntu_8h_a31327a2439c3f77d7d3774e7d49710de}{}\label{Kinova_8API_8UsbCommandLayerUbuntu_8h_a31327a2439c3f77d7d3774e7d49710de}
+\index{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}!K\+I\+N\+O\+V\+A\+A\+P\+I\+U\+S\+B\+C\+O\+M\+M\+A\+N\+D\+L\+A\+Y\+E\+R\+\_\+\+A\+PI@{K\+I\+N\+O\+V\+A\+A\+P\+I\+U\+S\+B\+C\+O\+M\+M\+A\+N\+D\+L\+A\+Y\+E\+R\+\_\+\+A\+PI}}
+\index{K\+I\+N\+O\+V\+A\+A\+P\+I\+U\+S\+B\+C\+O\+M\+M\+A\+N\+D\+L\+A\+Y\+E\+R\+\_\+\+A\+PI@{K\+I\+N\+O\+V\+A\+A\+P\+I\+U\+S\+B\+C\+O\+M\+M\+A\+N\+D\+L\+A\+Y\+E\+R\+\_\+\+A\+PI}!Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}}
+\subsubsection[{\texorpdfstring{K\+I\+N\+O\+V\+A\+A\+P\+I\+U\+S\+B\+C\+O\+M\+M\+A\+N\+D\+L\+A\+Y\+E\+R\+\_\+\+A\+PI}{KINOVAAPIUSBCOMMANDLAYER_API}}]{\setlength{\rightskip}{0pt plus 5cm}\#define K\+I\+N\+O\+V\+A\+A\+P\+I\+U\+S\+B\+C\+O\+M\+M\+A\+N\+D\+L\+A\+Y\+E\+R\+\_\+\+A\+PI~{\bf \+\_\+\+\_\+attribute\+\_\+\+\_\+} ((visibility (\char`\"{}default\char`\"{})))}\hypertarget{Kinova_8API_8UsbCommandLayerUbuntu_8h_abe06f11f1aa8abc575ebd4474e559d25}{}\label{Kinova_8API_8UsbCommandLayerUbuntu_8h_abe06f11f1aa8abc575ebd4474e559d25}
+\index{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}!S\+U\+C\+C\+E\+SS@{S\+U\+C\+C\+E\+SS}}
+\index{S\+U\+C\+C\+E\+SS@{S\+U\+C\+C\+E\+SS}!Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}}
+\subsubsection[{\texorpdfstring{S\+U\+C\+C\+E\+SS}{SUCCESS}}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+U\+C\+C\+E\+SS~1}\hypertarget{Kinova_8API_8UsbCommandLayerUbuntu_8h_aa90cac659d18e8ef6294c7ae337f6b58}{}\label{Kinova_8API_8UsbCommandLayerUbuntu_8h_aa90cac659d18e8ef6294c7ae337f6b58}
+
+
+\subsection{Function Documentation}
+\index{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}!Clear\+Error\+Log@{Clear\+Error\+Log}}
+\index{Clear\+Error\+Log@{Clear\+Error\+Log}!Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}}
+\subsubsection[{\texorpdfstring{Clear\+Error\+Log()}{ClearErrorLog()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf K\+I\+N\+O\+V\+A\+A\+P\+I\+U\+S\+B\+C\+O\+M\+M\+A\+N\+D\+L\+A\+Y\+E\+R\+\_\+\+A\+PI} int Clear\+Error\+Log (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{Kinova_8API_8UsbCommandLayerUbuntu_8h_aeb08aa5439be6a60a197a01f3aae8e1e}{}\label{Kinova_8API_8UsbCommandLayerUbuntu_8h_aeb08aa5439be6a60a197a01f3aae8e1e}
+\index{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}!Close\+A\+PI@{Close\+A\+PI}}
+\index{Close\+A\+PI@{Close\+A\+PI}!Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}}
+\subsubsection[{\texorpdfstring{Close\+A\+P\+I(void)}{CloseAPI(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf K\+I\+N\+O\+V\+A\+A\+P\+I\+U\+S\+B\+C\+O\+M\+M\+A\+N\+D\+L\+A\+Y\+E\+R\+\_\+\+A\+PI} int Close\+A\+PI (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{Kinova_8API_8UsbCommandLayerUbuntu_8h_a8c68cfab1fd05edea45717967cd35170}{}\label{Kinova_8API_8UsbCommandLayerUbuntu_8h_a8c68cfab1fd05edea45717967cd35170}
+\index{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}!Erase\+All\+Protection\+Zones@{Erase\+All\+Protection\+Zones}}
+\index{Erase\+All\+Protection\+Zones@{Erase\+All\+Protection\+Zones}!Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}}
+\subsubsection[{\texorpdfstring{Erase\+All\+Protection\+Zones()}{EraseAllProtectionZones()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf K\+I\+N\+O\+V\+A\+A\+P\+I\+U\+S\+B\+C\+O\+M\+M\+A\+N\+D\+L\+A\+Y\+E\+R\+\_\+\+A\+PI} int Erase\+All\+Protection\+Zones (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{Kinova_8API_8UsbCommandLayerUbuntu_8h_a47f39fdf7e52e914e979d822c9209366}{}\label{Kinova_8API_8UsbCommandLayerUbuntu_8h_a47f39fdf7e52e914e979d822c9209366}
+\index{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}!Erase\+All\+Trajectories@{Erase\+All\+Trajectories}}
+\index{Erase\+All\+Trajectories@{Erase\+All\+Trajectories}!Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}}
+\subsubsection[{\texorpdfstring{Erase\+All\+Trajectories()}{EraseAllTrajectories()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf K\+I\+N\+O\+V\+A\+A\+P\+I\+U\+S\+B\+C\+O\+M\+M\+A\+N\+D\+L\+A\+Y\+E\+R\+\_\+\+A\+PI} int Erase\+All\+Trajectories (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{Kinova_8API_8UsbCommandLayerUbuntu_8h_a408913e7a3a1ba879f4575320bfeda14}{}\label{Kinova_8API_8UsbCommandLayerUbuntu_8h_a408913e7a3a1ba879f4575320bfeda14}
+\index{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}!Get\+Actual\+Trajectory\+Info@{Get\+Actual\+Trajectory\+Info}}
+\index{Get\+Actual\+Trajectory\+Info@{Get\+Actual\+Trajectory\+Info}!Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}}
+\subsubsection[{\texorpdfstring{Get\+Actual\+Trajectory\+Info(\+Trajectory\+Point \&\+Response)}{GetActualTrajectoryInfo(TrajectoryPoint &Response)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf K\+I\+N\+O\+V\+A\+A\+P\+I\+U\+S\+B\+C\+O\+M\+M\+A\+N\+D\+L\+A\+Y\+E\+R\+\_\+\+A\+PI} int Get\+Actual\+Trajectory\+Info (
+\begin{DoxyParamCaption}
+\item[{{\bf Trajectory\+Point} \&}]{Response}
+\end{DoxyParamCaption}
+)}\hypertarget{Kinova_8API_8UsbCommandLayerUbuntu_8h_a7e00e6d93a9d897037cfa627507647ef}{}\label{Kinova_8API_8UsbCommandLayerUbuntu_8h_a7e00e6d93a9d897037cfa627507647ef}
+\index{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}!Get\+Actuator\+Acceleration@{Get\+Actuator\+Acceleration}}
+\index{Get\+Actuator\+Acceleration@{Get\+Actuator\+Acceleration}!Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}}
+\subsubsection[{\texorpdfstring{Get\+Actuator\+Acceleration(\+Angular\+Acceleration \&\+Response)}{GetActuatorAcceleration(AngularAcceleration &Response)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf K\+I\+N\+O\+V\+A\+A\+P\+I\+U\+S\+B\+C\+O\+M\+M\+A\+N\+D\+L\+A\+Y\+E\+R\+\_\+\+A\+PI} int Get\+Actuator\+Acceleration (
+\begin{DoxyParamCaption}
+\item[{{\bf Angular\+Acceleration} \&}]{Response}
+\end{DoxyParamCaption}
+)}\hypertarget{Kinova_8API_8UsbCommandLayerUbuntu_8h_abf41a716f69e403c4585a0b6ba4a50e8}{}\label{Kinova_8API_8UsbCommandLayerUbuntu_8h_abf41a716f69e403c4585a0b6ba4a50e8}
+\index{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}!Get\+Angular\+Command@{Get\+Angular\+Command}}
+\index{Get\+Angular\+Command@{Get\+Angular\+Command}!Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}}
+\subsubsection[{\texorpdfstring{Get\+Angular\+Command(\+Angular\+Position \&\+Response)}{GetAngularCommand(AngularPosition &Response)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf K\+I\+N\+O\+V\+A\+A\+P\+I\+U\+S\+B\+C\+O\+M\+M\+A\+N\+D\+L\+A\+Y\+E\+R\+\_\+\+A\+PI} int Get\+Angular\+Command (
+\begin{DoxyParamCaption}
+\item[{{\bf Angular\+Position} \&}]{Response}
+\end{DoxyParamCaption}
+)}\hypertarget{Kinova_8API_8UsbCommandLayerUbuntu_8h_a5c289720f8a7af28a84e7dec66211f33}{}\label{Kinova_8API_8UsbCommandLayerUbuntu_8h_a5c289720f8a7af28a84e7dec66211f33}
+\index{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}!Get\+Angular\+Current@{Get\+Angular\+Current}}
+\index{Get\+Angular\+Current@{Get\+Angular\+Current}!Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}}
+\subsubsection[{\texorpdfstring{Get\+Angular\+Current(\+Angular\+Position \&\+Response)}{GetAngularCurrent(AngularPosition &Response)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf K\+I\+N\+O\+V\+A\+A\+P\+I\+U\+S\+B\+C\+O\+M\+M\+A\+N\+D\+L\+A\+Y\+E\+R\+\_\+\+A\+PI} int Get\+Angular\+Current (
+\begin{DoxyParamCaption}
+\item[{{\bf Angular\+Position} \&}]{Response}
+\end{DoxyParamCaption}
+)}\hypertarget{Kinova_8API_8UsbCommandLayerUbuntu_8h_ad9a6f5444a8fa6df2cc324e54118f54f}{}\label{Kinova_8API_8UsbCommandLayerUbuntu_8h_ad9a6f5444a8fa6df2cc324e54118f54f}
+\index{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}!Get\+Angular\+Current\+Motor@{Get\+Angular\+Current\+Motor}}
+\index{Get\+Angular\+Current\+Motor@{Get\+Angular\+Current\+Motor}!Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}}
+\subsubsection[{\texorpdfstring{Get\+Angular\+Current\+Motor(\+Angular\+Position \&\+Response)}{GetAngularCurrentMotor(AngularPosition &Response)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf K\+I\+N\+O\+V\+A\+A\+P\+I\+U\+S\+B\+C\+O\+M\+M\+A\+N\+D\+L\+A\+Y\+E\+R\+\_\+\+A\+PI} int Get\+Angular\+Current\+Motor (
+\begin{DoxyParamCaption}
+\item[{{\bf Angular\+Position} \&}]{Response}
+\end{DoxyParamCaption}
+)}\hypertarget{Kinova_8API_8UsbCommandLayerUbuntu_8h_afd4e6c87647569b8cf24a2678dc9ef25}{}\label{Kinova_8API_8UsbCommandLayerUbuntu_8h_afd4e6c87647569b8cf24a2678dc9ef25}
+\index{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}!Get\+Angular\+Force@{Get\+Angular\+Force}}
+\index{Get\+Angular\+Force@{Get\+Angular\+Force}!Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}}
+\subsubsection[{\texorpdfstring{Get\+Angular\+Force(\+Angular\+Position \&\+Response)}{GetAngularForce(AngularPosition &Response)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf K\+I\+N\+O\+V\+A\+A\+P\+I\+U\+S\+B\+C\+O\+M\+M\+A\+N\+D\+L\+A\+Y\+E\+R\+\_\+\+A\+PI} int Get\+Angular\+Force (
+\begin{DoxyParamCaption}
+\item[{{\bf Angular\+Position} \&}]{Response}
+\end{DoxyParamCaption}
+)}\hypertarget{Kinova_8API_8UsbCommandLayerUbuntu_8h_a7ae41c6db88958582f8598f71f664c89}{}\label{Kinova_8API_8UsbCommandLayerUbuntu_8h_a7ae41c6db88958582f8598f71f664c89}
+\index{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}!Get\+Angular\+Force\+Gravity\+Free@{Get\+Angular\+Force\+Gravity\+Free}}
+\index{Get\+Angular\+Force\+Gravity\+Free@{Get\+Angular\+Force\+Gravity\+Free}!Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}}
+\subsubsection[{\texorpdfstring{Get\+Angular\+Force\+Gravity\+Free(\+Angular\+Position \&\+Response)}{GetAngularForceGravityFree(AngularPosition &Response)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf K\+I\+N\+O\+V\+A\+A\+P\+I\+U\+S\+B\+C\+O\+M\+M\+A\+N\+D\+L\+A\+Y\+E\+R\+\_\+\+A\+PI} int Get\+Angular\+Force\+Gravity\+Free (
+\begin{DoxyParamCaption}
+\item[{{\bf Angular\+Position} \&}]{Response}
+\end{DoxyParamCaption}
+)}\hypertarget{Kinova_8API_8UsbCommandLayerUbuntu_8h_a26652852e510b5d4048da7818cc2e143}{}\label{Kinova_8API_8UsbCommandLayerUbuntu_8h_a26652852e510b5d4048da7818cc2e143}
+\index{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}!Get\+Angular\+Position@{Get\+Angular\+Position}}
+\index{Get\+Angular\+Position@{Get\+Angular\+Position}!Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}}
+\subsubsection[{\texorpdfstring{Get\+Angular\+Position(\+Angular\+Position \&\+Response)}{GetAngularPosition(AngularPosition &Response)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf K\+I\+N\+O\+V\+A\+A\+P\+I\+U\+S\+B\+C\+O\+M\+M\+A\+N\+D\+L\+A\+Y\+E\+R\+\_\+\+A\+PI} int Get\+Angular\+Position (
+\begin{DoxyParamCaption}
+\item[{{\bf Angular\+Position} \&}]{Response}
+\end{DoxyParamCaption}
+)}\hypertarget{Kinova_8API_8UsbCommandLayerUbuntu_8h_a58ef9ea1c1ae0bc3905d9f72faee18dc}{}\label{Kinova_8API_8UsbCommandLayerUbuntu_8h_a58ef9ea1c1ae0bc3905d9f72faee18dc}
+\index{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}!Get\+Angular\+Velocity@{Get\+Angular\+Velocity}}
+\index{Get\+Angular\+Velocity@{Get\+Angular\+Velocity}!Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}}
+\subsubsection[{\texorpdfstring{Get\+Angular\+Velocity(\+Angular\+Position \&\+Response)}{GetAngularVelocity(AngularPosition &Response)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf K\+I\+N\+O\+V\+A\+A\+P\+I\+U\+S\+B\+C\+O\+M\+M\+A\+N\+D\+L\+A\+Y\+E\+R\+\_\+\+A\+PI} int Get\+Angular\+Velocity (
+\begin{DoxyParamCaption}
+\item[{{\bf Angular\+Position} \&}]{Response}
+\end{DoxyParamCaption}
+)}\hypertarget{Kinova_8API_8UsbCommandLayerUbuntu_8h_ad85d567f13629d5a8a20604c0c97ae22}{}\label{Kinova_8API_8UsbCommandLayerUbuntu_8h_ad85d567f13629d5a8a20604c0c97ae22}
+\index{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}!Get\+A\+P\+I\+Version@{Get\+A\+P\+I\+Version}}
+\index{Get\+A\+P\+I\+Version@{Get\+A\+P\+I\+Version}!Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}}
+\subsubsection[{\texorpdfstring{Get\+A\+P\+I\+Version(std\+::vector$<$ int $>$ \&\+Response)}{GetAPIVersion(std::vector< int > &Response)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf K\+I\+N\+O\+V\+A\+A\+P\+I\+U\+S\+B\+C\+O\+M\+M\+A\+N\+D\+L\+A\+Y\+E\+R\+\_\+\+A\+PI} int Get\+A\+P\+I\+Version (
+\begin{DoxyParamCaption}
+\item[{std\+::vector$<$ int $>$ \&}]{Response}
+\end{DoxyParamCaption}
+)}\hypertarget{Kinova_8API_8UsbCommandLayerUbuntu_8h_ac1c28038b14ca7d6af85387b0af343d2}{}\label{Kinova_8API_8UsbCommandLayerUbuntu_8h_ac1c28038b14ca7d6af85387b0af343d2}
+\index{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}!Get\+Cartesian\+Command@{Get\+Cartesian\+Command}}
+\index{Get\+Cartesian\+Command@{Get\+Cartesian\+Command}!Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}}
+\subsubsection[{\texorpdfstring{Get\+Cartesian\+Command(\+Cartesian\+Position \&\+Response)}{GetCartesianCommand(CartesianPosition &Response)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf K\+I\+N\+O\+V\+A\+A\+P\+I\+U\+S\+B\+C\+O\+M\+M\+A\+N\+D\+L\+A\+Y\+E\+R\+\_\+\+A\+PI} int Get\+Cartesian\+Command (
+\begin{DoxyParamCaption}
+\item[{{\bf Cartesian\+Position} \&}]{Response}
+\end{DoxyParamCaption}
+)}\hypertarget{Kinova_8API_8UsbCommandLayerUbuntu_8h_aa112acb5e0a9d6657616377a90d1d3b1}{}\label{Kinova_8API_8UsbCommandLayerUbuntu_8h_aa112acb5e0a9d6657616377a90d1d3b1}
+\index{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}!Get\+Cartesian\+Force@{Get\+Cartesian\+Force}}
+\index{Get\+Cartesian\+Force@{Get\+Cartesian\+Force}!Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}}
+\subsubsection[{\texorpdfstring{Get\+Cartesian\+Force(\+Cartesian\+Position \&\+Response)}{GetCartesianForce(CartesianPosition &Response)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf K\+I\+N\+O\+V\+A\+A\+P\+I\+U\+S\+B\+C\+O\+M\+M\+A\+N\+D\+L\+A\+Y\+E\+R\+\_\+\+A\+PI} int Get\+Cartesian\+Force (
+\begin{DoxyParamCaption}
+\item[{{\bf Cartesian\+Position} \&}]{Response}
+\end{DoxyParamCaption}
+)}\hypertarget{Kinova_8API_8UsbCommandLayerUbuntu_8h_ae9ed9be44d89f54aa3c268186be4e4f4}{}\label{Kinova_8API_8UsbCommandLayerUbuntu_8h_ae9ed9be44d89f54aa3c268186be4e4f4}
+\index{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}!Get\+Cartesian\+Position@{Get\+Cartesian\+Position}}
+\index{Get\+Cartesian\+Position@{Get\+Cartesian\+Position}!Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}}
+\subsubsection[{\texorpdfstring{Get\+Cartesian\+Position(\+Cartesian\+Position \&\+Response)}{GetCartesianPosition(CartesianPosition &Response)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf K\+I\+N\+O\+V\+A\+A\+P\+I\+U\+S\+B\+C\+O\+M\+M\+A\+N\+D\+L\+A\+Y\+E\+R\+\_\+\+A\+PI} int Get\+Cartesian\+Position (
+\begin{DoxyParamCaption}
+\item[{{\bf Cartesian\+Position} \&}]{Response}
+\end{DoxyParamCaption}
+)}\hypertarget{Kinova_8API_8UsbCommandLayerUbuntu_8h_a6be8b4e54409ac8fa2c890f1e1e8e0a1}{}\label{Kinova_8API_8UsbCommandLayerUbuntu_8h_a6be8b4e54409ac8fa2c890f1e1e8e0a1}
+\index{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}!Get\+Client\+Configurations@{Get\+Client\+Configurations}}
+\index{Get\+Client\+Configurations@{Get\+Client\+Configurations}!Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}}
+\subsubsection[{\texorpdfstring{Get\+Client\+Configurations(\+Client\+Configurations \&config)}{GetClientConfigurations(ClientConfigurations &config)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf K\+I\+N\+O\+V\+A\+A\+P\+I\+U\+S\+B\+C\+O\+M\+M\+A\+N\+D\+L\+A\+Y\+E\+R\+\_\+\+A\+PI} int Get\+Client\+Configurations (
+\begin{DoxyParamCaption}
+\item[{{\bf Client\+Configurations} \&}]{config}
+\end{DoxyParamCaption}
+)}\hypertarget{Kinova_8API_8UsbCommandLayerUbuntu_8h_aadfff8ea657c2e2e16510b3f3b886468}{}\label{Kinova_8API_8UsbCommandLayerUbuntu_8h_aadfff8ea657c2e2e16510b3f3b886468}
+\index{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}!Get\+Code\+Version@{Get\+Code\+Version}}
+\index{Get\+Code\+Version@{Get\+Code\+Version}!Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}}
+\subsubsection[{\texorpdfstring{Get\+Code\+Version(std\+::vector$<$ int $>$ \&\+Response)}{GetCodeVersion(std::vector< int > &Response)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf K\+I\+N\+O\+V\+A\+A\+P\+I\+U\+S\+B\+C\+O\+M\+M\+A\+N\+D\+L\+A\+Y\+E\+R\+\_\+\+A\+PI} int Get\+Code\+Version (
+\begin{DoxyParamCaption}
+\item[{std\+::vector$<$ int $>$ \&}]{Response}
+\end{DoxyParamCaption}
+)}\hypertarget{Kinova_8API_8UsbCommandLayerUbuntu_8h_a60bd2b839aca973c134a7de0b988f164}{}\label{Kinova_8API_8UsbCommandLayerUbuntu_8h_a60bd2b839aca973c134a7de0b988f164}
+\index{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}!Get\+Control\+Mapping@{Get\+Control\+Mapping}}
+\index{Get\+Control\+Mapping@{Get\+Control\+Mapping}!Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}}
+\subsubsection[{\texorpdfstring{Get\+Control\+Mapping(\+Control\+Mapping\+Charts \&\+Response)}{GetControlMapping(ControlMappingCharts &Response)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf K\+I\+N\+O\+V\+A\+A\+P\+I\+U\+S\+B\+C\+O\+M\+M\+A\+N\+D\+L\+A\+Y\+E\+R\+\_\+\+A\+PI} int Get\+Control\+Mapping (
+\begin{DoxyParamCaption}
+\item[{{\bf Control\+Mapping\+Charts} \&}]{Response}
+\end{DoxyParamCaption}
+)}\hypertarget{Kinova_8API_8UsbCommandLayerUbuntu_8h_a40ae13976ddf7d5a88d43999387e4ca0}{}\label{Kinova_8API_8UsbCommandLayerUbuntu_8h_a40ae13976ddf7d5a88d43999387e4ca0}
+\index{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}!Get\+Control\+Type@{Get\+Control\+Type}}
+\index{Get\+Control\+Type@{Get\+Control\+Type}!Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}}
+\subsubsection[{\texorpdfstring{Get\+Control\+Type(int \&\+Response)}{GetControlType(int &Response)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf K\+I\+N\+O\+V\+A\+A\+P\+I\+U\+S\+B\+C\+O\+M\+M\+A\+N\+D\+L\+A\+Y\+E\+R\+\_\+\+A\+PI} int Get\+Control\+Type (
+\begin{DoxyParamCaption}
+\item[{int \&}]{Response}
+\end{DoxyParamCaption}
+)}\hypertarget{Kinova_8API_8UsbCommandLayerUbuntu_8h_a406331a1b6df3d0f3b3b8fecbc51d5b8}{}\label{Kinova_8API_8UsbCommandLayerUbuntu_8h_a406331a1b6df3d0f3b3b8fecbc51d5b8}
+\index{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}!Get\+Devices@{Get\+Devices}}
+\index{Get\+Devices@{Get\+Devices}!Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}}
+\subsubsection[{\texorpdfstring{Get\+Devices(std\+::vector$<$ Kinova\+Device $>$ \&devices, int \&result)}{GetDevices(std::vector< KinovaDevice > &devices, int &result)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf K\+I\+N\+O\+V\+A\+A\+P\+I\+U\+S\+B\+C\+O\+M\+M\+A\+N\+D\+L\+A\+Y\+E\+R\+\_\+\+A\+PI} int Get\+Devices (
+\begin{DoxyParamCaption}
+\item[{std\+::vector$<$ {\bf Kinova\+Device} $>$ \&}]{devices, }
+\item[{int \&}]{result}
+\end{DoxyParamCaption}
+)}\hypertarget{Kinova_8API_8UsbCommandLayerUbuntu_8h_a5814f5c47fb3f439269f12c310f287a4}{}\label{Kinova_8API_8UsbCommandLayerUbuntu_8h_a5814f5c47fb3f439269f12c310f287a4}
+\index{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}!Get\+Dev\+Value@{Get\+Dev\+Value}}
+\index{Get\+Dev\+Value@{Get\+Dev\+Value}!Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}}
+\subsubsection[{\texorpdfstring{Get\+Dev\+Value(std\+::vector$<$ float $>$ \&\+Response)}{GetDevValue(std::vector< float > &Response)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf K\+I\+N\+O\+V\+A\+A\+P\+I\+U\+S\+B\+C\+O\+M\+M\+A\+N\+D\+L\+A\+Y\+E\+R\+\_\+\+A\+PI} int Get\+Dev\+Value (
+\begin{DoxyParamCaption}
+\item[{std\+::vector$<$ float $>$ \&}]{Response}
+\end{DoxyParamCaption}
+)}\hypertarget{Kinova_8API_8UsbCommandLayerUbuntu_8h_a960b173a33b5c9179859e76b98476278}{}\label{Kinova_8API_8UsbCommandLayerUbuntu_8h_a960b173a33b5c9179859e76b98476278}
+\index{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}!Get\+Forces\+Info@{Get\+Forces\+Info}}
+\index{Get\+Forces\+Info@{Get\+Forces\+Info}!Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}}
+\subsubsection[{\texorpdfstring{Get\+Forces\+Info(\+Forces\+Info \&\+Response)}{GetForcesInfo(ForcesInfo &Response)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf K\+I\+N\+O\+V\+A\+A\+P\+I\+U\+S\+B\+C\+O\+M\+M\+A\+N\+D\+L\+A\+Y\+E\+R\+\_\+\+A\+PI} int Get\+Forces\+Info (
+\begin{DoxyParamCaption}
+\item[{{\bf Forces\+Info} \&}]{Response}
+\end{DoxyParamCaption}
+)}\hypertarget{Kinova_8API_8UsbCommandLayerUbuntu_8h_a763871c1e32b0a08bba0e9c550de3a8e}{}\label{Kinova_8API_8UsbCommandLayerUbuntu_8h_a763871c1e32b0a08bba0e9c550de3a8e}
+\index{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}!Get\+General\+Informations@{Get\+General\+Informations}}
+\index{Get\+General\+Informations@{Get\+General\+Informations}!Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}}
+\subsubsection[{\texorpdfstring{Get\+General\+Informations(\+General\+Informations \&\+Response)}{GetGeneralInformations(GeneralInformations &Response)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf K\+I\+N\+O\+V\+A\+A\+P\+I\+U\+S\+B\+C\+O\+M\+M\+A\+N\+D\+L\+A\+Y\+E\+R\+\_\+\+A\+PI} int Get\+General\+Informations (
+\begin{DoxyParamCaption}
+\item[{{\bf General\+Informations} \&}]{Response}
+\end{DoxyParamCaption}
+)}\hypertarget{Kinova_8API_8UsbCommandLayerUbuntu_8h_ab7d8661a7309e8cb4df1aa17b658169b}{}\label{Kinova_8API_8UsbCommandLayerUbuntu_8h_ab7d8661a7309e8cb4df1aa17b658169b}
+\index{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}!Get\+Global\+Trajectory\+Info@{Get\+Global\+Trajectory\+Info}}
+\index{Get\+Global\+Trajectory\+Info@{Get\+Global\+Trajectory\+Info}!Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}}
+\subsubsection[{\texorpdfstring{Get\+Global\+Trajectory\+Info(\+Trajectory\+F\+I\+F\+O \&\+Response)}{GetGlobalTrajectoryInfo(TrajectoryFIFO &Response)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf K\+I\+N\+O\+V\+A\+A\+P\+I\+U\+S\+B\+C\+O\+M\+M\+A\+N\+D\+L\+A\+Y\+E\+R\+\_\+\+A\+PI} int Get\+Global\+Trajectory\+Info (
+\begin{DoxyParamCaption}
+\item[{{\bf Trajectory\+F\+I\+FO} \&}]{Response}
+\end{DoxyParamCaption}
+)}\hypertarget{Kinova_8API_8UsbCommandLayerUbuntu_8h_a28d5f53daeda2497dbceeb5e8ed635eb}{}\label{Kinova_8API_8UsbCommandLayerUbuntu_8h_a28d5f53daeda2497dbceeb5e8ed635eb}
+\index{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}!Get\+Gripper\+Status@{Get\+Gripper\+Status}}
+\index{Get\+Gripper\+Status@{Get\+Gripper\+Status}!Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}}
+\subsubsection[{\texorpdfstring{Get\+Gripper\+Status(\+Gripper \&\+Response)}{GetGripperStatus(Gripper &Response)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf K\+I\+N\+O\+V\+A\+A\+P\+I\+U\+S\+B\+C\+O\+M\+M\+A\+N\+D\+L\+A\+Y\+E\+R\+\_\+\+A\+PI} int Get\+Gripper\+Status (
+\begin{DoxyParamCaption}
+\item[{{\bf Gripper} \&}]{Response}
+\end{DoxyParamCaption}
+)}\hypertarget{Kinova_8API_8UsbCommandLayerUbuntu_8h_a94382130b0796558826d6044e5249c09}{}\label{Kinova_8API_8UsbCommandLayerUbuntu_8h_a94382130b0796558826d6044e5249c09}
+\index{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}!Get\+Peripheral\+Inventory@{Get\+Peripheral\+Inventory}}
+\index{Get\+Peripheral\+Inventory@{Get\+Peripheral\+Inventory}!Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}}
+\subsubsection[{\texorpdfstring{Get\+Peripheral\+Inventory(std\+::vector$<$ Peripheral\+Info $>$ \&)}{GetPeripheralInventory(std::vector< PeripheralInfo > &)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf K\+I\+N\+O\+V\+A\+A\+P\+I\+U\+S\+B\+C\+O\+M\+M\+A\+N\+D\+L\+A\+Y\+E\+R\+\_\+\+A\+PI} int Get\+Peripheral\+Inventory (
+\begin{DoxyParamCaption}
+\item[{std\+::vector$<$ {\bf Peripheral\+Info} $>$ \&}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{Kinova_8API_8UsbCommandLayerUbuntu_8h_a1fb82d6b0d534dd3b2acbd4f9a82e815}{}\label{Kinova_8API_8UsbCommandLayerUbuntu_8h_a1fb82d6b0d534dd3b2acbd4f9a82e815}
+\index{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}!Get\+Position\+Current\+Actuators@{Get\+Position\+Current\+Actuators}}
+\index{Get\+Position\+Current\+Actuators@{Get\+Position\+Current\+Actuators}!Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}}
+\subsubsection[{\texorpdfstring{Get\+Position\+Current\+Actuators(std\+::vector$<$ float $>$ \&\+Response)}{GetPositionCurrentActuators(std::vector< float > &Response)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf K\+I\+N\+O\+V\+A\+A\+P\+I\+U\+S\+B\+C\+O\+M\+M\+A\+N\+D\+L\+A\+Y\+E\+R\+\_\+\+A\+PI} int Get\+Position\+Current\+Actuators (
+\begin{DoxyParamCaption}
+\item[{std\+::vector$<$ float $>$ \&}]{Response}
+\end{DoxyParamCaption}
+)}\hypertarget{Kinova_8API_8UsbCommandLayerUbuntu_8h_a157b0c582c67825d220cb0e7464a298c}{}\label{Kinova_8API_8UsbCommandLayerUbuntu_8h_a157b0c582c67825d220cb0e7464a298c}
+\index{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}!Get\+Protection\+Zone@{Get\+Protection\+Zone}}
+\index{Get\+Protection\+Zone@{Get\+Protection\+Zone}!Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}}
+\subsubsection[{\texorpdfstring{Get\+Protection\+Zone(\+Zone\+List \&\+Response)}{GetProtectionZone(ZoneList &Response)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf K\+I\+N\+O\+V\+A\+A\+P\+I\+U\+S\+B\+C\+O\+M\+M\+A\+N\+D\+L\+A\+Y\+E\+R\+\_\+\+A\+PI} int Get\+Protection\+Zone (
+\begin{DoxyParamCaption}
+\item[{{\bf Zone\+List} \&}]{Response}
+\end{DoxyParamCaption}
+)}\hypertarget{Kinova_8API_8UsbCommandLayerUbuntu_8h_af6845bf7d390ade74b68c7c7e7d74139}{}\label{Kinova_8API_8UsbCommandLayerUbuntu_8h_af6845bf7d390ade74b68c7c7e7d74139}
+\index{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}!Get\+Quick\+Status@{Get\+Quick\+Status}}
+\index{Get\+Quick\+Status@{Get\+Quick\+Status}!Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}}
+\subsubsection[{\texorpdfstring{Get\+Quick\+Status(\+Quick\+Status \&\+Response)}{GetQuickStatus(QuickStatus &Response)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf K\+I\+N\+O\+V\+A\+A\+P\+I\+U\+S\+B\+C\+O\+M\+M\+A\+N\+D\+L\+A\+Y\+E\+R\+\_\+\+A\+PI} int Get\+Quick\+Status (
+\begin{DoxyParamCaption}
+\item[{{\bf Quick\+Status} \&}]{Response}
+\end{DoxyParamCaption}
+)}\hypertarget{Kinova_8API_8UsbCommandLayerUbuntu_8h_af7bd69e27ac64fe2b6117442a285cd53}{}\label{Kinova_8API_8UsbCommandLayerUbuntu_8h_af7bd69e27ac64fe2b6117442a285cd53}
+\index{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}!Get\+Sensors\+Info@{Get\+Sensors\+Info}}
+\index{Get\+Sensors\+Info@{Get\+Sensors\+Info}!Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}}
+\subsubsection[{\texorpdfstring{Get\+Sensors\+Info(\+Sensors\+Info \&\+Response)}{GetSensorsInfo(SensorsInfo &Response)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf K\+I\+N\+O\+V\+A\+A\+P\+I\+U\+S\+B\+C\+O\+M\+M\+A\+N\+D\+L\+A\+Y\+E\+R\+\_\+\+A\+PI} int Get\+Sensors\+Info (
+\begin{DoxyParamCaption}
+\item[{{\bf Sensors\+Info} \&}]{Response}
+\end{DoxyParamCaption}
+)}\hypertarget{Kinova_8API_8UsbCommandLayerUbuntu_8h_a467668c1ccb6eea2d89521c8cbe94ebf}{}\label{Kinova_8API_8UsbCommandLayerUbuntu_8h_a467668c1ccb6eea2d89521c8cbe94ebf}
+\index{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}!Get\+Singularity\+Vector@{Get\+Singularity\+Vector}}
+\index{Get\+Singularity\+Vector@{Get\+Singularity\+Vector}!Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}}
+\subsubsection[{\texorpdfstring{Get\+Singularity\+Vector(\+Singularity\+Vector \&\+Response)}{GetSingularityVector(SingularityVector &Response)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf K\+I\+N\+O\+V\+A\+A\+P\+I\+U\+S\+B\+C\+O\+M\+M\+A\+N\+D\+L\+A\+Y\+E\+R\+\_\+\+A\+PI} int Get\+Singularity\+Vector (
+\begin{DoxyParamCaption}
+\item[{{\bf Singularity\+Vector} \&}]{Response}
+\end{DoxyParamCaption}
+)}\hypertarget{Kinova_8API_8UsbCommandLayerUbuntu_8h_ae50cc84dceabf5404c62c30e39ae6df4}{}\label{Kinova_8API_8UsbCommandLayerUbuntu_8h_ae50cc84dceabf5404c62c30e39ae6df4}
+\index{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}!Get\+Spasm\+Filter\+Values@{Get\+Spasm\+Filter\+Values}}
+\index{Get\+Spasm\+Filter\+Values@{Get\+Spasm\+Filter\+Values}!Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}}
+\subsubsection[{\texorpdfstring{Get\+Spasm\+Filter\+Values(std\+::vector$<$ float $>$ \&\+Response, int \&activation\+Status)}{GetSpasmFilterValues(std::vector< float > &Response, int &activationStatus)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf K\+I\+N\+O\+V\+A\+A\+P\+I\+U\+S\+B\+C\+O\+M\+M\+A\+N\+D\+L\+A\+Y\+E\+R\+\_\+\+A\+PI} int Get\+Spasm\+Filter\+Values (
+\begin{DoxyParamCaption}
+\item[{std\+::vector$<$ float $>$ \&}]{Response, }
+\item[{int \&}]{activation\+Status}
+\end{DoxyParamCaption}
+)}\hypertarget{Kinova_8API_8UsbCommandLayerUbuntu_8h_a3cf1188af06395c8ff8ec00d32e5ae1a}{}\label{Kinova_8API_8UsbCommandLayerUbuntu_8h_a3cf1188af06395c8ff8ec00d32e5ae1a}
+\index{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}!Get\+System\+Error@{Get\+System\+Error}}
+\index{Get\+System\+Error@{Get\+System\+Error}!Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}}
+\subsubsection[{\texorpdfstring{Get\+System\+Error(unsigned int index\+Error, System\+Error \&\+Response)}{GetSystemError(unsigned int indexError, SystemError &Response)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf K\+I\+N\+O\+V\+A\+A\+P\+I\+U\+S\+B\+C\+O\+M\+M\+A\+N\+D\+L\+A\+Y\+E\+R\+\_\+\+A\+PI} int Get\+System\+Error (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{index\+Error, }
+\item[{{\bf System\+Error} \&}]{Response}
+\end{DoxyParamCaption}
+)}\hypertarget{Kinova_8API_8UsbCommandLayerUbuntu_8h_a02072cf8aba4054cf63631615a256b3a}{}\label{Kinova_8API_8UsbCommandLayerUbuntu_8h_a02072cf8aba4054cf63631615a256b3a}
+\index{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}!Get\+System\+Error\+Count@{Get\+System\+Error\+Count}}
+\index{Get\+System\+Error\+Count@{Get\+System\+Error\+Count}!Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}}
+\subsubsection[{\texorpdfstring{Get\+System\+Error\+Count(unsigned int \&\+Response)}{GetSystemErrorCount(unsigned int &Response)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf K\+I\+N\+O\+V\+A\+A\+P\+I\+U\+S\+B\+C\+O\+M\+M\+A\+N\+D\+L\+A\+Y\+E\+R\+\_\+\+A\+PI} int Get\+System\+Error\+Count (
+\begin{DoxyParamCaption}
+\item[{unsigned int \&}]{Response}
+\end{DoxyParamCaption}
+)}\hypertarget{Kinova_8API_8UsbCommandLayerUbuntu_8h_a4f5f1d1c45a10e3b2ed2461ad127c7db}{}\label{Kinova_8API_8UsbCommandLayerUbuntu_8h_a4f5f1d1c45a10e3b2ed2461ad127c7db}
+\index{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}!Init\+A\+PI@{Init\+A\+PI}}
+\index{Init\+A\+PI@{Init\+A\+PI}!Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}}
+\subsubsection[{\texorpdfstring{Init\+A\+P\+I(void)}{InitAPI(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf K\+I\+N\+O\+V\+A\+A\+P\+I\+U\+S\+B\+C\+O\+M\+M\+A\+N\+D\+L\+A\+Y\+E\+R\+\_\+\+A\+PI} int Init\+A\+PI (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{Kinova_8API_8UsbCommandLayerUbuntu_8h_ab1e7523fba35c20a8569e99bcdf63a5e}{}\label{Kinova_8API_8UsbCommandLayerUbuntu_8h_ab1e7523fba35c20a8569e99bcdf63a5e}
+\index{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}!Init\+Fingers@{Init\+Fingers}}
+\index{Init\+Fingers@{Init\+Fingers}!Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}}
+\subsubsection[{\texorpdfstring{Init\+Fingers()}{InitFingers()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf K\+I\+N\+O\+V\+A\+A\+P\+I\+U\+S\+B\+C\+O\+M\+M\+A\+N\+D\+L\+A\+Y\+E\+R\+\_\+\+A\+PI} int Init\+Fingers (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{Kinova_8API_8UsbCommandLayerUbuntu_8h_a9898b3a0c07aa2844ab9d2dee7e21f18}{}\label{Kinova_8API_8UsbCommandLayerUbuntu_8h_a9898b3a0c07aa2844ab9d2dee7e21f18}
+\index{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}!Move\+Home@{Move\+Home}}
+\index{Move\+Home@{Move\+Home}!Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}}
+\subsubsection[{\texorpdfstring{Move\+Home()}{MoveHome()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf K\+I\+N\+O\+V\+A\+A\+P\+I\+U\+S\+B\+C\+O\+M\+M\+A\+N\+D\+L\+A\+Y\+E\+R\+\_\+\+A\+PI} int Move\+Home (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{Kinova_8API_8UsbCommandLayerUbuntu_8h_a3e2040173821c0a1f86713f04bd03cea}{}\label{Kinova_8API_8UsbCommandLayerUbuntu_8h_a3e2040173821c0a1f86713f04bd03cea}
+\index{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}!Program\+Flash@{Program\+Flash}}
+\index{Program\+Flash@{Program\+Flash}!Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}}
+\subsubsection[{\texorpdfstring{Program\+Flash(char $\ast$filename)}{ProgramFlash(char *filename)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf K\+I\+N\+O\+V\+A\+A\+P\+I\+U\+S\+B\+C\+O\+M\+M\+A\+N\+D\+L\+A\+Y\+E\+R\+\_\+\+A\+PI} int Program\+Flash (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{filename}
+\end{DoxyParamCaption}
+)}\hypertarget{Kinova_8API_8UsbCommandLayerUbuntu_8h_a7428b825bdc649a02cb39a5002f96228}{}\label{Kinova_8API_8UsbCommandLayerUbuntu_8h_a7428b825bdc649a02cb39a5002f96228}
+\index{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}!Restore\+Factory\+Default@{Restore\+Factory\+Default}}
+\index{Restore\+Factory\+Default@{Restore\+Factory\+Default}!Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}}
+\subsubsection[{\texorpdfstring{Restore\+Factory\+Default()}{RestoreFactoryDefault()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf K\+I\+N\+O\+V\+A\+A\+P\+I\+U\+S\+B\+C\+O\+M\+M\+A\+N\+D\+L\+A\+Y\+E\+R\+\_\+\+A\+PI} int Restore\+Factory\+Default (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{Kinova_8API_8UsbCommandLayerUbuntu_8h_a316a307f9da5315ea0af6bf9ea153eb5}{}\label{Kinova_8API_8UsbCommandLayerUbuntu_8h_a316a307f9da5315ea0af6bf9ea153eb5}
+\index{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}!Send\+Advance\+Trajectory@{Send\+Advance\+Trajectory}}
+\index{Send\+Advance\+Trajectory@{Send\+Advance\+Trajectory}!Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}}
+\subsubsection[{\texorpdfstring{Send\+Advance\+Trajectory(\+Trajectory\+Point trajectory)}{SendAdvanceTrajectory(TrajectoryPoint trajectory)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf K\+I\+N\+O\+V\+A\+A\+P\+I\+U\+S\+B\+C\+O\+M\+M\+A\+N\+D\+L\+A\+Y\+E\+R\+\_\+\+A\+PI} int Send\+Advance\+Trajectory (
+\begin{DoxyParamCaption}
+\item[{{\bf Trajectory\+Point}}]{trajectory}
+\end{DoxyParamCaption}
+)}\hypertarget{Kinova_8API_8UsbCommandLayerUbuntu_8h_ac802915b7390eb6ffd8e1206b52f557f}{}\label{Kinova_8API_8UsbCommandLayerUbuntu_8h_ac802915b7390eb6ffd8e1206b52f557f}
+\index{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}!Send\+Basic\+Trajectory@{Send\+Basic\+Trajectory}}
+\index{Send\+Basic\+Trajectory@{Send\+Basic\+Trajectory}!Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}}
+\subsubsection[{\texorpdfstring{Send\+Basic\+Trajectory(\+Trajectory\+Point trajectory)}{SendBasicTrajectory(TrajectoryPoint trajectory)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf K\+I\+N\+O\+V\+A\+A\+P\+I\+U\+S\+B\+C\+O\+M\+M\+A\+N\+D\+L\+A\+Y\+E\+R\+\_\+\+A\+PI} int Send\+Basic\+Trajectory (
+\begin{DoxyParamCaption}
+\item[{{\bf Trajectory\+Point}}]{trajectory}
+\end{DoxyParamCaption}
+)}\hypertarget{Kinova_8API_8UsbCommandLayerUbuntu_8h_a9f21d4375c78210dea0d33316e23fcb8}{}\label{Kinova_8API_8UsbCommandLayerUbuntu_8h_a9f21d4375c78210dea0d33316e23fcb8}
+\index{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}!Send\+Joystick\+Command@{Send\+Joystick\+Command}}
+\index{Send\+Joystick\+Command@{Send\+Joystick\+Command}!Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}}
+\subsubsection[{\texorpdfstring{Send\+Joystick\+Command(\+Joystick\+Command joystick\+Command)}{SendJoystickCommand(JoystickCommand joystickCommand)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf K\+I\+N\+O\+V\+A\+A\+P\+I\+U\+S\+B\+C\+O\+M\+M\+A\+N\+D\+L\+A\+Y\+E\+R\+\_\+\+A\+PI} int Send\+Joystick\+Command (
+\begin{DoxyParamCaption}
+\item[{{\bf Joystick\+Command}}]{joystick\+Command}
+\end{DoxyParamCaption}
+)}\hypertarget{Kinova_8API_8UsbCommandLayerUbuntu_8h_ab52677c163193c4f160981a7503ec79a}{}\label{Kinova_8API_8UsbCommandLayerUbuntu_8h_ab52677c163193c4f160981a7503ec79a}
+\index{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}!Set\+Active\+Device@{Set\+Active\+Device}}
+\index{Set\+Active\+Device@{Set\+Active\+Device}!Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}}
+\subsubsection[{\texorpdfstring{Set\+Active\+Device(\+Kinova\+Device device)}{SetActiveDevice(KinovaDevice device)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf K\+I\+N\+O\+V\+A\+A\+P\+I\+U\+S\+B\+C\+O\+M\+M\+A\+N\+D\+L\+A\+Y\+E\+R\+\_\+\+A\+PI} int Set\+Active\+Device (
+\begin{DoxyParamCaption}
+\item[{{\bf Kinova\+Device}}]{device}
+\end{DoxyParamCaption}
+)}\hypertarget{Kinova_8API_8UsbCommandLayerUbuntu_8h_a4506116c4053d8c12c13d6ef974699c2}{}\label{Kinova_8API_8UsbCommandLayerUbuntu_8h_a4506116c4053d8c12c13d6ef974699c2}
+\index{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}!Set\+Actuator\+Address@{Set\+Actuator\+Address}}
+\index{Set\+Actuator\+Address@{Set\+Actuator\+Address}!Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}}
+\subsubsection[{\texorpdfstring{Set\+Actuator\+Address(int Actuator\+Adress, int new\+Address)}{SetActuatorAddress(int ActuatorAdress, int newAddress)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf K\+I\+N\+O\+V\+A\+A\+P\+I\+U\+S\+B\+C\+O\+M\+M\+A\+N\+D\+L\+A\+Y\+E\+R\+\_\+\+A\+PI} int Set\+Actuator\+Address (
+\begin{DoxyParamCaption}
+\item[{int}]{Actuator\+Adress, }
+\item[{int}]{new\+Address}
+\end{DoxyParamCaption}
+)}\hypertarget{Kinova_8API_8UsbCommandLayerUbuntu_8h_a5366b9fa9d7c3bb00118a1cb8caf470e}{}\label{Kinova_8API_8UsbCommandLayerUbuntu_8h_a5366b9fa9d7c3bb00118a1cb8caf470e}
+\index{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}!Set\+Actuator\+P\+ID@{Set\+Actuator\+P\+ID}}
+\index{Set\+Actuator\+P\+ID@{Set\+Actuator\+P\+ID}!Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}}
+\subsubsection[{\texorpdfstring{Set\+Actuator\+P\+I\+D(unsigned int address, float P, float I, float D)}{SetActuatorPID(unsigned int address, float P, float I, float D)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf K\+I\+N\+O\+V\+A\+A\+P\+I\+U\+S\+B\+C\+O\+M\+M\+A\+N\+D\+L\+A\+Y\+E\+R\+\_\+\+A\+PI} int Set\+Actuator\+P\+ID (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{address, }
+\item[{float}]{P, }
+\item[{float}]{I, }
+\item[{float}]{D}
+\end{DoxyParamCaption}
+)}\hypertarget{Kinova_8API_8UsbCommandLayerUbuntu_8h_a5ac8a37b983294d15f6cccb7a6f1a414}{}\label{Kinova_8API_8UsbCommandLayerUbuntu_8h_a5ac8a37b983294d15f6cccb7a6f1a414}
+\index{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}!Set\+Actuator\+P\+I\+D\+Filter@{Set\+Actuator\+P\+I\+D\+Filter}}
+\index{Set\+Actuator\+P\+I\+D\+Filter@{Set\+Actuator\+P\+I\+D\+Filter}!Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}}
+\subsubsection[{\texorpdfstring{Set\+Actuator\+P\+I\+D\+Filter(int Actuator\+Adress, float filter\+P, float filter\+I, float filter\+D)}{SetActuatorPIDFilter(int ActuatorAdress, float filterP, float filterI, float filterD)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf K\+I\+N\+O\+V\+A\+A\+P\+I\+U\+S\+B\+C\+O\+M\+M\+A\+N\+D\+L\+A\+Y\+E\+R\+\_\+\+A\+PI} int Set\+Actuator\+P\+I\+D\+Filter (
+\begin{DoxyParamCaption}
+\item[{int}]{Actuator\+Adress, }
+\item[{float}]{filterP, }
+\item[{float}]{filterI, }
+\item[{float}]{filterD}
+\end{DoxyParamCaption}
+)}\hypertarget{Kinova_8API_8UsbCommandLayerUbuntu_8h_a4201734c8a9fefbf14d78f03195d7b71}{}\label{Kinova_8API_8UsbCommandLayerUbuntu_8h_a4201734c8a9fefbf14d78f03195d7b71}
+\index{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}!Set\+Angular\+Control@{Set\+Angular\+Control}}
+\index{Set\+Angular\+Control@{Set\+Angular\+Control}!Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}}
+\subsubsection[{\texorpdfstring{Set\+Angular\+Control()}{SetAngularControl()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf K\+I\+N\+O\+V\+A\+A\+P\+I\+U\+S\+B\+C\+O\+M\+M\+A\+N\+D\+L\+A\+Y\+E\+R\+\_\+\+A\+PI} int Set\+Angular\+Control (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{Kinova_8API_8UsbCommandLayerUbuntu_8h_a2a3d8fbff1add975bfff283ac3b8a3c6}{}\label{Kinova_8API_8UsbCommandLayerUbuntu_8h_a2a3d8fbff1add975bfff283ac3b8a3c6}
+\index{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}!Set\+Angular\+Inertia\+Damping@{Set\+Angular\+Inertia\+Damping}}
+\index{Set\+Angular\+Inertia\+Damping@{Set\+Angular\+Inertia\+Damping}!Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}}
+\subsubsection[{\texorpdfstring{Set\+Angular\+Inertia\+Damping(\+Angular\+Info inertia, Angular\+Info damping)}{SetAngularInertiaDamping(AngularInfo inertia, AngularInfo damping)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf K\+I\+N\+O\+V\+A\+A\+P\+I\+U\+S\+B\+C\+O\+M\+M\+A\+N\+D\+L\+A\+Y\+E\+R\+\_\+\+A\+PI} int Set\+Angular\+Inertia\+Damping (
+\begin{DoxyParamCaption}
+\item[{{\bf Angular\+Info}}]{inertia, }
+\item[{{\bf Angular\+Info}}]{damping}
+\end{DoxyParamCaption}
+)}\hypertarget{Kinova_8API_8UsbCommandLayerUbuntu_8h_a8a1de40ded42bb1c9ad599218506a7ba}{}\label{Kinova_8API_8UsbCommandLayerUbuntu_8h_a8a1de40ded42bb1c9ad599218506a7ba}
+\index{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}!Set\+Angular\+Torque\+Min\+Max@{Set\+Angular\+Torque\+Min\+Max}}
+\index{Set\+Angular\+Torque\+Min\+Max@{Set\+Angular\+Torque\+Min\+Max}!Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}}
+\subsubsection[{\texorpdfstring{Set\+Angular\+Torque\+Min\+Max(\+Angular\+Info min, Angular\+Info max)}{SetAngularTorqueMinMax(AngularInfo min, AngularInfo max)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf K\+I\+N\+O\+V\+A\+A\+P\+I\+U\+S\+B\+C\+O\+M\+M\+A\+N\+D\+L\+A\+Y\+E\+R\+\_\+\+A\+PI} int Set\+Angular\+Torque\+Min\+Max (
+\begin{DoxyParamCaption}
+\item[{{\bf Angular\+Info}}]{min, }
+\item[{{\bf Angular\+Info}}]{max}
+\end{DoxyParamCaption}
+)}\hypertarget{Kinova_8API_8UsbCommandLayerUbuntu_8h_a28c19286fba497565c34d2a45e29372d}{}\label{Kinova_8API_8UsbCommandLayerUbuntu_8h_a28c19286fba497565c34d2a45e29372d}
+\index{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}!Set\+Cartesian\+Control@{Set\+Cartesian\+Control}}
+\index{Set\+Cartesian\+Control@{Set\+Cartesian\+Control}!Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}}
+\subsubsection[{\texorpdfstring{Set\+Cartesian\+Control()}{SetCartesianControl()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf K\+I\+N\+O\+V\+A\+A\+P\+I\+U\+S\+B\+C\+O\+M\+M\+A\+N\+D\+L\+A\+Y\+E\+R\+\_\+\+A\+PI} int Set\+Cartesian\+Control (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{Kinova_8API_8UsbCommandLayerUbuntu_8h_a9396131c243aa476db3e7a26b797e076}{}\label{Kinova_8API_8UsbCommandLayerUbuntu_8h_a9396131c243aa476db3e7a26b797e076}
+\index{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}!Set\+Cartesian\+Force\+Min\+Max@{Set\+Cartesian\+Force\+Min\+Max}}
+\index{Set\+Cartesian\+Force\+Min\+Max@{Set\+Cartesian\+Force\+Min\+Max}!Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}}
+\subsubsection[{\texorpdfstring{Set\+Cartesian\+Force\+Min\+Max(\+Cartesian\+Info min, Cartesian\+Info max)}{SetCartesianForceMinMax(CartesianInfo min, CartesianInfo max)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf K\+I\+N\+O\+V\+A\+A\+P\+I\+U\+S\+B\+C\+O\+M\+M\+A\+N\+D\+L\+A\+Y\+E\+R\+\_\+\+A\+PI} int Set\+Cartesian\+Force\+Min\+Max (
+\begin{DoxyParamCaption}
+\item[{{\bf Cartesian\+Info}}]{min, }
+\item[{{\bf Cartesian\+Info}}]{max}
+\end{DoxyParamCaption}
+)}\hypertarget{Kinova_8API_8UsbCommandLayerUbuntu_8h_afdf4f71175b5208063a002818201ea76}{}\label{Kinova_8API_8UsbCommandLayerUbuntu_8h_afdf4f71175b5208063a002818201ea76}
+\index{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}!Set\+Cartesian\+Inertia\+Damping@{Set\+Cartesian\+Inertia\+Damping}}
+\index{Set\+Cartesian\+Inertia\+Damping@{Set\+Cartesian\+Inertia\+Damping}!Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}}
+\subsubsection[{\texorpdfstring{Set\+Cartesian\+Inertia\+Damping(\+Cartesian\+Info inertia, Cartesian\+Info damping)}{SetCartesianInertiaDamping(CartesianInfo inertia, CartesianInfo damping)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf K\+I\+N\+O\+V\+A\+A\+P\+I\+U\+S\+B\+C\+O\+M\+M\+A\+N\+D\+L\+A\+Y\+E\+R\+\_\+\+A\+PI} int Set\+Cartesian\+Inertia\+Damping (
+\begin{DoxyParamCaption}
+\item[{{\bf Cartesian\+Info}}]{inertia, }
+\item[{{\bf Cartesian\+Info}}]{damping}
+\end{DoxyParamCaption}
+)}\hypertarget{Kinova_8API_8UsbCommandLayerUbuntu_8h_a6ad9b3474de09442a05f336cb7df7973}{}\label{Kinova_8API_8UsbCommandLayerUbuntu_8h_a6ad9b3474de09442a05f336cb7df7973}
+\index{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}!Set\+Client\+Configurations@{Set\+Client\+Configurations}}
+\index{Set\+Client\+Configurations@{Set\+Client\+Configurations}!Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}}
+\subsubsection[{\texorpdfstring{Set\+Client\+Configurations(\+Client\+Configurations config)}{SetClientConfigurations(ClientConfigurations config)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf K\+I\+N\+O\+V\+A\+A\+P\+I\+U\+S\+B\+C\+O\+M\+M\+A\+N\+D\+L\+A\+Y\+E\+R\+\_\+\+A\+PI} int Set\+Client\+Configurations (
+\begin{DoxyParamCaption}
+\item[{{\bf Client\+Configurations}}]{config}
+\end{DoxyParamCaption}
+)}\hypertarget{Kinova_8API_8UsbCommandLayerUbuntu_8h_aaaf906c81f0dbdc53101d61c7838eae8}{}\label{Kinova_8API_8UsbCommandLayerUbuntu_8h_aaaf906c81f0dbdc53101d61c7838eae8}
+\index{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}!Set\+Control\+Mapping@{Set\+Control\+Mapping}}
+\index{Set\+Control\+Mapping@{Set\+Control\+Mapping}!Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}}
+\subsubsection[{\texorpdfstring{Set\+Control\+Mapping(\+Control\+Mapping\+Charts Command)}{SetControlMapping(ControlMappingCharts Command)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf K\+I\+N\+O\+V\+A\+A\+P\+I\+U\+S\+B\+C\+O\+M\+M\+A\+N\+D\+L\+A\+Y\+E\+R\+\_\+\+A\+PI} int Set\+Control\+Mapping (
+\begin{DoxyParamCaption}
+\item[{{\bf Control\+Mapping\+Charts}}]{Command}
+\end{DoxyParamCaption}
+)}\hypertarget{Kinova_8API_8UsbCommandLayerUbuntu_8h_a01a084c40c33a629ee44b5fac0ca40fb}{}\label{Kinova_8API_8UsbCommandLayerUbuntu_8h_a01a084c40c33a629ee44b5fac0ca40fb}
+\index{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}!Set\+Dev\+Value@{Set\+Dev\+Value}}
+\index{Set\+Dev\+Value@{Set\+Dev\+Value}!Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}}
+\subsubsection[{\texorpdfstring{Set\+Dev\+Value(std\+::vector$<$ float $>$ command)}{SetDevValue(std::vector< float > command)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf K\+I\+N\+O\+V\+A\+A\+P\+I\+U\+S\+B\+C\+O\+M\+M\+A\+N\+D\+L\+A\+Y\+E\+R\+\_\+\+A\+PI} int Set\+Dev\+Value (
+\begin{DoxyParamCaption}
+\item[{std\+::vector$<$ float $>$}]{command}
+\end{DoxyParamCaption}
+)}\hypertarget{Kinova_8API_8UsbCommandLayerUbuntu_8h_a6340417b9bf8f549e249278fc6d33d00}{}\label{Kinova_8API_8UsbCommandLayerUbuntu_8h_a6340417b9bf8f549e249278fc6d33d00}
+\index{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}!Set\+Frame\+Type@{Set\+Frame\+Type}}
+\index{Set\+Frame\+Type@{Set\+Frame\+Type}!Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}}
+\subsubsection[{\texorpdfstring{Set\+Frame\+Type(int frame\+Type)}{SetFrameType(int frameType)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf K\+I\+N\+O\+V\+A\+A\+P\+I\+U\+S\+B\+C\+O\+M\+M\+A\+N\+D\+L\+A\+Y\+E\+R\+\_\+\+A\+PI} int Set\+Frame\+Type (
+\begin{DoxyParamCaption}
+\item[{int}]{frame\+Type}
+\end{DoxyParamCaption}
+)}\hypertarget{Kinova_8API_8UsbCommandLayerUbuntu_8h_af3bd0e6780c8c6238d2de8d3da69f200}{}\label{Kinova_8API_8UsbCommandLayerUbuntu_8h_af3bd0e6780c8c6238d2de8d3da69f200}
+\index{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}!Set\+Joint\+Zero@{Set\+Joint\+Zero}}
+\index{Set\+Joint\+Zero@{Set\+Joint\+Zero}!Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}}
+\subsubsection[{\texorpdfstring{Set\+Joint\+Zero(int Actuator\+Adress)}{SetJointZero(int ActuatorAdress)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf K\+I\+N\+O\+V\+A\+A\+P\+I\+U\+S\+B\+C\+O\+M\+M\+A\+N\+D\+L\+A\+Y\+E\+R\+\_\+\+A\+PI} int Set\+Joint\+Zero (
+\begin{DoxyParamCaption}
+\item[{int}]{Actuator\+Adress}
+\end{DoxyParamCaption}
+)}\hypertarget{Kinova_8API_8UsbCommandLayerUbuntu_8h_aa40b9a922065a45723d1ece7be9a02ca}{}\label{Kinova_8API_8UsbCommandLayerUbuntu_8h_aa40b9a922065a45723d1ece7be9a02ca}
+\index{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}!Set\+Model@{Set\+Model}}
+\index{Set\+Model@{Set\+Model}!Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}}
+\subsubsection[{\texorpdfstring{Set\+Model(char Command[S\+T\+R\+I\+N\+G\+\_\+\+L\+E\+N\+G\+TH], char temp[S\+T\+R\+I\+N\+G\+\_\+\+L\+E\+N\+G\+TH])}{SetModel(char Command[STRING_LENGTH], char temp[STRING_LENGTH])}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf K\+I\+N\+O\+V\+A\+A\+P\+I\+U\+S\+B\+C\+O\+M\+M\+A\+N\+D\+L\+A\+Y\+E\+R\+\_\+\+A\+PI} int Set\+Model (
+\begin{DoxyParamCaption}
+\item[{char}]{Command\mbox{[}\+S\+T\+R\+I\+N\+G\+\_\+\+L\+E\+N\+G\+T\+H\mbox{]}, }
+\item[{char}]{temp\mbox{[}\+S\+T\+R\+I\+N\+G\+\_\+\+L\+E\+N\+G\+T\+H\mbox{]}}
+\end{DoxyParamCaption}
+)}\hypertarget{Kinova_8API_8UsbCommandLayerUbuntu_8h_a46ab65b2af403fe511fd557b21c49cc1}{}\label{Kinova_8API_8UsbCommandLayerUbuntu_8h_a46ab65b2af403fe511fd557b21c49cc1}
+\index{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}!Set\+Protection\+Zone@{Set\+Protection\+Zone}}
+\index{Set\+Protection\+Zone@{Set\+Protection\+Zone}!Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}}
+\subsubsection[{\texorpdfstring{Set\+Protection\+Zone(\+Zone\+List Command)}{SetProtectionZone(ZoneList Command)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf K\+I\+N\+O\+V\+A\+A\+P\+I\+U\+S\+B\+C\+O\+M\+M\+A\+N\+D\+L\+A\+Y\+E\+R\+\_\+\+A\+PI} int Set\+Protection\+Zone (
+\begin{DoxyParamCaption}
+\item[{{\bf Zone\+List}}]{Command}
+\end{DoxyParamCaption}
+)}\hypertarget{Kinova_8API_8UsbCommandLayerUbuntu_8h_a6e9daa16713f652199be76db68140f48}{}\label{Kinova_8API_8UsbCommandLayerUbuntu_8h_a6e9daa16713f652199be76db68140f48}
+\index{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}!Set\+Serial\+Number@{Set\+Serial\+Number}}
+\index{Set\+Serial\+Number@{Set\+Serial\+Number}!Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}}
+\subsubsection[{\texorpdfstring{Set\+Serial\+Number(char Command[S\+T\+R\+I\+N\+G\+\_\+\+L\+E\+N\+G\+TH], char temp[S\+T\+R\+I\+N\+G\+\_\+\+L\+E\+N\+G\+TH])}{SetSerialNumber(char Command[STRING_LENGTH], char temp[STRING_LENGTH])}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf K\+I\+N\+O\+V\+A\+A\+P\+I\+U\+S\+B\+C\+O\+M\+M\+A\+N\+D\+L\+A\+Y\+E\+R\+\_\+\+A\+PI} int Set\+Serial\+Number (
+\begin{DoxyParamCaption}
+\item[{char}]{Command\mbox{[}\+S\+T\+R\+I\+N\+G\+\_\+\+L\+E\+N\+G\+T\+H\mbox{]}, }
+\item[{char}]{temp\mbox{[}\+S\+T\+R\+I\+N\+G\+\_\+\+L\+E\+N\+G\+T\+H\mbox{]}}
+\end{DoxyParamCaption}
+)}\hypertarget{Kinova_8API_8UsbCommandLayerUbuntu_8h_af49466c5a2dbdb5cb0cffd4b2eeb732d}{}\label{Kinova_8API_8UsbCommandLayerUbuntu_8h_af49466c5a2dbdb5cb0cffd4b2eeb732d}
+\index{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}!Set\+Spasm\+Filter\+Values@{Set\+Spasm\+Filter\+Values}}
+\index{Set\+Spasm\+Filter\+Values@{Set\+Spasm\+Filter\+Values}!Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}}
+\subsubsection[{\texorpdfstring{Set\+Spasm\+Filter\+Values(std\+::vector$<$ float $>$ Response, int activation\+Status)}{SetSpasmFilterValues(std::vector< float > Response, int activationStatus)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf K\+I\+N\+O\+V\+A\+A\+P\+I\+U\+S\+B\+C\+O\+M\+M\+A\+N\+D\+L\+A\+Y\+E\+R\+\_\+\+A\+PI} int Set\+Spasm\+Filter\+Values (
+\begin{DoxyParamCaption}
+\item[{std\+::vector$<$ float $>$}]{Response, }
+\item[{int}]{activation\+Status}
+\end{DoxyParamCaption}
+)}\hypertarget{Kinova_8API_8UsbCommandLayerUbuntu_8h_a9b9e4d368ec162a7078d66c175d39e2c}{}\label{Kinova_8API_8UsbCommandLayerUbuntu_8h_a9b9e4d368ec162a7078d66c175d39e2c}
+\index{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}!Set\+Torque\+Gain@{Set\+Torque\+Gain}}
+\index{Set\+Torque\+Gain@{Set\+Torque\+Gain}!Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}}
+\subsubsection[{\texorpdfstring{Set\+Torque\+Gain(int Actuator\+Adress, int Gain)}{SetTorqueGain(int ActuatorAdress, int Gain)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf K\+I\+N\+O\+V\+A\+A\+P\+I\+U\+S\+B\+C\+O\+M\+M\+A\+N\+D\+L\+A\+Y\+E\+R\+\_\+\+A\+PI} int Set\+Torque\+Gain (
+\begin{DoxyParamCaption}
+\item[{int}]{Actuator\+Adress, }
+\item[{int}]{Gain}
+\end{DoxyParamCaption}
+)}\hypertarget{Kinova_8API_8UsbCommandLayerUbuntu_8h_aef23b672396482a72c9ba81bb9756d9e}{}\label{Kinova_8API_8UsbCommandLayerUbuntu_8h_aef23b672396482a72c9ba81bb9756d9e}
+\index{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}!Set\+Torque\+Zero@{Set\+Torque\+Zero}}
+\index{Set\+Torque\+Zero@{Set\+Torque\+Zero}!Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}}
+\subsubsection[{\texorpdfstring{Set\+Torque\+Zero(int Actuator\+Adress)}{SetTorqueZero(int ActuatorAdress)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf K\+I\+N\+O\+V\+A\+A\+P\+I\+U\+S\+B\+C\+O\+M\+M\+A\+N\+D\+L\+A\+Y\+E\+R\+\_\+\+A\+PI} int Set\+Torque\+Zero (
+\begin{DoxyParamCaption}
+\item[{int}]{Actuator\+Adress}
+\end{DoxyParamCaption}
+)}\hypertarget{Kinova_8API_8UsbCommandLayerUbuntu_8h_a552f60a7ef6fb7e19a8d9ac06fdbd189}{}\label{Kinova_8API_8UsbCommandLayerUbuntu_8h_a552f60a7ef6fb7e19a8d9ac06fdbd189}
+\index{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}!Start\+Control\+A\+PI@{Start\+Control\+A\+PI}}
+\index{Start\+Control\+A\+PI@{Start\+Control\+A\+PI}!Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}}
+\subsubsection[{\texorpdfstring{Start\+Control\+A\+P\+I()}{StartControlAPI()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf K\+I\+N\+O\+V\+A\+A\+P\+I\+U\+S\+B\+C\+O\+M\+M\+A\+N\+D\+L\+A\+Y\+E\+R\+\_\+\+A\+PI} int Start\+Control\+A\+PI (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{Kinova_8API_8UsbCommandLayerUbuntu_8h_ac58735ec0d693b62919ed6b647207c44}{}\label{Kinova_8API_8UsbCommandLayerUbuntu_8h_ac58735ec0d693b62919ed6b647207c44}
+\index{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}!Start\+Current\+Limitation@{Start\+Current\+Limitation}}
+\index{Start\+Current\+Limitation@{Start\+Current\+Limitation}!Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}}
+\subsubsection[{\texorpdfstring{Start\+Current\+Limitation()}{StartCurrentLimitation()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf K\+I\+N\+O\+V\+A\+A\+P\+I\+U\+S\+B\+C\+O\+M\+M\+A\+N\+D\+L\+A\+Y\+E\+R\+\_\+\+A\+PI} int Start\+Current\+Limitation (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{Kinova_8API_8UsbCommandLayerUbuntu_8h_a42a30576593f705ec5de78d6e7f6b1c0}{}\label{Kinova_8API_8UsbCommandLayerUbuntu_8h_a42a30576593f705ec5de78d6e7f6b1c0}
+\index{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}!Start\+Force\+Control@{Start\+Force\+Control}}
+\index{Start\+Force\+Control@{Start\+Force\+Control}!Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}}
+\subsubsection[{\texorpdfstring{Start\+Force\+Control()}{StartForceControl()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf K\+I\+N\+O\+V\+A\+A\+P\+I\+U\+S\+B\+C\+O\+M\+M\+A\+N\+D\+L\+A\+Y\+E\+R\+\_\+\+A\+PI} int Start\+Force\+Control (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{Kinova_8API_8UsbCommandLayerUbuntu_8h_aedea2cbf905878c9b24d998e0fa3e06e}{}\label{Kinova_8API_8UsbCommandLayerUbuntu_8h_aedea2cbf905878c9b24d998e0fa3e06e}
+\index{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}!Stop\+Control\+A\+PI@{Stop\+Control\+A\+PI}}
+\index{Stop\+Control\+A\+PI@{Stop\+Control\+A\+PI}!Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}}
+\subsubsection[{\texorpdfstring{Stop\+Control\+A\+P\+I()}{StopControlAPI()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf K\+I\+N\+O\+V\+A\+A\+P\+I\+U\+S\+B\+C\+O\+M\+M\+A\+N\+D\+L\+A\+Y\+E\+R\+\_\+\+A\+PI} int Stop\+Control\+A\+PI (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{Kinova_8API_8UsbCommandLayerUbuntu_8h_ac3cb6e6a16838716235d935c92aa0a82}{}\label{Kinova_8API_8UsbCommandLayerUbuntu_8h_ac3cb6e6a16838716235d935c92aa0a82}
+\index{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}!Stop\+Current\+Limitation@{Stop\+Current\+Limitation}}
+\index{Stop\+Current\+Limitation@{Stop\+Current\+Limitation}!Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}}
+\subsubsection[{\texorpdfstring{Stop\+Current\+Limitation()}{StopCurrentLimitation()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf K\+I\+N\+O\+V\+A\+A\+P\+I\+U\+S\+B\+C\+O\+M\+M\+A\+N\+D\+L\+A\+Y\+E\+R\+\_\+\+A\+PI} int Stop\+Current\+Limitation (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{Kinova_8API_8UsbCommandLayerUbuntu_8h_a556dc384ffef31cb88648db2985d70b4}{}\label{Kinova_8API_8UsbCommandLayerUbuntu_8h_a556dc384ffef31cb88648db2985d70b4}
+\index{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}!Stop\+Force\+Control@{Stop\+Force\+Control}}
+\index{Stop\+Force\+Control@{Stop\+Force\+Control}!Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h@{Kinova.\+A\+P\+I.\+Usb\+Command\+Layer\+Ubuntu.\+h}}
+\subsubsection[{\texorpdfstring{Stop\+Force\+Control()}{StopForceControl()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf K\+I\+N\+O\+V\+A\+A\+P\+I\+U\+S\+B\+C\+O\+M\+M\+A\+N\+D\+L\+A\+Y\+E\+R\+\_\+\+A\+PI} int Stop\+Force\+Control (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{Kinova_8API_8UsbCommandLayerUbuntu_8h_a040a5a1f4f5725c9f6832aa9650c62f8}{}\label{Kinova_8API_8UsbCommandLayerUbuntu_8h_a040a5a1f4f5725c9f6832aa9650c62f8}

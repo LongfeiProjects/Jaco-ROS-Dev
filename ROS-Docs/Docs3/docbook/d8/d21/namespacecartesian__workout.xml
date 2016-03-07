@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="d8/d21/namespacecartesian__workout">
+<title>cartesian_workout</title>
+        <section>
+            <title>Variables</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="d8/d21/namespacecartesian__workout_1a9cc10da8ef79d18715644543b9794d80">mag</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="d8/d21/namespacecartesian__workout_1ab293192d190a24c9cb8edbea4ef33862">poses</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>list <link linkend="d8/d21/namespacecartesian__workout_1a967ea83284096aa4c94c0b41daa5df6c">raw_pose</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="d8/d21/namespacecartesian__workout_1ac2ac6ec3a92f53155c4912cbf5c93604">result</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Functions</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>def <link linkend="d8/d21/namespacecartesian__workout_1a1fb7cd9a49c4af0ae2cf8cab45335d40">cartesian_pose_client</link> (
+position , orientation )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <simplesect>
+            <title>Detailed Description</title>
+
+<para><literallayout>A helper program to test cartesian goals for the JACO and MICO arms.</literallayout> </para>
+                <para>Definition at line 1 of file cartesian_workout.py</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>cartesian_workout.py</para></listitem></itemizedlist></para>
+        </simplesect>
+</section>

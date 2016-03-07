@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg width="407.106mm" height="192.617mm"
- viewBox="0 0 1153 546"
+<svg width="753.886mm" height="370.769mm"
+ viewBox="0 0 2137 1050"
  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"  version="1.2" baseProfile="tiny">
 <title>Qt Svg Document</title>
 <desc>Generated with Qt</desc>
@@ -18,380 +18,591 @@ font-family="Ubuntu" font-size="11" font-weight="400" font-style="normal"
 >
 </g>
 
-<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.99635,0,0,0.99635,3059.66,1289.18)"
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,899.767,778.517)"
 font-family="Ubuntu" font-size="11" font-weight="400" font-style="normal" 
 >
 </g>
 
-<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.99635,0,0,0.99635,3059.66,1289.18)"
+<g fill="#dcdcdc" fill-opacity="1" stroke="#ff0000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,899.767,778.517)"
+font-family="Ubuntu" font-size="11" font-weight="400" font-style="normal" 
+>
+<path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M0,0 L0,76 L395,76 L395,10 L385,0 L0,0"/>
+<polyline fill="none" vector-effect="non-scaling-stroke" points="385,0 385,10 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="385,10 395,10 " />
+</g>
+
+<g fill="#dcdcdc" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,899.767,778.517)"
+font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="12" y="16" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+ > &quot;JocoComm&quot; can be considered as the starting point to</text>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="12" y="30" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+ >implement ROS and other basic functions. ROS node is</text>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="12" y="44" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+ >created and ROS logs are generously used. Fundamental</text>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="12" y="58" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+ >functions and api operations are defined here. </text>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,899.767,778.517)"
 font-family="Ubuntu" font-size="11" font-weight="400" font-style="normal" 
 >
 </g>
 
-<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0,-0.99635,0.99635,0,362.173,128.031)"
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,4030.07,1661.23)"
 font-family="Ubuntu" font-size="11" font-weight="400" font-style="normal" 
 >
 </g>
 
-<g fill="#ff0000" fill-opacity="1" stroke="#ff0000" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" transform="matrix(0,-0.99635,0.99635,0,362.173,128.031)"
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,4030.07,1661.23)"
+font-family="Ubuntu" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0,-0.998199,0.998199,0,1344.64,450.506)"
+font-family="Ubuntu" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="#ff0000" fill-opacity="1" stroke="#ff0000" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" transform="matrix(0,-0.998199,0.998199,0,1344.64,450.506)"
 font-family="Ubuntu" font-size="11" font-weight="400" font-style="normal" 
 >
 <path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M0,-10 L-5,0 L0,10 L5,0 L0,-10"/>
 </g>
 
-<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0,-0.99635,0.99635,0,362.173,128.031)"
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0,-0.998199,0.998199,0,1344.64,450.506)"
 font-family="Ubuntu" font-size="11" font-weight="400" font-style="normal" 
 >
 </g>
 
-<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.99635,0,0,0.99635,3059.66,1289.18)"
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,4030.07,1661.23)"
 font-family="Ubuntu" font-size="11" font-weight="400" font-style="normal" 
 >
 </g>
 
-<g fill="none" stroke="#ff0000" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" transform="matrix(0.99635,0,0,0.99635,3059.66,1289.18)"
+<g fill="none" stroke="#ff0000" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" transform="matrix(0.998199,0,0,0.998199,4030.07,1661.23)"
 font-family="Ubuntu" font-size="11" font-weight="400" font-style="normal" 
 >
-<path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M-2717.37,-1165.4 L-2846.87,-1165.4"/>
+<path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M-2700.27,-1212.91 L-2812.63,-1212.91"/>
 </g>
 
-<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.99635,0,0,0.99635,3059.66,1289.18)"
-font-family="Ubuntu" font-size="11" font-weight="400" font-style="normal" 
->
-</g>
-
-<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.99635,0,0,0.99635,225.175,115.577)"
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,4030.07,1661.23)"
 font-family="Ubuntu" font-size="11" font-weight="400" font-style="normal" 
 >
 </g>
 
-<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.99635,0,0,0.99635,225.175,115.577)"
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,1225.05,428.786)"
+font-family="Ubuntu" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,1225.05,428.786)"
 font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
 >
 <text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="11.3125" y="12" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
  >-jaco_api_</text>
 </g>
 
-<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.99635,0,0,0.99635,225.175,115.577)"
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,1225.05,428.786)"
 font-family="Ubuntu" font-size="11" font-weight="400" font-style="normal" 
 >
 </g>
 
-<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.99635,0,0,0.99635,372.137,2.24179)"
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,4030.07,1661.23)"
 font-family="Ubuntu" font-size="11" font-weight="400" font-style="normal" 
 >
 </g>
 
-<g fill="#ffff00" fill-opacity="1" stroke="#ff0000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.99635,0,0,0.99635,372.137,2.24179)"
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,4030.07,1661.23)"
+font-family="Ubuntu" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0,-0.998199,0.998199,0,989.927,423.59)"
+font-family="Ubuntu" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#ff0000" stroke-opacity="1" stroke-dasharray="4,2" stroke-dashoffset="0" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" transform="matrix(0,-0.998199,0.998199,0,989.927,423.59)"
+font-family="Ubuntu" font-size="11" font-weight="400" font-style="normal" 
+>
+<path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M-6,0 L0,10 L6,0"/>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0,-0.998199,0.998199,0,989.927,423.59)"
+font-family="Ubuntu" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,4030.07,1661.23)"
+font-family="Ubuntu" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#ff0000" stroke-opacity="1" stroke-dasharray="4,2" stroke-dashoffset="0" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" transform="matrix(0.998199,0,0,0.998199,4030.07,1661.23)"
+font-family="Ubuntu" font-size="11" font-weight="400" font-style="normal" 
+>
+<path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M-3206.97,-1239.88 L-3035.63,-1239.88"/>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,4030.07,1661.23)"
+font-family="Ubuntu" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,914.735,423.59)"
+font-family="Ubuntu" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,914.735,423.59)"
+font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="18.9688" y="12" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+ >&lt;&lt;import&gt;&gt; binary</text>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,914.735,423.59)"
+font-family="Ubuntu" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,4030.07,1661.23)"
+font-family="Ubuntu" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,4030.07,1661.23)"
+font-family="Ubuntu" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,4030.07,1661.23)"
+font-family="Ubuntu" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#ff0000" stroke-opacity="1" stroke-dasharray="4,2" stroke-dashoffset="0" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" transform="matrix(0.998199,0,0,0.998199,4030.07,1661.23)"
+font-family="Ubuntu" font-size="11" font-weight="400" font-style="normal" 
+>
+<path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M-3149.86,-716.333 L-3206.97,-716.333"/>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,4030.07,1661.23)"
+font-family="Ubuntu" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,4030.07,1661.23)"
+font-family="Ubuntu" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,4030.07,1661.23)"
+font-family="Ubuntu" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,4030.07,1661.23)"
+font-family="Ubuntu" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#ff0000" stroke-opacity="1" stroke-dasharray="4,2" stroke-dashoffset="0" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" transform="matrix(0.998199,0,0,0.998199,4030.07,1661.23)"
+font-family="Ubuntu" font-size="11" font-weight="400" font-style="normal" 
+>
+<path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M-3035.63,-971.018 L-3035.63,-884.307"/>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,4030.07,1661.23)"
+font-family="Ubuntu" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,4030.07,1661.23)"
+font-family="Ubuntu" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,4030.07,1661.23)"
+font-family="Ubuntu" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,4030.07,1661.23)"
+font-family="Ubuntu" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#ff0000" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" transform="matrix(0.998199,0,0,0.998199,4030.07,1661.23)"
+font-family="Ubuntu" font-size="11" font-weight="400" font-style="normal" 
+>
+<path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M-3932.34,-1215.05 L-3785.15,-1215.05"/>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,4030.07,1661.23)"
+font-family="Ubuntu" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,177.709,448.373)"
+font-family="Ubuntu" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,177.709,448.373)"
+font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="18.2344" y="12" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+ >USB &amp; CommLayer</text>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,177.709,448.373)"
+font-family="Ubuntu" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,4030.07,1661.23)"
+font-family="Ubuntu" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,4030.07,1661.23)"
+font-family="Ubuntu" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,4030.07,1661.23)"
+font-family="Ubuntu" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#ff0000" stroke-opacity="1" stroke-dasharray="4,2" stroke-dashoffset="0" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" transform="matrix(0.998199,0,0,0.998199,4030.07,1661.23)"
+font-family="Ubuntu" font-size="11" font-weight="400" font-style="normal" 
+>
+<path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M-2561.77,-978.054 L-2561.77,-928.997"/>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,4030.07,1661.23)"
+font-family="Ubuntu" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,1354.63,153.898)"
+font-family="Ubuntu" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#ff0000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,1354.63,153.898)"
 font-family="Ubuntu" font-size="11" font-weight="400" font-style="normal" 
 >
 <path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M0,0 L781,0 L781,532 L0,532 L0,0"/>
 </g>
 
-<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.99635,0,0,0.99635,372.137,2.24179)"
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,1354.63,153.898)"
 font-family="Sans Serif" font-size="9" font-weight="700" font-style="normal" 
 >
 <text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="364.281" y="10" font-family="Sans Serif" font-size="9" font-weight="700" font-style="normal" 
  >JacoComm</text>
 </g>
 
-<g fill="#ffff00" fill-opacity="1" stroke="#ff0000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.99635,0,0,0.99635,372.137,2.24179)"
+<g fill="#ffff00" fill-opacity="1" stroke="#ff0000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,1354.63,153.898)"
 font-family="Sans Serif" font-size="9" font-weight="700" font-style="normal" 
 >
 <polyline fill="none" vector-effect="non-scaling-stroke" points="0,14 781,14 " />
 </g>
 
-<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.99635,0,0,0.99635,372.137,2.24179)"
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,1354.63,153.898)"
 font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
 >
 </g>
 
-<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.99635,0,0,0.99635,372.137,2.24179)"
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,1354.63,153.898)"
 font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
 >
 <text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="24" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
  >- api_mutex_ : boost::recursive_mutex&amp;</text>
 </g>
 
-<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.99635,0,0,0.99635,372.137,2.24179)"
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,1354.63,153.898)"
 font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
 >
 <text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="38" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
  >- jaco_api_ : jaco::JacoAPI</text>
 </g>
 
-<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.99635,0,0,0.99635,372.137,2.24179)"
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,1354.63,153.898)"
 font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
 >
 <text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="52" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
  >- is_software_stop_ : bool</text>
 </g>
 
-<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.99635,0,0,0.99635,372.137,2.24179)"
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,1354.63,153.898)"
 font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
 >
 <text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="66" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
  >- num_fingers_ : int</text>
 </g>
 
-<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.99635,0,0,0.99635,372.137,2.24179)"
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,1354.63,153.898)"
 font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
 >
 <text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="80" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
  >- robot_type_ : int</text>
 </g>
 
-<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.99635,0,0,0.99635,372.137,2.24179)"
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,1354.63,153.898)"
 font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
 >
 </g>
 
-<g fill="#ffff00" fill-opacity="1" stroke="#ff0000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.99635,0,0,0.99635,372.137,2.24179)"
+<g fill="#ffff00" fill-opacity="1" stroke="#ff0000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,1354.63,153.898)"
 font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
 >
 <polyline fill="none" vector-effect="non-scaling-stroke" points="0,84 781,84 " />
 </g>
 
-<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.99635,0,0,0.99635,372.137,2.24179)"
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,1354.63,153.898)"
 font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
 >
 </g>
 
-<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.99635,0,0,0.99635,372.137,2.24179)"
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,1354.63,153.898)"
 font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
 >
 </g>
 
-<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.99635,0,0,0.99635,372.137,2.24179)"
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,1354.63,153.898)"
 font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
 >
 <text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="94" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
  >+ JacoComm(node_handle : const ros::NodeHandle&amp;, api_mutex : boost::recursive_mutex&amp;, is_movement_on_start : const bool)</text>
 </g>
 
-<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.99635,0,0,0.99635,372.137,2.24179)"
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,1354.63,153.898)"
 font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
 >
 <text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="108" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
  >+ ~ JacoComm()</text>
 </g>
 
-<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.99635,0,0,0.99635,372.137,2.24179)"
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,1354.63,153.898)"
 font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
 >
 <text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="122" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
  >+ isHomed() : bool</text>
 </g>
 
-<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.99635,0,0,0.99635,372.137,2.24179)"
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,1354.63,153.898)"
 font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
 >
 <text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="136" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
  >+ homeArm()</text>
 </g>
 
-<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.99635,0,0,0.99635,372.137,2.24179)"
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,1354.63,153.898)"
 font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
 >
 <text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="150" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
  >+ initFingers()</text>
 </g>
 
-<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.99635,0,0,0.99635,372.137,2.24179)"
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,1354.63,153.898)"
 font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
 >
 <text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="164" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
  >+ setJointAngles(angles : const JacoAngles&amp;, timeout : int, push : bool)</text>
 </g>
 
-<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.99635,0,0,0.99635,372.137,2.24179)"
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,1354.63,153.898)"
 font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
 >
 <text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="178" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
  >+ setCartesianPosition(position : const JacoPose&amp;, timeout : int, push : bool)</text>
 </g>
 
-<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.99635,0,0,0.99635,372.137,2.24179)"
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,1354.63,153.898)"
 font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
 >
 <text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="192" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
  >+ setFingerPositions(fingers : const FingerAngles&amp;, timeout : int, push : bool)</text>
 </g>
 
-<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.99635,0,0,0.99635,372.137,2.24179)"
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,1354.63,153.898)"
 font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
 >
 <text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="206" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
  >+ setJointVelocities(joint_vel : const AngularInfo&amp;)</text>
 </g>
 
-<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.99635,0,0,0.99635,372.137,2.24179)"
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,1354.63,153.898)"
 font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
 >
 <text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="220" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
  >+ setCartesianVelocities(velocities : const CartesianInfo&amp;)</text>
 </g>
 
-<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.99635,0,0,0.99635,372.137,2.24179)"
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,1354.63,153.898)"
 font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
 >
 <text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="234" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
  >+ setConfig(config : const ClientConfigurations&amp;)</text>
 </g>
 
-<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.99635,0,0,0.99635,372.137,2.24179)"
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,1354.63,153.898)"
 font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
 >
 <text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="248" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
  >+ getJointAngles(angles : JacoAngles&amp;)</text>
 </g>
 
-<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.99635,0,0,0.99635,372.137,2.24179)"
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,1354.63,153.898)"
 font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
 >
 <text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="262" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
  >+ getJointVelocities(vels : JacoAngles&amp;)</text>
 </g>
 
-<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.99635,0,0,0.99635,372.137,2.24179)"
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,1354.63,153.898)"
 font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
 >
 <text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="276" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
  >+ getJointTorques(tqs : JacoAngles&amp;)</text>
 </g>
 
-<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.99635,0,0,0.99635,372.137,2.24179)"
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,1354.63,153.898)"
 font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
 >
 <text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="290" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
  >+ getCartesianPosition(position : JacoPose&amp;)</text>
 </g>
 
-<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.99635,0,0,0.99635,372.137,2.24179)"
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,1354.63,153.898)"
 font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
 >
 <text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="304" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
  >+ getCartesianForce(position : JacoPose&amp;)</text>
 </g>
 
-<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.99635,0,0,0.99635,372.137,2.24179)"
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,1354.63,153.898)"
 font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
 >
 <text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="318" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
  >+ getFingerPositions(fingers : FingerAngles&amp;)</text>
 </g>
 
-<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.99635,0,0,0.99635,372.137,2.24179)"
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,1354.63,153.898)"
 font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
 >
 <text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="332" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
  >+ setCartesianInertiaDamping(inertia : const CartesianInfo&amp;, damping : const CartesianInfo&amp;)</text>
 </g>
 
-<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.99635,0,0,0.99635,372.137,2.24179)"
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,1354.63,153.898)"
 font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
 >
 <text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="346" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
  >+ setCartesianForceMinMax(min : const CartesianInfo&amp;, max : const CartesianInfo&amp;)</text>
 </g>
 
-<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.99635,0,0,0.99635,372.137,2.24179)"
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,1354.63,153.898)"
 font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
 >
 <text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="360" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
  >+ startForceControl()</text>
 </g>
 
-<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.99635,0,0,0.99635,372.137,2.24179)"
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,1354.63,153.898)"
 font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
 >
 <text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="374" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
  >+ stopForceControl()</text>
 </g>
 
-<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.99635,0,0,0.99635,372.137,2.24179)"
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,1354.63,153.898)"
 font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
 >
 <text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="388" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
  >+ getQuickStatus(quick_status : QuickStatus&amp;)</text>
 </g>
 
-<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.99635,0,0,0.99635,372.137,2.24179)"
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,1354.63,153.898)"
 font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
 >
 <text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="402" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
  >+ getConfig(config : ClientConfigurations&amp;)</text>
 </g>
 
-<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.99635,0,0,0.99635,372.137,2.24179)"
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,1354.63,153.898)"
 font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
 >
 <text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="416" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
  >+ printAngles(angles : const JacoAngles&amp;)</text>
 </g>
 
-<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.99635,0,0,0.99635,372.137,2.24179)"
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,1354.63,153.898)"
 font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
 >
 <text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="430" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
  >+ printPosition(position : const JacoPose&amp;)</text>
 </g>
 
-<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.99635,0,0,0.99635,372.137,2.24179)"
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,1354.63,153.898)"
 font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
 >
 <text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="444" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
  >+ printFingers(fingers : const FingersPosition&amp;)</text>
 </g>
 
-<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.99635,0,0,0.99635,372.137,2.24179)"
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,1354.63,153.898)"
 font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
 >
 <text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="458" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
  >+ printConfig(config : const ClientConfigurations&amp;)</text>
 </g>
 
-<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.99635,0,0,0.99635,372.137,2.24179)"
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,1354.63,153.898)"
 font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
 >
 <text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="472" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
  >+ stopAPI()</text>
 </g>
 
-<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.99635,0,0,0.99635,372.137,2.24179)"
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,1354.63,153.898)"
 font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
 >
 <text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="486" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
  >+ startAPI()</text>
 </g>
 
-<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.99635,0,0,0.99635,372.137,2.24179)"
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,1354.63,153.898)"
 font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
 >
 <text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="500" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
  >+ isStopped() : bool</text>
 </g>
 
-<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.99635,0,0,0.99635,372.137,2.24179)"
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,1354.63,153.898)"
 font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
 >
 <text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="514" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
  >+ numFingers() : int</text>
 </g>
 
-<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.99635,0,0,0.99635,372.137,2.24179)"
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,1354.63,153.898)"
 font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
 >
 <text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="528" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
  >+ robotType() : int</text>
 </g>
 
-<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.99635,0,0,0.99635,372.137,2.24179)"
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,1354.63,153.898)"
 font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
 >
 </g>
 
-<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.99635,0,0,0.99635,372.137,2.24179)"
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,1354.63,153.898)"
 font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
 >
 </g>
@@ -401,333 +612,333 @@ font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal"
 >
 </g>
 
-<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.99635,0,0,0.99635,372.137,2.24179)"
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,1354.63,153.898)"
 font-family="Ubuntu" font-size="11" font-weight="400" font-style="normal" 
 >
 </g>
 
-<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.99635,0,0,0.99635,0.99635,0.99635)"
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,999.909,146.946)"
 font-family="Ubuntu" font-size="11" font-weight="400" font-style="normal" 
 >
 </g>
 
-<g fill="#ffff00" fill-opacity="1" stroke="#ff0000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.99635,0,0,0.99635,0.99635,0.99635)"
+<g fill="#ffff00" fill-opacity="1" stroke="#ff0000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,999.909,146.946)"
 font-family="Ubuntu" font-size="11" font-weight="400" font-style="normal" 
 >
 <path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M0,0 L223,0 L223,546 L0,546 L0,0"/>
 </g>
 
-<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.99635,0,0,0.99635,0.99635,0.99635)"
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,999.909,146.946)"
 font-family="Sans Serif" font-size="9" font-weight="700" font-style="normal" 
 >
 <text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="78.6875" y="10" font-family="Sans Serif" font-size="9" font-weight="700" font-style="normal" 
  >jaco::JacoAPI</text>
 </g>
 
-<g fill="#ffff00" fill-opacity="1" stroke="#ff0000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.99635,0,0,0.99635,0.99635,0.99635)"
+<g fill="#ffff00" fill-opacity="1" stroke="#ff0000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,999.909,146.946)"
 font-family="Sans Serif" font-size="9" font-weight="700" font-style="normal" 
 >
 <polyline fill="none" vector-effect="non-scaling-stroke" points="0,14 223,14 " />
 </g>
 
-<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.99635,0,0,0.99635,0.99635,0.99635)"
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,999.909,146.946)"
 font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
 >
 </g>
 
-<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.99635,0,0,0.99635,0.99635,0.99635)"
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,999.909,146.946)"
 font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
 >
 <text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="24" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
  >+ initAPI : int</text>
 </g>
 
-<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.99635,0,0,0.99635,0.99635,0.99635)"
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,999.909,146.946)"
 font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
 >
 <text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="38" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
  >+ closeAPI : int</text>
 </g>
 
-<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.99635,0,0,0.99635,0.99635,0.99635)"
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,999.909,146.946)"
 font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
 >
 <text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="52" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
  >+ getAPIVersion : int</text>
 </g>
 
-<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.99635,0,0,0.99635,0.99635,0.99635)"
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,999.909,146.946)"
 font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
 >
 <text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="66" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
  >+ getDevices : int</text>
 </g>
 
-<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.99635,0,0,0.99635,0.99635,0.99635)"
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,999.909,146.946)"
 font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
 >
 <text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="80" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
  >+ setActiveDevice : int</text>
 </g>
 
-<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.99635,0,0,0.99635,0.99635,0.99635)"
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,999.909,146.946)"
 font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
 >
 <text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="94" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
  >+ getGeneralInformations : int</text>
 </g>
 
-<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.99635,0,0,0.99635,0.99635,0.99635)"
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,999.909,146.946)"
 font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
 >
 <text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="108" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
  >+ getQuickStatus : int</text>
 </g>
 
-<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.99635,0,0,0.99635,0.99635,0.99635)"
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,999.909,146.946)"
 font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
 >
 <text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="122" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
  >+ getCodeVersion : int</text>
 </g>
 
-<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.99635,0,0,0.99635,0.99635,0.99635)"
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,999.909,146.946)"
 font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
 >
 <text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="136" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
  >+ startControlAPI : int</text>
 </g>
 
-<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.99635,0,0,0.99635,0.99635,0.99635)"
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,999.909,146.946)"
 font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
 >
 <text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="150" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
  >+ stopControlAPI : int</text>
 </g>
 
-<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.99635,0,0,0.99635,0.99635,0.99635)"
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,999.909,146.946)"
 font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
 >
 <text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="164" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
  >+ initFingers : int</text>
 </g>
 
-<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.99635,0,0,0.99635,0.99635,0.99635)"
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,999.909,146.946)"
 font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
 >
 <text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="178" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
  >+ moveHome : int</text>
 </g>
 
-<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.99635,0,0,0.99635,0.99635,0.99635)"
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,999.909,146.946)"
 font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
 >
 <text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="192" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
  >+ getCartesianPosition : int</text>
 </g>
 
-<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.99635,0,0,0.99635,0.99635,0.99635)"
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,999.909,146.946)"
 font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
 >
 <text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="206" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
  >+ getAngularPosition : int</text>
 </g>
 
-<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.99635,0,0,0.99635,0.99635,0.99635)"
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,999.909,146.946)"
 font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
 >
 <text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="220" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
  >+ getAngularVelocity : int</text>
 </g>
 
-<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.99635,0,0,0.99635,0.99635,0.99635)"
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,999.909,146.946)"
 font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
 >
 <text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="234" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
  >+ getCartesianForce : int</text>
 </g>
 
-<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.99635,0,0,0.99635,0.99635,0.99635)"
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,999.909,146.946)"
 font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
 >
 <text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="248" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
  >+ setCartesianForceMinMax : int</text>
 </g>
 
-<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.99635,0,0,0.99635,0.99635,0.99635)"
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,999.909,146.946)"
 font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
 >
 <text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="262" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
  >+ setCartesianInertiaDamping : int</text>
 </g>
 
-<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.99635,0,0,0.99635,0.99635,0.99635)"
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,999.909,146.946)"
 font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
 >
 <text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="276" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
  >+ startForceControl : int</text>
 </g>
 
-<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.99635,0,0,0.99635,0.99635,0.99635)"
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,999.909,146.946)"
 font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
 >
 <text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="290" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
  >+ stopForceControl : int</text>
 </g>
 
-<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.99635,0,0,0.99635,0.99635,0.99635)"
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,999.909,146.946)"
 font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
 >
 <text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="304" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
  >+ getAngularForce : int</text>
 </g>
 
-<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.99635,0,0,0.99635,0.99635,0.99635)"
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,999.909,146.946)"
 font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
 >
 <text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="318" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
  >+ getAngularCurrent : int</text>
 </g>
 
-<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.99635,0,0,0.99635,0.99635,0.99635)"
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,999.909,146.946)"
 font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
 >
 <text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="332" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
  >+ getControlType : int</text>
 </g>
 
-<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.99635,0,0,0.99635,0.99635,0.99635)"
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,999.909,146.946)"
 font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
 >
 <text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="346" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
  >+ getActualTrajectoryInfo : int</text>
 </g>
 
-<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.99635,0,0,0.99635,0.99635,0.99635)"
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,999.909,146.946)"
 font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
 >
 <text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="360" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
  >+ getGlobalTrajectoryInfo : int</text>
 </g>
 
-<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.99635,0,0,0.99635,0.99635,0.99635)"
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,999.909,146.946)"
 font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
 >
 <text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="374" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
  >+ getSensorsInfo : int</text>
 </g>
 
-<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.99635,0,0,0.99635,0.99635,0.99635)"
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,999.909,146.946)"
 font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
 >
 <text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="388" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
  >+ setAngularControl : int</text>
 </g>
 
-<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.99635,0,0,0.99635,0.99635,0.99635)"
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,999.909,146.946)"
 font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
 >
 <text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="402" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
  >+ setCartesianControl : int</text>
 </g>
 
-<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.99635,0,0,0.99635,0.99635,0.99635)"
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,999.909,146.946)"
 font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
 >
 <text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="416" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
  >+ restoreFactoryDefault : int</text>
 </g>
 
-<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.99635,0,0,0.99635,0.99635,0.99635)"
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,999.909,146.946)"
 font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
 >
 <text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="430" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
  >+ sendJoystickCommand : int</text>
 </g>
 
-<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.99635,0,0,0.99635,0.99635,0.99635)"
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,999.909,146.946)"
 font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
 >
 <text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="444" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
  >+ sendAdvanceTrajectory : int</text>
 </g>
 
-<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.99635,0,0,0.99635,0.99635,0.99635)"
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,999.909,146.946)"
 font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
 >
 <text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="458" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
  >+ sendBasicTrajectory : int</text>
 </g>
 
-<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.99635,0,0,0.99635,0.99635,0.99635)"
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,999.909,146.946)"
 font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
 >
 <text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="472" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
  >+ getClientConfigurations : int</text>
 </g>
 
-<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.99635,0,0,0.99635,0.99635,0.99635)"
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,999.909,146.946)"
 font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
 >
 <text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="486" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
  >+ setClientConfigurations : int</text>
 </g>
 
-<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.99635,0,0,0.99635,0.99635,0.99635)"
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,999.909,146.946)"
 font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
 >
 <text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="500" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
  >+ eraseAllTrajectories : int</text>
 </g>
 
-<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.99635,0,0,0.99635,0.99635,0.99635)"
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,999.909,146.946)"
 font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
 >
 <text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="514" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
  >+ getPositionCurrentActuators : int</text>
 </g>
 
-<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.99635,0,0,0.99635,0.99635,0.99635)"
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,999.909,146.946)"
 font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
 >
 <text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="528" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
  >+ setActuatorPID : int</text>
 </g>
 
-<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.99635,0,0,0.99635,0.99635,0.99635)"
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,999.909,146.946)"
 font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
 >
 </g>
 
-<g fill="#ffff00" fill-opacity="1" stroke="#ff0000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.99635,0,0,0.99635,0.99635,0.99635)"
+<g fill="#ffff00" fill-opacity="1" stroke="#ff0000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,999.909,146.946)"
 font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
 >
 <polyline fill="none" vector-effect="non-scaling-stroke" points="0,532 223,532 " />
 </g>
 
-<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.99635,0,0,0.99635,0.99635,0.99635)"
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,999.909,146.946)"
 font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
 >
 </g>
 
-<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.99635,0,0,0.99635,0.99635,0.99635)"
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,999.909,146.946)"
 font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
 >
 </g>
 
-<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.99635,0,0,0.99635,0.99635,0.99635)"
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,999.909,146.946)"
 font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
 >
 <text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="542" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
  >+ JacoAPI()</text>
 </g>
 
-<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.99635,0,0,0.99635,0.99635,0.99635)"
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,999.909,146.946)"
 font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
 >
 </g>
 
-<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.99635,0,0,0.99635,0.99635,0.99635)"
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,999.909,146.946)"
 font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
 >
 </g>
@@ -737,7 +948,725 @@ font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal"
 >
 </g>
 
-<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.99635,0,0,0.99635,0.99635,0.99635)"
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,999.909,146.946)"
+font-family="Ubuntu" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,0.998199,448.373)"
+font-family="Ubuntu" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#ff0000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,0.998199,448.373)"
+font-family="Ubuntu" font-size="11" font-weight="400" font-style="normal" 
+>
+<path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M0,0 L104,0 L104,28 L0,28 L0,0"/>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,0.998199,448.373)"
+font-family="Sans Serif" font-size="9" font-weight="700" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="17.3125" y="10" font-family="Sans Serif" font-size="9" font-weight="700" font-style="normal" 
+ >DSP on Robot</text>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#ff0000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,0.998199,448.373)"
+font-family="Sans Serif" font-size="9" font-weight="700" font-style="normal" 
+>
+<polyline fill="none" vector-effect="non-scaling-stroke" points="0,14 104,14 " />
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,0.998199,448.373)"
+font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,0.998199,448.373)"
+font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#ff0000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,0.998199,448.373)"
+font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+>
+<polyline fill="none" vector-effect="non-scaling-stroke" points="0,21 104,21 " />
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,0.998199,448.373)"
+font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,0.998199,448.373)"
+font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,0.998199,448.373)"
+font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,0.998199,448.373)"
+font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0,0)"
+font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,0.998199,448.373)"
+font-family="Ubuntu" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,251.733,0.998199)"
+font-family="Ubuntu" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#ff0000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,251.733,0.998199)"
+font-family="Ubuntu" font-size="11" font-weight="400" font-style="normal" 
+>
+<path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M0,0 L578,0 L578,1042 L0,1042 L0,0"/>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,251.733,0.998199)"
+font-family="Sans Serif" font-size="9" font-weight="700" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="192.406" y="10" font-family="Sans Serif" font-size="9" font-weight="700" font-style="normal" 
+ >Kinova.API.UsbCommandLayerUbuntu</text>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#ff0000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,251.733,0.998199)"
+font-family="Sans Serif" font-size="9" font-weight="700" font-style="normal" 
+>
+<polyline fill="none" vector-effect="non-scaling-stroke" points="0,14 578,14 " />
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,251.733,0.998199)"
+font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,251.733,0.998199)"
+font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#ff0000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,251.733,0.998199)"
+font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+>
+<polyline fill="none" vector-effect="non-scaling-stroke" points="0,21 578,21 " />
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,251.733,0.998199)"
+font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,251.733,0.998199)"
+font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,251.733,0.998199)"
+font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="31" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+ >+ main(argc : int, argv : char**) : int</text>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,251.733,0.998199)"
+font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="45" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+ >+ ClearErrorLog() : int</text>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,251.733,0.998199)"
+font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="59" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+ >+ EraseAllProtectionZones() : int</text>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,251.733,0.998199)"
+font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="73" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+ >+ EraseAllTrajectories() : int</text>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,251.733,0.998199)"
+font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="87" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+ >+ InitFingers() : int</text>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,251.733,0.998199)"
+font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="101" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+ >+ MoveHome() : int</text>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,251.733,0.998199)"
+font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="115" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+ >+ RestoreFactoryDefault() : int</text>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,251.733,0.998199)"
+font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="129" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+ >+ SetAngularControl() : int</text>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,251.733,0.998199)"
+font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="143" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+ >+ SetCartesianControl() : int</text>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,251.733,0.998199)"
+font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="157" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+ >+ StartControlAPI() : int</text>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,251.733,0.998199)"
+font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="171" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+ >+ StartCurrentLimitation() : int</text>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,251.733,0.998199)"
+font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="185" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+ >+ StartForceControl() : int</text>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,251.733,0.998199)"
+font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="199" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+ >+ StopControlAPI() : int</text>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,251.733,0.998199)"
+font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="213" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+ >+ StopCurrentLimitation() : int</text>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,251.733,0.998199)"
+font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="227" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+ >+ StopForceControl() : int</text>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,251.733,0.998199)"
+font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="241" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+ >+ SetJointZero(ActuatorAdress : int) : int</text>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,251.733,0.998199)"
+font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="255" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+ >+ SetTorqueZero(ActuatorAdress : int) : int</text>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,251.733,0.998199)"
+font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="269" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+ >+ SetActuatorPIDFilter(ActuatorAdress : int, P : float, I : float, D : float) : int</text>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,251.733,0.998199)"
+font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="283" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+ >+ SetTorqueGain(ActuatorAdress : int, Gain : int) : int</text>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,251.733,0.998199)"
+font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="297" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+ >+ SetActuatorAddress(ActuatorAdress : int, newAddress : int) : int</text>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,251.733,0.998199)"
+font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="311" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+ >+ SetActuatorPID(address : unsigned int, P : float, I : float, D : float) : int</text>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,251.733,0.998199)"
+font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="325" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+ >+ SetModel(Command : char[STRING_LENGTH], temp : char[STRING_LENGTH]) : int</text>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,251.733,0.998199)"
+font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="339" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+ >+ SetSerialNumber(Command : char[STRING_LENGTH], temp : char[STRING_LENGTH]) : int</text>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,251.733,0.998199)"
+font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="353" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+ >+ SetControlMapping(Command : ControlMappingCharts) : int</text>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,251.733,0.998199)"
+font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="367" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+ >+ SetDevValue(command : std.vector&lt;float&gt;) : int</text>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,251.733,0.998199)"
+font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="381" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+ >+ SetProtectionZone(Command : ZoneList) : int</text>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,251.733,0.998199)"
+font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="395" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+ >+ SetClientConfigurations(config : ClientConfigurations) : int</text>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,251.733,0.998199)"
+font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="409" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+ >+ GetClientConfigurations(config : ClientConfigurations&amp;) : int</text>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,251.733,0.998199)"
+font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="423" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+ >+ SetActiveDevice(device : KinovaDevice) : int</text>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,251.733,0.998199)"
+font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="437" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+ >+ GetDevices(devices : std.vector&lt;KinovaDevice&gt;&amp;, result : int&amp;) : int</text>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,251.733,0.998199)"
+font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="451" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+ >+ ProgramFlash(filename : char*) : int</text>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,251.733,0.998199)"
+font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="465" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+ >+ SetFrameType(frameType : int) : int</text>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,251.733,0.998199)"
+font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="479" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+ >+ GetSystemError(indexError : unsigned int, Response : SystemError&amp;) : int</text>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,251.733,0.998199)"
+font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="493" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+ >+ SetAngularInertiaDamping(inertia : AngularInfo, damping : AngularInfo) : int</text>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,251.733,0.998199)"
+font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="507" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+ >+ SetCartesianInertiaDamping(inertia : CartesianInfo, damping : CartesianInfo) : int</text>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,251.733,0.998199)"
+font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="521" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+ >+ SendJoystickCommand(joystickCommand : JoystickCommand) : int</text>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,251.733,0.998199)"
+font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="535" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+ >+ SetAngularTorqueMinMax(min : AngularInfo, max : AngularInfo) : int</text>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,251.733,0.998199)"
+font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="549" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+ >+ SetCartesianForceMinMax(min : CartesianInfo, max : CartesianInfo) : int</text>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,251.733,0.998199)"
+font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="563" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+ >+ GetActuatorAcceleration(Response : AngularAcceleration&amp;) : int</text>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,251.733,0.998199)"
+font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="577" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+ >+ GetAngularCommand(Response : AngularPosition&amp;) : int</text>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,251.733,0.998199)"
+font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="591" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+ >+ GetAngularCurrent(Response : AngularPosition&amp;) : int</text>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,251.733,0.998199)"
+font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="605" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+ >+ GetAngularCurrentMotor(Response : AngularPosition&amp;) : int</text>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,251.733,0.998199)"
+font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="619" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+ >+ GetAngularForce(Response : AngularPosition&amp;) : int</text>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,251.733,0.998199)"
+font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="633" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+ >+ GetAngularForceGravityFree(Response : AngularPosition&amp;) : int</text>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,251.733,0.998199)"
+font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="647" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+ >+ GetAngularPosition(Response : AngularPosition&amp;) : int</text>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,251.733,0.998199)"
+font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="661" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+ >+ GetAngularVelocity(Response : AngularPosition&amp;) : int</text>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,251.733,0.998199)"
+font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="675" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+ >+ GetCartesianCommand(Response : CartesianPosition&amp;) : int</text>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,251.733,0.998199)"
+font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="689" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+ >+ GetCartesianForce(Response : CartesianPosition&amp;) : int</text>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,251.733,0.998199)"
+font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="703" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+ >+ GetCartesianPosition(Response : CartesianPosition&amp;) : int</text>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,251.733,0.998199)"
+font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="717" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+ >+ GetControlMapping(Response : ControlMappingCharts&amp;) : int</text>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,251.733,0.998199)"
+font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="731" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+ >+ GetForcesInfo(Response : ForceInfo&amp;) : int</text>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,251.733,0.998199)"
+font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="745" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+ >+ GetGeneralInformations(Response : GeneralInformations&amp;) : int</text>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,251.733,0.998199)"
+font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="759" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+ >+ GetGripperStatus(Response : Gripper&amp;) : int</text>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,251.733,0.998199)"
+font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="773" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+ >+ GetControlType(Response : int&amp;) : int</text>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,251.733,0.998199)"
+font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="787" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+ >+ GetQuickStatus(Response : QuickStatus&amp;) : int</text>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,251.733,0.998199)"
+font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="801" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+ >+ GetSensorsInfo(Response : SensorInfo&amp;) : int</text>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,251.733,0.998199)"
+font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="815" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+ >+ GetSingularityVector(Response : SingularityVector&amp;) : int</text>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,251.733,0.998199)"
+font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="829" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+ >+ GetCodeVersion(Response : std.vector&amp;) : int</text>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,251.733,0.998199)"
+font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="843" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+ >+ GetAPIVersion(Response : std.vector&amp;) : int</text>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,251.733,0.998199)"
+font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="857" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+ >+ GetPositionCurrentActuators(Response : std.vector&amp;) : int</text>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,251.733,0.998199)"
+font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="871" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+ >+ GetDevValue(Response : std.vector&amp;) : int</text>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,251.733,0.998199)"
+font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="885" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+ >+ GetSpasmFilterValues(Response : std.vector&amp;, activitionStatus : int&amp;) : int</text>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,251.733,0.998199)"
+font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="899" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+ >+ SetSpasmFilterValues(Response : std.vector&amp;, activationStatus : int) : int</text>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,251.733,0.998199)"
+font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="913" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+ >+ GetGlobalTrajectoryInfo(Response : TrajectoryFIFO&amp;) : int</text>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,251.733,0.998199)"
+font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="927" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+ >+ GetActualTrajectoryInfo(Response : TrajectoryPoint&amp;) : int</text>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,251.733,0.998199)"
+font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="941" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+ >+ GetSystemErrorCount(Response : unsigned int&amp;) : int</text>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,251.733,0.998199)"
+font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="955" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+ >+ GetProtectionZone(Response : ZoneList&amp;) : int</text>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,251.733,0.998199)"
+font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="969" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+ >+ SendAdvanceTrajectory(trajectory : TrajectoryPoint) : int</text>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,251.733,0.998199)"
+font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="983" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+ >+ SendBasicTrajectory(trajectory : TrajectoryPoint) : int</text>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,251.733,0.998199)"
+font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="997" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+ >+ GetPeripheralInventory(unnamed_1 : std.vector&amp;) : int</text>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,251.733,0.998199)"
+font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="1011" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+ >+ InitAPI() : int</text>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,251.733,0.998199)"
+font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="1025" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+ >+ CloseAPI() : int</text>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,251.733,0.998199)"
+font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,251.733,0.998199)"
+font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0,0)"
+font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,251.733,0.998199)"
+font-family="Ubuntu" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,885.883,946.189)"
+font-family="Ubuntu" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="#dcdcdc" fill-opacity="1" stroke="#ff0000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,885.883,946.189)"
+font-family="Ubuntu" font-size="11" font-weight="400" font-style="normal" 
+>
+<path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M0,0 L0,104 L456,104 L456,10 L446,0 L0,0"/>
+<polyline fill="none" vector-effect="non-scaling-stroke" points="446,0 446,10 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="446,10 456,10 " />
+</g>
+
+<g fill="#dcdcdc" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,885.883,946.189)"
+font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="12" y="16" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+ > &quot;UsbCommandLayerUbuntu&quot; stores all possible access to ROS</text>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="12" y="30" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+ >packages. It passes function names called by &quot;JacoAPI&quot; to DSP on</text>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="12" y="44" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+ >robot. In &quot;JacoAPI&quot;, it is imported in binary format. &quot;JocoComm&quot; can</text>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="12" y="58" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+ >be considered as the starting point to implement ROS and other</text>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="12" y="72" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+ >basic functions. ROS node is created and ROS logs are generously</text>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="12" y="86" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+ >used. Fundamental functions and api operations are defined here. </text>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,885.883,946.189)"
+font-family="Ubuntu" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,1472.91,733.908)"
+font-family="Ubuntu" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="#dcdcdc" fill-opacity="1" stroke="#ff0000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,1472.91,733.908)"
+font-family="Ubuntu" font-size="11" font-weight="400" font-style="normal" 
+>
+<path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M0,0 L0,137 L540,137 L540,10 L530,0 L0,0"/>
+<polyline fill="none" vector-effect="non-scaling-stroke" points="530,0 530,10 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="530,10 540,10 " />
+</g>
+
+<g fill="#dcdcdc" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,1472.91,733.908)"
+font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="12" y="16" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+ > &quot;JocoComm&quot; can be considered as the starting point to implement ROS and other</text>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="12" y="30" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+ >basic functions. ROS node is created and ROS logs are generously used.</text>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="12" y="44" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+ >Fundamental functions and api operations are defined here. &quot;JocoComm&quot; can be</text>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="12" y="58" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+ >considered as the starting point to implement ROS and other basic functions. ROS</text>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="12" y="72" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+ >node is created and ROS logs are generously used. Fundamental functions and api</text>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="12" y="86" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+ >operations are defined here. &quot;JocoComm&quot; can be considered as the starting point</text>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="12" y="100" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+ >to implement ROS and other basic functions. ROS node is created and ROS logs are</text>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="12" y="114" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" 
+ >generously used. Fundamental functions and api operations are defined here. </text>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.998199,0,0,0.998199,1472.91,733.908)"
 font-family="Ubuntu" font-size="11" font-weight="400" font-style="normal" 
 >
 </g>

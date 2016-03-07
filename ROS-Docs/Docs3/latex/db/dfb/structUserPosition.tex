@@ -1,0 +1,115 @@
+\hypertarget{structUserPosition}{}\section{User\+Position Struct Reference}
+\label{structUserPosition}\index{User\+Position@{User\+Position}}
+
+
+This data structure represents an abstract position built by a user. Depending on the control type the Cartesian information, the angular information or both will be used.  
+
+
+
+
+{\ttfamily \#include \char`\"{}Definition\char`\"{}}
+
+
+
+Collaboration diagram for User\+Position\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d9/daa/structUserPosition__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{structUserPosition_ad682f9be07fa2307028f86624ded2958}{Init\+Struct} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structAngularInfo}{Angular\+Info} \hyperlink{structUserPosition_ab0c5b71622c1e0d3033572578e947cf3}{Actuators}
+\begin{DoxyCompactList}\small\item\em Angular information about this position. \end{DoxyCompactList}\item 
+\hyperlink{structCartesianInfo}{Cartesian\+Info} \hyperlink{structUserPosition_ab363c40971853637f728978e604c438f}{Cartesian\+Position}
+\begin{DoxyCompactList}\small\item\em Cartesian information about this position. \end{DoxyCompactList}\item 
+float \hyperlink{structUserPosition_aa18896c1238a50c8ad81c66dfd76ac5e}{Delay}
+\begin{DoxyCompactList}\small\item\em This is used only if the type of position is T\+I\+M\+E\+\_\+\+D\+E\+L\+AY. It represents the delay in second. \end{DoxyCompactList}\item 
+\hyperlink{structFingersPosition}{Fingers\+Position} \hyperlink{structUserPosition_a727907bb6a98b0f3d10aaa8011b67927}{Fingers}
+\begin{DoxyCompactList}\small\item\em fingers information about this position. \end{DoxyCompactList}\item 
+\hyperlink{KinovaTypes_8h_ad7050e4cfb6e844e9be962fba8eeb817}{H\+A\+N\+D\+\_\+\+M\+O\+DE} \hyperlink{structUserPosition_a83779902810d0e5e16d533e0f964c0df}{Hand\+Mode}
+\begin{DoxyCompactList}\small\item\em Mode of the gripper. \end{DoxyCompactList}\item 
+\hyperlink{KinovaTypes_8h_a0a1c22d235ef1b13cfcd1419d10babc9}{P\+O\+S\+I\+T\+I\+O\+N\+\_\+\+T\+Y\+PE} \hyperlink{structUserPosition_a93c748d4ee51239fcbcd487d88e52ffa}{Type}
+\begin{DoxyCompactList}\small\item\em The type of this position. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This data structure represents an abstract position built by a user. Depending on the control type the Cartesian information, the angular information or both will be used. 
+
+\subsection{Member Function Documentation}
+\index{User\+Position@{User\+Position}!Init\+Struct@{Init\+Struct}}
+\index{Init\+Struct@{Init\+Struct}!User\+Position@{User\+Position}}
+\subsubsection[{\texorpdfstring{Init\+Struct()}{InitStruct()}}]{\setlength{\rightskip}{0pt plus 5cm}void User\+Position\+::\+Init\+Struct (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{structUserPosition_ad682f9be07fa2307028f86624ded2958}{}\label{structUserPosition_ad682f9be07fa2307028f86624ded2958}
+
+\begin{DoxyCode}
+663     \{
+664         \hyperlink{structUserPosition_a93c748d4ee51239fcbcd487d88e52ffa}{Type} = \hyperlink{KinovaTypes_8h_a0a1c22d235ef1b13cfcd1419d10babc9aa98b51871329200ef579781620a475ad}{CARTESIAN\_POSITION};
+665         \hyperlink{structUserPosition_aa18896c1238a50c8ad81c66dfd76ac5e}{Delay} = 0.0f;
+666         \hyperlink{structCartesianPosition}{CartesianPosition}.\hyperlink{structCartesianPosition_a555e4355ff9b88f0088b3ffcfc56af96}{InitStruct}();
+667         \hyperlink{structUserPosition_ab0c5b71622c1e0d3033572578e947cf3}{Actuators}.\hyperlink{structAngularInfo_a092156b3e0e6cb657ed4bb2f6b15a9f0}{InitStruct}();
+668         \hyperlink{structUserPosition_a83779902810d0e5e16d533e0f964c0df}{HandMode} = \hyperlink{KinovaTypes_8h_ad7050e4cfb6e844e9be962fba8eeb817a21de3478520bbc47e9c35e3e651a06bf}{POSITION\_MODE};
+669         \hyperlink{structUserPosition_a727907bb6a98b0f3d10aaa8011b67927}{Fingers}.\hyperlink{structFingersPosition_a2d958923675995d54d56e59f8549495d}{InitStruct}();
+670     \}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\index{User\+Position@{User\+Position}!Actuators@{Actuators}}
+\index{Actuators@{Actuators}!User\+Position@{User\+Position}}
+\subsubsection[{\texorpdfstring{Actuators}{Actuators}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Angular\+Info} User\+Position\+::\+Actuators}\hypertarget{structUserPosition_ab0c5b71622c1e0d3033572578e947cf3}{}\label{structUserPosition_ab0c5b71622c1e0d3033572578e947cf3}
+
+
+Angular information about this position. 
+
+\index{User\+Position@{User\+Position}!Cartesian\+Position@{Cartesian\+Position}}
+\index{Cartesian\+Position@{Cartesian\+Position}!User\+Position@{User\+Position}}
+\subsubsection[{\texorpdfstring{Cartesian\+Position}{CartesianPosition}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Cartesian\+Info} User\+Position\+::\+Cartesian\+Position}\hypertarget{structUserPosition_ab363c40971853637f728978e604c438f}{}\label{structUserPosition_ab363c40971853637f728978e604c438f}
+
+
+Cartesian information about this position. 
+
+\index{User\+Position@{User\+Position}!Delay@{Delay}}
+\index{Delay@{Delay}!User\+Position@{User\+Position}}
+\subsubsection[{\texorpdfstring{Delay}{Delay}}]{\setlength{\rightskip}{0pt plus 5cm}float User\+Position\+::\+Delay}\hypertarget{structUserPosition_aa18896c1238a50c8ad81c66dfd76ac5e}{}\label{structUserPosition_aa18896c1238a50c8ad81c66dfd76ac5e}
+
+
+This is used only if the type of position is T\+I\+M\+E\+\_\+\+D\+E\+L\+AY. It represents the delay in second. 
+
+\index{User\+Position@{User\+Position}!Fingers@{Fingers}}
+\index{Fingers@{Fingers}!User\+Position@{User\+Position}}
+\subsubsection[{\texorpdfstring{Fingers}{Fingers}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Fingers\+Position} User\+Position\+::\+Fingers}\hypertarget{structUserPosition_a727907bb6a98b0f3d10aaa8011b67927}{}\label{structUserPosition_a727907bb6a98b0f3d10aaa8011b67927}
+
+
+fingers information about this position. 
+
+\index{User\+Position@{User\+Position}!Hand\+Mode@{Hand\+Mode}}
+\index{Hand\+Mode@{Hand\+Mode}!User\+Position@{User\+Position}}
+\subsubsection[{\texorpdfstring{Hand\+Mode}{HandMode}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf H\+A\+N\+D\+\_\+\+M\+O\+DE} User\+Position\+::\+Hand\+Mode}\hypertarget{structUserPosition_a83779902810d0e5e16d533e0f964c0df}{}\label{structUserPosition_a83779902810d0e5e16d533e0f964c0df}
+
+
+Mode of the gripper. 
+
+\index{User\+Position@{User\+Position}!Type@{Type}}
+\index{Type@{Type}!User\+Position@{User\+Position}}
+\subsubsection[{\texorpdfstring{Type}{Type}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf P\+O\+S\+I\+T\+I\+O\+N\+\_\+\+T\+Y\+PE} User\+Position\+::\+Type}\hypertarget{structUserPosition_a93c748d4ee51239fcbcd487d88e52ffa}{}\label{structUserPosition_a93c748d4ee51239fcbcd487d88e52ffa}
+
+
+The type of this position. 
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Longfei/\+Desktop/catkin\+\_\+\+Kinova\+R\+O\+S/src/jaco-\/ros/jaco\+\_\+driver/include/kinova/\hyperlink{KinovaTypes_8h}{Kinova\+Types.\+h}\end{DoxyCompactItemize}

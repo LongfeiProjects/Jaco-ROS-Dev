@@ -1,0 +1,42 @@
+.TH "D:/Longfei/Desktop/catkin_KinovaROS/src/jaco-ros/jaco_driver/src/testers/test_jaco_arm_car_vel.cpp" 3 "Thu Mar 3 2016" "Version 1.0.1" "Kinova-ROS" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+D:/Longfei/Desktop/catkin_KinovaROS/src/jaco-ros/jaco_driver/src/testers/test_jaco_arm_car_vel.cpp \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <jaco_driver/test_jaco_arm_car_vel\&.h>\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "int \fBmain\fP (int argc, char **argv)"
+.br
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "int main (int argc, char ** argv)"
+String containing the topic name for cartesian commands 
+.PP
+.nf
+78                                 {
+79 
+80     /* Set up ROS */
+81     ros::init(argc, argv, "test_jaco_arm_car_vel");
+82     ros::NodeHandle nh;
+83     ros::NodeHandle param_nh("~");
+84 
+85     std::string JointVelocity("CartesianVelocity"); 
+86 
+87     CartesianVelTest test_node(nh,JointVelocity);
+88 
+89 
+90     ros::spin();
+91 }
+.fi
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Kinova-ROS from the source code\&.

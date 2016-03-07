@@ -1,0 +1,5 @@
+var structros_1_1serialization_1_1Serializer_3_01_1_1jaco__msgs_1_1ArmPoseGoal___3_01ContainerAllocator_01_4_01_4 =
+[
+    [ "allInOne", "dd/dbc/structros_1_1serialization_1_1Serializer_3_01_1_1jaco__msgs_1_1ArmPoseGoal___3_01ContainerAllocator_01_4_01_4.html#af2a4a9f820ae78163ffa4fc597cc78ac", null ],
+    [ "ROS_DECLARE_ALLINONE_SERIALIZER", "dd/dbc/structros_1_1serialization_1_1Serializer_3_01_1_1jaco__msgs_1_1ArmPoseGoal___3_01ContainerAllocator_01_4_01_4.html#aba18623158f3d97e0509711421f9bcdb", null ]
+];

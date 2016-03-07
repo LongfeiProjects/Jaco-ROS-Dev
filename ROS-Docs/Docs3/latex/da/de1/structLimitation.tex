@@ -1,0 +1,119 @@
+\hypertarget{structLimitation}{}\section{Limitation Struct Reference}
+\label{structLimitation}\index{Limitation@{Limitation}}
+
+
+This data structure represents all limitation that can be applied to a control context.  
+
+
+
+
+{\ttfamily \#include \char`\"{}Definition\char`\"{}}
+
+
+
+Collaboration diagram for Limitation\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=208pt]{db/d9f/structLimitation__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{structLimitation_a098f4ee5d0eb6baf844ff3164f1a20f6}{Init\+Struct} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float \hyperlink{structLimitation_a695b233ff2bd5f53460fcadad86c0cfa}{acceleration\+Parameter1}
+\item 
+float \hyperlink{structLimitation_a1bc77d927cb14ce2f963ccfa53fb0d99}{acceleration\+Parameter2}
+\item 
+float \hyperlink{structLimitation_a23cd4303674bd42a0e583fced50a3511}{acceleration\+Parameter3}
+\item 
+float \hyperlink{structLimitation_abafcff837c521cea6d410245547b148e}{force\+Parameter1}
+\item 
+float \hyperlink{structLimitation_a4a48f99b82a0078cfedb029c92355bef}{force\+Parameter2}
+\item 
+float \hyperlink{structLimitation_a25a3f8ac4759c63b46d2201b651817e5}{force\+Parameter3}
+\item 
+float \hyperlink{structLimitation_a3d36f2f90548acecb3e080d8c47d00f2}{speed\+Parameter1}
+\begin{DoxyCompactList}\small\item\em In a cartesian context, this represents the translation velocity but in an angular context, this represents the velocity of the actuators 1, 2 and 3. \end{DoxyCompactList}\item 
+float \hyperlink{structLimitation_aa17c9688bba54c9a8e2208d38266ae93}{speed\+Parameter2}
+\begin{DoxyCompactList}\small\item\em In a cartesian context, this represents the orientation velocity but in an angular context, this represents the velocity of the actuators 4, 5 and 6. \end{DoxyCompactList}\item 
+float \hyperlink{structLimitation_a3d2e542a721c712b06b70f554d10d468}{speed\+Parameter3}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This data structure represents all limitation that can be applied to a control context. 
+
+Depending on the context, units and behaviour can change. See each parameter for more informations. 
+
+\subsection{Member Function Documentation}
+\index{Limitation@{Limitation}!Init\+Struct@{Init\+Struct}}
+\index{Init\+Struct@{Init\+Struct}!Limitation@{Limitation}}
+\subsubsection[{\texorpdfstring{Init\+Struct()}{InitStruct()}}]{\setlength{\rightskip}{0pt plus 5cm}void Limitation\+::\+Init\+Struct (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{structLimitation_a098f4ee5d0eb6baf844ff3164f1a20f6}{}\label{structLimitation_a098f4ee5d0eb6baf844ff3164f1a20f6}
+
+\begin{DoxyCode}
+613     \{
+614         \hyperlink{structLimitation_a3d36f2f90548acecb3e080d8c47d00f2}{speedParameter1} = 0.0f;
+615         \hyperlink{structLimitation_aa17c9688bba54c9a8e2208d38266ae93}{speedParameter2} = 0.0f;
+616         \hyperlink{structLimitation_a3d2e542a721c712b06b70f554d10d468}{speedParameter3} = 0.0f;
+617         \hyperlink{structLimitation_abafcff837c521cea6d410245547b148e}{forceParameter1} = 0.0f;
+618         \hyperlink{structLimitation_a4a48f99b82a0078cfedb029c92355bef}{forceParameter2} = 0.0f;
+619         \hyperlink{structLimitation_a25a3f8ac4759c63b46d2201b651817e5}{forceParameter3} = 0.0f;
+620         \hyperlink{structLimitation_a695b233ff2bd5f53460fcadad86c0cfa}{accelerationParameter1} = 0.0f;
+621         \hyperlink{structLimitation_a1bc77d927cb14ce2f963ccfa53fb0d99}{accelerationParameter2} = 0.0f;
+622         \hyperlink{structLimitation_a23cd4303674bd42a0e583fced50a3511}{accelerationParameter3} = 0.0f;
+623     \}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\index{Limitation@{Limitation}!acceleration\+Parameter1@{acceleration\+Parameter1}}
+\index{acceleration\+Parameter1@{acceleration\+Parameter1}!Limitation@{Limitation}}
+\subsubsection[{\texorpdfstring{acceleration\+Parameter1}{accelerationParameter1}}]{\setlength{\rightskip}{0pt plus 5cm}float Limitation\+::acceleration\+Parameter1}\hypertarget{structLimitation_a695b233ff2bd5f53460fcadad86c0cfa}{}\label{structLimitation_a695b233ff2bd5f53460fcadad86c0cfa}
+Not used for now. \index{Limitation@{Limitation}!acceleration\+Parameter2@{acceleration\+Parameter2}}
+\index{acceleration\+Parameter2@{acceleration\+Parameter2}!Limitation@{Limitation}}
+\subsubsection[{\texorpdfstring{acceleration\+Parameter2}{accelerationParameter2}}]{\setlength{\rightskip}{0pt plus 5cm}float Limitation\+::acceleration\+Parameter2}\hypertarget{structLimitation_a1bc77d927cb14ce2f963ccfa53fb0d99}{}\label{structLimitation_a1bc77d927cb14ce2f963ccfa53fb0d99}
+Not used for now. \index{Limitation@{Limitation}!acceleration\+Parameter3@{acceleration\+Parameter3}}
+\index{acceleration\+Parameter3@{acceleration\+Parameter3}!Limitation@{Limitation}}
+\subsubsection[{\texorpdfstring{acceleration\+Parameter3}{accelerationParameter3}}]{\setlength{\rightskip}{0pt plus 5cm}float Limitation\+::acceleration\+Parameter3}\hypertarget{structLimitation_a23cd4303674bd42a0e583fced50a3511}{}\label{structLimitation_a23cd4303674bd42a0e583fced50a3511}
+Not used for now. \index{Limitation@{Limitation}!force\+Parameter1@{force\+Parameter1}}
+\index{force\+Parameter1@{force\+Parameter1}!Limitation@{Limitation}}
+\subsubsection[{\texorpdfstring{force\+Parameter1}{forceParameter1}}]{\setlength{\rightskip}{0pt plus 5cm}float Limitation\+::force\+Parameter1}\hypertarget{structLimitation_abafcff837c521cea6d410245547b148e}{}\label{structLimitation_abafcff837c521cea6d410245547b148e}
+Not used for now. \index{Limitation@{Limitation}!force\+Parameter2@{force\+Parameter2}}
+\index{force\+Parameter2@{force\+Parameter2}!Limitation@{Limitation}}
+\subsubsection[{\texorpdfstring{force\+Parameter2}{forceParameter2}}]{\setlength{\rightskip}{0pt plus 5cm}float Limitation\+::force\+Parameter2}\hypertarget{structLimitation_a4a48f99b82a0078cfedb029c92355bef}{}\label{structLimitation_a4a48f99b82a0078cfedb029c92355bef}
+Not used for now. \index{Limitation@{Limitation}!force\+Parameter3@{force\+Parameter3}}
+\index{force\+Parameter3@{force\+Parameter3}!Limitation@{Limitation}}
+\subsubsection[{\texorpdfstring{force\+Parameter3}{forceParameter3}}]{\setlength{\rightskip}{0pt plus 5cm}float Limitation\+::force\+Parameter3}\hypertarget{structLimitation_a25a3f8ac4759c63b46d2201b651817e5}{}\label{structLimitation_a25a3f8ac4759c63b46d2201b651817e5}
+Not used for now. \index{Limitation@{Limitation}!speed\+Parameter1@{speed\+Parameter1}}
+\index{speed\+Parameter1@{speed\+Parameter1}!Limitation@{Limitation}}
+\subsubsection[{\texorpdfstring{speed\+Parameter1}{speedParameter1}}]{\setlength{\rightskip}{0pt plus 5cm}float Limitation\+::speed\+Parameter1}\hypertarget{structLimitation_a3d36f2f90548acecb3e080d8c47d00f2}{}\label{structLimitation_a3d36f2f90548acecb3e080d8c47d00f2}
+
+
+In a cartesian context, this represents the translation velocity but in an angular context, this represents the velocity of the actuators 1, 2 and 3. 
+
+\index{Limitation@{Limitation}!speed\+Parameter2@{speed\+Parameter2}}
+\index{speed\+Parameter2@{speed\+Parameter2}!Limitation@{Limitation}}
+\subsubsection[{\texorpdfstring{speed\+Parameter2}{speedParameter2}}]{\setlength{\rightskip}{0pt plus 5cm}float Limitation\+::speed\+Parameter2}\hypertarget{structLimitation_aa17c9688bba54c9a8e2208d38266ae93}{}\label{structLimitation_aa17c9688bba54c9a8e2208d38266ae93}
+
+
+In a cartesian context, this represents the orientation velocity but in an angular context, this represents the velocity of the actuators 4, 5 and 6. 
+
+\index{Limitation@{Limitation}!speed\+Parameter3@{speed\+Parameter3}}
+\index{speed\+Parameter3@{speed\+Parameter3}!Limitation@{Limitation}}
+\subsubsection[{\texorpdfstring{speed\+Parameter3}{speedParameter3}}]{\setlength{\rightskip}{0pt plus 5cm}float Limitation\+::speed\+Parameter3}\hypertarget{structLimitation_a3d2e542a721c712b06b70f554d10d468}{}\label{structLimitation_a3d2e542a721c712b06b70f554d10d468}
+Not used for now. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Longfei/\+Desktop/catkin\+\_\+\+Kinova\+R\+O\+S/src/jaco-\/ros/jaco\+\_\+driver/include/kinova/\hyperlink{KinovaTypes_8h}{Kinova\+Types.\+h}\end{DoxyCompactItemize}

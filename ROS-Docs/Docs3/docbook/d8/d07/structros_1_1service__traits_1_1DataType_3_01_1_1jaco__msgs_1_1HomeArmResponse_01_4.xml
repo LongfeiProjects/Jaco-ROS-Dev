@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="d8/d07/structros_1_1service__traits_1_1DataType_3_01_1_1jaco__msgs_1_1HomeArmResponse_01_4">
+<title>ros::service_traits::DataType&lt; ::jaco_msgs::HomeArmResponse &gt; struct Reference</title>
+<para>
+    <programlisting>#include <link linkend="dd/dd4/HomeArm_8h">&quot;HomeArm.h&quot;</link></programlisting>
+</para>
+<para>Inheritance diagram for ros::service_traits::DataType&lt; ::jaco_msgs::HomeArmResponse &gt;</para>
+<para>
+    <figure>
+        <title>Inheritance graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../d9/dfe/structros_1_1service__traits_1_1DataType_3_01_1_1jaco__msgs_1_1HomeArmResponse_01_4__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Collaboration diagram for ros::service_traits::DataType&lt; ::jaco_msgs::HomeArmResponse &gt;</para>
+<para>
+    <figure>
+        <title>Collaboration graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../d9/db3/structros_1_1service__traits_1_1DataType_3_01_1_1jaco__msgs_1_1HomeArmResponse_01_4__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+    <templateparamlist>
+    </templateparamlist>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static const char * <link linkend="d8/d07/structros_1_1service__traits_1_1DataType_3_01_1_1jaco__msgs_1_1HomeArmResponse_01_4_1a2155d532cdd2240a62dde0b39ca17736">value</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static const char * <link linkend="d8/d07/structros_1_1service__traits_1_1DataType_3_01_1_1jaco__msgs_1_1HomeArmResponse_01_4_1ac68e61a9c8f177c6d2834746dff6b832">value</link> (
+const ::<link linkend="d7/dba/namespacejaco__msgs_1a2638ebb5f2f675bb527ce4144b66d386">jaco_msgs::HomeArmResponse</link> &amp; )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+            <section xml:id="d8/d07/structros_1_1service__traits_1_1DataType_3_01_1_1jaco__msgs_1_1HomeArmResponse_01_4_1a2155d532cdd2240a62dde0b39ca17736">
+                <title>static const char* ros::service_traits::DataType&lt; ::jaco_msgs::HomeArmResponse &gt;::value ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="d8/d07/structros_1_1service__traits_1_1DataType_3_01_1_1jaco__msgs_1_1HomeArmResponse_01_4_1ac68e61a9c8f177c6d2834746dff6b832">
+                <title>static const char* ros::service_traits::DataType&lt; ::jaco_msgs::HomeArmResponse &gt;::value (const ::jaco_msgs::HomeArmResponse &amp;)</title> <emphasis></emphasis>
+                
+            </section>
+</section>

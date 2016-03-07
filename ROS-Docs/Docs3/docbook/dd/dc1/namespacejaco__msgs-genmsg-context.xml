@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="dd/dc1/namespacejaco__msgs-genmsg-context">
+<title>jaco_msgs-genmsg-context</title>
+        <section>
+            <title>Variables</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>string <link linkend="dd/dc1/namespacejaco__msgs-genmsg-context_1aa136d364766642fa2a562c6fdde58cf1">dep_include_paths_str</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>string <link linkend="dd/dc1/namespacejaco__msgs-genmsg-context_1a13566f29eee7e302ea703274056230d0">dependencies_str</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>string <link linkend="dd/dc1/namespacejaco__msgs-genmsg-context_1a3a7105aa3a2c51a1310d64f75f399733">langs</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>string <link linkend="dd/dc1/namespacejaco__msgs-genmsg-context_1ad0c0ed6261db181e8c56cce39be2eec2">messages_str</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>string <link linkend="dd/dc1/namespacejaco__msgs-genmsg-context_1a1256415124e8f3ceb46c2256ae4626f4">package_has_static_sources</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>string <link linkend="dd/dc1/namespacejaco__msgs-genmsg-context_1a3990cb49bbd31c83da423fce8baf50ea">pkg_name</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>string <link linkend="dd/dc1/namespacejaco__msgs-genmsg-context_1a2658c036e3849ddeebfb3f13d61d6c5d">PYTHON_EXECUTABLE</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>string <link linkend="dd/dc1/namespacejaco__msgs-genmsg-context_1ae9e4dc77a4ea2769807068370b60d144">services_str</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+</section>

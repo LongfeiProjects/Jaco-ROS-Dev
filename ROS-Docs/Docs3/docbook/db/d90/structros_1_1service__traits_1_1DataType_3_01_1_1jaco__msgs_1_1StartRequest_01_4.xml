@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="db/d90/structros_1_1service__traits_1_1DataType_3_01_1_1jaco__msgs_1_1StartRequest_01_4">
+<title>ros::service_traits::DataType&lt; ::jaco_msgs::StartRequest &gt; struct Reference</title>
+<para>
+    <programlisting>#include <link linkend="df/d42/Start_8h">&quot;Start.h&quot;</link></programlisting>
+</para>
+<para>Inheritance diagram for ros::service_traits::DataType&lt; ::jaco_msgs::StartRequest &gt;</para>
+<para>
+    <figure>
+        <title>Inheritance graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../dd/ddc/structros_1_1service__traits_1_1DataType_3_01_1_1jaco__msgs_1_1StartRequest_01_4__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Collaboration diagram for ros::service_traits::DataType&lt; ::jaco_msgs::StartRequest &gt;</para>
+<para>
+    <figure>
+        <title>Collaboration graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../de/d7d/structros_1_1service__traits_1_1DataType_3_01_1_1jaco__msgs_1_1StartRequest_01_4__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+    <templateparamlist>
+    </templateparamlist>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static const char * <link linkend="db/d90/structros_1_1service__traits_1_1DataType_3_01_1_1jaco__msgs_1_1StartRequest_01_4_1a26566a04ba5219bab2c498ca9a7cdd3f">value</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static const char * <link linkend="db/d90/structros_1_1service__traits_1_1DataType_3_01_1_1jaco__msgs_1_1StartRequest_01_4_1a944079126d3458cd78ce5cf37e2f1e4d">value</link> (
+const ::<link linkend="d7/dba/namespacejaco__msgs_1a967d4b8e4c7fe72a2b13622d4ac5b317">jaco_msgs::StartRequest</link> &amp; )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+            <section xml:id="db/d90/structros_1_1service__traits_1_1DataType_3_01_1_1jaco__msgs_1_1StartRequest_01_4_1a26566a04ba5219bab2c498ca9a7cdd3f">
+                <title>static const char* ros::service_traits::DataType&lt; ::jaco_msgs::StartRequest &gt;::value ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="db/d90/structros_1_1service__traits_1_1DataType_3_01_1_1jaco__msgs_1_1StartRequest_01_4_1a944079126d3458cd78ce5cf37e2f1e4d">
+                <title>static const char* ros::service_traits::DataType&lt; ::jaco_msgs::StartRequest &gt;::value (const ::jaco_msgs::StartRequest &amp;)</title> <emphasis></emphasis>
+                
+            </section>
+</section>

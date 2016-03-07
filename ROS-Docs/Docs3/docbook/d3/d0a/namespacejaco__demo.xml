@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="d3/d0a/namespacejaco__demo">
+<title>jaco_demo</title>
+        <section>
+            <title>Variables</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>list <link linkend="d3/d0a/namespacejaco__demo_1ada50e7bb0d50193ddbee4715600f4ae0">__execfiles</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>string <link linkend="d3/d0a/namespacejaco__demo_1af784247e9de42619c18a7e5d44c6b375">__extended_path</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="d3/d0a/namespacejaco__demo_1a2905ccdea36f19d995e18224d6687ad8">__path__</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="d3/d0a/namespacejaco__demo_1a3119f51bb1227df24870e8da520a08b8">src_init_file</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+</section>

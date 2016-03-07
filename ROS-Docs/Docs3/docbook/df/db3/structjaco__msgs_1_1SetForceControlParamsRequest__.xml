@@ -1,0 +1,256 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="df/db3/structjaco__msgs_1_1SetForceControlParamsRequest__">
+<title>jaco_msgs::SetForceControlParamsRequest_ struct Reference</title>
+<para>
+    <programlisting>#include <link linkend="d5/d16/SetForceControlParamsRequest_8h">&quot;SetForceControlParamsRequest.h&quot;</link></programlisting>
+</para>
+<para>Inheritance diagram for jaco_msgs::SetForceControlParamsRequest_</para>
+<para>
+    <figure>
+        <title>Inheritance graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../d7/d70/structjaco__msgs_1_1SetForceControlParamsRequest____inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Collaboration diagram for jaco_msgs::SetForceControlParamsRequest_</para>
+<para>
+    <figure>
+        <title>Collaboration graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../df/d37/structjaco__msgs_1_1SetForceControlParamsRequest____coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+    <templateparamlist>
+      <param>
+        <type>class</type>
+        <declname>ContainerAllocator</declname>
+        <defname>ContainerAllocator</defname>
+      </param>
+    </templateparamlist>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef ::geometry_msgs::Vector3_&lt; ContainerAllocator &gt;  <link linkend="df/db3/structjaco__msgs_1_1SetForceControlParamsRequest___1a237f71deae909129820dbba65df1a9ab">_damping_angular_type</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef ::geometry_msgs::Vector3_&lt; ContainerAllocator &gt;  <link linkend="df/db3/structjaco__msgs_1_1SetForceControlParamsRequest___1adc25193330852db72172327eabad17a8">_damping_linear_type</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef ::geometry_msgs::Vector3_&lt; ContainerAllocator &gt;  <link linkend="df/db3/structjaco__msgs_1_1SetForceControlParamsRequest___1adcfd9cb3d8af6d83169e04fd708d9e43">_force_max_angular_type</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef ::geometry_msgs::Vector3_&lt; ContainerAllocator &gt;  <link linkend="df/db3/structjaco__msgs_1_1SetForceControlParamsRequest___1a8f99b85942145effd0d125e03c36c3b2">_force_max_linear_type</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef ::geometry_msgs::Vector3_&lt; ContainerAllocator &gt;  <link linkend="df/db3/structjaco__msgs_1_1SetForceControlParamsRequest___1a3c572a2972a591dc6d8ac2e7490919e8">_force_min_angular_type</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef ::geometry_msgs::Vector3_&lt; ContainerAllocator &gt;  <link linkend="df/db3/structjaco__msgs_1_1SetForceControlParamsRequest___1aaaf1a2020f17e7b8ff8e0b368f511353">_force_min_linear_type</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef ::geometry_msgs::Vector3_&lt; ContainerAllocator &gt;  <link linkend="df/db3/structjaco__msgs_1_1SetForceControlParamsRequest___1a6f395e799c9b87fa1ed44f2639681860">_inertia_angular_type</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef ::geometry_msgs::Vector3_&lt; ContainerAllocator &gt;  <link linkend="df/db3/structjaco__msgs_1_1SetForceControlParamsRequest___1a72df435d24614736e733258c4a1b8919">_inertia_linear_type</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef boost::shared_ptr&lt; ::<link linkend="df/db3/structjaco__msgs_1_1SetForceControlParamsRequest__">jaco_msgs::SetForceControlParamsRequest_</link>&lt; ContainerAllocator &gt; const  &gt;  <link linkend="df/db3/structjaco__msgs_1_1SetForceControlParamsRequest___1ae148bd5dd3c40a09e1af84e3a2ed245a">ConstPtr</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef boost::shared_ptr&lt; ::<link linkend="df/db3/structjaco__msgs_1_1SetForceControlParamsRequest__">jaco_msgs::SetForceControlParamsRequest_</link>&lt; ContainerAllocator &gt; &gt;  <link linkend="df/db3/structjaco__msgs_1_1SetForceControlParamsRequest___1a6f9103b3c32ab4166e19d1380abd2341">Ptr</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef <link linkend="df/db3/structjaco__msgs_1_1SetForceControlParamsRequest__">SetForceControlParamsRequest_</link>&lt; ContainerAllocator &gt;  <link linkend="df/db3/structjaco__msgs_1_1SetForceControlParamsRequest___1a68a11fb0d92ae57132efabb6443b4df7">Type</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Public Attributes</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>boost::shared_ptr&lt; std::map&lt; std::string, std::string &gt; &gt; __connection_header</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>_damping_angular_type damping_angular</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>_damping_linear_type damping_linear</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>_force_max_angular_type force_max_angular</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>_force_max_linear_type force_max_linear</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>_force_min_angular_type force_min_angular</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>_force_min_linear_type force_min_linear</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>_inertia_angular_type inertia_angular</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>_inertia_linear_type inertia_linear</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="df/db3/structjaco__msgs_1_1SetForceControlParamsRequest___1a49ff77a144d175d9eec07a86b2991d97">SetForceControlParamsRequest_</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="df/db3/structjaco__msgs_1_1SetForceControlParamsRequest___1adaad20b373b37b06d5ee26ac8b243ede">SetForceControlParamsRequest_</link> (
+const ContainerAllocator &amp; _alloc)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+            <section xml:id="df/db3/structjaco__msgs_1_1SetForceControlParamsRequest___1a237f71deae909129820dbba65df1a9ab">
+                <title>typedef ::geometry_msgs::Vector3_&lt;ContainerAllocator&gt; jaco_msgs::SetForceControlParamsRequest_&lt; ContainerAllocator &gt;::_damping_angular_type</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="df/db3/structjaco__msgs_1_1SetForceControlParamsRequest___1adc25193330852db72172327eabad17a8">
+                <title>typedef ::geometry_msgs::Vector3_&lt;ContainerAllocator&gt; jaco_msgs::SetForceControlParamsRequest_&lt; ContainerAllocator &gt;::_damping_linear_type</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="df/db3/structjaco__msgs_1_1SetForceControlParamsRequest___1adcfd9cb3d8af6d83169e04fd708d9e43">
+                <title>typedef ::geometry_msgs::Vector3_&lt;ContainerAllocator&gt; jaco_msgs::SetForceControlParamsRequest_&lt; ContainerAllocator &gt;::_force_max_angular_type</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="df/db3/structjaco__msgs_1_1SetForceControlParamsRequest___1a8f99b85942145effd0d125e03c36c3b2">
+                <title>typedef ::geometry_msgs::Vector3_&lt;ContainerAllocator&gt; jaco_msgs::SetForceControlParamsRequest_&lt; ContainerAllocator &gt;::_force_max_linear_type</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="df/db3/structjaco__msgs_1_1SetForceControlParamsRequest___1a3c572a2972a591dc6d8ac2e7490919e8">
+                <title>typedef ::geometry_msgs::Vector3_&lt;ContainerAllocator&gt; jaco_msgs::SetForceControlParamsRequest_&lt; ContainerAllocator &gt;::_force_min_angular_type</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="df/db3/structjaco__msgs_1_1SetForceControlParamsRequest___1aaaf1a2020f17e7b8ff8e0b368f511353">
+                <title>typedef ::geometry_msgs::Vector3_&lt;ContainerAllocator&gt; jaco_msgs::SetForceControlParamsRequest_&lt; ContainerAllocator &gt;::_force_min_linear_type</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="df/db3/structjaco__msgs_1_1SetForceControlParamsRequest___1a6f395e799c9b87fa1ed44f2639681860">
+                <title>typedef ::geometry_msgs::Vector3_&lt;ContainerAllocator&gt; jaco_msgs::SetForceControlParamsRequest_&lt; ContainerAllocator &gt;::_inertia_angular_type</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="df/db3/structjaco__msgs_1_1SetForceControlParamsRequest___1a72df435d24614736e733258c4a1b8919">
+                <title>typedef ::geometry_msgs::Vector3_&lt;ContainerAllocator&gt; jaco_msgs::SetForceControlParamsRequest_&lt; ContainerAllocator &gt;::_inertia_linear_type</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="df/db3/structjaco__msgs_1_1SetForceControlParamsRequest___1ae148bd5dd3c40a09e1af84e3a2ed245a">
+                <title>typedef boost::shared_ptr&lt; ::jaco_msgs::SetForceControlParamsRequest_&lt;ContainerAllocator&gt; const&gt; jaco_msgs::SetForceControlParamsRequest_&lt; ContainerAllocator &gt;::ConstPtr</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="df/db3/structjaco__msgs_1_1SetForceControlParamsRequest___1a6f9103b3c32ab4166e19d1380abd2341">
+                <title>typedef boost::shared_ptr&lt; ::jaco_msgs::SetForceControlParamsRequest_&lt;ContainerAllocator&gt; &gt; jaco_msgs::SetForceControlParamsRequest_&lt; ContainerAllocator &gt;::Ptr</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="df/db3/structjaco__msgs_1_1SetForceControlParamsRequest___1a68a11fb0d92ae57132efabb6443b4df7">
+                <title>typedef SetForceControlParamsRequest_&lt;ContainerAllocator&gt; jaco_msgs::SetForceControlParamsRequest_&lt; ContainerAllocator &gt;::Type</title> <emphasis></emphasis>
+                
+            </section>
+        <section>
+            <title>Member Data Documentation</title>
+        </section>
+            <section xml:id="df/db3/structjaco__msgs_1_1SetForceControlParamsRequest___1a49ff77a144d175d9eec07a86b2991d97">
+                <title>jaco_msgs::SetForceControlParamsRequest_&lt; ContainerAllocator &gt;::SetForceControlParamsRequest_ ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="df/db3/structjaco__msgs_1_1SetForceControlParamsRequest___1adaad20b373b37b06d5ee26ac8b243ede">
+                <title>jaco_msgs::SetForceControlParamsRequest_&lt; ContainerAllocator &gt;::SetForceControlParamsRequest_ (const ContainerAllocator &amp;_alloc)</title> <emphasis></emphasis>
+                
+            </section>
+</section>

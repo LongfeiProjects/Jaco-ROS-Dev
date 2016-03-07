@@ -1,0 +1,626 @@
+.TH "jaco_msgs.msg._ArmJointAnglesAction.ArmJointAnglesAction" 3 "Thu Mar 3 2016" "Version 1.0.1" "Kinova-ROS" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+jaco_msgs.msg._ArmJointAnglesAction.ArmJointAnglesAction \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits Message\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "def \fB__init__\fP (self, args, kwds)"
+.br
+.ti -1c
+.RI "def \fBdeserialize\fP (self, str)"
+.br
+.ti -1c
+.RI "def \fBdeserialize_numpy\fP (self, str, numpy)"
+.br
+.ti -1c
+.RI "def \fBserialize\fP (self, buff)"
+.br
+.ti -1c
+.RI "def \fBserialize_numpy\fP (self, buff, numpy)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBaction_feedback\fP"
+.br
+.ti -1c
+.RI "\fBaction_goal\fP"
+.br
+.ti -1c
+.RI "\fBaction_result\fP"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "def \fB_get_types\fP (self)"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "list \fB__slots__\fP = ['\fBaction_goal\fP','\fBaction_result\fP','\fBaction_feedback\fP']"
+.br
+.ti -1c
+.RI "string \fB_full_text\fP"
+.br
+.ti -1c
+.RI "bool \fB_has_header\fP = False"
+.br
+.ti -1c
+.RI "string \fB_md5sum\fP = 'c8c200c736c94762b111c314e94bbaff'"
+.br
+.ti -1c
+.RI "list \fB_slot_types\fP = ['jaco_msgs/\fBArmJointAnglesActionGoal\fP','jaco_msgs/\fBArmJointAnglesActionResult\fP','jaco_msgs/\fBArmJointAnglesActionFeedback\fP']"
+.br
+.ti -1c
+.RI "string \fB_type\fP = 'jaco_msgs/\fBArmJointAnglesAction\fP'"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "def jaco_msgs\&.msg\&._ArmJointAnglesAction\&.ArmJointAnglesAction\&.__init__ ( self,  args,  kwds)"
+
+.PP
+.nf
+Constructor. Any message fields that are implicitly/explicitly
+set to None will be assigned a default value. The recommend
+use is keyword arguments as this is more robust to future message
+changes.  You cannot mix in-order arguments and keyword arguments.
+
+The available fields are:
+   action_goal,action_result,action_feedback
+
+:param args: complete set of field values, in .msg order
+:param kwds: use keyword arguments corresponding to message field names
+to set specific fields.
+
+.fi
+.PP
+ 
+.PP
+.nf
+135   def __init__(self, *args, **kwds):
+136     """
+137     Constructor\&. Any message fields that are implicitly/explicitly
+138     set to None will be assigned a default value\&. The recommend
+139     use is keyword arguments as this is more robust to future message
+140     changes\&.  You cannot mix in-order arguments and keyword arguments\&.
+141 
+142     The available fields are:
+143        action_goal,action_result,action_feedback
+144 
+145     :param args: complete set of field values, in \&.msg order
+146     :param kwds: use keyword arguments corresponding to message field names
+147     to set specific fields\&.
+148     """
+149     if args or kwds:
+150       super(ArmJointAnglesAction, self)\&.__init__(*args, **kwds)
+151       #message fields cannot be None, assign default values for those that are
+152       if self\&.action_goal is None:
+153         self\&.action_goal = jaco_msgs\&.msg\&.ArmJointAnglesActionGoal()
+154       if self\&.action_result is None:
+155         self\&.action_result = jaco_msgs\&.msg\&.ArmJointAnglesActionResult()
+156       if self\&.action_feedback is None:
+157         self\&.action_feedback = jaco_msgs\&.msg\&.ArmJointAnglesActionFeedback()
+158     else:
+159       self\&.action_goal = jaco_msgs\&.msg\&.ArmJointAnglesActionGoal()
+160       self\&.action_result = jaco_msgs\&.msg\&.ArmJointAnglesActionResult()
+161       self\&.action_feedback = jaco_msgs\&.msg\&.ArmJointAnglesActionFeedback()
+162 
+.fi
+.SH "Member Function Documentation"
+.PP 
+.SS "def jaco_msgs\&.msg\&._ArmJointAnglesAction\&.ArmJointAnglesAction\&._get_types ( self)\fC [private]\fP"
+
+.PP
+.nf
+internal API method
+
+.fi
+.PP
+ 
+.PP
+.nf
+163   def _get_types(self):
+164     """
+165     internal API method
+166     """
+167     return self\&._slot_types
+168 
+.fi
+.SS "def jaco_msgs\&.msg\&._ArmJointAnglesAction\&.ArmJointAnglesAction\&.deserialize ( self,  str)"
+
+.PP
+.nf
+unpack serialized message in str into this message instance
+:param str: byte array of serialized message, ``str``
+
+.fi
+.PP
+ 
+.PP
+.nf
+242   def deserialize(self, str):
+243     """
+244     unpack serialized message in str into this message instance
+245     :param str: byte array of serialized message, ``str``
+246     """
+247     try:
+248       if self\&.action_goal is None:
+249         self\&.action_goal = jaco_msgs\&.msg\&.ArmJointAnglesActionGoal()
+250       if self\&.action_result is None:
+251         self\&.action_result = jaco_msgs\&.msg\&.ArmJointAnglesActionResult()
+252       if self\&.action_feedback is None:
+253         self\&.action_feedback = jaco_msgs\&.msg\&.ArmJointAnglesActionFeedback()
+254       end = 0
+255       _x = self
+256       start = end
+257       end += 12
+258       (_x\&.action_goal\&.header\&.seq, _x\&.action_goal\&.header\&.stamp\&.secs, _x\&.action_goal\&.header\&.stamp\&.nsecs,) = _struct_3I\&.unpack(str[start:end])
+259       start = end
+260       end += 4
+261       (length,) = _struct_I\&.unpack(str[start:end])
+262       start = end
+263       end += length
+264       if python3:
+265         self\&.action_goal\&.header\&.frame_id = str[start:end]\&.decode('utf-8')
+266       else:
+267         self\&.action_goal\&.header\&.frame_id = str[start:end]
+268       _x = self
+269       start = end
+270       end += 8
+271       (_x\&.action_goal\&.goal_id\&.stamp\&.secs, _x\&.action_goal\&.goal_id\&.stamp\&.nsecs,) = _struct_2I\&.unpack(str[start:end])
+272       start = end
+273       end += 4
+274       (length,) = _struct_I\&.unpack(str[start:end])
+275       start = end
+276       end += length
+277       if python3:
+278         self\&.action_goal\&.goal_id\&.id = str[start:end]\&.decode('utf-8')
+279       else:
+280         self\&.action_goal\&.goal_id\&.id = str[start:end]
+281       _x = self
+282       start = end
+283       end += 36
+284       (_x\&.action_goal\&.goal\&.angles\&.joint1, _x\&.action_goal\&.goal\&.angles\&.joint2, _x\&.action_goal\&.goal\&.angles\&.joint3, _x\&.action_goal\&.goal\&.angles\&.joint4, _x\&.action_goal\&.goal\&.angles\&.joint5, _x\&.action_goal\&.goal\&.angles\&.joint6, _x\&.action_result\&.header\&.seq, _x\&.action_result\&.header\&.stamp\&.secs, _x\&.action_result\&.header\&.stamp\&.nsecs,) = _struct_6f3I\&.unpack(str[start:end])
+285       start = end
+286       end += 4
+287       (length,) = _struct_I\&.unpack(str[start:end])
+288       start = end
+289       end += length
+290       if python3:
+291         self\&.action_result\&.header\&.frame_id = str[start:end]\&.decode('utf-8')
+292       else:
+293         self\&.action_result\&.header\&.frame_id = str[start:end]
+294       _x = self
+295       start = end
+296       end += 8
+297       (_x\&.action_result\&.status\&.goal_id\&.stamp\&.secs, _x\&.action_result\&.status\&.goal_id\&.stamp\&.nsecs,) = _struct_2I\&.unpack(str[start:end])
+298       start = end
+299       end += 4
+300       (length,) = _struct_I\&.unpack(str[start:end])
+301       start = end
+302       end += length
+303       if python3:
+304         self\&.action_result\&.status\&.goal_id\&.id = str[start:end]\&.decode('utf-8')
+305       else:
+306         self\&.action_result\&.status\&.goal_id\&.id = str[start:end]
+307       start = end
+308       end += 1
+309       (self\&.action_result\&.status\&.status,) = _struct_B\&.unpack(str[start:end])
+310       start = end
+311       end += 4
+312       (length,) = _struct_I\&.unpack(str[start:end])
+313       start = end
+314       end += length
+315       if python3:
+316         self\&.action_result\&.status\&.text = str[start:end]\&.decode('utf-8')
+317       else:
+318         self\&.action_result\&.status\&.text = str[start:end]
+319       _x = self
+320       start = end
+321       end += 36
+322       (_x\&.action_result\&.result\&.angles\&.joint1, _x\&.action_result\&.result\&.angles\&.joint2, _x\&.action_result\&.result\&.angles\&.joint3, _x\&.action_result\&.result\&.angles\&.joint4, _x\&.action_result\&.result\&.angles\&.joint5, _x\&.action_result\&.result\&.angles\&.joint6, _x\&.action_feedback\&.header\&.seq, _x\&.action_feedback\&.header\&.stamp\&.secs, _x\&.action_feedback\&.header\&.stamp\&.nsecs,) = _struct_6f3I\&.unpack(str[start:end])
+323       start = end
+324       end += 4
+325       (length,) = _struct_I\&.unpack(str[start:end])
+326       start = end
+327       end += length
+328       if python3:
+329         self\&.action_feedback\&.header\&.frame_id = str[start:end]\&.decode('utf-8')
+330       else:
+331         self\&.action_feedback\&.header\&.frame_id = str[start:end]
+332       _x = self
+333       start = end
+334       end += 8
+335       (_x\&.action_feedback\&.status\&.goal_id\&.stamp\&.secs, _x\&.action_feedback\&.status\&.goal_id\&.stamp\&.nsecs,) = _struct_2I\&.unpack(str[start:end])
+336       start = end
+337       end += 4
+338       (length,) = _struct_I\&.unpack(str[start:end])
+339       start = end
+340       end += length
+341       if python3:
+342         self\&.action_feedback\&.status\&.goal_id\&.id = str[start:end]\&.decode('utf-8')
+343       else:
+344         self\&.action_feedback\&.status\&.goal_id\&.id = str[start:end]
+345       start = end
+346       end += 1
+347       (self\&.action_feedback\&.status\&.status,) = _struct_B\&.unpack(str[start:end])
+348       start = end
+349       end += 4
+350       (length,) = _struct_I\&.unpack(str[start:end])
+351       start = end
+352       end += length
+353       if python3:
+354         self\&.action_feedback\&.status\&.text = str[start:end]\&.decode('utf-8')
+355       else:
+356         self\&.action_feedback\&.status\&.text = str[start:end]
+357       _x = self
+358       start = end
+359       end += 24
+360       (_x\&.action_feedback\&.feedback\&.angles\&.joint1, _x\&.action_feedback\&.feedback\&.angles\&.joint2, _x\&.action_feedback\&.feedback\&.angles\&.joint3, _x\&.action_feedback\&.feedback\&.angles\&.joint4, _x\&.action_feedback\&.feedback\&.angles\&.joint5, _x\&.action_feedback\&.feedback\&.angles\&.joint6,) = _struct_6f\&.unpack(str[start:end])
+361       return self
+362     except struct\&.error as e:
+363       raise genpy\&.DeserializationError(e) #most likely buffer underfill
+364 
+365 
+.fi
+.SS "def jaco_msgs\&.msg\&._ArmJointAnglesAction\&.ArmJointAnglesAction\&.deserialize_numpy ( self,  str,  numpy)"
+
+.PP
+.nf
+unpack serialized message in str into this message instance using numpy for array types
+:param str: byte array of serialized message, ``str``
+:param numpy: numpy python module
+
+.fi
+.PP
+ 
+.PP
+.nf
+440   def deserialize_numpy(self, str, numpy):
+441     """
+442     unpack serialized message in str into this message instance using numpy for array types
+443     :param str: byte array of serialized message, ``str``
+444     :param numpy: numpy python module
+445     """
+446     try:
+447       if self\&.action_goal is None:
+448         self\&.action_goal = jaco_msgs\&.msg\&.ArmJointAnglesActionGoal()
+449       if self\&.action_result is None:
+450         self\&.action_result = jaco_msgs\&.msg\&.ArmJointAnglesActionResult()
+451       if self\&.action_feedback is None:
+452         self\&.action_feedback = jaco_msgs\&.msg\&.ArmJointAnglesActionFeedback()
+453       end = 0
+454       _x = self
+455       start = end
+456       end += 12
+457       (_x\&.action_goal\&.header\&.seq, _x\&.action_goal\&.header\&.stamp\&.secs, _x\&.action_goal\&.header\&.stamp\&.nsecs,) = _struct_3I\&.unpack(str[start:end])
+458       start = end
+459       end += 4
+460       (length,) = _struct_I\&.unpack(str[start:end])
+461       start = end
+462       end += length
+463       if python3:
+464         self\&.action_goal\&.header\&.frame_id = str[start:end]\&.decode('utf-8')
+465       else:
+466         self\&.action_goal\&.header\&.frame_id = str[start:end]
+467       _x = self
+468       start = end
+469       end += 8
+470       (_x\&.action_goal\&.goal_id\&.stamp\&.secs, _x\&.action_goal\&.goal_id\&.stamp\&.nsecs,) = _struct_2I\&.unpack(str[start:end])
+471       start = end
+472       end += 4
+473       (length,) = _struct_I\&.unpack(str[start:end])
+474       start = end
+475       end += length
+476       if python3:
+477         self\&.action_goal\&.goal_id\&.id = str[start:end]\&.decode('utf-8')
+478       else:
+479         self\&.action_goal\&.goal_id\&.id = str[start:end]
+480       _x = self
+481       start = end
+482       end += 36
+483       (_x\&.action_goal\&.goal\&.angles\&.joint1, _x\&.action_goal\&.goal\&.angles\&.joint2, _x\&.action_goal\&.goal\&.angles\&.joint3, _x\&.action_goal\&.goal\&.angles\&.joint4, _x\&.action_goal\&.goal\&.angles\&.joint5, _x\&.action_goal\&.goal\&.angles\&.joint6, _x\&.action_result\&.header\&.seq, _x\&.action_result\&.header\&.stamp\&.secs, _x\&.action_result\&.header\&.stamp\&.nsecs,) = _struct_6f3I\&.unpack(str[start:end])
+484       start = end
+485       end += 4
+486       (length,) = _struct_I\&.unpack(str[start:end])
+487       start = end
+488       end += length
+489       if python3:
+490         self\&.action_result\&.header\&.frame_id = str[start:end]\&.decode('utf-8')
+491       else:
+492         self\&.action_result\&.header\&.frame_id = str[start:end]
+493       _x = self
+494       start = end
+495       end += 8
+496       (_x\&.action_result\&.status\&.goal_id\&.stamp\&.secs, _x\&.action_result\&.status\&.goal_id\&.stamp\&.nsecs,) = _struct_2I\&.unpack(str[start:end])
+497       start = end
+498       end += 4
+499       (length,) = _struct_I\&.unpack(str[start:end])
+500       start = end
+501       end += length
+502       if python3:
+503         self\&.action_result\&.status\&.goal_id\&.id = str[start:end]\&.decode('utf-8')
+504       else:
+505         self\&.action_result\&.status\&.goal_id\&.id = str[start:end]
+506       start = end
+507       end += 1
+508       (self\&.action_result\&.status\&.status,) = _struct_B\&.unpack(str[start:end])
+509       start = end
+510       end += 4
+511       (length,) = _struct_I\&.unpack(str[start:end])
+512       start = end
+513       end += length
+514       if python3:
+515         self\&.action_result\&.status\&.text = str[start:end]\&.decode('utf-8')
+516       else:
+517         self\&.action_result\&.status\&.text = str[start:end]
+518       _x = self
+519       start = end
+520       end += 36
+521       (_x\&.action_result\&.result\&.angles\&.joint1, _x\&.action_result\&.result\&.angles\&.joint2, _x\&.action_result\&.result\&.angles\&.joint3, _x\&.action_result\&.result\&.angles\&.joint4, _x\&.action_result\&.result\&.angles\&.joint5, _x\&.action_result\&.result\&.angles\&.joint6, _x\&.action_feedback\&.header\&.seq, _x\&.action_feedback\&.header\&.stamp\&.secs, _x\&.action_feedback\&.header\&.stamp\&.nsecs,) = _struct_6f3I\&.unpack(str[start:end])
+522       start = end
+523       end += 4
+524       (length,) = _struct_I\&.unpack(str[start:end])
+525       start = end
+526       end += length
+527       if python3:
+528         self\&.action_feedback\&.header\&.frame_id = str[start:end]\&.decode('utf-8')
+529       else:
+530         self\&.action_feedback\&.header\&.frame_id = str[start:end]
+531       _x = self
+532       start = end
+533       end += 8
+534       (_x\&.action_feedback\&.status\&.goal_id\&.stamp\&.secs, _x\&.action_feedback\&.status\&.goal_id\&.stamp\&.nsecs,) = _struct_2I\&.unpack(str[start:end])
+535       start = end
+536       end += 4
+537       (length,) = _struct_I\&.unpack(str[start:end])
+538       start = end
+539       end += length
+540       if python3:
+541         self\&.action_feedback\&.status\&.goal_id\&.id = str[start:end]\&.decode('utf-8')
+542       else:
+543         self\&.action_feedback\&.status\&.goal_id\&.id = str[start:end]
+544       start = end
+545       end += 1
+546       (self\&.action_feedback\&.status\&.status,) = _struct_B\&.unpack(str[start:end])
+547       start = end
+548       end += 4
+549       (length,) = _struct_I\&.unpack(str[start:end])
+550       start = end
+551       end += length
+552       if python3:
+553         self\&.action_feedback\&.status\&.text = str[start:end]\&.decode('utf-8')
+554       else:
+555         self\&.action_feedback\&.status\&.text = str[start:end]
+556       _x = self
+557       start = end
+558       end += 24
+559       (_x\&.action_feedback\&.feedback\&.angles\&.joint1, _x\&.action_feedback\&.feedback\&.angles\&.joint2, _x\&.action_feedback\&.feedback\&.angles\&.joint3, _x\&.action_feedback\&.feedback\&.angles\&.joint4, _x\&.action_feedback\&.feedback\&.angles\&.joint5, _x\&.action_feedback\&.feedback\&.angles\&.joint6,) = _struct_6f\&.unpack(str[start:end])
+560       return self
+561     except struct\&.error as e:
+562       raise genpy\&.DeserializationError(e) #most likely buffer underfill
+563 
+.fi
+.SS "def jaco_msgs\&.msg\&._ArmJointAnglesAction\&.ArmJointAnglesAction\&.serialize ( self,  buff)"
+
+.PP
+.nf
+serialize message into buffer
+:param buff: buffer, ``StringIO``
+
+.fi
+.PP
+ 
+.PP
+.nf
+169   def serialize(self, buff):
+170     """
+171     serialize message into buffer
+172     :param buff: buffer, ``StringIO``
+173     """
+174     try:
+175       _x = self
+176       buff\&.write(_struct_3I\&.pack(_x\&.action_goal\&.header\&.seq, _x\&.action_goal\&.header\&.stamp\&.secs, _x\&.action_goal\&.header\&.stamp\&.nsecs))
+177       _x = self\&.action_goal\&.header\&.frame_id
+178       length = len(_x)
+179       if python3 or type(_x) == unicode:
+180         _x = _x\&.encode('utf-8')
+181         length = len(_x)
+182       buff\&.write(struct\&.pack('<I%ss'%length, length, _x))
+183       _x = self
+184       buff\&.write(_struct_2I\&.pack(_x\&.action_goal\&.goal_id\&.stamp\&.secs, _x\&.action_goal\&.goal_id\&.stamp\&.nsecs))
+185       _x = self\&.action_goal\&.goal_id\&.id
+186       length = len(_x)
+187       if python3 or type(_x) == unicode:
+188         _x = _x\&.encode('utf-8')
+189         length = len(_x)
+190       buff\&.write(struct\&.pack('<I%ss'%length, length, _x))
+191       _x = self
+192       buff\&.write(_struct_6f3I\&.pack(_x\&.action_goal\&.goal\&.angles\&.joint1, _x\&.action_goal\&.goal\&.angles\&.joint2, _x\&.action_goal\&.goal\&.angles\&.joint3, _x\&.action_goal\&.goal\&.angles\&.joint4, _x\&.action_goal\&.goal\&.angles\&.joint5, _x\&.action_goal\&.goal\&.angles\&.joint6, _x\&.action_result\&.header\&.seq, _x\&.action_result\&.header\&.stamp\&.secs, _x\&.action_result\&.header\&.stamp\&.nsecs))
+193       _x = self\&.action_result\&.header\&.frame_id
+194       length = len(_x)
+195       if python3 or type(_x) == unicode:
+196         _x = _x\&.encode('utf-8')
+197         length = len(_x)
+198       buff\&.write(struct\&.pack('<I%ss'%length, length, _x))
+199       _x = self
+200       buff\&.write(_struct_2I\&.pack(_x\&.action_result\&.status\&.goal_id\&.stamp\&.secs, _x\&.action_result\&.status\&.goal_id\&.stamp\&.nsecs))
+201       _x = self\&.action_result\&.status\&.goal_id\&.id
+202       length = len(_x)
+203       if python3 or type(_x) == unicode:
+204         _x = _x\&.encode('utf-8')
+205         length = len(_x)
+206       buff\&.write(struct\&.pack('<I%ss'%length, length, _x))
+207       buff\&.write(_struct_B\&.pack(self\&.action_result\&.status\&.status))
+208       _x = self\&.action_result\&.status\&.text
+209       length = len(_x)
+210       if python3 or type(_x) == unicode:
+211         _x = _x\&.encode('utf-8')
+212         length = len(_x)
+213       buff\&.write(struct\&.pack('<I%ss'%length, length, _x))
+214       _x = self
+215       buff\&.write(_struct_6f3I\&.pack(_x\&.action_result\&.result\&.angles\&.joint1, _x\&.action_result\&.result\&.angles\&.joint2, _x\&.action_result\&.result\&.angles\&.joint3, _x\&.action_result\&.result\&.angles\&.joint4, _x\&.action_result\&.result\&.angles\&.joint5, _x\&.action_result\&.result\&.angles\&.joint6, _x\&.action_feedback\&.header\&.seq, _x\&.action_feedback\&.header\&.stamp\&.secs, _x\&.action_feedback\&.header\&.stamp\&.nsecs))
+216       _x = self\&.action_feedback\&.header\&.frame_id
+217       length = len(_x)
+218       if python3 or type(_x) == unicode:
+219         _x = _x\&.encode('utf-8')
+220         length = len(_x)
+221       buff\&.write(struct\&.pack('<I%ss'%length, length, _x))
+222       _x = self
+223       buff\&.write(_struct_2I\&.pack(_x\&.action_feedback\&.status\&.goal_id\&.stamp\&.secs, _x\&.action_feedback\&.status\&.goal_id\&.stamp\&.nsecs))
+224       _x = self\&.action_feedback\&.status\&.goal_id\&.id
+225       length = len(_x)
+226       if python3 or type(_x) == unicode:
+227         _x = _x\&.encode('utf-8')
+228         length = len(_x)
+229       buff\&.write(struct\&.pack('<I%ss'%length, length, _x))
+230       buff\&.write(_struct_B\&.pack(self\&.action_feedback\&.status\&.status))
+231       _x = self\&.action_feedback\&.status\&.text
+232       length = len(_x)
+233       if python3 or type(_x) == unicode:
+234         _x = _x\&.encode('utf-8')
+235         length = len(_x)
+236       buff\&.write(struct\&.pack('<I%ss'%length, length, _x))
+237       _x = self
+238       buff\&.write(_struct_6f\&.pack(_x\&.action_feedback\&.feedback\&.angles\&.joint1, _x\&.action_feedback\&.feedback\&.angles\&.joint2, _x\&.action_feedback\&.feedback\&.angles\&.joint3, _x\&.action_feedback\&.feedback\&.angles\&.joint4, _x\&.action_feedback\&.feedback\&.angles\&.joint5, _x\&.action_feedback\&.feedback\&.angles\&.joint6))
+239     except struct\&.error as se: self\&._check_types(struct\&.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(_x))))
+240     except TypeError as te: self\&._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(_x))))
+241 
+.fi
+.SS "def jaco_msgs\&.msg\&._ArmJointAnglesAction\&.ArmJointAnglesAction\&.serialize_numpy ( self,  buff,  numpy)"
+
+.PP
+.nf
+serialize message with numpy array types into buffer
+:param buff: buffer, ``StringIO``
+:param numpy: numpy python module
+
+.fi
+.PP
+ 
+.PP
+.nf
+366   def serialize_numpy(self, buff, numpy):
+367     """
+368     serialize message with numpy array types into buffer
+369     :param buff: buffer, ``StringIO``
+370     :param numpy: numpy python module
+371     """
+372     try:
+373       _x = self
+374       buff\&.write(_struct_3I\&.pack(_x\&.action_goal\&.header\&.seq, _x\&.action_goal\&.header\&.stamp\&.secs, _x\&.action_goal\&.header\&.stamp\&.nsecs))
+375       _x = self\&.action_goal\&.header\&.frame_id
+376       length = len(_x)
+377       if python3 or type(_x) == unicode:
+378         _x = _x\&.encode('utf-8')
+379         length = len(_x)
+380       buff\&.write(struct\&.pack('<I%ss'%length, length, _x))
+381       _x = self
+382       buff\&.write(_struct_2I\&.pack(_x\&.action_goal\&.goal_id\&.stamp\&.secs, _x\&.action_goal\&.goal_id\&.stamp\&.nsecs))
+383       _x = self\&.action_goal\&.goal_id\&.id
+384       length = len(_x)
+385       if python3 or type(_x) == unicode:
+386         _x = _x\&.encode('utf-8')
+387         length = len(_x)
+388       buff\&.write(struct\&.pack('<I%ss'%length, length, _x))
+389       _x = self
+390       buff\&.write(_struct_6f3I\&.pack(_x\&.action_goal\&.goal\&.angles\&.joint1, _x\&.action_goal\&.goal\&.angles\&.joint2, _x\&.action_goal\&.goal\&.angles\&.joint3, _x\&.action_goal\&.goal\&.angles\&.joint4, _x\&.action_goal\&.goal\&.angles\&.joint5, _x\&.action_goal\&.goal\&.angles\&.joint6, _x\&.action_result\&.header\&.seq, _x\&.action_result\&.header\&.stamp\&.secs, _x\&.action_result\&.header\&.stamp\&.nsecs))
+391       _x = self\&.action_result\&.header\&.frame_id
+392       length = len(_x)
+393       if python3 or type(_x) == unicode:
+394         _x = _x\&.encode('utf-8')
+395         length = len(_x)
+396       buff\&.write(struct\&.pack('<I%ss'%length, length, _x))
+397       _x = self
+398       buff\&.write(_struct_2I\&.pack(_x\&.action_result\&.status\&.goal_id\&.stamp\&.secs, _x\&.action_result\&.status\&.goal_id\&.stamp\&.nsecs))
+399       _x = self\&.action_result\&.status\&.goal_id\&.id
+400       length = len(_x)
+401       if python3 or type(_x) == unicode:
+402         _x = _x\&.encode('utf-8')
+403         length = len(_x)
+404       buff\&.write(struct\&.pack('<I%ss'%length, length, _x))
+405       buff\&.write(_struct_B\&.pack(self\&.action_result\&.status\&.status))
+406       _x = self\&.action_result\&.status\&.text
+407       length = len(_x)
+408       if python3 or type(_x) == unicode:
+409         _x = _x\&.encode('utf-8')
+410         length = len(_x)
+411       buff\&.write(struct\&.pack('<I%ss'%length, length, _x))
+412       _x = self
+413       buff\&.write(_struct_6f3I\&.pack(_x\&.action_result\&.result\&.angles\&.joint1, _x\&.action_result\&.result\&.angles\&.joint2, _x\&.action_result\&.result\&.angles\&.joint3, _x\&.action_result\&.result\&.angles\&.joint4, _x\&.action_result\&.result\&.angles\&.joint5, _x\&.action_result\&.result\&.angles\&.joint6, _x\&.action_feedback\&.header\&.seq, _x\&.action_feedback\&.header\&.stamp\&.secs, _x\&.action_feedback\&.header\&.stamp\&.nsecs))
+414       _x = self\&.action_feedback\&.header\&.frame_id
+415       length = len(_x)
+416       if python3 or type(_x) == unicode:
+417         _x = _x\&.encode('utf-8')
+418         length = len(_x)
+419       buff\&.write(struct\&.pack('<I%ss'%length, length, _x))
+420       _x = self
+421       buff\&.write(_struct_2I\&.pack(_x\&.action_feedback\&.status\&.goal_id\&.stamp\&.secs, _x\&.action_feedback\&.status\&.goal_id\&.stamp\&.nsecs))
+422       _x = self\&.action_feedback\&.status\&.goal_id\&.id
+423       length = len(_x)
+424       if python3 or type(_x) == unicode:
+425         _x = _x\&.encode('utf-8')
+426         length = len(_x)
+427       buff\&.write(struct\&.pack('<I%ss'%length, length, _x))
+428       buff\&.write(_struct_B\&.pack(self\&.action_feedback\&.status\&.status))
+429       _x = self\&.action_feedback\&.status\&.text
+430       length = len(_x)
+431       if python3 or type(_x) == unicode:
+432         _x = _x\&.encode('utf-8')
+433         length = len(_x)
+434       buff\&.write(struct\&.pack('<I%ss'%length, length, _x))
+435       _x = self
+436       buff\&.write(_struct_6f\&.pack(_x\&.action_feedback\&.feedback\&.angles\&.joint1, _x\&.action_feedback\&.feedback\&.angles\&.joint2, _x\&.action_feedback\&.feedback\&.angles\&.joint3, _x\&.action_feedback\&.feedback\&.angles\&.joint4, _x\&.action_feedback\&.feedback\&.angles\&.joint5, _x\&.action_feedback\&.feedback\&.angles\&.joint6))
+437     except struct\&.error as se: self\&._check_types(struct\&.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(_x))))
+438     except TypeError as te: self\&._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(_x))))
+439 
+.fi
+.SH "Member Data Documentation"
+.PP 
+.SS "list jaco_msgs\&.msg\&._ArmJointAnglesAction\&.ArmJointAnglesAction\&.__slots__ = ['\fBaction_goal\fP','\fBaction_result\fP','\fBaction_feedback\fP']\fC [static]\fP, \fC [private]\fP"
+
+.SS "string jaco_msgs\&.msg\&._ArmJointAnglesAction\&.ArmJointAnglesAction\&._full_text\fC [static]\fP, \fC [private]\fP"
+
+.SS "bool jaco_msgs\&.msg\&._ArmJointAnglesAction\&.ArmJointAnglesAction\&._has_header = False\fC [static]\fP, \fC [private]\fP"
+
+.SS "string jaco_msgs\&.msg\&._ArmJointAnglesAction\&.ArmJointAnglesAction\&._md5sum = 'c8c200c736c94762b111c314e94bbaff'\fC [static]\fP, \fC [private]\fP"
+
+.SS "list jaco_msgs\&.msg\&._ArmJointAnglesAction\&.ArmJointAnglesAction\&._slot_types = ['jaco_msgs/\fBArmJointAnglesActionGoal\fP','jaco_msgs/\fBArmJointAnglesActionResult\fP','jaco_msgs/\fBArmJointAnglesActionFeedback\fP']\fC [static]\fP, \fC [private]\fP"
+
+.PP
+Referenced by jaco_msgs\&.msg\&._ArmJointAnglesAction\&.ArmJointAnglesAction\&._get_types()\&.
+.SS "string jaco_msgs\&.msg\&._ArmJointAnglesAction\&.ArmJointAnglesAction\&._type = 'jaco_msgs/\fBArmJointAnglesAction\fP'\fC [static]\fP, \fC [private]\fP"
+
+.SS "jaco_msgs\&.msg\&._ArmJointAnglesAction\&.ArmJointAnglesAction\&.action_feedback"
+
+.PP
+Referenced by jaco_msgs\&.msg\&._ArmJointAnglesAction\&.ArmJointAnglesAction\&.deserialize(), and jaco_msgs\&.msg\&._ArmJointAnglesAction\&.ArmJointAnglesAction\&.deserialize_numpy()\&.
+.SS "jaco_msgs\&.msg\&._ArmJointAnglesAction\&.ArmJointAnglesAction\&.action_goal"
+
+.PP
+Referenced by jaco_msgs\&.msg\&._ArmJointAnglesAction\&.ArmJointAnglesAction\&.__init__(), jaco_msgs\&.msg\&._ArmJointAnglesAction\&.ArmJointAnglesAction\&.deserialize(), and jaco_msgs\&.msg\&._ArmJointAnglesAction\&.ArmJointAnglesAction\&.deserialize_numpy()\&.
+.SS "jaco_msgs\&.msg\&._ArmJointAnglesAction\&.ArmJointAnglesAction\&.action_result"
+
+.PP
+Referenced by jaco_msgs\&.msg\&._ArmJointAnglesAction\&.ArmJointAnglesAction\&.deserialize(), and jaco_msgs\&.msg\&._ArmJointAnglesAction\&.ArmJointAnglesAction\&.deserialize_numpy()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Kinova-ROS from the source code\&.

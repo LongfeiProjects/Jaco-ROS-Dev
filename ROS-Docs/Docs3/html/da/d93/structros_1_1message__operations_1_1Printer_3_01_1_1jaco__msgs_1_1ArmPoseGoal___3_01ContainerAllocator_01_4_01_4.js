@@ -1,0 +1,4 @@
+var structros_1_1message__operations_1_1Printer_3_01_1_1jaco__msgs_1_1ArmPoseGoal___3_01ContainerAllocator_01_4_01_4 =
+[
+    [ "stream", "da/d93/structros_1_1message__operations_1_1Printer_3_01_1_1jaco__msgs_1_1ArmPoseGoal___3_01ContainerAllocator_01_4_01_4.html#ae60c2da5eae342b59c0a26effed778ab", null ]
+];

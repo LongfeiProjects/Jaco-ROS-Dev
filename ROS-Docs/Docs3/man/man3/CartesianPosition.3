@@ -1,0 +1,60 @@
+.TH "CartesianPosition" 3 "Thu Mar 3 2016" "Version 1.0.1" "Kinova-ROS" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+CartesianPosition \- This data structure holds the values of a cartesian position\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include 'Definition'\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBInitStruct\fP ()"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBCartesianInfo\fP \fBCoordinates\fP"
+.br
+.RI "\fIThis contains values regarding the cartesian information\&.(end effector)\&. \fP"
+.ti -1c
+.RI "\fBFingersPosition\fP \fBFingers\fP"
+.br
+.RI "\fIThis contains value regarding the fingers\&. \fP"
+.in -1c
+.SH "Detailed Description"
+.PP 
+This data structure holds the values of a cartesian position\&. 
+
+Coordinates holds the cartesian parts of the position and Fingers holds contains the value of the fingers\&. As an example, if an instance of the \fBCartesianPosition\fP is used in a cartesian velocity control context, the values in the struct will be velocity\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "void CartesianPosition::InitStruct ()\fC [inline]\fP"
+This method will initialises all the values to 0 
+.PP
+.nf
+565     {
+566         Coordinates\&.InitStruct();
+567         Fingers\&.InitStruct();
+568     }
+.fi
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBCartesianInfo\fP CartesianPosition::Coordinates"
+
+.PP
+This contains values regarding the cartesian information\&.(end effector)\&. 
+.SS "\fBFingersPosition\fP CartesianPosition::Fingers"
+
+.PP
+This contains value regarding the fingers\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Kinova-ROS from the source code\&.

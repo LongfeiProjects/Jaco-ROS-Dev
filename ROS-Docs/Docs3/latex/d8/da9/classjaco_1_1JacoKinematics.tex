@@ -1,0 +1,496 @@
+\hypertarget{classjaco_1_1JacoKinematics}{}\section{jaco\+:\+:Jaco\+Kinematics Class Reference}
+\label{classjaco_1_1JacoKinematics}\index{jaco\+::\+Jaco\+Kinematics@{jaco\+::\+Jaco\+Kinematics}}
+
+
+{\ttfamily \#include \char`\"{}jaco\+\_\+arm\+\_\+kinematics.\+h\char`\"{}}
+
+
+
+Collaboration diagram for jaco\+:\+:Jaco\+Kinematics\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=190pt]{d8/dea/classjaco_1_1JacoKinematics__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+float \hyperlink{classjaco_1_1JacoKinematics_a340eda126d97aa3700cc5dc8be89aa39}{deg\+To\+Rad} (float degrees)
+\item 
+\hyperlink{classjaco_1_1JacoKinematics_ad7c0d6e5dbf5feb29aaf6bcb65f14b86}{Jaco\+Kinematics} (const ros\+::\+Node\+Handle \&node\+\_\+handle)
+\item 
+void \hyperlink{classjaco_1_1JacoKinematics_a605302243138ca469a7a416be25a6804}{update\+Forward} (float q1, float q2, float q3, float q4, float q5, float q6)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+double \hyperlink{classjaco_1_1JacoKinematics_a4edc270c1506293993ed77f04409045c}{base\+\_\+to\+\_\+api\+\_\+}
+\item 
+double \hyperlink{classjaco_1_1JacoKinematics_a7f67ac2a11176769a3477924f46c7284}{base\+\_\+to\+\_\+j1\+\_\+}
+\item 
+tf\+::\+Transform\+Broadcaster \hyperlink{classjaco_1_1JacoKinematics_a3314f9e6a8fb86405384dd23bd194e46}{broadcaster\+\_\+}
+\item 
+double \hyperlink{classjaco_1_1JacoKinematics_af9545eaea2e16deaaeea5c1e4db27fe2}{j1\+\_\+to\+\_\+j2\+\_\+}
+\item 
+double \hyperlink{classjaco_1_1JacoKinematics_ab19fccf28da90214c1aab8f11f1e7b42}{j2\+\_\+to\+\_\+j3\+\_\+}
+\item 
+double \hyperlink{classjaco_1_1JacoKinematics_ae9e4c7a1d4e000d1697465f2f7ba4a12}{j3\+\_\+offset\+\_\+}
+\item 
+double \hyperlink{classjaco_1_1JacoKinematics_a873308257c7953e6e98b3229766ee8a4}{j3\+\_\+to\+\_\+j4\+\_\+}
+\item 
+double \hyperlink{classjaco_1_1JacoKinematics_a5e322eafc0b3b827ae1713d24178c1f8}{j4\+\_\+to\+\_\+j5\+\_\+}
+\item 
+double \hyperlink{classjaco_1_1JacoKinematics_ad309e89a6e5c60e0f614629c5f1b4c79}{j5\+\_\+bend\+\_\+degrees\+\_\+}
+\item 
+double \hyperlink{classjaco_1_1JacoKinematics_a156f585f21c8495d3772fb872cace39e}{j5\+\_\+to\+\_\+j6\+\_\+}
+\item 
+double \hyperlink{classjaco_1_1JacoKinematics_a41a21f1b560c3387855f15059a619994}{j6\+\_\+bend\+\_\+degrees\+\_\+}
+\item 
+double \hyperlink{classjaco_1_1JacoKinematics_a9e7969fbd9647524c0eef9b8f2ab0f1f}{j6\+\_\+to\+\_\+end\+\_\+}
+\item 
+std\+::string \hyperlink{classjaco_1_1JacoKinematics_a0efb1f0ad1937553c7e285b27da0bdd3}{tf\+\_\+prefix\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{jaco\+::\+Jaco\+Kinematics@{jaco\+::\+Jaco\+Kinematics}!Jaco\+Kinematics@{Jaco\+Kinematics}}
+\index{Jaco\+Kinematics@{Jaco\+Kinematics}!jaco\+::\+Jaco\+Kinematics@{jaco\+::\+Jaco\+Kinematics}}
+\subsubsection[{\texorpdfstring{Jaco\+Kinematics(const ros\+::\+Node\+Handle \&node\+\_\+handle)}{JacoKinematics(const ros::NodeHandle &node_handle)}}]{\setlength{\rightskip}{0pt plus 5cm}jaco\+::\+Jaco\+Kinematics\+::\+Jaco\+Kinematics (
+\begin{DoxyParamCaption}
+\item[{const ros\+::\+Node\+Handle \&}]{node\+\_\+handle}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [explicit]}}\hypertarget{classjaco_1_1JacoKinematics_ad7c0d6e5dbf5feb29aaf6bcb65f14b86}{}\label{classjaco_1_1JacoKinematics_ad7c0d6e5dbf5feb29aaf6bcb65f14b86}
+
+\begin{DoxyCode}
+24 \{
+25     node\_handle.param<std::string>(\textcolor{stringliteral}{"tf\_prefix"}, \hyperlink{classjaco_1_1JacoKinematics_a0efb1f0ad1937553c7e285b27da0bdd3}{tf\_prefix\_}, \textcolor{stringliteral}{"jaco\_"});
+26 
+27     node\_handle.param<\textcolor{keywordtype}{double}>(\textcolor{stringliteral}{"base\_to\_api"}, \hyperlink{classjaco_1_1JacoKinematics_a4edc270c1506293993ed77f04409045c}{base\_to\_api\_}, 0.028);
+28     node\_handle.param<\textcolor{keywordtype}{double}>(\textcolor{stringliteral}{"base\_to\_j1"}, \hyperlink{classjaco_1_1JacoKinematics_a7f67ac2a11176769a3477924f46c7284}{base\_to\_j1\_}, 0.1544);
+29     node\_handle.param<\textcolor{keywordtype}{double}>(\textcolor{stringliteral}{"j1\_to\_j2"}, \hyperlink{classjaco_1_1JacoKinematics_af9545eaea2e16deaaeea5c1e4db27fe2}{j1\_to\_j2\_}, -0.1181);
+30     node\_handle.param<\textcolor{keywordtype}{double}>(\textcolor{stringliteral}{"j2\_to\_j3"}, \hyperlink{classjaco_1_1JacoKinematics_ab19fccf28da90214c1aab8f11f1e7b42}{j2\_to\_j3\_}, 0.4100);
+31     node\_handle.param<\textcolor{keywordtype}{double}>(\textcolor{stringliteral}{"j3\_offset"}, \hyperlink{classjaco_1_1JacoKinematics_ae9e4c7a1d4e000d1697465f2f7ba4a12}{j3\_offset\_}, -0.0098);
+32     node\_handle.param<\textcolor{keywordtype}{double}>(\textcolor{stringliteral}{"j3\_to\_j4"}, \hyperlink{classjaco_1_1JacoKinematics_a873308257c7953e6e98b3229766ee8a4}{j3\_to\_j4\_}, 0.2073);
+33     node\_handle.param<\textcolor{keywordtype}{double}>(\textcolor{stringliteral}{"j4\_to\_j5"}, \hyperlink{classjaco_1_1JacoKinematics_a5e322eafc0b3b827ae1713d24178c1f8}{j4\_to\_j5\_}, 0.0743);
+34     node\_handle.param<\textcolor{keywordtype}{double}>(\textcolor{stringliteral}{"j5\_to\_j6"}, \hyperlink{classjaco_1_1JacoKinematics_a156f585f21c8495d3772fb872cace39e}{j5\_to\_j6\_}, 0.0743);
+35     node\_handle.param<\textcolor{keywordtype}{double}>(\textcolor{stringliteral}{"j6\_to\_end"}, \hyperlink{classjaco_1_1JacoKinematics_a9e7969fbd9647524c0eef9b8f2ab0f1f}{j6\_to\_end\_}, 0.1687);
+36     node\_handle.param<\textcolor{keywordtype}{double}>(\textcolor{stringliteral}{"j5\_bend\_degrees"}, \hyperlink{classjaco_1_1JacoKinematics_ad309e89a6e5c60e0f614629c5f1b4c79}{j5\_bend\_degrees\_}, -55.0);
+37     node\_handle.param<\textcolor{keywordtype}{double}>(\textcolor{stringliteral}{"j6\_bend\_degrees"}, \hyperlink{classjaco_1_1JacoKinematics_a41a21f1b560c3387855f15059a619994}{j6\_bend\_degrees\_}, 55.0);
+38 \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{jaco\+::\+Jaco\+Kinematics@{jaco\+::\+Jaco\+Kinematics}!deg\+To\+Rad@{deg\+To\+Rad}}
+\index{deg\+To\+Rad@{deg\+To\+Rad}!jaco\+::\+Jaco\+Kinematics@{jaco\+::\+Jaco\+Kinematics}}
+\subsubsection[{\texorpdfstring{deg\+To\+Rad(float degrees)}{degToRad(float degrees)}}]{\setlength{\rightskip}{0pt plus 5cm}float jaco\+::\+Jaco\+Kinematics\+::deg\+To\+Rad (
+\begin{DoxyParamCaption}
+\item[{float}]{degrees}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classjaco_1_1JacoKinematics_a340eda126d97aa3700cc5dc8be89aa39}{}\label{classjaco_1_1JacoKinematics_a340eda126d97aa3700cc5dc8be89aa39}
+
+\begin{DoxyCode}
+44     \{
+45         \textcolor{keywordflow}{return} (degrees * (M\_PI / 180));
+46     \}
+\end{DoxyCode}
+\index{jaco\+::\+Jaco\+Kinematics@{jaco\+::\+Jaco\+Kinematics}!update\+Forward@{update\+Forward}}
+\index{update\+Forward@{update\+Forward}!jaco\+::\+Jaco\+Kinematics@{jaco\+::\+Jaco\+Kinematics}}
+\subsubsection[{\texorpdfstring{update\+Forward(float q1, float q2, float q3, float q4, float q5, float q6)}{updateForward(float q1, float q2, float q3, float q4, float q5, float q6)}}]{\setlength{\rightskip}{0pt plus 5cm}void jaco\+::\+Jaco\+Kinematics\+::update\+Forward (
+\begin{DoxyParamCaption}
+\item[{float}]{q1, }
+\item[{float}]{q2, }
+\item[{float}]{q3, }
+\item[{float}]{q4, }
+\item[{float}]{q5, }
+\item[{float}]{q6}
+\end{DoxyParamCaption}
+)}\hypertarget{classjaco_1_1JacoKinematics_a605302243138ca469a7a416be25a6804}{}\label{classjaco_1_1JacoKinematics_a605302243138ca469a7a416be25a6804}
+
+\begin{DoxyCode}
+42 \{
+43     tf::Transform transform;
+44     tf::Quaternion rotation\_q(0, 0, 0, 1);
+45     tf::Matrix3x3 rot\_matrix(1, 0, 0, 0, 1, 0, 0, 0, 1);
+46     tf::Vector3 translation\_v(0, 0, 0);
+47 
+48     \textcolor{comment}{/**********************Base**********************/}
+49     \textcolor{comment}{/* Rotation Matrix */}
+50     \textcolor{comment}{/*******               *******}
+51 \textcolor{comment}{    * cos(PI/2)  -sin(PI/2)    0 *}
+52 \textcolor{comment}{    * sin(PI/2)   cos(PI/2)    0 *}
+53 \textcolor{comment}{    * 0              0         1 *}
+54 \textcolor{comment}{    *******               *******/}
+55     rot\_matrix.setValue(cos(M\_PI\_2), -sin(M\_PI\_2), 0,
+56                         sin(M\_PI\_2), cos(M\_PI\_2), 0,
+57                         0, 0, 1);
+58     rot\_matrix.getRotation(rotation\_q);
+59     transform.setRotation(rotation\_q);
+60 
+61     \textcolor{comment}{/* Translation Vector */}
+62     translation\_v.setValue(0, 0, 0);
+63     transform.setOrigin(translation\_v);
+64 
+65     \hyperlink{classjaco_1_1JacoKinematics_a3314f9e6a8fb86405384dd23bd194e46}{broadcaster\_}.sendTransform(tf::StampedTransform(transform, ros::Time::now(),
+66                                                     \hyperlink{namespacejaco_a6320c11725be13d2957c4e3f474d62f8}{concatTfName}(
+      \hyperlink{classjaco_1_1JacoKinematics_a0efb1f0ad1937553c7e285b27da0bdd3}{tf\_prefix\_}, \textcolor{stringliteral}{"arm\_base"}),
+67                                                     \hyperlink{namespacejaco_a6320c11725be13d2957c4e3f474d62f8}{concatTfName}(
+      \hyperlink{classjaco_1_1JacoKinematics_a0efb1f0ad1937553c7e285b27da0bdd3}{tf\_prefix\_}, \textcolor{stringliteral}{"base"})));
+68 
+69 \textcolor{preprocessor}{#ifdef PRINT\_DEBUG\_INFO}
+70     ROS\_INFO(\textcolor{stringliteral}{"API Rotation: X = %f, Y = %f, Z = %f, W = %f"}, rotation
+71              \_q.getX(), rotation\_q.getY(), rotation\_q.getZ(), rotation\_q.getW());
+72 \textcolor{preprocessor}{#endif}
+73 
+74     \textcolor{comment}{/**********************API**********************/}
+75     \textcolor{comment}{/* Rotation Matrix */}
+76     rot\_matrix.setValue(1, 0, 0,
+77                         0, 1, 0,
+78                         0, 0, 1);
+79     rot\_matrix.getRotation(rotation\_q);
+80     transform.setRotation(rotation\_q);
+81 
+82     \textcolor{comment}{/* API Translation Vector */}
+83     translation\_v.setValue(0, 0, \hyperlink{classjaco_1_1JacoKinematics_a4edc270c1506293993ed77f04409045c}{base\_to\_api\_});
+84     transform.setOrigin(translation\_v);
+85 
+86     \hyperlink{classjaco_1_1JacoKinematics_a3314f9e6a8fb86405384dd23bd194e46}{broadcaster\_}.sendTransform(tf::StampedTransform(transform, ros::Time::now(),
+87                                                     \hyperlink{namespacejaco_a6320c11725be13d2957c4e3f474d62f8}{concatTfName}(
+      \hyperlink{classjaco_1_1JacoKinematics_a0efb1f0ad1937553c7e285b27da0bdd3}{tf\_prefix\_}, \textcolor{stringliteral}{"base"}),
+88                                                     \hyperlink{namespacejaco_a6320c11725be13d2957c4e3f474d62f8}{concatTfName}(
+      \hyperlink{classjaco_1_1JacoKinematics_a0efb1f0ad1937553c7e285b27da0bdd3}{tf\_prefix\_}, \textcolor{stringliteral}{"api\_origin"})));
+89 
+90 \textcolor{preprocessor}{#ifdef PRINT\_DEBUG\_INFO}
+91     ROS\_INFO(\textcolor{stringliteral}{"API Translation: X = %f, Y = %f, Z = %f"},
+92              translation\_v.getX(), translation\_v.getY(), translation\_v.getZ());
+93 \textcolor{preprocessor}{#endif}
+94 
+95     \textcolor{comment}{/**********************Joint\_1**********************/}
+96     \textcolor{comment}{/* Joint 1 Rotation Matrix */}
+97     \textcolor{comment}{/*******                 *******}
+98 \textcolor{comment}{     * cos(q1)    -sin(q1)      0  *}
+99 \textcolor{comment}{     * -sin(q1)   -cos(q1)      0  *}
+100 \textcolor{comment}{     * 0            0          -1  *}
+101 \textcolor{comment}{     *******                *******/}
+102     rot\_matrix.setValue(cos(q1), -sin(q1), 0,
+103                         -sin(q1), -cos(q1), 0,
+104                         0, 0, -1);
+105     rot\_matrix.getRotation(rotation\_q);
+106     transform.setRotation(rotation\_q);
+107 
+108     \textcolor{comment}{/* Joint 1 Translation Vector */}
+109     translation\_v.setValue(0, 0, \hyperlink{classjaco_1_1JacoKinematics_a7f67ac2a11176769a3477924f46c7284}{base\_to\_j1\_});
+110     transform.setOrigin(translation\_v);
+111 
+112     \hyperlink{classjaco_1_1JacoKinematics_a3314f9e6a8fb86405384dd23bd194e46}{broadcaster\_}.sendTransform(tf::StampedTransform(transform, ros::Time::now(),
+113                                                     \hyperlink{namespacejaco_a6320c11725be13d2957c4e3f474d62f8}{concatTfName}(
+      \hyperlink{classjaco_1_1JacoKinematics_a0efb1f0ad1937553c7e285b27da0bdd3}{tf\_prefix\_}, \textcolor{stringliteral}{"link\_base"}),
+114                                                     \hyperlink{namespacejaco_a6320c11725be13d2957c4e3f474d62f8}{concatTfName}(
+      \hyperlink{classjaco_1_1JacoKinematics_a0efb1f0ad1937553c7e285b27da0bdd3}{tf\_prefix\_}, \textcolor{stringliteral}{"link\_1"})));
+115 
+116 \textcolor{preprocessor}{#ifdef PRINT\_DEBUG\_INFO}
+117     ROS\_INFO(\textcolor{stringliteral}{"Joint 1 Rotation: X = %f, Y = %f, Z = %f, W = %f"},
+118              rotation\_q.getX(), rotation\_q.getY(), rotation\_q.getZ(), rotation\_q.getW());
+119     ROS\_INFO(\textcolor{stringliteral}{"Joint 1 Translation: X = %f, Y = %f, Z = %f"},
+120              translation\_v.getX(), translation\_v.getY(), translation\_v.getZ());
+121 \textcolor{preprocessor}{#endif}
+122 
+123     \textcolor{comment}{/**********************Joint\_2**********************/}
+124     \textcolor{comment}{/* Joint 2 Rotation Matrix */}
+125     \textcolor{comment}{/*******               *******}
+126 \textcolor{comment}{     * sin(q2)    cos(q2)     0  *}
+127 \textcolor{comment}{     * 0            0         1  *}
+128 \textcolor{comment}{     * cos(q2)   -sin(q2)     0  *}
+129 \textcolor{comment}{     *******              *******/}
+130     rot\_matrix.setValue(sin(q2), cos(q2), 0,
+131                         0, 0, 1,
+132                         cos(q2), -sin(q2), 0);
+133     rot\_matrix.getRotation(rotation\_q);
+134     transform.setRotation(rotation\_q);
+135 
+136     \textcolor{comment}{/* Joint 2 Translation Vector */}
+137     translation\_v.setValue(0, 0 , \hyperlink{classjaco_1_1JacoKinematics_af9545eaea2e16deaaeea5c1e4db27fe2}{j1\_to\_j2\_});
+138     transform.setOrigin(translation\_v);
+139 
+140     \hyperlink{classjaco_1_1JacoKinematics_a3314f9e6a8fb86405384dd23bd194e46}{broadcaster\_}.sendTransform(tf::StampedTransform(transform, ros::Time::now(),
+141                                                     \hyperlink{namespacejaco_a6320c11725be13d2957c4e3f474d62f8}{concatTfName}(
+      \hyperlink{classjaco_1_1JacoKinematics_a0efb1f0ad1937553c7e285b27da0bdd3}{tf\_prefix\_}, \textcolor{stringliteral}{"link\_1"}),
+142                                                     \hyperlink{namespacejaco_a6320c11725be13d2957c4e3f474d62f8}{concatTfName}(
+      \hyperlink{classjaco_1_1JacoKinematics_a0efb1f0ad1937553c7e285b27da0bdd3}{tf\_prefix\_}, \textcolor{stringliteral}{"link\_2"})));
+143 
+144 \textcolor{preprocessor}{#ifdef PRINT\_DEBUG\_INFO}
+145     ROS\_INFO(\textcolor{stringliteral}{"Joint 2 Rotation: X = %f, Y = %f, Z = %f, W = %f"},
+146              rotation\_q.getX(), rotation\_q.getY(), rotation\_q.getZ(), rotation\_q.getW());
+147     ROS\_INFO(\textcolor{stringliteral}{"Joint 2 Translation: X = %f, Y = %f, Z = %f"},
+148              translation\_v.getX(), translation\_v.getY(), translation\_v.getZ());
+149 \textcolor{preprocessor}{#endif}
+150 
+151     \textcolor{comment}{/**********************Joint\_3**********************/}
+152     \textcolor{comment}{/* Joint 3 Rotation Matrix */}
+153     \textcolor{comment}{/*******                   *******}
+154 \textcolor{comment}{     * -cos(q3)     sin(q3)        0 *}
+155 \textcolor{comment}{     *  sin(q2)     cos(q3)        0 *}
+156 \textcolor{comment}{     *    0           0           -1 *}
+157 \textcolor{comment}{     *******                  *******/}
+158     rot\_matrix.setValue(-cos(q3), sin(q3), 0,
+159                         sin(q3), cos(q3), 0,
+160                         0, 0, -1);
+161     rot\_matrix.getRotation(rotation\_q);
+162     transform.setRotation(rotation\_q);
+163 
+164     \textcolor{comment}{/* Joint 3 Translation Vector */}
+165     translation\_v.setValue(\hyperlink{classjaco_1_1JacoKinematics_ab19fccf28da90214c1aab8f11f1e7b42}{j2\_to\_j3\_}, 0, 0);
+166     transform.setOrigin(translation\_v);
+167 
+168     \hyperlink{classjaco_1_1JacoKinematics_a3314f9e6a8fb86405384dd23bd194e46}{broadcaster\_}.sendTransform(tf::StampedTransform(transform, ros::Time::now(),
+169                                                     \hyperlink{namespacejaco_a6320c11725be13d2957c4e3f474d62f8}{concatTfName}(
+      \hyperlink{classjaco_1_1JacoKinematics_a0efb1f0ad1937553c7e285b27da0bdd3}{tf\_prefix\_}, \textcolor{stringliteral}{"link\_2"}),
+170                                                     \hyperlink{namespacejaco_a6320c11725be13d2957c4e3f474d62f8}{concatTfName}(
+      \hyperlink{classjaco_1_1JacoKinematics_a0efb1f0ad1937553c7e285b27da0bdd3}{tf\_prefix\_}, \textcolor{stringliteral}{"link\_3"})));
+171 
+172 \textcolor{preprocessor}{#ifdef PRINT\_DEBUG\_INFO}
+173     ROS\_INFO(\textcolor{stringliteral}{"Joint 3 Rotation: X = %f, Y = %f, Z = %f, W = %f"},
+174              rotation\_q.getX(), rotation\_q.getY(), rotation\_q.getZ(), rotation\_q.getW());
+175     ROS\_INFO(\textcolor{stringliteral}{"Joint 3 Translation: X = %f, Y = %f, Z = %f"},
+176              translation\_v.getX(), translation\_v.getY(), translation\_v.getZ());
+177 \textcolor{preprocessor}{#endif}
+178 
+179     \textcolor{comment}{/**********************Joint\_3 Offset**********************/}
+180     \textcolor{comment}{/* Joint 3 offset Rotation Matrix */}
+181     rot\_matrix.setValue(1, 0, 0, 0, 1, 0, 0, 0, 1);
+182     rot\_matrix.getRotation(rotation\_q);
+183     transform.setRotation(rotation\_q);
+184 
+185     \textcolor{comment}{/* Joint 3 offset translation vector */}
+186     translation\_v.setValue(0, 0, \hyperlink{classjaco_1_1JacoKinematics_ae9e4c7a1d4e000d1697465f2f7ba4a12}{j3\_offset\_});
+187     transform.setOrigin(translation\_v);
+188 
+189     \hyperlink{classjaco_1_1JacoKinematics_a3314f9e6a8fb86405384dd23bd194e46}{broadcaster\_}.sendTransform(tf::StampedTransform(transform, ros::Time::now(),
+190                                                     \hyperlink{namespacejaco_a6320c11725be13d2957c4e3f474d62f8}{concatTfName}(
+      \hyperlink{classjaco_1_1JacoKinematics_a0efb1f0ad1937553c7e285b27da0bdd3}{tf\_prefix\_}, \textcolor{stringliteral}{"link\_3"}),
+191                                                     \hyperlink{namespacejaco_a6320c11725be13d2957c4e3f474d62f8}{concatTfName}(
+      \hyperlink{classjaco_1_1JacoKinematics_a0efb1f0ad1937553c7e285b27da0bdd3}{tf\_prefix\_}, \textcolor{stringliteral}{"link\_3\_offset"})));
+192 
+193 \textcolor{preprocessor}{#ifdef PRINT\_DEBUG\_INFO}
+194     ROS\_INFO(\textcolor{stringliteral}{"Joint 3 Offset Rotation: X = %f, Y = %f, Z = %f, W = %f"},
+195              rotation\_q.getX(), rotation\_q.getY(), rotation\_q.getZ(), rotation\_q.getW());
+196     ROS\_INFO(\textcolor{stringliteral}{"Joint 3 Offset Translation: X = %f, Y = %f, Z = %f"},
+197              translation\_v.getX(), translation\_v.getY(), translation\_v.getZ());
+198 \textcolor{preprocessor}{#endif}
+199 
+200     \textcolor{comment}{/**********************Joint\_4**********************/}
+201     \textcolor{comment}{/* Joint 4 Rotation Matrix */}
+202     \textcolor{comment}{/*******                 *******}
+203 \textcolor{comment}{     *    0          0          -1 *}
+204 \textcolor{comment}{     * sin(q4)     cos(q4)       0 *}
+205 \textcolor{comment}{     * cos(q4)    -sin(q4)       0 *}
+206 \textcolor{comment}{     *******                *******/}
+207     rot\_matrix.setValue(0, 0, -1,
+208                         sin(q4), cos(q4), 0,
+209                         cos(q4), -sin(q4), 0);
+210     rot\_matrix.getRotation(rotation\_q);
+211     transform.setRotation(rotation\_q);
+212 
+213     \textcolor{comment}{/* Joint 4 Translation Vector */}
+214     translation\_v.setValue(\hyperlink{classjaco_1_1JacoKinematics_a873308257c7953e6e98b3229766ee8a4}{j3\_to\_j4\_}, 0, 0);
+215     transform.setOrigin(translation\_v);
+216 
+217     \hyperlink{classjaco_1_1JacoKinematics_a3314f9e6a8fb86405384dd23bd194e46}{broadcaster\_}.sendTransform(tf::StampedTransform(transform, ros::Time::now(),
+218                                                     \hyperlink{namespacejaco_a6320c11725be13d2957c4e3f474d62f8}{concatTfName}(
+      \hyperlink{classjaco_1_1JacoKinematics_a0efb1f0ad1937553c7e285b27da0bdd3}{tf\_prefix\_}, \textcolor{stringliteral}{"link\_3\_offset"}),
+219                                                     \hyperlink{namespacejaco_a6320c11725be13d2957c4e3f474d62f8}{concatTfName}(
+      \hyperlink{classjaco_1_1JacoKinematics_a0efb1f0ad1937553c7e285b27da0bdd3}{tf\_prefix\_}, \textcolor{stringliteral}{"link\_4"})));
+220 
+221 \textcolor{preprocessor}{#ifdef PRINT\_DEBUG\_INFO}
+222     ROS\_INFO(\textcolor{stringliteral}{"Joint 4 Rotation: X = %f, Y = %f, Z = %f, W = %f"},
+223              rotation\_q.getX(), rotation\_q.getY(), rotation\_q.getZ(), rotation\_q.getW());
+224     ROS\_INFO(\textcolor{stringliteral}{"Joint 4 Translation: X = %f, Y = %f, Z = %f"},
+225              translation\_v.getX(), translation\_v.getY(), translation\_v.getZ());
+226 \textcolor{preprocessor}{#endif}
+227 
+228     \textcolor{comment}{/**********************Joint\_5**********************/}
+229     \textcolor{comment}{/* Joint 5 Rotation Matrix */}
+230     \textcolor{comment}{/*******                                         *******}
+231 \textcolor{comment}{     * cos(-55))*cos(q5)    cos(-55)*-sin(q5)     sin(-55) *}
+232 \textcolor{comment}{     * sin(q5)                   cos(q5)             0     *}
+233 \textcolor{comment}{     * -sin(-55)*cos(q5)    sin(-55)*sin(q5)      cos(-55) *}
+234 \textcolor{comment}{     *******                                        *******/}
+235     rot\_matrix.setValue(cos((\hyperlink{classjaco_1_1JacoKinematics_a340eda126d97aa3700cc5dc8be89aa39}{degToRad}(\hyperlink{classjaco_1_1JacoKinematics_ad309e89a6e5c60e0f614629c5f1b4c79}{j5\_bend\_degrees\_})))*cos(q5),
+236                         cos((\hyperlink{classjaco_1_1JacoKinematics_a340eda126d97aa3700cc5dc8be89aa39}{degToRad}(\hyperlink{classjaco_1_1JacoKinematics_ad309e89a6e5c60e0f614629c5f1b4c79}{j5\_bend\_degrees\_})))*-sin(q5),
+237                         sin((\hyperlink{classjaco_1_1JacoKinematics_a340eda126d97aa3700cc5dc8be89aa39}{degToRad}(\hyperlink{classjaco_1_1JacoKinematics_ad309e89a6e5c60e0f614629c5f1b4c79}{j5\_bend\_degrees\_}))),
+238                         sin(q5),
+239                         cos(q5),
+240                         0,
+241                         -sin((\hyperlink{classjaco_1_1JacoKinematics_a340eda126d97aa3700cc5dc8be89aa39}{degToRad}(\hyperlink{classjaco_1_1JacoKinematics_ad309e89a6e5c60e0f614629c5f1b4c79}{j5\_bend\_degrees\_})))*cos(q5),
+242                         sin((\hyperlink{classjaco_1_1JacoKinematics_a340eda126d97aa3700cc5dc8be89aa39}{degToRad}(\hyperlink{classjaco_1_1JacoKinematics_ad309e89a6e5c60e0f614629c5f1b4c79}{j5\_bend\_degrees\_})))*sin(q5),
+243                         cos((\hyperlink{classjaco_1_1JacoKinematics_a340eda126d97aa3700cc5dc8be89aa39}{degToRad}(\hyperlink{classjaco_1_1JacoKinematics_ad309e89a6e5c60e0f614629c5f1b4c79}{j5\_bend\_degrees\_}))));
+244     rot\_matrix.getRotation(rotation\_q);
+245     transform.setRotation(rotation\_q);
+246 
+247     \textcolor{comment}{/* Joint 5 Translation Vector */}
+248     \textcolor{comment}{/****        ****}
+249 \textcolor{comment}{     * cos(55)*D4   *}
+250 \textcolor{comment}{     *       0      *}
+251 \textcolor{comment}{     * -sin(55)*D4  *}
+252 \textcolor{comment}{     ****       ****/}
+253     translation\_v.setValue(cos(\hyperlink{classjaco_1_1JacoKinematics_a340eda126d97aa3700cc5dc8be89aa39}{degToRad}(-\hyperlink{classjaco_1_1JacoKinematics_ad309e89a6e5c60e0f614629c5f1b4c79}{j5\_bend\_degrees\_})) * 
+      \hyperlink{classjaco_1_1JacoKinematics_a5e322eafc0b3b827ae1713d24178c1f8}{j4\_to\_j5\_},
+254                            0,
+255                            -sin(\hyperlink{classjaco_1_1JacoKinematics_a340eda126d97aa3700cc5dc8be89aa39}{degToRad}(-\hyperlink{classjaco_1_1JacoKinematics_ad309e89a6e5c60e0f614629c5f1b4c79}{j5\_bend\_degrees\_})) * j4\_to\_j5\_);
+256     transform.setOrigin(translation\_v);
+257 
+258     \hyperlink{classjaco_1_1JacoKinematics_a3314f9e6a8fb86405384dd23bd194e46}{broadcaster\_}.sendTransform(tf::StampedTransform(transform, ros::Time::now(),
+259                                                     \hyperlink{namespacejaco_a6320c11725be13d2957c4e3f474d62f8}{concatTfName}(
+      \hyperlink{classjaco_1_1JacoKinematics_a0efb1f0ad1937553c7e285b27da0bdd3}{tf\_prefix\_}, \textcolor{stringliteral}{"link\_4"}),
+260                                                     \hyperlink{namespacejaco_a6320c11725be13d2957c4e3f474d62f8}{concatTfName}(
+      \hyperlink{classjaco_1_1JacoKinematics_a0efb1f0ad1937553c7e285b27da0bdd3}{tf\_prefix\_}, \textcolor{stringliteral}{"link\_5"})));
+261 
+262 \textcolor{preprocessor}{#ifdef PRINT\_DEBUG\_INFO}
+263     ROS\_INFO(\textcolor{stringliteral}{"Joint 5 Rotation: X = %f, Y = %f, Z = %f, W = %f"},
+264              rotation\_q.getX(), rotation\_q.getY(), rotation\_q.getZ(), rotation\_q.getW());
+265     ROS\_INFO(\textcolor{stringliteral}{"Joint 5 Translation: X = %f, Y = %f, Z = %f"},
+266              translation\_v.getX(), translation\_v.getY(), translation\_v.getZ());
+267 \textcolor{preprocessor}{#endif}
+268 
+269     \textcolor{comment}{/**********************Joint\_6**********************/}
+270     \textcolor{comment}{/* Joint 6 Rotation Matrix */}
+271     \textcolor{comment}{/*******                                       *******}
+272 \textcolor{comment}{     * cos(-35))*cos(q6)   cos(-35)*-sin(q6)    sin(-35) *}
+273 \textcolor{comment}{     *     sin(q6)              cos(q6)            0     *}
+274 \textcolor{comment}{     * -sin(-35)*cos(q6)   sin(-35)*sin(q6)     cos(-35) *}
+275 \textcolor{comment}{     *******                                       *******/}
+276     rot\_matrix.setValue(cos((\hyperlink{classjaco_1_1JacoKinematics_a340eda126d97aa3700cc5dc8be89aa39}{degToRad}(\hyperlink{classjaco_1_1JacoKinematics_a41a21f1b560c3387855f15059a619994}{j6\_bend\_degrees\_}))) * cos(q6),
+277                         cos((\hyperlink{classjaco_1_1JacoKinematics_a340eda126d97aa3700cc5dc8be89aa39}{degToRad}(\hyperlink{classjaco_1_1JacoKinematics_a41a21f1b560c3387855f15059a619994}{j6\_bend\_degrees\_}))) * -sin(q6),
+278                         sin((\hyperlink{classjaco_1_1JacoKinematics_a340eda126d97aa3700cc5dc8be89aa39}{degToRad}(\hyperlink{classjaco_1_1JacoKinematics_a41a21f1b560c3387855f15059a619994}{j6\_bend\_degrees\_}))),
+279                         sin(q6),
+280                         cos(q6),
+281                         0,
+282                         -sin((\hyperlink{classjaco_1_1JacoKinematics_a340eda126d97aa3700cc5dc8be89aa39}{degToRad}(\hyperlink{classjaco_1_1JacoKinematics_a41a21f1b560c3387855f15059a619994}{j6\_bend\_degrees\_}))) * cos(q6),
+283                         sin((\hyperlink{classjaco_1_1JacoKinematics_a340eda126d97aa3700cc5dc8be89aa39}{degToRad}(\hyperlink{classjaco_1_1JacoKinematics_a41a21f1b560c3387855f15059a619994}{j6\_bend\_degrees\_}))) * sin(q6),
+284                         cos((\hyperlink{classjaco_1_1JacoKinematics_a340eda126d97aa3700cc5dc8be89aa39}{degToRad}(\hyperlink{classjaco_1_1JacoKinematics_a41a21f1b560c3387855f15059a619994}{j6\_bend\_degrees\_}))));
+285     rot\_matrix.getRotation(rotation\_q);
+286     transform.setRotation(rotation\_q);
+287     \textcolor{comment}{/* Joint 6 Translation Vector */}
+288     \textcolor{comment}{/****        ****}
+289 \textcolor{comment}{     * -cos(55)*D5  *}
+290 \textcolor{comment}{     *       0      *}
+291 \textcolor{comment}{     * -sin(55)*D5  *}
+292 \textcolor{comment}{     ****       ****/}
+293     translation\_v.setValue(-cos(\hyperlink{classjaco_1_1JacoKinematics_a340eda126d97aa3700cc5dc8be89aa39}{degToRad}(\hyperlink{classjaco_1_1JacoKinematics_a41a21f1b560c3387855f15059a619994}{j6\_bend\_degrees\_})) * 
+      \hyperlink{classjaco_1_1JacoKinematics_a156f585f21c8495d3772fb872cace39e}{j5\_to\_j6\_},
+294                            0,
+295                            -sin(\hyperlink{classjaco_1_1JacoKinematics_a340eda126d97aa3700cc5dc8be89aa39}{degToRad}(\hyperlink{classjaco_1_1JacoKinematics_a41a21f1b560c3387855f15059a619994}{j6\_bend\_degrees\_})) * j5\_to\_j6\_);
+296     transform.setOrigin(translation\_v);
+297 
+298     \hyperlink{classjaco_1_1JacoKinematics_a3314f9e6a8fb86405384dd23bd194e46}{broadcaster\_}.sendTransform(tf::StampedTransform(transform, ros::Time::now(),
+299                                                     \hyperlink{namespacejaco_a6320c11725be13d2957c4e3f474d62f8}{concatTfName}(
+      \hyperlink{classjaco_1_1JacoKinematics_a0efb1f0ad1937553c7e285b27da0bdd3}{tf\_prefix\_}, \textcolor{stringliteral}{"link\_5"}),
+300                                                     \hyperlink{namespacejaco_a6320c11725be13d2957c4e3f474d62f8}{concatTfName}(
+      \hyperlink{classjaco_1_1JacoKinematics_a0efb1f0ad1937553c7e285b27da0bdd3}{tf\_prefix\_}, \textcolor{stringliteral}{"link\_hand"})));
+301 
+302 \textcolor{preprocessor}{#ifdef PRINT\_DEBUG\_INFO}
+303     ROS\_INFO(\textcolor{stringliteral}{"Joint 6 Rotation: X = %f, Y = %f, Z = %f, W = %f"},
+304              rotation\_q.getX(), rotation\_q.getY(), rotation\_q.getZ(), rotation\_q.getW());
+305     ROS\_INFO(\textcolor{stringliteral}{"Joint 6 Translation: X = %f, Y = %f, Z = %f"},
+306              translation\_v.getX(), translation\_v.getY(), translation\_v.getZ());
+307 \textcolor{preprocessor}{#endif}
+308 
+309 
+310     \textcolor{comment}{/**********************finger\_1**********************/}
+311     rot\_matrix.setRPY(-1.7983, 1.117, 3.1416);
+312     rot\_matrix.getRotation(rotation\_q);
+313     transform.setRotation(rotation\_q);
+314 
+315     translation\_v.setValue(-0.03978, 0, -0.10071);
+316     transform.setOrigin(translation\_v);
+317 
+318     \hyperlink{classjaco_1_1JacoKinematics_a3314f9e6a8fb86405384dd23bd194e46}{broadcaster\_}.sendTransform(tf::StampedTransform(transform, ros::Time::now(),
+319                                                     \hyperlink{namespacejaco_a6320c11725be13d2957c4e3f474d62f8}{concatTfName}(
+      \hyperlink{classjaco_1_1JacoKinematics_a0efb1f0ad1937553c7e285b27da0bdd3}{tf\_prefix\_}, \textcolor{stringliteral}{"link\_hand"}),
+320                                                     \hyperlink{namespacejaco_a6320c11725be13d2957c4e3f474d62f8}{concatTfName}(
+      \hyperlink{classjaco_1_1JacoKinematics_a0efb1f0ad1937553c7e285b27da0bdd3}{tf\_prefix\_}, \textcolor{stringliteral}{"link\_finger\_1"})));
+321 
+322 
+323     \textcolor{comment}{/**********************finger\_2**********************/}
+324     rot\_matrix.setRPY(-1.6222, 1.117, -0.23615);
+325     rot\_matrix.getRotation(rotation\_q);
+326     transform.setRotation(rotation\_q);
+327 
+328     translation\_v.setValue(0.03569, -0.0216, -0.10071);
+329     transform.setOrigin(translation\_v);
+330 
+331     \hyperlink{classjaco_1_1JacoKinematics_a3314f9e6a8fb86405384dd23bd194e46}{broadcaster\_}.sendTransform(tf::StampedTransform(transform, ros::Time::now(),
+332                                                     \hyperlink{namespacejaco_a6320c11725be13d2957c4e3f474d62f8}{concatTfName}(
+      \hyperlink{classjaco_1_1JacoKinematics_a0efb1f0ad1937553c7e285b27da0bdd3}{tf\_prefix\_}, \textcolor{stringliteral}{"link\_hand"}),
+333                                                     \hyperlink{namespacejaco_a6320c11725be13d2957c4e3f474d62f8}{concatTfName}(
+      \hyperlink{classjaco_1_1JacoKinematics_a0efb1f0ad1937553c7e285b27da0bdd3}{tf\_prefix\_}, \textcolor{stringliteral}{"link\_finger\_2"})));
+334 
+335 
+336     \textcolor{comment}{/**********************finger\_3**********************/}
+337     rot\_matrix.setRPY(-1.5161, 1.1459, 0.23978);
+338     rot\_matrix.getRotation(rotation\_q);
+339     transform.setRotation(rotation\_q);
+340 
+341     translation\_v.setValue(0.03569, 0.0216, -0.10071);
+342     transform.setOrigin(translation\_v);
+343 
+344     \hyperlink{classjaco_1_1JacoKinematics_a3314f9e6a8fb86405384dd23bd194e46}{broadcaster\_}.sendTransform(tf::StampedTransform(transform, ros::Time::now(),
+345                                                     \hyperlink{namespacejaco_a6320c11725be13d2957c4e3f474d62f8}{concatTfName}(
+      \hyperlink{classjaco_1_1JacoKinematics_a0efb1f0ad1937553c7e285b27da0bdd3}{tf\_prefix\_}, \textcolor{stringliteral}{"link\_hand"}),
+346                                                     \hyperlink{namespacejaco_a6320c11725be13d2957c4e3f474d62f8}{concatTfName}(
+      \hyperlink{classjaco_1_1JacoKinematics_a0efb1f0ad1937553c7e285b27da0bdd3}{tf\_prefix\_}, \textcolor{stringliteral}{"link\_finger\_3"})));
+347 \}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\index{jaco\+::\+Jaco\+Kinematics@{jaco\+::\+Jaco\+Kinematics}!base\+\_\+to\+\_\+api\+\_\+@{base\+\_\+to\+\_\+api\+\_\+}}
+\index{base\+\_\+to\+\_\+api\+\_\+@{base\+\_\+to\+\_\+api\+\_\+}!jaco\+::\+Jaco\+Kinematics@{jaco\+::\+Jaco\+Kinematics}}
+\subsubsection[{\texorpdfstring{base\+\_\+to\+\_\+api\+\_\+}{base_to_api_}}]{\setlength{\rightskip}{0pt plus 5cm}double jaco\+::\+Jaco\+Kinematics\+::base\+\_\+to\+\_\+api\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classjaco_1_1JacoKinematics_a4edc270c1506293993ed77f04409045c}{}\label{classjaco_1_1JacoKinematics_a4edc270c1506293993ed77f04409045c}
+\index{jaco\+::\+Jaco\+Kinematics@{jaco\+::\+Jaco\+Kinematics}!base\+\_\+to\+\_\+j1\+\_\+@{base\+\_\+to\+\_\+j1\+\_\+}}
+\index{base\+\_\+to\+\_\+j1\+\_\+@{base\+\_\+to\+\_\+j1\+\_\+}!jaco\+::\+Jaco\+Kinematics@{jaco\+::\+Jaco\+Kinematics}}
+\subsubsection[{\texorpdfstring{base\+\_\+to\+\_\+j1\+\_\+}{base_to_j1_}}]{\setlength{\rightskip}{0pt plus 5cm}double jaco\+::\+Jaco\+Kinematics\+::base\+\_\+to\+\_\+j1\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classjaco_1_1JacoKinematics_a7f67ac2a11176769a3477924f46c7284}{}\label{classjaco_1_1JacoKinematics_a7f67ac2a11176769a3477924f46c7284}
+\index{jaco\+::\+Jaco\+Kinematics@{jaco\+::\+Jaco\+Kinematics}!broadcaster\+\_\+@{broadcaster\+\_\+}}
+\index{broadcaster\+\_\+@{broadcaster\+\_\+}!jaco\+::\+Jaco\+Kinematics@{jaco\+::\+Jaco\+Kinematics}}
+\subsubsection[{\texorpdfstring{broadcaster\+\_\+}{broadcaster_}}]{\setlength{\rightskip}{0pt plus 5cm}tf\+::\+Transform\+Broadcaster jaco\+::\+Jaco\+Kinematics\+::broadcaster\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classjaco_1_1JacoKinematics_a3314f9e6a8fb86405384dd23bd194e46}{}\label{classjaco_1_1JacoKinematics_a3314f9e6a8fb86405384dd23bd194e46}
+\index{jaco\+::\+Jaco\+Kinematics@{jaco\+::\+Jaco\+Kinematics}!j1\+\_\+to\+\_\+j2\+\_\+@{j1\+\_\+to\+\_\+j2\+\_\+}}
+\index{j1\+\_\+to\+\_\+j2\+\_\+@{j1\+\_\+to\+\_\+j2\+\_\+}!jaco\+::\+Jaco\+Kinematics@{jaco\+::\+Jaco\+Kinematics}}
+\subsubsection[{\texorpdfstring{j1\+\_\+to\+\_\+j2\+\_\+}{j1_to_j2_}}]{\setlength{\rightskip}{0pt plus 5cm}double jaco\+::\+Jaco\+Kinematics\+::j1\+\_\+to\+\_\+j2\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classjaco_1_1JacoKinematics_af9545eaea2e16deaaeea5c1e4db27fe2}{}\label{classjaco_1_1JacoKinematics_af9545eaea2e16deaaeea5c1e4db27fe2}
+\index{jaco\+::\+Jaco\+Kinematics@{jaco\+::\+Jaco\+Kinematics}!j2\+\_\+to\+\_\+j3\+\_\+@{j2\+\_\+to\+\_\+j3\+\_\+}}
+\index{j2\+\_\+to\+\_\+j3\+\_\+@{j2\+\_\+to\+\_\+j3\+\_\+}!jaco\+::\+Jaco\+Kinematics@{jaco\+::\+Jaco\+Kinematics}}
+\subsubsection[{\texorpdfstring{j2\+\_\+to\+\_\+j3\+\_\+}{j2_to_j3_}}]{\setlength{\rightskip}{0pt plus 5cm}double jaco\+::\+Jaco\+Kinematics\+::j2\+\_\+to\+\_\+j3\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classjaco_1_1JacoKinematics_ab19fccf28da90214c1aab8f11f1e7b42}{}\label{classjaco_1_1JacoKinematics_ab19fccf28da90214c1aab8f11f1e7b42}
+\index{jaco\+::\+Jaco\+Kinematics@{jaco\+::\+Jaco\+Kinematics}!j3\+\_\+offset\+\_\+@{j3\+\_\+offset\+\_\+}}
+\index{j3\+\_\+offset\+\_\+@{j3\+\_\+offset\+\_\+}!jaco\+::\+Jaco\+Kinematics@{jaco\+::\+Jaco\+Kinematics}}
+\subsubsection[{\texorpdfstring{j3\+\_\+offset\+\_\+}{j3_offset_}}]{\setlength{\rightskip}{0pt plus 5cm}double jaco\+::\+Jaco\+Kinematics\+::j3\+\_\+offset\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classjaco_1_1JacoKinematics_ae9e4c7a1d4e000d1697465f2f7ba4a12}{}\label{classjaco_1_1JacoKinematics_ae9e4c7a1d4e000d1697465f2f7ba4a12}
+\index{jaco\+::\+Jaco\+Kinematics@{jaco\+::\+Jaco\+Kinematics}!j3\+\_\+to\+\_\+j4\+\_\+@{j3\+\_\+to\+\_\+j4\+\_\+}}
+\index{j3\+\_\+to\+\_\+j4\+\_\+@{j3\+\_\+to\+\_\+j4\+\_\+}!jaco\+::\+Jaco\+Kinematics@{jaco\+::\+Jaco\+Kinematics}}
+\subsubsection[{\texorpdfstring{j3\+\_\+to\+\_\+j4\+\_\+}{j3_to_j4_}}]{\setlength{\rightskip}{0pt plus 5cm}double jaco\+::\+Jaco\+Kinematics\+::j3\+\_\+to\+\_\+j4\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classjaco_1_1JacoKinematics_a873308257c7953e6e98b3229766ee8a4}{}\label{classjaco_1_1JacoKinematics_a873308257c7953e6e98b3229766ee8a4}
+\index{jaco\+::\+Jaco\+Kinematics@{jaco\+::\+Jaco\+Kinematics}!j4\+\_\+to\+\_\+j5\+\_\+@{j4\+\_\+to\+\_\+j5\+\_\+}}
+\index{j4\+\_\+to\+\_\+j5\+\_\+@{j4\+\_\+to\+\_\+j5\+\_\+}!jaco\+::\+Jaco\+Kinematics@{jaco\+::\+Jaco\+Kinematics}}
+\subsubsection[{\texorpdfstring{j4\+\_\+to\+\_\+j5\+\_\+}{j4_to_j5_}}]{\setlength{\rightskip}{0pt plus 5cm}double jaco\+::\+Jaco\+Kinematics\+::j4\+\_\+to\+\_\+j5\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classjaco_1_1JacoKinematics_a5e322eafc0b3b827ae1713d24178c1f8}{}\label{classjaco_1_1JacoKinematics_a5e322eafc0b3b827ae1713d24178c1f8}
+\index{jaco\+::\+Jaco\+Kinematics@{jaco\+::\+Jaco\+Kinematics}!j5\+\_\+bend\+\_\+degrees\+\_\+@{j5\+\_\+bend\+\_\+degrees\+\_\+}}
+\index{j5\+\_\+bend\+\_\+degrees\+\_\+@{j5\+\_\+bend\+\_\+degrees\+\_\+}!jaco\+::\+Jaco\+Kinematics@{jaco\+::\+Jaco\+Kinematics}}
+\subsubsection[{\texorpdfstring{j5\+\_\+bend\+\_\+degrees\+\_\+}{j5_bend_degrees_}}]{\setlength{\rightskip}{0pt plus 5cm}double jaco\+::\+Jaco\+Kinematics\+::j5\+\_\+bend\+\_\+degrees\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classjaco_1_1JacoKinematics_ad309e89a6e5c60e0f614629c5f1b4c79}{}\label{classjaco_1_1JacoKinematics_ad309e89a6e5c60e0f614629c5f1b4c79}
+\index{jaco\+::\+Jaco\+Kinematics@{jaco\+::\+Jaco\+Kinematics}!j5\+\_\+to\+\_\+j6\+\_\+@{j5\+\_\+to\+\_\+j6\+\_\+}}
+\index{j5\+\_\+to\+\_\+j6\+\_\+@{j5\+\_\+to\+\_\+j6\+\_\+}!jaco\+::\+Jaco\+Kinematics@{jaco\+::\+Jaco\+Kinematics}}
+\subsubsection[{\texorpdfstring{j5\+\_\+to\+\_\+j6\+\_\+}{j5_to_j6_}}]{\setlength{\rightskip}{0pt plus 5cm}double jaco\+::\+Jaco\+Kinematics\+::j5\+\_\+to\+\_\+j6\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classjaco_1_1JacoKinematics_a156f585f21c8495d3772fb872cace39e}{}\label{classjaco_1_1JacoKinematics_a156f585f21c8495d3772fb872cace39e}
+\index{jaco\+::\+Jaco\+Kinematics@{jaco\+::\+Jaco\+Kinematics}!j6\+\_\+bend\+\_\+degrees\+\_\+@{j6\+\_\+bend\+\_\+degrees\+\_\+}}
+\index{j6\+\_\+bend\+\_\+degrees\+\_\+@{j6\+\_\+bend\+\_\+degrees\+\_\+}!jaco\+::\+Jaco\+Kinematics@{jaco\+::\+Jaco\+Kinematics}}
+\subsubsection[{\texorpdfstring{j6\+\_\+bend\+\_\+degrees\+\_\+}{j6_bend_degrees_}}]{\setlength{\rightskip}{0pt plus 5cm}double jaco\+::\+Jaco\+Kinematics\+::j6\+\_\+bend\+\_\+degrees\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classjaco_1_1JacoKinematics_a41a21f1b560c3387855f15059a619994}{}\label{classjaco_1_1JacoKinematics_a41a21f1b560c3387855f15059a619994}
+\index{jaco\+::\+Jaco\+Kinematics@{jaco\+::\+Jaco\+Kinematics}!j6\+\_\+to\+\_\+end\+\_\+@{j6\+\_\+to\+\_\+end\+\_\+}}
+\index{j6\+\_\+to\+\_\+end\+\_\+@{j6\+\_\+to\+\_\+end\+\_\+}!jaco\+::\+Jaco\+Kinematics@{jaco\+::\+Jaco\+Kinematics}}
+\subsubsection[{\texorpdfstring{j6\+\_\+to\+\_\+end\+\_\+}{j6_to_end_}}]{\setlength{\rightskip}{0pt plus 5cm}double jaco\+::\+Jaco\+Kinematics\+::j6\+\_\+to\+\_\+end\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classjaco_1_1JacoKinematics_a9e7969fbd9647524c0eef9b8f2ab0f1f}{}\label{classjaco_1_1JacoKinematics_a9e7969fbd9647524c0eef9b8f2ab0f1f}
+\index{jaco\+::\+Jaco\+Kinematics@{jaco\+::\+Jaco\+Kinematics}!tf\+\_\+prefix\+\_\+@{tf\+\_\+prefix\+\_\+}}
+\index{tf\+\_\+prefix\+\_\+@{tf\+\_\+prefix\+\_\+}!jaco\+::\+Jaco\+Kinematics@{jaco\+::\+Jaco\+Kinematics}}
+\subsubsection[{\texorpdfstring{tf\+\_\+prefix\+\_\+}{tf_prefix_}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string jaco\+::\+Jaco\+Kinematics\+::tf\+\_\+prefix\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classjaco_1_1JacoKinematics_a0efb1f0ad1937553c7e285b27da0bdd3}{}\label{classjaco_1_1JacoKinematics_a0efb1f0ad1937553c7e285b27da0bdd3}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Longfei/\+Desktop/catkin\+\_\+\+Kinova\+R\+O\+S/src/jaco-\/ros/jaco\+\_\+driver/include/jaco\+\_\+driver/\hyperlink{jaco__arm__kinematics_8h}{jaco\+\_\+arm\+\_\+kinematics.\+h}\item 
+D\+:/\+Longfei/\+Desktop/catkin\+\_\+\+Kinova\+R\+O\+S/src/jaco-\/ros/jaco\+\_\+driver/src/\hyperlink{jaco__arm__kinematics_8cpp}{jaco\+\_\+arm\+\_\+kinematics.\+cpp}\end{DoxyCompactItemize}

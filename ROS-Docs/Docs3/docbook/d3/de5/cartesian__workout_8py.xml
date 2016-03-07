@@ -1,0 +1,114 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="d3/de5/cartesian__workout_8py">
+    <title>cartesian_workout.py File Reference</title>
+<para>Include dependency diagram for cartesian_workout.py</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../db/d9c/cartesian__workout_8py__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Included by dependency diagram for cartesian_workout.py</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="../../d0/d05/cartesian__workout_8py__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+        <simplesect>
+            <title> Namespaces </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d8/d21/namespacecartesian__workout">cartesian_workout</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+    <simplesect>
+        <title>Detailed Description</title>
+    <para>Definition in file D:/Longfei/Desktop/catkin_KinovaROS/src/jaco-ros/jaco_demo/nodes/jaco_demo/cartesian_workout.py</para>
+    </simplesect>
+    <literallayout><computeroutput>
+<link linkend="d8/d21/namespacecartesian__workout">1 </link><emphasis class="comment">#!&#32;/usr/bin/env&#32;python</emphasis>
+2 <emphasis class="stringliteral">&quot;&quot;&quot;A&#32;helper&#32;program&#32;to&#32;test&#32;cartesian&#32;goals&#32;for&#32;the&#32;JACO&#32;and&#32;MICO&#32;arms.&quot;&quot;&quot;</emphasis>
+3 
+4 <emphasis class="keyword">import</emphasis>&#32;roslib;&#32;roslib.load_manifest(<emphasis class="stringliteral">&apos;jaco_demo&apos;</emphasis>)
+5 <emphasis class="keyword">import</emphasis>&#32;rospy
+6 
+7 <emphasis class="keyword">import</emphasis>&#32;sys
+8 <emphasis class="keyword">import</emphasis>&#32;numpy&#32;<emphasis class="keyword">as</emphasis>&#32;np
+9 
+10 <emphasis class="keyword">import</emphasis>&#32;actionlib
+11 <emphasis class="keyword">import</emphasis>&#32;<link linkend="d2/dbe/namespacejaco__msgs_1_1msg">jaco_msgs.msg</link>
+12 <emphasis class="keyword">import</emphasis>&#32;std_msgs.msg
+13 <emphasis class="keyword">import</emphasis>&#32;geometry_msgs.msg
+14 
+15 <emphasis class="keyword">import</emphasis>&#32;goal_generators
+16 
+17 
+<link linkend="d8/d21/namespacecartesian__workout_1a1fb7cd9a49c4af0ae2cf8cab45335d40">18 </link><emphasis class="keyword">def&#32;</emphasis><link linkend="d8/d21/namespacecartesian__workout_1a1fb7cd9a49c4af0ae2cf8cab45335d40">cartesian_pose_client</link>(position,&#32;orientation):
+19 &#32;&#32;&#32;&#32;<emphasis class="stringliteral">&quot;&quot;&quot;Send&#32;a&#32;cartesian&#32;goal&#32;to&#32;the&#32;action&#32;server.&quot;&quot;&quot;</emphasis>
+20 &#32;&#32;&#32;&#32;action_address&#32;=&#32;<emphasis class="stringliteral">&apos;/&apos;</emphasis>&#32;+&#32;str(sys.argv[1])&#32;+&#32;<emphasis class="stringliteral">&apos;_arm_driver/arm_pose/arm_pose&apos;</emphasis>
+21 &#32;&#32;&#32;&#32;client&#32;=&#32;actionlib.SimpleActionClient(action_address,&#32;<link linkend="d7/da3/classjaco__msgs_1_1msg_1_1__ArmPoseAction_1_1ArmPoseAction">jaco_msgs.msg.ArmPoseAction</link>)
+22 &#32;&#32;&#32;&#32;client.wait_for_server()
+23 
+24 &#32;&#32;&#32;&#32;goal&#32;=&#32;<link linkend="d4/daf/classjaco__msgs_1_1msg_1_1__ArmPoseGoal_1_1ArmPoseGoal">jaco_msgs.msg.ArmPoseGoal</link>()
+25 &#32;&#32;&#32;&#32;goal.pose.header&#32;=&#32;std_msgs.msg.Header(frame_id=(str(sys.argv[1])&#32;+&#32;<emphasis class="stringliteral">&apos;_api_origin&apos;</emphasis>))
+26 &#32;&#32;&#32;&#32;goal.pose.pose.position&#32;=&#32;geometry_msgs.msg.Point(
+27 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;x=position[0],&#32;y=position[1],&#32;z=position[2])
+28 &#32;&#32;&#32;&#32;goal.pose.pose.orientation&#32;=&#32;geometry_msgs.msg.Quaternion(
+29 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;x=orientation[0],&#32;y=orientation[1],&#32;z=orientation[2],&#32;w=orientation[3])
+30 
+31 &#32;&#32;&#32;&#32;client.send_goal(goal)
+32 
+33 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;client.wait_for_result(rospy.Duration(10.0)):
+34 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;client.get_result()
+35 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">else</emphasis>:
+36 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;client.cancel_all_goals()
+37 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;print(<emphasis class="stringliteral">&apos;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;the&#32;cartesian&#32;action&#32;timed-out&apos;</emphasis>)
+38 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;<emphasis class="keywordtype">None</emphasis>
+39 
+40 
+41 <emphasis class="keywordflow">if</emphasis>&#32;__name__&#32;==&#32;<emphasis class="stringliteral">&apos;__main__&apos;</emphasis>:
+42 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;len(sys.argv)&#32;<emphasis class="keywordflow">not</emphasis>&#32;<emphasis class="keywordflow">in</emphasis>&#32;[3,&#32;4,&#32;9]&#32;<emphasis class="keywordflow">or</emphasis>&#32;<emphasis class="stringliteral">&apos;help&apos;</emphasis>&#32;<emphasis class="keywordflow">in</emphasis>&#32;str(sys.argv):
+43 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;print(<emphasis class="stringliteral">&apos;Usage:&apos;</emphasis>)
+44 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;print(<emphasis class="stringliteral">&apos;&#32;&#32;&#32;&#32;cartesian_workout.py&#32;node_name&#32;random&#32;num&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;-&#32;randomly&#32;generate&#32;num&#32;poses&apos;</emphasis>)
+45 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;print(<emphasis class="stringliteral">&apos;&#32;&#32;&#32;&#32;cartesian_workout.py&#32;node_name&#32;file_path&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;-&#32;use&#32;poses&#32;from&#32;file&apos;</emphasis>)
+46 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;print(<emphasis class="stringliteral">&apos;&#32;&#32;&#32;&#32;cartesian_workout.py&#32;node_name&#32;x&#32;y&#32;z&#32;qx&#32;qy&#32;qz&#32;qw&#32;&#32;&#32;-&#32;use&#32;that&#32;specific&#32;pose&apos;</emphasis>)
+47 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;exit()
+48 
+49 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">try</emphasis>:
+50 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;rospy.init_node(str(sys.argv[1])&#32;+&#32;<emphasis class="stringliteral">&apos;_cartesian_workout&apos;</emphasis>)
+51 
+52 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;str(sys.argv[2])&#32;==&#32;<emphasis class="stringliteral">&apos;random&apos;</emphasis>&#32;<emphasis class="keywordflow">and</emphasis>&#32;len(sys.argv)&#32;==&#32;4:
+53 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;print(<emphasis class="stringliteral">&apos;Using&#32;{}&#32;randomly&#32;generated&#32;poses&apos;</emphasis>.format(int(sys.argv[3])))
+<link linkend="d8/d21/namespacecartesian__workout_1ab293192d190a24c9cb8edbea4ef33862">54 </link>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;poses&#32;=&#32;<link linkend="df/da8/namespacegoal__generators_1acc20fd60c84b4f30491d22bf16139668">goal_generators.random_pose_generator</link>(int(sys.argv[3]))
+55 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">elif</emphasis>&#32;len(sys.argv)&#32;==&#32;3:
+56 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;print(<emphasis class="stringliteral">&apos;Using&#32;poses&#32;from&#32;file:&#32;{}&apos;</emphasis>.format(sys.argv[2]))
+57 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;poses&#32;=&#32;<link linkend="df/da8/namespacegoal__generators_1a565aa27b68e73f1f3b2d1a9da1332051">goal_generators.poses_from_file</link>(str(sys.argv[2]))
+58 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">else</emphasis>:
+59 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;print(<emphasis class="stringliteral">&apos;Using&#32;the&#32;specified&#32;pose:&apos;</emphasis>)
+<link linkend="d8/d21/namespacecartesian__workout_1a967ea83284096aa4c94c0b41daa5df6c">60 </link>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;raw_pose&#32;=&#32;[float(n)&#32;<emphasis class="keywordflow">for</emphasis>&#32;n&#32;<emphasis class="keywordflow">in</emphasis>&#32;sys.argv[2:]]
+<link linkend="d8/d21/namespacecartesian__workout_1a9cc10da8ef79d18715644543b9794d80">61 </link>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;mag&#32;=&#32;np.sqrt(sum(np.power(raw_pose[3:],&#32;2)))
+62 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="stringliteral">&quot;&quot;&quot;poses&#32;=&#32;[(raw_pose[:3],&#32;raw_pose[3:]&#32;/&#32;mag)]&quot;&quot;&quot;</emphasis>
+63 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;poses&#32;=&#32;[(raw_pose[:3],&#32;raw_pose[3:])]
+64 
+65 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">for</emphasis>&#32;pos,&#32;orient&#32;<emphasis class="keywordflow">in</emphasis>&#32;poses:
+66 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;print(<emphasis class="stringliteral">&apos;&#32;&#32;&#32;&#32;position:&#32;{},&#32;&#32;orientation:&#32;{}&apos;</emphasis>.format(pos,&#32;orient))
+<link linkend="d8/d21/namespacecartesian__workout_1ac2ac6ec3a92f53155c4912cbf5c93604">67 </link>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;result&#32;=&#32;<link linkend="d8/d21/namespacecartesian__workout_1a1fb7cd9a49c4af0ae2cf8cab45335d40">cartesian_pose_client</link>(pos,&#32;orient)
+68 
+69 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;print(<emphasis class="stringliteral">&apos;Done!&apos;</emphasis>)
+70 
+71 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">except</emphasis>&#32;rospy.ROSInterruptException:
+72 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">print</emphasis>&#32;<emphasis class="stringliteral">&quot;program&#32;interrupted&#32;before&#32;completion&quot;</emphasis>
+    </computeroutput></literallayout>
+</section>

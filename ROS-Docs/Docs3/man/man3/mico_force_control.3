@@ -1,0 +1,97 @@
+.TH "mico_force_control" 3 "Thu Mar 3 2016" "Version 1.0.1" "Kinova-ROS" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+mico_force_control \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "\fBdamping_ang\fP = rospy\&.get_param('damping_ang', 10\&.0)"
+.br
+.ti -1c
+.RI "\fBdamping_lin\fP = rospy\&.get_param('damping_lin', 80\&.0)"
+.br
+.ti -1c
+.RI "\fBforce_max_ang\fP = rospy\&.get_param('force_max_ang', 40\&.0)"
+.br
+.ti -1c
+.RI "\fBforce_max_lin\fP = rospy\&.get_param('force_max_lin', 40\&.0)"
+.br
+.ti -1c
+.RI "\fBforce_min_ang\fP = rospy\&.get_param('force_min_ang', 0\&.1)"
+.br
+.ti -1c
+.RI "\fBforce_min_lin\fP = rospy\&.get_param('force_min_lin', 0\&.1)"
+.br
+.ti -1c
+.RI "\fBinertia_ang\fP = rospy\&.get_param('inertia_ang', 3\&.0)"
+.br
+.ti -1c
+.RI "\fBinertia_lin\fP = rospy\&.get_param('inertia_lin', 10\&.0)"
+.br
+.ti -1c
+.RI "\fBrobot\fP = rospy\&.get_param('robot', 'mico')"
+.br
+.ti -1c
+.RI "\fBset_req\fP = SetForceControlParamsRequest()"
+.br
+.ti -1c
+.RI "\fBsrv_set\fP = rospy\&.ServiceProxy(\fBrobot\fP + '_arm_driver/in/set_force_control_params', SetForceControlParams)"
+.br
+.ti -1c
+.RI "\fBsrv_start\fP = rospy\&.ServiceProxy(\fBrobot\fP + '_arm_driver/in/start_force_control', Start)"
+.br
+.ti -1c
+.RI "\fBsrv_stop\fP = rospy\&.ServiceProxy(\fBrobot\fP + '_arm_driver/in/stop_force_control', Stop)"
+.br
+.ti -1c
+.RI "\fBx\fP"
+.br
+.ti -1c
+.RI "\fBy\fP"
+.br
+.ti -1c
+.RI "\fBz\fP"
+.br
+.in -1c
+.SH "Variable Documentation"
+.PP 
+.SS "mico_force_control\&.damping_ang = rospy\&.get_param('damping_ang', 10\&.0)"
+
+.SS "mico_force_control\&.damping_lin = rospy\&.get_param('damping_lin', 80\&.0)"
+
+.SS "mico_force_control\&.force_max_ang = rospy\&.get_param('force_max_ang', 40\&.0)"
+
+.SS "mico_force_control\&.force_max_lin = rospy\&.get_param('force_max_lin', 40\&.0)"
+
+.SS "mico_force_control\&.force_min_ang = rospy\&.get_param('force_min_ang', 0\&.1)"
+
+.SS "mico_force_control\&.force_min_lin = rospy\&.get_param('force_min_lin', 0\&.1)"
+
+.SS "mico_force_control\&.inertia_ang = rospy\&.get_param('inertia_ang', 3\&.0)"
+
+.SS "mico_force_control\&.inertia_lin = rospy\&.get_param('inertia_lin', 10\&.0)"
+
+.SS "mico_force_control\&.robot = rospy\&.get_param('robot', 'mico')"
+
+.SS "mico_force_control\&.set_req = SetForceControlParamsRequest()"
+
+.SS "mico_force_control\&.srv_set = rospy\&.ServiceProxy(\fBrobot\fP + '_arm_driver/in/set_force_control_params', SetForceControlParams)"
+
+.SS "mico_force_control\&.srv_start = rospy\&.ServiceProxy(\fBrobot\fP + '_arm_driver/in/start_force_control', Start)"
+
+.SS "mico_force_control\&.srv_stop = rospy\&.ServiceProxy(\fBrobot\fP + '_arm_driver/in/stop_force_control', Stop)"
+
+.SS "mico_force_control\&.x"
+
+.SS "mico_force_control\&.y"
+
+.SS "mico_force_control\&.z"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Kinova-ROS from the source code\&.

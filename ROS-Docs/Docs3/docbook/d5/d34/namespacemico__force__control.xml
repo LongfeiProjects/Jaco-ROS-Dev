@@ -1,0 +1,119 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="d5/d34/namespacemico__force__control">
+<title>mico_force_control</title>
+        <section>
+            <title>Variables</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="d5/d34/namespacemico__force__control_1a92927656a13dc0f41e49ba262d47d74a">damping_ang</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="d5/d34/namespacemico__force__control_1a1355006730f1faaee4334f0c43f59746">damping_lin</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="d5/d34/namespacemico__force__control_1a4f12ede33ebf4ea40b54445f58818f18">force_max_ang</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="d5/d34/namespacemico__force__control_1aa4fb6bd6977bbc2751bcc1d82e91372b">force_max_lin</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="d5/d34/namespacemico__force__control_1a6db552753f1e9477b67bafd6038452c1">force_min_ang</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="d5/d34/namespacemico__force__control_1a0ceb8e5eca328f479981a597d6ca88b2">force_min_lin</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="d5/d34/namespacemico__force__control_1a15342e572c568a704fb5af7c5865eae3">inertia_ang</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="d5/d34/namespacemico__force__control_1a7bd9a03e89cd1a75c5b5fd43fe20043d">inertia_lin</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="d5/d34/namespacemico__force__control_1ae3d8428c9fe2a197c78735d5e2bf7d13">robot</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="d5/d34/namespacemico__force__control_1adaac210d765d56a858099e0da5985634">set_req</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="d5/d34/namespacemico__force__control_1aec902d9fa26ad89858657a5c69604244">srv_set</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="d5/d34/namespacemico__force__control_1ad419a15a7ffa6346e96486103e629a03">srv_start</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="d5/d34/namespacemico__force__control_1a2cebf1d67600a8e0e30509e127b2ca15">srv_stop</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="d5/d34/namespacemico__force__control_1aa9fdd2ef1b77ee897f0d602302379821">x</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="d5/d34/namespacemico__force__control_1a8a0f8c92894b08350a0d164ffac7d643">y</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="d5/d34/namespacemico__force__control_1a5537f83e86fedd5a78e2bbaab62d326f">z</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+</section>

@@ -1,0 +1,134 @@
+.TH "jaco::FingerAngles" 3 "Thu Mar 3 2016" "Version 1.0.1" "Kinova-ROS" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+jaco::FingerAngles \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include 'jaco_types\&.h'\fP
+.PP
+Inherits \fBFingersPosition\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBjaco_msgs::FingerPosition\fP \fBconstructFingersMsg\fP ()"
+.br
+.ti -1c
+.RI "\fBFingerAngles\fP ()"
+.br
+.ti -1c
+.RI "\fBFingerAngles\fP (const \fBjaco_msgs::FingerPosition\fP &position)"
+.br
+.ti -1c
+.RI "\fBFingerAngles\fP (const \fBFingersPosition\fP &angle)"
+.br
+.ti -1c
+.RI "void \fBInitStruct\fP ()"
+.br
+.ti -1c
+.RI "bool \fBisCloseToOther\fP (const \fBFingerAngles\fP &, float tolerance) const "
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "float \fBFinger1\fP"
+.br
+.RI "\fIThis is the value of the finger #1\&. The units will depends on the context it's been used\&. \fP"
+.ti -1c
+.RI "float \fBFinger2\fP"
+.br
+.RI "\fIThis is the value of the finger #2\&. The units will depends on the context it's been used\&. \fP"
+.ti -1c
+.RI "float \fBFinger3\fP"
+.br
+.RI "\fIThis is the value of the finger #3\&. The units will depends on the context it's been used\&. \fP"
+.in -1c
+.SH "Detailed Description"
+.PP 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "jaco::FingerAngles::FingerAngles ()\fC [inline]\fP"
+
+.PP
+.nf
+105 {}
+.fi
+.SS "jaco::FingerAngles::FingerAngles (const \fBjaco_msgs::FingerPosition\fP & position)\fC [explicit]\fP"
+
+.PP
+.nf
+244 {
+245     Finger1 = position\&.finger1;
+246     Finger2 = position\&.finger2;
+247     Finger3 = position\&.finger3;
+248 }
+.fi
+.SS "jaco::FingerAngles::FingerAngles (const \fBFingersPosition\fP & angle)\fC [explicit]\fP"
+
+.PP
+.nf
+252 {
+253     Finger1 = angle\&.Finger1;
+254     Finger2 = angle\&.Finger2;
+255     Finger3 = angle\&.Finger3;
+256 }
+.fi
+.SH "Member Function Documentation"
+.PP 
+.SS "\fBjaco_msgs::FingerPosition\fP jaco::FingerAngles::constructFingersMsg ()"
+
+.PP
+.nf
+260 {
+261     jaco_msgs::FingerPosition angles;
+262     angles\&.finger1 = Finger1;
+263     angles\&.finger2 = Finger2;
+264     angles\&.finger3 = Finger3;
+265     return angles;
+266 }
+.fi
+.SS "void FingersPosition::InitStruct ()\fC [inline]\fP, \fC [inherited]\fP"
+This method will initialises all the values to 0 
+.PP
+.nf
+534     {
+535         Finger1       = 0\&.0f;
+536         Finger2       = 0\&.0f;
+537         Finger3       = 0\&.0f;
+538     }
+.fi
+.SS "bool jaco::FingerAngles::isCloseToOther (const \fBFingerAngles\fP & other, float tolerance) const"
+
+.PP
+.nf
+270 {
+271     bool status = true;
+272     status = status && areValuesClose(Finger1, other\&.Finger1, tolerance);
+273     status = status && areValuesClose(Finger2, other\&.Finger2, tolerance);
+274     status = status && areValuesClose(Finger3, other\&.Finger3, tolerance);
+275     return status;
+276 }
+.fi
+.SH "Member Data Documentation"
+.PP 
+.SS "float FingersPosition::Finger1\fC [inherited]\fP"
+
+.PP
+This is the value of the finger #1\&. The units will depends on the context it's been used\&. 
+.SS "float FingersPosition::Finger2\fC [inherited]\fP"
+
+.PP
+This is the value of the finger #2\&. The units will depends on the context it's been used\&. 
+.SS "float FingersPosition::Finger3\fC [inherited]\fP"
+
+.PP
+This is the value of the finger #3\&. The units will depends on the context it's been used\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Kinova-ROS from the source code\&.

@@ -1,0 +1,5 @@
+var structros_1_1serialization_1_1Serializer_3_01_1_1jaco__msgs_1_1StopResponse___3_01ContainerAllocator_01_4_01_4 =
+[
+    [ "allInOne", "d3/d8d/structros_1_1serialization_1_1Serializer_3_01_1_1jaco__msgs_1_1StopResponse___3_01ContainerAllocator_01_4_01_4.html#a7fb119ecf01fc9f71fe48cdfb7519bc3", null ],
+    [ "ROS_DECLARE_ALLINONE_SERIALIZER", "d3/d8d/structros_1_1serialization_1_1Serializer_3_01_1_1jaco__msgs_1_1StopResponse___3_01ContainerAllocator_01_4_01_4.html#a94484f511e6ba4e47c58585fb904a6ae", null ]
+];

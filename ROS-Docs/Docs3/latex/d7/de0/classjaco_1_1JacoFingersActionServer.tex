@@ -1,0 +1,234 @@
+\hypertarget{classjaco_1_1JacoFingersActionServer}{}\section{jaco\+:\+:Jaco\+Fingers\+Action\+Server Class Reference}
+\label{classjaco_1_1JacoFingersActionServer}\index{jaco\+::\+Jaco\+Fingers\+Action\+Server@{jaco\+::\+Jaco\+Fingers\+Action\+Server}}
+
+
+{\ttfamily \#include \char`\"{}jaco\+\_\+fingers\+\_\+action.\+h\char`\"{}}
+
+
+
+Collaboration diagram for jaco\+:\+:Jaco\+Fingers\+Action\+Server\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{d6/d35/classjaco_1_1JacoFingersActionServer__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classjaco_1_1JacoFingersActionServer_a642f494b27d513457e9f29de7a4b31b6}{action\+Callback} (const \hyperlink{namespacejaco__msgs_a4432ef01b2858fafbc445a38e7c6dcba}{jaco\+\_\+msgs\+::\+Set\+Fingers\+Position\+Goal\+Const\+Ptr} \&)
+\item 
+\hyperlink{classjaco_1_1JacoFingersActionServer_aae225d4ab0745de98795cf7af2132d0c}{Jaco\+Fingers\+Action\+Server} (\hyperlink{classjaco_1_1JacoComm}{Jaco\+Comm} \&, const ros\+::\+Node\+Handle \&n)
+\item 
+\hyperlink{classjaco_1_1JacoFingersActionServer_a0497dec496f6224031096e5f6735e9c8}{$\sim$\+Jaco\+Fingers\+Action\+Server} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+actionlib\+::\+Simple\+Action\+Server$<$ \hyperlink{namespacejaco__msgs_a6a86f786fe9f2e29693a22cec953c58c}{jaco\+\_\+msgs\+::\+Set\+Fingers\+Position\+Action} $>$ \hyperlink{classjaco_1_1JacoFingersActionServer_a34f6a67ccd8fe1ad2bc75873d20da0f1}{action\+\_\+server\+\_\+}
+\item 
+\hyperlink{classjaco_1_1JacoComm}{Jaco\+Comm} \& \hyperlink{classjaco_1_1JacoFingersActionServer_afbddf1665a5e66b79cc79cae0b2badeb}{arm\+\_\+comm\+\_\+}
+\item 
+\hyperlink{classjaco_1_1FingerAngles}{jaco\+::\+Finger\+Angles} \hyperlink{classjaco_1_1JacoFingersActionServer_a77586bea5c075f6439f6dc3858513e46}{last\+\_\+nonstall\+\_\+finger\+\_\+positions\+\_\+}
+\item 
+ros\+::\+Time \hyperlink{classjaco_1_1JacoFingersActionServer_ad9ee1e4c978970bdfac066f6dc9c4316}{last\+\_\+nonstall\+\_\+time\+\_\+}
+\item 
+ros\+::\+Node\+Handle \hyperlink{classjaco_1_1JacoFingersActionServer_a7cdaaf5a70f820aeef87a18fe24ff5ec}{node\+\_\+handle\+\_\+}
+\item 
+double \hyperlink{classjaco_1_1JacoFingersActionServer_a402a46cdd8ce3ac114cdd9f6e048f0e2}{rate\+\_\+hz\+\_\+}
+\item 
+double \hyperlink{classjaco_1_1JacoFingersActionServer_abd1f212225ef99b5880753f5c9261976}{stall\+\_\+interval\+\_\+seconds\+\_\+}
+\item 
+double \hyperlink{classjaco_1_1JacoFingersActionServer_a809ce35a92032be0b9e768fc29fd2cbf}{stall\+\_\+threshold\+\_\+}
+\item 
+float \hyperlink{classjaco_1_1JacoFingersActionServer_ad02d71429e1d137cb9fbd47cef703737}{tolerance\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{jaco\+::\+Jaco\+Fingers\+Action\+Server@{jaco\+::\+Jaco\+Fingers\+Action\+Server}!Jaco\+Fingers\+Action\+Server@{Jaco\+Fingers\+Action\+Server}}
+\index{Jaco\+Fingers\+Action\+Server@{Jaco\+Fingers\+Action\+Server}!jaco\+::\+Jaco\+Fingers\+Action\+Server@{jaco\+::\+Jaco\+Fingers\+Action\+Server}}
+\subsubsection[{\texorpdfstring{Jaco\+Fingers\+Action\+Server(\+Jaco\+Comm \&, const ros\+::\+Node\+Handle \&n)}{JacoFingersActionServer(JacoComm &, const ros::NodeHandle &n)}}]{\setlength{\rightskip}{0pt plus 5cm}jaco\+::\+Jaco\+Fingers\+Action\+Server\+::\+Jaco\+Fingers\+Action\+Server (
+\begin{DoxyParamCaption}
+\item[{{\bf Jaco\+Comm} \&}]{arm\+\_\+comm, }
+\item[{const ros\+::\+Node\+Handle \&}]{n}
+\end{DoxyParamCaption}
+)}\hypertarget{classjaco_1_1JacoFingersActionServer_aae225d4ab0745de98795cf7af2132d0c}{}\label{classjaco_1_1JacoFingersActionServer_aae225d4ab0745de98795cf7af2132d0c}
+
+\begin{DoxyCode}
+55     : \hyperlink{classjaco_1_1JacoFingersActionServer_afbddf1665a5e66b79cc79cae0b2badeb}{arm\_comm\_}(arm\_comm),
+56       \hyperlink{classjaco_1_1JacoFingersActionServer_a7cdaaf5a70f820aeef87a18fe24ff5ec}{node\_handle\_}(nh, \textcolor{stringliteral}{"fingers"}),
+57       \hyperlink{classjaco_1_1JacoFingersActionServer_a34f6a67ccd8fe1ad2bc75873d20da0f1}{action\_server\_}(\hyperlink{classjaco_1_1JacoFingersActionServer_a7cdaaf5a70f820aeef87a18fe24ff5ec}{node\_handle\_}, \textcolor{stringliteral}{"finger\_positions"},
+58                      boost::bind(&\hyperlink{classjaco_1_1JacoFingersActionServer_a642f494b27d513457e9f29de7a4b31b6}{JacoFingersActionServer::actionCallback}
+      , \textcolor{keyword}{this}, \_1), \textcolor{keyword}{false})
+59 \{
+60     \textcolor{keywordtype}{double} tolerance;
+61     \hyperlink{classjaco_1_1JacoFingersActionServer_a7cdaaf5a70f820aeef87a18fe24ff5ec}{node\_handle\_}.param<\textcolor{keywordtype}{double}>(\textcolor{stringliteral}{"stall\_interval\_seconds"}, 
+      \hyperlink{classjaco_1_1JacoFingersActionServer_abd1f212225ef99b5880753f5c9261976}{stall\_interval\_seconds\_}, 0.5);
+62     \hyperlink{classjaco_1_1JacoFingersActionServer_a7cdaaf5a70f820aeef87a18fe24ff5ec}{node\_handle\_}.param<\textcolor{keywordtype}{double}>(\textcolor{stringliteral}{"stall\_threshold"}, \hyperlink{classjaco_1_1JacoFingersActionServer_a809ce35a92032be0b9e768fc29fd2cbf}{stall\_threshold\_}, 1.0);
+63     \hyperlink{classjaco_1_1JacoFingersActionServer_a7cdaaf5a70f820aeef87a18fe24ff5ec}{node\_handle\_}.param<\textcolor{keywordtype}{double}>(\textcolor{stringliteral}{"rate\_hz"}, \hyperlink{classjaco_1_1JacoFingersActionServer_a402a46cdd8ce3ac114cdd9f6e048f0e2}{rate\_hz\_}, 10.0);
+64     \hyperlink{classjaco_1_1JacoFingersActionServer_a7cdaaf5a70f820aeef87a18fe24ff5ec}{node\_handle\_}.param<\textcolor{keywordtype}{double}>(\textcolor{stringliteral}{"tolerance"}, tolerance, 2.0);
+65     \hyperlink{classjaco_1_1JacoFingersActionServer_ad02d71429e1d137cb9fbd47cef703737}{tolerance\_} = \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{float}\textcolor{keyword}{>}(tolerance);
+66 
+67     \hyperlink{classjaco_1_1JacoFingersActionServer_a34f6a67ccd8fe1ad2bc75873d20da0f1}{action\_server\_}.start();
+68 \}
+\end{DoxyCode}
+\index{jaco\+::\+Jaco\+Fingers\+Action\+Server@{jaco\+::\+Jaco\+Fingers\+Action\+Server}!````~Jaco\+Fingers\+Action\+Server@{$\sim$\+Jaco\+Fingers\+Action\+Server}}
+\index{````~Jaco\+Fingers\+Action\+Server@{$\sim$\+Jaco\+Fingers\+Action\+Server}!jaco\+::\+Jaco\+Fingers\+Action\+Server@{jaco\+::\+Jaco\+Fingers\+Action\+Server}}
+\subsubsection[{\texorpdfstring{$\sim$\+Jaco\+Fingers\+Action\+Server()}{~JacoFingersActionServer()}}]{\setlength{\rightskip}{0pt plus 5cm}jaco\+::\+Jaco\+Fingers\+Action\+Server\+::$\sim$\+Jaco\+Fingers\+Action\+Server (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classjaco_1_1JacoFingersActionServer_a0497dec496f6224031096e5f6735e9c8}{}\label{classjaco_1_1JacoFingersActionServer_a0497dec496f6224031096e5f6735e9c8}
+
+\begin{DoxyCode}
+72 \{
+73 \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{jaco\+::\+Jaco\+Fingers\+Action\+Server@{jaco\+::\+Jaco\+Fingers\+Action\+Server}!action\+Callback@{action\+Callback}}
+\index{action\+Callback@{action\+Callback}!jaco\+::\+Jaco\+Fingers\+Action\+Server@{jaco\+::\+Jaco\+Fingers\+Action\+Server}}
+\subsubsection[{\texorpdfstring{action\+Callback(const jaco\+\_\+msgs\+::\+Set\+Fingers\+Position\+Goal\+Const\+Ptr \&)}{actionCallback(const jaco_msgs::SetFingersPositionGoalConstPtr &)}}]{\setlength{\rightskip}{0pt plus 5cm}void jaco\+::\+Jaco\+Fingers\+Action\+Server\+::action\+Callback (
+\begin{DoxyParamCaption}
+\item[{const {\bf jaco\+\_\+msgs\+::\+Set\+Fingers\+Position\+Goal\+Const\+Ptr} \&}]{goal}
+\end{DoxyParamCaption}
+)}\hypertarget{classjaco_1_1JacoFingersActionServer_a642f494b27d513457e9f29de7a4b31b6}{}\label{classjaco_1_1JacoFingersActionServer_a642f494b27d513457e9f29de7a4b31b6}
+
+\begin{DoxyCode}
+77 \{
+78     \textcolor{keywordflow}{if} ((\hyperlink{classjaco_1_1JacoFingersActionServer_afbddf1665a5e66b79cc79cae0b2badeb}{arm\_comm\_}.\hyperlink{classjaco_1_1JacoComm_a42e11ee165ee8f2b1af7e7060f488ce1}{numFingers}() < 3) && (goal->fingers.finger3 != 0.0))
+79     \{
+80         ROS\_WARN(\textcolor{stringliteral}{"Detected that the third finger command was non-zero even though there "}
+81                  \textcolor{stringliteral}{"are only two fingers on the gripper. The goal for the third finger "}
+82                  \textcolor{stringliteral}{"should be set to zero or you make experience delays in action results."});
+83     \}
+84 
+85     \hyperlink{structjaco__msgs_1_1SetFingersPositionFeedback__}{jaco\_msgs::SetFingersPositionFeedback} feedback;
+86     \hyperlink{structjaco__msgs_1_1SetFingersPositionResult__}{jaco\_msgs::SetFingersPositionResult} 
+      \hyperlink{Kinova_8API_8CommLayerUbuntu_8h_a900dac90961bada00f57c207562a6a9a}{result};
+87     FingerAngles current\_finger\_positions;
+88     ros::Time current\_time = ros::Time::now();
+89 
+90     \textcolor{keywordflow}{try}
+91     \{
+92         \hyperlink{classjaco_1_1JacoFingersActionServer_afbddf1665a5e66b79cc79cae0b2badeb}{arm\_comm\_}.\hyperlink{classjaco_1_1JacoComm_a7644bf1154b59bf4d8b97c200284e3fb}{getFingerPositions}(current\_finger\_positions);
+93 
+94         \textcolor{keywordflow}{if} (\hyperlink{classjaco_1_1JacoFingersActionServer_afbddf1665a5e66b79cc79cae0b2badeb}{arm\_comm\_}.\hyperlink{classjaco_1_1JacoComm_a872b8033cda5a9fe4ccdca2e89aa03d1}{isStopped}())
+95         \{
+96             ROS\_INFO(\textcolor{stringliteral}{"Could not complete finger action because the arm is stopped"});
+97             result.\hyperlink{structjaco__msgs_1_1SetFingersPositionResult___a5c4ac8ab3df0087e2ea584f4b419e91a}{fingers} = current\_finger\_positions.constructFingersMsg();
+98             \hyperlink{classjaco_1_1JacoFingersActionServer_a34f6a67ccd8fe1ad2bc75873d20da0f1}{action\_server\_}.setAborted(result);
+99             \textcolor{keywordflow}{return};
+100         \}
+101 
+102         \hyperlink{classjaco_1_1JacoFingersActionServer_ad9ee1e4c978970bdfac066f6dc9c4316}{last\_nonstall\_time\_} = current\_time;
+103         \hyperlink{classjaco_1_1JacoFingersActionServer_a77586bea5c075f6439f6dc3858513e46}{last\_nonstall\_finger\_positions\_} = current\_finger\_positions;
+104 
+105         FingerAngles target(goal->fingers);
+106         \hyperlink{classjaco_1_1JacoFingersActionServer_afbddf1665a5e66b79cc79cae0b2badeb}{arm\_comm\_}.\hyperlink{classjaco_1_1JacoComm_a5cdc217373b923f7de2ed468150281fa}{setFingerPositions}(target);
+107 
+108         \textcolor{comment}{// Loop until the action completed, is preempted, or fails in some way.}
+109         \textcolor{comment}{// timeout is left to the caller since the timeout may greatly depend on}
+110         \textcolor{comment}{// the context of the movement.}
+111         \textcolor{keywordflow}{while} (\textcolor{keyword}{true})
+112         \{
+113             ros::spinOnce();
+114 
+115             \textcolor{keywordflow}{if} (\hyperlink{classjaco_1_1JacoFingersActionServer_a34f6a67ccd8fe1ad2bc75873d20da0f1}{action\_server\_}.isPreemptRequested() || !ros::ok())
+116             \{
+117                 result.\hyperlink{structjaco__msgs_1_1SetFingersPositionResult___a5c4ac8ab3df0087e2ea584f4b419e91a}{fingers} = current\_finger\_positions.constructFingersMsg();
+118                 \hyperlink{classjaco_1_1JacoFingersActionServer_afbddf1665a5e66b79cc79cae0b2badeb}{arm\_comm\_}.\hyperlink{classjaco_1_1JacoComm_a54862830cd6414ae3ae48e46e54bf798}{stopAPI}();
+119                 \hyperlink{classjaco_1_1JacoFingersActionServer_afbddf1665a5e66b79cc79cae0b2badeb}{arm\_comm\_}.\hyperlink{classjaco_1_1JacoComm_a6b2a1fabc4e6c30da42c9a5e26757398}{startAPI}();
+120                 \hyperlink{classjaco_1_1JacoFingersActionServer_a34f6a67ccd8fe1ad2bc75873d20da0f1}{action\_server\_}.setPreempted(result);
+121                 \textcolor{keywordflow}{return};
+122             \}
+123             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\hyperlink{classjaco_1_1JacoFingersActionServer_afbddf1665a5e66b79cc79cae0b2badeb}{arm\_comm\_}.\hyperlink{classjaco_1_1JacoComm_a872b8033cda5a9fe4ccdca2e89aa03d1}{isStopped}())
+124             \{
+125                 result.\hyperlink{structjaco__msgs_1_1SetFingersPositionResult___a5c4ac8ab3df0087e2ea584f4b419e91a}{fingers} = current\_finger\_positions.constructFingersMsg();
+126                 \hyperlink{classjaco_1_1JacoFingersActionServer_a34f6a67ccd8fe1ad2bc75873d20da0f1}{action\_server\_}.setAborted(result);
+127                 \textcolor{keywordflow}{return};
+128             \}
+129 
+130             \hyperlink{classjaco_1_1JacoFingersActionServer_afbddf1665a5e66b79cc79cae0b2badeb}{arm\_comm\_}.\hyperlink{classjaco_1_1JacoComm_a7644bf1154b59bf4d8b97c200284e3fb}{getFingerPositions}(current\_finger\_positions);
+131             current\_time = ros::Time::now();
+132             feedback.\hyperlink{structjaco__msgs_1_1SetFingersPositionFeedback___ae2565d164d4f0daf1be357023e5d0be2}{fingers} = current\_finger\_positions.constructFingersMsg();
+133             \hyperlink{classjaco_1_1JacoFingersActionServer_a34f6a67ccd8fe1ad2bc75873d20da0f1}{action\_server\_}.publishFeedback(feedback);
+134 
+135             \textcolor{keywordflow}{if} (target.isCloseToOther(current\_finger\_positions, \hyperlink{classjaco_1_1JacoFingersActionServer_ad02d71429e1d137cb9fbd47cef703737}{tolerance\_}))
+136             \{
+137                 \textcolor{comment}{// Check if the action has succeeeded}
+138                 result.\hyperlink{structjaco__msgs_1_1SetFingersPositionResult___a5c4ac8ab3df0087e2ea584f4b419e91a}{fingers} = current\_finger\_positions.constructFingersMsg();
+139                 \hyperlink{classjaco_1_1JacoFingersActionServer_a34f6a67ccd8fe1ad2bc75873d20da0f1}{action\_server\_}.setSucceeded(result);
+140                 \textcolor{keywordflow}{return};
+141             \}
+142             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (!\hyperlink{classjaco_1_1JacoFingersActionServer_a77586bea5c075f6439f6dc3858513e46}{last\_nonstall\_finger\_positions\_}.
+      \hyperlink{classjaco_1_1FingerAngles_a1fb3bd563983bbe24350e89a6b96e715}{isCloseToOther}(current\_finger\_positions, \hyperlink{classjaco_1_1JacoFingersActionServer_a809ce35a92032be0b9e768fc29fd2cbf}{stall\_threshold\_}))
+143             \{
+144                 \textcolor{comment}{// Check if we are outside of a potential stall condition}
+145                 \hyperlink{classjaco_1_1JacoFingersActionServer_ad9ee1e4c978970bdfac066f6dc9c4316}{last\_nonstall\_time\_} = current\_time;
+146                 \hyperlink{classjaco_1_1JacoFingersActionServer_a77586bea5c075f6439f6dc3858513e46}{last\_nonstall\_finger\_positions\_} = current\_finger\_positions;
+147             \}
+148             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} ((current\_time - \hyperlink{classjaco_1_1JacoFingersActionServer_ad9ee1e4c978970bdfac066f6dc9c4316}{last\_nonstall\_time\_}).toSec() > 
+      \hyperlink{classjaco_1_1JacoFingersActionServer_abd1f212225ef99b5880753f5c9261976}{stall\_interval\_seconds\_})
+149             \{
+150                 \textcolor{comment}{// Check if the full stall condition has been meet}
+151                 result.\hyperlink{structjaco__msgs_1_1SetFingersPositionResult___a5c4ac8ab3df0087e2ea584f4b419e91a}{fingers} = current\_finger\_positions.constructFingersMsg();
+152                 \hyperlink{classjaco_1_1JacoFingersActionServer_afbddf1665a5e66b79cc79cae0b2badeb}{arm\_comm\_}.\hyperlink{classjaco_1_1JacoComm_a54862830cd6414ae3ae48e46e54bf798}{stopAPI}();
+153                 \hyperlink{classjaco_1_1JacoFingersActionServer_afbddf1665a5e66b79cc79cae0b2badeb}{arm\_comm\_}.\hyperlink{classjaco_1_1JacoComm_a6b2a1fabc4e6c30da42c9a5e26757398}{startAPI}();
+154                 \hyperlink{classjaco_1_1JacoFingersActionServer_a34f6a67ccd8fe1ad2bc75873d20da0f1}{action\_server\_}.setPreempted(result);
+155                 \textcolor{keywordflow}{return};
+156             \}
+157 
+158             ros::Rate(\hyperlink{classjaco_1_1JacoFingersActionServer_a402a46cdd8ce3ac114cdd9f6e048f0e2}{rate\_hz\_}).sleep();
+159         \}
+160     \}
+161     \textcolor{keywordflow}{catch}(\textcolor{keyword}{const} std::exception& \hyperlink{namespace__setup__util_acdce690b925de33d6249bbbfa1109d61}{e})
+162     \{
+163         result.\hyperlink{structjaco__msgs_1_1SetFingersPositionResult___a5c4ac8ab3df0087e2ea584f4b419e91a}{fingers} = current\_finger\_positions.constructFingersMsg();
+164         ROS\_ERROR\_STREAM(e.what());
+165         \hyperlink{classjaco_1_1JacoFingersActionServer_a34f6a67ccd8fe1ad2bc75873d20da0f1}{action\_server\_}.setAborted(result);
+166     \}
+167 \}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\index{jaco\+::\+Jaco\+Fingers\+Action\+Server@{jaco\+::\+Jaco\+Fingers\+Action\+Server}!action\+\_\+server\+\_\+@{action\+\_\+server\+\_\+}}
+\index{action\+\_\+server\+\_\+@{action\+\_\+server\+\_\+}!jaco\+::\+Jaco\+Fingers\+Action\+Server@{jaco\+::\+Jaco\+Fingers\+Action\+Server}}
+\subsubsection[{\texorpdfstring{action\+\_\+server\+\_\+}{action_server_}}]{\setlength{\rightskip}{0pt plus 5cm}actionlib\+::\+Simple\+Action\+Server$<${\bf jaco\+\_\+msgs\+::\+Set\+Fingers\+Position\+Action}$>$ jaco\+::\+Jaco\+Fingers\+Action\+Server\+::action\+\_\+server\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classjaco_1_1JacoFingersActionServer_a34f6a67ccd8fe1ad2bc75873d20da0f1}{}\label{classjaco_1_1JacoFingersActionServer_a34f6a67ccd8fe1ad2bc75873d20da0f1}
+\index{jaco\+::\+Jaco\+Fingers\+Action\+Server@{jaco\+::\+Jaco\+Fingers\+Action\+Server}!arm\+\_\+comm\+\_\+@{arm\+\_\+comm\+\_\+}}
+\index{arm\+\_\+comm\+\_\+@{arm\+\_\+comm\+\_\+}!jaco\+::\+Jaco\+Fingers\+Action\+Server@{jaco\+::\+Jaco\+Fingers\+Action\+Server}}
+\subsubsection[{\texorpdfstring{arm\+\_\+comm\+\_\+}{arm_comm_}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Jaco\+Comm}\& jaco\+::\+Jaco\+Fingers\+Action\+Server\+::arm\+\_\+comm\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classjaco_1_1JacoFingersActionServer_afbddf1665a5e66b79cc79cae0b2badeb}{}\label{classjaco_1_1JacoFingersActionServer_afbddf1665a5e66b79cc79cae0b2badeb}
+\index{jaco\+::\+Jaco\+Fingers\+Action\+Server@{jaco\+::\+Jaco\+Fingers\+Action\+Server}!last\+\_\+nonstall\+\_\+finger\+\_\+positions\+\_\+@{last\+\_\+nonstall\+\_\+finger\+\_\+positions\+\_\+}}
+\index{last\+\_\+nonstall\+\_\+finger\+\_\+positions\+\_\+@{last\+\_\+nonstall\+\_\+finger\+\_\+positions\+\_\+}!jaco\+::\+Jaco\+Fingers\+Action\+Server@{jaco\+::\+Jaco\+Fingers\+Action\+Server}}
+\subsubsection[{\texorpdfstring{last\+\_\+nonstall\+\_\+finger\+\_\+positions\+\_\+}{last_nonstall_finger_positions_}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf jaco\+::\+Finger\+Angles} jaco\+::\+Jaco\+Fingers\+Action\+Server\+::last\+\_\+nonstall\+\_\+finger\+\_\+positions\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classjaco_1_1JacoFingersActionServer_a77586bea5c075f6439f6dc3858513e46}{}\label{classjaco_1_1JacoFingersActionServer_a77586bea5c075f6439f6dc3858513e46}
+\index{jaco\+::\+Jaco\+Fingers\+Action\+Server@{jaco\+::\+Jaco\+Fingers\+Action\+Server}!last\+\_\+nonstall\+\_\+time\+\_\+@{last\+\_\+nonstall\+\_\+time\+\_\+}}
+\index{last\+\_\+nonstall\+\_\+time\+\_\+@{last\+\_\+nonstall\+\_\+time\+\_\+}!jaco\+::\+Jaco\+Fingers\+Action\+Server@{jaco\+::\+Jaco\+Fingers\+Action\+Server}}
+\subsubsection[{\texorpdfstring{last\+\_\+nonstall\+\_\+time\+\_\+}{last_nonstall_time_}}]{\setlength{\rightskip}{0pt plus 5cm}ros\+::\+Time jaco\+::\+Jaco\+Fingers\+Action\+Server\+::last\+\_\+nonstall\+\_\+time\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classjaco_1_1JacoFingersActionServer_ad9ee1e4c978970bdfac066f6dc9c4316}{}\label{classjaco_1_1JacoFingersActionServer_ad9ee1e4c978970bdfac066f6dc9c4316}
+\index{jaco\+::\+Jaco\+Fingers\+Action\+Server@{jaco\+::\+Jaco\+Fingers\+Action\+Server}!node\+\_\+handle\+\_\+@{node\+\_\+handle\+\_\+}}
+\index{node\+\_\+handle\+\_\+@{node\+\_\+handle\+\_\+}!jaco\+::\+Jaco\+Fingers\+Action\+Server@{jaco\+::\+Jaco\+Fingers\+Action\+Server}}
+\subsubsection[{\texorpdfstring{node\+\_\+handle\+\_\+}{node_handle_}}]{\setlength{\rightskip}{0pt plus 5cm}ros\+::\+Node\+Handle jaco\+::\+Jaco\+Fingers\+Action\+Server\+::node\+\_\+handle\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classjaco_1_1JacoFingersActionServer_a7cdaaf5a70f820aeef87a18fe24ff5ec}{}\label{classjaco_1_1JacoFingersActionServer_a7cdaaf5a70f820aeef87a18fe24ff5ec}
+\index{jaco\+::\+Jaco\+Fingers\+Action\+Server@{jaco\+::\+Jaco\+Fingers\+Action\+Server}!rate\+\_\+hz\+\_\+@{rate\+\_\+hz\+\_\+}}
+\index{rate\+\_\+hz\+\_\+@{rate\+\_\+hz\+\_\+}!jaco\+::\+Jaco\+Fingers\+Action\+Server@{jaco\+::\+Jaco\+Fingers\+Action\+Server}}
+\subsubsection[{\texorpdfstring{rate\+\_\+hz\+\_\+}{rate_hz_}}]{\setlength{\rightskip}{0pt plus 5cm}double jaco\+::\+Jaco\+Fingers\+Action\+Server\+::rate\+\_\+hz\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classjaco_1_1JacoFingersActionServer_a402a46cdd8ce3ac114cdd9f6e048f0e2}{}\label{classjaco_1_1JacoFingersActionServer_a402a46cdd8ce3ac114cdd9f6e048f0e2}
+\index{jaco\+::\+Jaco\+Fingers\+Action\+Server@{jaco\+::\+Jaco\+Fingers\+Action\+Server}!stall\+\_\+interval\+\_\+seconds\+\_\+@{stall\+\_\+interval\+\_\+seconds\+\_\+}}
+\index{stall\+\_\+interval\+\_\+seconds\+\_\+@{stall\+\_\+interval\+\_\+seconds\+\_\+}!jaco\+::\+Jaco\+Fingers\+Action\+Server@{jaco\+::\+Jaco\+Fingers\+Action\+Server}}
+\subsubsection[{\texorpdfstring{stall\+\_\+interval\+\_\+seconds\+\_\+}{stall_interval_seconds_}}]{\setlength{\rightskip}{0pt plus 5cm}double jaco\+::\+Jaco\+Fingers\+Action\+Server\+::stall\+\_\+interval\+\_\+seconds\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classjaco_1_1JacoFingersActionServer_abd1f212225ef99b5880753f5c9261976}{}\label{classjaco_1_1JacoFingersActionServer_abd1f212225ef99b5880753f5c9261976}
+\index{jaco\+::\+Jaco\+Fingers\+Action\+Server@{jaco\+::\+Jaco\+Fingers\+Action\+Server}!stall\+\_\+threshold\+\_\+@{stall\+\_\+threshold\+\_\+}}
+\index{stall\+\_\+threshold\+\_\+@{stall\+\_\+threshold\+\_\+}!jaco\+::\+Jaco\+Fingers\+Action\+Server@{jaco\+::\+Jaco\+Fingers\+Action\+Server}}
+\subsubsection[{\texorpdfstring{stall\+\_\+threshold\+\_\+}{stall_threshold_}}]{\setlength{\rightskip}{0pt plus 5cm}double jaco\+::\+Jaco\+Fingers\+Action\+Server\+::stall\+\_\+threshold\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classjaco_1_1JacoFingersActionServer_a809ce35a92032be0b9e768fc29fd2cbf}{}\label{classjaco_1_1JacoFingersActionServer_a809ce35a92032be0b9e768fc29fd2cbf}
+\index{jaco\+::\+Jaco\+Fingers\+Action\+Server@{jaco\+::\+Jaco\+Fingers\+Action\+Server}!tolerance\+\_\+@{tolerance\+\_\+}}
+\index{tolerance\+\_\+@{tolerance\+\_\+}!jaco\+::\+Jaco\+Fingers\+Action\+Server@{jaco\+::\+Jaco\+Fingers\+Action\+Server}}
+\subsubsection[{\texorpdfstring{tolerance\+\_\+}{tolerance_}}]{\setlength{\rightskip}{0pt plus 5cm}float jaco\+::\+Jaco\+Fingers\+Action\+Server\+::tolerance\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classjaco_1_1JacoFingersActionServer_ad02d71429e1d137cb9fbd47cef703737}{}\label{classjaco_1_1JacoFingersActionServer_ad02d71429e1d137cb9fbd47cef703737}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Longfei/\+Desktop/catkin\+\_\+\+Kinova\+R\+O\+S/src/jaco-\/ros/jaco\+\_\+driver/include/jaco\+\_\+driver/\hyperlink{jaco__fingers__action_8h}{jaco\+\_\+fingers\+\_\+action.\+h}\item 
+D\+:/\+Longfei/\+Desktop/catkin\+\_\+\+Kinova\+R\+O\+S/src/jaco-\/ros/jaco\+\_\+driver/src/\hyperlink{jaco__fingers__action_8cpp}{jaco\+\_\+fingers\+\_\+action.\+cpp}\end{DoxyCompactItemize}

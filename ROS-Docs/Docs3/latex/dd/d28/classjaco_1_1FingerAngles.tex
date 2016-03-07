@@ -1,0 +1,180 @@
+\hypertarget{classjaco_1_1FingerAngles}{}\section{jaco\+:\+:Finger\+Angles Class Reference}
+\label{classjaco_1_1FingerAngles}\index{jaco\+::\+Finger\+Angles@{jaco\+::\+Finger\+Angles}}
+
+
+{\ttfamily \#include \char`\"{}jaco\+\_\+types.\+h\char`\"{}}
+
+
+
+Inheritance diagram for jaco\+:\+:Finger\+Angles\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=203pt]{de/df2/classjaco_1_1FingerAngles__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for jaco\+:\+:Finger\+Angles\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=203pt]{d6/d68/classjaco_1_1FingerAngles__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{namespacejaco__msgs_a8d92f0e718e45f82b621ddf049a2f110}{jaco\+\_\+msgs\+::\+Finger\+Position} \hyperlink{classjaco_1_1FingerAngles_afe84a9beae8b4a0617ace657d7608a49}{construct\+Fingers\+Msg} ()
+\item 
+\hyperlink{classjaco_1_1FingerAngles_a7fab91acaaa9865fd50980053bf21788}{Finger\+Angles} ()
+\item 
+\hyperlink{classjaco_1_1FingerAngles_a6a5ffbe70cd136c7feef97ee6748577a}{Finger\+Angles} (const \hyperlink{namespacejaco__msgs_a8d92f0e718e45f82b621ddf049a2f110}{jaco\+\_\+msgs\+::\+Finger\+Position} \&position)
+\item 
+\hyperlink{classjaco_1_1FingerAngles_aba8b42d3e90e791a7b50f2b753be8542}{Finger\+Angles} (const \hyperlink{structFingersPosition}{Fingers\+Position} \&angle)
+\item 
+void \hyperlink{structFingersPosition_a2d958923675995d54d56e59f8549495d}{Init\+Struct} ()
+\item 
+bool \hyperlink{classjaco_1_1FingerAngles_a1fb3bd563983bbe24350e89a6b96e715}{is\+Close\+To\+Other} (const \hyperlink{classjaco_1_1FingerAngles}{Finger\+Angles} \&, float tolerance) const 
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float \hyperlink{structFingersPosition_a216f8d64e6a9c7aab84e4269ccb27e66}{Finger1}
+\begin{DoxyCompactList}\small\item\em This is the value of the finger \#1. The units will depends on the context it\textquotesingle{}s been used. \end{DoxyCompactList}\item 
+float \hyperlink{structFingersPosition_a0ec9675672721d61fb13bbc2db3d3ef9}{Finger2}
+\begin{DoxyCompactList}\small\item\em This is the value of the finger \#2. The units will depends on the context it\textquotesingle{}s been used. \end{DoxyCompactList}\item 
+float \hyperlink{structFingersPosition_a03c819e4c20367e36e62a864bf829160}{Finger3}
+\begin{DoxyCompactList}\small\item\em This is the value of the finger \#3. The units will depends on the context it\textquotesingle{}s been used. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{jaco\+::\+Finger\+Angles@{jaco\+::\+Finger\+Angles}!Finger\+Angles@{Finger\+Angles}}
+\index{Finger\+Angles@{Finger\+Angles}!jaco\+::\+Finger\+Angles@{jaco\+::\+Finger\+Angles}}
+\subsubsection[{\texorpdfstring{Finger\+Angles()}{FingerAngles()}}]{\setlength{\rightskip}{0pt plus 5cm}jaco\+::\+Finger\+Angles\+::\+Finger\+Angles (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classjaco_1_1FingerAngles_a7fab91acaaa9865fd50980053bf21788}{}\label{classjaco_1_1FingerAngles_a7fab91acaaa9865fd50980053bf21788}
+
+\begin{DoxyCode}
+105 \{\}
+\end{DoxyCode}
+\index{jaco\+::\+Finger\+Angles@{jaco\+::\+Finger\+Angles}!Finger\+Angles@{Finger\+Angles}}
+\index{Finger\+Angles@{Finger\+Angles}!jaco\+::\+Finger\+Angles@{jaco\+::\+Finger\+Angles}}
+\subsubsection[{\texorpdfstring{Finger\+Angles(const jaco\+\_\+msgs\+::\+Finger\+Position \&position)}{FingerAngles(const jaco_msgs::FingerPosition &position)}}]{\setlength{\rightskip}{0pt plus 5cm}jaco\+::\+Finger\+Angles\+::\+Finger\+Angles (
+\begin{DoxyParamCaption}
+\item[{const {\bf jaco\+\_\+msgs\+::\+Finger\+Position} \&}]{position}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [explicit]}}\hypertarget{classjaco_1_1FingerAngles_a6a5ffbe70cd136c7feef97ee6748577a}{}\label{classjaco_1_1FingerAngles_a6a5ffbe70cd136c7feef97ee6748577a}
+
+\begin{DoxyCode}
+244 \{
+245     \hyperlink{structFingersPosition_a216f8d64e6a9c7aab84e4269ccb27e66}{Finger1} = position.\hyperlink{structjaco__msgs_1_1FingerPosition___a5e08265efb8023ba04d99d556e186b14}{finger1};
+246     \hyperlink{structFingersPosition_a0ec9675672721d61fb13bbc2db3d3ef9}{Finger2} = position.\hyperlink{structjaco__msgs_1_1FingerPosition___a7dcdd9f48dc0ff847c0170a096038917}{finger2};
+247     \hyperlink{structFingersPosition_a03c819e4c20367e36e62a864bf829160}{Finger3} = position.\hyperlink{structjaco__msgs_1_1FingerPosition___abb7ec1eff7489809a20c32b8ea19386b}{finger3};
+248 \}
+\end{DoxyCode}
+\index{jaco\+::\+Finger\+Angles@{jaco\+::\+Finger\+Angles}!Finger\+Angles@{Finger\+Angles}}
+\index{Finger\+Angles@{Finger\+Angles}!jaco\+::\+Finger\+Angles@{jaco\+::\+Finger\+Angles}}
+\subsubsection[{\texorpdfstring{Finger\+Angles(const Fingers\+Position \&angle)}{FingerAngles(const FingersPosition &angle)}}]{\setlength{\rightskip}{0pt plus 5cm}jaco\+::\+Finger\+Angles\+::\+Finger\+Angles (
+\begin{DoxyParamCaption}
+\item[{const {\bf Fingers\+Position} \&}]{angle}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [explicit]}}\hypertarget{classjaco_1_1FingerAngles_aba8b42d3e90e791a7b50f2b753be8542}{}\label{classjaco_1_1FingerAngles_aba8b42d3e90e791a7b50f2b753be8542}
+
+\begin{DoxyCode}
+252 \{
+253     \hyperlink{structFingersPosition_a216f8d64e6a9c7aab84e4269ccb27e66}{Finger1} = angle.\hyperlink{structFingersPosition_a216f8d64e6a9c7aab84e4269ccb27e66}{Finger1};
+254     \hyperlink{structFingersPosition_a0ec9675672721d61fb13bbc2db3d3ef9}{Finger2} = angle.\hyperlink{structFingersPosition_a0ec9675672721d61fb13bbc2db3d3ef9}{Finger2};
+255     \hyperlink{structFingersPosition_a03c819e4c20367e36e62a864bf829160}{Finger3} = angle.\hyperlink{structFingersPosition_a03c819e4c20367e36e62a864bf829160}{Finger3};
+256 \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{jaco\+::\+Finger\+Angles@{jaco\+::\+Finger\+Angles}!construct\+Fingers\+Msg@{construct\+Fingers\+Msg}}
+\index{construct\+Fingers\+Msg@{construct\+Fingers\+Msg}!jaco\+::\+Finger\+Angles@{jaco\+::\+Finger\+Angles}}
+\subsubsection[{\texorpdfstring{construct\+Fingers\+Msg()}{constructFingersMsg()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf jaco\+\_\+msgs\+::\+Finger\+Position} jaco\+::\+Finger\+Angles\+::construct\+Fingers\+Msg (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classjaco_1_1FingerAngles_afe84a9beae8b4a0617ace657d7608a49}{}\label{classjaco_1_1FingerAngles_afe84a9beae8b4a0617ace657d7608a49}
+
+\begin{DoxyCode}
+260 \{
+261     \hyperlink{structjaco__msgs_1_1FingerPosition__}{jaco\_msgs::FingerPosition} \hyperlink{namespacejoint__angle__workout_a44cb6da34666d45961b26233ed5264bf}{angles};
+262     angles.\hyperlink{structjaco__msgs_1_1FingerPosition___a5e08265efb8023ba04d99d556e186b14}{finger1} = \hyperlink{structFingersPosition_a216f8d64e6a9c7aab84e4269ccb27e66}{Finger1};
+263     angles.\hyperlink{structjaco__msgs_1_1FingerPosition___a7dcdd9f48dc0ff847c0170a096038917}{finger2} = \hyperlink{structFingersPosition_a0ec9675672721d61fb13bbc2db3d3ef9}{Finger2};
+264     angles.\hyperlink{structjaco__msgs_1_1FingerPosition___abb7ec1eff7489809a20c32b8ea19386b}{finger3} = \hyperlink{structFingersPosition_a03c819e4c20367e36e62a864bf829160}{Finger3};
+265     \textcolor{keywordflow}{return} \hyperlink{namespacejoint__angle__workout_a44cb6da34666d45961b26233ed5264bf}{angles};
+266 \}
+\end{DoxyCode}
+\index{jaco\+::\+Finger\+Angles@{jaco\+::\+Finger\+Angles}!Init\+Struct@{Init\+Struct}}
+\index{Init\+Struct@{Init\+Struct}!jaco\+::\+Finger\+Angles@{jaco\+::\+Finger\+Angles}}
+\subsubsection[{\texorpdfstring{Init\+Struct()}{InitStruct()}}]{\setlength{\rightskip}{0pt plus 5cm}void Fingers\+Position\+::\+Init\+Struct (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [inherited]}}\hypertarget{structFingersPosition_a2d958923675995d54d56e59f8549495d}{}\label{structFingersPosition_a2d958923675995d54d56e59f8549495d}
+This method will initialises all the values to 0 
+\begin{DoxyCode}
+534     \{
+535         \hyperlink{structFingersPosition_a216f8d64e6a9c7aab84e4269ccb27e66}{Finger1}       = 0.0f;
+536         \hyperlink{structFingersPosition_a0ec9675672721d61fb13bbc2db3d3ef9}{Finger2}       = 0.0f;
+537         \hyperlink{structFingersPosition_a03c819e4c20367e36e62a864bf829160}{Finger3}       = 0.0f;
+538     \}
+\end{DoxyCode}
+\index{jaco\+::\+Finger\+Angles@{jaco\+::\+Finger\+Angles}!is\+Close\+To\+Other@{is\+Close\+To\+Other}}
+\index{is\+Close\+To\+Other@{is\+Close\+To\+Other}!jaco\+::\+Finger\+Angles@{jaco\+::\+Finger\+Angles}}
+\subsubsection[{\texorpdfstring{is\+Close\+To\+Other(const Finger\+Angles \&, float tolerance) const }{isCloseToOther(const FingerAngles &, float tolerance) const }}]{\setlength{\rightskip}{0pt plus 5cm}bool jaco\+::\+Finger\+Angles\+::is\+Close\+To\+Other (
+\begin{DoxyParamCaption}
+\item[{const {\bf Finger\+Angles} \&}]{other, }
+\item[{float}]{tolerance}
+\end{DoxyParamCaption}
+) const}\hypertarget{classjaco_1_1FingerAngles_a1fb3bd563983bbe24350e89a6b96e715}{}\label{classjaco_1_1FingerAngles_a1fb3bd563983bbe24350e89a6b96e715}
+
+\begin{DoxyCode}
+270 \{
+271     \textcolor{keywordtype}{bool} status = \textcolor{keyword}{true};
+272     status = status && \hyperlink{namespacejaco_a09e679eeb93252a2cf092b064e724125}{areValuesClose}(\hyperlink{structFingersPosition_a216f8d64e6a9c7aab84e4269ccb27e66}{Finger1}, other.Finger1, tolerance);
+273     status = status && \hyperlink{namespacejaco_a09e679eeb93252a2cf092b064e724125}{areValuesClose}(\hyperlink{structFingersPosition_a0ec9675672721d61fb13bbc2db3d3ef9}{Finger2}, other.Finger2, tolerance);
+274     status = status && \hyperlink{namespacejaco_a09e679eeb93252a2cf092b064e724125}{areValuesClose}(\hyperlink{structFingersPosition_a03c819e4c20367e36e62a864bf829160}{Finger3}, other.Finger3, tolerance);
+275     \textcolor{keywordflow}{return} status;
+276 \}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\index{jaco\+::\+Finger\+Angles@{jaco\+::\+Finger\+Angles}!Finger1@{Finger1}}
+\index{Finger1@{Finger1}!jaco\+::\+Finger\+Angles@{jaco\+::\+Finger\+Angles}}
+\subsubsection[{\texorpdfstring{Finger1}{Finger1}}]{\setlength{\rightskip}{0pt plus 5cm}float Fingers\+Position\+::\+Finger1\hspace{0.3cm}{\ttfamily [inherited]}}\hypertarget{structFingersPosition_a216f8d64e6a9c7aab84e4269ccb27e66}{}\label{structFingersPosition_a216f8d64e6a9c7aab84e4269ccb27e66}
+
+
+This is the value of the finger \#1. The units will depends on the context it\textquotesingle{}s been used. 
+
+\index{jaco\+::\+Finger\+Angles@{jaco\+::\+Finger\+Angles}!Finger2@{Finger2}}
+\index{Finger2@{Finger2}!jaco\+::\+Finger\+Angles@{jaco\+::\+Finger\+Angles}}
+\subsubsection[{\texorpdfstring{Finger2}{Finger2}}]{\setlength{\rightskip}{0pt plus 5cm}float Fingers\+Position\+::\+Finger2\hspace{0.3cm}{\ttfamily [inherited]}}\hypertarget{structFingersPosition_a0ec9675672721d61fb13bbc2db3d3ef9}{}\label{structFingersPosition_a0ec9675672721d61fb13bbc2db3d3ef9}
+
+
+This is the value of the finger \#2. The units will depends on the context it\textquotesingle{}s been used. 
+
+\index{jaco\+::\+Finger\+Angles@{jaco\+::\+Finger\+Angles}!Finger3@{Finger3}}
+\index{Finger3@{Finger3}!jaco\+::\+Finger\+Angles@{jaco\+::\+Finger\+Angles}}
+\subsubsection[{\texorpdfstring{Finger3}{Finger3}}]{\setlength{\rightskip}{0pt plus 5cm}float Fingers\+Position\+::\+Finger3\hspace{0.3cm}{\ttfamily [inherited]}}\hypertarget{structFingersPosition_a03c819e4c20367e36e62a864bf829160}{}\label{structFingersPosition_a03c819e4c20367e36e62a864bf829160}
+
+
+This is the value of the finger \#3. The units will depends on the context it\textquotesingle{}s been used. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Longfei/\+Desktop/catkin\+\_\+\+Kinova\+R\+O\+S/src/jaco-\/ros/jaco\+\_\+driver/include/jaco\+\_\+driver/\hyperlink{jaco__types_8h}{jaco\+\_\+types.\+h}\item 
+D\+:/\+Longfei/\+Desktop/catkin\+\_\+\+Kinova\+R\+O\+S/src/jaco-\/ros/jaco\+\_\+driver/src/\hyperlink{jaco__types_8cpp}{jaco\+\_\+types.\+cpp}\end{DoxyCompactItemize}

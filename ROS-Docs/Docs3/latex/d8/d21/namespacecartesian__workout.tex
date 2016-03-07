@@ -1,0 +1,76 @@
+\hypertarget{namespacecartesian__workout}{}\section{cartesian\+\_\+workout Namespace Reference}
+\label{namespacecartesian__workout}\index{cartesian\+\_\+workout@{cartesian\+\_\+workout}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{namespacecartesian__workout_a1fb7cd9a49c4af0ae2cf8cab45335d40}{cartesian\+\_\+pose\+\_\+client} (position, orientation)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{namespacecartesian__workout_a9cc10da8ef79d18715644543b9794d80}{mag} = np.\+sqrt(sum(np.\+power(\hyperlink{namespacecartesian__workout_a967ea83284096aa4c94c0b41daa5df6c}{raw\+\_\+pose}\mbox{[}3\+:\mbox{]}, 2)))
+\item 
+\hyperlink{namespacecartesian__workout_ab293192d190a24c9cb8edbea4ef33862}{poses} = \hyperlink{namespacegoal__generators_acc20fd60c84b4f30491d22bf16139668}{goal\+\_\+generators.\+random\+\_\+pose\+\_\+generator}(int(sys.\+argv\mbox{[}3\mbox{]}))
+\item 
+list \hyperlink{namespacecartesian__workout_a967ea83284096aa4c94c0b41daa5df6c}{raw\+\_\+pose} = \mbox{[}float(n) for n in sys.\+argv\mbox{[}2\+:\mbox{]}\mbox{]}
+\item 
+\hyperlink{namespacecartesian__workout_ac2ac6ec3a92f53155c4912cbf5c93604}{result} = \hyperlink{namespacecartesian__workout_a1fb7cd9a49c4af0ae2cf8cab45335d40}{cartesian\+\_\+pose\+\_\+client}(pos, orient)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyVerb}A helper program to test cartesian goals for the JACO and MICO arms.\end{DoxyVerb}
+ 
+
+\subsection{Function Documentation}
+\index{cartesian\+\_\+workout@{cartesian\+\_\+workout}!cartesian\+\_\+pose\+\_\+client@{cartesian\+\_\+pose\+\_\+client}}
+\index{cartesian\+\_\+pose\+\_\+client@{cartesian\+\_\+pose\+\_\+client}!cartesian\+\_\+workout@{cartesian\+\_\+workout}}
+\subsubsection[{\texorpdfstring{cartesian\+\_\+pose\+\_\+client(position, orientation)}{cartesian_pose_client(position, orientation)}}]{\setlength{\rightskip}{0pt plus 5cm}def cartesian\+\_\+workout.\+cartesian\+\_\+pose\+\_\+client (
+\begin{DoxyParamCaption}
+\item[{}]{position, }
+\item[{}]{orientation}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacecartesian__workout_a1fb7cd9a49c4af0ae2cf8cab45335d40}{}\label{namespacecartesian__workout_a1fb7cd9a49c4af0ae2cf8cab45335d40}
+\begin{DoxyVerb}Send a cartesian goal to the action server.\end{DoxyVerb}
+ 
+\begin{DoxyCode}
+18 \textcolor{keyword}{def }\hyperlink{namespacecartesian__workout_a1fb7cd9a49c4af0ae2cf8cab45335d40}{cartesian\_pose\_client}(position, orientation):
+19     \textcolor{stringliteral}{"""Send a cartesian goal to the action server."""}
+20     action\_address = \textcolor{stringliteral}{'/'} + str(sys.argv[1]) + \textcolor{stringliteral}{'\_arm\_driver/arm\_pose/arm\_pose'}
+21     client = actionlib.SimpleActionClient(action\_address, 
+      \hyperlink{classjaco__msgs_1_1msg_1_1__ArmPoseAction_1_1ArmPoseAction}{jaco\_msgs.msg.ArmPoseAction})
+22     client.wait\_for\_server()
+23 
+24     goal = \hyperlink{classjaco__msgs_1_1msg_1_1__ArmPoseGoal_1_1ArmPoseGoal}{jaco\_msgs.msg.ArmPoseGoal}()
+25     goal.pose.header = std\_msgs.msg.Header(frame\_id=(str(sys.argv[1]) + \textcolor{stringliteral}{'\_api\_origin'}))
+26     goal.pose.pose.position = geometry\_msgs.msg.Point(
+27         x=position[0], y=position[1], z=position[2])
+28     goal.pose.pose.orientation = geometry\_msgs.msg.Quaternion(
+29         x=orientation[0], y=orientation[1], z=orientation[2], w=orientation[3])
+30 
+31     client.send\_goal(goal)
+32 
+33     \textcolor{keywordflow}{if} client.wait\_for\_result(rospy.Duration(10.0)):
+34         \textcolor{keywordflow}{return} client.get\_result()
+35     \textcolor{keywordflow}{else}:
+36         client.cancel\_all\_goals()
+37         print(\textcolor{stringliteral}{'        the cartesian action timed-out'})
+38         \textcolor{keywordflow}{return} \textcolor{keywordtype}{None}
+39 
+40 
+\end{DoxyCode}
+
+
+\subsection{Variable Documentation}
+\index{cartesian\+\_\+workout@{cartesian\+\_\+workout}!mag@{mag}}
+\index{mag@{mag}!cartesian\+\_\+workout@{cartesian\+\_\+workout}}
+\subsubsection[{\texorpdfstring{mag}{mag}}]{\setlength{\rightskip}{0pt plus 5cm}cartesian\+\_\+workout.\+mag = np.\+sqrt(sum(np.\+power({\bf raw\+\_\+pose}\mbox{[}3\+:\mbox{]}, 2)))}\hypertarget{namespacecartesian__workout_a9cc10da8ef79d18715644543b9794d80}{}\label{namespacecartesian__workout_a9cc10da8ef79d18715644543b9794d80}
+\index{cartesian\+\_\+workout@{cartesian\+\_\+workout}!poses@{poses}}
+\index{poses@{poses}!cartesian\+\_\+workout@{cartesian\+\_\+workout}}
+\subsubsection[{\texorpdfstring{poses}{poses}}]{\setlength{\rightskip}{0pt plus 5cm}list cartesian\+\_\+workout.\+poses = {\bf goal\+\_\+generators.\+random\+\_\+pose\+\_\+generator}(int(sys.\+argv\mbox{[}3\mbox{]}))}\hypertarget{namespacecartesian__workout_ab293192d190a24c9cb8edbea4ef33862}{}\label{namespacecartesian__workout_ab293192d190a24c9cb8edbea4ef33862}
+\index{cartesian\+\_\+workout@{cartesian\+\_\+workout}!raw\+\_\+pose@{raw\+\_\+pose}}
+\index{raw\+\_\+pose@{raw\+\_\+pose}!cartesian\+\_\+workout@{cartesian\+\_\+workout}}
+\subsubsection[{\texorpdfstring{raw\+\_\+pose}{raw_pose}}]{\setlength{\rightskip}{0pt plus 5cm}list cartesian\+\_\+workout.\+raw\+\_\+pose = \mbox{[}float(n) for n in sys.\+argv\mbox{[}2\+:\mbox{]}\mbox{]}}\hypertarget{namespacecartesian__workout_a967ea83284096aa4c94c0b41daa5df6c}{}\label{namespacecartesian__workout_a967ea83284096aa4c94c0b41daa5df6c}
+\index{cartesian\+\_\+workout@{cartesian\+\_\+workout}!result@{result}}
+\index{result@{result}!cartesian\+\_\+workout@{cartesian\+\_\+workout}}
+\subsubsection[{\texorpdfstring{result}{result}}]{\setlength{\rightskip}{0pt plus 5cm}cartesian\+\_\+workout.\+result = {\bf cartesian\+\_\+pose\+\_\+client}(pos, orient)}\hypertarget{namespacecartesian__workout_ac2ac6ec3a92f53155c4912cbf5c93604}{}\label{namespacecartesian__workout_ac2ac6ec3a92f53155c4912cbf5c93604}
