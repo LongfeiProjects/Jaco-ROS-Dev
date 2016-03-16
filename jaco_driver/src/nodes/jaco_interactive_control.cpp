@@ -8,13 +8,46 @@
 #include "jaco_driver/jaco_api.h"
 #include "jaco_driver/jaco_arm.h"
 
+#include <kinova/KinovaTypes.h>
+#include "jaco_driver/jaco_types.h"
+#include <actionlib/client/simple_action_client.h>
+#include "jaco_driver/jaco_fingers_action.h"
+
+#include <algorithm>
+
+// Create actionlib client
+typedef actionlib::SimpleActionClient<jaco_msgs::SetFingersPositionAction> Client;
+
+
+//void processFeedback();
 void processFeedback(
-    const visualization_msgs::InteractiveMarkerFeedbackConstPtr &feedback )
+    const visualization_msgs::InteractiveMarkerFeedbackConstPtr &feedback)
 {
-  ROS_INFO_STREAM( feedback->marker_name << " is now at "
-      << feedback->pose.position.x << ", " << feedback->pose.position.y
-      << ", " << feedback->pose.position.z );
+//  ROS_INFO_STREAM( feedback->marker_name << " is now at "
+//      << feedback->pose.position.x << ", " << feedback->pose.position.y
+//      << ", " << feedback->pose.position.z );
+
+  Client client("/mico_arm_driver/fingers/finger_positions", true);
+  jaco_msgs::SetFingersPositionGoal goal;
+
+  client.waitForServer();
+  // limit the range of marker to [0 10] before mapping to finger position
+  float markerPos;
+  float maxMarkerPose = 2.0f;
+  markerPos = std::min(maxMarkerPose, std::max(0.0f,float(feedback->pose.position.x)));
+  // map marker position to gripper position
+  goal.fingers.finger1 = markerPos/maxMarkerPose*5000;
+  goal.fingers.finger2 = markerPos/maxMarkerPose*5000;
+  goal.fingers.finger3 = 0.0;
+  client.sendGoal(goal);
+
+      ROS_INFO("client send goal: %f \n", goal.fingers.finger1);
+
+//  client.waitForResult(ros::Duration(1.0));
+//  if(client.getState()==actionlib::SimpleClientGoalState::SUCCEEDED)
+//      printf("Current State: %s\n", client.getState().toString().c_str());
 }
+
 
 int main(int argc, char** argv)
 {
@@ -23,6 +56,8 @@ int main(int argc, char** argv)
   boost::recursive_mutex api_mutex;
 
   bool is_first_init = true;
+
+
 
 
   // create an interactive marker server on the topic namespace jaco_interactive_control
@@ -69,34 +104,43 @@ int main(int argc, char** argv)
   // tell the server to call processFeedback() when feedback arrives for it
   server.insert(int_marker, &processFeedback);
 
+
   // 'commit' changes and send to all clients
   server.applyChanges();
 
   // start the ROS main loop
-//  ros::spin();
+ ros::spin();
 
-  while (ros::ok())
-  {
-      try
-      {
-          jaco::JacoComm comm(nh, api_mutex, is_first_init);
-          jaco::JacoArm jaco(comm, nh);
-          ros::spin();
-      }
-      catch(const std::exception& e)
-      {
-          ROS_ERROR_STREAM(e.what());
-          jaco::JacoAPI api;
-          boost::recursive_mutex::scoped_lock lock(api_mutex);
-          api.closeAPI();
-          ros::Duration(1.0).sleep();
-      }
 
-      is_first_init = false;
-  }
+
+
+//  while (ros::ok())
+//  {
+//      try
+//      {
+//          jaco::JacoComm comm(nh, api_mutex, is_first_init);
+//          jaco::JacoArm jaco(comm, nh);
+
+//          ros::spin();
+//      }
+//      catch(const std::exception& e)
+//      {
+//          ROS_ERROR_STREAM(e.what());
+//          jaco::JacoAPI api;
+//          boost::recursive_mutex::scoped_lock lock(api_mutex);
+//          api.closeAPI();
+//          ros::Duration(1.0).sleep();
+//      }
+
+//      is_first_init = false;
+//  }
+
   return 0;
 
 
 
 }
+
+
+
 // %Tag(fullSource)%
