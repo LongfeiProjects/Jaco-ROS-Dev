@@ -11,6 +11,8 @@ find_package(catkin REQUIRED dynamic_reconfigure COMPONENTS
   sensor_msgs
   std_msgs
   tf
+  interactive_markers
+  visualization_msgs
 )
 generate_dynamic_reconfigure_options(
   #cfg/JacoPositionConfig.cfg
@@ -21,7 +23,7 @@ link_directories(${PROJECT_SOURCE_DIR}/lib/${CMAKE_LIBRARY_ARCHITECTURE})
 catkin_package(
   INCLUDE_DIRS include
 #  LIBRARIES jaco_driver
-  CATKIN_DEPENDS actionlib actionlib_msgs geometry_msgs jaco_msgs roscpp rospy sensor_msgs std_msgs tf
+  CATKIN_DEPENDS actionlib actionlib_msgs geometry_msgs jaco_msgs roscpp rospy sensor_msgs std_msgs tf interactive_markers visualization_msgs
 #  DEPENDS system_lib
 )
 
@@ -72,11 +74,19 @@ add_executable(jaco_tf_updater
   include/jaco_driver/jaco_arm_kinematics.h
 )
 
+
 add_dependencies(jaco_arm_driver ${catkin_EXPORTED_TARGETS})
 add_dependencies(jaco_tf_updater ${catkin_EXPORTED_TARGETS})
 
 target_link_libraries(jaco_arm_driver ${catkin_LIBRARIES} dl)
 target_link_libraries(jaco_tf_updater ${catkin_LIBRARIES})
+
+
+add_executable(jaco_interactive_control src/nodes/jaco_interactive_control.cpp)
+target_link_libraries(jaco_interactive_control
+   ${catkin_LIBRARIES}
+)
+
 
 #############
 ## Install ##
@@ -103,7 +113,7 @@ install(DIRECTORY include/${PROJECT_NAME}/
 
 
 ## Mark executables and/or libraries for installation
-install(TARGETS jaco_arm_driver jaco_tf_updater
+install(TARGETS jaco_interactive_control jaco_arm_driver jaco_tf_updater
   ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
   LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
   RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
