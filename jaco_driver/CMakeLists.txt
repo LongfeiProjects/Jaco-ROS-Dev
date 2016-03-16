@@ -82,10 +82,30 @@ target_link_libraries(jaco_arm_driver ${catkin_LIBRARIES} dl)
 target_link_libraries(jaco_tf_updater ${catkin_LIBRARIES})
 
 
-add_executable(jaco_interactive_control src/nodes/jaco_interactive_control.cpp)
-target_link_libraries(jaco_interactive_control
-   ${catkin_LIBRARIES}
+
+add_executable(jaco_interactive_control
+  src/nodes/jaco_interactive_control.cpp
+  src/jaco_api.cpp
+  src/jaco_arm.cpp
+  src/jaco_comm.cpp
+  src/jaco_pose_action.cpp
+  src/jaco_angles_action.cpp
+  src/jaco_fingers_action.cpp
+  src/jaco_types.cpp
+  include/jaco_driver/jaco_angles_action.h
+  include/jaco_driver/jaco_api.h
+  include/jaco_driver/jaco_arm.h
+  include/jaco_driver/jaco_comm.h
+  include/jaco_driver/jaco_fingers_action.h
+  include/jaco_driver/jaco_pose_action.h
+  include/jaco_driver/jaco_types.h
+  include/kinova/Kinova.API.CommLayerUbuntu.h
+  include/kinova/Kinova.API.UsbCommandLayerUbuntu.h
+  include/kinova/KinovaTypes.h
 )
+add_dependencies(jaco_interactive_control ${catkin_EXPORTED_TARGETS})
+target_link_libraries(jaco_interactive_control ${catkin_LIBRARIES} dl)
+
 
 
 #############

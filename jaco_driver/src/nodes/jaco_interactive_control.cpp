@@ -4,6 +4,10 @@
 
 #include <interactive_markers/interactive_marker_server.h>
 
+
+#include "jaco_driver/jaco_api.h"
+#include "jaco_driver/jaco_arm.h"
+
 void processFeedback(
     const visualization_msgs::InteractiveMarkerFeedbackConstPtr &feedback )
 {
@@ -15,6 +19,11 @@ void processFeedback(
 int main(int argc, char** argv)
 {
   ros::init(argc, argv, "jaco_interactive_control");
+  ros::NodeHandle nh("~");
+  boost::recursive_mutex api_mutex;
+
+  bool is_first_init = true;
+
 
   // create an interactive marker server on the topic namespace jaco_interactive_control
   interactive_markers::InteractiveMarkerServer server("jaco_interactive_control");
@@ -64,9 +73,30 @@ int main(int argc, char** argv)
   server.applyChanges();
 
   // start the ROS main loop
-  ros::spin();
+//  ros::spin();
+
+  while (ros::ok())
+  {
+      try
+      {
+          jaco::JacoComm comm(nh, api_mutex, is_first_init);
+          jaco::JacoArm jaco(comm, nh);
+          ros::spin();
+      }
+      catch(const std::exception& e)
+      {
+          ROS_ERROR_STREAM(e.what());
+          jaco::JacoAPI api;
+          boost::recursive_mutex::scoped_lock lock(api_mutex);
+          api.closeAPI();
+          ros::Duration(1.0).sleep();
+      }
+
+      is_first_init = false;
+  }
+  return 0;
+
+
+
 }
 // %Tag(fullSource)%
-
-
-
