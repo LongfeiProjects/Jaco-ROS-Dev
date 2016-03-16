@@ -108,6 +108,13 @@ target_link_libraries(jaco_interactive_control ${catkin_LIBRARIES} dl)
 
 
 
+add_executable(jaco_interactive_control_Cart_6dof src/nodes/jaco_interactive_control_Cart_6dof.cpp)
+target_link_libraries(jaco_interactive_control_Cart_6dof
+   ${catkin_LIBRARIES}
+)
+
+
+
 #############
 ## Install ##
 #############
@@ -133,7 +140,9 @@ install(DIRECTORY include/${PROJECT_NAME}/
 
 
 ## Mark executables and/or libraries for installation
-install(TARGETS jaco_interactive_control jaco_arm_driver jaco_tf_updater
+install(TARGETS jaco_arm_driver jaco_tf_updater
+jaco_interactive_control
+jaco_interactive_control_Cart_6dof
   ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
   LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
   RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
