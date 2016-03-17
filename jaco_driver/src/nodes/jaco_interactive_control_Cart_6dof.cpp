@@ -16,13 +16,17 @@
 #include <tf/transform_broadcaster.h>
 #include <tf/tf.h>
 
+#include <interactive_markers/menu_handler.h>
+
+
 #include <math.h>
+
 using namespace visualization_msgs;
+using namespace interactive_markers;
 
 // Create actionlib client
 typedef actionlib::SimpleActionClient<jaco_msgs::SetFingersPositionAction> Client;
 boost::shared_ptr<interactive_markers::InteractiveMarkerServer> server;
-
 
 // %Tag(Box)%
 Marker makeBox( InteractiveMarker &msg )
@@ -131,12 +135,6 @@ void processFeedback( const visualization_msgs::InteractiveMarkerFeedbackConstPt
 }
 // %EndTag(processFeedback)%
 
-void saveMarker( InteractiveMarker int_marker )
-{
-  server->insert(int_marker);
-  server->setCallback(int_marker.name, &processFeedback);
-}
-
 
 ////////////////////////////////////////////////////////////////////////////////////
 
@@ -201,7 +199,7 @@ void make6DofMarker( bool fixed, unsigned int interaction_mode, const tf::Vector
   }
 
   server->insert(int_marker);
-  server->setCallback(int_marker.name, &processFeedback);
+  server->setCallback(int_marker.name, &processFeedback, visualization_msgs::InteractiveMarkerFeedback::MOUSE_UP);
 //  if (interaction_mode != visualization_msgs::InteractiveMarkerControl::NONE)
 //    menu_handler.apply( *server, int_marker.name );
 }
@@ -220,8 +218,6 @@ int main(int argc, char** argv)
   ros::init(argc, argv, "jaco_interactive_control_Cart_6dof");
   ros::NodeHandle nh("~");
   boost::recursive_mutex api_mutex;
-
-  bool is_first_init = true;
 
   // create a timer to update the published transforms
   ros::Timer frame_timer = nh.createTimer(ros::Duration(0.01), frameCallback);
