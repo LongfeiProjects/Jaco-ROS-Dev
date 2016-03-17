@@ -6,11 +6,13 @@
 
 #include "jaco_driver/jaco_api.h"
 #include "jaco_driver/jaco_arm.h"
+#include "jaco_driver/jaco_pose_action.h"
+#include "jaco_driver/jaco_angles_action.h"
+#include "jaco_driver/jaco_fingers_action.h"
 
 #include <kinova/KinovaTypes.h>
 #include "jaco_driver/jaco_types.h"
 #include <actionlib/client/simple_action_client.h>
-#include "jaco_driver/jaco_fingers_action.h"
 
 #include <algorithm>
 #include <tf/transform_broadcaster.h>
@@ -26,7 +28,7 @@ using namespace interactive_markers;
 
 // Create actionlib client
 typedef actionlib::SimpleActionClient<jaco_msgs::SetFingersPositionAction> Client;
-boost::shared_ptr<interactive_markers::InteractiveMarkerServer> server;
+boost::shared_ptr<interactive_markers::InteractiveMarkerServer> interMark_server;
 
 // %Tag(Box)%
 Marker makeBox( InteractiveMarker &msg )
@@ -56,6 +58,29 @@ InteractiveMarkerControl& makeBoxControl( InteractiveMarker &msg )
 }
 // %EndTag(Box)%
 
+// %Tag(send actionlib goals)%
+void sendFingerGoal(const visualization_msgs::InteractiveMarkerFeedbackConstPtr &feedback)
+{
+    Client client("/mico_arm_driver/fingers/finger_positions", true);
+    jaco_msgs::SetFingersPositionGoal goal;
+
+    client.waitForServer();
+    // limit the range of marker to [0 10] before mapping to finger position
+    float markerPos;
+    float maxMarkerPose = 2.0f;
+    markerPos = std::min(maxMarkerPose, std::max(0.0f,float(feedback->pose.position.x)));
+    // map marker position to gripper position
+    goal.fingers.finger1 = markerPos/maxMarkerPose*5000;
+    goal.fingers.finger2 = markerPos/maxMarkerPose*5000;
+    goal.fingers.finger3 = 0.0;
+    client.sendGoal(goal);
+
+        ROS_INFO("client send goal: %f \n", goal.fingers.finger1);
+}
+
+// %EndTag(send actionlib goals)%
+
+
 // %Tag(processFeedback)%
 void processFeedback( const visualization_msgs::InteractiveMarkerFeedbackConstPtr &feedback )
 {
@@ -67,10 +92,6 @@ void processFeedback( const visualization_msgs::InteractiveMarkerFeedbackConstPt
   {
     case visualization_msgs::InteractiveMarkerFeedback::BUTTON_CLICK:
       ROS_INFO_STREAM( s.str() << ": button click" << "." );
-      break;
-
-    case visualization_msgs::InteractiveMarkerFeedback::MENU_SELECT:
-      ROS_INFO_STREAM( s.str() << ": menu item " << feedback->menu_entry_id << " clicked" << "." );
       break;
 
     case visualization_msgs::InteractiveMarkerFeedback::POSE_UPDATE:
@@ -99,27 +120,10 @@ void processFeedback( const visualization_msgs::InteractiveMarkerFeedbackConstPt
       break;
   }
 
+sendFingerGoal(feedback);
 
 
-  Client client("/mico_arm_driver/fingers/finger_positions", true);
-  jaco_msgs::SetFingersPositionGoal goal;
-
-  client.waitForServer();
-  // limit the range of marker to [0 10] before mapping to finger position
-  float markerPos;
-  float maxMarkerPose = 2.0f;
-  markerPos = std::min(maxMarkerPose, std::max(0.0f,float(feedback->pose.position.x)));
-  // map marker position to gripper position
-  goal.fingers.finger1 = markerPos/maxMarkerPose*5000;
-  goal.fingers.finger2 = markerPos/maxMarkerPose*5000;
-  goal.fingers.finger3 = 0.0;
-  client.sendGoal(goal);
-
-      ROS_INFO("client send goal: %f \n", goal.fingers.finger1);
-
-
-
-  server->applyChanges();
+  interMark_server->applyChanges();
 
 }
 // %EndTag(processFeedback)%
@@ -183,8 +187,8 @@ void make6DofMarker( bool fixed, unsigned int interaction_mode, const tf::Vector
     int_marker.controls.push_back(control);
   }
 
-  server->insert(int_marker);
-  server->setCallback(int_marker.name, &processFeedback, visualization_msgs::InteractiveMarkerFeedback::MOUSE_UP);
+  interMark_server->insert(int_marker);
+  interMark_server->setCallback(int_marker.name, &processFeedback, visualization_msgs::InteractiveMarkerFeedback::MOUSE_UP);
 //  if (interaction_mode != visualization_msgs::InteractiveMarkerControl::NONE)
 //    menu_handler.apply( *server, int_marker.name );
 }
@@ -203,18 +207,18 @@ int main(int argc, char** argv)
     ros::init(argc, argv, "jaco_interactive_control_Cart_6dof");
     ros::NodeHandle nh("~");
 
-    server.reset( new interactive_markers::InteractiveMarkerServer("jaco_interactive_control_Cart_6dof","",false) );
+    interMark_server.reset( new interactive_markers::InteractiveMarkerServer("jaco_interactive_control_Cart_6dof","",false) );
 
     ros::Duration(0.1).sleep();
 
     tf::Vector3 position;
     position = tf::Vector3(-3, 3, 0); // Simple 6-DOF Control
     make6DofMarker( false, visualization_msgs::InteractiveMarkerControl::NONE, position, true );
-    server->applyChanges();
+    interMark_server->applyChanges();
 
     ros::spin();
 
-    server.reset();
+    interMark_server.reset();
     return 0;
 
 }
