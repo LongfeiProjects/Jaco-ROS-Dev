@@ -27,7 +27,10 @@ using namespace visualization_msgs;
 using namespace interactive_markers;
 
 // Create actionlib client
-typedef actionlib::SimpleActionClient<jaco_msgs::SetFingersPositionAction> Client;
+typedef actionlib::SimpleActionClient<jaco_msgs::ArmJointAnglesAction> ArmJoint_actionlibClient;
+typedef actionlib::SimpleActionClient<jaco_msgs::ArmPoseAction> ArmPose_actionlibClient;
+typedef actionlib::SimpleActionClient<jaco_msgs::SetFingersPositionAction> Finger_actionlibClient;
+
 boost::shared_ptr<interactive_markers::InteractiveMarkerServer> interMark_server;
 
 // %Tag(Box)%
@@ -61,7 +64,7 @@ InteractiveMarkerControl& makeBoxControl( InteractiveMarker &msg )
 // %Tag(send actionlib goals)%
 void sendFingerGoal(const visualization_msgs::InteractiveMarkerFeedbackConstPtr &feedback)
 {
-    Client client("/mico_arm_driver/fingers/finger_positions", true);
+    Finger_actionlibClient client("/mico_arm_driver/fingers/finger_positions", true);
     jaco_msgs::SetFingersPositionGoal goal;
 
     client.waitForServer();
@@ -75,7 +78,51 @@ void sendFingerGoal(const visualization_msgs::InteractiveMarkerFeedbackConstPtr 
     goal.fingers.finger3 = 0.0;
     client.sendGoal(goal);
 
-        ROS_INFO("client send goal: %f \n", goal.fingers.finger1);
+        ROS_INFO("client send goal to Finger actionlib: %f \n", goal.fingers.finger1);
+}
+
+void sendArmPoseGoal(const visualization_msgs::InteractiveMarkerFeedbackConstPtr &feedback)
+{
+    ArmPose_actionlibClient client("/mico_arm_driver/arm_pose/arm_pose", true);
+    client.waitForServer();
+
+    // limit the translation range of marker to [0 maxMarkerPosition],and orientation to [0 maxMarkerRotation] before mapping to arm pose position
+    // original pose of interactive marker
+    geometry_msgs::Pose markerPose = feedback->pose;
+    // pose of interactive marker with saturation
+    geometry_msgs::Pose markerPose_limit;
+    float maxMarkerPosition = 2.0f;
+    float maxMarkerRotation = 1.0f;
+
+    markerPose_limit.position.x = std::min(maxMarkerPosition, std::max(0.0f,float(markerPose.position.x)));
+    markerPose_limit.position.y = std::min(maxMarkerPosition, std::max(0.0f,float(markerPose.position.y)));
+    markerPose_limit.position.z = std::min(maxMarkerPosition, std::max(0.0f,float(markerPose.position.z)));
+
+    // map marker position to the position of arm end-effector
+    geometry_msgs::Pose HomePose;
+    jaco_msgs::ArmPoseGoal goal;
+    float position_scale = 0.1;
+
+    HomePose.position.x = 0.557002842426;
+    HomePose.position.y = -0.165318846703;
+    HomePose.position.z = 0.337297201157;
+    HomePose.orientation.x = 0.469718859406;
+    HomePose.orientation.y = -0.482891449239;
+    HomePose.orientation.z = 0.723616758119;
+    HomePose.orientation.w = -0.150195967788;
+
+    goal.pose.header.frame_id = "mico_api_origin";
+    goal.pose.pose.position.x = HomePose.position.x + markerPose_limit.position.x*position_scale;
+    goal.pose.pose.position.y = HomePose.position.y + markerPose_limit.position.y*position_scale;
+    goal.pose.pose.position.z = HomePose.position.z + markerPose_limit.position.z*position_scale;
+    goal.pose.pose.orientation.x = HomePose.orientation.x;
+    goal.pose.pose.orientation.y = HomePose.orientation.y;
+    goal.pose.pose.orientation.z = HomePose.orientation.z;
+    goal.pose.pose.orientation.w = HomePose.orientation.w;
+
+    client.sendGoal(goal);
+
+    ROS_INFO("client send goal to arm pose actionlib x: %f\n", goal.pose.pose.position.x);
 }
 
 // %EndTag(send actionlib goals)%
@@ -103,7 +150,7 @@ void processFeedback( const visualization_msgs::InteractiveMarkerFeedbackConstPt
       break;
 
     case visualization_msgs::InteractiveMarkerFeedback::MOUSE_UP:
-      ROS_INFO_STREAM( s.str() << ": mouse up"  << "." );
+//      ROS_INFO_STREAM( s.str() << ": mouse up"  << "." );
       ROS_INFO_STREAM( s.str() << ": updated pose is: "
           << "\nposition = "
           << feedback->pose.position.x
@@ -120,10 +167,10 @@ void processFeedback( const visualization_msgs::InteractiveMarkerFeedbackConstPt
       break;
   }
 
-sendFingerGoal(feedback);
+//  sendFingerGoal(feedback);
+  sendArmPoseGoal(feedback);
 
-
-  interMark_server->applyChanges();
+  // interMark_server->applyChanges();
 
 }
 // %EndTag(processFeedback)%
@@ -132,9 +179,9 @@ sendFingerGoal(feedback);
 void make6DofMarker( bool fixed, unsigned int interaction_mode, const tf::Vector3& position, bool show_6dof )
 {
   InteractiveMarker int_marker;
-  int_marker.header.frame_id = "base_link";
+  int_marker.header.frame_id = "mico_api_origin";
   tf::pointTFToMsg(position, int_marker.pose.position);
-  int_marker.scale = 1;
+  int_marker.scale = 0.1;
   int_marker.name = "simple_6dof";
   int_marker.description = "Simple 6-DOF Control";
 
@@ -212,7 +259,7 @@ int main(int argc, char** argv)
     ros::Duration(0.1).sleep();
 
     tf::Vector3 position;
-    position = tf::Vector3(-3, 3, 0); // Simple 6-DOF Control
+    position = tf::Vector3(0.1, 0.1, 0); // Simple 6-DOF Control
     make6DofMarker( false, visualization_msgs::InteractiveMarkerControl::NONE, position, true );
     interMark_server->applyChanges();
 
