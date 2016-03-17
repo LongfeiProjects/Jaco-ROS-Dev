@@ -16,7 +16,7 @@
 #include <algorithm>
 
 // Create actionlib client
-typedef actionlib::SimpleActionClient<jaco_msgs::SetFingersPositionAction> Client;
+typedef actionlib::SimpleActionClient<jaco_msgs::SetFingersPositionAction> FingerClient;
 
 
 //void processFeedback();
@@ -27,7 +27,7 @@ void processFeedback(
 //      << feedback->pose.position.x << ", " << feedback->pose.position.y
 //      << ", " << feedback->pose.position.z );
 
-  Client client("/mico_arm_driver/fingers/finger_positions", true);
+  FingerClient client("/mico_arm_driver/fingers/finger_positions", true);
   jaco_msgs::SetFingersPositionGoal goal;
 
   client.waitForServer();

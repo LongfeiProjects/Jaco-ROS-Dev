@@ -125,6 +125,25 @@ void sendArmPoseGoal(const visualization_msgs::InteractiveMarkerFeedbackConstPtr
     ROS_INFO("client send goal to arm pose actionlib x: %f\n", goal.pose.pose.position.x);
 }
 
+void sendArmJointGoal(const visualization_msgs::InteractiveMarkerFeedbackConstPtr &feedback)
+{
+    ArmJoint_actionlibClient client("/mico_arm_driver/joiint_angles/arm_joint_angles", true);
+    client.waitForServer();
+
+    jaco_msgs::JointAngles currentJointAngles;
+    jaco_msgs::JointAngles homeJointAngles;
+
+    // limit the translation range of marker to [0 maxMarkerPosition],and orientation to [0 maxMarkerRotation] before mapping to arm pose position
+    // original pose of interactive marker
+
+    // pose of interactive marker with saturation
+
+
+    // map marker position to the position of arm end-effector
+
+}
+
+
 // %EndTag(send actionlib goals)%
 
 
@@ -167,9 +186,9 @@ void processFeedback( const visualization_msgs::InteractiveMarkerFeedbackConstPt
       break;
   }
 
-//  sendFingerGoal(feedback);
-  sendArmPoseGoal(feedback);
-
+  // sendFingerGoal(feedback);
+  // sendArmPoseGoal(feedback);
+  // sendArmJointGoal(feedback);
   // interMark_server->applyChanges();
 
 }
