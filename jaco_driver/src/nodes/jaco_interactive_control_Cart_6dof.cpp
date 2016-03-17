@@ -56,30 +56,6 @@ InteractiveMarkerControl& makeBoxControl( InteractiveMarker &msg )
 }
 // %EndTag(Box)%
 
-
-// %Tag(frameCallback)%
-void frameCallback(const ros::TimerEvent&)
-{
-  static uint32_t counter = 0;
-
-  static tf::TransformBroadcaster br;
-
-  tf::Transform t;
-
-  ros::Time time = ros::Time::now();
-
-  t.setOrigin(tf::Vector3(0.0, 0.0, sin(float(counter)/140.0) * 2.0));
-  t.setRotation(tf::Quaternion(0.0, 0.0, 0.0, 1.0));
-  br.sendTransform(tf::StampedTransform(t, time, "base_link", "moving_frame"));
-
-  t.setOrigin(tf::Vector3(0.0, 0.0, 0.0));
-  t.setRotation(tf::createQuaternionFromRPY(0.0, float(counter)/140.0, 0.0));
-  br.sendTransform(tf::StampedTransform(t, time, "base_link", "rotating_frame"));
-
-  counter++;
-}
-// %EndTag(frameCallback)%
-
 // %Tag(processFeedback)%
 void processFeedback( const visualization_msgs::InteractiveMarkerFeedbackConstPtr &feedback )
 {
@@ -87,27 +63,27 @@ void processFeedback( const visualization_msgs::InteractiveMarkerFeedbackConstPt
   s << "Feedback from marker '" << feedback->marker_name << "' "
       << " / control '" << feedback->control_name << "'";
 
-  std::ostringstream mouse_point_ss;
-  if( feedback->mouse_point_valid )
-  {
-    mouse_point_ss << " at " << feedback->mouse_point.x
-                   << ", " << feedback->mouse_point.y
-                   << ", " << feedback->mouse_point.z
-                   << " in frame " << feedback->header.frame_id;
-  }
-
   switch ( feedback->event_type )
   {
     case visualization_msgs::InteractiveMarkerFeedback::BUTTON_CLICK:
-      ROS_INFO_STREAM( s.str() << ": button click" << mouse_point_ss.str() << "." );
+      ROS_INFO_STREAM( s.str() << ": button click" << "." );
       break;
 
     case visualization_msgs::InteractiveMarkerFeedback::MENU_SELECT:
-      ROS_INFO_STREAM( s.str() << ": menu item " << feedback->menu_entry_id << " clicked" << mouse_point_ss.str() << "." );
+      ROS_INFO_STREAM( s.str() << ": menu item " << feedback->menu_entry_id << " clicked" << "." );
       break;
 
     case visualization_msgs::InteractiveMarkerFeedback::POSE_UPDATE:
-      ROS_INFO_STREAM( s.str() << ": pose changed"
+      ROS_INFO_STREAM( s.str() << ": pose update" <<  "." );
+      break;
+
+    case visualization_msgs::InteractiveMarkerFeedback::MOUSE_DOWN:
+      ROS_INFO_STREAM( s.str() << ": mouse down" << "." );
+      break;
+
+    case visualization_msgs::InteractiveMarkerFeedback::MOUSE_UP:
+      ROS_INFO_STREAM( s.str() << ": mouse up"  << "." );
+      ROS_INFO_STREAM( s.str() << ": updated pose is: "
           << "\nposition = "
           << feedback->pose.position.x
           << ", " << feedback->pose.position.y
@@ -121,22 +97,32 @@ void processFeedback( const visualization_msgs::InteractiveMarkerFeedbackConstPt
           << " time: " << feedback->header.stamp.sec << "sec, "
           << feedback->header.stamp.nsec << " nsec" );
       break;
-
-    case visualization_msgs::InteractiveMarkerFeedback::MOUSE_DOWN:
-      ROS_INFO_STREAM( s.str() << ": mouse down" << mouse_point_ss.str() << "." );
-      break;
-
-    case visualization_msgs::InteractiveMarkerFeedback::MOUSE_UP:
-      ROS_INFO_STREAM( s.str() << ": mouse up" << mouse_point_ss.str() << "." );
-      break;
   }
 
+
+
+  Client client("/mico_arm_driver/fingers/finger_positions", true);
+  jaco_msgs::SetFingersPositionGoal goal;
+
+  client.waitForServer();
+  // limit the range of marker to [0 10] before mapping to finger position
+  float markerPos;
+  float maxMarkerPose = 2.0f;
+  markerPos = std::min(maxMarkerPose, std::max(0.0f,float(feedback->pose.position.x)));
+  // map marker position to gripper position
+  goal.fingers.finger1 = markerPos/maxMarkerPose*5000;
+  goal.fingers.finger2 = markerPos/maxMarkerPose*5000;
+  goal.fingers.finger3 = 0.0;
+  client.sendGoal(goal);
+
+      ROS_INFO("client send goal: %f \n", goal.fingers.finger1);
+
+
+
   server->applyChanges();
+
 }
 // %EndTag(processFeedback)%
-
-
-////////////////////////////////////////////////////////////////////////////////////
 
 // %Tag(6DOF)%
 void make6DofMarker( bool fixed, unsigned int interaction_mode, const tf::Vector3& position, bool show_6dof )
@@ -145,7 +131,6 @@ void make6DofMarker( bool fixed, unsigned int interaction_mode, const tf::Vector
   int_marker.header.frame_id = "base_link";
   tf::pointTFToMsg(position, int_marker.pose.position);
   int_marker.scale = 1;
-
   int_marker.name = "simple_6dof";
   int_marker.description = "Simple 6-DOF Control";
 
@@ -215,17 +200,12 @@ void make6DofMarker( bool fixed, unsigned int interaction_mode, const tf::Vector
 
 int main(int argc, char** argv)
 {
-  ros::init(argc, argv, "jaco_interactive_control_Cart_6dof");
-  ros::NodeHandle nh("~");
-  boost::recursive_mutex api_mutex;
-
-  // create a timer to update the published transforms
-  ros::Timer frame_timer = nh.createTimer(ros::Duration(0.01), frameCallback);
+    ros::init(argc, argv, "jaco_interactive_control_Cart_6dof");
+    ros::NodeHandle nh("~");
 
     server.reset( new interactive_markers::InteractiveMarkerServer("jaco_interactive_control_Cart_6dof","",false) );
 
-  ros::Duration(0.1).sleep();
-
+    ros::Duration(0.1).sleep();
 
     tf::Vector3 position;
     position = tf::Vector3(-3, 3, 0); // Simple 6-DOF Control
@@ -235,7 +215,7 @@ int main(int argc, char** argv)
     ros::spin();
 
     server.reset();
-
+    return 0;
 
 }
 
