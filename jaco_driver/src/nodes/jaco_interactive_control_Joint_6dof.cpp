@@ -42,9 +42,9 @@ Marker makeBox( InteractiveMarker &msg )
   Marker marker;
 
   marker.type = Marker::CUBE;
-  marker.scale.x = msg.scale * 0.45;
-  marker.scale.y = msg.scale * 0.45;
-  marker.scale.z = msg.scale * 0.45;
+  marker.scale.x = msg.scale * 0.25;
+  marker.scale.y = msg.scale * 0.25;
+  marker.scale.z = msg.scale * 0.25;
   marker.color.r = 0.5;
   marker.color.g = 0.5;
   marker.color.b = 0.5;
@@ -265,14 +265,14 @@ void make6DofMarker( bool fixed, unsigned int interaction_mode, const tf::Vector
 
 
 // %Tag(1DOF)%
-void make1DofMarker(const std::string& frame_id, const std::string& axis, unsigned int interaction_mode, const tf::Vector3& position, const std::string& description)
+void make1DofMarker(const std::string& frame_id, const std::string& axis, unsigned int interaction_mode, const tf::Vector3& position, const std::string& description, const std::string& name)
 {
 
     InteractiveMarker int_marker;
     int_marker.header.frame_id = frame_id;
     tf::pointTFToMsg(position, int_marker.pose.position);
-    int_marker.scale = 0.1;
-    int_marker.name = "simple_1dof";
+    int_marker.scale = 0.08;
+    int_marker.name = name;
     int_marker.description = description;
 
     // insert a box
@@ -345,7 +345,16 @@ int main(int argc, char** argv)
     make6DofMarker( false, visualization_msgs::InteractiveMarkerControl::NONE, position, true );
 
     position = tf::Vector3(0, 0, 0);
-    make1DofMarker("mico_link_1", "z", visualization_msgs::InteractiveMarkerControl::ROTATE_AXIS, position, "1st Axis");
+    make1DofMarker("mico_link_1", "z", visualization_msgs::InteractiveMarkerControl::ROTATE_AXIS, position, "1st Axis", "1st");
+    position = tf::Vector3(0, 0, 0);
+    make1DofMarker("mico_link_2", "z", visualization_msgs::InteractiveMarkerControl::ROTATE_AXIS, position, "2nd Axis", "2nd");
+    position = tf::Vector3(0, 0, 0);
+    make1DofMarker("mico_link_3", "z", visualization_msgs::InteractiveMarkerControl::ROTATE_AXIS, position, "3rd Axis", "3rd");
+    position = tf::Vector3(0, 0, 0);
+    make1DofMarker("mico_link_4", "z", visualization_msgs::InteractiveMarkerControl::ROTATE_AXIS, position, "4th Axis", "4th");
+    position = tf::Vector3(0, 0, 0);
+    make1DofMarker("mico_link_5", "z", visualization_msgs::InteractiveMarkerControl::ROTATE_AXIS, position, "5th Axis", "5th");    position = tf::Vector3(0, 0, 0);
+    make1DofMarker("mico_link_hand", "z", visualization_msgs::InteractiveMarkerControl::ROTATE_AXIS, position, "6th Axis", "6th");
 
     armPose_interMark_server->applyChanges();
     armJoint_interMark_server->applyChanges();
