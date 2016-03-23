@@ -1,6 +1,6 @@
 #Back files
 *.*~
-
+*.autosave
 # Compiled Object files
 *.slo
 *.lo

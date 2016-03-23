@@ -132,19 +132,31 @@ void sendArmPoseGoal(const visualization_msgs::InteractiveMarkerFeedbackConstPtr
 
 void sendArmJointGoal(const visualization_msgs::InteractiveMarkerFeedbackConstPtr &feedback)
 {
-    ArmJoint_actionlibClient client("/mico_arm_driver/joiint_angles/arm_joint_angles", true);
+    ArmJoint_actionlibClient client("/mico_arm_driver/joint_angles/arm_joint_angles", true);
+    jaco_msgs::ArmJointAnglesGoal goal;
+
     client.waitForServer();
 
-    jaco_msgs::JointAngles currentJointAngles;
-    jaco_msgs::JointAngles homeJointAngles;
+    // limit the rotation range of marker to [0 maxMarkerRotation] before mapping to arm joint position
 
-    // limit the translation range of marker to [0 maxMarkerPosition],and orientation to [0 maxMarkerRotation] before mapping to arm pose position
-    // original pose of interactive marker
 
     // pose of interactive marker with saturation
 
 
-    // map marker position to the position of arm end-effector
+    // map marker position to the position of arm joint
+    goal.angles.joint1 = current_joint_state.position[0];
+    goal.angles.joint2 = current_joint_state.position[1];
+    goal.angles.joint3 = current_joint_state.position[2]+M_PI/6;
+    goal.angles.joint4 = current_joint_state.position[3];
+    goal.angles.joint5 = current_joint_state.position[4];
+    goal.angles.joint6 = current_joint_state.position[5];
+
+
+    ROS_INFO( " current joint state is as : %f, %f, %f\n",  current_joint_state.position[0], current_joint_state.position[1], current_joint_state.position[2], current_joint_state.position[3], current_joint_state.position[4], current_joint_state.position[5]);
+
+    ROS_INFO( " goal is set as : %f, %f, %f\n",  goal.angles.joint1, goal.angles.joint2, goal.angles.joint3, goal.angles.joint4, goal.angles.joint5, goal.angles.joint6);
+
+    client.sendGoal(goal);
 
 }
 
@@ -191,11 +203,14 @@ void processFeedback( const visualization_msgs::InteractiveMarkerFeedbackConstPt
       break;
   }
 
+      ROS_INFO_STREAM( " BEFORE SEND  JOINT GOAL ." );
   // sendFingerGoal(feedback);
-  // sendArmPoseGoal(feedback);
-  // sendArmJointGoal(feedback);
+//   sendArmPoseGoal(feedback);
+   sendArmJointGoal(feedback);
+         ROS_INFO_STREAM( " send  JOINT GOAL ." );
   // armPose_interMark_server->applyChanges();
-  // armJoint_interMark_server->applyChanges();
+   armJoint_interMark_server->applyChanges();
+        ROS_INFO_STREAM( " apply changes ." );
 }
 // %EndTag(processFeedback)%
 
@@ -347,6 +362,8 @@ void currentJointsFeedback(const sensor_msgs::JointStateConstPtr joint_state)
     current_joint_state.position = joint_state->position;
     current_joint_state.velocity = joint_state->velocity;
     current_joint_state.effort = joint_state->effort;
+
+
 }
 // %EndTag(CurrentJoint)%
 
