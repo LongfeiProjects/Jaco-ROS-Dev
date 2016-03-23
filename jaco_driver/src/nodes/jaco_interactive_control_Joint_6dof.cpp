@@ -130,36 +130,45 @@ void sendArmPoseGoal(const visualization_msgs::InteractiveMarkerFeedbackConstPtr
     ROS_INFO("client send goal to arm pose actionlib x: %f\n", goal.pose.pose.position.x);
 }
 
-void sendArmJointGoal(const visualization_msgs::InteractiveMarkerFeedbackConstPtr &feedback)
+void sendArmJointGoal(const std::string marker_name, double joint_offset)
 {
     ArmJoint_actionlibClient client("/mico_arm_driver/joint_angles/arm_joint_angles", true);
     jaco_msgs::ArmJointAnglesGoal goal;
-
-    client.waitForServer();
-
-    // limit the translation range of marker to [0 maxMarkerPosition],and orientation to [0 maxMarkerRotation] before mapping to arm pose position
-    // original pose of interactive marker
-    geometry_msgs::Pose markerPose = feedback->pose;
-    // pose of interactive marker with saturation
-    geometry_msgs::Pose markerPose_limit;
-    //    float maxMarkerPosition = 2.0f;
-    //    float maxMarkerRotation = 2.0*M_PI;
-
-    // pose of interactive marker with saturation
-    double roll, pitch, yaw;
-
-    // map marker position to the position of arm joint
     goal.angles.joint1 = current_joint_state.position[0];
     goal.angles.joint2 = current_joint_state.position[1];
     goal.angles.joint3 = current_joint_state.position[2];
     goal.angles.joint4 = current_joint_state.position[3];
     goal.angles.joint5 = current_joint_state.position[4];
-    goal.angles.joint6 = current_joint_state.position[5]+M_PI/6;
+    goal.angles.joint6 = current_joint_state.position[5];
 
+    client.waitForServer();
+
+    // map marker position to the position of arm joint.
+    switch(*marker_name.rbegin()-'0')
+    {
+    case 1:
+        goal.angles.joint1 -= joint_offset;
+        break;
+    case 2:
+        goal.angles.joint2 += joint_offset;
+        break;
+    case 3:
+        goal.angles.joint3 -= joint_offset;
+        break;
+    case 4:
+        goal.angles.joint4 -= joint_offset;
+        break;
+    case 5:
+        goal.angles.joint5 -= joint_offset;
+        break;
+    case 6:
+        goal.angles.joint6 -= joint_offset;
+        break;
+    }
 
     ROS_INFO( " current joint state is as : %f, %f, %f, %f, %f, %f\n",  current_joint_state.position[0], current_joint_state.position[1], current_joint_state.position[2], current_joint_state.position[3], current_joint_state.position[4], current_joint_state.position[5]);
 
-    ROS_INFO( " goal is set as : %f, %f, %f, %f, %f, %f\n",  goal.angles.joint1, goal.angles.joint2, goal.angles.joint3, goal.angles.joint4, goal.angles.joint5, goal.angles.joint6);
+    ROS_INFO( " joint goal is set as : %f, %f, %f, %f, %f, %f\n",  goal.angles.joint1, goal.angles.joint2, goal.angles.joint3, goal.angles.joint4, goal.angles.joint5, goal.angles.joint6);
 
     client.sendGoal(goal);
 
@@ -272,7 +281,7 @@ void processFeedback( const visualization_msgs::InteractiveMarkerFeedbackConstPt
                              << "\nframe: " << feedback->header.frame_id
                              << " time: " << feedback->header.stamp.sec << "sec, "
                              << feedback->header.stamp.nsec << " nsec");
-            //   sendArmJointGoal(feedback);
+            sendArmJointGoal(feedback->marker_name, yaw_mouseup-yaw_mousedown);
             //   armJoint_interMark_server->applyChanges();
         }
 
@@ -466,16 +475,16 @@ int main(int argc, char** argv)
     make6DofMarker( false, visualization_msgs::InteractiveMarkerControl::NONE, position, true );
 
     position = tf::Vector3(0, 0, 0);
-    make1DofMarker("mico_link_1", "z", visualization_msgs::InteractiveMarkerControl::ROTATE_AXIS, position, "1st Axis", "joint1");
+    make1DofMarker("mico_link_1", "z", visualization_msgs::InteractiveMarkerControl::ROTATE_AXIS, position, "1st Axis", "marker_joint1");
     position = tf::Vector3(0, 0, 0);
-    make1DofMarker("mico_link_2", "z", visualization_msgs::InteractiveMarkerControl::ROTATE_AXIS, position, "2nd Axis", "joint2");
+    make1DofMarker("mico_link_2", "z", visualization_msgs::InteractiveMarkerControl::ROTATE_AXIS, position, "2nd Axis", "marker_joint2");
     position = tf::Vector3(0, 0, 0);
-    make1DofMarker("mico_link_3", "z", visualization_msgs::InteractiveMarkerControl::ROTATE_AXIS, position, "3rd Axis", "joint3");
+    make1DofMarker("mico_link_3", "z", visualization_msgs::InteractiveMarkerControl::ROTATE_AXIS, position, "3rd Axis", "marker_joint3");
     position = tf::Vector3(0, 0, 0);
-    make1DofMarker("mico_link_4", "z", visualization_msgs::InteractiveMarkerControl::ROTATE_AXIS, position, "4th Axis", "joint4");
+    make1DofMarker("mico_link_4", "z", visualization_msgs::InteractiveMarkerControl::ROTATE_AXIS, position, "4th Axis", "marker_joint4");
     position = tf::Vector3(0, 0, 0);
-    make1DofMarker("mico_link_5", "z", visualization_msgs::InteractiveMarkerControl::ROTATE_AXIS, position, "5th Axis", "joint5");    position = tf::Vector3(0, 0, 0);
-    make1DofMarker("mico_link_hand", "z", visualization_msgs::InteractiveMarkerControl::ROTATE_AXIS, position, "6th Axis", "joint6");
+    make1DofMarker("mico_link_5", "z", visualization_msgs::InteractiveMarkerControl::ROTATE_AXIS, position, "5th Axis", "marker_joint5");    position = tf::Vector3(0, 0, 0);
+    make1DofMarker("mico_link_hand", "z", visualization_msgs::InteractiveMarkerControl::ROTATE_AXIS, position, "6th Axis", "marker_joint6");
     // %EndTag(CreatInteractiveMarkers)%
 
 
