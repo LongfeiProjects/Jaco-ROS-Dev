@@ -86,48 +86,28 @@ void sendFingerGoal(const visualization_msgs::InteractiveMarkerFeedbackConstPtr 
         ROS_INFO("client send goal to Finger actionlib: %f \n", goal.fingers.finger1);
 }
 
-void sendArmPoseGoal(const visualization_msgs::InteractiveMarkerFeedbackConstPtr &feedback)
+void sendArmPoseGoal(geometry_msgs::PoseStamped &endeffector_pose)
 {
     ArmPose_actionlibClient client("/mico_arm_driver/arm_pose/arm_pose", true);
+    jaco_msgs::ArmPoseGoal goal;
     client.waitForServer();
 
-    // limit the translation range of marker to [0 maxMarkerPosition],and orientation to [0 maxMarkerRotation] before mapping to arm pose position
-    // original pose of interactive marker
-    geometry_msgs::Pose markerPose = feedback->pose;
-    // pose of interactive marker with saturation
-    geometry_msgs::Pose markerPose_limit;
-    float maxMarkerPosition = 2.0f;
-    float maxMarkerRotation = 1.0f;
+    goal.pose = endeffector_pose;
 
-    markerPose_limit.position.x = std::min(maxMarkerPosition, std::max(0.0f,float(markerPose.position.x)));
-    markerPose_limit.position.y = std::min(maxMarkerPosition, std::max(0.0f,float(markerPose.position.y)));
-    markerPose_limit.position.z = std::min(maxMarkerPosition, std::max(0.0f,float(markerPose.position.z)));
+    ROS_INFO_STREAM("Goal parent frame is : " << goal.pose.header.frame_id);
 
-    // map marker position to the position of arm end-effector
-    geometry_msgs::Pose HomePose;
-    jaco_msgs::ArmPoseGoal goal;
-    float position_scale = 0.1;
+    ROS_INFO_STREAM("Goal to arm pose actionlib: \n"
+                    << "  x: " << goal.pose.pose.position.x
+                    << ", y: " << goal.pose.pose.position.y
+                    << ", z: " << goal.pose.pose.position.z
+                    << ", qx: " << goal.pose.pose.orientation.x
+                    << ", qy: " << goal.pose.pose.orientation.y
+                    << ", qz: " << goal.pose.pose.orientation.z
+                    << ", qw: " << goal.pose.pose.orientation.w);
 
-    HomePose.position.x = 0.557002842426;
-    HomePose.position.y = -0.165318846703;
-    HomePose.position.z = 0.337297201157;
-    HomePose.orientation.x = 0.469718859406;
-    HomePose.orientation.y = -0.482891449239;
-    HomePose.orientation.z = 0.723616758119;
-    HomePose.orientation.w = -0.150195967788;
-
-    goal.pose.header.frame_id = "mico_api_origin";
-    goal.pose.pose.position.x = HomePose.position.x + markerPose_limit.position.x*position_scale;
-    goal.pose.pose.position.y = HomePose.position.y + markerPose_limit.position.y*position_scale;
-    goal.pose.pose.position.z = HomePose.position.z + markerPose_limit.position.z*position_scale;
-    goal.pose.pose.orientation.x = HomePose.orientation.x;
-    goal.pose.pose.orientation.y = HomePose.orientation.y;
-    goal.pose.pose.orientation.z = HomePose.orientation.z;
-    goal.pose.pose.orientation.w = HomePose.orientation.w;
-
+    // Please be noted that a bug for cartesian position control exists in lower lever control. Therefore, though command (goal) is correctly sent, robot is not able to reach desired position yet. The command(goal) can be verified by: rostopic echo -n 1 (...)/out/tool_position.
     client.sendGoal(goal);
 
-    ROS_INFO("client send goal to arm pose actionlib x: %f\n", goal.pose.pose.position.x);
 }
 
 void sendArmJointGoal(const std::string marker_name, double joint_offset)
@@ -185,11 +165,7 @@ void processFeedback( const visualization_msgs::InteractiveMarkerFeedbackConstPt
     poseStamped.header.stamp = ros::Time::now();
     poseStamped.header.frame_id = "mico_link_base";
 
-    tf::Vector3 position_mousedown = tf::Vector3(0,0,0);
-    tf::Vector3 position_mouseup = tf::Vector3(0,0,0);
     tf::Quaternion quaternion_mousedown, quaternion_mouseup;
-
-    static bool b_mousedown = false;
 
     std::ostringstream s;
     s << "Feedback from marker '" << feedback->marker_name << "' "
@@ -251,6 +227,26 @@ void processFeedback( const visualization_msgs::InteractiveMarkerFeedbackConstPt
 
         if (feedback->marker_name == "cartesian_6dof")
         {
+            tf::TransformListener transform_listener;
+            tf::StampedTransform transform;
+            geometry_msgs::PoseStamped pose_endeffector;
+            pose_endeffector.header.frame_id = "mico_link_base";
+            pose_endeffector.header.stamp = ros::Time::now();
+
+            try{
+                ros::Time now = ros::Time::now();
+                transform_listener.waitForTransform("mico_link_base","mico_end_effector", now, ros::Duration(3.0));
+                transform_listener.lookupTransform("mico_link_base","mico_end_effector", ros::Time(0), transform);
+            }
+            catch(tf::TransformException exception)
+            {
+                ROS_ERROR("Error occured during transformation from mico_end_effector to mico_link_base: %s", exception.what());
+                ros::Duration(1.0).sleep();
+            }
+            pose_endeffector.pose.position.x = transform.getOrigin().x();
+            pose_endeffector.pose.position.y = transform.getOrigin().y();
+            pose_endeffector.pose.position.z = transform.getOrigin().z();
+            tf::quaternionTFToMsg(transform.getRotation().normalize(), pose_endeffector.pose.orientation);
 
             ROS_INFO_STREAM( s.str() << ": mouse UP (refers to command): "
                              << "\nposition = "
@@ -270,7 +266,9 @@ void processFeedback( const visualization_msgs::InteractiveMarkerFeedbackConstPt
                              << " time: " << feedback->header.stamp.sec << "sec, "
                              << feedback->header.stamp.nsec << " nsec" );
 
-            //   sendArmPoseGoal(feedback);
+
+            ROS_INFO_STREAM("POSE_endeffector parent frame is : " << pose_endeffector.header.frame_id);
+            sendArmPoseGoal(pose_endeffector);
             // armPose_interMark_server->applyChanges();
         }
         else
@@ -444,7 +442,6 @@ void currentJointsFeedback(const sensor_msgs::JointStateConstPtr joint_state)
     current_joint_state.position = joint_state->position;
     current_joint_state.velocity = joint_state->velocity;
     current_joint_state.effort = joint_state->effort;
-
 
 }
 // %EndTag(CurrentJoint)%
