@@ -6,6 +6,7 @@
 #include <interactive_markers/menu_handler.h>
 
 #include <tf/transform_broadcaster.h>
+#include <tf/transform_listener.h>
 #include <tf/tf.h>
 
 #include <kinova/KinovaTypes.h>
@@ -34,6 +35,7 @@ typedef actionlib::SimpleActionClient<jaco_msgs::SetFingersPositionAction> Finge
 boost::shared_ptr<interactive_markers::InteractiveMarkerServer> armPose_interMark_server;
 boost::shared_ptr<interactive_markers::InteractiveMarkerServer> armJoint_interMark_server;
 interactive_markers::MenuHandler menu_handler;
+sensor_msgs::JointState current_joint_state;
 // %EndTag(vars)%
 
 // %Tag(Box)%
@@ -323,6 +325,31 @@ void make1DofMarker(const std::string& frame_id, const std::string& axis, unsign
 }
 // %EndTag(6DOF)%position
 
+
+// %Tag(CurrentJoint)%
+void currentJointsFeedback(const sensor_msgs::JointStateConstPtr joint_state)
+{
+    std::vector<std::string> joint_names_;
+    joint_names_.resize(jaco::JACO_JOINTS_COUNT);
+    joint_names_[0] =  "joint_1";
+    joint_names_[1] =  "joint_2";
+    joint_names_[2] =  "joint_3";
+    joint_names_[3] =  "joint_4";
+    joint_names_[4] =  "joint_5";
+    joint_names_[5] =  "joint_6";
+    joint_names_[6] =  "joint_finger_1";
+    joint_names_[7] =  "joint_finger_2";
+    joint_names_[8] =  "joint_finger_3";
+    current_joint_state.name = joint_names_;
+
+    current_joint_state.header.stamp = ros::Time::now();
+    current_joint_state.position.resize(9);
+    current_joint_state.position = joint_state->position;
+    current_joint_state.velocity = joint_state->velocity;
+    current_joint_state.effort = joint_state->effort;
+}
+// %EndTag(CurrentJoint)%
+
 ////////////////////////////////////////////////////////////////////////////////////
 /// \brief main
 /// \param argc
@@ -335,11 +362,15 @@ int main(int argc, char** argv)
     ros::init(argc, argv, "jaco_interactive_control_Cart_6dof");
     ros::NodeHandle nh("~");
 
+    ros::Subscriber armJoint_sub = nh.subscribe("/mico_arm_driver/out/joint_state", 1, &currentJointsFeedback);
+
     armPose_interMark_server.reset( new interactive_markers::InteractiveMarkerServer("jaco_interactive_control_Cart_6dof","",false) );
     armJoint_interMark_server.reset( new interactive_markers::InteractiveMarkerServer("jaco_interactive_control_Joint_6dof","",false) );
 
     ros::Duration(0.1).sleep();
 
+
+    // %Tag(CreatInteractiveMarkers)%
     tf::Vector3 position;
     position = tf::Vector3(0, 0, 0); // Simple 6-DOF Control
     make6DofMarker( false, visualization_msgs::InteractiveMarkerControl::NONE, position, true );
@@ -355,6 +386,9 @@ int main(int argc, char** argv)
     position = tf::Vector3(0, 0, 0);
     make1DofMarker("mico_link_5", "z", visualization_msgs::InteractiveMarkerControl::ROTATE_AXIS, position, "5th Axis", "5th");    position = tf::Vector3(0, 0, 0);
     make1DofMarker("mico_link_hand", "z", visualization_msgs::InteractiveMarkerControl::ROTATE_AXIS, position, "6th Axis", "6th");
+    // %EndTag(CreatInteractiveMarkers)%
+
+
 
     armPose_interMark_server->applyChanges();
     armJoint_interMark_server->applyChanges();
@@ -369,5 +403,3 @@ int main(int argc, char** argv)
 }
 
 
-
-// %Tag(fullSource)%
