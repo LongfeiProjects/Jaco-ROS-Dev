@@ -11,6 +11,8 @@ find_package(catkin REQUIRED dynamic_reconfigure COMPONENTS
   sensor_msgs
   std_msgs
   tf
+  interactive_markers
+  visualization_msgs
 )
 generate_dynamic_reconfigure_options(
   #cfg/JacoPositionConfig.cfg
@@ -21,7 +23,7 @@ link_directories(${PROJECT_SOURCE_DIR}/lib/${CMAKE_LIBRARY_ARCHITECTURE})
 catkin_package(
   INCLUDE_DIRS include
 #  LIBRARIES jaco_driver
-  CATKIN_DEPENDS actionlib actionlib_msgs geometry_msgs jaco_msgs roscpp rospy sensor_msgs std_msgs tf
+  CATKIN_DEPENDS actionlib actionlib_msgs geometry_msgs jaco_msgs roscpp rospy sensor_msgs std_msgs tf interactive_markers visualization_msgs
 #  DEPENDS system_lib
 )
 
@@ -72,11 +74,51 @@ add_executable(jaco_tf_updater
   include/jaco_driver/jaco_arm_kinematics.h
 )
 
+
 add_dependencies(jaco_arm_driver ${catkin_EXPORTED_TARGETS})
 add_dependencies(jaco_tf_updater ${catkin_EXPORTED_TARGETS})
 
 target_link_libraries(jaco_arm_driver ${catkin_LIBRARIES} dl)
 target_link_libraries(jaco_tf_updater ${catkin_LIBRARIES})
+
+
+
+add_executable(jaco_interactive_control
+  src/nodes/jaco_interactive_control.cpp
+  src/jaco_api.cpp
+  src/jaco_arm.cpp
+  src/jaco_comm.cpp
+  src/jaco_pose_action.cpp
+  src/jaco_angles_action.cpp
+  src/jaco_fingers_action.cpp
+  src/jaco_types.cpp
+  include/jaco_driver/jaco_angles_action.h
+  include/jaco_driver/jaco_api.h
+  include/jaco_driver/jaco_arm.h
+  include/jaco_driver/jaco_comm.h
+  include/jaco_driver/jaco_fingers_action.h
+  include/jaco_driver/jaco_pose_action.h
+  include/jaco_driver/jaco_types.h
+  include/kinova/Kinova.API.CommLayerUbuntu.h
+  include/kinova/Kinova.API.UsbCommandLayerUbuntu.h
+  include/kinova/KinovaTypes.h
+)
+add_dependencies(jaco_interactive_control ${catkin_EXPORTED_TARGETS})
+target_link_libraries(jaco_interactive_control ${catkin_LIBRARIES} dl)
+
+
+
+add_executable(jaco_interactive_control_Cart_6dof src/nodes/jaco_interactive_control_Cart_6dof.cpp)
+target_link_libraries(jaco_interactive_control_Cart_6dof
+   ${catkin_LIBRARIES}
+)
+
+
+add_executable(jaco_interactive_control_Joint_6dof src/nodes/jaco_interactive_control_Joint_6dof.cpp)
+target_link_libraries(jaco_interactive_control_Joint_6dof
+   ${catkin_LIBRARIES}
+)
+
 
 #############
 ## Install ##
@@ -104,6 +146,9 @@ install(DIRECTORY include/${PROJECT_NAME}/
 
 ## Mark executables and/or libraries for installation
 install(TARGETS jaco_arm_driver jaco_tf_updater
+jaco_interactive_control
+jaco_interactive_control_Cart_6dof
+jaco_interactive_control_Joint_6dof
   ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
   LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
   RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}

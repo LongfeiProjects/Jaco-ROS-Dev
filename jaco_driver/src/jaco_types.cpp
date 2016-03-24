@@ -117,6 +117,7 @@ JacoPose::JacoPose(const geometry_msgs::Pose &pose)
     ThetaX = normalizeInRads(tx);
     ThetaY = normalizeInRads(ty);
     ThetaZ = normalizeInRads(tz);
+    ROS_INFO("/nJacoPose::JacoPose pose Quaternion to YPR (tz, ty, tx) is : %f, %f, %f/n", ThetaZ, ThetaY, ThetaX);
 }
 
 
