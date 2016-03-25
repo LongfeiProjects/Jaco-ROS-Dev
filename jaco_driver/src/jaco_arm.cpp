@@ -372,15 +372,21 @@ void JacoArm::publishJointAngles(void)
     joint_state.velocity[8] = 0.0;
 
     // Joint torques (effort)
-    // NOTE: Currently invalid.
     JacoAngles joint_tqs;
     joint_state.effort.resize(9);
-    joint_state.effort[0] = joint_tqs.Actuator1;
-    joint_state.effort[1] = joint_tqs.Actuator2;
-    joint_state.effort[2] = joint_tqs.Actuator3;
-    joint_state.effort[3] = joint_tqs.Actuator4;
-    joint_state.effort[4] = joint_tqs.Actuator5;
-    joint_state.effort[5] = joint_tqs.Actuator6;
+    // NOTE: Currently invalid.
+        joint_state.effort[0] = joint_tqs.Actuator1;
+    //    joint_state.effort[1] = joint_tqs.Actuator2;
+    //    joint_state.effort[2] = joint_tqs.Actuator3;
+    //    joint_state.effort[3] = joint_tqs.Actuator4;
+    //    joint_state.effort[4] = joint_tqs.Actuator5;
+    //    joint_state.effort[5] = joint_tqs.Actuator6;
+    joint_state.effort[0] = 0.0;
+    joint_state.effort[1] = 0.0;
+    joint_state.effort[2] = 0.0;
+    joint_state.effort[3] = 0.0;
+    joint_state.effort[4] = 0.0;
+    joint_state.effort[5] = 0.0;
     joint_state.effort[6] = 0.0;
     joint_state.effort[7] = 0.0;
     joint_state.effort[8] = 0.0;
