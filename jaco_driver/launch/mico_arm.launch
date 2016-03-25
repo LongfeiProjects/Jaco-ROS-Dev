@@ -30,8 +30,8 @@
         <remap from="/mico_tf_updater/in/joint_angles" to="/mico_arm_driver/out/joint_angles"/>
         <param name="tf_prefix" value="mico_" />
         <param name="base_to_api" value="0.028" />
-        <param name="base_to_j1" value="0.1544" />
-        <param name="j1_to_j2" value="-0.1181" />
+        <param name="base_to_j1" value="0.1568" />
+        <param name="j1_to_j2" value="-0.1187" />
         <param name="j2_to_j3" value="0.2900" />
         <param name="j3_offset" value="-0.0070" />
         <param name="j3_to_j4" value="0.1233" />
