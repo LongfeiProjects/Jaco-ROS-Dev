@@ -122,24 +122,23 @@ JacoComm::JacoComm(const ros::NodeHandle& node_handle,
             getQuickStatus(quick_status);
 
             robot_type_ = quick_status.RobotType;
-            if ((robot_type_ != 0) && (robot_type_ != 1) && (robot_type_ != 3))
-            {
-                ROS_ERROR("Could not get the type of the arm from the quick status, expected "
-                          "either type 0 (JACO), or type 1 (MICO), got %d", quick_status.RobotType);
-                throw JacoCommException("Could not get the type of the arm", quick_status.RobotType);
-            }
-
             switch (robot_type_) {
                 case 0:
                 case 3:
+                case 4:
+                case 6:
                     num_fingers_ = 3;
                     break;
                 case 1:
+                case 2:
+                case 5:
                     num_fingers_ = 2;
                     break;
                 default:
+                    ROS_ERROR("Unknown robot type: %d", quick_status.RobotType);
+                    throw JacoCommException("Could not recognize the type of the arm", quick_status.RobotType);
                     break;
-            }
+            };
 
             ROS_INFO_STREAM("Found " << devices_count << " device(s), using device at index " << device_i
                             << " (model: " << configuration.Model
@@ -781,12 +780,12 @@ void JacoComm::startAPI()
 }
 
 
-int JacoComm::numFingers()
+int JacoComm::numFingers() const
 {
     return num_fingers_;
 }
 
-int JacoComm::robotType()
+int JacoComm::robotType() const
 {
     return robot_type_;
 }
@@ -857,5 +856,10 @@ bool JacoComm::isStopped()
     return is_software_stop_;
 }
 
+double JacoComm::j6o() const
+{
+    // J6 offset is 260 for Jaco R1 (type 0), and 270 for Mico and Jaco R2.
+    return robotType() == 0 ? 260.0 : 270.0;
+}
 
 }  // namespace kinova
