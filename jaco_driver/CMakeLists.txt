@@ -78,6 +78,10 @@ add_dependencies(jaco_tf_updater ${catkin_EXPORTED_TARGETS})
 target_link_libraries(jaco_arm_driver ${catkin_LIBRARIES} dl)
 target_link_libraries(jaco_tf_updater ${catkin_LIBRARIES})
 
+add_executable(ros_home_test src/nodes/ros_home_test.cpp)
+add_dependencies(ros_home_test ${catkin_EXPORTED_TARGETS})
+target_link_libraries(ros_home_test ${catkin_LIBRARIES})
+
 #############
 ## Install ##
 #############
@@ -103,7 +107,7 @@ install(DIRECTORY include/${PROJECT_NAME}/
 
 
 ## Mark executables and/or libraries for installation
-install(TARGETS jaco_arm_driver jaco_tf_updater
+install(TARGETS jaco_arm_driver jaco_tf_updater ros_home_test
   ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
   LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
   RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
