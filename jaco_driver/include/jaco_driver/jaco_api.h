@@ -31,15 +31,15 @@ class JacoAPI
 
     int (*initAPI)(void);
     int (*closeAPI)(void);
-    int (*getAPIVersion)(std::vector<int> &);
-    int (*getDevices)(std::vector<KinovaDevice> &, int &);
+    int (*getAPIVersion)(int Response[API_VERSION_COUNT]);
+    int (*getDevices)(KinovaDevice devices[MAX_KINOVA_DEVICE], int &);
     int (*setActiveDevice)(KinovaDevice);
 
     int (*getGeneralInformations)(GeneralInformations &);
     int (*getQuickStatus)(QuickStatus &);
     // int (*GetForcesInfo)(ForcesInfo &);
 
-    int (*getCodeVersion)(std::vector<int> &);
+    int (*getCodeVersion)(int Response[CODE_VERSION_COUNT]);
     int (*startControlAPI)();
     int (*stopControlAPI)();
     int (*initFingers)();
@@ -69,8 +69,10 @@ class JacoAPI
     int (*getClientConfigurations)(ClientConfigurations &);
     int (*setClientConfigurations)(ClientConfigurations);
     int (*eraseAllTrajectories)();
-    int (*getPositionCurrentActuators)(std::vector<float> &);
+    int (*getPositionCurrentActuators)(float Response[POSITION_CURRENT_COUNT]);
     int (*setActuatorPID)(unsigned int, float, float, float);
+
+    int count_error_comm;
 };
 
 }  // namespace jaco

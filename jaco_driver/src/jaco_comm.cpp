@@ -57,18 +57,28 @@ JacoComm::JacoComm(const ros::NodeHandle& node_handle,
                    const bool is_movement_on_start)
     : is_software_stop_(false), api_mutex_(api_mutex)
 {
+// ROS_WARN__STREAM("Class name is: " << typeid(*this).name() << "; function name is : " << __FUNCTION__<<std::endl);
+count_error_comm = 0;
+// ROS_WARN_("jaco_comm.cpp: 1, %d", ++count_error_comm);
     boost::recursive_mutex::scoped_lock lock(api_mutex_);
-
+// ROS_WARN_("jaco_comm.cpp: 2, %d", ++count_error_comm);
     // Get the serial number parameter for the arm we wish to connec to
     std::string serial_number = "";
     node_handle.getParam("serial_number", serial_number);
+// ROS_WARN__STREAM("jaco_comm.cpp: serial number is " << serial_number << std::endl);
 
-    std::vector<int> api_version;
+    int api_version[API_VERSION_COUNT];
+
     int result = jaco_api_.getAPIVersion(api_version);
+// ROS_WARN_("after get real api_version, result is %d", result);
     if (result != NO_ERROR_KINOVA)
     {
+        // ROS_WARN_("result != NO_ERROR_KINOVA\n");
         throw JacoCommException("Could not get the Kinova API version", result);
     }
+// ROS_WARN_("jaco_comm.cpp: to print api_version \n");
+
+// ROS_WARN_("jaco_comm.cpp: 3, %d", ++count_error_comm);
 
     ROS_INFO_STREAM("Initializing Kinova API (header version: " << COMMAND_LAYER_VERSION << ", library version: "
                     << api_version[0] << "." << api_version[1] << "." << api_version[2] << ")");
@@ -78,22 +88,26 @@ JacoComm::JacoComm(const ros::NodeHandle& node_handle,
     {
         throw JacoCommException("Could not initialize Kinova API", result);
     }
+// ROS_WARN_("jaco_comm.cpp: 4, %d", ++count_error_comm);
 
-    std::vector<KinovaDevice> devices_list;
+    KinovaDevice devices_list[MAX_KINOVA_DEVICE];
     result = NO_ERROR_KINOVA;
     jaco_api_.getDevices(devices_list, result);
     if (result != NO_ERROR_KINOVA)
     {
         throw JacoCommException("Could not get devices list", result);
     }
+// ROS_WARN_("jaco_comm.cpp: 5, %d", ++count_error_comm);
 
     bool found_arm = false;
-    for (int device_i = 0; device_i < devices_list.size(); device_i++)
+    for (int device_i = 0; device_i < MAX_KINOVA_DEVICE; device_i++)
     {
         // If no device is specified, just use the first available device
+// ROS_WARN_("jaco_comm.cpp: 6, %d", ++count_error_comm);
         if ((serial_number == "")
             || (std::strcmp(serial_number.c_str(), devices_list[device_i].SerialNumber) == 0))
         {
+// ROS_WARN_("jaco_comm.cpp: 7, %d", ++count_error_comm);
             result = jaco_api_.setActiveDevice(devices_list[device_i]);
             if (result != NO_ERROR_KINOVA)
             {
@@ -106,7 +120,7 @@ JacoComm::JacoComm(const ros::NodeHandle& node_handle,
             {
                 throw JacoCommException("Could not get general information about the device", result);
             }
-
+// ROS_WARN_("jaco_comm.cpp: 8, %d", ++count_error_comm);
             ClientConfigurations configuration;
             getConfig(configuration);
 
@@ -133,7 +147,7 @@ JacoComm::JacoComm(const ros::NodeHandle& node_handle,
                     break;
             }
 
-            ROS_INFO_STREAM("Found " << devices_list.size() << " device(s), using device at index " << device_i
+            ROS_INFO_STREAM("Found " << MAX_KINOVA_DEVICE << " device(s), using device at index " << device_i
                             << " (model: " << configuration.Model
                             << ", serial number: " << devices_list[device_i].SerialNumber
                             << ", code version: " << general_info.CodeVersion
@@ -147,16 +161,16 @@ JacoComm::JacoComm(const ros::NodeHandle& node_handle,
     if (!found_arm)
     {
         ROS_ERROR("Could not find the specified arm (serial: %s) among the %d attached devices",
-                  serial_number.c_str(), static_cast<int>(devices_list.size()));
+                  serial_number.c_str(), static_cast<int>(MAX_KINOVA_DEVICE));
         throw JacoCommException("Could not find the specified arm", 0);
     }
-
+// ROS_WARN_("jaco_comm.cpp: 9, %d", ++count_error_comm);
     // On a cold boot the arm may not respond to commands from the API right away.
     // This kick-starts the Control API so that it's ready to go.
     startAPI();
     stopAPI();
     startAPI();
-
+// ROS_WARN_("jaco_comm.cpp: 10, %d", ++count_error_comm);
     // Set the angular velocity of each of the joints to zero
     TrajectoryPoint jaco_velocity;
     memset(&jaco_velocity, 0, sizeof(jaco_velocity));
@@ -176,6 +190,8 @@ JacoComm::JacoComm(const ros::NodeHandle& node_handle,
 
 JacoComm::~JacoComm()
 {
+// ROS_WARN__STREAM("Class name is: " << typeid(*this).name() << "; function name is : " << __FUNCTION__<<std::endl);
+// ROS_WARN_("jaco_comm.cpp: 11, %d", ++count_error_comm);
     boost::recursive_mutex::scoped_lock lock(api_mutex_);
     jaco_api_.closeAPI();
 }
@@ -189,6 +205,8 @@ JacoComm::~JacoComm()
  */
 bool JacoComm::isHomed(void)
 {
+// ROS_WARN__STREAM("Class name is: " << typeid(*this).name() << "; function name is : " << __FUNCTION__<<std::endl);
+// ROS_WARN_("jaco_comm.cpp: 12, %d", ++count_error_comm);
     QuickStatus quick_status;
     getQuickStatus(quick_status);
 
@@ -215,6 +233,8 @@ bool JacoComm::isHomed(void)
  */
 void JacoComm::homeArm(void)
 {
+// ROS_WARN__STREAM("Class name is: " << typeid(*this).name() << "; function name is : " << __FUNCTION__<<std::endl);
+// ROS_WARN_("jaco_comm.cpp: 13, %d", ++count_error_comm);
     boost::recursive_mutex::scoped_lock lock(api_mutex_);
 
     if (isStopped())
@@ -249,6 +269,8 @@ void JacoComm::homeArm(void)
  */
 void JacoComm::initFingers(void)
 {
+// ROS_WARN__STREAM("Class name is: " << typeid(*this).name() << "; function name is : " << __FUNCTION__<<std::endl);
+// ROS_WARN_("jaco_comm.cpp: 14, %d", ++count_error_comm);
     ROS_INFO("Initializing fingers...this will take a few seconds and the fingers should open completely");
     boost::recursive_mutex::scoped_lock lock(api_mutex_);
     int result = jaco_api_.initFingers();
@@ -267,6 +289,8 @@ void JacoComm::initFingers(void)
  */
 void JacoComm::setJointAngles(const JacoAngles &angles, int timeout, bool push)
 {
+// ROS_WARN__STREAM("Class name is: " << typeid(*this).name() << "; function name is : " << __FUNCTION__<<std::endl);
+// ROS_WARN_("jaco_comm.cpp: 15, %d", ++count_error_comm);
     boost::recursive_mutex::scoped_lock lock(api_mutex_);
 
     if (isStopped())
@@ -316,6 +340,8 @@ void JacoComm::setJointAngles(const JacoAngles &angles, int timeout, bool push)
  */
 void JacoComm::setCartesianPosition(const JacoPose &position, int timeout, bool push)
 {
+// ROS_WARN__STREAM("Class name is: " << typeid(*this).name() << "; function name is : " << __FUNCTION__<<std::endl);
+// ROS_WARN_("jaco_comm.cpp: 16, %d", ++count_error_comm);
     boost::recursive_mutex::scoped_lock lock(api_mutex_);
 
     if (isStopped())
@@ -373,6 +399,8 @@ void JacoComm::setCartesianPosition(const JacoPose &position, int timeout, bool 
  */
 void JacoComm::setFingerPositions(const FingerAngles &fingers, int timeout, bool push)
 {
+// ROS_WARN__STREAM("Class name is: " << typeid(*this).name() << "; function name is : " << __FUNCTION__<<std::endl);
+// ROS_WARN_("jaco_comm.cpp: 17, %d", ++count_error_comm);
     boost::recursive_mutex::scoped_lock lock(api_mutex_);
 
     if (isStopped())
@@ -441,6 +469,8 @@ void JacoComm::setFingerPositions(const FingerAngles &fingers, int timeout, bool
  */
 void JacoComm::setJointVelocities(const AngularInfo &joint_vel)
 {
+// ROS_WARN__STREAM("Class name is: " << typeid(*this).name() << "; function name is : " << __FUNCTION__<<std::endl);
+// ROS_WARN_("jaco_comm.cpp: 18, %d", ++count_error_comm);
     boost::recursive_mutex::scoped_lock lock(api_mutex_);
 
     if (isStopped())
@@ -473,6 +503,8 @@ void JacoComm::setJointVelocities(const AngularInfo &joint_vel)
  */
 void JacoComm::setCartesianVelocities(const CartesianInfo &velocities)
 {
+// ROS_WARN__STREAM("Class name is: " << typeid(*this).name() << "; function name is : " << __FUNCTION__<<std::endl);
+// ROS_WARN_("jaco_comm.cpp: 19, %d", ++count_error_comm);
     boost::recursive_mutex::scoped_lock lock(api_mutex_);
 
     if (isStopped())
@@ -509,6 +541,8 @@ void JacoComm::setCartesianVelocities(const CartesianInfo &velocities)
  */
 void JacoComm::setConfig(const ClientConfigurations &config)
 {
+// ROS_WARN__STREAM("Class name is: " << typeid(*this).name() << "; function name is : " << __FUNCTION__<<std::endl);
+// ROS_WARN_("jaco_comm.cpp: 20, %d", ++count_error_comm);
     boost::recursive_mutex::scoped_lock lock(api_mutex_);
     int result = jaco_api_.setClientConfigurations(config);
     if (result != NO_ERROR_KINOVA)
@@ -523,6 +557,8 @@ void JacoComm::setConfig(const ClientConfigurations &config)
  */
 void JacoComm::getJointAngles(JacoAngles &angles)
 {
+// ROS_WARN__STREAM("Class name is: " << typeid(*this).name() << "; function name is : " << __FUNCTION__<<std::endl);
+// ROS_WARN_("jaco_comm.cpp: 21, %d", ++count_error_comm);
     boost::recursive_mutex::scoped_lock lock(api_mutex_);
     AngularPosition jaco_angles;
     memset(&jaco_angles, 0, sizeof(jaco_angles));  // zero structure
@@ -541,6 +577,8 @@ void JacoComm::getJointAngles(JacoAngles &angles)
  */
 void JacoComm::getJointVelocities(JacoAngles &vels)
 {
+// ROS_WARN__STREAM("Class name is: " << typeid(*this).name() << "; function name is : " << __FUNCTION__<<std::endl);
+// ROS_WARN_("jaco_comm.cpp: 22, %d", ++count_error_comm);
     boost::recursive_mutex::scoped_lock lock(api_mutex_);
     AngularPosition jaco_vels;
     memset(&jaco_vels, 0, sizeof(jaco_vels));  // zero structure
@@ -559,6 +597,8 @@ void JacoComm::getJointVelocities(JacoAngles &vels)
  */
 void JacoComm::getJointTorques(JacoAngles &tqs)
 {
+// ROS_WARN__STREAM("Class name is: " << typeid(*this).name() << "; function name is : " << __FUNCTION__<<std::endl);
+// ROS_WARN_("jaco_comm.cpp: 23, %d", ++count_error_comm);
     boost::recursive_mutex::scoped_lock lock(api_mutex_);
     AngularPosition jaco_tqs;
     memset(&jaco_tqs, 0, sizeof(jaco_tqs));  // zero structure
@@ -576,6 +616,8 @@ void JacoComm::getJointTorques(JacoAngles &tqs)
  */
 void JacoComm::getCartesianPosition(JacoPose &position)
 {
+// ROS_WARN__STREAM("Class name is: " << typeid(*this).name() << "; function name is : " << __FUNCTION__<<std::endl);
+// ROS_WARN_("jaco_comm.cpp: 24, %d", ++count_error_comm);
     boost::recursive_mutex::scoped_lock lock(api_mutex_);
     CartesianPosition jaco_cartesian_position;
     memset(&jaco_cartesian_position, 0, sizeof(jaco_cartesian_position));  // zero structure
@@ -594,6 +636,8 @@ void JacoComm::getCartesianPosition(JacoPose &position)
  */
 void JacoComm::getCartesianForce(JacoPose &cart_force)
 {
+// ROS_WARN__STREAM("Class name is: " << typeid(*this).name() << "; function name is : " << __FUNCTION__<<std::endl);
+// ROS_WARN_("jaco_comm.cpp: 25, %d", ++count_error_comm);
     boost::recursive_mutex::scoped_lock lock(api_mutex_);
     CartesianPosition jaco_cartesian_force;
     memset(&jaco_cartesian_force, 0, sizeof(jaco_cartesian_force));  // zero structure
@@ -612,6 +656,8 @@ void JacoComm::getCartesianForce(JacoPose &cart_force)
  */
 void JacoComm::getFingerPositions(FingerAngles &fingers)
 {
+// ROS_WARN__STREAM("Class name is: " << typeid(*this).name() << "; function name is : " << __FUNCTION__<<std::endl);
+// ROS_WARN_("jaco_comm.cpp: 26, %d", ++count_error_comm);
     boost::recursive_mutex::scoped_lock lock(api_mutex_);
     CartesianPosition jaco_cartesian_position;
     memset(&jaco_cartesian_position, 0, sizeof(jaco_cartesian_position));  // zero structure
@@ -635,6 +681,8 @@ void JacoComm::getFingerPositions(FingerAngles &fingers)
  */
 void JacoComm::setCartesianInertiaDamping(const CartesianInfo &inertia, const CartesianInfo& damping)
 {
+// ROS_WARN__STREAM("Class name is: " << typeid(*this).name() << "; function name is : " << __FUNCTION__<<std::endl);
+// ROS_WARN_("jaco_comm.cpp: 27, %d", ++count_error_comm);
     boost::recursive_mutex::scoped_lock lock(api_mutex_);
     int result = jaco_api_.setCartesianInertiaDamping(inertia, damping);
     if (result != NO_ERROR_KINOVA)
@@ -648,6 +696,8 @@ void JacoComm::setCartesianInertiaDamping(const CartesianInfo &inertia, const Ca
  */
 void JacoComm::setCartesianForceMinMax(const CartesianInfo &min, const CartesianInfo& max)
 {
+// ROS_WARN__STREAM("Class name is: " << typeid(*this).name() << "; function name is : " << __FUNCTION__<<std::endl);
+// ROS_WARN_("jaco_comm.cpp: 28, %d", ++count_error_comm);
     boost::recursive_mutex::scoped_lock lock(api_mutex_);
     int result = jaco_api_.setCartesianForceMinMax(min, max);
     if (result != NO_ERROR_KINOVA)
@@ -661,6 +711,8 @@ void JacoComm::setCartesianForceMinMax(const CartesianInfo &min, const Cartesian
  */
 void JacoComm::startForceControl()
 {
+// ROS_WARN__STREAM("Class name is: " << typeid(*this).name() << "; function name is : " << __FUNCTION__<<std::endl);
+// ROS_WARN_("jaco_comm.cpp: 29, %d", ++count_error_comm);
     boost::recursive_mutex::scoped_lock lock(api_mutex_);
     int result = jaco_api_.startForceControl();
     if (result != NO_ERROR_KINOVA)
@@ -674,6 +726,8 @@ void JacoComm::startForceControl()
  */
 void JacoComm::stopForceControl()
 {
+// ROS_WARN__STREAM("Class name is: " << typeid(*this).name() << "; function name is : " << __FUNCTION__<<std::endl);
+// ROS_WARN_("jaco_comm.cpp: 30, %d", ++count_error_comm);
     boost::recursive_mutex::scoped_lock lock(api_mutex_);
     int result = jaco_api_.stopForceControl();
     if (result != NO_ERROR_KINOVA)
@@ -687,6 +741,8 @@ void JacoComm::stopForceControl()
  */
 void JacoComm::getConfig(ClientConfigurations &config)
 {
+// ROS_WARN__STREAM("Class name is: " << typeid(*this).name() << "; function name is : " << __FUNCTION__<<std::endl);
+// ROS_WARN_("jaco_comm.cpp: 31, %d", ++count_error_comm);
     boost::recursive_mutex::scoped_lock lock(api_mutex_);
     memset(&config, 0, sizeof(config));  // zero structure
 
@@ -703,6 +759,8 @@ void JacoComm::getConfig(ClientConfigurations &config)
  */
 void JacoComm::getQuickStatus(QuickStatus &quick_status)
 {
+// ROS_WARN__STREAM("Class name is: " << typeid(*this).name() << "; function name is : " << __FUNCTION__<<std::endl);
+// ROS_WARN_("jaco_comm.cpp: 32, %d", ++count_error_comm);
     boost::recursive_mutex::scoped_lock lock(api_mutex_);
     memset(&quick_status, 0, sizeof(quick_status));  // zero structure
     int result = jaco_api_.getQuickStatus(quick_status);
@@ -715,6 +773,8 @@ void JacoComm::getQuickStatus(QuickStatus &quick_status)
 
 void JacoComm::stopAPI()
 {
+// ROS_WARN__STREAM("Class name is: " << typeid(*this).name() << "; function name is : " << __FUNCTION__<<std::endl);
+// ROS_WARN_("jaco_comm.cpp: 33, %d", ++count_error_comm);
     boost::recursive_mutex::scoped_lock lock(api_mutex_);
     is_software_stop_ = true;
 
@@ -734,6 +794,8 @@ void JacoComm::stopAPI()
 
 void JacoComm::startAPI()
 {
+// ROS_WARN__STREAM("Class name is: " << typeid(*this).name() << "; function name is : " << __FUNCTION__<<std::endl);
+// ROS_WARN_("jaco_comm.cpp: 34, %d", ++count_error_comm);
     boost::recursive_mutex::scoped_lock lock(api_mutex_);
     if (is_software_stop_)
     {
@@ -752,11 +814,15 @@ void JacoComm::startAPI()
 
 int JacoComm::numFingers()
 {
+// ROS_WARN__STREAM("Class name is: " << typeid(*this).name() << "; function name is : " << __FUNCTION__<<std::endl);
+// ROS_WARN_("jaco_comm.cpp: 35, %d", ++count_error_comm);
     return num_fingers_;
 }
 
 int JacoComm::robotType()
 {
+// ROS_WARN__STREAM("Class name is: " << typeid(*this).name() << "; function name is : " << __FUNCTION__<<std::endl);
+// ROS_WARN_("jaco_comm.cpp: 36, %d", ++count_error_comm);
     return robot_type_;
 }
 
@@ -765,6 +831,8 @@ int JacoComm::robotType()
  */
 void JacoComm::printAngles(const JacoAngles &angles)
 {
+// ROS_WARN__STREAM("Class name is: " << typeid(*this).name() << "; function name is : " << __FUNCTION__<<std::endl);
+// ROS_WARN_("jaco_comm.cpp: 37, %d", ++count_error_comm);
     ROS_INFO("Joint angles (deg) -- J1: %f, J2: %f J3: %f, J4: %f, J5: %f, J6: %f",
              angles.Actuator1, angles.Actuator2, angles.Actuator3,
              angles.Actuator4, angles.Actuator5, angles.Actuator6);
@@ -776,6 +844,8 @@ void JacoComm::printAngles(const JacoAngles &angles)
  */
 void JacoComm::printPosition(const JacoPose &position)
 {
+// ROS_WARN__STREAM("Class name is: " << typeid(*this).name() << "; function name is : " << __FUNCTION__<<std::endl);
+// ROS_WARN_("jaco_comm.cpp: 38, %d", ++count_error_comm);
     ROS_INFO("Arm position\n"
              "\tposition (m) -- x: %f, y: %f z: %f\n"
              "\trotation (rad) -- theta_x: %f, theta_y: %f, theta_z: %f",
@@ -789,6 +859,8 @@ void JacoComm::printPosition(const JacoPose &position)
  */
 void JacoComm::printFingers(const FingersPosition &fingers)
 {
+// ROS_WARN__STREAM("Class name is: " << typeid(*this).name() << "; function name is : " << __FUNCTION__<<std::endl);
+// ROS_WARN_("jaco_comm.cpp: 39, %d", ++count_error_comm);
     ROS_INFO("Finger positions -- F1: %f, F2: %f, F3: %f",
              fingers.Finger1, fingers.Finger2, fingers.Finger3);
 }
@@ -799,6 +871,8 @@ void JacoComm::printFingers(const FingersPosition &fingers)
  */
 void JacoComm::printConfig(const ClientConfigurations &config)
 {
+// ROS_WARN__STREAM("Class name is: " << typeid(*this).name() << "; function name is : " << __FUNCTION__<<std::endl);
+// ROS_WARN_("jaco_comm.cpp: 40, %d", ++count_error_comm);
     ROS_INFO_STREAM("Arm configuration:\n"
                     "\tClientID: " << config.ClientID <<
                     "\n\tClientName: " << config.ClientName <<
@@ -823,6 +897,10 @@ void JacoComm::printConfig(const ClientConfigurations &config)
 
 bool JacoComm::isStopped()
 {
+// ROS_WARN__STREAM("Class name is: " << typeid(*this).name() << "; function name is : " << __FUNCTION__<<std::endl);
+// ROS_WARN_("jaco_comm.cpp: 41, %d", ++count_error_comm);
+// ROS_WARN__STREAM("Class name is: " << typeid(*this).name() << "; function name is : " << __FUNCTION__<<std::endl);
+
     return is_software_stop_;
 }
 
