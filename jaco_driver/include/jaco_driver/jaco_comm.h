@@ -95,7 +95,6 @@ class JacoComm
     bool isStopped();
     int numFingers();
     int robotType();
-int count_error_comm;
 
  private:
     boost::recursive_mutex& api_mutex_;

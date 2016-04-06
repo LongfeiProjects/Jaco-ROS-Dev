@@ -72,7 +72,6 @@ class JacoAPI
     int (*getPositionCurrentActuators)(float Response[POSITION_CURRENT_COUNT]);
     int (*setActuatorPID)(unsigned int, float, float, float);
 
-    int count_error_comm;
 };
 
 }  // namespace jaco
