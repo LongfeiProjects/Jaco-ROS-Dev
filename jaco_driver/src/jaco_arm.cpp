@@ -55,6 +55,9 @@ JacoArm::JacoArm(JacoComm &arm, const ros::NodeHandle &nodeHandle)
     stop_service_ = node_handle_.advertiseService("in/stop", &JacoArm::stopServiceCallback, this);
     start_service_ = node_handle_.advertiseService("in/start", &JacoArm::startServiceCallback, this);
     homing_service_ = node_handle_.advertiseService("in/home_arm", &JacoArm::homeArmServiceCallback, this);
+    setHomeCustomized_service_ = node_handle_.advertiseService("in/setHomeCustomized_arm", &JacoArm::setHomeCustomizedServiceCallback, this);
+    homingCustomized_service_ = node_handle_.advertiseService("in/homeCustomized_arm", &JacoArm::homeArmCustomizedServiceCallback, this);
+
 
     set_force_control_params_service_ = node_handle_.advertiseService("in/set_force_control_params", &JacoArm::setForceControlParamsCallback, this);
     start_force_control_service_ = node_handle_.advertiseService("in/start_force_control", &JacoArm::startForceControlCallback, this);
@@ -131,6 +134,54 @@ bool JacoArm::homeArmServiceCallback(jaco_msgs::HomeArm::Request &req, jaco_msgs
     jaco_comm_.homeArm();
     jaco_comm_.initFingers();
     res.homearm_result = "JACO ARM HAS BEEN RETURNED HOME";
+    return true;
+}
+
+
+bool JacoArm::setHomeCustomizedServiceCallback(jaco_msgs::HomeArm::Request &req, jaco_msgs::HomeArm::Response &res)
+{
+    ClientConfigurations client_cfg;
+    jaco_comm_.getConfig(client_cfg);
+    int* numRetractPose = &(client_cfg.RetractedPositionCount);
+
+    JacoAngles myHome;
+    jaco_comm_.getJointAngles(myHome);
+
+    // The last pose of RetractPositions is customized home, while first is the customized retract pose.
+    if (*numRetractPose < 1)
+        *numRetractPose = 1;
+    client_cfg.RetractPositions[*numRetractPose-1].Actuators = myHome;
+    jaco_comm_.setConfig(client_cfg);
+
+    ROS_INFO("myHome is set to: actuator1 %f, actuator2 %f, actuator3 %f, actuator4 %f, actuator5 %f, actuator6 %f",  myHome.Actuator1, myHome.Actuator2, myHome.Actuator3, myHome.Actuator4, myHome.Actuator5, myHome.Actuator6);
+    res.homearm_result = "Customized home successfully set to current Angular position!";
+
+    return true;
+}
+
+
+bool JacoArm::homeArmCustomizedServiceCallback(jaco_msgs::HomeArm::Request &req, jaco_msgs::HomeArm::Response &res)
+{
+    ClientConfigurations client_cfg;
+    jaco_comm_.getConfig(client_cfg);
+    int numRetractPose = client_cfg.RetractedPositionCount;
+
+    if (numRetractPose > 0)
+    {
+        JacoAngles myHome(client_cfg.RetractPositions[numRetractPose-1].Actuators);
+
+        ROS_INFO("myHome is: actuator1 %f, actuator2 %f, actuator3 %f, actuator4 %f, actuator5 %f, actuator6 %f",  myHome.Actuator1, myHome.Actuator2, myHome.Actuator3, myHome.Actuator4, myHome.Actuator5, myHome.Actuator6);
+
+        jaco_comm_.setJointAngles(myHome);
+    }
+    else
+    {
+        ROS_WARN("There is no customized home, thus defaul send robot to default home.\n");
+        JacoArm::homeArmServiceCallback(req, res);
+    }
+    res.homearm_result = "KINOVA ARM HAS BEEN RETURNED HOME";
+//    ROS_WARN("Before set customized home position by this service call, user should at least once called ROS service 'home_arm' , or used joystick to set (default/customized) home.\n");
+
     return true;
 }
 

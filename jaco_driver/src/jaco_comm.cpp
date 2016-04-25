@@ -114,24 +114,23 @@ JacoComm::JacoComm(const ros::NodeHandle& node_handle,
             getQuickStatus(quick_status);
 
             robot_type_ = quick_status.RobotType;
-            if ((robot_type_ != 0) && (robot_type_ != 1) && (robot_type_ != 3))
-            {
-                ROS_ERROR("Could not get the type of the arm from the quick status, expected "
-                          "either type 0 (JACO), or type 1 (MICO), got %d", quick_status.RobotType);
-                throw JacoCommException("Could not get the type of the arm", quick_status.RobotType);
-            }
-
             switch (robot_type_) {
-                case 0:
-                case 3:
-                    num_fingers_ = 3;
-                    break;
-                case 1:
-                    num_fingers_ = 2;
-                    break;
-                default:
-                    break;
-            }
+            case 0:
+            case 3:
+            case 4:
+            case 6:
+                num_fingers_ = 3;
+                break;
+            case 1:
+            case 2:
+            case 5:
+                num_fingers_ = 2;
+                break;
+            default:
+                ROS_ERROR("Could not get the type of the arm from the quick status, got: %d", quick_status.RobotType);
+                throw JacoCommException("Could not get the type of the arm", quick_status.RobotType);
+                break;
+            };
 
             ROS_INFO_STREAM("Found " << devices_list.size() << " device(s), using device at index " << device_i
                             << " (model: " << configuration.Model
@@ -233,11 +232,30 @@ void JacoComm::homeArm(void)
     startAPI();
 
     ROS_INFO("Homing the arm");
-    int result = jaco_api_.moveHome();
-    if (result != NO_ERROR_KINOVA)
+
+    JoystickCommand mycommand;
+    mycommand.InitStruct();
+    // In api mapping(observing with Jacosoft), home button is ButtonValue[2].
+    mycommand.ButtonValue[2] = 1;
+    for(int i = 0; i<2000; i++)
     {
-        throw JacoCommException("Move home failed", result);
+        jaco_api_.sendJoystickCommand(mycommand);
+        usleep(5000);
+
+        // if (myhome.isCloseToOther(KinovaAngles(currentAngles.Actuators), angle_tolerance))
+        if(isHomed())
+        {
+            ROS_INFO(" haha Arm is in \"home\" position");
+            // release home button.
+            mycommand.ButtonValue[2] = 0;
+            jaco_api_.sendJoystickCommand(mycommand);
+            return;
+        }
     }
+
+    mycommand.ButtonValue[2] = 0;
+    jaco_api_.sendJoystickCommand(mycommand);
+    ROS_WARN("Homing arm timer out! If the arm is not in home position yet, please re-run home arm.");
 }
 
 

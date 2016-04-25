@@ -54,6 +54,10 @@ class JacoArm
     bool stopServiceCallback(jaco_msgs::Stop::Request &req, jaco_msgs::Stop::Response &res);
     bool startServiceCallback(jaco_msgs::Start::Request &req, jaco_msgs::Start::Response &res);
     bool homeArmServiceCallback(jaco_msgs::HomeArm::Request &req, jaco_msgs::HomeArm::Response &res);
+
+    bool setHomeCustomizedServiceCallback(jaco_msgs::HomeArm::Request &req, jaco_msgs::HomeArm::Response &res);
+    bool homeArmCustomizedServiceCallback(jaco_msgs::HomeArm::Request &req, jaco_msgs::HomeArm::Response &res);
+
     
     bool setForceControlParamsCallback(jaco_msgs::SetForceControlParams::Request &req,
                                        jaco_msgs::SetForceControlParams::Response &res);
@@ -90,6 +94,8 @@ class JacoArm
     ros::ServiceServer stop_service_;
     ros::ServiceServer start_service_;
     ros::ServiceServer homing_service_;
+    ros::ServiceServer setHomeCustomized_service_;
+    ros::ServiceServer homingCustomized_service_;
 
     ros::ServiceServer set_force_control_params_service_;
     ros::ServiceServer start_force_control_service_;
