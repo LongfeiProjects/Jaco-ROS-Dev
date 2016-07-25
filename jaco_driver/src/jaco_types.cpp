@@ -81,6 +81,58 @@ bool areValuesClose(float first, float second, float tolerance)
 }
 
 
+/**
+ * @brief EulerXYZ2Quaternion
+ * @param tx input Euler angle tx
+ * @param ty input Euler angle ty
+ * @param tz input Euler angle tz
+ * @return output Quaternion
+ * @warning DSP(KinovaPose) use Euler-XYZ convention, while ROS use Euler-ZYX by default.
+ */
+tf::Quaternion EulerXYZ2Quaternion(float tx, float ty, float tz)
+{
+    float sx = sin(0.5*tx);
+    float cx = cos(0.5*tx);
+    float sy = sin(0.5*ty);
+    float cy = cos(0.5*ty);
+    float sz = sin(0.5*tz);
+    float cz = cos(0.5*tz);
+
+    float qx, qy, qz, qw;
+    qx =  sx*cy*cz + cx*sy*sz;
+    qy = -sx*cy*sz + cx*sy*cz;
+    qz =  sx*sy*cz + cx*cy*sz;
+    qw = -sx*sy*sz + cx*cy*cz;
+
+    tf::Quaternion q;
+    q.setX(qx);
+    q.setY(qy);
+    q.setZ(qz);
+    q.setW(qw);
+    return q;
+}
+
+/**
+ * @brief getEulerXYZ get Euler-XYZ convention for KinovaPose orientation from Quaternion convention.
+ * @param q input Quaternion
+ * @param tx output Euler angle tx
+ * @param ty output Euler angle ty
+ * @param tz output Euler angle tz
+ * @warning DSP(KinovaPose) use Euler-XYZ convention, while ROS use Euler-ZYX by default.
+ */
+void getEulerXYZ(tf::Quaternion &q, float &tx, float &ty, float &tz)
+{
+    float qx = q.getX();
+    float qy = q.getY();
+    float qz = q.getZ();
+    float qw = q.getW();
+
+    tx = atan2((2*qw*qx-2*qy*qz),(qw*qw-qx*qx-qy*qy+qz*qz));
+    ty = asin(2*qw*qy+2*qx*qz);
+    tz = atan2((2*qw*qz-2*qx*qy),(qw*qw+qx*qx-qy*qy-qz*qz));
+}
+
+
 // Exceptions
 // ----------
 JacoCommException::JacoCommException(const std::string& message, const int error_code)
@@ -102,22 +154,14 @@ const char* JacoCommException::what() const throw()
 
 JacoPose::JacoPose(const geometry_msgs::Pose &pose)
 {
-    double tx, ty, tz;
     tf::Quaternion q;
     tf::quaternionMsgToTF(pose.orientation, q);
-
-    tf::Matrix3x3 bt_q(q);
-
-    bt_q.getEulerYPR(tz, ty, tx);
 
     X = static_cast<float>(pose.position.x);
     Y = static_cast<float>(pose.position.y);
     Z = static_cast<float>(pose.position.z);
 
-    ThetaX = normalizeInRads(tx);
-    ThetaY = normalizeInRads(ty);
-    ThetaZ = normalizeInRads(tz);
-    ROS_INFO("/nJacoPose::JacoPose pose Quaternion to YPR (tz, ty, tx) is : %f, %f, %f/n", ThetaZ, ThetaY, ThetaX);
+    getEulerXYZ(q,ThetaX, ThetaY,ThetaZ);
 }
 
 
@@ -133,30 +177,17 @@ JacoPose::JacoPose(const CartesianInfo &pose)
 }
 
 
+/**
+ * @brief construct geometric::Pose message from KinovaPose
+ * @return geometry_msgs::Pose[x,y,z,qx,qy,qz,qw] position in meters, orientation is in Quaternion.
+ */
 geometry_msgs::Pose JacoPose::constructPoseMsg()
 {
     geometry_msgs::Pose pose;
     tf::Quaternion position_quaternion;
 
-    
-    // TODO: QUICK FIX, bake this as a quaternion:
-    tf::Matrix3x3 mx(           1,            0,            0, 
-                                0,  cos(ThetaX), -sin(ThetaX),
-                                0,  sin(ThetaX),  cos(ThetaX));
-    tf::Matrix3x3 my( cos(ThetaY),            0,  sin(ThetaY),
-                                0,            1,            0,
-                     -sin(ThetaY),            0,  cos(ThetaY));
-    tf::Matrix3x3 mz( cos(ThetaZ), -sin(ThetaZ),            0,
-                      sin(ThetaZ),  cos(ThetaZ),            0,
-                                0,            0,            1);
-
-    tf::Matrix3x3  mg = mx * my * mz;
-    mg.getRotation(position_quaternion);
-
-    // NOTE: This doesn't work, as angles reported by the API are not fixed.
-    // position_quaternion.setRPY(ThetaX, ThetaY, ThetaZ);
-
-    
+    // However, DSP using Euler-XYZ, while ROS using Euler-ZYX.
+    JacoPose::getQuaternion(position_quaternion);
     tf::quaternionTFToMsg(position_quaternion, pose.orientation);
 
     pose.position.x = X;
@@ -165,6 +196,13 @@ geometry_msgs::Pose JacoPose::constructPoseMsg()
 
     return pose;
 }
+
+
+tf::Quaternion JacoPose::getQuaternion(tf::Quaternion &q)
+{
+    q = EulerXYZ2Quaternion(ThetaX, ThetaY, ThetaZ);
+}
+
 
 geometry_msgs::Wrench JacoPose::constructWrenchMsg()
 {

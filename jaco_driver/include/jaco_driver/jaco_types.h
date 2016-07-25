@@ -51,12 +51,16 @@
 #include <geometry_msgs/Wrench.h>
 #include <jaco_msgs/JointAngles.h>
 #include <jaco_msgs/FingerPosition.h>
+#include <tf/tf.h>
 
 #include <string>
 
 
 namespace jaco
 {
+
+tf::Quaternion EulerXYZ2Quaternion(float tx, float ty, float tz);
+void getEulerXYZ(tf::Quaternion &q, float &tx, float &ty, float &tz);
 
 class JacoException : public std::exception {};
 
@@ -82,6 +86,8 @@ class JacoPose : public CartesianInfo
 
     geometry_msgs::Pose   constructPoseMsg();
     geometry_msgs::Wrench constructWrenchMsg();
+
+    tf::Quaternion getQuaternion(tf::Quaternion &q);
 
     bool isCloseToOther(const JacoPose &, float tolerance) const;
 };
